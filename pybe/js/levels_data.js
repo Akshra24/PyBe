@@ -2966,7 +2966,7 @@ window.levels = [
         "description": {
             "heading": "Introduction to Lists",
             "subheading": "Ordered, mutable collections",
-            "body": "<p>A <strong>List</strong> is Python's most versatile collection type. It's an <strong>ordered</strong> sequence of items that can be of <strong>any type</strong> — numbers, strings, or even other lists! Lists are <strong>mutable</strong>, meaning you can change them after creation.</p>\\n\\n<h3>Creating Lists</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li>Use <strong>square brackets <code>[]</code></strong> to create lists</li>\\n    <li>Separate items with <strong>commas</strong></li>\\n    <li>Lists can contain mixed data types</li>\\n</ul>\\n\\n<h3>Examples</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><code>gadgets = [\\\"Anywhere Door\\\", \\\"Time Machine\\\", \\\"Bamboo Copter\\\"]</code></li>\\n    <li><code>numbers = [1, 2, 3, 4, 5]</code></li>\\n    <li><code>mixed = [\\\"Doraemon\\\", 10, True, 3.14]</code></li>\\n    <li><code>empty = []</code> (empty list)</li>\\n</ul>\\n\\n<h3>Accessing List Elements</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><code>gadgets[0]</code> &rarr; First element (index 0)</li>\\n    <li><code>gadgets[-1]</code> &rarr; Last element</li>\\n    <li><code>gadgets[1:3]</code> &rarr; Slice (elements at index 1 and 2)</li>\\n</ul>\\n\\n<div class=\\\"desc-callout callout-highlight\\\">\\n    <span class=\\\"callout-icon\\\">⚠️</span>\\n    <div><strong>IndexError:</strong> Trying to access an index that doesn't exist (e.g. <code>gadgets[10]</code> for a 3-item list) will crash your program!</div>\\n</div>"
+            "body": "<p>A <strong>List</strong> is Python's most versatile collection type. It's an <strong>ordered</strong> sequence of items that can be of <strong>any type</strong> — numbers, strings, or even other lists! Lists are <strong>mutable</strong>, meaning you can change them after creation.</p>\n\n<h3>Creating Lists</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>square brackets <code>[]</code></strong> to create lists</li>\n    <li>Separate items with <strong>commas</strong></li>\n    <li>Lists can contain mixed data types</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets = [\"Anywhere Door\", \"Time Machine\", \"Bamboo Copter\"]</code></li>\n    <li><code>numbers = [1, 2, 3, 4, 5]</code></li>\n    <li><code>mixed = [\"Doraemon\", 10, True, 3.14]</code></li>\n    <li><code>empty = []</code> (empty list)</li>\n</ul>\n\n<h3>Accessing List Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets[0]</code> &rarr; First element (index 0)</li>\n    <li><code>gadgets[-1]</code> &rarr; Last element</li>\n    <li><code>gadgets[1:3]</code> &rarr; Slice (elements at index 1 and 2)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>IndexError:</strong> Trying to access an index that doesn't exist (e.g. <code>gadgets[10]</code> for a 3-item list) will crash your program!</div>\n</div>"
         },
 
         "qna": [
@@ -3008,7 +3008,7 @@ window.levels = [
         "description": {
             "heading": "List Methods",
             "subheading": "Adding, removing, and sorting",
-            "body": "<p>Python lists come with powerful <strong>built-in methods</strong> to manipulate their contents. These methods make it easy to add, remove, and organize elements.</p>\\n\\n<h3>Common List Methods</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><strong><code>append(item)</code></strong> — Adds an item to the <strong>end</strong> of the list</li>\\n    <li><strong><code>insert(index, item)</code></strong> — Inserts an item at a specific position</li>\\n    <li><strong><code>remove(item)</code></strong> — Removes the <strong>first occurrence</strong> of an item</li>\\n    <li><strong><code>pop(index)</code></strong> — Removes and returns item at index (default: last)</li>\\n    <li><strong><code>sort()</code></strong> — Sorts the list in <strong>ascending order</strong> (modifies in-place)</li>\\n    <li><strong><code>reverse()</code></strong> — Reverses the list in-place</li>\\n    <li><strong><code>count(item)</code></strong> — Returns how many times an item appears</li>\\n    <li><strong><code>index(item)</code></strong> — Returns the index of the first occurrence</li>\\n</ul>\\n\\n<h3>Examples</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><code>gadgets.append(\\\"Memory Bread\\\")</code> &rarr; Adds to end</li>\\n    <li><code>gadgets.insert(0, \\\"Anywhere Door\\\")</code> &rarr; Inserts at beginning</li>\\n    <li><code>gadgets.remove(\\\"Time Machine\\\")</code> &rarr; Removes first match</li>\\n    <li><code>gadgets.pop()</code> &rarr; Removes and returns last item</li>\\n    <li><code>numbers.sort()</code> &rarr; Sorts numbers ascending</li>\\n</ul>\\n\\n<div class=\\\"desc-callout callout-highlight\\\">\\n    <span class=\\\"callout-icon\\\">💡</span>\\n    <div><strong>In-place vs Return:</strong> Methods like <code>append()</code>, <code>sort()</code>, and <code>reverse()</code> modify the list <strong>in-place</strong> and return <code>None</code>. Don't assign them back to the list!</div>\\n</div>"
+            "body": "<p>Python lists come with powerful <strong>built-in methods</strong> to manipulate their contents. These methods make it easy to add, remove, and organize elements.</p>\n\n<h3>Common List Methods</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>append(item)</code></strong> — Adds an item to the <strong>end</strong> of the list</li>\n    <li><strong><code>insert(index, item)</code></strong> — Inserts an item at a specific position</li>\n    <li><strong><code>remove(item)</code></strong> — Removes the <strong>first occurrence</strong> of an item</li>\n    <li><strong><code>pop(index)</code></strong> — Removes and returns item at index (default: last)</li>\n    <li><strong><code>sort()</code></strong> — Sorts the list in <strong>ascending order</strong> (modifies in-place)</li>\n    <li><strong><code>reverse()</code></strong> — Reverses the list in-place</li>\n    <li><strong><code>count(item)</code></strong> — Returns how many times an item appears</li>\n    <li><strong><code>index(item)</code></strong> — Returns the index of the first occurrence</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets.append(\"Memory Bread\")</code> &rarr; Adds to end</li>\n    <li><code>gadgets.insert(0, \"Anywhere Door\")</code> &rarr; Inserts at beginning</li>\n    <li><code>gadgets.remove(\"Time Machine\")</code> &rarr; Removes first match</li>\n    <li><code>gadgets.pop()</code> &rarr; Removes and returns last item</li>\n    <li><code>numbers.sort()</code> &rarr; Sorts numbers ascending</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>In-place vs Return:</strong> Methods like <code>append()</code>, <code>sort()</code>, and <code>reverse()</code> modify the list <strong>in-place</strong> and return <code>None</code>. Don't assign them back to the list!</div>\n</div>"
         },
 
         "qna": [
@@ -3050,7 +3050,7 @@ window.levels = [
         "description": {
             "heading": "List Comprehension",
             "subheading": "Elegant list creation",
-            "body": "<p><strong>List comprehension</strong> is a beautiful Python feature that lets you create lists using a single, concise line of code. It combines a <code>for</code> loop (and optionally an <code>if</code> condition) into one expression!</p>\\n\\n<h3>Basic Syntax</h3>\\n<pre class=\\\"code-example\\\">[expression for item in iterable]</pre>\\n<ul class=\\\"desc-list\\\">\\n    <li><strong><code>expression</code></strong> — What each element will be</li>\\n    <li><strong><code>item</code></strong> — Variable representing each element</li>\\n    <li><strong><code>iterable</code></strong> — The sequence to loop over</li>\\n</ul>\\n\\n<h3>Examples</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><code>[x*2 for x in range(5)]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (double each number)</li>\\n    <li><code>[x.upper() for x in [\\\"dora\\\", \\\"emon\\\"]]</code> &rarr; <code>[\\\"DORA\\\", \\\"EMON\\\"]</code> (uppercase each)</li>\\n    <li><code>[x for x in range(10) if x % 2 == 0]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (only evens)</li>\\n</ul>\\n\\n<div class=\\\"desc-callout callout-highlight\\\">\\n    <span class=\\\"callout-icon\\\">💡</span>\\n    <div><strong>Why use it?</strong> List comprehensions are more readable, faster, and considered more \\\"Pythonic\\\" than traditional for loops with append().</div>\\n</div>"
+            "body": "<p><strong>List comprehension</strong> is a beautiful Python feature that lets you create lists using a single, concise line of code. It combines a <code>for</code> loop (and optionally an <code>if</code> condition) into one expression!</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">[expression for item in iterable]</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>expression</code></strong> — What each element will be</li>\n    <li><strong><code>item</code></strong> — Variable representing each element</li>\n    <li><strong><code>iterable</code></strong> — The sequence to loop over</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>[x*2 for x in range(5)]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (double each number)</li>\n    <li><code>[x.upper() for x in [\"dora\", \"emon\"]]</code> &rarr; <code>[\"DORA\", \"EMON\"]</code> (uppercase each)</li>\n    <li><code>[x for x in range(10) if x % 2 == 0]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (only evens)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why use it?</strong> List comprehensions are more readable, faster, and considered more \"Pythonic\" than traditional for loops with append().</div>\n</div>"
         },
 
         "qna": [
@@ -3092,7 +3092,7 @@ window.levels = [
         "description": {
             "heading": "Tuples",
             "subheading": "Immutable ordered sequences",
-            "body": "<p>A <strong>Tuple</strong> is similar to a list, but with one key difference: it's <strong>immutable</strong> — once created, it <strong>cannot be changed</strong>. Tuples are perfect for data that should remain constant throughout your program.</p>\\n\\n<h3>Creating Tuples</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li>Use <strong>parentheses <code>()</code></strong> to create tuples</li>\\n    <li>Separate items with <strong>commas</strong></li>\\n    <li>Single-item tuples need a trailing comma: <code>(item,)</code></li>\\n</ul>\\n\\n<h3>Examples</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><code>coordinates = (10, 20)</code> (x, y position)</li>\\n    <li><code>colors = (\\\"red\\\", \\\"green\\\", \\\"blue\\\")</code> (RGB values)</li>\\n    <li><code>single = (\\\"Doraemon\\\",)</code> (single item with comma)</li>\\n    <li><code>empty = ()</code> (empty tuple)</li>\\n</ul>\\n\\n<h3>Tuple vs List</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><strong>Tuples:</strong> Immutable, faster, use parentheses <code>()</code></li>\\n    <li><strong>Lists:</strong> Mutable, slower, use square brackets <code>[]</code></li>\\n</ul>\\n\\n<div class=\\\"desc-callout callout-highlight\\\">\\n    <span class=\\\"callout-icon\\\">⚠️</span>\\n    <div><strong>Immutable:</strong> You cannot add, remove, or modify tuple elements after creation. Trying to do so raises a <code>TypeError</code>!</div>\\n</div>"
+            "body": "<p>A <strong>Tuple</strong> is similar to a list, but with one key difference: it's <strong>immutable</strong> — once created, it <strong>cannot be changed</strong>. Tuples are perfect for data that should remain constant throughout your program.</p>\n\n<h3>Creating Tuples</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>parentheses <code>()</code></strong> to create tuples</li>\n    <li>Separate items with <strong>commas</strong></li>\n    <li>Single-item tuples need a trailing comma: <code>(item,)</code></li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>coordinates = (10, 20)</code> (x, y position)</li>\n    <li><code>colors = (\"red\", \"green\", \"blue\")</code> (RGB values)</li>\n    <li><code>single = (\"Doraemon\",)</code> (single item with comma)</li>\n    <li><code>empty = ()</code> (empty tuple)</li>\n</ul>\n\n<h3>Tuple vs List</h3>\n<ul class=\"desc-list\">\n    <li><strong>Tuples:</strong> Immutable, faster, use parentheses <code>()</code></li>\n    <li><strong>Lists:</strong> Mutable, slower, use square brackets <code>[]</code></li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Immutable:</strong> You cannot add, remove, or modify tuple elements after creation. Trying to do so raises a <code>TypeError</code>!</div>\n</div>"
         },
 
         "qna": [
@@ -3134,7 +3134,7 @@ window.levels = [
         "description": {
             "heading": "Sets",
             "subheading": "Unordered unique collections",
-            "body": "<p>A <strong>Set</strong> is an unordered collection of <strong>unique</strong> items. Unlike lists, sets cannot contain duplicate values, and they don't maintain any specific order. Sets are perfect for removing duplicates and performing mathematical set operations.</p>\\n\\n<h3>Creating Sets</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li>Use <strong>curly braces <code>{}</code></strong> to create sets</li>\\n    <li>Or use the <code>set()</code> constructor</li>\\n    <li>Duplicates are automatically removed</li>\\n</ul>\\n\\n<h3>Examples</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><code>{1, 2, 3, 2, 1}</code> &rarr; <code>{1, 2, 3}</code> (duplicates removed)</li>\\n    <li><code>set([\\\"a\\\", \\\"b\\\", \\\"a\\\"])</code> &rarr; <code>{\\\"a\\\", \\\"b\\\"}</code> (from list)</li>\\n    <li><code>empty_set = set()</code> (empty set — <code>{}</code> creates empty dict!)</li>\\n</ul>\\n\\n<h3>Set Operations</h3>\\n<ul class=\\\"desc-list\\\">\\n    <li><strong><code>add()</code></strong> — Add an element</li>\\n    <li><strong><code>remove()</code></strong> — Remove an element</li>\\n    <li><strong><code>union()</code></strong> or <code>|</code> — Combine sets</li>\\n    <li><strong><code>intersection()</code></strong> or <code>&</code> — Common elements</li>\\n</ul>\\n\\n<div class=\\\"desc-callout callout-highlight\\\">\\n    <span class=\\\"callout-icon\\\">⚠️</span>\\n    <div><strong>No Indexing:</strong> Sets are unordered, so you cannot access elements by index (no <code>set[0]</code>). Use loops or convert to list if you need indexing!</div>\\n</div>"
+            "body": "<p>A <strong>Set</strong> is an unordered collection of <strong>unique</strong> items. Unlike lists, sets cannot contain duplicate values, and they don't maintain any specific order. Sets are perfect for removing duplicates and performing mathematical set operations.</p>\n\n<h3>Creating Sets</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>curly braces <code>{}</code></strong> to create sets</li>\n    <li>Or use the <code>set()</code> constructor</li>\n    <li>Duplicates are automatically removed</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>{1, 2, 3, 2, 1}</code> &rarr; <code>{1, 2, 3}</code> (duplicates removed)</li>\n    <li><code>set([\"a\", \"b\", \"a\"])</code> &rarr; <code>{\"a\", \"b\"}</code> (from list)</li>\n    <li><code>empty_set = set()</code> (empty set — <code>{}</code> creates empty dict!)</li>\n</ul>\n\n<h3>Set Operations</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>add()</code></strong> — Add an element</li>\n    <li><strong><code>remove()</code></strong> — Remove an element</li>\n    <li><strong><code>union()</code></strong> or <code>|</code> — Combine sets</li>\n    <li><strong><code>intersection()</code></strong> or <code>&</code> — Common elements</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>No Indexing:</strong> Sets are unordered, so you cannot access elements by index (no <code>set[0]</code>). Use loops or convert to list if you need indexing!</div>\n</div>"
         },
 
         "qna": [
@@ -3171,196 +3171,631 @@ window.levels = [
         "id": 61,
         "title": "Dictionary",
         "concept": "Key-value pair data structures",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Dictionary",
-            "subheading": "STAGE 7 — Collections",
-            "body": "<p>Welcome to <strong>Level 61</strong>! In this lesson, we will cover <strong>Dictionary</strong>.</p>\n<p>This level is part of <strong>STAGE 7 — Collections</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Dictionary:</strong> Key-value pair data structures.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Dictionaries",
+            "subheading": "Key-value pair data structures",
+            "body": "<p>A <strong>Dictionary</strong> is a collection of key-value pairs. Dictionaries are unordered (ordered by insertion from Python 3.7+), mutable, and indexed by keys (which must be unique and of immutable types).</p>\n\n<h3>Creating Dictionaries</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>curly braces <code>{}</code></strong> with <code>key: value</code> pairs</li>\n    <li>Or use the <code>dict()</code> constructor</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>doraemon = {\"name\": \"Doraemon\", \"color\": \"blue\", \"age\": 10}</code></li>\n    <li><code>empty_dict = {}</code></li>\n</ul>\n\n<h3>Accessing and Modifying Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>doraemon[\"color\"]</code> &rarr; <code>\"blue\"</code> (Accessing value)</li>\n    <li><code>doraemon.get(\"pocket\", \"no pocket\")</code> &rarr; <code>\"no pocket\"</code> (Safe access using get())</li>\n    <li><code>doraemon[\"height\"] = 129.3</code> &rarr; Adds a new key-value pair</li>\n    <li><code>doraemon[\"color\"] = \"yellow\"</code> &rarr; Updates existing key</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>KeyError:</strong> Trying to access a key that does not exist in a dictionary using square brackets (e.g. <code>doraemon[\"pocket\"]</code>) will raise a <code>KeyError</code>. Use the <code>get()</code> method to avoid this!</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What is a dictionary in Python?", "a": "A dictionary is a mutable collection of key-value pairs. Each key is mapped to a value, and keys must be unique and immutable (like strings, numbers, or tuples)." },
+            { "q": "How do you access a value in a dictionary?", "a": "You can access a value using its key inside square brackets (e.g. <code>my_dict[\"key\"]</code>) or by using the <code>get()</code> method (e.g. <code>my_dict.get(\"key\")</code>)." },
+            { "q": "What is the difference between my_dict[\"key\"] and my_dict.get(\"key\")?", "a": "If the key does not exist, <code>my_dict[\"key\"]</code> raises a <code>KeyError</code>, whereas <code>my_dict.get(\"key\")</code> returns <code>None</code> (or a default value you specify) without raising an error." },
+            { "q": "Can you have duplicate keys in a dictionary?", "a": "No, keys must be unique. If you assign a value to an existing key, it will overwrite the previous value." },
+            { "q": "How do you add or update a key-value pair?", "a": "Simply assign a value to the key: <code>my_dict[\"new_key\"] = value</code>. If the key exists, it updates it; if it doesn't, it adds it." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of Python dictionaries!",
+            "questions": [
+                { "type": "mcq", "question": "Which brackets are used to create dictionaries?", "options": ["Square brackets []", "Parentheses ()", "Curly braces {}", "Angle brackets <>"], "answer": 2 },
+                { "type": "mcq", "question": "What happens if you try to access a non-existent key using square brackets?", "options": ["Returns None", "Raises a KeyError", "Creates the key automatically", "Returns False"], "answer": 1 },
+                { "type": "mcq", "question": "What is the output of empty = {}; empty.get('pocket', 'not found')?", "options": ["not found", "None", "KeyError", "empty"], "answer": 0 },
+                { "type": "fill", "question": "Dictionaries store data as key-_____ pairs.", "answer": "value" },
+                { "type": "fill", "question": "To get a list of all keys in a dictionary, use the _____() method.", "answer": "keys" },
+                { "type": "fill", "question": "A safe way to access keys without raising KeyError is the _____() method.", "answer": "get" },
+                { "type": "tf", "question": "Dictionary keys must be unique.", "answer": "true" },
+                { "type": "tf", "question": "You can have duplicate values in a dictionary.", "answer": "true" },
+                { "type": "tf", "question": "{} creates an empty dictionary.", "answer": "true" },
+                { "type": "short", "question": "How do you check if a key is present in a dictionary?", "sampleAnswer": "Use the 'in' operator, for example: 'key' in my_dict." }
+            ]
+        },
+
+        "scenario": "Create a dictionary containing Doraemon's details. Define a dictionary named 'doraemon' with keys 'color' set to 'blue' and 'type' set to 'robot'. Add a new key 'pocket' set to True. Print the doraemon dictionary.",
+        "hint": "Use doraemon = {'color': 'blue', 'type': 'robot'} and then doraemon['pocket'] = True.",
+        "wrongHint": "Make sure you create the dictionary correctly, add the 'pocket' key, and print the dictionary!",
+        "solution": "doraemon = {\"color\": \"blue\", \"type\": \"robot\"}\ndoraemon[\"pocket\"] = True\nprint(doraemon)",
+        "starterCode": "doraemon = {\"color\": \"blue\", \"type\": \"robot\"}\n# Add the key 'pocket' with value True, then print doraemon\n"
     },
     {
         "id": 62,
         "title": "Nested dictionary",
         "concept": "Structuring complex hierarchical data",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Nested dictionary",
-            "subheading": "STAGE 7 — Collections",
-            "body": "<p>Welcome to <strong>Level 62</strong>! In this lesson, we will cover <strong>Nested dictionary</strong>.</p>\n<p>This level is part of <strong>STAGE 7 — Collections</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Nested dictionary:</strong> Structuring complex hierarchical data.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Nested Dictionaries",
+            "subheading": "Structuring complex hierarchical data",
+            "body": "<p>A <strong>Nested Dictionary</strong> is a dictionary that contains other dictionaries as values. This is extremely useful for structuring complex hierarchical data, like user profiles, nested objects, or database records.</p>\n\n<h3>Creating a Nested Dictionary</h3>\n<ul class=\"desc-list\">\n    <li>Place a dictionary inside another dictionary as a value associated with a key.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">users = {\n    \"user1\": {\n        \"name\": \"Doraemon\",\n        \"color\": \"blue\"\n    },\n    \"user2\": {\n        \"name\": \"Nobita\",\n        \"color\": \"yellow\"\n    }\n}</pre>\n\n<h3>Accessing Nested Elements</h3>\n<ul class=\"desc-list\">\n    <li>Chain the square brackets <code>[]</code> to access nested values.</li>\n    <li><code>users[\"user1\"][\"name\"]</code> &rarr; <code>\"Doraemon\"</code></li>\n    <li><code>users[\"user2\"][\"color\"]</code> &rarr; <code>\"yellow\"</code></li>\n</ul>\n\n<h3>Modifying Nested Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>users[\"user2\"][\"color\"] = \"red\"</code> &rarr; Changes Nobita's color to red</li>\n    <li><code>users[\"user1\"][\"pocket\"] = True</code> &rarr; Adds 'pocket' to Doraemon's dictionary</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Chaining get():</strong> To safely access nested elements, you can chain <code>.get()</code>. But be careful: if a outer key is missing, <code>.get()</code> returns <code>None</code>, and calling <code>.get()</code> on <code>None</code> will crash your program. Use: <code>users.get(\"user1\", {}).get(\"name\")</code>.</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What is a nested dictionary?", "a": "A nested dictionary is a dictionary where the values of one or more keys are themselves dictionaries." },
+            { "q": "How do you access a value inside a nested dictionary?", "a": "You access a value by chaining keys in square brackets, starting with the outermost key: <code>dict[outer_key][inner_key]</code>." },
+            { "q": "Can you have multiple levels of nesting in a dictionary?", "a": "Yes! You can nest dictionaries inside nested dictionaries as deep as you need, e.g. <code>dict[level1][level2][level3]</code>." },
+            { "q": "How do you add a new key-value pair to an existing nested dictionary?", "a": "Access the nested dictionary first, and then assign the value: <code>dict[outer_key][new_inner_key] = value</code>." },
+            { "q": "How can you safely access nested keys without raising an error?", "a": "Use <code>.get()</code> with an empty dictionary fallback for intermediate keys: <code>dict.get(outer_key, {}).get(inner_key)</code>." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of Python nested dictionaries!",
+            "questions": [
+                { "type": "mcq", "question": "Given info = {'dora': {'color': 'blue'}}, how do you access 'blue'?", "options": ["info['dora', 'color']", "info['dora']['color']", "info['dora'](color)", "info.dora.color"], "answer": 1 },
+                { "type": "mcq", "question": "What type of structure is a nested dictionary?", "options": ["Flat structure", "Hierarchical structure", "Sequential structure", "Tabular structure"], "answer": 1 },
+                { "type": "mcq", "question": "What is the result of info = {'dora': {'color': 'blue'}}; info['dora'].get('pocket', 'none')?", "options": ["None", "none", "KeyError", "blue"], "answer": 1 },
+                { "type": "fill", "question": "To access nested dictionary values, you _____ key lookups.", "answer": "chain" },
+                { "type": "fill", "question": "If info = {'a': {'b': 1}}, then info['a']['b'] is equal to _____.", "answer": "1" },
+                { "type": "fill", "question": "Using info.get('a', {}) returns an empty _____ if 'a' is not found.", "answer": "dictionary" },
+                { "type": "tf", "question": "You can change a value inside a nested dictionary.", "answer": "true" },
+                { "type": "tf", "question": "Nested dictionaries can only have one level of nesting.", "answer": "false" },
+                { "type": "tf", "question": "info['a']['b'] will raise an error if key 'a' doesn't exist.", "answer": "true" },
+                { "type": "short", "question": "Write the expression to add a key 'age' with value 10 to a nested dictionary 'nobita' inside 'friends'.", "sampleAnswer": "friends['nobita']['age'] = 10" }
+            ]
+        },
+
+        "scenario": "Define a nested dictionary representing character gadgets. Create a dictionary named 'inventory' containing 'doraemon' as a key, whose value is another dictionary with key 'primary' set to 'Anywhere Door'. Modify this nested dictionary to add a key 'secondary' with value 'Time Machine' under 'doraemon'. Print the final inventory dictionary.",
+        "hint": "Use inventory = {'doraemon': {'primary': 'Anywhere Door'}} and inventory['doraemon']['secondary'] = 'Time Machine'.",
+        "wrongHint": "Make sure you nest the dictionaries correctly and print the main inventory dictionary!",
+        "solution": "inventory = {\"doraemon\": {\"primary\": \"Anywhere Door\"}}\ninventory[\"doraemon\"][\"secondary\"] = \"Time Machine\"\nprint(inventory)",
+        "starterCode": "inventory = {\"doraemon\": {\"primary\": \"Anywhere Door\"}}\n# Add 'secondary' key with value 'Time Machine' under 'doraemon', then print inventory\n"
     },
     {
         "id": 63,
         "title": "len(), max(), min()",
         "concept": "Core aggregate functions on collections",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "len(), max(), min()",
-            "subheading": "STAGE 7 — Collections",
-            "body": "<p>Welcome to <strong>Level 63</strong>! In this lesson, we will cover <strong>len(), max(), min()</strong>.</p>\n<p>This level is part of <strong>STAGE 7 — Collections</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>len(), max(), min():</strong> Core aggregate functions on collections.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "len(), max(), and min() Functions",
+            "subheading": "Core aggregate functions on collections",
+            "body": "<p>Python provides several extremely useful built-in functions that work across all collections (lists, tuples, sets, dictionaries, and even strings) to get their size, maximum value, and minimum value.</p>\n\n<h3>1. The <code>len()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the number of items (length) in a collection.</li>\n    <li><code>len([1, 2, 3])</code> &rarr; <code>3</code></li>\n    <li><code>len(\"Doraemon\")</code> &rarr; <code>8</code></li>\n</ul>\n\n<h3>2. The <code>max()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the largest item in a collection.</li>\n    <li><code>max([5, 12, 3])</code> &rarr; <code>12</code></li>\n    <li><code>max(\"abc\")</code> &rarr; <code>\"c\"</code> (alphabetically largest)</li>\n</ul>\n\n<h3>3. The <code>min()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the smallest item in a collection.</li>\n    <li><code>min([5, 12, 3])</code> &rarr; <code>3</code></li>\n    <li><code>min(\"abc\")</code> &rarr; <code>\"a\"</code> (alphabetically smallest)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Comparing Mixed Types:</strong> Calling <code>max()</code> or <code>min()</code> on a collection with mixed, incomparable types (e.g. <code>[10, \"apple\"]</code>) will raise a <code>TypeError</code>!</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What does len() do?", "a": "<code>len()</code> returns the number of elements in a collection, such as a list, set, dictionary, tuple, or the number of characters in a string." },
+            { "q": "What does max() and min() return for strings?", "a": "They compare characters based on their Unicode value (alphabetical order). E.g. <code>min(\"doraemon\")</code> returns <code>\"a\"</code>." },
+            { "q": "Can you use max() and min() on dictionaries?", "a": "Yes! By default, they will find the maximum/minimum of the dictionary's <strong>keys</strong>, not its values." },
+            { "q": "What happens if you pass an empty collection to max() or min()?", "a": "Passing an empty collection raises a <code>ValueError</code>. You can prevent this by passing a default value, e.g. <code>max([], default=0)</code>." },
+            { "q": "Does len() work on numeric values like integers?", "a": "No. <code>len()</code> only works on sequences and collections. Calling <code>len(123)</code> will raise a <code>TypeError</code>." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of len(), max(), and min()!",
+            "questions": [
+                { "type": "mcq", "question": "What does len('Python') return?", "options": ["5", "6", "7", "Error"], "answer": 1 },
+                { "type": "mcq", "question": "What is the result of max([2, 8, 1])?", "options": ["1", "2", "8", "TypeError"], "answer": 2 },
+                { "type": "mcq", "question": "What happens if you run min([1, 'a'])?", "options": ["1", "'a'", "None", "Raises TypeError"], "answer": 3 },
+                { "type": "fill", "question": "The _____ function returns the number of elements in a list.", "answer": "len" },
+                { "type": "fill", "question": "To find the smallest element in a collection, use the _____ function.", "answer": "min" },
+                { "type": "fill", "question": "When used on a dictionary, max() compares the dictionary _____.", "answer": "keys" },
+                { "type": "tf", "question": "len() can be used to find the length of an integer directly.", "answer": "false" },
+                { "type": "tf", "question": "max() and min() are built-in functions, not list methods.", "answer": "true" },
+                { "type": "tf", "question": "min() on a string returns the alphabetically earliest character.", "answer": "true" },
+                { "type": "short", "question": "Write the code to find the length of the list [10, 20, 30].", "sampleAnswer": "len([10, 20, 30])" }
+            ]
+        },
+
+        "scenario": "Analyze a list of scores. Define scores = [78, 92, 56, 89, 95, 84]. Find the number of scores using len() and store it in 'count'. Find the highest score using max() and store it in 'highest'. Find the lowest score using min() and store it in 'lowest'. Print all three values on separate lines in that order.",
+        "hint": "Use len(scores), max(scores), and min(scores).",
+        "wrongHint": "Make sure you print count, highest, and lowest on three separate lines!",
+        "solution": "scores = [78, 92, 56, 89, 95, 84]\ncount = len(scores)\nhighest = max(scores)\nlowest = min(scores)\nprint(count)\nprint(highest)\nprint(lowest)",
+        "starterCode": "scores = [78, 92, 56, 89, 95, 84]\n# Find count, highest, lowest and print them on separate lines below\n"
     },
     {
         "id": 64,
         "title": "Sorting",
         "concept": "Sorting collections using sort() and sorted()",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Sorting",
-            "subheading": "STAGE 7 — Collections",
-            "body": "<p>Welcome to <strong>Level 64</strong>! In this lesson, we will cover <strong>Sorting</strong>.</p>\n<p>This level is part of <strong>STAGE 7 — Collections</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Sorting:</strong> Sorting collections using sort() and sorted().</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Sorting Collections",
+            "subheading": "In-place sort() vs. returns-new sorted()",
+            "body": "<p>Python offers two primary ways to sort collections. Understanding the difference between them is crucial for writing bug-free and efficient code.</p>\n\n<h3>1. The <code>sort()</code> Method (In-place)</h3>\n<ul class=\"desc-list\">\n    <li>Only available for <strong>lists</strong>.</li>\n    <li>Modifies the original list **in-place** (permanently changing its order).</li>\n    <li>Returns <code>None</code>.</li>\n    <li><code>numbers = [3, 1, 4]; numbers.sort(); print(numbers)</code> &rarr; <code>[1, 3, 4]</code></li>\n</ul>\n\n<h3>2. The <code>sorted()</code> Function (Returns new list)</h3>\n<ul class=\"desc-list\">\n    <li>Available for **any iterable** (lists, tuples, strings, dictionaries, sets).</li>\n    <li>Leaves the original collection **unchanged**.</li>\n    <li>Returns a **new sorted list**.</li>\n    <li><code>numbers = [3, 1, 4]; sorted_nums = sorted(numbers); print(sorted_nums)</code> &rarr; <code>[1, 3, 4]</code></li>\n</ul>\n\n<h3>Reverse Sorting</h3>\n<p>Both support sorting in descending order using the <code>reverse=True</code> parameter:</p>\n<ul class=\"desc-list\">\n    <li><code>numbers.sort(reverse=True)</code></li>\n    <li><code>new_list = sorted(numbers, reverse=True)</code></li>\n</ul>"
+        },
+
+        "qna": [
+            { "q": "What is the difference between sort() and sorted()?", "a": "<code>sort()</code> is a list method that modifies the list in-place and returns <code>None</code>. <code>sorted()</code> is a built-in function that works on any iterable, leaves the original unchanged, and returns a new sorted list." },
+            { "q": "Can you use sort() on a tuple?", "a": "No, tuples are immutable, so they cannot be modified in-place. Trying to use <code>my_tuple.sort()</code> raises an <code>AttributeError</code>. You can, however, use the <code>sorted(my_tuple)</code> function, which returns a new sorted list." },
+            { "q": "How do you sort a list in descending order?", "a": "Pass the argument <code>reverse=True</code> to either <code>sort()</code> or <code>sorted()</code>. E.g. <code>my_list.sort(reverse=True)</code>." },
+            { "q": "What does sorted() return when you pass a string?", "a": "It returns a sorted **list** of characters, e.g. <code>sorted(\"cba\")</code> returns <code>['a', 'b', 'c']</code>." },
+            { "q": "Can you sort a list of strings?", "a": "Yes! Strings are sorted alphabetically (lexicographically) by default. Capital letters come before lowercase letters in ASCII/Unicode sorting." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of sorting in Python!",
+            "questions": [
+                { "type": "mcq", "question": "Which of the following sorts a list in-place?", "options": ["sorted(my_list)", "my_list.sort()", "my_list.sorted()", "sort(my_list)"], "answer": 1 },
+                { "type": "mcq", "question": "What does my_list.sort() return?", "options": ["The sorted list", "None", "A new list", "Error"], "answer": 1 },
+                { "type": "mcq", "question": "Can you call sort() on a tuple?", "options": ["Yes, it returns a sorted tuple", "Yes, it modifies the tuple in-place", "No, tuples have no sort method", "Only if it contains numbers"], "answer": 2 },
+                { "type": "fill", "question": "To sort a collection in descending order, pass the parameter reverse=_____.", "answer": "True" },
+                { "type": "fill", "question": "The sorted() function returns a new _____.", "answer": "list" },
+                { "type": "fill", "question": "The sort() method sorts a list _____-place.", "answer": "in" },
+                { "type": "tf", "question": "sorted() modifies the original collection.", "answer": "false" },
+                { "type": "tf", "question": "You can use sorted() on dictionaries.", "answer": "true" },
+                { "type": "tf", "question": "Strings are sorted alphabetically.", "answer": "true" },
+                { "type": "short", "question": "What is the return type of sorted('hello')?", "sampleAnswer": "A list of strings/characters, specifically ['e', 'h', 'l', 'l', 'o']." }
+            ]
+        },
+
+        "scenario": "Perform both types of sorting. Define a list named 'prices' with values [25, 10, 45, 5]. Use sorted() to create a new sorted list in descending order and store it in 'prices_desc'. Then use sort() on the original 'prices' list to sort it in-place in ascending order. Print both prices_desc and prices on separate lines.",
+        "hint": "Use prices_desc = sorted(prices, reverse=True) and prices.sort().",
+        "wrongHint": "Make sure you print prices_desc first, then prices on the next line!",
+        "solution": "prices = [25, 10, 45, 5]\nprices_desc = sorted(prices, reverse=True)\nprices.sort()\nprint(prices_desc)\nprint(prices)",
+        "starterCode": "prices = [25, 10, 45, 5]\n# Sort prices descending into prices_desc, sort prices in-place, then print both on separate lines\n"
     },
     {
         "id": 65,
         "title": "Collection coding challenge",
         "concept": "Solving complex collection puzzles",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Collection coding challenge",
-            "subheading": "STAGE 7 — Collections",
-            "body": "<p>Welcome to <strong>Level 65</strong>! In this lesson, we will cover <strong>Collection coding challenge</strong>.</p>\n<p>This level is part of <strong>STAGE 7 — Collections</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Collection coding challenge:</strong> Solving complex collection puzzles.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Collection Coding Challenge",
+            "subheading": "Mastering lists, tuples, sets, and dictionaries",
+            "body": "<p>Congratulations! You've reached the end of the Collections module. It's time to put your knowledge to the test by solving a practical programming challenge that combines various collection types.</p>\n\n<h3>Review of Collections</h3>\n<ul class=\"desc-list\">\n    <li><strong>Lists:</strong> Ordered, mutable, allows duplicates. Great for lists of items you want to change.</li>\n    <li><strong>Tuples:</strong> Ordered, immutable, allows duplicates. Great for fixed data (e.g. coordinates, key-value keys).</li>\n    <li><strong>Sets:</strong> Unordered, mutable, unique elements. Great for removing duplicates and testing membership.</li>\n    <li><strong>Dictionaries:</strong> Key-value mapping, keys must be unique. Great for lookup tables and structured objects.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Challenge Prompt:</strong> We want to identify the unique items present in a list, sort them alphabetically, and map them to their length in a dictionary!</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "How can you remove duplicates from a list?", "a": "The easiest way is to convert the list to a set using <code>set(my_list)</code>, then optionally convert it back to a list using <code>list()</code>." },
+            { "q": "How do you count occurrences of items in a list?", "a": "You can use a loop with a dictionary, or the built-in <code>list.count()</code> method, or the <code>collections.Counter</code> class." },
+            { "q": "Can set elements be dictionary keys?", "a": "Yes! Set elements must be hashable (immutable), just like dictionary keys. So you can map unique string items from a set to dictionary values." },
+            { "q": "What happens when you sort a set?", "a": "Using <code>sorted(my_set)</code> returns a sorted <strong>list</strong> of the set elements, as sets themselves cannot be sorted." },
+            { "q": "How do you combine elements from a list into a dictionary?", "a": "You can use a dictionary comprehension, for example: <code>{item: len(item) for item in items}</code>." }
+        ],
+
+        "test": {
+            "intro": "Let's test your overall collections mastery!",
+            "questions": [
+                { "type": "mcq", "question": "Which structure guarantees only unique elements?", "options": ["List", "Tuple", "Set", "Dictionary"], "answer": 2 },
+                { "type": "mcq", "question": "Which structure is immutable?", "options": ["List", "Tuple", "Set", "Dictionary"], "answer": 1 },
+                { "type": "mcq", "question": "What is the return type of sorted({3, 1, 2})?", "options": ["Set", "List", "Tuple", "Dict"], "answer": 1 },
+                { "type": "fill", "question": "To add an element to a set, use the _____ method.", "answer": "add" },
+                { "type": "fill", "question": "To add an element to a list, use the _____ method.", "answer": "append" },
+                { "type": "fill", "question": "Converting a list to a set automatically removes _____.", "answer": "duplicates" },
+                { "type": "tf", "question": "Dictionaries can have lists as keys.", "answer": "false" },
+                { "type": "tf", "question": "Tuples can contain mutable lists.", "answer": "true" },
+                { "type": "tf", "question": "The expression len({1, 1, 2}) evaluates to 2.", "answer": "true" },
+                { "type": "short", "question": "Write a dictionary comprehension that maps 1, 2 to their squares.", "sampleAnswer": "{x: x**2 for x in (1, 2)}" }
+            ]
+        },
+
+        "scenario": "Remove duplicates and map item lengths. Define words = ['dorayaki', 'apple', 'dorayaki', 'banana', 'apple']. Convert this list to a set to get unique words, then sort them alphabetically to get a sorted list of unique words. Finally, create a dictionary where keys are the sorted unique words and values are their lengths. Print the final dictionary.",
+        "hint": "First, do unique_words = sorted(list(set(words))), then create the dict using comprehension: {w: len(w) for w in unique_words}.",
+        "wrongHint": "Make sure you convert the list to a set to remove duplicates, sort the results alphabetically, map them to their lengths, and print the dictionary!",
+        "solution": "words = ['dorayaki', 'apple', 'dorayaki', 'banana', 'apple']\nunique_words = sorted(list(set(words)))\nresult = {w: len(w) for w in unique_words}\nprint(result)",
+        "starterCode": "words = ['dorayaki', 'apple', 'dorayaki', 'banana', 'apple']\n# Remove duplicates, sort alphabetically, map to lengths in a dictionary, and print it below\n"
     },
     {
         "id": 66,
         "title": "Why functions",
         "concept": "Reusing and modularizing your Python code",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Why functions",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 66</strong>! In this lesson, we will cover <strong>Why functions</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why functions:</strong> Reusing and modularizing your Python code.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Why Functions?",
+            "subheading": "Reusing and modularizing your Python code",
+            "body": "<p>Imagine you need to print a banner message 10 times in different parts of your code. Copy-pasting the print statement works, but what if you need to change the message? You'd have to edit all 10 places! This is where <strong>functions</strong> come in.</p>\n\n<h3>Core Principles</h3>\n<ul class=\"desc-list\">\n    <li><strong>DRY (Don't Repeat Yourself):</strong> Avoid copy-pasting code. Write once, use everywhere!</li>\n    <li><strong>Modularity:</strong> Break complex code into smaller, organized, and manageable chunks.</li>\n    <li><strong>Readability:</strong> Named functions make it easy to understand what the code does (e.g. <code>calculate_score()</code>).</li>\n    <li><strong>Maintainability:</strong> Bug fixes or updates only need to be done in one place.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>What is a Function?</strong> A function is a named block of code designed to perform a specific task. Defining a function is like writing a recipe; it doesn't do anything until you actually follow (call) it!</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What does the DRY principle stand for?", "a": "DRY stands for <strong>Don't Repeat Yourself</strong>. It's a programming best practice aimed at reducing repetition of code." },
+            { "q": "How do functions improve readability?", "a": "By grouping statements under a descriptive name (like <code>draw_circle()</code>), we tell the reader what the block of code does without them needing to read every line of logic." },
+            { "q": "What is modularity?", "a": "Modularity is the practice of breaking down a large program into small, independent sub-programs (modules or functions) that are easy to build and test." },
+            { "q": "Does defining a function execute its code?", "a": "No, defining a function only registers it in memory. It will not execute until you explicitly call it." },
+            { "q": "When should I write a function?", "a": "Write a function whenever you find yourself repeating the same lines of code, or when a block of code becomes too long and does a distinct, logical task." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of why we use functions in programming!",
+            "questions": [
+                { "type": "mcq", "question": "What is the primary benefit of the DRY principle?", "options": ["Faster execution", "Reduced code repetition", "Simpler syntax", "More parameters"], "answer": 1 },
+                { "type": "mcq", "question": "What is breaking code into self-contained blocks called?", "options": ["Linearity", "Modularity", "Precedence", "Nesting"], "answer": 1 },
+                { "type": "mcq", "question": "What happens when you define a function?", "options": ["It runs immediately", "It compiles to binary", "It is registered in memory but doesn't run", "It prompts user input"], "answer": 2 },
+                { "type": "fill", "question": "DRY stands for Don't _____ Yourself.", "answer": "Repeat" },
+                { "type": "fill", "question": "A function is a named _____ of code.", "answer": "block" },
+                { "type": "fill", "question": "Grouping code into small independent parts is called _____.", "answer": "modularity" },
+                { "type": "tf", "question": "Functions make code harder to debug.", "answer": "false" },
+                { "type": "tf", "question": "You should write a function if you copy-paste the same code multiple times.", "answer": "true" },
+                { "type": "tf", "question": "A program can only have one function.", "answer": "false" },
+                { "type": "short", "question": "Explain the concept of code reusability.", "sampleAnswer": "Code reusability means writing a block of code once (like in a function) and invoking it multiple times throughout a program without rewriting it." }
+            ]
+        },
+
+        "scenario": "Define a simple welcome function. Create a function named 'greet' that prints the string 'Hello, PyBe Explorer!'. Run the function once to see the message printed.",
+        "hint": "Use def greet(): followed by print('Hello, PyBe Explorer!') and then call greet().",
+        "wrongHint": "Make sure you define greet() and then call it by typing greet() at the bottom!",
+        "solution": "def greet():\n    print(\"Hello, PyBe Explorer!\")\n\ngreet()",
+        "starterCode": "# Define the greet function and call it below\n"
     },
     {
         "id": 67,
         "title": "Creating functions",
         "concept": "Defining functions with def",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Creating functions",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 67</strong>! In this lesson, we will cover <strong>Creating functions</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Creating functions:</strong> Defining functions with def.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Creating Functions",
+            "subheading": "Defining functions with def",
+            "body": "<p>In Python, we create functions using the <strong><code>def</code></strong> keyword. Let's look at the basic structure of a function definition and how to call it.</p>\n\n<h3>Syntax of a Function</h3>\n<pre class=\"code-example\">def function_name():\n    # code block inside function\n    print(\"Hello from function!\")</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>def</code>:</strong> Keyword telling Python we are defining a function.</li>\n    <li><strong><code>function_name</code>:</strong> The name of the function (use snake_case, similar to variables).</li>\n    <li><strong>Parentheses <code>()</code>:</strong> Where inputs go (can be empty).</li>\n    <li><strong>Colon <code>:</code>:</strong> Ends the function header.</li>\n    <li><strong>Indented Block:</strong> The code statements that will run when the function is called.</li>\n</ul>\n\n<h3>Calling a Function</h3>\n<p>To run (call) a function, write its name followed by parentheses:</p>\n<pre class=\"code-example\">function_name()</pre>"
+        },
+
+        "qna": [
+            { "q": "What keyword is used to start a function definition?", "a": "The <code>def</code> keyword is used to start a function definition." },
+            { "q": "What is the difference between defining and calling a function?", "a": "Defining a function creates the block of code and names it. Calling a function actually executes that block of code." },
+            { "q": "Why do function names need parentheses when called?", "a": "The parentheses indicate to Python that you want to execute (call) the function. Without parentheses, Python refers to the function object itself rather than running it." },
+            { "q": "Does Python require indentation for function bodies?", "a": "Yes! All statements inside the function body must be consistently indented (usually 4 spaces). Indentation determines where the function ends." },
+            { "q": "Can a function name start with a number?", "a": "No, function names follow the same naming rules as variables. They must start with a letter or underscore, and cannot be Python keywords." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of creating and calling functions!",
+            "questions": [
+                { "type": "mcq", "question": "Which keyword defines a function in Python?", "options": ["function", "def", "define", "func"], "answer": 1 },
+                { "type": "mcq", "question": "How do you call a function named 'say_hello'?", "options": ["call say_hello", "say_hello()", "say_hello[]", "say_hello"], "answer": 1 },
+                { "type": "mcq", "question": "What happens if you omit parentheses when calling a function?", "options": ["It raises a SyntaxError", "It runs anyway", "It refers to the function object but does not execute it", "It returns None"], "answer": 2 },
+                { "type": "fill", "question": "Functions are defined using the _____ keyword.", "answer": "def" },
+                { "type": "fill", "question": "The body of a function must be _____.", "answer": "indented" },
+                { "type": "fill", "question": "A function header must end with a _____.", "answer": ":" },
+                { "type": "tf", "question": "def stands for define.", "answer": "true" },
+                { "type": "tf", "question": "Function names must follow the same rules as variable names.", "answer": "true" },
+                { "type": "tf", "question": "You can call a function before defining it in a script.", "answer": "false" },
+                { "type": "short", "question": "What is the syntax error in: 'def test() print(\"ok\")'?", "sampleAnswer": "It is missing the colon ':' at the end of the def statement, and the print function must be indented on the next line." }
+            ]
+        },
+
+        "scenario": "Define and run an intro function. Create a function named 'doraemon_intro' that prints 'I am Doraemon, a robot cat!'. Call the function at the bottom of the script.",
+        "hint": "Use def doraemon_intro(): and indent the print statement. Don't forget to call doraemon_intro() at the end.",
+        "wrongHint": "Make sure you call doraemon_intro() at the bottom!",
+        "solution": "def doraemon_intro():\n    print(\"I am Doraemon, a robot cat!\")\n\ndoraemon_intro()",
+        "starterCode": "# Create and call the doraemon_intro function below\n"
     },
     {
         "id": 68,
         "title": "Parameters",
         "concept": "Passing inputs into your functions",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Parameters",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 68</strong>! In this lesson, we will cover <strong>Parameters</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Parameters:</strong> Passing inputs into your functions.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Function Parameters",
+            "subheading": "Passing inputs into your functions",
+            "body": "<p>Functions become much more powerful when we can feed them information. <strong>Parameters</strong> allow functions to accept input values and use them inside their logic.</p>\n\n<h3>Parameters vs. Arguments</h3>\n<ul class=\"desc-list\">\n    <li><strong>Parameter:</strong> The variable listed inside the parentheses in the function <strong>definition</strong> (e.g. <code>name</code>).</li>\n    <li><strong>Argument:</strong> The actual value sent to the function when it is <strong>called</strong> (e.g. <code>\"Nobita\"</code>).</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def greet(name):\n    print(\"Hello, \" + name)\n\ngreet(\"Nobita\")  # Output: Hello, Nobita\ngreet(\"Shizuka\") # Output: Hello, Shizuka</pre>\n\n<h3>Multiple Parameters</h3>\n<p>You can define functions with multiple parameters by separating them with commas:</p>\n<pre class=\"code-example\">def add_nums(a, b):\n    print(a + b)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>TypeError:</strong> If a function expects a certain number of parameters, you must pass the exact same number of arguments when calling it, otherwise Python will throw an error!</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What is the difference between a parameter and an argument?", "a": "A parameter is the variable name inside the function definition. An argument is the actual value passed to that parameter during a function call." },
+            { "q": "Can you pass multiple parameters to a function?", "a": "Yes! You can specify as many parameters as needed, separated by commas: <code>def func(x, y, z):</code>." },
+            { "q": "What happens if you pass the wrong number of arguments?", "a": "Python raises a <code>TypeError</code> stating that the function is missing required positional arguments, or that too many arguments were given." },
+            { "q": "Do parameters have specific data types?", "a": "In Python, parameters are dynamically typed. They will accept any data type passed to them, unless you use type hints." },
+            { "q": "Are variables created inside a function (including parameters) accessible outside?", "a": "No, they have local scope. They only exist inside the function and disappear once the function completes execution." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of parameters and arguments!",
+            "questions": [
+                { "type": "mcq", "question": "What is the variable in a function definition called?", "options": ["Argument", "Parameter", "Constant", "Key"], "answer": 1 },
+                { "type": "mcq", "question": "What is the actual value passed in a function call called?", "options": ["Argument", "Parameter", "Variable", "Statement"], "answer": 0 },
+                { "type": "mcq", "question": "What error is raised when arguments mismatch parameters?", "options": ["ValueError", "TypeError", "SyntaxError", "NameError"], "answer": 1 },
+                { "type": "fill", "question": "Variables inside def parentheses are called _____.", "answer": "parameters" },
+                { "type": "fill", "question": "Multiple parameters are separated by _____.", "answer": "commas" },
+                { "type": "fill", "question": "Values passed during function call are called _____.", "answer": "arguments" },
+                { "type": "tf", "question": "A function can only take one parameter.", "answer": "false" },
+                { "type": "tf", "question": "Arguments and parameters must match in count.", "answer": "true" },
+                { "type": "tf", "question": "Parameter variables can be accessed outside the function body.", "answer": "false" },
+                { "type": "short", "question": "Given: 'def mult(x, y): print(x * y)'. Write the call to multiply 4 and 5.", "sampleAnswer": "mult(4, 5)" }
+            ]
+        },
+
+        "scenario": "Create a parameter-driven greeting. Write a function named 'greet_friend' that takes one parameter: 'name'. The function should print 'Hello, Nobita!' when passed 'Nobita'. Call the function with 'Nobita' as the argument.",
+        "hint": "Use def greet_friend(name): and print(f'Hello, {name}!'). Then call greet_friend('Nobita').",
+        "wrongHint": "Make sure you print 'Hello, ' followed by the name parameter and an exclamation mark!",
+        "solution": "def greet_friend(name):\n    print(f\"Hello, {name}!\")\n\ngreet_friend(\"Nobita\")",
+        "starterCode": "# Define greet_friend(name) and call it with 'Nobita' below\n"
     },
     {
         "id": 69,
         "title": "Return statement",
         "concept": "Returning values back from function calls",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Return statement",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 69</strong>! In this lesson, we will cover <strong>Return statement</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Return statement:</strong> Returning values back from function calls.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "The Return Statement",
+            "subheading": "Returning values back from function calls",
+            "body": "<p>So far, our functions have only printed values to the screen. But often, we want a function to perform a calculation and **send the result back** to the main program. We do this using the <strong><code>return</code></strong> statement.</p>\n\n<h3>Return Syntax</h3>\n<pre class=\"code-example\">def square(x):\n    return x * x\n\nresult = square(4)\nprint(result)  # Output: 16</pre>\n\n<h3>Print vs. Return</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>print()</code>:</strong> Displays text on the screen for the user. It **does not** give any data to the program (returns <code>None</code>).</li>\n    <li><strong><code>return</code>:</strong> Sends data back to the program. This data can be stored in a variable, used in math, or printed later.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Exit Code:</strong> The <code>return</code> statement immediately exits the function. Any code written inside the function *after* a return statement will never be run (known as dead code)!</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What does the return statement do?", "a": "It terminates function execution and sends a value (or values) back to the caller." },
+            { "q": "Can you store a return value in a variable?", "a": "Yes! That's the main purpose of return. E.g. <code>my_val = calculate_total()</code>." },
+            { "q": "What does a function return if it doesn't have a return statement?", "a": "It returns <code>None</code> by default once the function reaches the end of its body." },
+            { "q": "What is dead code?", "a": "Dead code is code written after a return statement inside a function. Since the function exits on return, this code is unreachable and will never execute." },
+            { "q": "Can a function return multiple values?", "a": "Yes! You can return multiple values separated by commas: <code>return x, y</code>. Python returns them grouped together as a single <strong>tuple</strong>." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of function return values!",
+            "questions": [
+                { "type": "mcq", "question": "Which statement exits a function and sends a value back?", "options": ["send", "output", "return", "exit"], "answer": 2 },
+                { "type": "mcq", "question": "What is returned by a function that has no return statement?", "options": ["0", "None", "False", "Error"], "answer": 1 },
+                { "type": "mcq", "question": "What happens to code written inside a function after a return statement?", "options": ["It runs first", "It raises a warning", "It is ignored (dead code)", "It executes after returning"], "answer": 2 },
+                { "type": "fill", "question": "The _____ statement terminates the function and sends a value back.", "answer": "return" },
+                { "type": "fill", "question": "By default, functions with no return statement return _____.", "answer": "None" },
+                { "type": "fill", "question": "Code after return that cannot be reached is called _____ code.", "answer": "dead" },
+                { "type": "tf", "question": "print() and return do the exact same thing.", "answer": "false" },
+                { "type": "tf", "question": "A function can have multiple return statements (e.g. in different if branches).", "answer": "true" },
+                { "type": "tf", "question": "You can use the returned value of a function in mathematical expressions.", "answer": "true" },
+                { "type": "short", "question": "What does return 5, 10 output in terms of data type?", "sampleAnswer": "It returns a tuple: (5, 10)." }
+            ]
+        },
+
+        "scenario": "Write a sum function that returns a value. Define a function named 'add_numbers' that accepts two parameters 'a' and 'b'. It should return their sum. Call the function with 5 and 7, store the returned value in a variable 'total', and print 'total'.",
+        "hint": "Use def add_numbers(a, b): return a + b. Then total = add_numbers(5, 7) and print(total).",
+        "wrongHint": "Make sure you return the sum and assign the function call to total before printing!",
+        "solution": "def add_numbers(a, b):\n    return a + b\n\ntotal = add_numbers(5, 7)\nprint(total)",
+        "starterCode": "# Define add_numbers(a, b) and print the result of 5 + 7 below\n"
     },
     {
         "id": 70,
         "title": "Default arguments",
         "concept": "Specifying fallback parameter values",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Default arguments",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 70</strong>! In this lesson, we will cover <strong>Default arguments</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Default arguments:</strong> Specifying fallback parameter values.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Default Arguments",
+            "subheading": "Specifying fallback parameter values",
+            "body": "<p>Sometimes, we want a parameter to have a fallback value if the caller doesn't provide one. These are called <strong>default arguments</strong>.</p>\n\n<h3>Syntax</h3>\n<pre class=\"code-example\">def greet(name=\"Friend\"):\n    print(\"Hello, \" + name)\n\ngreet()         # Output: Hello, Friend (uses default)\ngreet(\"Nobita\") # Output: Hello, Nobita (overrides default)</pre>\n\n<h3>Order of Arguments</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Golden Rule:</strong> In a function signature, non-default arguments <strong>must</strong> come before default arguments. Otherwise, Python will raise a <code>SyntaxError</code>!</div>\n</div>\n<pre class=\"code-example\"># Correct:\ndef greet(greeting, name=\"Friend\"): ...\n\n# Incorrect (SyntaxError):\ndef greet(name=\"Friend\", greeting): ...</pre>"
+        },
+
+        "qna": [
+            { "q": "What is a default argument?", "a": "A default argument is a value provided in the function definition that is automatically assigned to a parameter if the caller does not pass a value for it." },
+            { "q": "Can default arguments be overridden?", "a": "Yes! If the caller passes a value for that parameter, the passed value overrides the default value." },
+            { "q": "Where must parameters with default values be placed?", "a": "They must always be placed <strong>after</strong> any parameters that do not have default values." },
+            { "q": "Why does Python enforce this order?", "a": "So Python can unambiguously match positional arguments. If defaults came first, passing fewer arguments would make it impossible to tell which parameters were omitted." },
+            { "q": "Can a default argument be a list or dictionary?", "a": "Yes, but it is highly discouraged to use mutable default arguments (like <code>[]</code> or <code>{}</code>) because they are shared across all calls. Use <code>None</code> instead." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of default arguments!",
+            "questions": [
+                { "type": "mcq", "question": "Where must default arguments be placed in a function definition?", "options": ["At the very beginning", "Anywhere", "After non-default arguments", "Inside the body only"], "answer": 2 },
+                { "type": "mcq", "question": "What does greet() print if defined as def greet(name='User'): print(name)?", "options": ["User", "None", "Error", "Empty string"], "answer": 0 },
+                { "type": "mcq", "question": "Is def func(a=5, b) valid in Python?", "options": ["Yes, completely valid", "No, it raises a SyntaxError", "No, it raises a TypeError", "Only if called with arguments"], "answer": 1 },
+                { "type": "fill", "question": "Default arguments must follow _____-default arguments.", "answer": "non" },
+                { "type": "fill", "question": "If an argument is provided, it _____ the default value.", "answer": "overrides" },
+                { "type": "fill", "question": "Assigning a default value to a parameter makes that argument _____.", "answer": "optional" },
+                { "type": "tf", "question": "A function can have multiple parameters with default values.", "answer": "true" },
+                { "type": "tf", "question": "Using empty lists [] as default arguments is a recommended practice.", "answer": "false" },
+                { "type": "tf", "question": "You can call a function with default arguments without passing any values.", "answer": "true" },
+                { "type": "short", "question": "Correct the signature: def info(tag='Cat', name):", "sampleAnswer": "def info(name, tag='Cat'):" }
+            ]
+        },
+
+        "scenario": "Define a function with a default parameter. Create a function named 'make_gadget' that takes two parameters: 'gadget_name' and 'owner' with a default value of 'Doraemon'. The function should return the string '{owner} owns the {gadget_name}'. Call 'make_gadget' with only 'Anywhere Door' as the argument, store the return value in 'message', and print it.",
+        "hint": "Use def make_gadget(gadget_name, owner='Doraemon'): return f'{owner} owns the {gadget_name}'. Then call it with one argument.",
+        "wrongHint": "Make sure you print message and place the default parameter second in the signature!",
+        "solution": "def make_gadget(gadget_name, owner=\"Doraemon\"):\n    return f\"{owner} owns the {gadget_name}\"\n\nmessage = make_gadget(\"Anywhere Door\")\nprint(message)",
+        "starterCode": "# Define make_gadget and print the result with Anywhere Door below\n"
     },
     {
         "id": 71,
         "title": "Keyword arguments",
         "concept": "Passing inputs explicitly by name",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Keyword arguments",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 71</strong>! In this lesson, we will cover <strong>Keyword arguments</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Keyword arguments:</strong> Passing inputs explicitly by name.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Keyword Arguments",
+            "subheading": "Passing inputs explicitly by name",
+            "body": "<p>In Python, you can pass arguments to a function using their parameter names: <code>parameter_name = value</code>. These are called <strong>keyword arguments</strong>.</p>\n\n<h3>Benefits of Keyword Arguments</h3>\n<ul class=\"desc-list\">\n    <li><strong>Order doesn't matter:</strong> You can pass arguments in any order, and Python will match them by name rather than position!</li>\n    <li><strong>Readability:</strong> It is instantly clear what each value represents.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_info(name, age):\n    print(f\"{name} is {age} years old.\")\n\n# These two calls do the exact same thing:\nprint_info(\"Nobita\", 10)\nprint_info(age=10, name=\"Nobita\")</pre>\n\n<h3>Mixing Positional and Keyword Arguments</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Strict Order Rule:</strong> You can mix positional and keyword arguments, but positional arguments <strong>must always</strong> come first. Positional argument following keyword argument raises a <code>SyntaxError</code>!</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What is a keyword argument?", "a": "A keyword argument is an argument passed to a function preceded by a parameter name and an equals sign (e.g. <code>name=\"Nobita\"</code>)." },
+            { "q": "Does the order of keyword arguments matter?", "a": "No, order does not matter for keyword arguments. Python matches them to parameters by their names." },
+            { "q": "Can I mix positional arguments and keyword arguments?", "a": "Yes! But you must place all positional arguments first before any keyword arguments. E.g. <code>func(10, y=20)</code> is valid, but <code>func(x=10, 20)</code> is not." },
+            { "q": "What error is raised if a positional argument follows a keyword argument?", "a": "Python raises a <code>SyntaxError: positional argument follows keyword argument</code>." },
+            { "q": "Why are keyword arguments helpful for functions with many parameters?", "a": "They allow you to specify only the parameters you want to change, leaving optional arguments to use their defaults, without keeping track of parameter order." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of keyword arguments!",
+            "questions": [
+                { "type": "mcq", "question": "Which of these is a keyword argument call?", "options": ["func(10)", "func(x=10)", "func('x', 10)", "func([10])"], "answer": 1 },
+                { "type": "mcq", "question": "What happens if a positional argument follows a keyword argument?", "options": ["Raises SyntaxError", "It runs fine", "Raises ValueError", "Returns None"], "answer": 0 },
+                { "type": "mcq", "question": "Given def show(a, b): print(a, b), what does show(b=2, a=1) print?", "options": ["2 1", "1 2", "a b", "Error"], "answer": 1 },
+                { "type": "fill", "question": "Keyword arguments are matched to parameters by _____.", "answer": "name" },
+                { "type": "fill", "question": "Positional arguments must come _____ keyword arguments.", "answer": "before" },
+                { "type": "fill", "question": "The syntax error raised is 'positional argument _____ keyword argument'.", "answer": "follows" },
+                { "type": "tf", "question": "The order of keyword arguments in a call must match the definition.", "answer": "false" },
+                { "type": "tf", "question": "Using keyword arguments improves code readability.", "answer": "true" },
+                { "type": "tf", "question": "show(a=1, 2) is a valid function call.", "answer": "false" },
+                { "type": "short", "question": "Rewrite call: func(10, 'blue') using keyword arguments (x and color).", "sampleAnswer": "func(x=10, color='blue') or func(color='blue', x=10)" }
+            ]
+        },
+
+        "scenario": "Define a function and call it using keyword arguments. Define a function named 'greet' with two parameters: 'greeting' and 'name'. Inside the function, print '{greeting}, {name}!'. Call this function using keyword arguments in reversed order, specifically setting name='Shizuka' and greeting='Hello'.",
+        "hint": "Use def greet(greeting, name): print(f'{greeting}, {name}!'). Call it using greet(name='Shizuka', greeting='Hello').",
+        "wrongHint": "Make sure you call the greet function with keyword arguments and print the exact format!",
+        "solution": "def greet(greeting, name):\n    print(f\"{greeting}, {name}!\")\n\ngreet(name=\"Shizuka\", greeting=\"Hello\")",
+        "starterCode": "# Define greet(greeting, name) and call it with keyword arguments name='Shizuka' and greeting='Hello' below\n"
     },
     {
         "id": 72,
         "title": "*args",
         "concept": "Accepting a variable number of positional arguments",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "*args",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 72</strong>! In this lesson, we will cover <strong>*args</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>*args:</strong> Accepting a variable number of positional arguments.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Arbitrary Positional Arguments: *args",
+            "subheading": "Accepting a variable number of positional arguments",
+            "body": "<p>What if you want to write a function that can accept any number of inputs? For example, a function that sums up numbers, whether you pass 2, 5, or 100 values. In Python, you can achieve this using <strong><code>*args</code></strong>.</p>\n\n<h3>The Asterisk <code>*</code> Prefix</h3>\n<ul class=\"desc-list\">\n    <li>The <code>*</code> before a parameter name tells Python to collect all remaining positional arguments into a single <strong>tuple</strong>.</li>\n    <li>By convention, we name this parameter <strong><code>args</code></strong> (short for arguments), but any name like <code>*numbers</code> is valid.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_all(*args):\n    print(args)  # args is a tuple\n\nprint_all(1, 2, 3)  # Output: (1, 2, 3)</pre>\n\n<h3>Iterating Over *args</h3>\n<p>Since <code>args</code> is a standard tuple, you can loop through its elements, use index indexing, or pass it to built-in functions like <code>sum()</code> or <code>len()</code>!</p>"
+        },
+
+        "qna": [
+            { "q": "What does the asterisk * do in *args?", "a": "The asterisk <code>*</code> is an unpacking operator. In a function definition, it bundles all positional arguments passed to the function into a single tuple." },
+            { "q": "Is the name 'args' mandatory?", "a": "No. The name <code>args</code> is a standard convention. You can name it anything, like <code>*items</code> or <code>*numbers</code>, as long as it has the <code>*</code> prefix." },
+            { "q": "What data type is args inside the function?", "a": "Inside the function, <code>args</code> is a <strong>tuple</strong> containing all the positional arguments." },
+            { "q": "Can you have regular parameters before *args?", "a": "Yes! You can define regular positional parameters first. Any remaining arguments will be caught by <code>*args</code>. E.g. <code>def func(first, *rest):</code>." },
+            { "q": "What happens if you pass no arguments to a function with *args?", "a": "It runs fine! <code>args</code> will simply be an empty tuple <code>()</code>." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of *args in Python!",
+            "questions": [
+                { "type": "mcq", "question": "What data type is args inside a function?", "options": ["List", "Tuple", "Dictionary", "Set"], "answer": 1 },
+                { "type": "mcq", "question": "Which parameter definition collects arbitrary positional arguments?", "options": ["**args", "*args", "args*", "args"], "answer": 1 },
+                { "type": "mcq", "question": "What is printed by def f(*a): print(len(a)); f(10, 20)?", "options": ["1", "2", "0", "Error"], "answer": 1 },
+                { "type": "fill", "question": "The asterisk * collects positional arguments into a _____.", "answer": "tuple" },
+                { "type": "fill", "question": "The convention name for arbitrary positional arguments is _____.", "answer": "args" },
+                { "type": "fill", "question": "If f(*args) is called with no arguments, args is an empty _____.", "answer": "tuple" },
+                { "type": "tf", "question": "You can only have one *args parameter in a function signature.", "answer": "true" },
+                { "type": "tf", "question": "You can change tuple elements inside args.", "answer": "false" },
+                { "type": "tf", "question": "args holds keyword arguments.", "answer": "false" },
+                { "type": "short", "question": "Explain the difference between *args and regular parameters.", "sampleAnswer": "*args collects any number of positional arguments into a single tuple, whereas regular parameters expect exactly one argument each." }
+            ]
+        },
+
+        "scenario": "Sum a variable number of integers. Write a function named 'sum_all' that takes a variable number of parameters using '*args'. Inside, return the sum of all elements in 'args' (hint: use sum(args)). Call the function with arguments 1, 2, 3, 4, store the return value in 'result', and print it.",
+        "hint": "Use def sum_all(*args): return sum(args). Then call it and print the result.",
+        "wrongHint": "Make sure you use sum_all(1, 2, 3, 4) and print the sum result!",
+        "solution": "def sum_all(*args):\n    return sum(args)\n\nresult = sum_all(1, 2, 3, 4)\nprint(result)",
+        "starterCode": "# Define sum_all(*args) and print the sum of 1, 2, 3, 4 below\n"
     },
     {
         "id": 73,
         "title": "**kwargs",
         "concept": "Accepting a variable number of keyword arguments",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "**kwargs",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 73</strong>! In this lesson, we will cover <strong>**kwargs</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>**kwargs:</strong> Accepting a variable number of keyword arguments.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Arbitrary Keyword Arguments: **kwargs",
+            "subheading": "Accepting a variable number of keyword arguments",
+            "body": "<p>While <code>*args</code> collects positional arguments, Python gives us a way to accept any number of named (keyword) arguments. This is done using <strong><code>**kwargs</code></strong> (double asterisks).</p>\n\n<h3>The Double Asterisk <code>**</code> Prefix</h3>\n<ul class=\"desc-list\">\n    <li>The <code>**</code> collects all arbitrary keyword arguments into a <strong>dictionary</strong>.</li>\n    <li>By convention, we name this parameter <strong><code>kwargs</code></strong> (short for keyword arguments).</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_profile(**kwargs):\n    print(kwargs)  # kwargs is a dictionary\n\nprint_profile(name=\"Doraemon\", age=10)\n# Output: {'name': 'Doraemon', 'age': 10}</pre>\n\n<h3>Looping through **kwargs</h3>\n<p>Since <code>kwargs</code> is a dictionary, you can use methods like <code>.keys()</code>, <code>.values()</code>, and <code>.items()</code> to loop over key-value pairs inside the function body!</p>"
+        },
+
+        "qna": [
+            { "q": "What is the purpose of **kwargs?", "a": "It collects any arbitrary keyword arguments passed to the function into a single dictionary." },
+            { "q": "What data type is kwargs inside the function?", "a": "Inside the function, <code>kwargs</code> is a standard Python <strong>dictionary</strong>." },
+            { "q": "What is the ordering of parameters in a function when mixing arguments?", "a": "The ordering must be: positional parameters, then <code>*args</code>, then <code>**kwargs</code>." },
+            { "q": "Is 'kwargs' a reserved keyword in Python?", "a": "No, it is a standard name convention. You can use any name (e.g. <code>**details</code>) as long as it has the <code>**</code> prefix." },
+            { "q": "What happens if you pass no keyword arguments to **kwargs?", "a": "The function executes successfully, and <code>kwargs</code> is set to an empty dictionary <code>{}</code>." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of **kwargs in Python!",
+            "questions": [
+                { "type": "mcq", "question": "What data type is kwargs inside a function?", "options": ["List", "Tuple", "Dictionary", "Set"], "answer": 2 },
+                { "type": "mcq", "question": "Which prefix identifies arbitrary keyword arguments?", "options": ["*", "**", "***", "&"], "answer": 1 },
+                { "type": "mcq", "question": "Which order of parameters is correct?", "options": ["func(*args, **kwargs, a)", "func(a, *args, **kwargs)", "func(**kwargs, *args, a)", "func(a, **kwargs, *args)"], "answer": 1 },
+                { "type": "fill", "question": "The double asterisk prefix collects keyword arguments into a _____.", "answer": "dictionary" },
+                { "type": "fill", "question": "The standard name for arbitrary keyword arguments is _____.", "answer": "kwargs" },
+                { "type": "fill", "question": "To get key-value pairs from kwargs, call the _____() method.", "answer": "items" },
+                { "type": "tf", "question": "kwargs keys are strings matching the argument names.", "answer": "true" },
+                { "type": "tf", "question": "You can add new items to the kwargs dictionary inside the function.", "answer": "true" },
+                { "type": "tf", "question": "kwargs can accept positional arguments.", "answer": "false" },
+                { "type": "short", "question": "Write a function signature that takes one positional parameter 'x' and arbitrary kwargs.", "sampleAnswer": "def func(x, **kwargs):" }
+            ]
+        },
+
+        "scenario": "Display profile details using kwargs. Define a function named 'print_profile' that accepts arbitrary keyword arguments using '**kwargs'. Inside, loop over kwargs items (using .items()) and print each pair on a new line in the format '{key}: {value}'. Call 'print_profile' with arguments name='Doraemon' and color='blue'.",
+        "hint": "Use for key, value in kwargs.items(): print(f'{key}: {value}') inside print_profile.",
+        "wrongHint": "Make sure you call the function passing name='Doraemon' and color='blue'!",
+        "solution": "def print_profile(**kwargs):\n    for key, value in kwargs.items():\n        print(f\"{key}: {value}\")\n\nprint_profile(name=\"Doraemon\", color=\"blue\")",
+        "starterCode": "# Define print_profile(**kwargs) and call it with name='Doraemon' and color='blue' below\n"
     },
     {
         "id": 74,
         "title": "Variable scope (global)",
         "concept": "Understanding local vs global scopes",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
-            "heading": "Variable scope (global)",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 74</strong>! In this lesson, we will cover <strong>Variable scope (global)</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Variable scope (global):</strong> Understanding local vs global scopes.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Variable Scope",
+            "subheading": "Understanding local vs global scopes",
+            "body": "<p>Where you define a variable determines where you can access it in your code. This concept is called <strong>variable scope</strong>.</p>\n\n<h3>1. Local Scope</h3>\n<ul class=\"desc-list\">\n    <li>Variables created <strong>inside</strong> a function belong to the local scope of that function.</li>\n    <li>They can only be used inside that function and cease to exist once the function ends.</li>\n</ul>\n\n<h3>2. Global Scope</h3>\n<ul class=\"desc-list\">\n    <li>Variables created in the <strong>main body</strong> of a Python script (outside any functions) belong to the global scope.</li>\n    <li>They are accessible from anywhere in your code, including inside functions.</li>\n</ul>\n\n<h3>The <code>global</code> Keyword</h3>\n<p>By default, you can **read** global variables inside a function, but you cannot **modify** them. If you try to change a global variable inside a function, Python will create a new local variable with the same name.</p>\n<p>To modify a global variable inside a function, declare it with the <strong><code>global</code></strong> keyword:</p>\n<pre class=\"code-example\">count = 0\n\ndef increment():\n    global count\n    count += 1</pre>"
+        },
+
+        "qna": [
+            { "q": "What is variable scope?", "a": "Variable scope refers to the region of a program where a variable is defined and can be accessed." },
+            { "q": "Can I read a global variable inside a function?", "a": "Yes! You can read its value inside a function without any special keywords." },
+            { "q": "What happens if I assign a value to a global variable name inside a function without declaring 'global'?", "a": "Python creates a new **local variable** with the same name. The global variable remains unchanged." },
+            { "q": "What is variable shadowing?", "a": "Variable shadowing occurs when a local variable shares the same name as a global variable. Inside the function, the local variable takes precedence, shadowing the global one." },
+            { "q": "What does the global keyword do?", "a": "The <code>global</code> keyword tells Python that the variable name references the global scope, allowing you to modify the global variable from inside a function." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of variable scopes and the global keyword!",
+            "questions": [
+                { "type": "mcq", "question": "Where are local variables accessible?", "options": ["Everywhere in the file", "Only inside the function they are defined in", "Only in outer scopes", "Nowhere"], "answer": 1 },
+                { "type": "mcq", "question": "Which keyword lets you modify a global variable inside a function?", "options": ["extern", "global", "static", "modify"], "answer": 1 },
+                { "type": "mcq", "question": "What does Python do if you write x = 5 inside a function when global x exists (without 'global x')?", "options": ["Raises SyntaxError", "Modifies global x", "Creates a new local variable named x", "Raises NameError"], "answer": 2 },
+                { "type": "fill", "question": "Variables defined outside functions reside in the _____ scope.", "answer": "global" },
+                { "type": "fill", "question": "Variables defined inside functions reside in the _____ scope.", "answer": "local" },
+                { "type": "fill", "question": "To change a global variable inside a function, use the _____ keyword.", "answer": "global" },
+                { "type": "tf", "question": "You can read a global variable inside a function without using the 'global' keyword.", "answer": "true" },
+                { "type": "tf", "question": "Local variables exist in memory after their function exits.", "answer": "false" },
+                { "type": "tf", "question": "Global variables should be used sparingly because they can make debugging difficult.", "answer": "true" },
+                { "type": "short", "question": "Explain local scope in your own words.", "sampleAnswer": "Local scope is the scope inside a function. Variables defined inside a function are local to it and cannot be accessed outside of it." }
+            ]
+        },
+
+        "scenario": "Modify a global counter inside a function. Define a global variable named 'count' initialized to 0. Write a function named 'increment' that uses the 'global' keyword to modify 'count' by adding 1. Call the increment function once, and then print the value of count.",
+        "hint": "Use global count inside increment(), then count += 1.",
+        "wrongHint": "Make sure you declare 'global count' before modifying count, and print count at the end!",
+        "solution": "count = 0\n\ndef increment():\n    global count\n    count += 1\n\nincrement()\nprint(count)",
+        "starterCode": "count = 0\n# Declare increment() and modify global count inside, call it, then print count\n"
     },
     {
         "id": 75,
         "title": "Recursion",
         "concept": "Functions that call themselves",
-        "sections": [
-            "description"
-        ],
+        "sections": ["description", "qna", "test", "coding"],
+
         "description": {
             "heading": "Recursion",
-            "subheading": "STAGE 8 — Functions",
-            "body": "<p>Welcome to <strong>Level 75</strong>! In this lesson, we will cover <strong>Recursion</strong>.</p>\n<p>This level is part of <strong>STAGE 8 — Functions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Recursion:</strong> Functions that call themselves.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Functions that call themselves",
+            "body": "<p><strong>Recursion</strong> is a powerful programming technique where a function **calls itself** to solve a problem. It works by breaking down a complex problem into smaller, simpler sub-problems of the same type.</p>\n\n<h3>The Two Essential Parts of Recursion</h3>\n<ul class=\"desc-list\">\n    <li><strong>Base Case:</strong> The stopping condition. It returns a value directly without making another recursive call. Without it, the function would call itself forever!</li>\n    <li><strong>Recursive Case:</strong> The part where the function calls itself with a simpler or smaller input, moving closer to the base case.</li>\n</ul>\n\n<h3>Example: Factorial</h3>\n<p>The factorial of a number <code>n</code> (denoted <code>n!</code>) is <code>n * (n-1) * (n-2) * ... * 1</code>.</p>\n<pre class=\"code-example\">def factorial(n):\n    if n <= 1:  # Base Case\n        return 1\n    else:       # Recursive Case\n        return n * factorial(n - 1)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>RecursionError:</strong> If you forget a base case or your inputs don't approach it, Python will exceed its call stack size limit and crash with a <code>RecursionError: maximum recursion depth exceeded</code>.</div>\n</div>"
+        },
+
+        "qna": [
+            { "q": "What is recursion?", "a": "Recursion is a programming technique where a function calls itself during execution to solve a smaller instance of the same problem." },
+            { "q": "What is a base case?", "a": "The base case is the condition that terminates the recursive loop. Without it, a function would call itself infinitely." },
+            { "q": "What happens if a recursive function does not have a base case?", "a": "It leads to infinite recursion, eventually causing a <code>RecursionError: maximum recursion depth exceeded</code>." },
+            { "q": "Can every recursive function be written using loops?", "a": "Yes! Any recursive algorithm can be rewritten using iteration (for or while loops). Iteration is often more memory-efficient, but recursion can make code cleaner and simpler for certain tasks (like traversing trees)." },
+            { "q": "What is the call stack?", "a": "The call stack is the memory structure Python uses to keep track of active function calls. In recursion, every self-call adds a new frame to the call stack until the base case is reached." }
+        ],
+
+        "test": {
+            "intro": "Let's check your understanding of recursion!",
+            "questions": [
+                { "type": "mcq", "question": "What is the stopping condition in a recursive function called?", "options": ["Stop Case", "Terminator", "Base Case", "Default Case"], "answer": 2 },
+                { "type": "mcq", "question": "What error is raised if a function calls itself infinitely?", "options": ["RecursionError", "OverflowError", "InfiniteError", "StackError"], "answer": 0 },
+                { "type": "mcq", "question": "Which of these algorithms is naturally recursive?", "options": ["Factorial calculation", "Linear search", "Printing a string", "Adding two numbers"], "answer": 0 },
+                { "type": "fill", "question": "Recursion is when a function calls _____.", "answer": "itself" },
+                { "type": "fill", "question": "The stopping condition is the _____ case.", "answer": "base" },
+                { "type": "fill", "question": "Infinite recursion leads to exceeding the maximum call _____ depth.", "answer": "stack" },
+                { "type": "tf", "question": "A recursive function can have more than one base case.", "answer": "true" },
+                { "type": "tf", "question": "Recursion is always more memory-efficient than loops.", "answer": "false" },
+                { "type": "tf", "question": "Base cases prevent stack overflows.", "answer": "true" },
+                { "type": "short", "question": "State the two components required in any valid recursive function.", "sampleAnswer": "A base case (stopping condition) and a recursive case (calling itself with a reduced input)." }
+            ]
+        },
+
+        "scenario": "Implement factorial recursively. Define a function 'factorial(n)' that returns 1 if n <= 1 (base case), otherwise returns n * factorial(n - 1) (recursive case). Call the function passing 5, store the returned value in 'result', and print result.",
+        "hint": "Use def factorial(n): if n <= 1: return 1 else: return n * factorial(n-1). Call factorial(5).",
+        "wrongHint": "Make sure you calculate factorial(5) which should output 120, and print it!",
+        "solution": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)\n\nresult = factorial(5)\nprint(result)",
+        "starterCode": "# Define factorial(n) recursively and print factorial(5) below\n"
     },
     {
         "id": 76,

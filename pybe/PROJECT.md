@@ -137,6 +137,31 @@ pybe/
 - [x] **Level 48** — Slicing (has all 4 sections)
 - [x] **Level 49** — String methods (upper/lower) (has all 4 sections)
 - [x] **Level 50** — replace() (has all 4 sections)
+- [x] **Level 51** — find() (has all 4 sections)
+- [x] **Level 52** — split() (has all 4 sections)
+- [x] **Level 53** — join() (has all 4 sections)
+- [x] **Level 54** — Escape characters (has all 4 sections)
+- [x] **Level 55** — f-Strings (has all 4 sections)
+- [x] **Level 56** — Lists (has all 4 sections)
+- [x] **Level 57** — List methods (has all 4 sections)
+- [x] **Level 58** — List comprehension (has all 4 sections)
+- [x] **Level 59** — Tuples (has all 4 sections)
+- [x] **Level 60** — Sets (has all 4 sections)
+- [x] **Level 61** — Dictionary (has all 4 sections)
+- [x] **Level 62** — Nested dictionary (has all 4 sections)
+- [x] **Level 63** — len(), max(), min() (has all 4 sections)
+- [x] **Level 64** — Sorting (has all 4 sections)
+- [x] **Level 65** — Collection coding challenge (has all 4 sections)
+- [x] **Level 66** — Why functions (has all 4 sections)
+- [x] **Level 67** — Creating functions (has all 4 sections)
+- [x] **Level 68** — Parameters (has all 4 sections)
+- [x] **Level 69** — Return statement (has all 4 sections)
+- [x] **Level 70** — Default arguments (has all 4 sections)
+- [x] **Level 71** — Keyword arguments (has all 4 sections)
+- [x] **Level 72** — *args (has all 4 sections)
+- [x] **Level 73** — **kwargs (has all 4 sections)
+- [x] **Level 74** — Variable scope (global) (has all 4 sections)
+- [x] **Level 75** — Recursion (has all 4 sections)
 
 ---
 
@@ -146,12 +171,12 @@ pybe/
 - [ ] **CSS for all level sections** — styles for section-stepper, description content, Q&A accordion, test question cards, coding area still need to be appended to `style.css`
 
 ### Levels Data (`levels_data.js`)
-- [ ] **Levels 51–55** (Stage 6: Strings Continued) — Add data for:
-  - Level 51: find()
-  - Level 52: split()
-  - Level 53: join()
-  - Level 54: Escape characters
-  - Level 55: f-Strings
+- [ ] **Levels 76–80** (Stage 9: Files + Exceptions) — Add data for:
+  - Level 76: Errors vs Exceptions
+  - Level 77: try-except
+  - Level 78: finally
+  - Level 79: raise keyword
+  - Level 80: File handling (open)
 
 ---
 
