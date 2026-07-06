@@ -643,18 +643,18 @@
                 </div>
             `;
 
-            // Load saved values if any, otherwise pre-fill temporary values for testing
+            // Load saved values if any
             const savedName = localStorage.getItem('pybe_student_name');
-            document.getElementById('studentName').value = savedName || "Nobita Nobi";
+            if (savedName) document.getElementById('studentName').value = savedName;
             
             const savedCode = localStorage.getItem('pybe_project_code');
-            document.getElementById('codeEditor').value = savedCode || `# Doraemon Assistant Chatbot\nprint("Hello Nobita! I am Doraemon.")\nprint("Gadget pocket initialized.")`;
+            if (savedCode) document.getElementById('codeEditor').value = savedCode;
             
             const savedType = localStorage.getItem('pybe_project_type');
             if (savedType) document.getElementById('projectType').value = savedType;
             
             const savedGithub = localStorage.getItem('pybe_github_link');
-            document.getElementById('githubLink').value = savedGithub || "https://github.com/nobita/pybe-chatbot";
+            if (savedGithub) document.getElementById('githubLink').value = savedGithub;
 
             document.getElementById('btnSubmitProject').addEventListener('click', () => {
                 const name = document.getElementById('studentName').value.trim();

@@ -10,15 +10,14 @@ function getProgress() {
         const data = localStorage.getItem(STORAGE_KEY);
         let progress;
         if (!data) {
-            progress = { currentLevel: 100, completed: [], lastPlayed: null, attempts: {} };
+            progress = { currentLevel: 1, completed: [], lastPlayed: null, attempts: {}, streak: 0 };
         } else {
             progress = JSON.parse(data);
-            progress.currentLevel = 100; // Always unlock all levels
             progress.attempts = progress.attempts || {};
         }
         return progress;
     } catch (e) {
-        return { currentLevel: 100, completed: [], lastPlayed: null, attempts: {} };
+        return { currentLevel: 1, completed: [], lastPlayed: null, attempts: {}, streak: 0 };
     }
 }
 
