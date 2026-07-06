@@ -597,29 +597,19 @@
                         <div class="scenario-tag">🎓 Final Mission</div>
                         <p class="scenario-text">
                             Congratulations on reaching the final level! To complete the course and claim your certificate, please:
-                            <br>1. Choose your project topic.
-                            <br>2. Enter your full name exactly as it should appear on your certificate.
-                            <br>3. Enter your GitHub repository link.
-                            <br>4. Copy and paste your Python code in the editor.
+                            <br>1. Enter your full name exactly as it should appear on your certificate.
+                            <br>2. Enter your GitHub repository link.
+                            <br>3. Copy and paste your Python code in the editor.
                         </p>
                     </div>
 
                     <div class="project-form-card" style="background: white; padding: 24px; border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 20px;">
                         <div style="margin-bottom: 16px;">
-                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">1. Select Project Type:</label>
-                            <select id="projectType" style="width:100%; padding:12px; border-radius:var(--radius-sm); border:2px solid #ccc; font-family:'Quicksand',sans-serif; font-size:15px; font-weight:600; outline:none; color:var(--text-dark); background:white;">
-                                <option value="Chatbot">Doraemon Chatbot Assistant</option>
-                                <option value="Automation">File Organizer / Backup Script</option>
-                                <option value="Web Scraper">Web Scraper (Anime/Weather data)</option>
-                                <option value="CLI App">Gadget Pocket Inventory CLI</option>
-                            </select>
-                        </div>
-                        <div style="margin-bottom: 16px;">
-                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">2. Enter Your Full Name (for Certificate):</label>
+                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">1. Enter Your Full Name (for Certificate):</label>
                             <input type="text" id="studentName" placeholder="Enter your full name..." style="width:100%; padding:12px; border-radius:var(--radius-sm); border:2px solid #ccc; font-family:'Quicksand',sans-serif; font-size:15px; font-weight:600; outline:none; color:var(--text-dark);">
                         </div>
                         <div style="margin-bottom: 16px;">
-                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">3. Enter GitHub Repository Link:</label>
+                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">2. Enter GitHub Repository Link:</label>
                             <input type="url" id="githubLink" placeholder="https://github.com/username/project-repo..." style="width:100%; padding:12px; border-radius:var(--radius-sm); border:2px solid #ccc; font-family:'Quicksand',sans-serif; font-size:15px; font-weight:600; outline:none; color:var(--text-dark);">
                         </div>
                     </div>
@@ -658,16 +648,12 @@
             const savedCode = localStorage.getItem('pybe_project_code');
             if (savedCode) document.getElementById('codeEditor').value = savedCode;
             
-            const savedType = localStorage.getItem('pybe_project_type');
-            if (savedType) document.getElementById('projectType').value = savedType;
-            
             const savedGithub = localStorage.getItem('pybe_github_link');
             if (savedGithub) document.getElementById('githubLink').value = savedGithub;
 
             document.getElementById('btnSubmitProject').addEventListener('click', () => {
                 const name = document.getElementById('studentName').value.trim();
                 const code = document.getElementById('codeEditor').value.trim();
-                const type = document.getElementById('projectType').value;
                 const github = document.getElementById('githubLink').value.trim();
 
                 if (!name) {
@@ -684,7 +670,6 @@
                 }
 
                 localStorage.setItem('pybe_student_name', name);
-                localStorage.setItem('pybe_project_type', type);
                 localStorage.setItem('pybe_project_code', code);
                 localStorage.setItem('pybe_github_link', github);
                 
