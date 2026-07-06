@@ -479,6 +479,8 @@ a {
     background: #E0E4E8;
     color: #9AA5B1;
     cursor: not-allowed;
+    display: flex;
+    flex-direction: column;
 }
 
 .level-card.locked:hover {
