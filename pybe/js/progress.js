@@ -14,6 +14,11 @@ function getProgress() {
         } else {
             progress = JSON.parse(data);
             progress.attempts = progress.attempts || {};
+            // Reset currentLevel if it was artificially set to 100 in the past
+            const expectedLevel = (progress.completed ? progress.completed.length : 0) + 1;
+            if (progress.currentLevel > expectedLevel) {
+                progress.currentLevel = expectedLevel;
+            }
         }
         return progress;
     } catch (e) {

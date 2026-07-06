@@ -643,6 +643,14 @@
                 </div>
             `;
 
+            // Clear test dummy values from localStorage if they match
+            if (localStorage.getItem('pybe_student_name') === 'Nobita Nobi') {
+                localStorage.removeItem('pybe_student_name');
+                localStorage.removeItem('pybe_project_code');
+                localStorage.removeItem('pybe_github_link');
+                localStorage.removeItem('pybe_project_type');
+            }
+
             // Load saved values if any
             const savedName = localStorage.getItem('pybe_student_name');
             if (savedName) document.getElementById('studentName').value = savedName;
