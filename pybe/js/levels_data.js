@@ -3802,324 +3802,2796 @@ window.levels = [
         "title": "Errors vs Exceptions",
         "concept": "Understanding syntax errors vs runtime faults",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Errors vs Exceptions",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 76</strong>! In this lesson, we will cover <strong>Errors vs Exceptions</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Errors vs Exceptions:</strong> Understanding syntax errors vs runtime faults.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "The difference between grammar mistakes and execution crashes",
+            "body": "<p>When writing Python code, things will occasionally go wrong. Python categorizes issues into two main categories: <strong>Syntax Errors</strong> and <strong>Exceptions</strong>. Understanding the difference is key to debugging like a pro!</p>\n\n<h3>1. Syntax Errors (Grammar Mistakes)</h3>\n<p>A <strong>SyntaxError</strong> occurs when Python's interpreter tries to parse your code but finds that you have broken the grammar rules of the language. This happens <strong>before</strong> the code is even run. If there is a single syntax error in your file, Python refuses to execute any of it.</p>\n<p>Think of it like trying to write a letter to Doraemon in a language that doesn't exist -- he won't be able to read it at all!</p>\n<pre class=\"code-example\"># SyntaxError: missing colon\nif True\n    print(\"Hello\")</pre>\n\n<h3>2. Exceptions (Runtime Crashes)</h3>\n<p>An <strong>Exception</strong> is an error that occurs <strong>while the program is running</strong>. The syntax of the code is completely correct, but when Python tries to execute a specific operation, it encounters a problem it cannot resolve.</p>\n<p>Think of it like Doraemon's <strong>Anywhere Door</strong>: the door's syntax (its design) is perfect, but if you request to go to a location that has been destroyed, the gadget will fail mid-operation!</p>\n<pre class=\"code-example\"># Exception: ZeroDivisionError (syntactically correct, but math-wise impossible)\nprint(10 / 0)</pre>\n\n<h3>Common Types of Exceptions</h3>\n<ul class=\"desc-list\">\n    <li><strong>ZeroDivisionError:</strong> Raised when dividing a number by zero.</li>\n    <li><strong>NameError:</strong> Raised when trying to use a variable or function that hasn't been defined.</li>\n    <li><strong>TypeError:</strong> Raised when an operation is applied to an object of inappropriate type (e.g. adding text and a number).</li>\n    <li><strong>IndexError:</strong> Raised when trying to access an item in a list using an index that is out of range.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Pro Tip:</strong> When Python encounters an exception that is not handled, it stops executing immediately and prints a traceback, showing the type of error and the exact line where it crashed.</div>\n</div>"
+        },
+        "qna": [
+            {
+                "q": "What is the primary difference between a SyntaxError and an Exception?",
+                "a": "A <strong>SyntaxError</strong> is caught by Python before execution begins because the code grammar is incorrect. An <strong>Exception</strong> is a runtime error that occurs while the program is running, even though the code grammar itself is valid."
+            },
+            {
+                "q": "Will Python run any code if a SyntaxError is present?",
+                "a": "No. If there is a SyntaxError anywhere in the script, Python will not execute a single line of the program."
+            },
+            {
+                "q": "What happens when an exception is triggered?",
+                "a": "If an exception is triggered and not caught/handled, the program immediately halts execution and crashes, printing a traceback error message."
+            },
+            {
+                "q": "Why does print(10 / 0) cause an exception and not a syntax error?",
+                "a": "Because the grammar of the statement is correct (function name, parentheses, number, operator, number). Python understands *how* to parse it, but it only discovers the division by zero *during* the mathematical calculation at runtime."
+            },
+            {
+                "q": "What is an IndexError?",
+                "a": "An <strong>IndexError</strong> is an exception raised when you try to access an index of a sequence (like a list or string) that does not exist. For example, if a list has 2 items, accessing index 5 triggers an IndexError."
+            }
+        ],
+        "test": {
+            "intro": "Let's see if you can tell errors from exceptions!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which of these is detected before execution begins?",
+                    "options": [
+                        "ZeroDivisionError",
+                        "SyntaxError",
+                        "NameError",
+                        "IndexError"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What exception is raised by: print('Nobita' + 5)?",
+                    "options": [
+                        "ValueError",
+                        "SyntaxError",
+                        "TypeError",
+                        "NameError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What exception occurs when you access an invalid index in a list?",
+                    "options": [
+                        "KeyError",
+                        "IndexError",
+                        "ValueError",
+                        "TypeError"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "An error that occurs during the execution of a grammatically correct program is called an _____. (exception / parsing error / compiler error / indentation error)",
+                    "answer": "exception"
+                },
+                {
+                    "type": "fill",
+                    "question": "If you try to call a function name that has not been defined, Python raises a _____Error.",
+                    "answer": "Name"
+                },
+                {
+                    "type": "fill",
+                    "question": "Dividing any number by zero in Python triggers a _____DivisionError.",
+                    "answer": "Zero"
+                },
+                {
+                    "type": "tf",
+                    "question": "A SyntaxError can be bypassed and run anyway if it is written inside a comment.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Exceptions are detected by the interpreter only when that specific line of code is executed.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "If a program crashes due to an exception on line 10, lines 1 to 9 will still run successfully.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain in your own words what is wrong with the code: print(x) if x was never defined, and specify what type of error it is.",
+                    "sampleAnswer": "This code is grammatically correct, so it has no syntax errors. However, because the variable x was never defined in memory, trying to access it causes a NameError exception during runtime when Python searches for x and finds nothing."
+                }
+            ]
+        },
+        "scenario": "Doraemon's pocket has two gadgets: gadgets = ['Anywhere Door', 'Bamboo Copter']. Print the item at index 1 to safely retrieve the Bamboo Copter without triggering an IndexError.",
+        "hint": "Access index 1 of the gadgets list inside a print() function.",
+        "wrongHint": "Make sure you print gadgets[1] exactly!",
+        "solution": "gadgets = ['Anywhere Door', 'Bamboo Copter']\nprint(gadgets[1])",
+        "starterCode": "gadgets = ['Anywhere Door', 'Bamboo Copter']\n# Print the gadget at index 1\n"
     },
     {
         "id": 77,
         "title": "try-except",
         "concept": "Handling program crashes gracefully",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "try-except",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 77</strong>! In this lesson, we will cover <strong>try-except</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>try-except:</strong> Handling program crashes gracefully.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "try-except block",
+            "subheading": "The Safety Net for your Python code",
+            "body": "<p>In real-world applications, code can fail due to unpredictable situations (like bad user input or lost internet connections). Instead of letting your program crash, you can catch and handle exceptions using the <strong><code>try-except</code></strong> statement.</p>\n\n<h3>The Metaphor: The Safety Net</h3>\n<p>Think of it like Doraemon's <strong>Safety Net</strong> gadget: when Nobita tries to perform a risky stunt, the safety net is placed below. If he falls, he doesn't get hurt; the net catches him gracefully and he continues his day!</p>\n\n<h3>Syntax of try-except</h3>\n<p>We write the risky code inside the <code>try</code> block. If an error occurs, Python immediately stops running the <code>try</code> block and runs the code inside the <code>except</code> block:</p>\n<pre class=\"code-example\">try:\n    # Risky code goes here\n    result = 10 / 0\nexcept:\n    # This code runs only if a crash occurs above\n    print(\"Oops, something went wrong!\")</pre>\n\n<h3>Handling Specific Exceptions</h3>\n<p>It's best practice to handle specific exceptions rather than catching everything. This prevents hiding other bugs:</p>\n<pre class=\"code-example\">try:\n    num = int(input(\"Enter a number: \"))\n    print(10 / num)\nexcept ZeroDivisionError:\n    print(\"You cannot divide by zero!\")\nexcept ValueError:\n    print(\"Please enter a valid whole number!\")</pre>\n\n<h3>Getting the Error Message</h3>\n<p>You can capture the error object and print its message using the <code>as</code> keyword:</p>\n<pre class=\"code-example\">try:\n    print(undefined_variable)\nexcept NameError as e:\n    print(f\"Caught an error: {e}\")  # Prints: Caught an error: name 'undefined_variable' is not defined</pre>"
+        },
+        "qna": [
+            {
+                "q": "What happens to the remaining lines inside a try block if an exception occurs?",
+                "a": "Python skips all remaining lines inside the <code>try</code> block and immediately jumps to the matching <code>except</code> block."
+            },
+            {
+                "q": "What happens if no exception occurs inside the try block?",
+                "a": "The entire <code>try</code> block runs successfully, and the <code>except</code> block is completely ignored."
+            },
+            {
+                "q": "Why is it bad practice to use a bare 'except:' without specifying an error type?",
+                "a": "A bare <code>except:</code> catches all errors, including system-exit signals and keyboard interrupts (Ctrl+C), making it harder to stop the program or identify unexpected logic bugs."
+            },
+            {
+                "q": "Can you have multiple except blocks for a single try block?",
+                "a": "Yes! You can stack multiple <code>except</code> blocks to handle different exceptions (e.g. ValueError, TypeError, ZeroDivisionError) in different ways."
+            },
+            {
+                "q": "What does 'except Exception as e' do?",
+                "a": "It catches any exception that inherits from the base <code>Exception</code> class and binds it to the variable <code>e</code>, allowing you to print the error message or log it."
+            }
+        ],
+        "test": {
+            "intro": "Test your ability to catch exceptions with try-except!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword begins the block of code where exceptions might be raised?",
+                    "options": [
+                        "catch",
+                        "try",
+                        "except",
+                        "handle"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens when a try block completes successfully with no errors?",
+                    "options": [
+                        "The except block runs anyway",
+                        "The program crashes",
+                        "The except block is skipped",
+                        "Python raises a SuccessError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you bind the exception object to a variable in an except statement?",
+                    "options": [
+                        "except ValueError with e",
+                        "except ValueError as e",
+                        "except ValueError (e)",
+                        "except ValueError = e"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The block of code that handles the error if something crashes in the try block begins with the keyword _____.",
+                    "answer": "except"
+                },
+                {
+                    "type": "fill",
+                    "question": "A try block must have at least one _____ block or finally block to be syntactically correct.",
+                    "answer": "except"
+                },
+                {
+                    "type": "fill",
+                    "question": "If try contains: num = 10 / 2, the except ZeroDivisionError block will be _____.",
+                    "answer": "skipped"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can catch multiple different exceptions using a single except block by grouping them in a tuple, like: except (ValueError, TypeError):",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A try-except block can catch a SyntaxError that happens when loading the script.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "If an error is handled in an except block, the program will continue running the code below the try-except block.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Why is it helpful to catch specific exceptions like ValueError instead of using a generic except block?",
+                    "sampleAnswer": "Catching specific exceptions ensures you only handle errors you expect and know how to fix, while letting unexpected errors crash the program so you can find and fix those bugs instead of hiding them."
+                }
+            ]
+        },
+        "scenario": "Write a try-except block. In the try block, print the result of 10 // 0. Catch the ZeroDivisionError exception and print 'Cannot divide by zero!' in the except block.",
+        "hint": "Wrap print(10 // 0) in try: block and handle ZeroDivisionError in except ZeroDivisionError: block.",
+        "wrongHint": "Make sure you print 'Cannot divide by zero!' inside the except ZeroDivisionError block!",
+        "solution": "try:\n    print(10 // 0)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero!')",
+        "starterCode": "# Write a try-except block to handle division by zero\n"
     },
     {
         "id": 78,
         "title": "finally",
         "concept": "Executing cleanup code under try-except",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "finally",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 78</strong>! In this lesson, we will cover <strong>finally</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>finally:</strong> Executing cleanup code under try-except.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "finally block",
+            "subheading": "Guaranteed cleanup code, no matter what",
+            "body": "<p>When a program runs, it often uses external resources (like files, databases, or network connections). If an error occurs, we must ensure these resources are closed or cleaned up. In Python, this is achieved using the <strong><code>finally</code></strong> block.</p>\n\n<h3>The Metaphor: Returning Doraemon's Gadgets</h3>\n<p>Think of it like borrowing a gadget from Doraemon. If Nobita uses it successfully (try block) or if the gadget malfunctions and gets ruined (except block), there is one rule that never changes: Nobita <strong>must always return the gadget</strong> at the end of the day (finally block)!</p>\n\n<h3>Syntax of finally</h3>\n<p>The <code>finally</code> block is placed at the end of a try-except structure. Code inside the <code>finally</code> block is **guaranteed to run**, whether an exception occurred or not, and whether it was successfully handled or not!</p>\n<pre class=\"code-example\">try:\n    print(\"Opening the chest.\")\n    # Imagine some code here that might fail\nexcept:\n    print(\"Handling error.\")\nfinally:\n    print(\"This ALWAYS runs!\")  # Cleanup code</pre>\n\n<h3>Guaranteed Execution</h3>\n<p>Even if you have a <code>return</code>, <code>break</code>, or <code>continue</code> statement inside the <code>try</code> or <code>except</code> blocks, Python will still execute the <code>finally</code> block before leaving the structure. This makes it the ultimate place for safety cleanup routines!</p>"
+        },
+        "qna": [
+            {
+                "q": "What is the primary purpose of the finally block?",
+                "a": "To define cleanup actions that must execute under all circumstances, such as closing files, releasing memory resources, or disconnecting from databases."
+            },
+            {
+                "q": "Does finally run if the program crashes due to an unhandled exception?",
+                "a": "Yes! The code inside the <code>finally</code> block runs right before the program terminates due to the unhandled crash."
+            },
+            {
+                "q": "Can you have a try block with a finally block but NO except block?",
+                "a": "Yes. A <code>try-finally</code> block is valid. If an error occurs, the <code>finally</code> block runs, and then the program crashes because there was no <code>except</code> block to handle the error."
+            },
+            {
+                "q": "Does finally run if a function returns inside the try block?",
+                "a": "Yes. If a <code>return</code> is executed in the <code>try</code> block, Python will temporarily pause the return, run the <code>finally</code> block, and then complete the return."
+            },
+            {
+                "q": "What is the order of execution in try-except-finally?",
+                "a": "1. <code>try</code> code runs. 2. If an error occurs, <code>except</code> code runs. 3. <code>finally</code> code runs under all circumstances."
+            }
+        ],
+        "test": {
+            "intro": "Test your knowledge of the finally block!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "When does code inside the finally block run?",
+                    "options": [
+                        "Only when an exception is raised",
+                        "Only when no exceptions are raised",
+                        "Always, regardless of exceptions",
+                        "Only if the program crashes"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of these is a typical use case for a finally block?",
+                    "options": [
+                        "Performing complex math operations",
+                        "Closing an opened database connection",
+                        "Defining new functions",
+                        "Importing external libraries"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Can you use a finally block without an except block?",
+                    "options": [
+                        "No, except is always mandatory",
+                        "Yes, but only inside a class definition",
+                        "Yes, try-finally is syntactically valid",
+                        "No, finally is only allowed after except"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The keyword used to define code that executes under any circumstances is _____.",
+                    "answer": "finally"
+                },
+                {
+                    "type": "fill",
+                    "question": "If a function returns a value inside the try block, the finally block runs _____ the return takes place. (after / before / instead of)",
+                    "answer": "before"
+                },
+                {
+                    "type": "fill",
+                    "question": "A try block must have at least one except or _____ block.",
+                    "answer": "finally"
+                },
+                {
+                    "type": "tf",
+                    "question": "Code inside the finally block will not execute if the except block also raises an error.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The finally block is a great place to handle a ZeroDivisionError.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A try block can be followed by multiple finally blocks.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Describe a scenario where a try-finally block is useful even without an except block.",
+                    "sampleAnswer": "It is useful when you want to ensure that resources (like an open file) are closed no matter what, but you want any exceptions to propagate upward to be handled by the caller or crash the program normally."
+                }
+            ]
+        },
+        "scenario": "Create a try-except-finally block. In the try block, print 'Opening notebook.' and then convert 'abc' to an integer using int('abc') to trigger a ValueError. In the except ValueError block, print 'Error encountered!'. In the finally block, print 'Closing notebook.'.",
+        "hint": "Write try: block with print('Opening notebook.') and int('abc'), followed by except ValueError: with print('Error encountered!'), and finally: with print('Closing notebook.').",
+        "wrongHint": "Make sure you print 'Opening notebook.', 'Error encountered!', and 'Closing notebook.' in the correct blocks!",
+        "solution": "try:\n    print('Opening notebook.')\n    int('abc')\nexcept ValueError:\n    print('Error encountered!')\nfinally:\n    print('Closing notebook.')",
+        "starterCode": "# Write a try-except-finally block\n"
     },
     {
         "id": 79,
         "title": "raise keyword",
         "concept": "Triggering errors and exceptions manually",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "raise keyword",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 79</strong>! In this lesson, we will cover <strong>raise keyword</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>raise keyword:</strong> Triggering errors and exceptions manually.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Blowing the emergency whistle in Python",
+            "body": "<p>So far, we have only handled exceptions raised by Python itself. But what if your own program needs to report that something illegal or invalid has occurred? In Python, you can manually trigger an exception using the <strong><code>raise</code></strong> keyword.</p>\n\n<h3>The Metaphor: The Emergency Whistle</h3>\n<p>Think of it like Doraemon's <strong>Emergency Whistle</strong> gadget. If Nobita sees Gian violating the rules of the playground (like stealing toys), Nobita blows the whistle to manually signal an alert. The whistle doesn't wait for things to go wrong on their own -- it triggers the warning immediately!</p>\n\n<h3>Syntax of raise</h3>\n<p>To raise an exception, write the keyword <code>raise</code>, followed by the name of the exception type, and optional error details in parentheses:</p>\n<pre class=\"code-example\">raise ValueError(\"Invalid value entered!\")</pre>\n\n<h3>Why Raise Exceptions?</h3>\n<p>We raise exceptions to enforce rules in our code (input validation). For example, if a function expects a positive deposit amount, a negative value is logical nonsense. Rather than continuing with corrupt data, we blow the whistle:</p>\n<pre class=\"code-example\">def set_age(age):\n    if age &lt; 0:\n        raise ValueError(\"Age cannot be negative!\")\n    print(f\"Age is set to: {age}\")</pre>\n\n<h3>Re-raising Exceptions</h3>\n<p>Sometimes you catch an exception to log it or perform minor cleanup, but still want to crash or let the calling function know. You can do this by using <code>raise</code> on its own inside the <code>except</code> block:</p>\n<pre class=\"code-example\">try:\n    num = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Logged: Division by zero attempted.\")\n    raise  # Re-raises the ZeroDivisionError</pre>"
+        },
+        "qna": [
+            {
+                "q": "What does the raise keyword do in Python?",
+                "a": "It manually triggers a specified exception, interrupting the normal flow of the program and initiating traceback/exception handling."
+            },
+            {
+                "q": "Can you raise custom messages with exceptions?",
+                "a": "Yes! By passing a string argument inside the exception's parentheses, e.g., <code>raise TypeError(\"Expected an integer\")</code>."
+            },
+            {
+                "q": "Which exception class should you raise if an argument is of the correct type but has an invalid value?",
+                "a": "You should raise a <strong>ValueError</strong> (for instance, if age is -5 or an email string is missing an '@' symbol)."
+            },
+            {
+                "q": "What happens if a raise statement is executed inside a try block?",
+                "a": "The program immediately stops running the rest of the <code>try</code> block and looks for a matching <code>except</code> block. If none is found, it terminates and displays the traceback."
+            },
+            {
+                "q": "What does a bare 'raise' keyword do inside an except block?",
+                "a": "It re-raises the active exception that was caught by the <code>except</code> block, allowing it to propagate up to parent caller blocks."
+            }
+        ],
+        "test": {
+            "intro": "Test your understanding of the raise keyword!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used to manually trigger an exception?",
+                    "options": [
+                        "throw",
+                        "raise",
+                        "trigger",
+                        "error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If you write: raise ValueError('Invalid'), what type of error is triggered?",
+                    "options": [
+                        "TypeError",
+                        "ValueError",
+                        "NameError",
+                        "SyntaxError"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the purpose of re-raising an exception inside an except block?",
+                    "options": [
+                        "To ignore the error completely",
+                        "To log or handle the error locally but still let it propagate up",
+                        "To change the error type to a SyntaxError",
+                        "To double the execution speed"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To raise an exception with a custom message, you pass the message string inside the _____ of the exception class.",
+                    "answer": "parentheses"
+                },
+                {
+                    "type": "fill",
+                    "question": "If you want to validate that a variable is a string and raise an exception otherwise, the most appropriate exception type is _____Error.",
+                    "answer": "Type"
+                },
+                {
+                    "type": "fill",
+                    "question": "When a raise statement executes outside a try block, the program will immediately _____. (succeed / pause / crash / loop)",
+                    "answer": "crash"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can only raise exceptions that are built into Python.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using the raise keyword helps prevent bad data from corrupting your program's state.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Writing 'raise' without any exception name is only valid inside an except block.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Give an example of a situation where you would want to raise a ValueError in a library booking system.",
+                    "sampleAnswer": "In a library booking system, you would raise a ValueError if a user tries to borrow a negative number of books or sets the return date to be prior to the borrow date."
+                }
+            ]
+        },
+        "scenario": "Doraemon wants to ensure dorayakis count is not negative. Write a program: define dorayakis = -1. If dorayakis is less than 0, print 'Invalid count' and raise a ValueError with the message 'Cannot be negative'.",
+        "hint": "Check if dorayakis < 0. Inside the conditional block, print('Invalid count') and write raise ValueError('Cannot be negative').",
+        "wrongHint": "Make sure you raise ValueError('Cannot be negative') when dorayakis < 0!",
+        "solution": "dorayakis = -1\nif dorayakis < 0:\n    print('Invalid count')\n    raise ValueError('Cannot be negative')",
+        "starterCode": "dorayakis = -1\n# Check if negative, print 'Invalid count' and raise ValueError\n"
     },
     {
         "id": 80,
         "title": "File handling (open)",
         "concept": "Opening and closing files on your computer",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "File handling (open)",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 80</strong>! In this lesson, we will cover <strong>File handling (open)</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>File handling (open):</strong> Opening and closing files on your computer.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Working with files on your computer's drive",
+            "body": "<p>Programs need a way to store data permanently. While variables are stored in temporary RAM (which clears when the computer turns off), files are saved on the permanent hard drive. Python makes working with files simple through its built-in <strong><code>open()</code></strong> function.</p>\n\n<h3>The Metaphor: The Diary of Secrets</h3>\n<p>Think of file handling like writing in a **Diary of Secrets** gadget: to interact with the diary, you must first unlock it with a key (<code>open()</code>). Once open, you can either read your previous notes or write down new secrets. Finally, you must lock it back up (<code>close()</code>) so no one else can read it!</p>\n\n<h3>Opening a File</h3>\n<p>To open a file, we use the <code>open()</code> function, passing the filename and the **access mode**:</p>\n<pre class=\"code-example\">my_file = open(\"diary.txt\", \"r\")</pre>\n\n<h3>File Modes</h3>\n<p>The second argument specifies the mode. The three most common modes are:</p>\n<ul class=\"desc-list\">\n    <li><strong><code>'r'</code> (Read):</strong> Default mode. Opens the file for reading. Raises a <code>FileNotFoundError</code> if the file does not exist.</li>\n    <li><strong><code>'w'</code> (Write):</strong> Opens the file for writing. If the file exists, it **deletes/overwrites** everything! If it doesn't exist, it creates a new file.</li>\n    <li><strong><code>'a'</code> (Append):</strong> Opens the file for writing but **adds** new text to the end of the existing content. Creates the file if it doesn't exist.</li>\n</ul>\n\n<h3>Closing the File</h3>\n<p>When you open a file, the operating system locks it for your program. If you forget to close it, it can cause memory leaks and file corruption. Always call <code>close()</code> when you are finished:</p>\n<pre class=\"code-example\">my_file = open(\"diary.txt\", \"w\")\n# Perform write/read actions here...\nmy_file.close()  # Locks the file and saves changes</pre>"
+        },
+        "qna": [
+            {
+                "q": "What does the open() function return in Python?",
+                "a": "It returns a <strong>file object</strong>, which acts as a stream containing methods to read, write, and manipulate the file contents."
+            },
+            {
+                "q": "What happens if you open an existing file in 'w' mode?",
+                "a": "All existing contents in the file are immediately erased (truncated). If you want to keep the content and add new data, use append (<code>'a'</code>) mode instead."
+            },
+            {
+                "q": "What is the default file mode if none is specified?",
+                "a": "The default mode is read (<code>'r'</code>) mode in text format."
+            },
+            {
+                "q": "Why is it important to close a file after opening it?",
+                "a": "To free up system resources, unlock the file for other programs, and ensure that all changes are successfully written from the memory buffer onto the hard drive."
+            },
+            {
+                "q": "What exception is raised if you open a non-existent file in 'r' mode?",
+                "a": "Python raises a <strong>FileNotFoundError</strong> exception."
+            }
+        ],
+        "test": {
+            "intro": "Test your understanding of opening and closing files!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which function is used to open a file in Python?",
+                    "options": [
+                        "access()",
+                        "open()",
+                        "load()",
+                        "read()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which mode should you use to add text to the end of an existing file?",
+                    "options": [
+                        "'r'",
+                        "'w'",
+                        "'a'",
+                        "'x'"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the default mode of open()?",
+                    "options": [
+                        "Write mode ('w')",
+                        "Read mode ('r')",
+                        "Append mode ('a')",
+                        "Binary mode ('b')"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To close an open file object named `f`, you write `f._____()`.",
+                    "answer": "close"
+                },
+                {
+                    "type": "fill",
+                    "question": "If you try to open a missing file in read mode, Python raises a _____NotFoundError.",
+                    "answer": "File"
+                },
+                {
+                    "type": "fill",
+                    "question": "Opening a file in write mode ('w') will _____ any existing contents of that file. (append / preserve / overwrite / format)",
+                    "answer": "overwrite"
+                },
+                {
+                    "type": "tf",
+                    "question": "Opening a file in write mode ('w') raises an exception if the file does not already exist on disk.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Failing to close a file can lock the file and prevent other applications from using it.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The open() function can open both text files and binary files (like images).",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the difference between opening a file in 'w' mode versus 'a' mode.",
+                    "sampleAnswer": "In 'w' (write) mode, if the file exists, its contents are cleared entirely before writing new data. In 'a' (append) mode, the existing contents are preserved and any new data written is added directly to the end of the file."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to open his diary. Write a program that opens a file named 'diary.txt' in write mode ('w'), prints 'File opened successfully', and then closes the file.",
+        "hint": "Assign diary = open('diary.txt', 'w'), print('File opened successfully'), and then call diary.close().",
+        "wrongHint": "Make sure you open 'diary.txt' in 'w' mode and call close() on the file object!",
+        "solution": "diary = open('diary.txt', 'w')\nprint('File opened successfully')\ndiary.close()",
+        "starterCode": "# Open 'diary.txt' in write mode, print success, and close it\n"
     },
     {
         "id": 81,
         "title": "Read/Write files",
         "concept": "Reading lines and writing to text files",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Read/Write files",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 81</strong>! In this lesson, we will cover <strong>Read/Write files</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Read/Write files:</strong> Reading lines and writing to text files.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Writing and reading file streams",
+            "body": "<p>Opening a file is just the first step. To actually use it, we must learn how to <strong>write</strong> data into it and <strong>read</strong> data back from it. Python provides simple methods on file objects to do just that!</p>\n\n<h3>1. Writing to Files (.write)</h3>\n<p>When a file is opened in write (<code>'w'</code>) or append (<code>'a'</code>) mode, you can write text into it using the <strong><code>write()</code></strong> method. Crucially, <code>write()</code> does <strong>not</strong> automatically add a newline character at the end. You must add <code>\\n</code> manually if you want a line break!</p>\n<pre class=\"code-example\"># Writing to Nobita's notebook\nf = open(\"notebook.txt\", \"w\")\nf.write(\"Buy dorayakis\\n\")\nf.write(\"Clean room\\n\")\nf.close()</pre>\n\n<h3>2. Reading from Files</h3>\n<p>When a file is opened in read (<code>'r'</code>) mode, you have three primary ways to extract the text:</p>\n<ul class=\"desc-list\">\n    <li><strong><code>.read()</code>:</strong> Reads the entire file content into a single string. Be careful with huge files, as this loads everything into RAM!</li>\n    <li><strong><code>.readline()</code>:</strong> Reads a single line from the file. Each subsequent call reads the next line, returning an empty string when the end is reached.</li>\n    <li><strong><code>.readlines()</code>:</strong> Reads all lines and returns them as a list of strings, with each line as an item.</li>\n</ul>\n<pre class=\"code-example\">f = open(\"notebook.txt\", \"r\")\nprint(f.read())  # Prints both lines\nf.close()</pre>\n\n<h3>The File Cursor & .seek()</h3>\n<p>Think of reading a file like playing a cassette tape. When you read the file, the \"playback head\" (cursor) moves forward. If you read the entire file using <code>read()</code>, the cursor is now at the very end. If you call `read()` again, you will get nothing! You can reset the cursor back to the start (position 0) using <strong><code>seek(0)</code></strong>.</p>"
+        },
+        "qna": [
+            {
+                "q": "Does the write() method automatically start a new line?",
+                "a": "No. Unlike the <code>print()</code> function, the <code>write()</code> method does not automatically add space or newline characters. You must write <code>\\n</code> explicitly to start a new line."
+            },
+            {
+                "q": "What happens if you read a file, close it, and then try to read it again?",
+                "a": "You must reopen the file first! Attempting to read a closed file raises a <code>ValueError: I/O operation on closed file.</code>"
+            },
+            {
+                "q": "Which method is best if I want to process a file line-by-line?",
+                "a": "You can use a <code>for</code> loop directly on the file object, which is highly memory-efficient (e.g. <code>for line in f:</code>), or call <code>.readline()</code> inside a loop."
+            },
+            {
+                "q": "How does seek(0) work?",
+                "a": "It moves Python's read/write file pointer to byte index 0 (the beginning of the file), allowing you to re-read the file contents without closing and reopening it."
+            },
+            {
+                "q": "What does readlines() return if the file is empty?",
+                "a": "It returns an empty list <code>[]</code>."
+            }
+        ],
+        "test": {
+            "intro": "Test your knowledge of reading and writing files!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which method reads the entire file content into a single string?",
+                    "options": [
+                        "readline()",
+                        "readlines()",
+                        "read()",
+                        "load()"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the result of running f.write('Hello') followed by f.write('World')?",
+                    "options": [
+                        "HelloWorld",
+                        "Hello\\nWorld",
+                        "Hello World",
+                        "An error occurs"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which method returns a list of strings representing the lines in a file?",
+                    "options": [
+                        "read()",
+                        "readline()",
+                        "readlines()",
+                        "read_all()"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "To reset the file pointer back to the very beginning of the file, call f._____(0).",
+                    "answer": "seek"
+                },
+                {
+                    "type": "fill",
+                    "question": "The string sequence that represents a newline in Python is _____.",
+                    "answer": "\\n"
+                },
+                {
+                    "type": "fill",
+                    "question": "Calling read() at the end of a file returns an _____ string.",
+                    "answer": "empty"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can write integers directly into a file using f.write(42) without converting them first.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Iterating over a file object using a for loop: 'for line in f:' reads the file line-by-line.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Each string returned by readlines() includes the newline character \\n at the end.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why calling f.read() twice in a row on the same open file returns nothing on the second call.",
+                    "sampleAnswer": "On the first call, Python reads all text and moves the internal file cursor to the end of the file. The second call starts reading from the current cursor position, which is the end of the file, returning an empty string."
+                }
+            ]
+        },
+        "scenario": "Doraemon wants you to write a gadget to a file. Open a file named 'gadgets.txt' in write mode ('w'), write 'Anywhere Door\\n' to it, and then close the file.",
+        "hint": "Assign f = open('gadgets.txt', 'w'), use f.write('Anywhere Door\\n'), and then call f.close().",
+        "wrongHint": "Make sure you write 'Anywhere Door\\n' exactly (with a newline) and close the file!",
+        "solution": "f = open('gadgets.txt', 'w')\nf.write('Anywhere Door\\n')\nf.close()",
+        "starterCode": "# Open 'gadgets.txt' in write mode, write 'Anywhere Door\\n', and close it\n"
     },
     {
         "id": 82,
         "title": "CSV files",
         "concept": "Working with spreadsheet tabular data",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "CSV files",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 82</strong>! In this lesson, we will cover <strong>CSV files</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>CSV files:</strong> Working with spreadsheet tabular data.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Handling tabular spreadsheet datasets in Python",
+            "body": "<p>A very common file format used in data science and engineering is the <strong>CSV</strong> (Comma-Separated Values) file. It represents tabular spreadsheet data, where each row is a line, and columns are separated by commas.</p>\n\n<h3>The csv Module</h3>\n<p>While you could read CSV files as normal text files and split them by commas (<code>line.split(\",\")</code>), this breaks down if columns contain quotes, commas inside text, or spaces. Instead, Python has a built-in <strong><code>csv</code></strong> module to handle this automatically!</p>\n\n<h3>Writing to a CSV (.writerow)</h3>\n<p>To write tabular data, we import the module, open the file, create a CSV writer object, and use <strong><code>writerow()</code></strong> to write lists of data:</p>\n<pre class=\"code-example\">import csv\nf = open(\"scores.csv\", \"w\", newline=\"\")\nwriter = csv.writer(f)\n# Write header row\nwriter.writerow([\"Name\", \"Score\"])\n# Write data rows\nwriter.writerow([\"Nobita\", \"30\"])\nwriter.writerow([\"Shizuka\", \"95\"])\nf.close()</pre>\n<p>Note: The <code>newline=\"\"</code> parameter is recommended when opening CSV files on Windows to prevent blank lines between rows.</p>\n\n<h3>Reading from a CSV</h3>\n<p>Reading is just as simple: we create a reader object and iterate over it. Each row returned is a list of strings:</p>\n<pre class=\"code-example\">import csv\nf = open(\"scores.csv\", \"r\")\nreader = csv.reader(f)\nfor row in reader:\n    print(row)  # prints list: ['Name', 'Score'], then ['Nobita', '30'], etc.\nf.close()</pre>"
+        },
+        "qna": [
+            {
+                "q": "What does CSV stand for?",
+                "a": "CSV stands for <strong>Comma-Separated Values</strong>, a simple text-based format for storing tabular data."
+            },
+            {
+                "q": "Why shouldn't you just use line.split(',') to parse CSVs?",
+                "a": "If a CSV column contains text with commas (e.g. <code>\"Doraemon, the cat robot\"</code>), using <code>split()</code> will split the column incorrectly. The <code>csv</code> module handles quotes and escape characters correctly."
+            },
+            {
+                "q": "What data type does the csv.reader iterate over?",
+                "a": "It iterates over the rows of the CSV file, returning each row as a <strong>list of strings</strong>."
+            },
+            {
+                "q": "How do you write multiple rows at once?",
+                "a": "You can use the <code>writer.writerows()</code> method, which takes a list of lists (a sequence of rows) and writes them all at once."
+            },
+            {
+                "q": "Can you use characters other than commas to separate CSV values?",
+                "a": "Yes! You can specify a different delimiter character (like tabs <code>\\t</code> or semicolons <code>;</code>) using the <code>delimiter</code> keyword, e.g. <code>csv.reader(f, delimiter=';')</code>."
+            }
+        ],
+        "test": {
+            "intro": "Test your knowledge of the csv module!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which module do you import to handle CSV files in Python?",
+                    "options": [
+                        "excel",
+                        "csv",
+                        "table",
+                        "sheet"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is returned for each row when iterating over a csv.reader object?",
+                    "options": [
+                        "A string containing commas",
+                        "A dictionary",
+                        "A list of strings",
+                        "A tuple of floats"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which parameter in open() prevents double newlines when writing CSV files on Windows?",
+                    "options": [
+                        "mode='w'",
+                        "newline=''",
+                        "encoding='utf-8'",
+                        "newline='\\n'"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To write a single row of data to a CSV file, use the writer._____() method.",
+                    "answer": "writerow"
+                },
+                {
+                    "type": "fill",
+                    "question": "To import the CSV handling module, you write `import _____`.",
+                    "answer": "csv"
+                },
+                {
+                    "type": "fill",
+                    "question": "The character separating columns in a standard CSV file is a _____.",
+                    "answer": ","
+                },
+                {
+                    "type": "tf",
+                    "question": "CSV files are binary files and cannot be opened with Notepad.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "writer.writerows() takes a list of lists and writes multiple rows at once.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "All values returned by csv.reader are strings, even if they represent numbers.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the role of the delimiter parameter in the csv module.",
+                    "sampleAnswer": "The delimiter parameter specifies the character used to separate columns in the file. By default, it is a comma, but it can be changed to semicolons, tabs, or any other character."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to record names and scores in a CSV. Write a program: import the csv module, open a file named 'scores.csv' in write mode ('w'), create a csv writer, write the headers ['Name', 'Score'] using writerow(), and close the file.",
+        "hint": "Import csv, open 'scores.csv' in write mode, assign writer = csv.writer(f), call writer.writerow(['Name', 'Score']), and close the file.",
+        "wrongHint": "Make sure you write writer.writerow(['Name', 'Score']) and call close()!",
+        "solution": "import csv\nf = open('scores.csv', 'w')\nwriter = csv.writer(f)\nwriter.writerow(['Name', 'Score'])\nf.close()",
+        "starterCode": "# Write a program to create a CSV and write the headers\n"
     },
     {
         "id": 83,
         "title": "JSON files",
         "concept": "Serializing and parsing structured JSON data",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "JSON files",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 83</strong>! In this lesson, we will cover <strong>JSON files</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>JSON files:</strong> Serializing and parsing structured JSON data.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Reading and writing structured data in JSON format",
+            "body": "<p><strong>JSON</strong> (JavaScript Object Notation) is a lightweight, human-readable data format used heavily on the internet to send structured data. It maps perfectly to Python's built-in data types: JSON objects look like Python dictionaries, and JSON arrays look like Python lists!</p>\n\n<h3>The json Module</h3>\n<p>Python has a built-in <strong><code>json</code></strong> module that allows you to easily serialize (convert Python objects to JSON) and deserialize (parse JSON back into Python objects).</p>\n\n<h3>Writing JSON to Files (.dump)</h3>\n<p>To save a dictionary or list into a JSON file, we open the file in write mode and use the <strong><code>json.dump()</code></strong> function:</p>\n<pre class=\"code-example\">import json\ndata = {\n    \"name\": \"Doraemon\",\n    \"color\": \"blue\",\n    \"pocket\": [\"Anywhere Door\", \"Bamboo Copter\"]\n}\nf = open(\"doraemon.json\", \"w\")\njson.dump(data, f)\nf.close()</pre>\n\n<h3>Reading JSON from Files (.load)</h3>\n<p>To read a JSON file and convert it back into a Python dictionary or list, we open the file in read mode and use the <strong><code>json.load()</code></strong> function:</p>\n<pre class=\"code-example\">import json\nf = open(\"doraemon.json\", \"r\")\nloaded_data = json.load(f)\nf.close()\nprint(loaded_data[\"name\"])  # Prints: Doraemon\nprint(type(loaded_data))    # Prints: &lt;class 'dict'&gt;</pre>\n\n<h3>dump/load vs dumps/loads</h3>\n<p>The methods with an **'s'** stand for **string**: they serialize/deserialize to/from strings in memory, rather than file streams:\n<ul class=\"desc-list\">\n    <li><code>json.dump(obj, file)</code>: Writes data to a file.</li>\n    <li><code>json.dumps(obj)</code>: Returns a JSON-formatted string.</li>\n    <li><code>json.load(file)</code>: Reads data from a file.</li>\n    <li><code>json.loads(string)</code>: Parses JSON from a string.</li>\n</ul></p>"
+        },
+        "qna": [
+            {
+                "q": "What is the difference between json.dump() and json.dumps()?",
+                "a": "<code>json.dump()</code> writes JSON data directly to a file stream object. <code>json.dumps()</code> (dump string) converts a Python object into a JSON-formatted string in memory."
+            },
+            {
+                "q": "How do JSON arrays and objects map to Python?",
+                "a": "JSON objects map to Python <strong>dictionaries</strong>, and JSON arrays map to Python <strong>lists</strong>."
+            },
+            {
+                "q": "Can you format the written JSON to make it readable?",
+                "a": "Yes! You can pass the <code>indent</code> parameter to <code>json.dump()</code> or <code>json.dumps()</code>, e.g., <code>json.dump(data, f, indent=4)</code> to pretty-print the JSON."
+            },
+            {
+                "q": "What happens if a JSON file contains syntax errors when loaded?",
+                "a": "Python raises a <code>json.decoder.JSONDecodeError</code> exception."
+            },
+            {
+                "q": "Do keys in JSON have to be strings?",
+                "a": "Yes. While Python dictionaries can have numbers or tuples as keys, JSON format strictly requires keys to be strings. The json module automatically converts keys to strings when dumping."
+            }
+        ],
+        "test": {
+            "intro": "Test your knowledge of the json module!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which method is used to parse JSON data from a file stream?",
+                    "options": [
+                        "json.load()",
+                        "json.loads()",
+                        "json.read()",
+                        "json.parse()"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What Python data type is created when you load a JSON object containing key-value pairs?",
+                    "options": [
+                        "list",
+                        "dict",
+                        "tuple",
+                        "set"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which method converts a Python object to a JSON string in memory?",
+                    "options": [
+                        "json.dump()",
+                        "json.loads()",
+                        "json.dumps()",
+                        "json.string()"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The method used to save a Python dictionary to a JSON file is json._____().",
+                    "answer": "dump"
+                },
+                {
+                    "type": "fill",
+                    "question": "JSON stands for JavaScript Object _____.",
+                    "answer": "Notation"
+                },
+                {
+                    "type": "fill",
+                    "question": "If you want to parse JSON from a string named raw_str, call json._____(raw_str).",
+                    "answer": "loads"
+                },
+                {
+                    "type": "tf",
+                    "question": "A JSON array is represented in Python as a list.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Keys in JSON objects must be wrapped in double quotes, not single quotes.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The indent parameter in json.dump is used to change column separator symbols.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the difference between json.load() and json.loads().",
+                    "sampleAnswer": "json.load() reads and parses JSON data from an open file-like object, whereas json.loads() takes a string containing JSON text and parses it into a Python data structure."
+                }
+            ]
+        },
+        "scenario": "Doraemon is storing gadget info. Write a program: import the json module, define a dictionary data = {'gadget': 'Bamboo Copter'}, open a file named 'gadget.json' in write mode ('w'), save the dictionary to the file using json.dump(), and close the file.",
+        "hint": "Import json, define data, open 'gadget.json' in write mode, call json.dump(data, f), and call close().",
+        "wrongHint": "Make sure you call json.dump(data, f) and close the file!",
+        "solution": "import json\ndata = {'gadget': 'Bamboo Copter'}\nf = open('gadget.json', 'w')\njson.dump(data, f)\nf.close()",
+        "starterCode": "# Write a program to dump dictionary data into a JSON file\n"
     },
     {
         "id": 84,
         "title": "Context manager (with)",
         "concept": "Managing file streams safely with 'with'",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "Context manager (with)",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 84</strong>! In this lesson, we will cover <strong>Context manager (with)</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Context manager (with):</strong> Managing file streams safely with 'with'.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Context Manager (with)",
+            "subheading": "Ensuring files are closed safely and automatically",
+            "body": "<p>When working with files, forgetting to call <code>close()</code> is a very common beginner mistake. It locks resources and can corrupt data. To make file handling safer and cleaner, Python provides context managers through the <strong><code>with</code></strong> statement.</p>\n\n<h3>The Metaphor: The Self-Locking Safe</h3>\n<p>Imagine Nobita enters a high-security **Self-Locking Safe** (the context). He unlocks it, steps inside, reads or writes notes, and the moment he steps outside, the door automatically swings shut, locks, and shuts down all access. Nobita doesn't have to remember to turn the key or lock the bolts -- the safe manages its own closing process!</p>\n\n<h3>Syntax of with statement</h3>\n<p>Instead of manually opening and closing, we wrap the file actions inside a <code>with</code> block. The file is assigned to a variable using the <code>as</code> keyword:</p>\n<pre class=\"code-example\">with open(\"diary.txt\", \"r\") as f:\n    content = f.read()\n    print(content)\n\n# Outside the block, the file is ALREADY closed! f.close() is called automatically.</pre>\n\n<h3>Why with is Better</h3>\n<ul class=\"desc-list\">\n    <li><strong>Guaranteed Cleanup:</strong> Python guarantees the file is closed as soon as the execution leaves the <code>with</code> block.</li>\n    <li><strong>Error Safety:</strong> Even if your code inside the <code>with</code> block throws a traceback exception and crashes, Python closes the file safely before letting the program crash.</li>\n    <li><strong>Clean Code:</strong> You write less boilerplate code, and the indentation clearly shows where the file resource is active.</li>\n</ul>"
+        },
+        "qna": [
+            {
+                "q": "Do I ever need to call f.close() when using the 'with' statement?",
+                "a": "No, never. The <code>with</code> statement handles closing the file automatically when the indented code block is exited."
+            },
+            {
+                "q": "What happens if a crash/exception occurs inside the 'with' block?",
+                "a": "Python still closes the file safely. The context manager executes its exit routine (closing the file handle) before letting the exception bubble up."
+            },
+            {
+                "q": "How can you open multiple files simultaneously using with?",
+                "a": "You can separate them with commas, like: <code>with open('file1.txt') as f1, open('file2.txt') as f2:</code>."
+            },
+            {
+                "q": "Can you use with with resources other than files?",
+                "a": "Yes! Context managers are used for database connections, network sockets, thread locks, and any resource requiring setup and teardown."
+            },
+            {
+                "q": "What methods define a custom Context Manager class?",
+                "a": "A class must implement the magic methods <code>__enter__()</code> (run when entering block) and <code>__exit__()</code> (run when leaving block)."
+            }
+        ],
+        "test": {
+            "intro": "Test your knowledge of the with statement!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword begins a context manager block in Python?",
+                    "options": [
+                        "using",
+                        "with",
+                        "open",
+                        "context"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "When is the file closed when opened inside a with block?",
+                    "options": [
+                        "Only when f.close() is called",
+                        "When the program ends",
+                        "Immediately when the indented code block is exited",
+                        "Never"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the alias keyword used to name the file object inside with?",
+                    "options": [
+                        "to",
+                        "as",
+                        "for",
+                        "in"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To open a file inside a context manager, you write: _____ open('file.txt') as f:",
+                    "answer": "with"
+                },
+                {
+                    "type": "fill",
+                    "question": "The method called automatically on the file object when exiting with is _____.",
+                    "answer": "close"
+                },
+                {
+                    "type": "fill",
+                    "question": "Opening multiple files in one with statement requires separating them with a _____.",
+                    "answer": ","
+                },
+                {
+                    "type": "tf",
+                    "question": "If an exception is raised inside a with block, the file is left open.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Context managers make code safer because they eliminate the risk of forgetting to close files.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using with open() allows you to skip specifying the file mode parameter entirely.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the safety benefit of using 'with' over manually opening and closing files.",
+                    "sampleAnswer": "The 'with' statement guarantees that the file is closed under all circumstances, even if an exception occurs or the block is exited early using return or break, preventing memory leaks and locked files."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to read his diary safely. Open a file named 'diary.txt' in read mode ('r') using a with statement, read the entire content into a variable named content, print content, and let context manager handle closing the file.",
+        "hint": "Write: with open('diary.txt', 'r') as f:, indent content = f.read() and print(content) inside the block.",
+        "wrongHint": "Make sure you use a with block and print the read content!",
+        "solution": "with open('diary.txt', 'r') as f:\n    content = f.read()\n    print(content)",
+        "starterCode": "# Open 'diary.txt' safely using a with statement and print its content\n"
     },
     {
         "id": 85,
         "title": "File project challenge",
         "concept": "Building a local text logging dashboard",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "File project challenge",
-            "subheading": "STAGE 9 — Files + Exceptions",
-            "body": "<p>Welcome to <strong>Level 85</strong>! In this lesson, we will cover <strong>File project challenge</strong>.</p>\n<p>This level is part of <strong>STAGE 9 — Files + Exceptions</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>File project challenge:</strong> Building a local text logging dashboard.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Putting it all together: Building a secure text logging dashboard",
+            "body": "<p>In this final level of the section, you will combine everything you have learned about file handling, exceptions, and safety mechanisms to build a robust logging program.</p>\n\n<h3>The Scenario: The Gadget Access Logger</h3>\n<p>Doraemon wants to create a secure security system to track which gadgets Nobita borrows. Every time a gadget is accessed, we must write a new record to a file named <code>log.txt</code>. Because file writing can fail (e.g. disk write failures, permission errors), we must wrap our context manager in a <code>try-except</code> block to keep the application stable.</p>\n\n<h3>Designing the Logger</h3>\n<p>To implement this successfully, we use:</p>\n<ul class=\"desc-list\">\n    <li><strong>Append Mode (<code>'a'</code>):</strong> To ensure new log entries are added to the end of the file, preserving all previous logs.</li>\n    <li><strong>Context Manager (<code>with</code>):</strong> To guarantee the log file handles are closed automatically.</li>\n    <li><strong>Try-Except:</strong> To catch any <code>IOError</code> (input/output faults) and display a fallback message instead of crashing the system.</li>\n</ul>\n<pre class=\"code-example\">try:\n    with open(\"log.txt\", \"a\") as log:\n        log.write(\"System initialized\\n\")\nexcept IOError:\n    print(\"Logging failed!\")</pre>"
+        },
+        "qna": [
+            {
+                "q": "Why is append mode ('a') chosen over write mode ('w') for logs?",
+                "a": "Write mode overwrites the file from scratch, which would erase all previous history. Append mode keeps the old logs and adds new records at the end."
+            },
+            {
+                "q": "What kind of issues can trigger an IOError during logging?",
+                "a": "Permissions errors (file read-only), lack of space on the hard drive, or the file being locked by another running program."
+            },
+            {
+                "q": "Is f.write() thread-safe or is there buffered writing?",
+                "a": "Python buffers writes to disk for speed. Using a context manager ensures that the buffer is flushed (written to disk) immediately when exiting the block."
+            },
+            {
+                "q": "Why is it important to capture IOError rather than a bare except?",
+                "a": "So we only handle access errors. If we made a typo in a variable name (NameError), a bare except would hide it, whereas catching IOError lets the developer spot logic typos."
+            },
+            {
+                "q": "What happens if log.txt does not exist when opened in 'a' mode?",
+                "a": "Python automatically creates the file for you."
+            }
+        ],
+        "test": {
+            "intro": "Test your overall file handling mastery!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which access mode keeps existing file data and lets you write new entries at the end?",
+                    "options": [
+                        "'r'",
+                        "'w'",
+                        "'a'",
+                        "'x'"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the benefit of nesting with open() inside a try block?",
+                    "options": [
+                        "It speeds up execution",
+                        "It prevents Python from creating the file",
+                        "It handles setup/teardown while catching potential access crashes",
+                        "It turns off the console output"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What exception class is raised if a file-writing operation fails due to full disk?",
+                    "options": [
+                        "ValueError",
+                        "IOError",
+                        "IndexError",
+                        "TypeError"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To append text to a log file, open it in _____ mode.",
+                    "answer": "a"
+                },
+                {
+                    "type": "fill",
+                    "question": "Files are stored in permanent disk storage, whereas variables are stored in temporary _____ memory.",
+                    "answer": "RAM"
+                },
+                {
+                    "type": "fill",
+                    "question": "To write a line break into a log file, write the characters _____.",
+                    "answer": "\\n"
+                },
+                {
+                    "type": "tf",
+                    "question": "A context manager inside a try-except block still guarantees the file is closed if an error is caught.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "If you open a file in 'a' mode, you cannot write to it.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Logging operations should always run without exceptions because log files are virtual.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Describe how you would implement a security logging routine that handles access errors.",
+                    "sampleAnswer": "I would wrap a 'with open(\"log.txt\", \"a\")' context manager inside a try-except block that catches IOError. Inside the context, I'd use write() to write the log entry with a newline."
+                }
+            ]
+        },
+        "scenario": "Write a logging system. Wrap a try-except block around a context manager: open 'log.txt' in append mode ('a') using with, write 'Bamboo Copter borrowed\\n' to the file. If an IOError occurs, catch it and print 'Log failed'.",
+        "hint": "Wrap the code with try:, inside write with open('log.txt', 'a') as f: and call f.write('Bamboo Copter borrowed\\n'). Add except IOError: and print('Log failed').",
+        "wrongHint": "Make sure you catch IOError and print 'Log failed' on error!",
+        "solution": "try:\n    with open('log.txt', 'a') as f:\n        f.write('Bamboo Copter borrowed\\n')\nexcept IOError:\n    print('Log failed')",
+        "starterCode": "# Write a try-except block with a context manager to append log lines\n"
     },
     {
         "id": 86,
         "title": "Modules",
         "concept": "Splitting code across multiple file modules",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Modules",
-            "subheading": "STAGE 10 — Advanced Python",
-            "body": "<p>Welcome to <strong>Level 86</strong>! In this lesson, we will cover <strong>Modules</strong>.</p>\n<p>This level is part of <strong>STAGE 10 — Advanced Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Modules:</strong> Splitting code across multiple file modules.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Splitting your code into clean, reusable files",
+            "body": "<p>As your programs grow larger, keeping all your code in a single file becomes messy and difficult to manage. Python solves this by allowing you to split your code into separate files called <strong>Modules</strong>.</p>\n\n<h3>What is a Module?</h3>\n<p>Any file containing Python code ending in <code>.py</code> can be imported as a module in another script. Modules allow you to write functions once and reuse them across different programs!</p>\n<p>Think of it like Doraemon's **Gadget Drawer**: instead of piling all gadgets onto the floor (one giant file), he categorizes them into separate drawers (modules) -- one for flying gadgets, one for time gadgets, etc.</p>\n\n<h3>Importing Modules</h3>\n<p>Python provides three main ways to import modules:</p>\n<ol class=\"desc-list\">\n    <li><strong><code>import module_name</code>:</strong> Imports the entire module. You access its functions using the dot notation:\n        <pre class=\"code-example\">import math\nprint(math.sqrt(25))  # Prints: 5.0</pre>\n    </li>\n    <li><strong><code>from module_name import name</code>:</strong> Imports a specific function or variable directly. You don't need dot notation:\n        <pre class=\"code-example\">from math import sqrt\nprint(sqrt(25))       # Prints: 5.0</pre>\n    </li>\n    <li><strong><code>import module_name as alias</code>:</strong> Imports a module under a shorter name (alias) to save typing:\n        <pre class=\"code-example\">import datetime as dt\nprint(dt.date.today())</pre>\n    </li>\n</ol>\n\n<h3>Creating Your Own Module</h3>\n<p>Creating custom modules is incredibly easy. Simply write standard functions in a file named <code>my_module.py</code>. In your main script, write <code>import my_module</code>, and you can now use those functions!</p>"
+        },
+        "qna": [
+            {
+                "q": "What is a module in Python?",
+                "a": "A module is simply a file with a <code>.py</code> extension that contains Python functions, classes, and variables. It allows you to organize and reuse code."
+            },
+            {
+                "q": "What is the difference between 'import math' and 'from math import sqrt'?",
+                "a": "<code>import math</code> imports the entire module, requiring you to access functions with <code>math.sqrt()</code>. <code>from math import sqrt</code> imports only the <code>sqrt</code> function, letting you use it directly without the module name prefix."
+            },
+            {
+                "q": "What does the 'as' keyword do in an import statement?",
+                "a": "It creates an **alias** (a nickname) for the module, making it shorter and easier to reference in your code, e.g. <code>import numpy as np</code>."
+            },
+            {
+                "q": "Can you import everything from a module directly?",
+                "a": "Yes, using <code>from module import *</code>. However, this is generally discouraged because it can clutter your namespace and create naming conflicts if different modules have functions with the same name."
+            },
+            {
+                "q": "What is the purpose of 'if __name__ == \"__main__\":' inside a module?",
+                "a": "It ensures that code block only runs when the script is executed directly, but is ignored when the file is imported as a module in another script."
+            }
+        ],
+        "test": {
+            "intro": "Test your knowledge of Python modules!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used to load an external module into your Python script?",
+                    "options": [
+                        "load",
+                        "include",
+                        "import",
+                        "require"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "How would you import only the 'randint' function from the 'random' module?",
+                    "options": [
+                        "import random.randint",
+                        "from random import randint",
+                        "import randint from random",
+                        "from random.randint import *"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the result of importing a module under an alias, e.g. 'import math as m'?",
+                    "options": [
+                        "It renames the math.py file on disk",
+                        "It restricts access to the math module",
+                        "It lets you call math functions using 'm.function()'",
+                        "It triggers a SyntaxError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Any file containing Python code with a _____ extension can be imported as a module.",
+                    "answer": ".py"
+                },
+                {
+                    "type": "fill",
+                    "question": "To import all functions from a module directly without dot notation, use: from module import _____.",
+                    "answer": "*"
+                },
+                {
+                    "type": "fill",
+                    "question": "The special variable Python uses to check if a file is executed directly is `_____`.",
+                    "answer": "__name__"
+                },
+                {
+                    "type": "tf",
+                    "question": "When a module is imported for the first time, Python executes all top-level statements in that module.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Creating a custom module requires compiling your Python code into binary format.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The import statement must always be placed at the very top of your Python file.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the benefit of using the 'import module as alias' syntax.",
+                    "sampleAnswer": "It allows developers to use a shorter, cleaner name for a module throughout their code, saving typing time and making libraries like 'pandas as pd' or 'numpy as np' easier to read."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to calculate a square root. Import the 'sqrt' function from the 'math' module, calculate the square root of 16 using 'sqrt(16)', and print the result.",
+        "hint": "Write: from math import sqrt, and print(sqrt(16)).",
+        "wrongHint": "Make sure you import sqrt and print(sqrt(16)) exactly!",
+        "solution": "from math import sqrt\nprint(sqrt(16))",
+        "starterCode": "# Import sqrt from the math module, compute sqrt of 16, and print it\n"
     },
     {
         "id": 87,
         "title": "Packages",
         "concept": "Structuring collections of modules into directories",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Packages",
-            "subheading": "STAGE 10 — Advanced Python",
-            "body": "<p>Welcome to <strong>Level 87</strong>! In this lesson, we will cover <strong>Packages</strong>.</p>\n<p>This level is part of <strong>STAGE 10 — Advanced Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Packages:</strong> Structuring collections of modules into directories.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Grouping related modules into directories",
+            "body": "<p>While modules help organize files, a large project might have dozens of modules. To prevent clutter, Python allows you to group related modules into directories called <strong>Packages</strong>.</p>\n\n<h3>What is a Package?</h3>\n<p>A package is simply a directory containing multiple module files and a special file named <strong><code>__init__.py</code></strong>. The <code>__init__.py</code> file can be empty, but its presence tells Python that the directory should be treated as a package, allowing you to import modules from it using the dot (<code>.</code>) syntax.</p>\n<p>Think of it like Doraemon's **Toolbox**: the toolbox (package) contains separate drawers (directories/sub-packages), each containing specific tools (modules).</p>\n\n<h3>Importing from a Package</h3>\n<p>Suppose you have a directory structure like this:\n<pre>my_project/\n└── mathutils/            &larr; Package\n    ├── __init__.py       &larr; Marks folder as package\n    ├── algebra.py        &larr; Module\n    └── geometry.py       &larr; Module</pre></p>\n<p>You can import modules from this package using different methods:\n<pre class=\"code-example\"># Method 1\nimport mathutils.algebra\nmathutils.algebra.solve()\n\n# Method 2\nfrom mathutils import geometry\ngeometry.calculate_area()\n\n# Method 3\nfrom mathutils.geometry import calculate_area\ncalculate_area()</pre></p>"
+        },
+        "qna": [
+            {
+                "q": "What is the difference between a module and a package?",
+                "a": "A module is a single Python file (.py). A package is a directory (folder) that holds modules and contains a special <code>__init__.py</code> file."
+            },
+            {
+                "q": "What is the role of the __init__.py file?",
+                "a": "It acts as the initializer for the package, telling Python's import engine that the directory contains modules that can be imported."
+            },
+            {
+                "q": "Can you have nested packages?",
+                "a": "Yes! A package directory can contain subdirectories, which can also be packages (sub-packages) as long as they contain their own <code>__init__.py</code> files."
+            },
+            {
+                "q": "What happens when you run 'import package_name'?",
+                "a": "It executes the code inside that package's <code>__init__.py</code> file. Any modules inside the package must be imported explicitly unless configured otherwise in <code>__init__.py</code>."
+            },
+            {
+                "q": "Is __init__.py mandatory in Python 3?",
+                "a": "Since Python 3.3, directories without <code>__init__.py</code> are recognized as implicit namespace packages. However, it is still standard practice to include <code>__init__.py</code> for regular, explicit packages."
+            }
+        ],
+        "test": {
+            "intro": "Test your package hierarchy knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "What defines a folder as a package in Python?",
+                    "options": [
+                        "It must end with the .pkg extension",
+                        "It must contain an __init__.py file",
+                        "It must be inside the Python path",
+                        "It must only contain text files"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which import statement is valid for importing a module named 'sales' from a package named 'finance'?",
+                    "options": [
+                        "import finance.sales",
+                        "from finance import sales",
+                        "Both of the above",
+                        "None of the above"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What symbol is used to separate packages, sub-packages, and modules in import statements?",
+                    "options": [
+                        "Slash (/)",
+                        "Backslash (\\)",
+                        "Dot (.)",
+                        "Colon (:)"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "A package is represented as a _____ in your computer's filesystem.",
+                    "answer": "directory"
+                },
+                {
+                    "type": "fill",
+                    "question": "The special initializer file in packages is named `_____`.",
+                    "answer": "__init__.py"
+                },
+                {
+                    "type": "fill",
+                    "question": "To import a function called add from the calculator module inside the mathutils package, write: from mathutils.calculator import _____.",
+                    "answer": "add"
+                },
+                {
+                    "type": "tf",
+                    "question": "The __init__.py file can be left completely empty.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Packages make it harder to organize large-scale software systems.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Nested folders inside packages do not require __init__.py to be sub-packages.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the difference between namespace packages and regular packages.",
+                    "sampleAnswer": "Regular packages contain an __init__.py file and are self-contained. Namespace packages (introduced in Python 3.3) do not require __init__.py and allow modules to be spread across different physical directories/locations."
+                }
+            ]
+        },
+        "scenario": "Nobita is importing a sub-module. Imagine we have a package 'pocket' and a sub-module 'door'. Write a statement to import the 'door' sub-module from the 'pocket' package using 'import pocket.door', and print 'Anywhere Door imported'.",
+        "hint": "Write import pocket.door, and print('Anywhere Door imported').",
+        "wrongHint": "Make sure you write import pocket.door and print('Anywhere Door imported') exactly!",
+        "solution": "import pocket.door\nprint('Anywhere Door imported')",
+        "starterCode": "# Import the sub-module door from package pocket, and print a success message\n"
     },
     {
         "id": 88,
         "title": "Virtual environments (venv)",
         "concept": "Isolating package dependencies for projects",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "Virtual environments (venv)",
-            "subheading": "STAGE 10 — Advanced Python",
-            "body": "<p>Welcome to <strong>Level 88</strong>! In this lesson, we will cover <strong>Virtual environments (venv)</strong>.</p>\n<p>This level is part of <strong>STAGE 10 — Advanced Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Virtual environments (venv):</strong> Isolating package dependencies for projects.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Virtual Environments (venv)",
+            "subheading": "Isolating your project dependencies",
+            "body": "<p>When you build different Python projects, they will require different third-party libraries (e.g. Django, Flask, Pandas). Installing all libraries globally on your computer can cause conflicts: Project A might need Version 1 of a library, while Project B needs Version 2. To solve this, we use <strong>Virtual Environments</strong>.</p>\n\n<h3>The Metaphor: Isolated Test Chambers</h3>\n<p>Think of a virtual environment like Doraemon's **Isolated Test Chamber** gadget: when Nobita wants to experiment with chemical potions (third-party libraries), he does it inside an isolated chamber. Any potions mixed there won't spill out, conflict, or ruin the rest of the house (your global operating system)!</p>\n\n<h3>Working with Virtual Environments</h3>\n<p>Virtual environments are managed in three simple steps:</p>\n<ol class=\"desc-list\">\n    <li><strong>Create:</strong> Create an isolated environment folder using the built-in <code>venv</code> module:\n        <pre class=\"code-example\">python -m venv myenv</pre>\n    </li>\n    <li><strong>Activate:</strong> Turn on the environment. Once activated, any library you install stays inside this folder.\n        <ul>\n            <li><strong>Windows:</strong> <code>myenv\\Scripts\\activate</code></li>\n            <li><strong>Mac/Linux:</strong> <code>source myenv/bin/activate</code></li>\n        </ul>\n    </li>\n    <li><strong>Install Packages (pip):</strong> Use the package installer <code>pip</code> to install libraries:\n        <pre class=\"code-example\">pip install requests</pre>\n    </li>\n    <li><strong>Deactivate:</strong> Exit the virtual environment when finished:\n        <pre class=\"code-example\">deactivate</pre>\n    </li>\n</ol>\n\n<h3>Sharing Dependencies: requirements.txt</h3>\n<p>You can save a list of your installed libraries to share with others using:\n<pre class=\"code-example\">pip freeze > requirements.txt</pre>\nOthers can recreate your exact environment by running:\n<pre class=\"code-example\">pip install -r requirements.txt</pre></p>"
+        },
+        "qna": [
+            {
+                "q": "Why do we need virtual environments?",
+                "a": "To isolate dependencies for different projects, preventing version conflicts between libraries and keeping your global system clean."
+            },
+            {
+                "q": "What happens when you run 'python -m venv myenv'?",
+                "a": "It creates a directory named <code>myenv</code> containing a local copy of the Python interpreter, standard libraries, and script managers."
+            },
+            {
+                "q": "How do you know if a virtual environment is active in your terminal?",
+                "a": "Your terminal prompt will change to show the environment name in parentheses at the start, e.g. <code>(myenv) C:\\Users\\...</code>."
+            },
+            {
+                "q": "Does deleting the virtual environment folder delete Python?",
+                "a": "No. It only deletes the isolated environment and its installed libraries, leaving your global Python installation untouched."
+            },
+            {
+                "q": "How do you share your project's libraries with another developer?",
+                "a": "By exporting them to a text file using <code>pip freeze > requirements.txt</code>. The other developer can run <code>pip install -r requirements.txt</code> to install all of them at once."
+            }
+        ],
+        "test": {
+            "intro": "Test your virtual environment knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which built-in module is used to create isolated virtual environments?",
+                    "options": [
+                        "pip",
+                        "venv",
+                        "env",
+                        "isolate"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the command to deactivate an active virtual environment?",
+                    "options": [
+                        "exit",
+                        "stop",
+                        "deactivate",
+                        "venv deactivate"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which tool is Python's package installer, used to install libraries inside environments?",
+                    "options": [
+                        "npm",
+                        "pip",
+                        "gem",
+                        "apt"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To write the list of installed libraries into requirements.txt, run: pip _____ > requirements.txt.",
+                    "answer": "freeze"
+                },
+                {
+                    "type": "fill",
+                    "question": "On Windows, the activation script is located inside the _____ folder of your environment.",
+                    "answer": "Scripts"
+                },
+                {
+                    "type": "fill",
+                    "question": "To install packages from a requirements.txt file, write: pip install -r _____.",
+                    "answer": "requirements.txt"
+                },
+                {
+                    "type": "tf",
+                    "question": "A virtual environment uses its own local set of libraries, separate from your global system.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Deactivating a virtual environment deletes all folders inside it.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You must run 'source myenv/bin/activate' on Windows Command Prompt.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Describe the workflow to initialize a new project with its own libraries.",
+                    "sampleAnswer": "Create a virtual environment using 'python -m venv myenv', activate it in the terminal, and then use 'pip install' to load the required libraries for that project."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to check virtual environment setup. Write a program that prints the command to create an environment 'python -m venv myenv' on the first line, and the command to activate it 'myenv\\Scripts\\activate' on the second line.",
+        "hint": "Use print() twice. On the second line, remember to escape the backslash: print('myenv\\\\Scripts\\\\activate').",
+        "wrongHint": "Make sure you print 'python -m venv myenv' on line 1, and 'myenv\\Scripts\\activate' on line 2!",
+        "solution": "print('python -m venv myenv')\nprint('myenv\\Scripts\\activate')",
+        "starterCode": "# Print the venv creation and activation commands\n"
     },
     {
         "id": 89,
         "title": "Standard libraries",
         "concept": "Using math, random, and datetime libraries",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Standard libraries",
-            "subheading": "STAGE 10 — Advanced Python",
-            "body": "<p>Welcome to <strong>Level 89</strong>! In this lesson, we will cover <strong>Standard libraries</strong>.</p>\n<p>This level is part of <strong>STAGE 10 — Advanced Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Standard libraries:</strong> Using math, random, and datetime libraries.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Python's built-in batteries-included tools",
+            "body": "<p>Python is known as a \"batteries-included\" language. This means it comes pre-packaged with a vast collection of modules called the <strong>Standard Library</strong>. You don't need to install them via pip; they are already on your machine, waiting to be imported!</p>\n\n<h3>The Metaphor: Standard Gadgets</h3>\n<p>Think of the standard library like Doraemon's **Standard Gadgets**: these are the default tools built directly into his chassis (like his translation button or flashlight). He doesn't need to buy or download them from future department stores; they are always ready to go!</p>\n\n<h3>Core Modules in the Standard Library</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>math</code>:</strong> Provides advanced mathematical operations and constants:\n        <pre class=\"code-example\">import math\nprint(math.pi)        # 3.141592653589793\nprint(math.floor(4.9))  # Rounds down -> 4</pre>\n    </li>\n    <li><strong><code>random</code>:</strong> Generates random numbers or selects random choices:\n        <pre class=\"code-example\">import random\nprint(random.randint(1, 10))  # Random int from 1 to 10\nprint(random.choice([\"A\", \"B\"])) # Random item</pre>\n    </li>\n    <li><strong><code>datetime</code>:</strong> Handles dates, times, and formatting:\n        <pre class=\"code-example\">import datetime\nprint(datetime.date.today())  # Returns current date</pre>\n    </li>\n</ul>"
+        },
+        "qna": [
+            {
+                "q": "What does 'batteries-included' mean in Python?",
+                "a": "It means Python comes with a large library of pre-installed, ready-to-use modules that handle tasks like file access, system operations, math, and data formatting."
+            },
+            {
+                "q": "Do you need to use 'pip install' for standard libraries?",
+                "a": "No, standard libraries are built into Python itself and are available out of the box."
+            },
+            {
+                "q": "What is the difference between math.ceil() and math.floor()?",
+                "a": "<code>math.ceil()</code> rounds a decimal number **up** to the nearest integer, whereas <code>math.floor()</code> rounds it **down**."
+            },
+            {
+                "q": "What does random.choice(list) do?",
+                "a": "It randomly selects and returns a single element from a non-empty sequence like a list or tuple."
+            },
+            {
+                "q": "How can you print a formatted date?",
+                "a": "By using the <code>strftime()</code> method on a datetime object, which formats the date into a custom string pattern (e.g. <code>\"%Y-%m-%d\"</code>)."
+            }
+        ],
+        "test": {
+            "intro": "Test your standard library knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which standard library module handles random numbers?",
+                    "options": [
+                        "math",
+                        "random",
+                        "datetime",
+                        "sys"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does math.ceil(5.1) return?",
+                    "options": [
+                        "5",
+                        "6",
+                        "5.0",
+                        "An error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which method returns the current date and time?",
+                    "options": [
+                        "datetime.date.today()",
+                        "datetime.datetime.now()",
+                        "datetime.now()",
+                        "datetime.today()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To generate a random float between 0.0 and 1.0, call random._____().",
+                    "answer": "random"
+                },
+                {
+                    "type": "fill",
+                    "question": "To use advanced trig functions, you must write `import _____`.",
+                    "answer": "math"
+                },
+                {
+                    "type": "fill",
+                    "question": "To pick a random element from a list named options, use: random._____(options).",
+                    "answer": "choice"
+                },
+                {
+                    "type": "tf",
+                    "question": "random.randint(1, 10) can generate the number 10.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Standard library modules must be imported before they can be used in your code.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "math.pi is a function and requires parentheses: math.pi().",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Give an example of a situation where the random module would be useful in a game.",
+                    "sampleAnswer": "It would be useful to roll a die, spawn enemies at random locations, determine random loot drops, or pick a starting player."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to pick a random gadget from Doraemon's list. Write a program: import the random module, define a list choices = ['Time Cloth', 'Anywhere Door'], select a random gadget using random.choice(), store it in a variable 'gadget', and print 'gadget'.",
+        "hint": "Import random, define choices, assign gadget = random.choice(choices), and print(gadget).",
+        "wrongHint": "Make sure you use random.choice(choices) and print the selected gadget!",
+        "solution": "import random\nchoices = ['Time Cloth', 'Anywhere Door']\ngadget = random.choice(choices)\nprint(gadget)",
+        "starterCode": "# Write a program to choose and print a random gadget\n"
     },
     {
         "id": 90,
         "title": "Regular Expressions (re)",
         "concept": "Searching and validating patterns in strings",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Regular Expressions (re)",
-            "subheading": "STAGE 10 — Advanced Python",
-            "body": "<p>Welcome to <strong>Level 90</strong>! In this lesson, we will cover <strong>Regular Expressions (re)</strong>.</p>\n<p>This level is part of <strong>STAGE 10 — Advanced Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Regular Expressions (re):</strong> Searching and validating patterns in strings.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "The search patterns tool for text",
+            "body": "<p>When working with text, sometimes we need to search for patterns rather than exact words. For example, finding all email addresses, phone numbers, or numbers in a long text. In Python, we do this using <strong>Regular Expressions</strong> (often called **Regex**) through the built-in <strong><code>re</code></strong> module.</p>\n\n<h3>The Metaphor: The X-Ray Detector</h3>\n<p>Think of regular expressions like Doraemon's **X-Ray Detector** gadget: instead of reading every word on a paper (manual string searches), you program the detector to highlight specific shapes (patterns). It filters out all the normal text and shines a light on exact patterns (like digits or codes)!</p>\n\n<h3>Core regex Methods</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>re.search(pattern, text)</code>:</strong> Searches the string for the first match, returning a match object if found.</li>\n    <li><strong><code>re.findall(pattern, text)</code>:</strong> Finds all matches in the text, returning them as a list of strings.</li>\n    <li><strong><code>re.sub(pattern, replacement, text)</code>:</strong> Replaces occurrences of the pattern with new text.</li>\n</ul>\n\n<h3>Common regex Patterns</h3>\n<p>Patterns are written as **raw strings** (prefixed with <code>r</code>) to prevent Python from escaping backslashes:\n<ul class=\"desc-list\">\n    <li><code>\\d</code>: Matches any digit (0-9). <code>\\d+</code> matches one or more digits.</li>\n    <li><code>\\w</code>: Matches any alphanumeric character (letters, numbers, underscores).</li>\n    <li><code>\\s</code>: Matches any whitespace character (spaces, tabs, newlines).</li>\n</ul>\n<pre class=\"code-example\">import re\ntext = \"Doraemon has 4 pockets and 12 dorayakis.\"\nnumbers = re.findall(r\"\\d+\", text)\nprint(numbers)  # Prints: ['4', '12']</pre></p>"
+        },
+        "qna": [
+            {
+                "q": "What is a regular expression (regex)?",
+                "a": "A regular expression is a special sequence of characters that forms a search pattern, used for pattern matching and text manipulation."
+            },
+            {
+                "q": "Why do we prefix regex patterns with 'r', like r'\\d+'?",
+                "a": "The 'r' prefix marks the string as a **raw string**, which tells Python to treat backslashes literally instead of as escape sequences (like newline <code>\\n</code>)."
+            },
+            {
+                "q": "What is the difference between re.match() and re.search()?",
+                "a": "<code>re.match()</code> checks for a match only at the **very beginning** of the string. <code>re.search()</code> scans the **entire string** for the first occurrence of a match."
+            },
+            {
+                "q": "What does the '+' symbol mean in regex patterns?",
+                "a": "The <code>+</code> symbol is a quantifier meaning **one or more** occurrences of the preceding character or group (e.g. <code>\\d+</code> matches '4' or '123' but not empty text)."
+            },
+            {
+                "q": "How do you replace text patterns using regex?",
+                "a": "By using the <code>re.sub(pattern, replacement, text)</code> function, which replaces all instances of the pattern with the replacement text."
+            }
+        ],
+        "test": {
+            "intro": "Test your regular expressions knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which module provides regular expression support in Python?",
+                    "options": [
+                        "regex",
+                        "re",
+                        "pattern",
+                        "search"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which regex character matches any single digit?",
+                    "options": [
+                        "\\w",
+                        "\\d",
+                        "\\s",
+                        "\\t"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is returned by re.findall() if no matches are found in the text?",
+                    "options": [
+                        "None",
+                        "An empty list []",
+                        "An empty string ''",
+                        "False"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To ensure backslashes are treated literally, prefix your pattern string with the letter _____.",
+                    "answer": "r"
+                },
+                {
+                    "type": "fill",
+                    "question": "In regex patterns, the '*' symbol means zero or _____ occurrences of the character.",
+                    "answer": "more"
+                },
+                {
+                    "type": "fill",
+                    "question": "To replace all occurrences of a pattern in a string, use the function re._____().",
+                    "answer": "sub"
+                },
+                {
+                    "type": "tf",
+                    "question": "re.search() will scan the entire string and return all matches in a list.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The pattern r'\\s+' matches one or more whitespace characters.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using standard string methods like find() is always preferred over regex because it is faster.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the difference between the regex patterns r'\\d' and r'\\d+'.",
+                    "sampleAnswer": "r'\\d' matches only a single digit character (e.g. '1' from '12'), whereas r'\\d+' matches one or more consecutive digits as a single group (e.g. '12' from '12')."
+                }
+            ]
+        },
+        "scenario": "Nobita is scanning text for digits. Write a program: import the re module, define text = 'I found 3 bells and 5 dorayakis', use re.findall(r'\\d', text) to find all single digits, store the list in 'digits', and print 'digits'.",
+        "hint": "Import re, define text, assign digits = re.findall(r'\\d', text), and print(digits).",
+        "wrongHint": "Make sure you call re.findall(r'\\d', text) and print digits!",
+        "solution": "import re\ntext = 'I found 3 bells and 5 dorayakis'\ndigits = re.findall(r'\\d', text)\nprint(digits)",
+        "starterCode": "# Write a program using regex findall to extract digits\n"
     },
     {
         "id": 91,
         "title": "Classes and objects",
         "concept": "Object-oriented blueprint structures",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "Classes and objects",
-            "subheading": "STAGE 11 — OOP",
-            "body": "<p>Welcome to <strong>Level 91</strong>! In this lesson, we will cover <strong>Classes and objects</strong>.</p>\n<p>This level is part of <strong>STAGE 11 — OOP</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Classes and objects:</strong> Object-oriented blueprint structures.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Classes and Objects",
+            "subheading": "Object-Oriented Programming (OOP) foundation",
+            "body": "<p>So far, we have written programs using variables and functions. <strong>Object-Oriented Programming (OOP)</strong> is a powerful way to organize programs by grouping variables (data) and functions (actions) together into entities called **Objects**.</p>\n\n<h3>The Metaphor: The 3D Printer Blueprint</h3>\n<p>Think of a **Class** like a digital <strong>3D Printer Blueprint</strong> file. The blueprint defines what a gadget looks like and what it does, but you cannot hold it or use it on its own. An **Object** is the actual physical, plastic gadget that comes out of the printer (the **Instance**). You can print dozens of gadgets from a single blueprint -- each gadget behaves the same, but has its own physical presence!</p>\n\n<h3>Defining a Class</h3>\n<p>We use the <code>class</code> keyword. Inside the class, variables are called **Attributes** and functions are called **Methods**:</p>\n<pre class=\"code-example\">class RobotCat:\n    # Attribute\n    color = \"blue\"\n\n    # Method\n    def meow(self):\n        print(\"Meow! I am Doraemon!\")</pre>\n\n<h3>Instantiating an Object</h3>\n<p>To print an object from our blueprint, we call the class name like a function:\n<pre class=\"code-example\">dora = RobotCat()  # Instantiate object\nprint(dora.color)  # Access attribute -> blue\ndora.meow()        # Call method -> Meow! I am Doraemon!</pre></p>\n\n<h3>What is self?</h3>\n<p>When you define a class method, the first parameter must always be **<code>self</code>**. It represents the specific object calling the method, allowing Python to access and update that object's variables.</p>"
+        },
+        "qna": [
+            {
+                "q": "What is Object-Oriented Programming (OOP)?",
+                "a": "OOP is a programming paradigm that organizes code around objects (data structures) rather than actions and logic."
+            },
+            {
+                "q": "What is the difference between a class and an object?",
+                "a": "A **class** is a blueprint or template that defines properties and actions. An **object** is a concrete instance of that class containing real data."
+            },
+            {
+                "q": "What is the role of the 'self' parameter?",
+                "a": "<code>self</code> refers to the active object instance that is currently calling the method, allowing Python to access attributes belonging to that specific object."
+            },
+            {
+                "q": "Do you need to pass an argument for 'self' when calling a method?",
+                "a": "No. Python automatically passes the calling object as the first argument behind the scenes when you write <code>object.method()</code>."
+            },
+            {
+                "q": "What is the difference between an attribute and a method?",
+                "a": "An **attribute** is a variable defined inside a class that holds data. A **method** is a function defined inside a class that operates on the object's attributes."
+            }
+        ],
+        "test": {
+            "intro": "Test your OOP foundation knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used to define a new blueprint class in Python?",
+                    "options": [
+                        "object",
+                        "def",
+                        "class",
+                        "blueprint"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "If you have a class named 'Gadget', how do you create an instance named 'door'?",
+                    "options": [
+                        "door = new Gadget()",
+                        "door = Gadget()",
+                        "door = Gadget.create()",
+                        "class door(Gadget):"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the mandatory first parameter of methods defined inside a class?",
+                    "options": [
+                        "this",
+                        "self",
+                        "obj",
+                        "me"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "An individual realization of a class template is called an _____.",
+                    "answer": "object"
+                },
+                {
+                    "type": "fill",
+                    "question": "Variables defined inside a class to hold data are called _____.",
+                    "answer": "attributes"
+                },
+                {
+                    "type": "fill",
+                    "question": "Functions defined inside a class to perform actions are called _____.",
+                    "answer": "methods"
+                },
+                {
+                    "type": "tf",
+                    "question": "A class can only have one object instantiated from it in any single program.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Object attributes can be read and modified after the object has been instantiated.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Methods must always have 'self' written as their first argument in the class definition.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the blueprint analogy for classes and objects in your own words.",
+                    "sampleAnswer": "A class is like an architectural blueprint for a house, defining the number of rooms and layout. An object is the actual physical house built from that blueprint. You can build multiple houses from a single blueprint."
+                }
+            ]
+        },
+        "scenario": "Doraemon wants you to define a basic class. Create a class named 'Gadget'. Inside it, define a method 'use(self)' that prints 'Gadget activated'. Then create an instance of 'Gadget' called 'door' and call 'door.use()'.",
+        "hint": "Write: class Gadget: followed by def use(self): print('Gadget activated'). Then assign door = Gadget() and call door.use().",
+        "wrongHint": "Make sure you call door.use() at the end to activate it!",
+        "solution": "class Gadget:\n    def use(self):\n        print('Gadget activated')\n\ndoor = Gadget()\ndoor.use()",
+        "starterCode": "# Define the class, instantiate door, and call the method\n"
     },
     {
         "id": 92,
         "title": "Constructor __init__",
         "concept": "Initializing properties on object instantiation",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Constructor __init__",
-            "subheading": "STAGE 11 — OOP",
-            "body": "<p>Welcome to <strong>Level 92</strong>! In this lesson, we will cover <strong>Constructor __init__</strong>.</p>\n<p>This level is part of <strong>STAGE 11 — OOP</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Constructor __init__:</strong> Initializing properties on object instantiation.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Initializing object attributes dynamically",
+            "body": "<p>In the previous level, we set the attribute <code>color = \"blue\"</code> directly in the class body. This means every object printed has the exact same color. To create objects with custom data upon creation, we use a constructor method called <strong><code>__init__</code></strong>.</p>\n\n<h3>The Metaphor: The Customization Panel</h3>\n<p>Think of the constructor like a <strong>Customization Panel</strong> on a factory conveyor belt. When you print a robot cat, you set its name, color, and pocket size on the control panel before pushing the start button. The constructor configures these settings on the product immediately during creation!</p>\n\n<h3>The __init__ Method</h3>\n<p>The <code>__init__</code> method (short for initialize) is a special \"dunder\" (double underscore) method that Python calls **automatically** the instant you instantiate an object:</p>\n<pre class=\"code-example\">class Gadget:\n    # The Constructor\n    def __init__(self, name, rank):\n        self.name = name  # Save argument to object\n        self.rank = rank\n\n# Create objects with custom data\ndoor = Gadget(\"Anywhere Door\", \"A\")\ncopter = Gadget(\"Bamboo Copter\", \"B\")\n\nprint(door.name)    # Anywhere Door\nprint(copter.name)  # Bamboo Copter</pre>\n<p>Inside the constructor, <code>self.name = name</code> binds the passed argument value to the new object instance's <code>name</code> attribute.</p>"
+        },
+        "qna": [
+            {
+                "q": "What is a constructor method in Python?",
+                "a": "A constructor is a special method named <code>__init__</code> that Python automatically runs whenever a new object is created from a class."
+            },
+            {
+                "q": "Why is the constructor method named __init__?",
+                "a": "It stands for **initialize**. It is wrapped in double underscores (dunder) because it is a special built-in method in Python's class protocols."
+            },
+            {
+                "q": "What happens if you do not define an __init__ method inside a class?",
+                "a": "Python provides a default, empty constructor automatically behind the scenes, allowing you to instantiate objects without arguments."
+            },
+            {
+                "q": "Can you define multiple constructor methods in a Python class?",
+                "a": "No. Python only allows one constructor method. If you write multiple <code>__init__</code> definitions, the last one defined will overwrite the earlier ones."
+            },
+            {
+                "q": "Can constructor parameters have default values?",
+                "a": "Yes! You can define default arguments, e.g. <code>def __init__(self, name, rank=\"C\"):</code>, allowing objects to be created without specifying those parameters if they match the default."
+            }
+        ],
+        "test": {
+            "intro": "Test your constructor initialization knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which special method acts as the constructor in Python classes?",
+                    "options": [
+                        "__new__",
+                        "__init__",
+                        "__construct__",
+                        "__start__"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "When is the __init__ constructor method executed?",
+                    "options": [
+                        "Only when explicitly called: obj.__init__()",
+                        "Automatically when a new object is created",
+                        "When the class is defined",
+                        "When the program terminates"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you pass arguments to the constructor?",
+                    "options": [
+                        "Inside parentheses when calling the class name",
+                        "By writing arguments in a dictionary",
+                        "By calling object.set_attributes()",
+                        "Constructors cannot take arguments"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "Methods wrapped in double underscores like __init__ are called _____ methods.",
+                    "answer": "dunder"
+                },
+                {
+                    "type": "fill",
+                    "question": "The first parameter of the constructor method must always be `_____`.",
+                    "answer": "self"
+                },
+                {
+                    "type": "fill",
+                    "question": "To initialize an attribute named speed using a parameter s, write: self.speed = _____.",
+                    "answer": "s"
+                },
+                {
+                    "type": "tf",
+                    "question": "The __init__ constructor must return a string value describing the object status.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can assign default values to constructor parameters.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using self.value inside __init__ creates an instance variable unique to that object.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the difference between class attributes and instance attributes.",
+                    "sampleAnswer": "Class attributes are shared by all objects created from that class. Instance attributes (defined using self inside __init__) are unique to each specific object."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to customize his gadget. Define a class 'Gadget'. Write an '__init__(self, name)' method that assigns self.name = name. Instantiate a gadget named 'door' by passing 'Anywhere Door' as the argument, and print door.name.",
+        "hint": "Write class Gadget:, then def __init__(self, name): self.name = name. Underneath, write door = Gadget('Anywhere Door') and print(door.name).",
+        "wrongHint": "Make sure you assign self.name = name inside the constructor!",
+        "solution": "class Gadget:\n    def __init__(self, name):\n        self.name = name\n\ndoor = Gadget('Anywhere Door')\nprint(door.name)",
+        "starterCode": "# Define class with constructor, instantiate Anywhere Door, and print name\n"
     },
     {
         "id": 93,
         "title": "Inheritance",
         "concept": "Sharing code attributes between parent and child classes",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Inheritance",
-            "subheading": "STAGE 11 — OOP",
-            "body": "<p>Welcome to <strong>Level 93</strong>! In this lesson, we will cover <strong>Inheritance</strong>.</p>\n<p>This level is part of <strong>STAGE 11 — OOP</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Inheritance:</strong> Sharing code attributes between parent and child classes.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Reusing and extending existing class structures",
+            "body": "<p>In software development, writing duplicate code is bad practice. If different classes share the same attributes or behaviors, we can make one class inherit them from another. This concept is called <strong>Inheritance</strong>.</p>\n\n<h3>Parent vs Child Classes</h3>\n<ul class=\"desc-list\">\n    <li><strong>Parent Class (Base Class):</strong> The class containing the shared structure.</li>\n    <li><strong>Child Class (Derived Class):</strong> The new class that inherits all attributes and methods from the parent.</li>\n</ul>\n<p>Think of it like a **Family Legacy**: Nobita inherits his family house (attributes) and rules (methods) from his father. However, Nobita can customize his room (extend the class) or override standard house rules (method overriding).</p>\n\n<h3>Syntax of Inheritance</h3>\n<p>To make a child class inherit, write the parent class name in parentheses after the child class name:</p>\n<pre class=\"code-example\">class Gadget:  # Parent Class\n    def __init__(self, name):\n        self.name = name\n\n    def activate(self):\n        print(f\"{self.name} is powered on!\")\n\nclass FlyingGadget(Gadget):  # Child Class inherits from Gadget\n    def fly(self):\n        print(f\"{self.name} floats into the sky!\")\n\ncopter = FlyingGadget(\"Bamboo Copter\")\ncopter.activate()  # Inherited method -> Bamboo Copter is powered on!\ncopter.fly()       # Child method -> Bamboo Copter floats into the sky!</pre>\n\n<h3>Method Overriding & super()</h3>\n<p>If a child class redefines a parent method, the child's version replaces the parent's (this is called **Overriding**). To call the parent's version of a method from inside the child class, use the **<code>super()</code>** function.</p>"
+        },
+        "qna": [
+            {
+                "q": "What is inheritance in OOP?",
+                "a": "Inheritance allows a new class (child class) to adopt all attributes and methods of an existing class (parent class) automatically, promoting code reuse."
+            },
+            {
+                "q": "How do you override a parent method in a child class?",
+                "a": "Simply define a method in the child class with the exact same name as the method in the parent class. Python will use the child's version."
+            },
+            {
+                "q": "What is the purpose of the super() function?",
+                "a": "It returns a reference to the parent class, allowing the child class to call parent methods or constructors (e.g. <code>super().__init__(name)</code>)."
+            },
+            {
+                "q": "Can a child class have its own new methods?",
+                "a": "Yes! A child class inherits everything from the parent but can define its own unique attributes and methods to extend functionality."
+            },
+            {
+                "q": "Does Python support inheriting from multiple parent classes?",
+                "a": "Yes! This is called **Multiple Inheritance**. You separate parent classes with commas, e.g. <code>class Child(Parent1, Parent2):</code>."
+            }
+        ],
+        "test": {
+            "intro": "Test your inheritance and method overriding knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "What is the class that gets inherited from called?",
+                    "options": [
+                        "Subclass",
+                        "Child class",
+                        "Parent class",
+                        "Derived class"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you define a class 'Dog' that inherits from a class 'Animal'?",
+                    "options": [
+                        "class Dog inherits Animal:",
+                        "class Dog(Animal):",
+                        "class Dog extends Animal:",
+                        "class Dog is Animal:"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which function allows a child class to reference parent methods?",
+                    "options": [
+                        "parent()",
+                        "base()",
+                        "super()",
+                        "this()"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Redefining a parent class method inside a child class is called method _____.",
+                    "answer": "overriding"
+                },
+                {
+                    "type": "fill",
+                    "question": "Inheriting from multiple parent classes in Python is called _____ inheritance.",
+                    "answer": "multiple"
+                },
+                {
+                    "type": "fill",
+                    "question": "To call the parent constructor from a child constructor, write: _____().__init__().",
+                    "answer": "super"
+                },
+                {
+                    "type": "tf",
+                    "question": "A child class inherits private methods from the parent class too.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Method overriding allows a child class to implement its own custom logic for an inherited method.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A Python class can only inherit from one single parent class.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the benefit of method overriding in a game development context.",
+                    "sampleAnswer": "It allows specialized entities to respond uniquely to standard commands. For example, a base Enemy class might have a move() method, but a FlyingEnemy class can override move() to compute flight paths."
+                }
+            ]
+        },
+        "scenario": "Create parent and child classes. Define a class 'Gadget' with a method 'use(self)' that prints 'Activated'. Define a child class 'Copter(Gadget)' that overrides 'use(self)' to print 'Flying'. Instantiate 'Copter' as 'bamboo' and call 'bamboo.use()'.",
+        "hint": "Define class Gadget: def use(self): print('Activated'). Define class Copter(Gadget): def use(self): print('Flying'). Instantiate bamboo = Copter() and run bamboo.use().",
+        "wrongHint": "Make sure Copter inherits from Gadget and overrides use()!",
+        "solution": "class Gadget:\n    def use(self):\n        print('Activated')\n\nclass Copter(Gadget):\n    def use(self):\n        print('Flying')\n\nbamboo = Copter()\nbamboo.use()",
+        "starterCode": "# Define parent Gadget, child Copter, override use(), and call it\n"
     },
     {
         "id": 94,
         "title": "Encapsulation",
         "concept": "Restricting public access to object attributes",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Encapsulation",
-            "subheading": "STAGE 11 — OOP",
-            "body": "<p>Welcome to <strong>Level 94</strong>! In this lesson, we will cover <strong>Encapsulation</strong>.</p>\n<p>This level is part of <strong>STAGE 11 — OOP</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Encapsulation:</strong> Restricting public access to object attributes.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Hiding internal data and restricting direct access",
+            "body": "<p>When designing objects, we want to prevent external code from modifying our internal data directly in ways that break the object. The concept of bundling data and restricting direct access to it is called <strong>Encapsulation</strong>.</p>\n\n<h3>The Metaphor: The Locked Control Panel</h3>\n<p>Think of it like the **Locked Control Panel** on Doraemon's back. While some controls are public (like talking or opening his pocket), the wiring configurations and memory systems are hidden under a locked cover (private attributes). Nobita cannot touch the wiring directly because he might break Doraemon; instead, he must use public interfaces (getter/setter buttons) that ensure settings remain safe!</p>\n\n<h3>Access Modifiers in Python</h3>\n<p>Unlike some languages, Python uses variable naming prefixes to signal access levels:\n<ul class=\"desc-list\">\n    <li><strong>Public (Default):</strong> Access from anywhere (e.g. <code>self.name</code>).</li>\n    <li><strong>Protected (one underscore):</strong> A warning indicating internal use only (e.g. <code>self._status</code>). Access is still allowed.</li>\n    <li><strong>Private (two underscores):</strong> Hidden from external access (e.g. <code>self.__pocket_code</code>). Causes an error if accessed directly.</li>\n</ul></p>\n\n<h3>Getters and Setters</h3>\n<p>To safely access or modify private attributes, we define public methods called **Getters** and **Setters**:</p>\n<pre class=\"code-example\">class Robot:\n    def __init__(self):\n        self.__battery = 100  # Private attribute\n\n    # Getter\n    def get_battery(self):\n        return self.__battery\n\n    # Setter\n    def set_battery(self, charge):\n        if 0 <= charge <= 100:  # Data validation!\n            self.__battery = charge\n\ndora = Robot()\ndora.set_battery(80)\nprint(dora.get_battery())  # Prints: 80</pre>"
+        },
+        "qna": [
+            {
+                "q": "What is Encapsulation?",
+                "a": "Encapsulation is the practice of hiding an object's internal state (attributes) and requiring all interactions to go through public methods."
+            },
+            {
+                "q": "How do you make an attribute private in Python?",
+                "a": "By prefixing the attribute name with two leading underscores, for example, <code>self.__secret_key</code>."
+            },
+            {
+                "q": "What is Name Mangling?",
+                "a": "The mechanism Python uses to protect private attributes. It renames <code>__attribute</code> internally to <code>_ClassName__attribute</code>, making it harder to access from outside the class."
+            },
+            {
+                "q": "What is the difference between protected (_) and private (__) attributes?",
+                "a": "A single underscore is just a convention warning developers not to touch it directly. Double underscores trigger Python's name mangling, actively blocking direct outside access."
+            },
+            {
+                "q": "Why use getter and setter methods?",
+                "a": "They let you control how attributes are accessed and updated, enabling data validation (e.g. checking for negative numbers) before changing values."
+            }
+        ],
+        "test": {
+            "intro": "Test your encapsulation and access control knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which prefix marks an attribute as private in Python?",
+                    "options": [
+                        "Single underscore: _var",
+                        "Double underscore: __var",
+                        "Keyword: private var",
+                        "Asterisk: *var"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the term for renaming private variables internally to prevent access?",
+                    "options": [
+                        "Encryption",
+                        "Name Mangling",
+                        "Data Hiding",
+                        "Obfuscation"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What error is thrown if you try to read a private attribute 'dora.__battery' from outside?",
+                    "options": [
+                        "ValueError",
+                        "NameError",
+                        "AttributeError",
+                        "TypeError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "A method used to safely retrieve a private variable's value is called a _____.",
+                    "answer": "getter"
+                },
+                {
+                    "type": "fill",
+                    "question": "A method used to safely update a private variable's value is called a _____.",
+                    "answer": "setter"
+                },
+                {
+                    "type": "fill",
+                    "question": "An attribute prefixed with a single underscore (e.g., _state) is considered _____.",
+                    "answer": "protected"
+                },
+                {
+                    "type": "tf",
+                    "question": "Python variables and methods are public by default.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Encapsulation prevents developers from ever accessing internal values under any circumstance.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Private variables help prevent bugs by stopping external code from corrupting internal states.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Describe how name mangling affects an attribute '__val' inside a class 'Data'.",
+                    "sampleAnswer": "Python renames '__val' to '_Data__val' internally. Attempting to call 'Data().__val' from outside raises an AttributeError because '__val' no longer exists under that exact name."
+                }
+            ]
+        },
+        "scenario": "Nobita is securing gadget settings. Define a class 'Robot'. Inside __init__, set a private attribute 'self.__battery = 100'. Define a getter method 'get_battery(self)' that returns self.__battery. Instantiate 'Robot' as 'dora', call 'get_battery()', and print the result.",
+        "hint": "Define class Robot, write def __init__(self): self.__battery = 100, then write def get_battery(self): return self.__battery. Underneath, write dora = Robot() and print(dora.get_battery()).",
+        "wrongHint": "Make sure you use double underscores for __battery and return it in get_battery()!",
+        "solution": "class Robot:\n    def __init__(self):\n        self.__battery = 100\n    def get_battery(self):\n        return self.__battery\n\ndora = Robot()\nprint(dora.get_battery())",
+        "starterCode": "# Define Robot with private __battery, getter, instantiate, and print\n"
     },
     {
         "id": 95,
         "title": "Polymorphism + Abstraction",
         "concept": "Implementing dynamic methods and class interfaces",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "Polymorphism + Abstraction",
-            "subheading": "STAGE 11 — OOP",
-            "body": "<p>Welcome to <strong>Level 95</strong>! In this lesson, we will cover <strong>Polymorphism + Abstraction</strong>.</p>\n<p>This level is part of <strong>STAGE 11 — OOP</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Polymorphism + Abstraction:</strong> Implementing dynamic methods and class interfaces.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Polymorphism & Abstraction",
+            "subheading": "Universal controls and clean templates",
+            "body": "<p>In this level, we cover two advanced OOP concepts that make your code extremely flexible: <strong>Polymorphism</strong> and <strong>Abstraction</strong>.</p>\n\n<h3>1. Polymorphism (Many Shapes)</h3>\n<p>Polymorphism allows different classes to share the same method name but have different behaviors. Think of it like a **Universal Controller**: you click the red button (method call). If it is plugged into a TV, the TV turns on. If it is plugged into a helicopter, the blades spin. One button, different responses depending on the object!</p>\n<pre class=\"code-example\">class Door:\n    def use(self):\n        print(\"Open Anywhere Door\")\n\nclass Copter:\n    def use(self):\n        print(\"Fly Bamboo Copter\")\n\n# Polymorphic execution\nfor gadget in [Door(), Copter()]:\n    gadget.use()  # Same method call, different actions!</pre>\n\n<h3>2. Abstraction (Hiding Complexity)</h3>\n<p>Abstraction is hiding complex implementation details and showing only the essential features. It also lets you create **Templates** that child classes must follow.</p>\n<p>Python enforces abstraction using the built-in <strong><code>abc</code></strong> module. We inherit from <strong><code>ABC</code></strong> (Abstract Base Class) and mark methods using the <strong><code>@abstractmethod</code></strong> decorator. Abstract classes cannot be instantiated directly; they exist only to be inherited from!</p>\n<pre class=\"code-example\">from abc import ABC, abstractmethod\n\nclass AbstractGadget(ABC):  # Template class\n    @abstractmethod\n    def operate(self):\n        pass\n\nclass Door(AbstractGadget):\n    def operate(self):\n        print(\"Door is active\")\n\n# obj = AbstractGadget()  # TypeError! Cannot instantiate abstract class\ndoor = Door()             # Valid!</pre>"
+        },
+        "qna": [
+            {
+                "q": "What is Polymorphism?",
+                "a": "Polymorphism means 'many shapes'. It allows different classes to define methods with the identical name, which can be executed interchangeably in a loop or function."
+            },
+            {
+                "q": "What is Abstraction?",
+                "a": "Abstraction is hiding internal logic details and exposing only the clean, essential interface functions to the user."
+            },
+            {
+                "q": "What is an Abstract Base Class (ABC)?",
+                "a": "An abstract class is a blueprint template class that cannot be instantiated directly. It forces child classes to implement its abstract methods."
+            },
+            {
+                "q": "What happens if a child class forgets to implement an @abstractmethod?",
+                "a": "Python will throw a <code>TypeError</code> when you try to instantiate the child class, protecting your interface contract."
+            },
+            {
+                "q": "What is Duck Typing in Python's polymorphism?",
+                "a": "Duck typing is dynamic typing where an object's suitability is determined by the presence of certain methods (e.g. having a <code>use()</code> method), rather than its strict inheritance from a parent class."
+            }
+        ],
+        "test": {
+            "intro": "Test your polymorphism and abstraction knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "What is the term for different classes having methods with the same name doing different tasks?",
+                    "options": [
+                        "Inheritance",
+                        "Polymorphism",
+                        "Encapsulation",
+                        "Compilation"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which module must you import to create abstract base classes in Python?",
+                    "options": [
+                        "abstract",
+                        "abc",
+                        "oop",
+                        "interface"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens if you try to instantiate an abstract base class directly?",
+                    "options": [
+                        "An object is created with empty attributes",
+                        "The program hangs in an infinite loop",
+                        "Python raises a TypeError",
+                        "Nothing, it is allowed"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "To mark a method as abstract in your parent template, use the decorator @_____-method (replace '-' with nothing).",
+                    "answer": "abstractmethod"
+                },
+                {
+                    "type": "fill",
+                    "question": "ABC stands for Abstract Base _____.",
+                    "answer": "Class"
+                },
+                {
+                    "type": "fill",
+                    "question": "The concept of matching objects by method interfaces rather than strict type checks is called _____ typing.",
+                    "answer": "duck"
+                },
+                {
+                    "type": "tf",
+                    "question": "Abstract base classes can contain regular, fully implemented methods alongside abstract methods.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Polymorphism makes it easier to extend code because we can add new classes without changing existing loops.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "An abstract method is defined using the standard 'def' keyword but contains no working body (often using 'pass').",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Describe the main benefit of Abstraction in software architecture.",
+                    "sampleAnswer": "Abstraction allows developers to establish structural templates that guarantee child classes implement required methods, reducing architectural errors and hiding complex subroutines."
+                }
+            ]
+        },
+        "scenario": "Nobita is testing polymorphism. Define two classes: 'Door' and 'Copter'. Both must have a method 'use(self)'. 'Door.use' prints 'Open'. 'Copter.use' prints 'Fly'. Define a function 'run_gadget(obj)' that calls 'obj.use()'. Instantiate both classes, and call 'run_gadget' on each.",
+        "hint": "Define class Door with use() printing 'Open'. Define class Copter with use() printing 'Fly'. Define def run_gadget(obj): obj.use(). Run run_gadget(Door()) and run_gadget(Copter()).",
+        "wrongHint": "Make sure you define the function run_gadget and call it with instances of both classes!",
+        "solution": "class Door:\n    def use(self):\n        print('Open')\n\nclass Copter:\n    def use(self):\n        print('Fly')\n\ndef run_gadget(obj):\n    obj.use()\n\nrun_gadget(Door())\nrun_gadget(Copter())",
+        "starterCode": "# Define Door and Copter, create run_gadget(), and execute polymorphic calls\n"
     },
     {
         "id": 96,
         "title": "Lambda + map() + filter()",
         "concept": "Functional programming tools in Python",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
             "heading": "Lambda + map() + filter()",
-            "subheading": "STAGE 12 — Extreme Python",
-            "body": "<p>Welcome to <strong>Level 96</strong>! In this lesson, we will cover <strong>Lambda + map() + filter()</strong>.</p>\n<p>This level is part of <strong>STAGE 12 — Extreme Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Lambda + map() + filter():</strong> Functional programming tools in Python.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "subheading": "Compact functional programming tools",
+            "body": "<p>In Python, we can write cleaner, shorter code for processing collections by using functional programming tools: **Lambda** functions, **map()**, and **filter()**.</p>\n\n<h3>1. Lambda Functions (Anonymous Functions)</h3>\n<p>A **Lambda** function is a small, anonymous (unnamed) function defined in a single line using the <code>lambda</code> keyword. It can take any number of arguments but can only contain **one single expression**:</p>\n<pre class=\"code-example\"># Regular function\ndef double(x):\n    return x * 2\n\n# Equivalent Lambda function\ndouble_lambda = lambda x: x * 2\nprint(double_lambda(5))  # Prints: 10</pre>\n<p>Think of a lambda function like a temporary **Disposable Mini-Gadget**: you build it on the spot to do a quick job, and throw it away once you are done!</p>\n\n<h3>2. The map() Function (The Conveyor Belt)</h3>\n<p>The <strong><code>map(func, iterable)</code></strong> function takes a function and applies it to **every item** in a list (or other iterable). It acts like a **Factory Conveyor Belt**, modifying each item as it passes by:</p>\n<pre class=\"code-example\">nums = [1, 2, 3]\ndoubled = list(map(lambda x: x * 2, nums))\nprint(doubled)  # Prints: [2, 4, 6]</pre>\n\n<h3>3. The filter() Function (The Sorting Gate)</h3>\n<p>The <strong><code>filter(func, iterable)</code></strong> function filters items from a collection, keeping only the elements that satisfy a condition (where the function returns <code>True</code>). It acts like a **Sorting Gate**, letting only non-broken gadgets through:</p>\n<pre class=\"code-example\">nums = [1, 2, 3, 4, 5, 6]\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(evens)  # Prints: [2, 4, 6]</pre>"
+        },
+        "qna": [
+            {
+                "q": "What is a lambda function in Python?",
+                "a": "A lambda function is an anonymous, single-line function defined using the <code>lambda</code> keyword instead of <code>def</code>. It is used for short, throwaway operations."
+            },
+            {
+                "q": "Can a lambda function contain multiple lines of code?",
+                "a": "No. Lambda functions are strictly limited to a single expression. They cannot contain statements, loops, or multiple lines of logic."
+            },
+            {
+                "q": "What does map() return?",
+                "a": "It returns a <code>map</code> iterator object. To convert it into a standard Python list, you must wrap it in the <code>list()</code> function, e.g. <code>list(map(...))</code>."
+            },
+            {
+                "q": "What is the key difference between map() and filter()?",
+                "a": "<code>map()</code> applies a transformation to **every** item, returning a collection of the same size with modified values. <code>filter()</code> runs a true/false condition check, returning a smaller collection containing only the unchanged original items that passed the test."
+            },
+            {
+                "q": "Do lambda functions require a 'return' statement?",
+                "a": "No. The result of the single expression inside a lambda function is returned automatically."
+            }
+        ],
+        "test": {
+            "intro": "Test your functional programming knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used to declare an anonymous, single-line function?",
+                    "options": [
+                        "def",
+                        "lambda",
+                        "inline",
+                        "anonymous"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of 'list(map(lambda x: x + 1, [10, 20]))'?",
+                    "options": [
+                        "[11, 21]",
+                        "[10, 20]",
+                        "30",
+                        "[11]"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which function is used to selectively filter out elements from an iterable based on a condition?",
+                    "options": [
+                        "map()",
+                        "filter()",
+                        "select()",
+                        "reduce()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To convert the iterator returned by map() into a list, wrap it in the _____() function.",
+                    "answer": "list"
+                },
+                {
+                    "type": "fill",
+                    "question": "A lambda function is defined on a single line and contains exactly one _____.",
+                    "answer": "expression"
+                },
+                {
+                    "type": "fill",
+                    "question": "To write a lambda that returns the square of x, write: lambda x: x ** _____.",
+                    "answer": "2"
+                },
+                {
+                    "type": "tf",
+                    "question": "Lambda functions can accept multiple input parameters.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using map() alters the original input list in place.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "If filter() receives a function that always returns True, the output list will match the input list.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the benefit of using lambda functions as arguments inside map() or filter().",
+                    "sampleAnswer": "It allows developers to write short, anonymous transformations or filters directly where they are needed, without cluttering the global namespace with small, single-use function definitions."
+                }
+            ]
+        },
+        "scenario": "Doraemon wants to double the prices of gadgets. Given a list prices = [10, 20, 30], use map() and a lambda function to double each price, convert the result to a list, store it in 'double_prices', and print 'double_prices'.",
+        "hint": "Write prices = [10, 20, 30], then assign double_prices = list(map(lambda x: x * 2, prices)), and print(double_prices).",
+        "wrongHint": "Make sure you double the prices and wrap map in list() before printing!",
+        "solution": "prices = [10, 20, 30]\ndouble_prices = list(map(lambda x: x * 2, prices))\nprint(double_prices)",
+        "starterCode": "# Double the list prices using map and lambda, then print the result list\n"
     },
     {
         "id": 97,
         "title": "Decorators + Generators + yield",
         "concept": "Modifying functions and streaming memory data",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "Decorators + Generators + yield",
-            "subheading": "STAGE 12 — Extreme Python",
-            "body": "<p>Welcome to <strong>Level 97</strong>! In this lesson, we will cover <strong>Decorators + Generators + yield</strong>.</p>\n<p>This level is part of <strong>STAGE 12 — Extreme Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Decorators + Generators + yield:</strong> Modifying functions and streaming memory data.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Decorators & Generators",
+            "subheading": "Advanced function modifications and streaming iterators",
+            "body": "<p>In this level, we cover two powerful tools for advanced function control: <strong>Decorators</strong> and <strong>Generators</strong>.</p>\n\n<h3>1. Decorators (The Upgrader)</h3>\n<p>A **Decorator** is a function that takes another function as input, extends or changes its behavior, and returns a new wrapper function. We apply decorators using the **<code>@</code>** symbol.</p>\n<p>Think of a decorator like a **Gadget Upgrader** (e.g. the Big Light): you wrap your core tool (the function) with it, and it suddenly gains extra abilities (like printing run timers or logging access) without you rewriting the tool's inner circuits!</p>\n<pre class=\"code-example\">def logger_decorator(func):\n    def wrapper():\n        print(\"--- Gadget starting ---\")\n        func()\n        print(\"--- Gadget shutdown ---\")\n    return wrapper\n\n@logger_decorator\ndef use_door():\n    print(\"Entering Anywhere Door\")\n\nuse_door() # Prints both start/stop lines along with the door message!</pre>\n\n<h3>2. Generators & yield (The Infinite Snack Dispenser)</h3>\n<p>Normal functions calculate a list of results and return them all at once. If the list has a million items, it eats up massive RAM memory. A **Generator** function generates values **one at a time, on demand**, using the **<code>yield</code>** keyword.</p>\n<p>Think of it like a **Dorayaki Dispenser**: instead of preparing a million snacks in advance and stuffing them in your pocket (clogging RAM), the dispenser yields one fresh snack only when you click the button (using `next()`), saving space!</p>\n<pre class=\"code-example\">def count_generator():\n    yield 1\n    yield 2\n    yield 3\n\ngen = count_generator()\nprint(next(gen))  # Prints: 1\nprint(next(gen))  # Prints: 2 (resumes right where it left off!)</pre>"
+        },
+        "qna": [
+            {
+                "q": "What is a decorator in Python?",
+                "a": "A decorator is a function that wraps another function to modify or augment its behavior without directly modifying the wrapped function's code."
+            },
+            {
+                "q": "What does the '@' symbol do?",
+                "a": "It is syntactic sugar used to apply a decorator function to the function defined directly below it."
+            },
+            {
+                "q": "What is a generator function?",
+                "a": "A generator is a function that uses the <code>yield</code> keyword instead of <code>return</code>. It returns a lazy iterator that computes values one by one on the fly."
+            },
+            {
+                "q": "What is the difference between yield and return?",
+                "a": "<code>return</code> terminates a function and sends back a value. <code>yield</code> sends back a value but **pauses** the function, saving its state, so execution can resume from that exact line on the next request."
+            },
+            {
+                "q": "What exception is raised when a generator runs out of items?",
+                "a": "It raises a <code>StopIteration</code> exception, which signals loops like <code>for</code> to stop calling <code>next()</code>."
+            }
+        ],
+        "test": {
+            "intro": "Test your decorators and generators knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used inside a generator function to produce values?",
+                    "options": [
+                        "return",
+                        "yield",
+                        "produce",
+                        "emit"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the standard function used to fetch the next value from a generator?",
+                    "options": [
+                        "generator.get()",
+                        "next()",
+                        "continue()",
+                        "generator.next()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you apply a decorator named 'my_decorator' to a function 'my_func'?",
+                    "options": [
+                        "my_decorator(my_func)",
+                        "wrapper: my_decorator my_func",
+                        "@my_decorator placed above my_func definition",
+                        "decorators.apply(my_decorator, my_func)"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The symbol used to apply decorators in Python is _____.",
+                    "answer": "@"
+                },
+                {
+                    "type": "fill",
+                    "question": "Generator functions are highly efficient because they save _____ usage.",
+                    "answer": "memory"
+                },
+                {
+                    "type": "fill",
+                    "question": "When a generator has no more values to yield, it raises a _____Iteration exception.",
+                    "answer": "Stop"
+                },
+                {
+                    "type": "tf",
+                    "question": "A generator function can contain multiple yield statements.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Decorators modify the underlying source code file of the function they wrap.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Calling next() on a generator resumes execution from the line immediately following the last executed yield statement.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why generators are preferred over lists for streaming huge datasets.",
+                    "sampleAnswer": "Lists load all data into RAM at once, which can cause out-of-memory errors for huge datasets. Generators yield one item at a time, keeping memory footprint constant and minimal."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to make a generator for numbers. Write a generator function named 'count_up(n)' that yields numbers from 1 to n (inclusive) using a for loop. Instantiate the generator for 3 as 'gen = count_up(3)', and print each value using next(gen) three times.",
+        "hint": "Define count_up(n) with a for loop that yields numbers. Create gen = count_up(3). Print next(gen) three times.",
+        "wrongHint": "Make sure you print next(gen) exactly three times and call yield inside count_up!",
+        "solution": "def count_up(n):\n    for i in range(1, n + 1):\n        yield i\n\ngen = count_up(3)\nprint(next(gen))\nprint(next(gen))\nprint(next(gen))",
+        "starterCode": "# Define count_up generator, instantiate, and print next values\n"
     },
     {
         "id": 98,
         "title": "APIs with requests + working with JSON",
         "concept": "Fetching data from web APIs",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "APIs with requests + working with JSON",
-            "subheading": "STAGE 12 — Extreme Python",
-            "body": "<p>Welcome to <strong>Level 98</strong>! In this lesson, we will cover <strong>APIs with requests + working with JSON</strong>.</p>\n<p>This level is part of <strong>STAGE 12 — Extreme Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>APIs with requests + working with JSON:</strong> Fetching data from web APIs.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "APIs & Web requests",
+            "subheading": "Connecting Python to the internet",
+            "body": "<p>Almost all modern software interacts with web servers to get updates, fetch weather, or save data. We do this by sending requests to <strong>APIs</strong> (Application Programming Interfaces) using Python's industry-standard <strong><code>requests</code></strong> library.</p>\n\n<h3>The Metaphor: The Pocket Communicator</h3>\n<p>Think of sending an API request like Doraemon using his **Pocket Communicator** gadget: he dials a code (sends an HTTP GET request to a URL) to contact a future department store database. The store packages up a response envelope (JSON payload) and beams it back. Doraemon unpacks the envelope and reads the items inside!</p>\n\n<h3>Fetching API Data (.get)</h3>\n<p>To retrieve data from a URL, we use <code>requests.get()</code>. The server replies with a response object containing a **Status Code** (e.g. 200 means success, 404 means not found):</p>\n<pre class=\"code-example\">import requests\n\nresponse = requests.get(\"https://api.github.com/users/octocat\")\nprint(response.status_code) # Prints: 200</pre>\n\n<h3>Parsing JSON response (.json)</h3>\n<p>API data is sent back as JSON text. To convert this text payload into a Python dictionary, we call the **<code>.json()</code>** method:</p>\n<pre class=\"code-example\">data = response.json() # Convert to dict\nprint(data[\"name\"])    # Access key -> The Octocat\nprint(type(data))      # Prints: &lt;class 'dict'&gt;</pre>"
+        },
+        "qna": [
+            {
+                "q": "What is an API?",
+                "a": "API stands for **Application Programming Interface**. It is a set of rules allowing different software applications to communicate and exchange data with one another."
+            },
+            {
+                "q": "Do we need to install the requests library?",
+                "a": "Yes, <code>requests</code> is a third-party library. You install it in your environment using the terminal command: <code>pip install requests</code>."
+            },
+            {
+                "q": "What does a status code of 200 mean?",
+                "a": "It indicates that the HTTP request was successful and the server has returned the requested resource."
+            },
+            {
+                "q": "How do you parse a JSON response into a Python dictionary?",
+                "a": "By calling the <code>.json()</code> method on the response object, e.g. <code>my_dict = response.json()</code>."
+            },
+            {
+                "q": "What is the difference between GET and POST requests?",
+                "a": "A **GET** request retrieves data from a server. A **POST** request sends new data to a server to create or update resources."
+            }
+        ],
+        "test": {
+            "intro": "Test your web requests and API integration knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which HTTP method is used to retrieve data from a server?",
+                    "options": [
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the status code for a successful HTTP request?",
+                    "options": [
+                        "404",
+                        "500",
+                        "200",
+                        "301"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which method extracts and parses JSON text into a Python dict/list?",
+                    "options": [
+                        "response.parse()",
+                        "response.json()",
+                        "response.text()",
+                        "response.dict()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The library used to make HTTP calls in Python is called _____.",
+                    "answer": "requests"
+                },
+                {
+                    "type": "fill",
+                    "question": "An HTTP status code of 404 represents a resource _____ error.",
+                    "answer": "not found"
+                },
+                {
+                    "type": "fill",
+                    "question": "API stands for Application Programming _____.",
+                    "answer": "Interface"
+                },
+                {
+                    "type": "tf",
+                    "question": "The requests library is built into Python by default.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A status code of 500 indicates an issue on the client's end, not the server's.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can send headers and query parameters alongside a requests.get() call.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Describe what happens if you attempt to call .json() on a response that is not in JSON format.",
+                    "sampleAnswer": "Python raises a requests.exceptions.JSONDecodeError or json.decoder.JSONDecodeError because the text payload cannot be parsed into a dictionary."
+                }
+            ]
+        },
+        "scenario": "Nobita is querying an API. Write a program: import requests, simulate getting data from 'https://api.example.com' using requests.get(), save the response in 'res', call res.json() and store the output in 'data', and print 'data'.",
+        "hint": "Import requests, assign res = requests.get('https://api.example.com'), assign data = res.json(), and print(data).",
+        "wrongHint": "Make sure you call requests.get and print res.json() output!",
+        "solution": "import requests\nres = requests.get('https://api.example.com')\ndata = res.json()\nprint(data)",
+        "starterCode": "# Write a program to query an API and print parsed JSON data\n"
     },
     {
         "id": 99,
         "title": "Multithreading + Async programming",
         "concept": "Executing code concurrently and non-blocking",
         "sections": [
-            "description"
+            "description",
+            "qna",
+            "test",
+            "coding"
         ],
         "description": {
-            "heading": "Multithreading + Async programming",
-            "subheading": "STAGE 12 — Extreme Python",
-            "body": "<p>Welcome to <strong>Level 99</strong>! In this lesson, we will cover <strong>Multithreading + Async programming</strong>.</p>\n<p>This level is part of <strong>STAGE 12 — Extreme Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Multithreading + Async programming:</strong> Executing code concurrently and non-blocking.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+            "heading": "Concurrency in Python",
+            "subheading": "Multithreading vs Asynchronous programming",
+            "body": "<p>By default, Python runs code line-by-line in a single sequence. If one line takes 10 seconds (like loading a webpage), the entire program halts. To run tasks in parallel or prevent blocking, we use <strong>Concurrency</strong>: **Multithreading** or **Async programming**.</p>\n\n<h3>1. Multithreading (The Clones)</h3>\n<p>Multithreading spins up background lines of execution (threads) to run tasks at the same time. Think of it like using Doraemon's **Clone Liquid** to create multiple Nobitas. Each clone tackles a separate chore concurrently! It is ideal for I/O-bound tasks (waiting on disks or networks):</p>\n<pre class=\"code-example\">import threading\n\ndef check_mail():\n    print(\"Checking mail...\")\n\nt = threading.Thread(target=check_mail)\nt.start()  # Runs check_mail in the background!</pre>\n\n<h3>2. Async programming (The Multitasking Chef)</h3>\n<p>Async programming runs on a **single thread** using an **Event Loop**. Instead of waiting idle for a task (like preheating the oven), the program switches to do something else (like cutting vegetables) and returns once the oven is hot. We write async code using <strong><code>asyncio</code></strong>, **<code>async def</code>** (coroutines), and **<code>await</code>**:</p>\n<pre class=\"code-example\">import asyncio\n\nasync def main():\n    print(\"Boiling water...\")\n    await asyncio.sleep(2)  # Non-blocking wait!\n    print(\"Tea is ready!\")\n\n# Run the event loop\nasyncio.run(main())</pre>"
+        },
+        "qna": [
+            {
+                "q": "What is the difference between CPU-bound and I/O-bound tasks?",
+                "a": "CPU-bound tasks require constant calculations (e.g. heavy math). I/O-bound tasks spend most of their time waiting for external events (e.g. database query, internet page load)."
+            },
+            {
+                "q": "What is the Global Interpreter Lock (GIL)?",
+                "a": "The GIL is a lock in standard Python (CPython) that allows only one thread to control the interpreter at a time, meaning multithreading in Python does not achieve true parallel CPU execution on multiple cores."
+            },
+            {
+                "q": "What does the 'async def' keyword do?",
+                "a": "It defines a **coroutine** function, which can suspend its execution to let other coroutines run before it finishes."
+            },
+            {
+                "q": "What does the 'await' keyword do?",
+                "a": "It pauses the execution of the coroutine and yields control back to the event loop, allowing other async tasks to run while waiting."
+            },
+            {
+                "q": "Why use Async programming instead of Multithreading?",
+                "a": "Async programming uses a single thread, consuming much less memory and avoiding complex multi-threaded concurrency bugs (like race conditions or deadlocks)."
+            }
+        ],
+        "test": {
+            "intro": "Test your Python concurrency knowledge!",
+            "questions": [
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used to declare an asynchronous coroutine function?",
+                    "options": [
+                        "thread",
+                        "async",
+                        "await",
+                        "parallel"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the purpose of the 'await' keyword inside a coroutine?",
+                    "options": [
+                        "It crashes the thread",
+                        "It pauses execution of the coroutine until the awaited task is done",
+                        "It speeds up math calculations",
+                        "It defines a variable"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What CPython feature restricts multi-core parallel CPU execution for threads?",
+                    "options": [
+                        "The Garbage Collector",
+                        "The Event Loop",
+                        "The GIL (Global Interpreter Lock)",
+                        "The thread pool"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The standard library module used for asynchronous event loops is _____.",
+                    "answer": "asyncio"
+                },
+                {
+                    "type": "fill",
+                    "question": "To start a thread object 't', run: t._____().",
+                    "answer": "start"
+                },
+                {
+                    "type": "fill",
+                    "question": "Instead of blocking time.sleep(), async uses non-blocking asyncio._____().",
+                    "answer": "sleep"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use the 'await' keyword outside of an 'async def' function body.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Asynchronous code runs on a single thread and multitasking is managed by an event loop.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Multithreading is highly recommended for speeding up heavy matrix multiplication math.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the multitasking chef analogy for async programming.",
+                    "sampleAnswer": "A single chef prepares a meal. Instead of waiting idle doing nothing while water boils, the chef moves to chop vegetables, returning to the water once it starts boiling, making single-threaded multitasking highly efficient."
+                }
+            ]
+        },
+        "scenario": "Nobita wants to write an async function. Write a coroutine function 'async def greet()' that prints 'Hello', awaits 'asyncio.sleep(1)' to pause for 1 second, and prints 'World'.",
+        "hint": "Write: async def greet():, then indent print('Hello'), await asyncio.sleep(1), and print('World').",
+        "wrongHint": "Make sure you use async def and await asyncio.sleep(1) inside the coroutine!",
+        "solution": "import asyncio\nasync def greet():\n    print('Hello')\n    await asyncio.sleep(1)\n    print('World')",
+        "starterCode": "import asyncio\n# Define the coroutine function greet()\n"
     },
     {
         "id": 100,
         "title": "Final Project & Certificate",
-        "concept": "Build a chatbot, scraper, or CLI tool!",
+        "concept": "Submit your project and GitHub link to receive your certificate!",
         "sections": [
-            "description"
+            "coding"
         ],
-        "description": {
-            "heading": "Final Project & Certificate",
-            "subheading": "STAGE 12 — Extreme Python",
-            "body": "<p>Welcome to <strong>Level 100</strong>! In this lesson, we will cover <strong>Final Project & Certificate</strong>.</p>\n<p>This level is part of <strong>STAGE 12 — Extreme Python</strong>. Here is the core concept you will master:</p>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Final Project & Certificate:</strong> Build a chatbot, scraper, or CLI tool!.</div>\n</div>\n<p>As you progress through your adventure, we will update this room with interactive Q&As, quizzes, and coding sandboxes. Press the <strong>Finish</strong> flag in the corner when you have reviewed this topic to complete the level!</p>\n<div class=\"desc-callout\">\n    <span class=\"callout-icon\">🤖</span>\n    <div><strong>Doraemon's Tip:</strong> Keep up the fantastic progress! You're unlocking more of the map every single day!</div>\n</div>"
-        }
+        "scenario": "Choose one of the 4 project types, enter your name, enter your GitHub repository link, paste your project code, and click Submit to claim your certificate.",
+        "hint": "Fill out the project submission form, paste your code, and click Submit.",
+        "wrongHint": "Make sure you fill out all fields and write a project!",
+        "solution": "",
+        "starterCode": "# Paste your completed final project code here..."
     }
 ];

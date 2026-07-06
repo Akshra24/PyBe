@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyBe — Level</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&family=Fira+Code&family=Cinzel:wght@500;700;800;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -65,6 +65,71 @@
         </div>
     </div>
 
+    <!-- Certificate Modal -->
+    <div class="success-modal certificate-modal" id="certModal" style="display:none;">
+        <div class="success-modal-content" style="position:relative;">
+            <!-- Close Button 'X' -->
+            <button class="cert-close-btn" id="btnCertCloseX">&times;</button>
+            
+            <!-- Printable Certificate Area -->
+            <div id="printCertArea">
+                <div class="cert-border-inner">
+                    <div class="cert-corner-ornament top-left"></div>
+                    <div class="cert-corner-ornament top-right"></div>
+                    <div class="cert-corner-ornament bottom-left"></div>
+                    <div class="cert-corner-ornament bottom-right"></div>
+                    
+                    <div class="cert-logo-container">
+                        <div class="cert-inst-title">INDIAN INSTITUTE OF TECHNOLOGY ROPAR</div>
+                        <div class="cert-sub-logo">PyBe Python Learning Platform</div>
+                    </div>
+                    
+                    <div class="cert-badge-decoration">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    
+                    <h1 class="cert-main-title">Certificate of Completion</h1>
+                    
+                    <p class="cert-intro-text">This is proudly presented to</p>
+                    
+                    <h2 id="certStudentName" class="cert-student-name">Nobita Nobi</h2>
+                    
+                    <p class="cert-body-text">
+                        for successfully completing all 100 levels of the <strong>PyBe Python Programming Course</strong> in association with <strong>IIT Ropar</strong>, demonstrating mastery in structural logic, data collections, OOP patterns, and advanced concurrent execution models.
+                    </p>
+                    
+                    <div class="cert-signature-row">
+                        <div class="cert-signature-block">
+                            <div class="cert-handwritten-sig">SA</div>
+                            <div class="cert-sig-line"></div>
+                            <div class="cert-sig-label">Course Instructor</div>
+                        </div>
+                        <div class="cert-seal-block">
+                            <div class="cert-gold-seal">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                        </div>
+                        <div class="cert-signature-block">
+                            <div class="cert-handwritten-sig" style="font-family:'Cinzel', serif; font-size:14px; font-weight:800; font-style:normal; transform:none; margin-top:10px;">IIT ROPAR</div>
+                            <div class="cert-sig-line"></div>
+                            <div class="cert-sig-label">Partner Institution</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="cert-actions" style="margin-top:20px; display:flex; gap:12px; justify-content:center;">
+                <button class="btn btn-run" id="btnPrintCert">
+                    <i class="fas fa-print"></i> Print / Save PDF
+                </button>
+                <button class="btn btn-submit" id="btnCloseCert">
+                    <i class="fas fa-home"></i> Back to Map
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/progress.js"></script>
     <script src="js/levels_data.js"></script>
     <script src="js/confetti.js"></script>
@@ -106,6 +171,11 @@
         };
 
         function buildStepper() {
+            if (levelId === 100) {
+                document.getElementById('sectionStepper').style.display = 'none';
+                return;
+            }
+            document.getElementById('sectionStepper').style.display = 'block';
             stepperTrack.innerHTML = '';
             sections.forEach((sec, i) => {
                 const step = document.createElement('div');
@@ -427,6 +497,10 @@
 
         // ── Render Coding ────────────────────────────────────────
         function renderCoding() {
+            if (levelId === 100) {
+                renderLevel100Project();
+                return;
+            }
             const hasScenario = !!level.scenario;
             sectionContent.innerHTML = `
                 <div class="sec-coding">
@@ -511,6 +585,107 @@
             });
         }
 
+        function renderLevel100Project() {
+            sectionContent.innerHTML = `
+                <div class="sec-coding level-100-project">
+                    <div class="sec-heading-block">
+                        <h2 class="sec-main-heading">🚀 Final Project & Certificate</h2>
+                        <p class="sec-sub-heading">IIT Ropar - PyBe by SA</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <div class="scenario-tag">🎓 Final Mission</div>
+                        <p class="scenario-text">
+                            Congratulations on reaching the final level! To complete the course and claim your certificate, please:
+                            <br>1. Choose your project topic.
+                            <br>2. Enter your full name exactly as it should appear on your certificate.
+                            <br>3. Enter your GitHub repository link.
+                            <br>4. Copy and paste your Python code in the editor.
+                        </p>
+                    </div>
+
+                    <div class="project-form-card" style="background: white; padding: 24px; border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                        <div style="margin-bottom: 16px;">
+                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">1. Select Project Type:</label>
+                            <select id="projectType" style="width:100%; padding:12px; border-radius:var(--radius-sm); border:2px solid #ccc; font-family:'Quicksand',sans-serif; font-size:15px; font-weight:600; outline:none; color:var(--text-dark); background:white;">
+                                <option value="Chatbot">Doraemon Chatbot Assistant</option>
+                                <option value="Automation">File Organizer / Backup Script</option>
+                                <option value="Web Scraper">Web Scraper (Anime/Weather data)</option>
+                                <option value="CLI App">Gadget Pocket Inventory CLI</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">2. Enter Your Full Name (for Certificate):</label>
+                            <input type="text" id="studentName" placeholder="Enter your full name..." style="width:100%; padding:12px; border-radius:var(--radius-sm); border:2px solid #ccc; font-family:'Quicksand',sans-serif; font-size:15px; font-weight:600; outline:none; color:var(--text-dark);">
+                        </div>
+                        <div style="margin-bottom: 16px;">
+                            <label style="display:block; font-weight:700; margin-bottom:8px; font-family:'Nunito',sans-serif; color:var(--text-dark);">3. Enter GitHub Repository Link:</label>
+                            <input type="url" id="githubLink" placeholder="https://github.com/username/project-repo..." style="width:100%; padding:12px; border-radius:var(--radius-sm); border:2px solid #ccc; font-family:'Quicksand',sans-serif; font-size:15px; font-weight:600; outline:none; color:var(--text-dark);">
+                        </div>
+                    </div>
+
+                    <div class="code-area">
+                        <div class="code-area-header">
+                            <div class="code-dot red"></div>
+                            <div class="code-dot yellow"></div>
+                            <div class="code-dot green"></div>
+                            <span>project_source.py</span>
+                        </div>
+                        <textarea class="code-editor" id="codeEditor" spellcheck="false" style="min-height: 250px;"
+                            placeholder="# Paste your Python project code here..."></textarea>
+                    </div>
+
+                    <div class="action-row">
+                        <button class="btn btn-submit" id="btnSubmitProject" style="flex:1;">
+                            <i class="fas fa-certificate"></i> Submit Project & Claim Certificate
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            // Load saved values if any, otherwise pre-fill temporary values for testing
+            const savedName = localStorage.getItem('pybe_student_name');
+            document.getElementById('studentName').value = savedName || "Nobita Nobi";
+            
+            const savedCode = localStorage.getItem('pybe_project_code');
+            document.getElementById('codeEditor').value = savedCode || `# Doraemon Assistant Chatbot\nprint("Hello Nobita! I am Doraemon.")\nprint("Gadget pocket initialized.")`;
+            
+            const savedType = localStorage.getItem('pybe_project_type');
+            if (savedType) document.getElementById('projectType').value = savedType;
+            
+            const savedGithub = localStorage.getItem('pybe_github_link');
+            document.getElementById('githubLink').value = savedGithub || "https://github.com/nobita/pybe-chatbot";
+
+            document.getElementById('btnSubmitProject').addEventListener('click', () => {
+                const name = document.getElementById('studentName').value.trim();
+                const code = document.getElementById('codeEditor').value.trim();
+                const type = document.getElementById('projectType').value;
+                const github = document.getElementById('githubLink').value.trim();
+
+                if (!name) {
+                    showToast('Please enter your name for the certificate!');
+                    return;
+                }
+                if (!github || !github.includes('github.com')) {
+                    showToast('Please enter a valid GitHub repository link!');
+                    return;
+                }
+                if (code.length < 20) {
+                    showToast('Please paste your Python project code (minimum 20 characters)!');
+                    return;
+                }
+
+                localStorage.setItem('pybe_student_name', name);
+                localStorage.setItem('pybe_project_type', type);
+                localStorage.setItem('pybe_project_code', code);
+                localStorage.setItem('pybe_github_link', github);
+                
+                window.PyBe.completeLevel(100);
+                launchConfetti();
+                showCertificate(name);
+            });
+        }
+
         function simulateRun(code) {
             const printRegex = /print\s*\(\s*(['"])(.*?)\1\s*\)/g;
             let match, outputs = [];
@@ -568,6 +743,15 @@
 
         // ── Finish level ─────────────────────────────────────────
         function finishLevel() {
+            if (levelId === 100) {
+                const name = localStorage.getItem('pybe_student_name');
+                if (!name) {
+                    showToast('Please submit your project in the Coding tab first!');
+                    return;
+                }
+                showCertificate(name);
+                return;
+            }
             const hasTest = sections.includes('test');
 
             if (hasTest) {
@@ -609,6 +793,24 @@
             window.PyBe.completeLevel(levelId);
             launchConfetti();
             setTimeout(() => { window.location.href = 'home.html'; }, 800);
+        }
+
+        function showCertificate(name) {
+            document.getElementById('certStudentName').textContent = name;
+            const certModal = document.getElementById('certModal');
+            certModal.style.display = 'flex';
+            
+            document.getElementById('btnPrintCert').onclick = () => {
+                window.print();
+            };
+            
+            document.getElementById('btnCloseCert').onclick = () => {
+                window.location.href = 'home.html';
+            };
+
+            document.getElementById('btnCertCloseX').onclick = () => {
+                window.location.href = 'home.html';
+            };
         }
 
         // ── Success Modal ────────────────────────────────────────
