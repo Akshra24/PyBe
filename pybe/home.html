@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyBe — Choose Your Level</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== SKY BACKGROUND ===== -->
+    <div class="sky-bg" id="skyBg">
+        <!-- Sun (morning & day) -->
+        <div class="sky-sun" id="skySun"></div>
+
+        <!-- Evening glow -->
+        <div class="evening-glow"></div>
+
+        <!-- Night moon -->
+        <div class="night-moon"></div>
+
+        <!-- Night stars container -->
+        <div class="night-stars" id="nightStars"></div>
+
+        <!-- Clouds -->
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+        <div class="cloud c4"></div>
+        <div class="cloud c5"></div>
+    </div>
+
+    <!-- ===== FLOATING GADGETS ===== -->
+    <div class="gadget-icon anywhere-door">
+        <div class="door-frame">
+            <div class="door-inner"></div>
+        </div>
+    </div>
+    <div class="gadget-icon helicopter">
+        <div class="heli-body"></div>
+        <div class="heli-blade"></div>
+        <div class="heli-tail"></div>
+    </div>
+    <div class="gadget-icon flashlight">
+        <div class="flashlight-body"></div>
+        <div class="flashlight-beam"></div>
+    </div>
+    <div class="gadget-icon gadget-gear g1"><i class="fas fa-cog"></i></div>
+    <div class="gadget-icon gadget-gear g2"><i class="fas fa-star"></i></div>
+    <div class="gadget-icon gadget-gear g3"><i class="fas fa-bolt"></i></div>
+
+    <!-- ===== DORAEMON CORNER MASCOT ===== -->
+    <div class="mascot-corner" id="mascotCorner">
+        <div class="mascot-bubble" id="mascotBubble">
+            <p class="mascot-text" id="mascotText"></p>
+        </div>
+        <div class="mascot-doraemon" id="mascotDoraemon">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="100" cy="178" rx="70" ry="65" fill="#00AEEF"/>
+                <!-- White belly -->
+                <ellipse cx="100" cy="192" rx="44" ry="44" fill="#FFFFFF"/>
+                <!-- Red bow -->
+                <circle cx="79" cy="130" r="14" fill="#E53935"/>
+                <circle cx="121" cy="130" r="14" fill="#E53935"/>
+                <polygon points="100,122 91,137 109,137" fill="#E53935"/>
+                <!-- Head -->
+                <circle cx="100" cy="90" r="72" fill="#00AEEF"/>
+                <!-- White face -->
+                <ellipse cx="100" cy="100" rx="52" ry="46" fill="#FFFFFF"/>
+                <!-- Eyes -->
+                <ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                <ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                <circle cx="76" cy="88" r="10" fill="#1A2A3A"/>
+                <circle cx="128" cy="88" r="10" fill="#1A2A3A"/>
+                <circle cx="79" cy="84" r="3.5" fill="#FFFFFF"/>
+                <circle cx="131" cy="84" r="3.5" fill="#FFFFFF"/>
+                <!-- Nose -->
+                <circle cx="100" cy="108" r="9" fill="#E53935"/>
+                <line x1="100" y1="117" x2="100" y2="130" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Smile -->
+                <path d="M 72 122 Q 100 145 128 122" stroke="#1A2A3A" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <!-- Whiskers -->
+                <line x1="50" y1="102" x2="75" y2="108" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="50" y1="114" x2="75" y2="114" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="50" y1="126" x2="75" y2="120" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="150" y1="102" x2="125" y2="108" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="150" y1="114" x2="125" y2="114" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="150" y1="126" x2="125" y2="120" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Ears -->
+                <circle cx="52" cy="30" r="20" fill="#00AEEF"/>
+                <circle cx="148" cy="30" r="20" fill="#00AEEF"/>
+                <circle cx="52" cy="30" r="11" fill="#E53935"/>
+                <circle cx="148" cy="30" r="11" fill="#E53935"/>
+                <!-- Arms -->
+                <ellipse cx="28" cy="172" rx="24" ry="32" fill="#00AEEF" transform="rotate(-35 28 172)"/>
+                <ellipse cx="172" cy="172" rx="24" ry="32" fill="#00AEEF" transform="rotate(35 172 172)"/>
+                <!-- Legs -->
+                <ellipse cx="68" cy="238" rx="26" ry="18" fill="#00AEEF"/>
+                <ellipse cx="132" cy="238" rx="26" ry="18" fill="#00AEEF"/>
+                <!-- Pocket -->
+                <ellipse cx="100" cy="208" rx="28" ry="20" fill="#FFC107" opacity="0.75"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ===== HOVER TOOLTIP ===== -->
+    <div class="level-tooltip" id="levelTooltip">
+        <div class="tooltip-title" id="tooltipTitle"></div>
+        <div class="tooltip-concept" id="tooltipConcept"></div>
+    </div>
+
+    <!-- ===== MAIN WRAPPER ===== -->
+    <div class="home-wrapper" id="homeWrapper">
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="nav-logo">
+                <svg width="36" height="36" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="100" cy="155" rx="65" ry="60" fill="#00AEEF"/>
+                    <ellipse cx="100" cy="165" rx="40" ry="40" fill="#FFFFFF"/>
+                    <circle cx="80" cy="115" r="12" fill="#E53935"/>
+                    <circle cx="120" cy="115" r="12" fill="#E53935"/>
+                    <polygon points="100,108 92,122 108,122" fill="#E53935"/>
+                    <circle cx="100" cy="80" r="68" fill="#00AEEF"/>
+                    <ellipse cx="100" cy="88" rx="50" ry="42" fill="#FFFFFF"/>
+                    <ellipse cx="75" cy="75" rx="14" ry="17" fill="#FFFFFF"/>
+                    <ellipse cx="125" cy="75" rx="14" ry="17" fill="#FFFFFF"/>
+                    <circle cx="77" cy="77" r="9" fill="#1A2A3A"/>
+                    <circle cx="127" cy="77" r="9" fill="#1A2A3A"/>
+                    <circle cx="80" cy="73" r="3" fill="#FFFFFF"/>
+                    <circle cx="130" cy="73" r="3" fill="#FFFFFF"/>
+                    <circle cx="100" cy="95" r="8" fill="#E53935"/>
+                    <path d="M 75 110 Q 100 130 125 110" stroke="#1A2A3A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <circle cx="55" cy="28" r="18" fill="#00AEEF"/>
+                    <circle cx="145" cy="28" r="18" fill="#00AEEF"/>
+                    <circle cx="55" cy="28" r="10" fill="#E53935"/>
+                    <circle cx="145" cy="28" r="10" fill="#E53935"/>
+                    <ellipse cx="38" cy="150" rx="18" ry="25" fill="#00AEEF" transform="rotate(-20 38 150)"/>
+                    <ellipse cx="162" cy="150" rx="18" ry="25" fill="#00AEEF" transform="rotate(20 162 150)"/>
+                    <ellipse cx="70" cy="210" rx="22" ry="16" fill="#00AEEF"/>
+                    <ellipse cx="130" cy="210" rx="22" ry="16" fill="#00AEEF"/>
+                </svg>
+                Py<span>Be</span>
+            </div>
+            <div class="nav-progress">
+                <i class="fas fa-fire"></i>
+                <span id="navProgressText">0 / 100 Cleared</span>
+            </div>
+            <div class="nav-streak" id="navStreak" style="display:none;">
+                <i class="fas fa-fire streak-flame"></i>
+                <span id="navStreakText"></span>
+            </div>
+        </div>
+
+        <!-- Level Grid -->
+        <div class="level-grid" id="levelGrid"></div>
+
+        <!-- Progress Bar Section -->
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>Your Python Journey</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+    </div><!-- end home-wrapper -->
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="js/progress.js"></script>
+    <script src="js/levels_data.js"></script>
+    <script src="js/levels.js"></script>
+    <script>
+    (function () {
+        const TOTAL_LEVELS = 100;
+
+        // ── Day / Night cycle ──────────────────────────────────
+        const hour = new Date().getHours();
+        let timePeriod = 'day';
+        if (hour >= 6 && hour < 9)       timePeriod = 'morning';
+        else if (hour >= 9 && hour < 17)  timePeriod = 'day';
+        else if (hour >= 17 && hour < 20) timePeriod = 'evening';
+        else                              timePeriod = 'night';
+
+        document.body.classList.add(`time-${timePeriod}`);
+
+        // Generate random stars for night sky
+        if (timePeriod === 'night') {
+            const starsContainer = document.getElementById('nightStars');
+            if (starsContainer) {
+                for (let i = 0; i < 60; i++) {
+                    const star = document.createElement('div');
+                    star.className = 'night-star';
+                    star.style.cssText = `
+                        left: ${Math.random() * 100}%;
+                        top:  ${Math.random() * 70}%;
+                        width:  ${Math.random() * 3 + 1}px;
+                        height: ${Math.random() * 3 + 1}px;
+                        animation-delay: ${Math.random() * 3}s;
+                        animation-duration: ${Math.random() * 2 + 1.5}s;
+                    `;
+                    starsContainer.appendChild(star);
+                }
+            }
+        }
+
+        // ── Load progress ──────────────────────────────────────
+        const progress = window.PyBe ? window.PyBe.getProgress() : { currentLevel: 1, completed: [] };
+
+        // ── Build 10×10 grid ────────────────────────────────────
+        const grid = document.getElementById('levelGrid');
+        if (grid) {
+            grid.innerHTML = '';
+            for (let lvl = 1; lvl <= TOTAL_LEVELS; lvl++) {
+                const card = document.createElement('div');
+                card.className = 'level-card';
+                card.dataset.level = lvl;
+
+                let state = 'locked';
+                if (progress.completed.includes(lvl)) state = 'completed';
+                else if (lvl <= progress.currentLevel) state = 'unlocked';
+                card.classList.add(state);
+
+                if (lvl === progress.currentLevel && state === 'unlocked') {
+                    card.classList.add('current');
+                }
+
+                // Locked cards still show their level number (greyed out)
+                if (state === 'locked') {
+                    card.innerHTML = `<span class="card-num">${lvl}</span>`;
+                } else {
+                    // Stars for completed based on attempts
+                    let starsHTML = '';
+                    if (state === 'completed') {
+                        const attempts = (progress.attempts && progress.attempts[lvl]) || 1;
+                        let stars = 5;
+                        if (attempts === 2) stars = 4;
+                        else if (attempts === 3) stars = 3;
+                        else if (attempts === 4 || attempts === 5) stars = 2;
+                        else if (attempts > 5) stars = 1;
+
+                        starsHTML = `<div class="card-stars">${Array(stars).fill('<i class="fas fa-star"></i>').join('')}</div>`;
+                    }
+                    card.innerHTML = `
+                        ${starsHTML}
+                        <span class="card-num">${lvl}</span>
+                        ${state === 'completed' ? '<i class="fas fa-check card-check"></i>' : ''}
+                    `;
+                }
+
+                // Click handler
+                card.addEventListener('click', () => {
+                    if (state === 'locked') {
+                        card.classList.remove('shake');
+                        void card.offsetWidth; // reflow to restart animation
+                        card.classList.add('shake');
+                        return;
+                    }
+                    window.location.href = `level.html?id=${lvl}`;
+                });
+
+                // 3D tilt + tooltip
+                card.addEventListener('mousemove', (e) => {
+                    if (state === 'locked') return;
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -12;
+                    const rotateY = ((x - centerX) / centerX) * 12;
+                    card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+
+                    // Tooltip positioning
+                    const tooltip = document.getElementById('levelTooltip');
+                    const ttTitle = document.getElementById('tooltipTitle');
+                    const ttConcept = document.getElementById('tooltipConcept');
+                    if (tooltip) {
+                        const lvlData = window.levels && window.levels[lvl - 1];
+                        const chapterTitles = [
+                            'First Steps', 'Variables', 'User Input', 'Conditions',
+                            'Loops', 'Functions', 'Lists', 'Dictionaries',
+                            'File Handling', 'Projects'
+                        ];
+                        const chapter = chapterTitles[Math.floor((lvl - 1) / 10)] || 'Projects';
+
+                        if (lvlData) {
+                            if (ttTitle) ttTitle.textContent = `Level ${lvl} — ${lvlData.title}`;
+                            if (ttConcept) ttConcept.textContent = lvlData.concept;
+                        } else {
+                            if (ttTitle) ttTitle.textContent = `Level ${lvl}`;
+                            if (ttConcept) ttConcept.textContent = `Chapter: ${chapter}`;
+                        }
+                        const tx = e.clientX + 16;
+                        const ty = e.clientY - 10;
+                        tooltip.style.left = tx + 'px';
+                        tooltip.style.top  = ty + 'px';
+                        tooltip.classList.add('visible');
+                    }
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                    const tooltip = document.getElementById('levelTooltip');
+                    if (tooltip) tooltip.classList.remove('visible');
+                });
+
+                grid.appendChild(card);
+            }
+        }
+
+        // ── Update progress display ─────────────────────────────
+        const completed = progress.completed.length;
+        const pct = Math.round((completed / TOTAL_LEVELS) * 100);
+
+        const navText = document.getElementById('navProgressText');
+        if (navText) navText.textContent = `${completed} / ${TOTAL_LEVELS} Cleared`;
+
+        // Streak display
+        const streak = progress.streak || 0;
+        const streakEl = document.getElementById('navStreak');
+        const streakTextEl = document.getElementById('navStreakText');
+        if (streak > 0 && streakEl && streakTextEl) {
+            streakEl.style.display = 'flex';
+            streakTextEl.textContent = `${streak} day streak`;
+        }
+
+        const pctText = document.getElementById('progressPercent');
+        if (pctText) pctText.textContent = `${pct}%`;
+
+        const fill = document.getElementById('progressFill');
+        if (fill) fill.style.width = `${pct}%`;
+
+        // ── Doraemon Mascot messages ─────────────────────────
+        const mascotText     = document.getElementById('mascotText');
+        const mascotBubble   = document.getElementById('mascotBubble');
+        const mascotDoraemon = document.getElementById('mascotDoraemon');
+        const currentLvl = progress.currentLevel;
+
+        function pickMessage(lvl) {
+            if (completed === 100)         return { mood: 'excited', text: "YOU DID IT! 🎉 All 100 levels conquered! You are now a TRUE Python wizard! 🌟" };
+            if (lvl === 1 && completed === 0) return { mood: 'happy',   text: "Hey future Python wizard! I'm Doraemon. Pick a level and let's start the adventure! 🚀" };
+            if (lvl <= 5)                  return { mood: 'happy',   text: "You're off to a great start! Every Python master was once a beginner. Keep going! 💪" };
+            if (lvl <= 15)                 return { mood: 'happy',   text: "Variables are like magic boxes — store anything in them! You're doing amazing! ✨" };
+            if (lvl <= 30)                 return { mood: 'happy',   text: "Conditionals are like my Anywhere Door — different choices, different paths! 🚪" };
+            if (lvl <= 50)                 return { mood: 'happy',   text: "Loops spin like my Bamboo Copter — round and round until the job is done! 🔄" };
+            if (lvl <= 70)                 return { mood: 'happy',   text: "Halfway champion! Functions are like my gadget pouch — pack once, use anywhere! 🎒" };
+            if (lvl <= 90)                 return { mood: 'happy',   text: "Advanced zone! Lists & dictionaries are like my pocket — organized power! 📦" };
+            return { mood: 'happy', text: "Almost at Level 100! You're unstoppable — like a true Python hero! 🏆" };
+        }
+
+        const msg = pickMessage(currentLvl);
+        if (mascotText)     mascotText.textContent = msg.text;
+        if (mascotDoraemon) mascotDoraemon.className = `mascot-doraemon mood-${msg.mood}`;
+
+        // Show bubble after short delay
+        setTimeout(() => { if (mascotBubble) mascotBubble.classList.add('visible'); }, 1800);
+
+        // Toggle bubble on mascot click
+        if (mascotDoraemon) {
+            mascotDoraemon.addEventListener('click', () => {
+                if (mascotBubble) mascotBubble.classList.toggle('visible');
+            });
+        }
+
+        // ── Confetti on completed levels ─────────────────────────
+        const confettiCanvas = document.getElementById('confetti-canvas');
+        if (confettiCanvas && completed > 0) {
+            confettiCanvas.height = window.innerHeight;
+            confettiCanvas.width = window.innerWidth;
+            const ctx = confettiCanvas.getContext('2d');
+            const pieces = [];
+            const colors = ['#00AEEF', '#E53935', '#FFC107', '#4CAF50', '#FF69B4', '#9C27B0'];
+
+            for (let i = 0; i < 80; i++) {
+                pieces.push({
+                    x: Math.random() * confettiCanvas.width,
+                    y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+                    w: Math.random() * 10 + 5,
+                    h: Math.random() * 6 + 3,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    rot: Math.random() * 360,
+                    rotSpeed: (Math.random() - 0.5) * 8,
+                    speedY: Math.random() * 3 + 2,
+                    speedX: (Math.random() - 0.5) * 2,
+                    osc: Math.random() * Math.PI * 2,
+                });
+            }
+
+            let frame = 0;
+            function drawConfetti() {
+                ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                pieces.forEach(p => {
+                    p.y += p.speedY;
+                    p.x += p.speedX + Math.sin(p.osc) * 0.5;
+                    p.osc += 0.04;
+                    p.rot += p.rotSpeed;
+
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rot * Math.PI / 180);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = p.y > confettiCanvas.height ? Math.max(0, 1 - (p.y - confettiCanvas.height) / 200) : 1;
+                    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                    ctx.restore();
+                });
+                frame++;
+                if (frame < 180) requestAnimationFrame(drawConfetti);
+                else ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            }
+            drawConfetti();
+        }
+    })();
+    </script>
+</body>
+</html>

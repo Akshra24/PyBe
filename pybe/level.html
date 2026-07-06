@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyBe — Level</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sky Background -->
+    <div class="sky-bg" id="skyBg"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- ===== MAIN WRAPPER ===== -->
+    <div class="level-wrapper">
+
+        <!-- Header -->
+        <div class="level-header">
+            <button class="back-btn" id="backBtn">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="level-title-block">
+                <h2 id="levelTitle">Loading...</h2>
+                <p id="levelConcept">—</p>
+            </div>
+        </div>
+
+        <!-- ── SECTION STEPPER ── -->
+        <div class="section-stepper" id="sectionStepper">
+            <div class="stepper-track" id="stepperTrack"></div>
+        </div>
+
+        <!-- ── SECTION CONTENT ── -->
+        <div class="section-content" id="sectionContent"></div>
+
+        <!-- ── SECTION NAVIGATION ── -->
+        <div class="section-nav" id="sectionNav">
+            <button class="btn btn-prev" id="btnPrev" style="display:none;">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-next" id="btnNext">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+    </div><!-- end level-wrapper -->
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-doraemon">🎉</div>
+            <h3 id="modalTitle">Level Complete!</h3>
+            <p id="modalMsg">Amazing work! You've mastered this topic.</p>
+            <button class="btn btn-submit" id="btnNextLevel">
+                <i class="fas fa-arrow-right"></i> Next Level
+            </button>
+            <br><br>
+            <a href="home.html" class="modal-link">← Back to Map</a>
+        </div>
+    </div>
+
+    <script src="js/progress.js"></script>
+    <script src="js/levels_data.js"></script>
+    <script src="js/confetti.js"></script>
+    <script>
+    (function () {
+        // ── Load level from URL ──────────────────────────────────
+        const params = new URLSearchParams(window.location.search);
+        const levelId = parseInt(params.get('id')) || 1;
+        const level   = window.levels[levelId - 1] || window.levels[0];
+
+        // ── State ────────────────────────────────────────────────
+        const sections = level.sections || ["description", "qna", "test", "coding"];
+        let currentSection = 0;
+        let testAnswers    = {};       // questionIndex -> user answer
+        let testSubmitted  = false;
+        let shortAnswerTexts = {};     // index -> typed text
+
+        const TOTAL_LEVELS = 100;
+
+        // ── DOM refs ─────────────────────────────────────────────
+        const titleEl     = document.getElementById('levelTitle');
+        const conceptEl   = document.getElementById('levelConcept');
+        const stepperTrack = document.getElementById('stepperTrack');
+        const sectionContent = document.getElementById('sectionContent');
+        const btnPrev     = document.getElementById('btnPrev');
+        const btnNext     = document.getElementById('btnNext');
+        const successModal = document.getElementById('successModal');
+
+        // ── Init header ──────────────────────────────────────────
+        titleEl.textContent   = `Level ${level.id} — ${level.title}`;
+        conceptEl.textContent = level.concept;
+
+        // ── Build stepper ────────────────────────────────────────
+        const STEP_LABELS = {
+            description: "📖 Description",
+            qna:         "❓ Q&A",
+            test:        "🧠 Test",
+            coding:      "💻 Coding"
+        };
+
+        function buildStepper() {
+            stepperTrack.innerHTML = '';
+            sections.forEach((sec, i) => {
+                const step = document.createElement('div');
+                step.className = 'step-item';
+                step.id = `step-${i}`;
+                step.innerHTML = `
+                    <div class="step-circle">${i + 1}</div>
+                    <span class="step-label">${STEP_LABELS[sec] || sec}</span>
+                `;
+                if (i < currentSection) step.classList.add('done');
+                if (i === currentSection) step.classList.add('active');
+                step.addEventListener('click', () => {
+                    if (i < currentSection || canLeaveSection(currentSection)) {
+                        goToSection(i);
+                    }
+                });
+                stepperTrack.appendChild(step);
+            });
+        }
+
+        // ── Can leave current section? ───────────────────────────
+        function canLeaveSection(idx) {
+            const sec = sections[idx];
+            if (sec === 'test' && !testSubmitted) {
+                // Must submit test (and pass) before leaving
+                if (Object.keys(testAnswers).length < level.test.questions.length) {
+                    showToast('Answer all questions before submitting!');
+                    return false;
+                }
+                submitTest();
+                return false; // submitTest will re-navigate
+            }
+            if (sec === 'coding') return true;
+            return true; // all others free to leave
+        }
+
+        // ── Go to section ────────────────────────────────────────
+        function goToSection(idx) {
+            if (idx < 0 || idx >= sections.length) return;
+            currentSection = idx;
+            buildStepper();
+            renderSection(sections[idx]);
+            updateNavButtons();
+        }
+
+        // ── Nav buttons ──────────────────────────────────────────
+        function updateNavButtons() {
+            btnPrev.style.display = currentSection > 0 ? 'flex' : 'none';
+            if (currentSection < sections.length - 1) {
+                btnNext.style.display = 'flex';
+                btnNext.innerHTML = `Next <i class="fas fa-arrow-right"></i>`;
+            } else {
+                btnNext.style.display = 'flex';
+                btnNext.innerHTML = `<i class="fas fa-flag-checkered"></i> Finish &rarr;`;
+            }
+        }
+
+        btnPrev.addEventListener('click', () => {
+            if (currentSection > 0) goToSection(currentSection - 1);
+        });
+
+        btnNext.addEventListener('click', () => {
+            // Last section — Finish
+            if (currentSection >= sections.length - 1) {
+                finishLevel();
+                return;
+            }
+
+            const sec = sections[currentSection];
+
+            // Test section — check before submitting
+            if (sec === 'test') {
+                const totalQ = level.test.questions.length;
+                const answered = Object.keys(testAnswers).length;
+                if (!testSubmitted && answered < totalQ) {
+                    showToast('Answer all ' + totalQ + ' questions first!');
+                    return;
+                }
+                if (!testSubmitted) {
+                    submitTest();
+                    return;
+                }
+            }
+
+            goToSection(currentSection + 1);
+        });
+
+        // ── Render Description ───────────────────────────────────
+        function renderDescription() {
+            const d = level.description;
+            sectionContent.innerHTML = `
+                <div class="sec-description">
+                    <div class="sec-heading-block">
+                        <h2 class="sec-main-heading">${d.heading}</h2>
+                        ${d.subheading ? `<p class="sec-sub-heading">${d.subheading}</p>` : ''}
+                    </div>
+                    <div class="sec-body">${d.body}</div>
+                </div>
+            `;
+        }
+
+        // ── Render Q&A ───────────────────────────────────────────
+        function renderQNA() {
+            const qnaList = level.qna || [];
+            let html = `<div class="sec-qna">
+                <div class="sec-heading-block">
+                    <h2 class="sec-main-heading">Important Q&A</h2>
+                    <p class="sec-sub-heading">Clear your doubts before the test</p>
+                </div>
+                <div class="qna-list">`;
+
+            qnaList.forEach((item, i) => {
+                html += `
+                <div class="qna-card" data-index="${i}">
+                    <div class="qna-question">
+                        <span class="qna-q-icon">Q</span>
+                        <span>${item.q}</span>
+                        <span class="qna-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="qna-answer">
+                        <div class="qna-answer-inner">
+                            <span class="qna-a-icon">A</span>
+                            <span>${item.a}</span>
+                        </div>
+                    </div>
+                </div>`;
+            });
+
+            html += `</div></div>`;
+            sectionContent.innerHTML = html;
+
+            // Collapsible behaviour
+            sectionContent.querySelectorAll('.qna-card').forEach(card => {
+                card.querySelector('.qna-question').addEventListener('click', () => {
+                    const isOpen = card.classList.contains('open');
+                    // close all
+                    sectionContent.querySelectorAll('.qna-card').forEach(c => c.classList.remove('open'));
+                    if (!isOpen) card.classList.add('open');
+                });
+            });
+        }
+
+        // ── Render Test ──────────────────────────────────────────
+        function renderTest() {
+            const t = level.test;
+            sectionContent.innerHTML = `
+                <div class="sec-test">
+                    <div class="sec-heading-block">
+                        <h2 class="sec-main-heading">🧠 Test Your Understanding</h2>
+                        <p class="sec-sub-heading">${t.intro || 'Answer all questions below.'}</p>
+                    </div>
+                    <div class="test-questions" id="testQuestions"></div>
+                    <div class="test-result" id="testResult" style="display:none;"></div>
+                    <div class="test-submit-row" id="testSubmitRow">
+                        <button class="btn btn-submit" id="btnSubmitTest">
+                            <i class="fas fa-check-circle"></i> Submit Answers
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            const questionsEl = document.getElementById('testQuestions');
+            t.questions.forEach((q, qi) => {
+                questionsEl.appendChild(buildQuestionEl(q, qi));
+            });
+
+            document.getElementById('btnSubmitTest').addEventListener('click', submitTest);
+        }
+
+        function buildQuestionEl(q, qi) {
+            const wrap = document.createElement('div');
+            wrap.className = `question-card qtype-${q.type}`;
+            wrap.dataset.qi = qi;
+
+            if (q.type === 'mcq') {
+                wrap.innerHTML = `<div class="q-text">${qi + 1}. ${q.question}</div>
+                    <div class="q-options">${q.options.map((opt, oi) => `
+                        <label class="q-option" data-oi="${oi}">
+                            <input type="radio" name="q${qi}" value="${oi}">
+                            <span class="q-opt-circle">${String.fromCharCode(65 + oi)}</span>
+                            <span class="q-opt-text">${opt}</span>
+                        </label>`).join('')}</div>`;
+
+                wrap.querySelectorAll('input').forEach(inp => {
+                    inp.addEventListener('change', e => {
+                        testAnswers[qi] = parseInt(e.target.value);
+                        wrap.querySelectorAll('.q-option').forEach(l => l.classList.remove('selected'));
+                        wrap.querySelector(`label[data-oi="${e.target.value}"]`).classList.add('selected');
+                    });
+                    if (testAnswers[qi] !== undefined && parseInt(inp.value) === testAnswers[qi]) {
+                        inp.checked = true;
+                        inp.closest('label').classList.add('selected');
+                    }
+                });
+
+            } else if (q.type === 'fill') {
+                wrap.innerHTML = `<div class="q-text">${qi + 1}. ${q.question}</div>
+                    <div class="q-fill-row">
+                        <input type="text" class="q-fill-input" id="fill-${qi}" placeholder="Type your answer here..."
+                            value="${shortAnswerTexts[qi] || ''}" autocomplete="off">
+                    </div>`;
+                wrap.querySelector(`#fill-${qi}`).addEventListener('input', e => {
+                    shortAnswerTexts[qi] = e.target.value;
+                });
+
+            } else if (q.type === 'tf') {
+                wrap.innerHTML = `<div class="q-text">${qi + 1}. ${q.question}</div>
+                    <div class="q-tf-row">
+                        <label class="q-tf-btn"><input type="radio" name="tf${qi}" value="true"><span>True</span></label>
+                        <label class="q-tf-btn"><input type="radio" name="tf${qi}" value="false"><span>False</span></label>
+                    </div>`;
+                wrap.querySelectorAll('input').forEach(inp => {
+                    inp.addEventListener('change', e => {
+                        testAnswers[qi] = e.target.value;
+                        wrap.querySelectorAll('.q-tf-btn').forEach(l => l.classList.remove('selected'));
+                        wrap.querySelector(`input[value="${e.target.value}"]`).closest('label').classList.add('selected');
+                    });
+                    if (testAnswers[qi] !== undefined && inp.value === testAnswers[qi]) {
+                        inp.checked = true;
+                        inp.closest('label').classList.add('selected');
+                    }
+                });
+
+            } else if (q.type === 'short') {
+                wrap.innerHTML = `<div class="q-text">${qi + 1}. ${q.question}
+                        <span class="q-short-hint">(Write 1-3 sentences)</span></div>
+                    <div class="q-short-row">
+                        <textarea class="q-short-input" id="short-${qi}" rows="3"
+                            placeholder="Write your answer here...">${shortAnswerTexts[qi] || ''}</textarea>
+                    </div>`;
+                wrap.querySelector(`#short-${qi}`).addEventListener('input', e => {
+                    shortAnswerTexts[qi] = e.target.value;
+                });
+            }
+
+            return wrap;
+        }
+
+        function submitTest() {
+            if (testSubmitted) return;
+            if (window.PyBe && window.PyBe.recordAttempt) {
+                window.PyBe.recordAttempt(levelId);
+            }
+            const t = level.test;
+            let score   = 0;
+            let total   = t.questions.length;
+            let details = [];
+
+            t.questions.forEach((q, qi) => {
+                const userAns = testAnswers[qi];
+                let correct = false;
+
+                if (q.type === 'fill') {
+                    const input = document.getElementById(`fill-${qi}`);
+                    const val   = (input ? input.value.trim().toLowerCase() : '').replace(/"/g, '');
+                    const expected = (q.answer.toLowerCase()).replace(/"/g, '');
+                    correct = val === expected;
+                } else if (q.type === 'short') {
+                    const ta = document.getElementById(`short-${qi}`);
+                    const val = (ta ? ta.value.trim() : '');
+                    correct = val.length > 15; // must have typed something reasonable
+                } else if (q.type === 'tf') {
+                    correct = userAns === q.answer;
+                } else {
+                    correct = parseInt(userAns) === q.answer;
+                }
+
+                if (correct) score++;
+
+                // Mark card
+                const card = document.querySelector(`.question-card[data-qi="${qi}"]`);
+                if (card) {
+                    card.classList.add(correct ? 'correct' : 'incorrect');
+                    if (q.type === 'mcq') {
+                        card.querySelectorAll('.q-option').forEach(l => {
+                            l.classList.remove('correct', 'incorrect');
+                            const oi = parseInt(l.dataset.oi);
+                            if (oi === q.answer) l.classList.add('correct');
+                            if (parseInt(userAns) === oi && oi !== q.answer) l.classList.add('incorrect');
+                        });
+                    } else if (q.type === 'fill' || q.type === 'short') {
+                        card.classList.add(correct ? 'correct' : 'incorrect');
+                    } else if (q.type === 'tf') {
+                        card.querySelectorAll('.q-tf-btn').forEach(l => {
+                            const v = l.querySelector('input').value;
+                            if (v === q.answer) l.classList.add('correct');
+                            if (v === userAns && v !== q.answer) l.classList.add('incorrect');
+                        });
+                    }
+                }
+
+                details.push({ qi, correct });
+            });
+
+            testSubmitted = true;
+            document.getElementById('testSubmitRow').style.display = 'none';
+
+            const pct = Math.round((score / total) * 100);
+            const resultEl = document.getElementById('testResult');
+            const passed = pct >= 60;
+
+            resultEl.style.display = 'block';
+            resultEl.className = `test-result ${passed ? 'passed' : 'failed'}`;
+            resultEl.innerHTML = `
+                <div class="result-score">${score} / ${total} correct (${pct}%)</div>
+                <div class="result-msg">${passed ? '✅ Great job! You\'re ready for the next section.' : '⚠️ Review the material and try again!'}</div>
+                ${!passed ? '<button class="btn btn-retry" id="btnRetryTest"><i class="fas fa-redo"></i> Retry Test</button>' : ''}
+            `;
+
+            if (!passed) {
+                document.getElementById('btnRetryTest').addEventListener('click', () => {
+                    testAnswers    = {};
+                    shortAnswerTexts = {};
+                    testSubmitted  = false;
+                    renderTest();
+                });
+            }
+        }
+
+        // ── Render Coding ────────────────────────────────────────
+        function renderCoding() {
+            const hasScenario = !!level.scenario;
+            sectionContent.innerHTML = `
+                <div class="sec-coding">
+                    <div class="sec-heading-block">
+                        <h2 class="sec-main-heading">💻 Coding Round</h2>
+                        <p class="sec-sub-heading">Apply what you've learned — write real Python code!</p>
+                    </div>
+
+                    ${hasScenario ? `
+                    <div class="scenario-card">
+                        <div class="scenario-tag">📋 Your Mission</div>
+                        <p class="scenario-text">${level.scenario}</p>
+                    </div>` : ''}
+
+                    <div class="code-area">
+                        <div class="code-area-header">
+                            <div class="code-dot red"></div>
+                            <div class="code-dot yellow"></div>
+                            <div class="code-dot green"></div>
+                            <span>python</span>
+                        </div>
+                        <textarea class="code-editor" id="codeEditor" spellcheck="false"
+                            placeholder="# Write your Python code here...">${level.starterCode || ''}</textarea>
+                    </div>
+
+                    <div class="action-row">
+                        <button class="btn btn-run" id="btnRun">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        <button class="btn btn-submit" id="btnSubmitCode">
+                            <i class="fas fa-check"></i> Submit
+                        </button>
+                        <button class="btn btn-hint" id="btnHintCode">
+                            <i class="fas fa-lightbulb"></i> Hint
+                        </button>
+                    </div>
+
+                    <div class="console-output" id="consoleOutput"></div>
+
+                    <div class="hint-bubble" id="hintBubble">
+                        <div class="hint-icon">🤖</div>
+                        <p id="hintText">${level.hint || 'Hint will appear here...'}</p>
+                    </div>
+                </div>
+            `;
+
+            // Hint
+            document.getElementById('btnHintCode').addEventListener('click', () => {
+                document.getElementById('hintBubble').classList.toggle('show');
+            });
+
+            // Run
+            document.getElementById('btnRun').addEventListener('click', () => {
+                const code = document.getElementById('codeEditor').value;
+                const output = simulateRun(code);
+                const consoleEl = document.getElementById('consoleOutput');
+                consoleEl.innerHTML = output;
+                consoleEl.classList.add('show');
+            });
+
+            // Submit
+            document.getElementById('btnSubmitCode').addEventListener('click', () => {
+                const code     = document.getElementById('codeEditor').value.trim();
+                const solution = (level.solution || '').trim();
+
+                if (window.PyBe && window.PyBe.recordAttempt) {
+                    window.PyBe.recordAttempt(levelId);
+                }
+
+                if (normalizeCode(code) === normalizeCode(solution)) {
+                    window.PyBe.completeLevel(levelId);
+                    launchConfetti();
+                    showSuccessModal();
+                } else {
+                    const editor = document.getElementById('codeEditor');
+                    editor.classList.add('shake');
+                    setTimeout(() => editor.classList.remove('shake'), 500);
+                    const consoleEl = document.getElementById('consoleOutput');
+                    consoleEl.innerHTML = `<span class="console-error">❌ Not quite right!\n🤖 Doraemon says: "${level.wrongHint || 'Check your code and try again.'}"</span>`;
+                    consoleEl.classList.add('show');
+                }
+            });
+        }
+
+        function simulateRun(code) {
+            const printRegex = /print\s*\(\s*(['"])(.*?)\1\s*\)/g;
+            let match, outputs = [];
+            while ((match = printRegex.exec(code)) !== null) {
+                outputs.push(`<span class="console-success">${match[2]}</span>`);
+            }
+            if (outputs.length === 0) {
+                return '<span class="console-error">No output. Did you use print()?</span>';
+            }
+            return outputs.join('\n');
+        }
+
+        function normalizeCode(code) {
+            return code.replace(/\s+/g, ' ').replace(/['"]/g, '"').trim();
+        }
+
+        // ── Render current section ───────────────────────────────
+        function renderSection(sec) {
+            sectionContent.innerHTML = '<div class="sec-loading">Loading...</div>';
+            // Use setTimeout to let DOM update first
+            setTimeout(() => {
+                if (sec === 'description') renderDescription();
+                else if (sec === 'qna')    renderQNA();
+                else if (sec === 'test')   renderTest();
+                else if (sec === 'coding') renderCoding();
+            }, 10);
+        }
+
+        // ── Toast notification ───────────────────────────────────
+        function showToast(msg) {
+            const existing = document.getElementById('pybe-toast');
+            if (existing) existing.remove();
+            const toast = document.createElement('div');
+            toast.id = 'pybe-toast';
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #E53935;
+                color: white;
+                padding: 12px 28px;
+                border-radius: 50px;
+                font-family: 'Nunito', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                z-index: 99999;
+                box-shadow: 0 4px 16px rgba(229,57,53,0.4);
+                animation: toastIn 0.3s ease, toastOut 0.3s ease 2.2s forwards;
+            `;
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+
+        // ── Finish level ─────────────────────────────────────────
+        function finishLevel() {
+            const hasTest = sections.includes('test');
+
+            if (hasTest) {
+                // Must have submitted the test
+                if (!testSubmitted) {
+                    showToast('Submit the test first!');
+                    return;
+                }
+
+                const t = level.test;
+                if (t && t.questions) {
+                    let score = 0;
+                    t.questions.forEach((q, i) => {
+                        let correct = false;
+                        if (q.type === 'fill') {
+                            const el = document.getElementById('fill-' + i);
+                            const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
+                            correct = val === q.answer.toLowerCase();
+                        } else if (q.type === 'short') {
+                            const el = document.getElementById('short-' + i);
+                            correct = (el ? el.value.trim() : '').length > 15;
+                        } else if (q.type === 'tf') {
+                            correct = String(testAnswers[i]) === String(q.answer);
+                        } else {
+                            correct = parseInt(testAnswers[i]) === q.answer;
+                        }
+                        if (correct) score++;
+                    });
+
+                    const pct = Math.round((score / t.questions.length) * 100);
+                    if (pct < 60) {
+                        showToast('Score ' + pct + '% — need 60% to pass. Go back and try again!');
+                        return;
+                    }
+                }
+            }
+
+            // Passed! Complete and go home
+            window.PyBe.completeLevel(levelId);
+            launchConfetti();
+            setTimeout(() => { window.location.href = 'home.html'; }, 800);
+        }
+
+        // ── Success Modal ────────────────────────────────────────
+        function showSuccessModal() {
+            const nextId = levelId < TOTAL_LEVELS ? levelId + 1 : null;
+            document.getElementById('modalTitle').textContent =
+                levelId === 1
+                    ? '🎉 Level 1 Complete!'
+                    : `🎉 Level ${levelId} Done!`;
+
+            document.getElementById('modalMsg').textContent =
+                !nextId
+                    ? "You've completed all 100 levels! You're a Python Master!"
+                    : `Level ${nextId} is now unlocked! Keep going!`;
+
+            const nextBtn = document.getElementById('btnNextLevel');
+            if (nextId) {
+                nextBtn.style.display = 'inline-flex';
+                nextBtn.onclick = () => { window.location.href = `level.html?id=${nextId}`; };
+            } else {
+                nextBtn.style.display = 'none';
+            }
+
+            successModal.classList.add('show');
+        }
+
+        document.getElementById('backBtn').addEventListener('click', () => {
+            window.location.href = 'home.html';
+        });
+
+        document.getElementById('btnNextLevel').addEventListener('click', () => {
+            if (levelId < TOTAL_LEVELS) {
+                window.location.href = `level.html?id=${levelId + 1}`;
+            } else {
+                window.location.href = 'home.html';
+            }
+        });
+
+        // ── Boot ─────────────────────────────────────────────────
+        buildStepper();
+        renderSection(sections[currentSection]);
+        updateNavButtons();
+
+    })();
+    </script>
+</body>
+</html>
