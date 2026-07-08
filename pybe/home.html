@@ -254,13 +254,13 @@
         }
 
         // One-time reset to ensure testing progress starts fresh
-        if (!localStorage.getItem('pybe_journey_reset_v6')) {
+        if (!localStorage.getItem('pybe_journey_reset_v7')) {
             localStorage.removeItem('pybe_progress_v1');
             localStorage.removeItem('pybe_student_name');
             localStorage.removeItem('pybe_project_code');
             localStorage.removeItem('pybe_github_link');
             localStorage.removeItem('pybe_project_type');
-            localStorage.setItem('pybe_journey_reset_v6', 'true');
+            localStorage.setItem('pybe_journey_reset_v7', 'true');
         }
 
         // ── Load progress ──────────────────────────────────────

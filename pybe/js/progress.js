@@ -37,7 +37,10 @@ function saveProgress(progress) {
                 const diffMs = new Date(today) - new Date(prevDate + 'T00:00:00');
                 const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
                 if (diffDays === 0) {
-                    // same day — keep streak
+                    // same day — keep streak (initialize to 1 if it was 0)
+                    if (!progress.streak || progress.streak === 0) {
+                        progress.streak = 1;
+                    }
                 } else if (diffDays === 1) {
                     // consecutive day — increment streak
                     progress.streak = (progress.streak || 1) + 1;
