@@ -1752,6 +1752,161 @@
             return { success: true };
         }
 
+        // ── SEARCH LIGHT INTEGRATION ────────────────────────────
+        function highlightErrorLine(lineIndex) {
+            const editor = document.getElementById('codeEditor');
+            if (!editor) return;
+            
+            const existing = document.getElementById('searchlightBeam');
+            if (existing) existing.remove();
+            
+            const beam = document.createElement('div');
+            beam.id = 'searchlightBeam';
+            
+            const lineHeight = 22;
+            const topOffset = (lineIndex * lineHeight) + 14;
+            
+            beam.style.cssText = `
+                position: absolute;
+                top: ${topOffset}px;
+                left: 0;
+                right: 0;
+                height: 22px;
+                background: rgba(255, 235, 59, 0.18);
+                border-left: 4px solid #ffeb3b;
+                box-shadow: 0 0 10px rgba(255, 235, 59, 0.3);
+                pointer-events: none;
+                z-index: 5;
+                animation: beamPulse 1.2s infinite alternate;
+            `;
+            
+            const parent = editor.parentElement;
+            if (parent) {
+                parent.style.position = 'relative';
+                parent.appendChild(beam);
+            }
+            
+            editor.addEventListener('input', function removeBeam() {
+                const b = document.getElementById('searchlightBeam');
+                if (b) b.remove();
+                editor.removeEventListener('input', removeBeam);
+            });
+        }
+
+        function analyzeCodeForSearchLight(code, solution, level) {
+            const userLines = code.split('\n');
+            const solLines = solution.split('\n');
+            
+            for (let i = 0; i < userLines.length; i++) {
+                const line = userLines[i].trim();
+                
+                if (/\bPrint\s*\(/.test(userLines[i])) {
+                    return { lineIndex: i, type: "Syntax Error", desc: "Python is case-sensitive! You wrote 'Print' with a capital P instead of 'print'." };
+                }
+                if (/\bprint\s+"/.test(userLines[i]) || /\bprint\s+'/.test(userLines[i])) {
+                    return { lineIndex: i, type: "Syntax Error", desc: "In Python 3, print is a function and requires parentheses, e.g., print('hello')." };
+                }
+                
+                let openParens = (line.match(/\(/g) || []).length;
+                let closeParens = (line.match(/\)/g) || []).length;
+                if (openParens !== closeParens) {
+                    return { lineIndex: i, type: "Syntax Error", desc: "Mismatched parentheses. Make sure every opening '(' has a matching closing ')'." };
+                }
+                
+                let doubleQuotes = (line.match(/"/g) || []).length;
+                let singleQuotes = (line.match(/'/g) || []).length;
+                if (doubleQuotes % 2 !== 0 || singleQuotes % 2 !== 0) {
+                    return { lineIndex: i, type: "Syntax Error", desc: "Unmatched quotation marks. Make sure quotes are balanced and match each other." };
+                }
+            }
+
+            const definedVariables = [];
+            for (let i = 0; i < userLines.length; i++) {
+                const line = userLines[i].trim();
+                
+                const assignMatch = line.match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*=/);
+                if (assignMatch) {
+                    definedVariables.push(assignMatch[1]);
+                }
+                
+                const printMatch = line.match(/\bprint\s*\(\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\)/);
+                if (printMatch) {
+                    const varName = printMatch[1];
+                    if (!definedVariables.includes(varName) && varName !== "True" && varName !== "False") {
+                        return { lineIndex: i, type: "Runtime Error (NameError)", desc: `Referencing an undefined variable: '${varName}'. Check spelling and initialization.` };
+                    }
+                }
+
+                if (line.includes('+') && line.includes('print')) {
+                    const strings = line.match(/(["'])(?:(?=(\\?))\2.)*?\1/g) || [];
+                    const hasPlus = line.includes('+');
+                    if (strings.length > 0 && hasPlus) {
+                        if (line.includes(' + 5') || line.includes(' + score') || line.includes(' + count')) {
+                            if (!line.includes('str(')) {
+                                return { lineIndex: i, type: "Runtime Error (TypeError)", desc: "Cannot concatenate string and integer directly. Wrap the number in str(), e.g. str(5)." };
+                            }
+                        }
+                    }
+                }
+            }
+
+            for (let i = 0; i < userLines.length; i++) {
+                const uLine = userLines[i].trim();
+                if (i >= solLines.length) {
+                    return { lineIndex: i, type: "Logical Error", desc: "Extra line detected. Review your solution structure." };
+                }
+                const sLine = solLines[i].trim();
+                
+                if (normalizeCode(uLine) !== normalizeCode(sLine)) {
+                    return { lineIndex: i, type: "Logical Error", desc: "Your logic or value assignment does not match what the level requires." };
+                }
+            }
+            
+            if (userLines.length < solLines.length) {
+                return { lineIndex: userLines.length - 1, type: "Logical Error", desc: "Incomplete code. You are missing one or more steps to solve the level." };
+            }
+
+            return null;
+        }
+
+        window.activateSearchLight = function() {
+            const editor = document.getElementById('codeEditor');
+            if (!editor) {
+                return { success: false, reason: "Please navigate to the Coding tab first! 🔦" };
+            }
+            
+            const code = editor.value.trim();
+            if (code.length === 0) {
+                return { success: false, reason: "Your editor is empty! Write some code first so we can search for bugs. 🔦" };
+            }
+            
+            const solution = (level.solution || '').trim();
+            const analysis = analyzeCodeForSearchLight(editor.value, solution, level);
+            
+            if (!analysis) {
+                return { success: false, reason: "Search Light scanned your code and found NO bugs! Excellent work! 🔦" };
+            }
+            
+            highlightErrorLine(analysis.lineIndex);
+            
+            const lines = editor.value.split('\n');
+            let charIndex = 0;
+            for (let i = 0; i < analysis.lineIndex; i++) {
+                charIndex += lines[i].length + 1;
+            }
+            editor.focus();
+            editor.setSelectionRange(charIndex, charIndex + lines[analysis.lineIndex].length);
+            
+            const consoleEl = document.getElementById('consoleOutput');
+            if (consoleEl) {
+                consoleEl.innerHTML = `<span class="console-error" style="border-left-color: #ffeb3b;">🔦 Search Light detected an error!\n<strong>Type:</strong> ${analysis.type}\n<strong>Line ${analysis.lineIndex + 1}:</strong> ${analysis.desc}</span>`;
+                consoleEl.classList.add('show');
+            }
+            
+            showToast(`🔦 Search Light found a ${analysis.type} on Line ${analysis.lineIndex + 1}!`);
+            return { success: true };
+        };
+
         // ── ANYWHERE DOOR PRACTICE ROOM INTEGRATION ──────────────
         function generatePracticeRoomContent(level) {
             const title = level.title || "Python Basics";

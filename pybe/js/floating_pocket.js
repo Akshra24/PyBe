@@ -12,7 +12,7 @@
         { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks stepper shortcuts. (Fires cloud fly-by sweep!)", maxUses: 3, cooldown: 60, milestone: 10 },
         { id: 20,  name: "Time Cloth", icon: "⏳", desc: "Wraps mistakes to reverse time! Retry one incorrect test question or code submission per level, restoring lost marks and explaining the mistake. (Once per level)", maxUses: 1, cooldown: 120, milestone: 20 },
         { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space. Enables fast chapter map jumps. (Flashes pink warp portal!)", maxUses: 999, cooldown: 10, milestone: 30 },
-        { id: 40,  name: "Time Furoshiki",  icon: "🧣", desc: "Rewinds code state. Restores starter code instantly. (Toggles black-and-white rewind!)", maxUses: 2, cooldown: 120, milestone: 40 },
+        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Shines a light on coding bugs! Identifies the error type (syntax, runtime, or logical) and highlights the line containing the error in your editor. (Once per activation)", maxUses: 3, cooldown: 90, milestone: 40 },
         { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structure reference sheets. (Spawns glowing memory slices!)", maxUses: 3, cooldown: 90, milestone: 10 },
         { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loop lines. (Shrinks page layout size!)", maxUses: 999, cooldown: 30, milestone: 60 },
         { id: 70,  name: "Big Light",      icon: "🔍", desc: "Inspects large variables. Shows detailed trace logs. (Expands page layout size!)", maxUses: 999, cooldown: 30, milestone: 70 },
@@ -117,6 +117,18 @@
                     osc.start(now + i * 0.15);
                     osc.stop(now + i * 0.15 + 0.12);
                 });
+            } else if (type === 'flashlight') {
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, now);
+                osc.frequency.setValueAtTime(1200, now + 0.05);
+                gain.gain.setValueAtTime(0.12, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(now + 0.12);
             } else if (type === 'bread') {
                 // Twinkling chime
                 const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51, 1567.98];
