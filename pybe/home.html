@@ -154,6 +154,10 @@
                 <i class="fas fa-fire streak-flame"></i>
                 <span id="navStreakText"></span>
             </div>
+            <button class="nav-pocket-btn" id="navPocketBtn">
+                <i class="fas fa-shopping-bag"></i> 4D Pocket
+                <span class="badge" id="pocketBadge" style="display:none;">!</span>
+            </button>
         </div>
 
         <!-- Level Grid -->
@@ -172,12 +176,52 @@
 
     </div><!-- end home-wrapper -->
 
+    <!-- ===== GADGET UNLOCK OVERLAY ===== -->
+    <div class="gadget-unlock-overlay" id="gadgetUnlockOverlay">
+        <div class="portal-effect"></div>
+        <div class="unlock-card">
+            <div class="unlock-title">New Gadget Unlocked!</div>
+            <div class="unlock-gadget-icon" id="unlockGadgetIcon">🚁</div>
+            <div class="unlock-name" id="unlockGadgetName">Bamboo Copter</div>
+            <div class="unlock-desc" id="unlockGadgetDesc">Flies over code obstacles. Unlocks advanced stepper shortcuts.</div>
+            <button class="claim-btn" id="claimGadgetBtn">Claim Gadget 🎒</button>
+        </div>
+    </div>
+
+    <!-- ===== POCKET INVENTORY MODAL ===== -->
+    <div class="pocket-modal" id="pocketModal">
+        <div class="pocket-content">
+            <div class="pocket-header">
+                <div class="pocket-title">
+                    <i class="fas fa-shopping-bag"></i> Nobita's 4D Pocket
+                </div>
+                <button class="pocket-close" id="pocketCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="pocket-grid" id="pocketGrid">
+                <!-- Populated by JS -->
+            </div>
+            <div class="gadget-detail-panel" id="gadgetDetailPanel">
+                <div class="gadget-detail-header">
+                    <div class="gadget-detail-icon" id="detailGadgetIcon">🚁</div>
+                    <div class="gadget-detail-title-block">
+                        <div class="gadget-detail-title" id="detailGadgetTitle">Bamboo Copter</div>
+                        <div class="gadget-detail-milestone" id="detailGadgetMilestone">Unlocked at Level 10</div>
+                    </div>
+                </div>
+                <div class="gadget-detail-desc" id="detailGadgetDesc">Flies over code obstacles. Unlocks advanced stepper shortcuts.</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Confetti Canvas -->
     <canvas id="confetti-canvas"></canvas>
 
     <script src="js/progress.js"></script>
     <script src="js/levels_data.js"></script>
     <script src="js/levels.js"></script>
+    <script src="js/floating_pocket.js"></script>
     <script>
     (function () {
         const TOTAL_LEVELS = 100;
@@ -224,6 +268,11 @@
 
         // ── Load progress ──────────────────────────────────────
         let progress = window.PyBe ? window.PyBe.getProgress() : { currentLevel: 0, completed: [] };
+
+        // Force all levels to be unlocked permanently once the intro story is completed/skipped
+        if (progress.currentLevel > 0) {
+            progress.currentLevel = 100;
+        }
 
         // ── Build 10×10 grid ────────────────────────────────────
         const grid = document.getElementById('levelGrid');
@@ -463,59 +512,396 @@
             }, 1000);
         }
 
-        // ── Start Journey Modal overlay ──────────────────────────
-        function showStartJourneyModal() {
-            const modal = document.createElement('div');
-            modal.id = 'startJourneyModal';
-            modal.style.cssText = `
-                position: fixed;
-                inset: 0;
-                background: rgba(0, 0, 0, 0.75);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 999999;
-                backdrop-filter: blur(8px);
-                padding: 20px;
-                opacity: 0;
-                transition: opacity 0.4s ease;
-            `;
+        // ── Full-Screen Animated Story Mode ──────────────────────────
+        function showStoryMode() {
+            const storyContainer = document.createElement('div');
+            storyContainer.className = 'story-container';
+            storyContainer.id = 'storyContainer';
             
-            modal.innerHTML = `
-                <div style="background: white; border-radius: 24px; padding: 40px 30px; text-align: center; max-width: 450px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.3); border: 4px solid #00AEEF; transform: scale(0.8); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
-                    <div style="font-size: 60px; margin-bottom: 20px; animation: bounce 2s infinite;">🎒</div>
-                    <h2 style="font-family:'Nunito',sans-serif; color:#1A2A3A; font-weight:800; font-size:26px; margin-bottom:15px; text-transform: uppercase; letter-spacing: 1px;">Ready to start?</h2>
-                    <p style="font-family:'Quicksand',sans-serif; color:#6B7B8A; font-size:16px; line-height:1.6; margin-bottom:30px; font-weight:600;">
-                        Are you ready to start your journey to master Python programming with Doraemon?
-                    </p>
-                    <div style="display:flex; gap:16px; justify-content:center;">
-                        <button id="btnJourneyNo" class="btn" style="background:#E53935; color:white; border-radius:50px; padding:12px 30px; font-size:16px; font-weight:700; border:none; cursor:pointer; box-shadow: 0 4px 0 #b71c1c; transition: transform 0.1s;">No, Go Back</button>
-                        <button id="btnJourneyYes" class="btn" style="background:#4CAF50; color:white; border-radius:50px; padding:12px 30px; font-size:16px; font-weight:700; border:none; cursor:pointer; box-shadow: 0 4px 0 #2e7d32; transition: transform 0.1s;">Yes, Let's Start!</button>
+            // Build Cinematic Stars
+            let starsHTML = '';
+            for (let i = 0; i < 40; i++) {
+                const left = Math.random() * 100;
+                const top = Math.random() * 100;
+                const size = Math.random() * 2 + 1;
+                const delay = Math.random() * 3;
+                starsHTML += `<div class="story-star" style="left:${left}%; top:${top}%; width:${size}px; height:${size}px; animation-delay:${delay}s;"></div>`;
+            }
+
+            storyContainer.innerHTML = `
+                <div class="story-stars">${starsHTML}</div>
+                <button class="story-skip-btn" id="storySkipBtn">
+                    <span>Skip Story</span>
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                
+                <div class="story-scene">
+                    <!-- Doraemon character on the left -->
+                    <div class="story-character story-doraemon float" id="storyDoraemon">
+                        <svg viewBox="0 0 200 260" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Body -->
+                            <ellipse cx="100" cy="178" rx="70" ry="65" fill="#00AEEF"/>
+                            <!-- White belly -->
+                            <ellipse cx="100" cy="192" rx="44" ry="44" fill="#FFFFFF"/>
+                            <!-- Red bow -->
+                            <circle cx="79" cy="130" r="14" fill="#E53935"/>
+                            <circle cx="121" cy="130" r="14" fill="#E53935"/>
+                            <polygon points="100,122 91,137 109,137" fill="#E53935"/>
+                            <!-- Head -->
+                            <circle cx="100" cy="90" r="72" fill="#00AEEF"/>
+                            <!-- White face -->
+                            <ellipse cx="100" cy="100" rx="52" ry="46" fill="#FFFFFF"/>
+                            <!-- Eyes -->
+                            <g id="doraEyes">
+                                <ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                                <ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                                <circle cx="76" cy="88" r="10" fill="#1A2A3A"/>
+                                <circle cx="128" cy="88" r="10" fill="#1A2A3A"/>
+                                <circle cx="79" cy="84" r="3.5" fill="#FFFFFF"/>
+                                <circle cx="131" cy="84" r="3.5" fill="#FFFFFF"/>
+                            </g>
+                            <!-- Nose -->
+                            <circle cx="100" cy="108" r="9" fill="#E53935"/>
+                            <line x1="100" y1="117" x2="100" y2="130" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- Smile -->
+                            <path id="doraMouth" d="M 72 122 Q 100 145 128 122" stroke="#1A2A3A" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <!-- Whiskers -->
+                            <line x1="50" y1="102" x2="75" y2="108" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="50" y1="114" x2="75" y2="114" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="50" y1="126" x2="75" y2="120" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="150" y1="102" x2="125" y2="108" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="150" y1="114" x2="125" y2="114" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                            <line x1="150" y1="126" x2="125" y2="120" stroke="#1A2A3A" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- Arms -->
+                            <ellipse cx="28" cy="172" rx="24" ry="32" fill="#00AEEF" transform="rotate(-35 28 172)"/>
+                            <ellipse cx="172" cy="172" rx="24" ry="32" fill="#00AEEF" transform="rotate(35 172 172)"/>
+                            <circle cx="16" cy="190" r="14" fill="#FFFFFF"/>
+                            <circle cx="184" cy="190" r="14" fill="#FFFFFF"/>
+                            <!-- Legs -->
+                            <ellipse cx="72" cy="238" rx="24" ry="16" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="1"/>
+                            <ellipse cx="128" cy="238" rx="24" ry="16" fill="#FFFFFF" stroke="#CCCCCC" stroke-width="1"/>
+                            <!-- Pocket -->
+                            <path id="doraPocket" d="M 68 185 A 32 32 0 0 0 132 185 Z" fill="#FFFFFF" stroke="#1A2A3A" stroke-width="2.5"/>
+                        </svg>
+                        <div class="sparks-container"></div>
+                    </div>
+
+                    <!-- Nobita character on the right -->
+                    <div class="story-character story-nobita float" id="storyNobita">
+                        <svg viewBox="0 0 200 260" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Body / Clothes -->
+                            <!-- Yellow Shirt -->
+                            <path d="M 65 175 L 135 175 L 125 225 L 75 225 Z" fill="#FDD835" stroke="#1A2A3A" stroke-width="2.5"/>
+                            <rect x="75" y="225" width="22" height="15" fill="#1565C0" stroke="#1A2A3A" stroke-width="2"/> <!-- blue shorts left -->
+                            <rect x="103" y="225" width="22" height="15" fill="#1565C0" stroke="#1A2A3A" stroke-width="2"/> <!-- blue shorts right -->
+                            <!-- Arms -->
+                            <ellipse cx="48" cy="195" rx="10" ry="25" fill="#FDD835" transform="rotate(25 48 195)" stroke="#1A2A3A" stroke-width="2"/>
+                            <circle cx="36" cy="214" r="11" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/> <!-- Left hand -->
+                            <ellipse cx="152" cy="195" rx="10" ry="25" fill="#FDD835" transform="rotate(-25 152 195)" stroke="#1A2A3A" stroke-width="2"/>
+                            <circle cx="164" cy="214" r="11" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/> <!-- Right hand -->
+                            <!-- Legs -->
+                            <rect x="80" y="240" width="12" height="16" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/>
+                            <rect x="108" y="240" width="12" height="16" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/>
+                            <ellipse cx="80" cy="254" rx="14" ry="8" fill="#FFFFFF" stroke="#1A2A3A" stroke-width="2"/>
+                            <ellipse cx="108" cy="254" rx="14" ry="8" fill="#FFFFFF" stroke="#1A2A3A" stroke-width="2"/>
+                            <!-- Neck -->
+                            <rect x="92" y="160" width="16" height="16" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/>
+                            <!-- Head -->
+                            <circle cx="100" cy="115" r="50" fill="#FFE082" stroke="#1A2A3A" stroke-width="2.5"/>
+                            <!-- Hair -->
+                            <path d="M 50 115 C 48 65, 152 65, 150 115 C 142 85, 58 85, 50 115 Z" fill="#212121" stroke="#212121" stroke-width="1"/>
+                            <!-- Glasses -->
+                            <circle cx="82" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3.5"/>
+                            <circle cx="118" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3.5"/>
+                            <line x1="100" y1="115" x2="100" y2="115" stroke="#212121" stroke-width="3.5"/> <!-- bridge -->
+                            <!-- Eyes -->
+                            <g id="nobiEyes">
+                                <circle cx="82" cy="115" r="4" fill="#212121"/>
+                                <circle cx="118" cy="115" r="4" fill="#212121"/>
+                            </g>
+                            <!-- Cheeks (Blush) -->
+                            <circle cx="62" cy="130" r="6" fill="#FF8A80" opacity="0.6"/>
+                            <circle cx="138" cy="130" r="6" fill="#FF8A80" opacity="0.6"/>
+                            <!-- Mouth -->
+                            <path id="nobiMouth" d="M 92 138 Q 100 144 108 138" stroke="#212121" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        </svg>
+                        <!-- Juice glass in hand -->
+                        <div class="juice-glass" id="juiceGlass">
+                            <svg viewBox="0 0 30 40" width="100%" height="100%">
+                                <path d="M 5 5 L 25 5 L 20 35 L 10 35 Z" fill="rgba(255,255,255,0.3)" stroke="#fff" stroke-width="1.5"/>
+                                <path d="M 7 15 L 23 15 L 20 33 L 10 33 Z" fill="#9c27b0"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
+
+                <div class="story-dialogue-box" id="storyDialogueBox">
+                    <div class="dialogue-avatar-container" id="dialogueAvatar">
+                        <!-- Initialized by JS -->
+                    </div>
+                    <div class="dialogue-text-container">
+                        <div class="dialogue-speaker-name" id="dialogueSpeaker">Doraemon</div>
+                        <div class="dialogue-subtitles" id="dialogueText">...</div>
+                        <div class="dialogue-next-prompt"><i class="fas fa-chevron-down"></i> Click to continue</div>
+                    </div>
+                </div>
+
+                <div class="story-cta-container">
+                    <button class="story-cta-btn" id="storyCtaBtn">
+                        Start Python Adventure 🚀
+                    </button>
+                </div>
             `;
-            
-            document.body.appendChild(modal);
-            
-            setTimeout(() => {
-                modal.style.opacity = '1';
-                modal.children[0].style.transform = 'scale(1)';
-            }, 50);
-            
-            document.getElementById('btnJourneyNo').onclick = () => {
-                window.location.href = 'index.html';
+
+            document.body.appendChild(storyContainer);
+
+            // Dialogue sequence data
+            const storySteps = [
+                {
+                    speaker: "Doraemon",
+                    mood: "happy",
+                    text: "Ah, Nobita! Look at my newly polished 4D Pocket! It's in tip-top shape today!",
+                    action: () => {}
+                },
+                {
+                    speaker: "Nobita",
+                    mood: "happy",
+                    text: "Wow Doraemon, that's amazing! Hey, check out this grape juice I got!",
+                    action: () => {}
+                },
+                {
+                    speaker: "Nobita",
+                    mood: "tripping",
+                    text: "Whoa-whoa! *TRIPS* ... AHHH!",
+                    action: () => {
+                        const nobi = document.getElementById('storyNobita');
+                        const dora = document.getElementById('storyDoraemon');
+                        if (nobi) {
+                            nobi.classList.remove('float');
+                            nobi.classList.add('trip');
+                        }
+                        
+                        setTimeout(() => {
+                            const splash = document.createElement('div');
+                            splash.className = 'juice-liquid-splash spill';
+                            document.querySelector('.story-scene').appendChild(splash);
+                            
+                            const glass = document.getElementById('juiceGlass');
+                            if (glass) glass.style.opacity = '0';
+                            
+                            setTimeout(() => {
+                                if (dora) {
+                                    dora.classList.remove('float');
+                                    dora.classList.add('shocked');
+                                    dora.classList.add('flash-red');
+                                    updateMainCharacterExpressions('Doraemon', 'shocked');
+                                }
+                                
+                                const sparksCont = document.querySelector('.sparks-container');
+                                if (sparksCont) {
+                                    for (let i = 0; i < 20; i++) {
+                                        const spark = document.createElement('div');
+                                        spark.className = 'spark-particle';
+                                        const angle = Math.random() * Math.PI * 2;
+                                        const dist = Math.random() * 80 + 30;
+                                        spark.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
+                                        spark.style.setProperty('--dy', Math.sin(angle) * dist + 'px');
+                                        spark.style.left = '50px';
+                                        spark.style.top = '100px';
+                                        spark.style.animationDelay = Math.random() * 0.3 + 's';
+                                        sparksCont.appendChild(spark);
+                                    }
+                                }
+                            }, 600);
+                        }, 200);
+                    }
+                },
+                {
+                    speaker: "Doraemon",
+                    mood: "shocked",
+                    text: "B-BZZZTT! Nobita! The 4D pocket is short-circuiting! The dimensional lock is failing!",
+                    action: () => {}
+                },
+                {
+                    speaker: "Doraemon",
+                    mood: "shocked",
+                    text: "OH NO! The pocket is emptying! All my gadgets... they are scattering across the space-time continuum!",
+                    action: () => {
+                        const scene = document.querySelector('.story-scene');
+                        const icons = ['🚪', '🚁', '🔦', '🍞', '🔔', '⭐', '⚙️', '🎒', '🌟', '🔑', '⚡', '🤖', '📖', '💾'];
+                        for (let i = 0; i < 25; i++) {
+                            setTimeout(() => {
+                                const gad = document.createElement('div');
+                                gad.className = 'scatter-gadget';
+                                gad.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+                                const angle = Math.random() * Math.PI * 2;
+                                const dist = Math.random() * 500 + 300;
+                                gad.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+                                gad.style.setProperty('--ty', (Math.sin(angle) * dist - 150) + 'px');
+                                gad.style.setProperty('--rot', (Math.random() * 720 - 360) + 'deg');
+                                gad.style.left = '35%';
+                                gad.style.bottom = '120px';
+                                scene.appendChild(gad);
+                                setTimeout(() => gad.remove(), 2000);
+                            }, i * 50);
+                        }
+                    }
+                },
+                {
+                    speaker: "Nobita",
+                    mood: "sad",
+                    text: "I'm so sorry, Doraemon! What do we do now?! The pocket is completely broken!",
+                    action: () => {
+                        const nobi = document.getElementById('storyNobita');
+                        const dora = document.getElementById('storyDoraemon');
+                        if (nobi) nobi.classList.add('shake-panicked');
+                        if (dora && !dora.querySelector('.tear-stream')) {
+                            const tL = document.createElement('div');
+                            tL.className = 'tear-stream left';
+                            const tR = document.createElement('div');
+                            tR.className = 'tear-stream right';
+                            dora.appendChild(tL);
+                            dora.appendChild(tR);
+                        }
+                    }
+                },
+                {
+                    speaker: "Doraemon",
+                    mood: "sad",
+                    text: "The pocket's recovery matrix runs on Python code! The only way to retrieve the gadgets is to solve the logic cores of the 100 Python dimensions!",
+                    action: () => {}
+                },
+                {
+                    speaker: "Nobita",
+                    mood: "sad",
+                    text: "Python?! But I don't know how to code! I'm just a kid, Doraemon! I'll fail!",
+                    action: () => {}
+                },
+                {
+                    speaker: "Doraemon",
+                    mood: "determined",
+                    text: "Don't worry, I'll guide you step-by-step! Align the 100 code dimensions, and my pocket will be repaired!",
+                    action: () => {
+                        const nobi = document.getElementById('storyNobita');
+                        const dora = document.getElementById('storyDoraemon');
+                        if (dora) {
+                            const tears = dora.querySelectorAll('.tear-stream');
+                            tears.forEach(t => t.remove());
+                            dora.classList.remove('shocked');
+                            dora.classList.remove('flash-red');
+                            dora.classList.add('float');
+                            updateMainCharacterExpressions('Doraemon', 'determined');
+                        }
+                        if (nobi) {
+                            nobi.classList.remove('shake-panicked');
+                            nobi.classList.add('float');
+                            updateMainCharacterExpressions('Nobita', 'determined');
+                        }
+                    }
+                },
+                {
+                    speaker: "Nobita",
+                    mood: "determined",
+                    text: "Okay... for the gadgets! Let's do this!",
+                    action: () => {
+                        const cta = document.querySelector('.story-cta-container');
+                        if (cta) cta.classList.add('visible');
+                    }
+                }
+            ];
+
+            const avatars = {
+                Doraemon: {
+                    happy: '<svg viewBox="20 10 160 160" width="80" height="80"><circle cx="100" cy="90" r="72" fill="#00AEEF"/><ellipse cx="100" cy="100" rx="52" ry="46" fill="#FFFFFF"/><ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF"/><ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF"/><circle cx="76" cy="88" r="10" fill="#1A2A3A"/><circle cx="128" cy="88" r="10" fill="#1A2A3A"/><circle cx="79" cy="84" r="3.5" fill="#FFFFFF"/><circle cx="131" cy="84" r="3.5" fill="#FFFFFF"/><circle cx="100" cy="108" r="9" fill="#E53935"/><line x1="100" y1="117" x2="100" y2="130" stroke="#1A2A3A" stroke-width="2" stroke-linecap="round"/><path d="M 72 122 Q 100 145 128 122" stroke="#1A2A3A" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>',
+                    shocked: '<svg viewBox="20 10 160 160" width="80" height="80"><circle cx="100" cy="90" r="72" fill="#00AEEF"/><ellipse cx="100" cy="100" rx="52" ry="46" fill="#FFFFFF"/><ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF" stroke="#E53935" stroke-width="1.5"/><ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF" stroke="#E53935" stroke-width="1.5"/><circle cx="74" cy="86" r="3" fill="#1A2A3A"/><circle cx="126" cy="86" r="3" fill="#1A2A3A"/><circle cx="100" cy="108" r="9" fill="#E53935"/><line x1="100" y1="117" x2="100" y2="130" stroke="#1A2A3A" stroke-width="2" stroke-linecap="round"/><ellipse cx="100" cy="130" rx="14" ry="10" fill="#E53935" stroke="#1A2A3A" stroke-width="2"/></svg>',
+                    sad: '<svg viewBox="20 10 160 160" width="80" height="80"><circle cx="100" cy="90" r="72" fill="#00AEEF"/><ellipse cx="100" cy="100" rx="52" ry="46" fill="#FFFFFF"/><path d="M 64 90 Q 74 76 84 90" stroke="#1A2A3A" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M 116 90 Q 126 76 136 90" stroke="#1A2A3A" stroke-width="3.5" fill="none" stroke-linecap="round"/><circle cx="100" cy="108" r="9" fill="#E53935"/><line x1="100" y1="117" x2="100" y2="130" stroke="#1A2A3A" stroke-width="2" stroke-linecap="round"/><path d="M 78 135 Q 100 120 122 135" stroke="#1A2A3A" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>',
+                    determined: '<svg viewBox="20 10 160 160" width="80" height="80"><circle cx="100" cy="90" r="72" fill="#00AEEF"/><ellipse cx="100" cy="100" rx="52" ry="46" fill="#FFFFFF"/><ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF"/><ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF"/><circle cx="78" cy="88" r="8" fill="#1A2A3A"/><circle cx="124" cy="88" r="8" fill="#1A2A3A"/><circle cx="100" cy="108" r="9" fill="#E53935"/><line x1="100" y1="117" x2="100" y2="130" stroke="#1A2A3A" stroke-width="2" stroke-linecap="round"/><path d="M 75 130 Q 100 125 125 130" stroke="#1A2A3A" stroke-width="3" fill="none" stroke-linecap="round"/></svg>'
+                },
+                Nobita: {
+                    happy: '<svg viewBox="40 55 120 120" width="80" height="80"><circle cx="100" cy="115" r="50" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/><path d="M 50 115 C 48 65, 152 65, 150 115 C 142 85, 58 85, 50 115 Z" fill="#212121"/><circle cx="82" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><circle cx="118" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><circle cx="82" cy="115" r="3.5" fill="#212121"/><circle cx="118" cy="115" r="3.5" fill="#212121"/><path d="M 92 138 Q 100 144 108 138" stroke="#212121" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>',
+                    tripping: '<svg viewBox="40 55 120 120" width="80" height="80"><circle cx="100" cy="115" r="50" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/><path d="M 50 115 C 48 65, 152 65, 150 115 C 142 85, 58 85, 50 115 Z" fill="#212121"/><circle cx="82" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><circle cx="118" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><path d="M 76 115 Q 82 109 88 115 Q 82 121 76 115" stroke="#212121" stroke-width="2.5" fill="none"/><path d="M 112 115 Q 118 109 124 115 Q 118 121 112 115" stroke="#212121" stroke-width="2.5" fill="none"/><ellipse cx="100" cy="140" rx="10" ry="6" fill="#E53935" stroke="#1A2A3A" stroke-width="2"/></svg>',
+                    sad: '<svg viewBox="40 55 120 120" width="80" height="80"><circle cx="100" cy="115" r="50" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/><path d="M 50 115 C 48 65, 152 65, 150 115 C 142 85, 58 85, 50 115 Z" fill="#212121"/><circle cx="82" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><circle cx="118" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><path d="M 74 118 Q 82 108 90 118" stroke="#212121" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M 110 118 Q 118 108 126 118" stroke="#212121" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M 90 142 Q 100 132 110 142" stroke="#212121" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>',
+                    determined: '<svg viewBox="40 55 120 120" width="80" height="80"><circle cx="100" cy="115" r="50" fill="#FFE082" stroke="#1A2A3A" stroke-width="2"/><path d="M 50 115 C 48 65, 152 65, 150 115 C 142 85, 58 85, 50 115 Z" fill="#212121"/><circle cx="82" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><circle cx="118" cy="115" r="18" fill="none" stroke="#212121" stroke-width="3"/><circle cx="84" cy="113" r="3.5" fill="#212121"/><circle cx="116" cy="113" r="3.5" fill="#212121"/><path d="M 90 138 L 110 138" stroke="#212121" stroke-width="3" stroke-linecap="round"/></svg>'
+                }
             };
-            
-            document.getElementById('btnJourneyYes').onclick = () => {
-                progress.currentLevel = 1;
+
+            let currentStep = 0;
+            let typeInterval = null;
+
+            function runStep(stepIndex) {
+                if (stepIndex >= storySteps.length) return;
+                const step = storySteps[stepIndex];
+                
+                // Clear any running typewriter
+                if (typeInterval) clearInterval(typeInterval);
+                
+                // Update avatar
+                const avatarCont = document.getElementById('dialogueAvatar');
+                if (avatarCont) {
+                    avatarCont.innerHTML = avatars[step.speaker][step.mood] || '';
+                }
+                
+                // Update speaker name
+                const speakerEl = document.getElementById('dialogueSpeaker');
+                if (speakerEl) {
+                    speakerEl.textContent = step.speaker;
+                    speakerEl.className = 'dialogue-speaker-name ' + step.speaker.toLowerCase() + '-name';
+                }
+                
+                // Typewriter effect
+                const textEl = document.getElementById('dialogueText');
+                if (textEl) {
+                    let charIndex = 0;
+                    textEl.innerHTML = '';
+                    typeInterval = setInterval(() => {
+                        if (charIndex < step.text.length) {
+                            textEl.innerHTML = step.text.substring(0, charIndex + 1) + '<span class="cursor"></span>';
+                            charIndex++;
+                        } else {
+                            textEl.innerHTML = step.text;
+                            clearInterval(typeInterval);
+                            typeInterval = null;
+                        }
+                    }, 30);
+                }
+                
+                // Update main character SVGs on screen
+                updateMainCharacterExpressions(step.speaker, step.mood);
+
+                // Run action
+                step.action();
+            }
+
+            // Click dialogue to advance
+            document.getElementById('storyDialogueBox').onclick = (e) => {
+                // Prevent click bubbling to scene if clicking close buttons etc
+                e.stopPropagation();
+                if (typeInterval) {
+                    // Skip typing animation
+                    const step = storySteps[currentStep];
+                    const textEl = document.getElementById('dialogueText');
+                    if (textEl) textEl.innerHTML = step.text;
+                    clearInterval(typeInterval);
+                    typeInterval = null;
+                } else {
+                    currentStep++;
+                    if (currentStep < storySteps.length) {
+                        runStep(currentStep);
+                    }
+                }
+            };
+
+            function exitStory() {
+                if (typeInterval) clearInterval(typeInterval);
+                
+                progress.currentLevel = 100;
                 window.PyBe.saveProgress(progress);
                 
                 buildGrid();
                 
-                modal.style.opacity = '0';
-                modal.children[0].style.transform = 'scale(0.8)';
+                storyContainer.classList.add('fade-out');
                 setTimeout(() => {
-                    modal.remove();
+                    storyContainer.remove();
                     animateLevelUnlock(1);
                     
                     // Update mascot message
@@ -523,13 +909,383 @@
                     if (mascotText) mascotText.textContent = newMsg.text;
                     if (mascotDoraemon) mascotDoraemon.className = `mascot-doraemon mood-${newMsg.mood}`;
                     if (mascotBubble) mascotBubble.classList.add('visible');
-                }, 400);
+                }, 1000);
+            }
+
+            // Skip and CTA click hooks
+            document.getElementById('storySkipBtn').onclick = exitStory;
+            document.getElementById('storyCtaBtn').onclick = exitStory;
+
+            // Start dialogue sequence
+            runStep(0);
+        }
+
+        // Helper function for facial expressions
+        function updateMainCharacterExpressions(speaker, mood) {
+            const doraMouth = document.getElementById('doraMouth');
+            const doraEyes = document.getElementById('doraEyes');
+            const nobiMouth = document.getElementById('nobiMouth');
+            const nobiEyes = document.getElementById('nobiEyes');
+
+            if (speaker === 'Doraemon') {
+                if (!doraMouth || !doraEyes) return;
+                
+                // If it is currently an ellipse, replace back with path if needed
+                if (mood !== 'shocked' && doraMouth.tagName.toLowerCase() !== 'path') {
+                    const newPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    newPath.id = 'doraMouth';
+                    newPath.setAttribute('stroke', '#1A2A3A');
+                    newPath.setAttribute('stroke-width', '3');
+                    newPath.setAttribute('fill', 'none');
+                    newPath.setAttribute('stroke-linecap', 'round');
+                    doraMouth.replaceWith(newPath);
+                }
+                
+                const updatedMouth = document.getElementById('doraMouth');
+                
+                if (mood === 'happy') {
+                    updatedMouth.setAttribute('d', 'M 72 122 Q 100 145 128 122');
+                    doraEyes.innerHTML = `
+                        <ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                        <ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                        <circle cx="76" cy="88" r="10" fill="#1A2A3A"/>
+                        <circle cx="128" cy="88" r="10" fill="#1A2A3A"/>
+                        <circle cx="79" cy="84" r="3.5" fill="#FFFFFF"/>
+                        <circle cx="131" cy="84" r="3.5" fill="#FFFFFF"/>
+                    `;
+                } else if (mood === 'shocked') {
+                    const newMouth = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+                    newMouth.id = 'doraMouth';
+                    newMouth.setAttribute('cx', '100');
+                    newMouth.setAttribute('cy', '130');
+                    newMouth.setAttribute('rx', '14');
+                    newMouth.setAttribute('ry', '10');
+                    newMouth.setAttribute('fill', '#E53935');
+                    newMouth.setAttribute('stroke', '#1A2A3A');
+                    newMouth.setAttribute('stroke-width', '2.5');
+                    doraMouth.replaceWith(newMouth);
+                    
+                    doraEyes.innerHTML = `
+                        <ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF" stroke="#E53935" stroke-width="1.5"/>
+                        <ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF" stroke="#E53935" stroke-width="1.5"/>
+                        <circle cx="74" cy="86" r="3" fill="#1A2A3A"/>
+                        <circle cx="126" cy="86" r="3" fill="#1A2A3A"/>
+                    `;
+                } else if (mood === 'sad') {
+                    updatedMouth.setAttribute('d', 'M 78 135 Q 100 120 122 135');
+                    doraEyes.innerHTML = `
+                        <path d="M 64 90 Q 74 76 84 90" stroke="#1A2A3A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                        <path d="M 116 90 Q 126 76 136 90" stroke="#1A2A3A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    `;
+                } else if (mood === 'determined') {
+                    updatedMouth.setAttribute('d', 'M 75 130 Q 100 125 125 130');
+                    doraEyes.innerHTML = `
+                        <ellipse cx="74" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                        <ellipse cx="126" cy="86" rx="15" ry="18" fill="#FFFFFF"/>
+                        <circle cx="78" cy="88" r="8" fill="#1A2A3A"/>
+                        <circle cx="124" cy="88" r="8" fill="#1A2A3A"/>
+                    `;
+                }
+            } else if (speaker === 'Nobita') {
+                if (!nobiMouth || !nobiEyes) return;
+                
+                // If it is currently an ellipse, replace back with path if needed
+                if (mood !== 'tripping' && nobiMouth.tagName.toLowerCase() !== 'path') {
+                    const newPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    newPath.id = 'nobiMouth';
+                    newPath.setAttribute('stroke', '#212121');
+                    newPath.setAttribute('stroke-width', '2.5');
+                    newPath.setAttribute('fill', 'none');
+                    newPath.setAttribute('stroke-linecap', 'round');
+                    nobiMouth.replaceWith(newPath);
+                }
+                
+                const updatedMouth = document.getElementById('nobiMouth');
+                
+                if (mood === 'happy') {
+                    updatedMouth.setAttribute('d', 'M 92 138 Q 100 144 108 138');
+                    nobiEyes.innerHTML = `
+                        <circle cx="82" cy="115" r="4" fill="#212121"/>
+                        <circle cx="118" cy="115" r="4" fill="#212121"/>
+                    `;
+                } else if (mood === 'tripping') {
+                    const newMouth = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+                    newMouth.id = 'nobiMouth';
+                    newMouth.setAttribute('cx', '100');
+                    newMouth.setAttribute('cy', '140');
+                    newMouth.setAttribute('rx', '10');
+                    newMouth.setAttribute('ry', '6');
+                    newMouth.setAttribute('fill', '#E53935');
+                    newMouth.setAttribute('stroke', '#1A2A3A');
+                    newMouth.setAttribute('stroke-width', '2');
+                    nobiMouth.replaceWith(newMouth);
+                    
+                    nobiEyes.innerHTML = `
+                        <path d="M 76 115 Q 82 109 88 115 Q 82 121 76 115" stroke="#212121" stroke-width="2.5" fill="none"/>
+                        <path d="M 112 115 Q 118 109 124 115 Q 118 121 112 115" stroke="#212121" stroke-width="2.5" fill="none"/>
+                    `;
+                } else if (mood === 'sad') {
+                    updatedMouth.setAttribute('d', 'M 90 142 Q 100 132 110 142');
+                    nobiEyes.innerHTML = `
+                        <path d="M 74 118 Q 82 108 90 118" stroke="#212121" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        <path d="M 110 118 Q 118 108 126 118" stroke="#212121" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    `;
+                } else if (mood === 'determined') {
+                    updatedMouth.setAttribute('d', 'M 90 138 L 110 138');
+                    nobiEyes.innerHTML = `
+                        <circle cx="84" cy="113" r="3.5" fill="#212121"/>
+                        <circle cx="116" cy="113" r="3.5" fill="#212121"/>
+                    `;
+                }
+            }
+        }
+
+        // ===== GADGET UNLOCK SYSTEM LOGIC =====
+        const GADGETS = [
+            { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks advanced stepper shortcuts and visual fly-by animations.", milestone: 10 },
+            { id: 20,  name: "Translation Jelly", icon: "🍮", desc: "Translates complex syntax. Unlocks detailed syntax definitions in coding sections.", milestone: 20 },
+            { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space. Enables fast-jump chapter map navigation in the level selector.", milestone: 30 },
+            { id: 40,  name: "Time Furoshiki",  icon: "🧣", desc: "Rewinds code state. Restores starter code instantly with a retro warp animation.", milestone: 40 },
+            { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structures reference cheat-sheet.", milestone: 10 },
+            { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loops/lines or empty structures.", milestone: 60 },
+            { id: 70,  name: "Big Light",      icon: "🔍", desc: "Inspects large variables. Shows detailed console logs and step-by-step traces in level editor.", milestone: 70 },
+            { id: 80,  name: "Computer Pencil", icon: "✏️", desc: "Writes clean code. Unlocks automated line completions and smart syntax hints.", milestone: 80 },
+            { id: 90,  name: "Gourmet Tablecloth", icon: "🍽️", desc: "Boosts coding focus. Unlocks alternative visual retro/future themes.", milestone: 90 },
+            { id: 100, name: "Super Python Glove", icon: "🥊", desc: "Smashes any bug in sight. Certified Python wizard badge to brag in your achievements!", milestone: 100 }
+        ];
+
+        // Web Audio API Synthesizer Sound Player
+        function playSynthSound(type) {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) return;
+                const ctx = new AudioContext();
+                
+                if (type === 'unlock') {
+                    // Rising arpeggio sound (cinematic chime)
+                    const now = ctx.currentTime;
+                    const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50]; // C4, E4, G4, C5, E5, G5, C6
+                    notes.forEach((freq, i) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(freq, now + i * 0.12);
+                        
+                        gain.gain.setValueAtTime(0.15, now + i * 0.12);
+                        gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.12 + 0.3);
+                        
+                        osc.connect(gain);
+                        gain.connect(ctx.destination);
+                        osc.start(now + i * 0.12);
+                        osc.stop(now + i * 0.12 + 0.35);
+                    });
+                } else if (type === 'claim') {
+                    // Victory fanfare chime
+                    const now = ctx.currentTime;
+                    const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+                    notes.forEach((freq, i) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(freq, now + i * 0.08);
+                        
+                        gain.gain.setValueAtTime(0.2, now + i * 0.08);
+                        gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.08 + 0.2);
+                        
+                        osc.connect(gain);
+                        gain.connect(ctx.destination);
+                        osc.start(now + i * 0.08);
+                        osc.stop(now + i * 0.08 + 0.25);
+                    });
+                } else if (type === 'click') {
+                    // Standard click chime
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(600, ctx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(150, ctx.currentTime + 0.1);
+                    
+                    gain.gain.setValueAtTime(0.1, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+                    
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start();
+                    osc.stop(ctx.currentTime + 0.12);
+                } else if (type === 'error') {
+                    // Small locked buzz sound
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(120, ctx.currentTime);
+                    
+                    gain.gain.setValueAtTime(0.15, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.25);
+                    
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start();
+                    osc.stop(ctx.currentTime + 0.26);
+                }
+            } catch (e) {
+                console.warn("AudioContext initialization blocked or failed", e);
+            }
+        }
+
+        // Check for pending gadget unlocks
+        function checkGadgetUnlocks() {
+            const completedCount = progress.completed.length;
+            
+            // Find gadgets whose milestone is met but not yet in progress.unlockedGadgets
+            const pendingGadget = GADGETS.find(g => completedCount >= g.milestone && !progress.unlockedGadgets.includes(g.milestone));
+            
+            if (pendingGadget) {
+                // Trigger unlock overlay
+                setTimeout(() => {
+                    const overlay = document.getElementById('gadgetUnlockOverlay');
+                    const iconEl = document.getElementById('unlockGadgetIcon');
+                    const nameEl = document.getElementById('unlockGadgetName');
+                    const descEl = document.getElementById('unlockGadgetDesc');
+                    
+                    if (overlay && iconEl && nameEl && descEl) {
+                        iconEl.textContent = pendingGadget.icon;
+                        nameEl.textContent = pendingGadget.name;
+                        descEl.textContent = pendingGadget.desc;
+                        
+                        overlay.classList.add('visible');
+                        playSynthSound('unlock');
+                        
+                        // Handle Claim
+                        document.getElementById('claimGadgetBtn').onclick = () => {
+                            playSynthSound('claim');
+                            progress.unlockedGadgets.push(pendingGadget.milestone);
+                            window.PyBe.saveProgress(progress);
+                            
+                            overlay.classList.remove('visible');
+                            updatePocketBadge();
+                            
+                            // Check for any more pending unlocks (cascade unlocks)
+                            setTimeout(checkGadgetUnlocks, 1000);
+                        };
+                    }
+                }, 1200); // Small delay to let the page load/confetti finish first
+            }
+        }
+
+        // Update Pocket badge indicator
+        function updatePocketBadge() {
+            const completedCount = progress.completed.length;
+            const pendingUnlocks = GADGETS.filter(g => completedCount >= g.milestone && !progress.unlockedGadgets.includes(g.milestone)).length;
+            
+            const badge = document.getElementById('pocketBadge');
+            if (badge) {
+                if (pendingUnlocks > 0) {
+                    badge.style.display = 'flex';
+                    badge.textContent = '!';
+                } else {
+                    badge.style.display = 'none';
+                }
+            }
+        }
+
+        // Build and display the Pocket grid modal
+        function openPocketModal() {
+            playSynthSound('click');
+            const grid = document.getElementById('pocketGrid');
+            const modal = document.getElementById('pocketModal');
+            const detailPanel = document.getElementById('gadgetDetailPanel');
+            
+            if (!grid || !modal || !detailPanel) return;
+            
+            grid.innerHTML = '';
+            detailPanel.classList.remove('visible'); // hide details until clicked
+            
+            GADGETS.forEach(g => {
+                const slot = document.createElement('div');
+                slot.className = 'gadget-slot';
+                
+                const isUnlocked = progress.unlockedGadgets.includes(g.milestone);
+                
+                if (isUnlocked) {
+                    slot.classList.add('unlocked');
+                    slot.innerHTML = `
+                        <div class="gadget-slot-icon">${g.icon}</div>
+                        <div class="gadget-slot-name">${g.name}</div>
+                    `;
+                    
+                    slot.onclick = () => {
+                        playSynthSound('click');
+                        showGadgetDetails(g, true);
+                    };
+                } else {
+                    slot.classList.add('locked');
+                    slot.innerHTML = `
+                        <div class="gadget-slot-icon"><i class="fas fa-lock" style="font-size:24px; opacity:0.6;"></i></div>
+                        <div class="gadget-slot-name">Level ${g.milestone}</div>
+                    `;
+                    
+                    slot.onclick = () => {
+                        playSynthSound('error');
+                        showGadgetDetails(g, false);
+                    };
+                }
+                
+                grid.appendChild(slot);
+            });
+            
+            modal.classList.add('visible');
+        }
+
+        function showGadgetDetails(gadget, isUnlocked) {
+            const panel = document.getElementById('gadgetDetailPanel');
+            const icon = document.getElementById('detailGadgetIcon');
+            const title = document.getElementById('detailGadgetTitle');
+            const milestone = document.getElementById('detailGadgetMilestone');
+            const desc = document.getElementById('detailGadgetDesc');
+            
+            if (!panel || !icon || !title || !milestone || !desc) return;
+            
+            if (isUnlocked) {
+                icon.textContent = gadget.icon;
+                title.textContent = gadget.name;
+                milestone.textContent = `Unlocked at Level ${gadget.milestone}`;
+                desc.textContent = gadget.desc;
+            } else {
+                icon.textContent = "🔒";
+                title.textContent = "Locked Gadget";
+                milestone.textContent = `Unlocks at Level ${gadget.milestone}`;
+                desc.textContent = `Keep learning Python! Complete ${gadget.milestone} levels to unlock the ${gadget.name} and restore it to Doraemon's pocket.`;
+            }
+            
+            panel.classList.add('visible');
+        }
+
+        function closePocketModal() {
+            playSynthSound('click');
+            const modal = document.getElementById('pocketModal');
+            if (modal) modal.classList.remove('visible');
+        }
+
+        // Register event listeners
+        const navPocketBtn = document.getElementById('navPocketBtn');
+        const pocketCloseBtn = document.getElementById('pocketCloseBtn');
+        const pocketModalEl = document.getElementById('pocketModal');
+
+        if (navPocketBtn) navPocketBtn.onclick = openPocketModal;
+        if (pocketCloseBtn) pocketCloseBtn.onclick = closePocketModal;
+        if (pocketModalEl) {
+            pocketModalEl.onclick = (e) => {
+                if (e.target === pocketModalEl) closePocketModal();
             };
         }
 
-        // Show start modal if they are at Level 0
+        // Initialize gadget badge and check triggers
+        updatePocketBadge();
+        checkGadgetUnlocks();
+
+        // Show Story Mode if they are at Level 0
         if (progress.currentLevel === 0) {
-            showStartJourneyModal();
+            showStoryMode();
         }
     })();
     </script>

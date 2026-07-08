@@ -10,10 +10,11 @@ function getProgress() {
         const data = localStorage.getItem(STORAGE_KEY);
         let progress;
         if (!data) {
-            progress = { currentLevel: 0, completed: [], lastPlayed: null, attempts: {}, streak: 0 };
+            progress = { currentLevel: 0, completed: [], lastPlayed: null, attempts: {}, streak: 0, unlockedGadgets: [] };
         } else {
             progress = JSON.parse(data);
             progress.attempts = progress.attempts || {};
+            progress.unlockedGadgets = progress.unlockedGadgets || [];
             // Reset currentLevel if it was artificially set to 100 in the past, or if completed is empty
             const expectedLevel = (progress.completed && progress.completed.length > 0) ? progress.completed.length + 1 : 0;
             if (progress.currentLevel > expectedLevel) {
@@ -22,7 +23,7 @@ function getProgress() {
         }
         return progress;
     } catch (e) {
-        return { currentLevel: 0, completed: [], lastPlayed: null, attempts: {}, streak: 0 };
+        return { currentLevel: 0, completed: [], lastPlayed: null, attempts: {}, streak: 0, unlockedGadgets: [] };
     }
 }
 

@@ -133,6 +133,7 @@
     <script src="js/progress.js"></script>
     <script src="js/levels_data.js"></script>
     <script src="js/confetti.js"></script>
+    <script src="js/floating_pocket.js"></script>
     <script>
     (function () {
         // ── Load level from URL ──────────────────────────────────
@@ -143,9 +144,54 @@
         // ── State ────────────────────────────────────────────────
         const sections = level.sections || ["description", "qna", "test", "coding"];
         let currentSection = 0;
+        let maxSectionUnlocked = 0;
         let testAnswers    = {};       // questionIndex -> user answer
         let testSubmitted  = false;
+        let codingSubmitted = false;   // Track if coding solution is submitted and correct
         let shortAnswerTexts = {};     // index -> typed text
+
+        // ── Navigation Gate Checkers ─────────────────────────────
+        function isSectionCleared(idx) {
+            const sec = sections[idx];
+            if (sec === 'description' || sec === 'qna') return true;
+            if (sec === 'test') {
+                if (!testSubmitted) return false;
+                const t = level.test;
+                if (t && t.questions) {
+                    let score = 0;
+                    t.questions.forEach((q, i) => {
+                        let correct = false;
+                        if (q.type === 'fill') {
+                            const el = document.getElementById('fill-' + i);
+                            const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
+                            correct = val === q.answer.toLowerCase();
+                        } else if (q.type === 'short') {
+                            const el = document.getElementById('short-' + i);
+                            correct = (el ? el.value.trim() : '').length > 15;
+                        } else if (q.type === 'tf') {
+                            correct = String(testAnswers[i]) === String(q.answer);
+                        } else {
+                            correct = parseInt(testAnswers[i]) === q.answer;
+                        }
+                        if (correct) score++;
+                    });
+                    const pct = Math.round((score / t.questions.length) * 100);
+                    return pct >= 60;
+                }
+                return true;
+            }
+            if (sec === 'coding') {
+                return codingSubmitted;
+            }
+            return true;
+        }
+
+        function canGoToSection(targetIdx) {
+            if (targetIdx <= currentSection) return true;
+            if (targetIdx <= maxSectionUnlocked) return true;
+            if (targetIdx === currentSection + 1 && isSectionCleared(currentSection)) return true;
+            return false;
+        }
 
         const TOTAL_LEVELS = 100;
 
@@ -188,34 +234,23 @@
                 if (i < currentSection) step.classList.add('done');
                 if (i === currentSection) step.classList.add('active');
                 step.addEventListener('click', () => {
-                    if (i < currentSection || canLeaveSection(currentSection)) {
+                    if (canGoToSection(i)) {
                         goToSection(i);
+                    } else {
+                        showToast("Complete the previous sections first!");
                     }
                 });
                 stepperTrack.appendChild(step);
             });
         }
 
-        // ── Can leave current section? ───────────────────────────
-        function canLeaveSection(idx) {
-            const sec = sections[idx];
-            if (sec === 'test' && !testSubmitted) {
-                // Must submit test (and pass) before leaving
-                if (Object.keys(testAnswers).length < level.test.questions.length) {
-                    showToast('Answer all questions before submitting!');
-                    return false;
-                }
-                submitTest();
-                return false; // submitTest will re-navigate
-            }
-            if (sec === 'coding') return true;
-            return true; // all others free to leave
-        }
+
 
         // ── Go to section ────────────────────────────────────────
         function goToSection(idx) {
             if (idx < 0 || idx >= sections.length) return;
             currentSection = idx;
+            maxSectionUnlocked = Math.max(maxSectionUnlocked, idx);
             buildStepper();
             renderSection(sections[idx]);
             updateNavButtons();
@@ -238,26 +273,34 @@
         });
 
         btnNext.addEventListener('click', () => {
+            // Check if current section is cleared before proceeding
+            if (!isSectionCleared(currentSection)) {
+                const sec = sections[currentSection];
+                if (sec === 'test') {
+                    if (!testSubmitted) {
+                        const totalQ = level.test.questions.length;
+                        const answered = Object.keys(testAnswers).length;
+                        if (answered < totalQ) {
+                            showToast('Answer all ' + totalQ + ' questions first!');
+                            return;
+                        }
+                        submitTest();
+                        return;
+                    } else {
+                        showToast('Score is below 60%. Please retry the test and pass to proceed!');
+                        return;
+                    }
+                } else if (sec === 'coding') {
+                    showToast('Please submit the correct coding solution first!');
+                    return;
+                }
+                return;
+            }
+
             // Last section — Finish
             if (currentSection >= sections.length - 1) {
                 finishLevel();
                 return;
-            }
-
-            const sec = sections[currentSection];
-
-            // Test section — check before submitting
-            if (sec === 'test') {
-                const totalQ = level.test.questions.length;
-                const answered = Object.keys(testAnswers).length;
-                if (!testSubmitted && answered < totalQ) {
-                    showToast('Answer all ' + totalQ + ' questions first!');
-                    return;
-                }
-                if (!testSubmitted) {
-                    submitTest();
-                    return;
-                }
             }
 
             goToSection(currentSection + 1);
@@ -321,6 +364,19 @@
         // ── Render Test ──────────────────────────────────────────
         function renderTest() {
             const t = level.test;
+            
+            // Pre-fill answers for levels 1 to 10
+            if (levelId <= 10) {
+                t.questions.forEach((q, qi) => {
+                    if (q.type === 'mcq' || q.type === 'tf') {
+                        testAnswers[qi] = q.answer;
+                    } else if (q.type === 'fill') {
+                        shortAnswerTexts[qi] = q.answer;
+                    } else if (q.type === 'short') {
+                        shortAnswerTexts[qi] = q.sampleAnswer || "Python is chosen for its readability, simple English-like rules, and powerful libraries.";
+                    }
+                });
+            }
             sectionContent.innerHTML = `
                 <div class="sec-test">
                     <div class="sec-heading-block">
@@ -502,6 +558,7 @@
                 return;
             }
             const hasScenario = !!level.scenario;
+            const starterCode = (levelId <= 10 && level.solution) ? level.solution : (level.starterCode || '');
             sectionContent.innerHTML = `
                 <div class="sec-coding">
                     <div class="sec-heading-block">
@@ -523,7 +580,7 @@
                             <span>python</span>
                         </div>
                         <textarea class="code-editor" id="codeEditor" spellcheck="false"
-                            placeholder="# Write your Python code here...">${level.starterCode || ''}</textarea>
+                            placeholder="# Write your Python code here...">${starterCode}</textarea>
                     </div>
 
                     <div class="action-row">
@@ -571,10 +628,12 @@
                 }
 
                 if (normalizeCode(code) === normalizeCode(solution)) {
-                    window.PyBe.completeLevel(levelId);
-                    launchConfetti();
-                    showSuccessModal();
+                    codingSubmitted = true;
+                    const consoleEl = document.getElementById('consoleOutput');
+                    consoleEl.innerHTML = `<span class="console-success">✅ Code is correct!\n🤖 Doraemon says: "Excellent job! Click the Finish button in the bottom navigation to complete the level."</span>`;
+                    consoleEl.classList.add('show');
                 } else {
+                    codingSubmitted = false;
                     const editor = document.getElementById('codeEditor');
                     editor.classList.add('shake');
                     setTimeout(() => editor.classList.remove('shake'), 500);
@@ -745,40 +804,17 @@
                 showCertificate(name);
                 return;
             }
-            const hasTest = sections.includes('test');
 
-            if (hasTest) {
-                // Must have submitted the test
-                if (!testSubmitted) {
-                    showToast('Submit the test first!');
-                    return;
-                }
-
-                const t = level.test;
-                if (t && t.questions) {
-                    let score = 0;
-                    t.questions.forEach((q, i) => {
-                        let correct = false;
-                        if (q.type === 'fill') {
-                            const el = document.getElementById('fill-' + i);
-                            const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
-                            correct = val === q.answer.toLowerCase();
-                        } else if (q.type === 'short') {
-                            const el = document.getElementById('short-' + i);
-                            correct = (el ? el.value.trim() : '').length > 15;
-                        } else if (q.type === 'tf') {
-                            correct = String(testAnswers[i]) === String(q.answer);
-                        } else {
-                            correct = parseInt(testAnswers[i]) === q.answer;
-                        }
-                        if (correct) score++;
-                    });
-
-                    const pct = Math.round((score / t.questions.length) * 100);
-                    if (pct < 60) {
-                        showToast('Score ' + pct + '% — need 60% to pass. Go back and try again!');
-                        return;
+            // Verify all sections are cleared
+            for (let i = 0; i < sections.length; i++) {
+                if (!isSectionCleared(i)) {
+                    const sec = sections[i];
+                    if (sec === 'test') {
+                        showToast('Please submit and pass the test first!');
+                    } else if (sec === 'coding') {
+                        showToast('Please submit the correct coding solution first!');
                     }
+                    return;
                 }
             }
 
@@ -841,6 +877,560 @@
                 window.location.href = 'home.html';
             }
         });
+
+        // ── TIME CLOTH GADGET INTEGRATION ────────────────────────
+        (function injectTimeCloth() {
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .tc-popup-overlay {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(10, 5, 20, 0.85);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 100000002;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.4s ease;
+                }
+
+                .tc-popup-overlay.visible {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+                .tc-card {
+                    background: #fff0f5;
+                    border: 6px solid #e91e63;
+                    border-radius: 35px;
+                    box-shadow: 0 30px 70px rgba(233, 30, 99, 0.4);
+                    width: 580px;
+                    max-width: 90%;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    position: relative;
+                    transform: scale(0.8) rotate(-3deg);
+                    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    font-family: 'Quicksand', sans-serif;
+                    color: #4a148c;
+                    background-image: radial-gradient(rgba(233, 30, 99, 0.05) 20%, transparent 20%),
+                                      radial-gradient(rgba(233, 30, 99, 0.05) 20%, transparent 20%);
+                    background-size: 30px 30px;
+                    background-position: 0 0, 15px 15px;
+                }
+
+                .tc-popup-overlay.visible .tc-card {
+                    transform: scale(1) rotate(0deg);
+                }
+
+                .tc-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 2px dashed rgba(233, 30, 99, 0.3);
+                    padding-bottom: 12px;
+                }
+
+                .tc-title {
+                    font-size: 22px;
+                    font-weight: 900;
+                    color: #880e4f;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .tc-close {
+                    background: none;
+                    border: none;
+                    color: #880e4f;
+                    font-size: 22px;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                }
+
+                .tc-close:hover {
+                    transform: scale(1.2);
+                    color: #e91e63;
+                }
+
+                .tc-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    max-height: 55vh;
+                    overflow-y: auto;
+                    padding-right: 6px;
+                }
+
+                .tc-mistake-item {
+                    background: rgba(255, 255, 255, 0.8);
+                    border: 2px solid rgba(233, 30, 99, 0.2);
+                    border-radius: 18px;
+                    padding: 16px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+                }
+
+                .tc-mistake-item:hover {
+                    border-color: #e91e63;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.15);
+                }
+
+                .tc-mistake-header {
+                    font-weight: 800;
+                    font-size: 14.5px;
+                    color: #880e4f;
+                    margin-bottom: 6px;
+                }
+
+                .tc-mistake-text {
+                    font-size: 13.5px;
+                    color: #4a148c;
+                    margin-bottom: 8px;
+                    word-break: break-all;
+                }
+
+                .tc-mistake-badge {
+                    background: #e91e63;
+                    color: white;
+                    font-size: 10px;
+                    font-weight: 700;
+                    padding: 2px 8px;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    margin-bottom: 6px;
+                }
+
+                .tc-retry-panel {
+                    background: #fff;
+                    border: 3px solid #e91e63;
+                    border-radius: 20px;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    animation: tcFadeIn 0.3s ease-out;
+                }
+
+                @keyframes tcFadeIn {
+                    from { opacity: 0; transform: translateY(10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+
+                .tc-explain-box {
+                    background: rgba(233, 30, 99, 0.05);
+                    border-left: 4px solid #e91e63;
+                    padding: 12px;
+                    border-radius: 0 12px 12px 0;
+                    font-size: 13px;
+                    line-height: 1.4;
+                    color: #880e4f;
+                }
+
+                .tc-input-label {
+                    font-weight: 700;
+                    font-size: 13.5px;
+                    color: #4a148c;
+                }
+
+                .tc-input-mcq {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 12px;
+                    border: 2px solid rgba(233, 30, 99, 0.3);
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 13.5px;
+                    color: #4a148c;
+                    outline: none;
+                    background: white;
+                }
+
+                .tc-input-mcq:focus {
+                    border-color: #e91e63;
+                }
+
+                .tc-input-text {
+                    width: 100%;
+                    padding: 10px 14px;
+                    border-radius: 12px;
+                    border: 2px solid rgba(233, 30, 99, 0.3);
+                    font-family: 'Fira Code', monospace;
+                    font-size: 13.5px;
+                    color: #4a148c;
+                    outline: none;
+                    background: white;
+                }
+
+                .tc-input-text:focus {
+                    border-color: #e91e63;
+                }
+
+                .tc-action-btn {
+                    background: linear-gradient(135deg, #e91e63, #d81b60);
+                    color: white;
+                    border: none;
+                    padding: 12px 24px;
+                    border-radius: 50px;
+                    font-weight: 800;
+                    font-size: 14.5px;
+                    cursor: pointer;
+                    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+                    transition: all 0.2s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                }
+
+                .tc-action-btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.5);
+                }
+            `;
+            document.head.appendChild(style);
+
+            const tcPopup = document.createElement('div');
+            tcPopup.className = 'tc-popup-overlay';
+            tcPopup.id = 'timeClothPopup';
+            tcPopup.innerHTML = `
+                <div class="tc-card" id="timeClothCard">
+                    <!-- Populated dynamically -->
+                </div>
+            `;
+            document.body.appendChild(tcPopup);
+        })();
+
+        function getMistakeExplanation(m) {
+            if (m.type === 'coding') {
+                return `Your coding solution was incorrect. Make sure you match variables case-sensitivity, check spellings of variable names, assign correct values, and print output exactly as instructed.`;
+            }
+            const q = m.qObj;
+            if (q && q.question.toLowerCase().includes('valid')) {
+                return `Variable names in Python must start with a letter (a-z, A-Z) or an underscore (_). They cannot start with numbers, contain spaces, hyphens, or symbols like $, @, %.`;
+            }
+            if (q && q.question.toLowerCase().includes('keyword')) {
+                return `Keywords like 'while', 'if', 'else', 'for', 'class', and 'def' are reserved by Python's compiler to define program control structure. Re-using them as variable names throws a SyntaxError.`;
+            }
+            if (q && q.question.toLowerCase().includes('convention') || q && q.question.toLowerCase().includes('snake')) {
+                return `Python's PEP 8 style guide recommends snake_case naming convention (all lowercase letters, with words separated by underscores like my_variable_name) to build clear and readable code.`;
+            }
+            if (m.userAnswer === 'false' || m.userAnswer === 'true') {
+                return `Boolean constants in Python are case-sensitive. True and False must always have their first letter capitalized. 'true' or 'false' in lowercase will cause a NameError.`;
+            }
+            return `You submitted '${m.userAnswer}'. Python rules require '${m.correctAnswer}'. Review the spelling and parameters, then select the correct answer.`;
+        }
+
+        function showRetryPanel(m) {
+            const container = document.getElementById('tcRetryPanelContainer');
+            if (!container) return;
+
+            const explanation = getMistakeExplanation(m);
+            let inputHtml = "";
+            if (m.type === 'coding') {
+                inputHtml = `
+                    <div class="tc-input-label">Rewrite your code solution:</div>
+                    <textarea class="tc-input-text" id="tcRetryCodeInput" rows="4">${m.userAnswer}</textarea>
+                `;
+            } else {
+                const q = m.qObj;
+                if (q.type === 'mcq') {
+                    inputHtml = `
+                        <div class="tc-input-label">Choose correct option:</div>
+                        <select class="tc-input-mcq" id="tcRetryMcqInput">
+                            ${q.options.map((opt, oi) => `
+                                <option value="${oi}" ${oi === parseInt(testAnswers[m.qi]) ? 'selected' : ''}>${opt}</option>
+                            `).join('')}
+                        </select>
+                    `;
+                } else if (q.type === 'tf') {
+                    inputHtml = `
+                        <div class="tc-input-label">Select answer:</div>
+                        <select class="tc-input-mcq" id="tcRetryTfInput">
+                            <option value="true" ${testAnswers[m.qi] === 'true' ? 'selected' : ''}>True</option>
+                            <option value="false" ${testAnswers[m.qi] === 'false' ? 'selected' : ''}>False</option>
+                        </select>
+                    `;
+                } else if (q.type === 'fill') {
+                    inputHtml = `
+                        <div class="tc-input-label">Type correct text:</div>
+                        <input type="text" class="tc-input-text" id="tcRetryFillInput" value="${m.userAnswer}" autocomplete="off">
+                    `;
+                } else if (q.type === 'short') {
+                    inputHtml = `
+                        <div class="tc-input-label">Elaborate your explanation:</div>
+                        <textarea class="tc-input-text" id="tcRetryShortInput" rows="3">${m.userAnswer}</textarea>
+                    `;
+                }
+            }
+
+            container.innerHTML = `
+                <div class="tc-retry-panel">
+                    <div class="tc-explain-box">
+                        <strong>⏳ Explanation of previous mistake:</strong><br/>
+                        ${explanation}
+                    </div>
+                    ${inputHtml}
+                    <button class="tc-action-btn" id="btnApplyTimeCloth">
+                        <i class="fas fa-undo"></i> Wrap with Time Cloth & Rewind
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('btnApplyTimeCloth').onclick = () => {
+                const card = document.getElementById('timeClothCard');
+                card.style.animation = 'tcWarp 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards';
+
+                try {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    if (AudioContext) {
+                        const ctx = new AudioContext();
+                        const now = ctx.currentTime;
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(600, now);
+                        osc.frequency.exponentialRampToValueAtTime(150, now + 1.0);
+                        gain.gain.setValueAtTime(0.2, now);
+                        gain.gain.linearRampToValueAtTime(0.01, now + 1.0);
+                        osc.connect(gain);
+                        gain.connect(ctx.destination);
+                        osc.start();
+                        osc.stop(now + 1.0);
+                    }
+                } catch(e) {}
+
+                setTimeout(() => {
+                    let corrected = false;
+                    if (m.type === 'coding') {
+                        const newCode = document.getElementById('tcRetryCodeInput').value.trim();
+                        const editor = document.getElementById('codeEditor');
+                        if (editor) editor.value = newCode;
+                        
+                        if (normalizeCode(newCode) === normalizeCode(m.correctAnswer.trim())) {
+                            corrected = true;
+                            codingSubmitted = true;
+                            const consoleEl = document.getElementById('consoleOutput');
+                            if (consoleEl) {
+                                consoleEl.innerHTML = `<span class="console-success">✅ Code is correct!\n🤖 Doraemon says: "Time Cloth restored your marks! Click the Finish button in the bottom navigation to complete the level."</span>`;
+                                consoleEl.classList.add('show');
+                            }
+                        } else {
+                            const consoleEl = document.getElementById('consoleOutput');
+                            if (consoleEl) {
+                                consoleEl.innerHTML = `<span class="console-error">❌ Code is still incorrect! Mistake is not fully solved, but Time Cloth was consumed.</span>`;
+                                consoleEl.classList.add('show');
+                            }
+                        }
+                    } else {
+                        const q = m.qObj;
+                        let newVal = "";
+                        if (q.type === 'mcq') {
+                            newVal = parseInt(document.getElementById('tcRetryMcqInput').value);
+                            testAnswers[m.qi] = newVal;
+                            corrected = newVal === q.answer;
+                        } else if (q.type === 'tf') {
+                            newVal = document.getElementById('tcRetryTfInput').value;
+                            testAnswers[m.qi] = newVal;
+                            corrected = newVal === q.answer;
+                        } else if (q.type === 'fill') {
+                            newVal = document.getElementById('tcRetryFillInput').value.trim();
+                            const fillInput = document.getElementById('fill-' + m.qi);
+                            if (fillInput) fillInput.value = newVal;
+                            corrected = newVal.toLowerCase() === q.answer.toLowerCase();
+                        } else if (q.type === 'short') {
+                            newVal = document.getElementById('tcRetryShortInput').value.trim();
+                            const shortInput = document.getElementById('short-' + m.qi);
+                            if (shortInput) shortInput.value = newVal;
+                            corrected = newVal.length > 15;
+                        }
+
+                        const qCard = document.querySelector(`.question-card[data-qi="${m.qi}"]`);
+                        if (qCard) {
+                            qCard.classList.remove('incorrect');
+                            if (corrected) {
+                                qCard.classList.add('correct');
+                                if (q.type === 'mcq') {
+                                    qCard.querySelectorAll('.q-option').forEach(l => {
+                                        l.classList.remove('correct', 'incorrect', 'selected');
+                                        const oi = parseInt(l.dataset.oi);
+                                        if (oi === q.answer) l.classList.add('correct');
+                                        if (oi === newVal) l.classList.add('selected');
+                                    });
+                                } else if (q.type === 'tf') {
+                                    qCard.querySelectorAll('.q-tf-btn').forEach(l => {
+                                        l.classList.remove('correct', 'incorrect', 'selected');
+                                        const v = l.querySelector('input').value;
+                                        if (v === q.answer) l.classList.add('correct');
+                                        if (v === newVal) l.classList.add('selected');
+                                    });
+                                }
+                            } else {
+                                qCard.classList.add('incorrect');
+                            }
+                        }
+                    }
+
+                    sessionStorage.setItem('pybe_time_cloth_used_' + levelId, 'true');
+
+                    if (corrected) {
+                        launchConfetti();
+                        showToast("✨ Mistake corrected! Marks restored successfully!");
+                        
+                        if (m.type !== 'coding') {
+                            const t = level.test;
+                            let score = 0;
+                            t.questions.forEach((qObj, i) => {
+                                let qCorrect = false;
+                                if (qObj.type === 'fill') {
+                                    const el = document.getElementById('fill-' + i);
+                                    const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
+                                    qCorrect = val === qObj.answer.toLowerCase();
+                                } else if (qObj.type === 'short') {
+                                    const el = document.getElementById('short-' + i);
+                                    qCorrect = (el ? el.value.trim() : '').length > 15;
+                                } else if (qObj.type === 'tf') {
+                                    qCorrect = String(testAnswers[i]) === String(qObj.answer);
+                                } else {
+                                    qCorrect = parseInt(testAnswers[i]) === qObj.answer;
+                                }
+                                if (qCorrect) score++;
+                            });
+                            const pct = Math.round((score / t.questions.length) * 100);
+                            const resultEl = document.getElementById('testResult');
+                            if (resultEl) {
+                                const passed = pct >= 60;
+                                resultEl.className = `test-result ${passed ? 'passed' : 'failed'}`;
+                                resultEl.querySelector('.result-score').textContent = `${score} / ${t.questions.length} correct (${pct}%)`;
+                                resultEl.querySelector('.result-msg').innerHTML = passed ? '✅ Great job! You\'re ready for the next section.' : '⚠️ Review the material and try again!';
+                            }
+                        }
+                    } else {
+                        showToast("Time Cloth reversed time but retry answer was incorrect!");
+                    }
+
+                    setTimeout(() => {
+                        card.style.animation = '';
+                        document.getElementById('timeClothPopup').classList.remove('visible');
+                    }, 500);
+                }, 1200);
+            };
+        }
+
+        function showTimeClothSelector(mistakes) {
+            const overlay = document.getElementById('timeClothPopup');
+            const card = document.getElementById('timeClothCard');
+            if (!overlay || !card) return;
+
+            card.innerHTML = `
+                <div class="tc-header">
+                    <div class="tc-title">⏳ Time Cloth mistake rewinder</div>
+                    <button class="tc-close" id="tcCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="tc-body" id="tcBodyContent">
+                    <p style="font-size:14px; margin-bottom:10px; font-weight:600;">Wrap a mistake with the Time Cloth to reverse time and retry it!</p>
+                    <div style="display:flex; flex-direction:column; gap:12px;" id="tcMistakesList">
+                        ${mistakes.map((m, index) => `
+                            <div class="tc-mistake-item" data-index="${index}">
+                                <div class="tc-mistake-badge">${m.type === 'coding' ? 'Coding Challenge' : 'Test Question ' + (m.qi + 1)}</div>
+                                <div class="tc-mistake-header">${m.type === 'coding' ? 'Solution error' : m.question}</div>
+                                <div class="tc-mistake-text"><strong>Your submission:</strong> <code>${m.userAnswer}</code></div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div id="tcRetryPanelContainer"></div>
+                </div>
+            `;
+
+            document.getElementById('tcCloseBtn').onclick = () => {
+                overlay.classList.remove('visible');
+            };
+
+            const items = card.querySelectorAll('.tc-mistake-item');
+            items.forEach(item => {
+                item.onclick = () => {
+                    const idx = parseInt(item.getAttribute('data-index'));
+                    showRetryPanel(mistakes[idx]);
+                };
+            });
+
+            overlay.classList.add('visible');
+            overlay.onclick = (e) => {
+                if (e.target === overlay) overlay.classList.remove('visible');
+            };
+        }
+
+        window.activateTimeCloth = function() {
+            if (sessionStorage.getItem('pybe_time_cloth_used_' + levelId) === 'true') {
+                return { success: false, reason: "Time Cloth can only be used once per level! ⏳" };
+            }
+            
+            const mistakes = [];
+            const t = level.test;
+            if (testSubmitted && t && t.questions) {
+                t.questions.forEach((q, qi) => {
+                    let correct = false;
+                    let userAnsVal = "";
+                    if (q.type === 'fill') {
+                        const el = document.getElementById('fill-' + qi);
+                        const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
+                        correct = val === q.answer.toLowerCase();
+                        userAnsVal = val;
+                    } else if (q.type === 'short') {
+                        const el = document.getElementById('short-' + qi);
+                        correct = (el ? el.value.trim() : '').length > 15;
+                        userAnsVal = el ? el.value.trim() : '';
+                    } else if (q.type === 'tf') {
+                        correct = String(testAnswers[qi]) === String(q.answer);
+                        userAnsVal = testAnswers[qi];
+                    } else {
+                        correct = parseInt(testAnswers[qi]) === q.answer;
+                        userAnsVal = q.options[testAnswers[qi]] || "";
+                    }
+                    
+                    if (!correct) {
+                        mistakes.push({
+                            type: 'test',
+                            qi: qi,
+                            question: q.question,
+                            userAnswer: userAnsVal,
+                            correctAnswer: q.type === 'mcq' ? q.options[q.answer] : q.answer,
+                            qObj: q
+                        });
+                    }
+                });
+            }
+            
+            const codeEditor = document.getElementById('codeEditor');
+            if (codeEditor) {
+                const code = codeEditor.value.trim();
+                if (code.length > 0 && !codingSubmitted) {
+                    mistakes.push({
+                        type: 'coding',
+                        question: 'Coding Round Solution',
+                        userAnswer: code,
+                        correctAnswer: level.solution
+                    });
+                }
+            }
+            
+            if (mistakes.length === 0) {
+                return { success: false, reason: "No mistakes found to rewind yet! Submit incorrect answers or code first. ⏳" };
+            }
+            
+            showTimeClothSelector(mistakes);
+            return { success: true };
+        }
 
         // ── Boot ─────────────────────────────────────────────────
         buildStepper();
