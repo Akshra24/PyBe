@@ -1095,6 +1095,315 @@
                     transform: translateY(-2px);
                     box-shadow: 0 8px 20px rgba(233, 30, 99, 0.5);
                 }
+
+                /* Anywhere Door Practice Room Styles */
+                .ad-popup-overlay {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(12, 4, 24, 0.88);
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 100000003;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.5s ease;
+                }
+
+                .ad-popup-overlay.visible {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+                .ad-card {
+                    background: #fff5f8;
+                    border: 8px solid #ff4081;
+                    border-radius: 40px;
+                    box-shadow: 0 35px 80px rgba(255, 64, 129, 0.4), inset 0 0 30px rgba(255, 64, 129, 0.1);
+                    width: 700px;
+                    max-width: 92%;
+                    max-height: 85vh;
+                    padding: 35px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    position: relative;
+                    transform: scale(0.8) translateY(50px);
+                    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+                    font-family: 'Quicksand', sans-serif;
+                    color: #4a001a;
+                    overflow: hidden;
+                }
+
+                .ad-popup-overlay.visible .ad-card {
+                    transform: scale(1) translateY(0);
+                }
+
+                .ad-card::before {
+                    content: '🚪';
+                    position: absolute;
+                    top: -15px;
+                    left: 20px;
+                    font-size: 55px;
+                    opacity: 0.15;
+                    z-index: 0;
+                }
+
+                .ad-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 2px dashed rgba(255, 64, 129, 0.3);
+                    padding-bottom: 12px;
+                    z-index: 1;
+                }
+
+                .ad-title-block {
+                    z-index: 1;
+                }
+
+                .ad-title {
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: #c2185b;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .ad-sub {
+                    font-size: 12px;
+                    color: #e91e63;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    margin-top: 2px;
+                    letter-spacing: 0.5px;
+                }
+
+                .ad-close {
+                    background: none;
+                    border: none;
+                    color: #c2185b;
+                    font-size: 24px;
+                    cursor: pointer;
+                    transition: transform 0.2s, color 0.2s;
+                    z-index: 1;
+                }
+
+                .ad-close:hover {
+                    transform: scale(1.15) rotate(90deg);
+                    color: #ff4081;
+                }
+
+                .ad-tabs {
+                    display: flex;
+                    gap: 10px;
+                    border-bottom: 2px solid rgba(255, 64, 129, 0.15);
+                    padding-bottom: 8px;
+                    z-index: 1;
+                }
+
+                .ad-tab-btn {
+                    background: rgba(255, 64, 129, 0.05);
+                    border: 1px solid rgba(255, 64, 129, 0.15);
+                    color: #c2185b;
+                    padding: 8px 18px;
+                    border-radius: 25px;
+                    font-weight: 700;
+                    font-size: 13.5px;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                .ad-tab-btn:hover {
+                    background: rgba(255, 64, 129, 0.1);
+                }
+
+                .ad-tab-btn.active {
+                    background: #ff4081;
+                    color: white;
+                    border-color: #ff4081;
+                    box-shadow: 0 4px 12px rgba(255, 64, 129, 0.3);
+                }
+
+                .ad-body {
+                    flex-grow: 1;
+                    overflow-y: auto;
+                    max-height: 52vh;
+                    padding-right: 6px;
+                    z-index: 1;
+                }
+
+                .ad-pane {
+                    display: none;
+                    animation: adFade 0.3s ease-out;
+                }
+
+                .ad-pane.active {
+                    display: block;
+                }
+
+                @keyframes adFade {
+                    from { opacity: 0; transform: translateY(10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+
+                .ad-example-card {
+                    background: #fff;
+                    border: 2px solid rgba(255, 64, 129, 0.15);
+                    border-radius: 20px;
+                    padding: 20px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+                    line-height: 1.6;
+                }
+
+                .ad-example-meta {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-weight: 800;
+                    color: #c2185b;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+
+                .ad-mcq-block {
+                    margin-bottom: 25px;
+                    background: #fff;
+                    border: 1px solid rgba(255, 64, 129, 0.1);
+                    border-radius: 20px;
+                    padding: 18px;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+                }
+
+                .ad-mcq-q {
+                    font-weight: 800;
+                    font-size: 14.5px;
+                    color: #c2185b;
+                    margin-bottom: 12px;
+                }
+
+                .ad-mcq-options {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
+
+                .ad-mcq-option {
+                    background: #fdfdfd;
+                    border: 1.5px solid rgba(255, 64, 129, 0.15);
+                    border-radius: 12px;
+                    padding: 10px 14px;
+                    font-size: 13.5px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                .ad-mcq-option:hover {
+                    border-color: #ff4081;
+                    background: rgba(255, 64, 129, 0.02);
+                }
+
+                .ad-mcq-option.correct {
+                    background: #e8f5e9;
+                    border-color: #4caf50;
+                    color: #2e7d32;
+                }
+
+                .ad-mcq-option.incorrect {
+                    background: #ffebee;
+                    border-color: #ef5350;
+                    color: #c62828;
+                }
+
+                .ad-mcq-feedback {
+                    margin-top: 10px;
+                    font-size: 13px;
+                    font-weight: 700;
+                    padding-left: 6px;
+                    animation: adFade 0.25s ease-out;
+                }
+
+                .ad-code-card {
+                    background: #fff;
+                    border: 2px solid rgba(255, 64, 129, 0.15);
+                    border-radius: 20px;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                .ad-code-editor {
+                    width: 100%;
+                    padding: 14px;
+                    background: #1e1e1e;
+                    color: #d4d4d4;
+                    border-radius: 14px;
+                    font-family: 'Fira Code', monospace;
+                    font-size: 13px;
+                    border: 2px solid #ff4081;
+                    outline: none;
+                    resize: vertical;
+                }
+
+                .ad-verify-btn {
+                    background: linear-gradient(135deg, #ff4081, #f50057);
+                    color: white;
+                    border: none;
+                    padding: 12px 24px;
+                    border-radius: 50px;
+                    font-weight: 800;
+                    font-size: 14px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
+                    transition: all 0.2s;
+                }
+
+                .ad-verify-btn:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(255, 64, 129, 0.5);
+                }
+
+                .ad-console {
+                    background: #fdf2f5;
+                    border-left: 4px solid #ff4081;
+                    border-radius: 0 12px 12px 0;
+                    padding: 12px;
+                    font-size: 13px;
+                    line-height: 1.45;
+                    font-family: 'Fira Code', monospace;
+                    display: none;
+                }
+
+                .ad-console.show {
+                    display: block;
+                }
+
+                .ad-trophy {
+                    text-align: center;
+                    font-size: 50px;
+                    animation: adBounce 1s infinite alternate;
+                    margin-bottom: 10px;
+                }
+
+                @keyframes adBounce {
+                    from { transform: translateY(0); }
+                    to { transform: translateY(-10px); }
+                }
             `;
             document.head.appendChild(style);
 
@@ -1107,6 +1416,17 @@
                 </div>
             `;
             document.body.appendChild(tcPopup);
+
+            // 3. Append DOM overlay for Anywhere Door
+            const adPopup = document.createElement('div');
+            adPopup.className = 'ad-popup-overlay';
+            adPopup.id = 'adPopup';
+            adPopup.innerHTML = `
+                <div class="ad-card" id="adCard">
+                    <!-- Populated dynamically -->
+                </div>
+            `;
+            document.body.appendChild(adPopup);
         })();
 
         function getMistakeExplanation(m) {
@@ -1431,6 +1751,251 @@
             showTimeClothSelector(mistakes);
             return { success: true };
         }
+
+        // ── ANYWHERE DOOR PRACTICE ROOM INTEGRATION ──────────────
+        function generatePracticeRoomContent(level) {
+            const title = level.title || "Python Basics";
+            
+            let realWorld = `Production backend developers use Python daily to automate reporting scripts. NASA researchers use Python scripts to compile climate metrics from weather stations. For instance, declaring tidy variables helps track raw temperatures and sensor heights cleanly without syntax errors!`;
+            let mcqs = [
+                {
+                    q: `Which option demonstrates clean Python naming style?`,
+                    opts: ["dorayakiCount", "dorayaki-count", "dorayaki_count", "DORAYAKICOUNT"],
+                    ans: 2,
+                    explain: "PEP 8 style guide recommends snake_case (all lowercase words joined by underscores) for Python variables."
+                },
+                {
+                    q: `What will happen if you start a variable name with a number?`,
+                    opts: ["Python ignores the number", "It raises a SyntaxError", "The variable becomes read-only", "Nothing, it is fully valid"],
+                    ans: 1,
+                    explain: "Variable names must start with a letter or an underscore. Starting with a number is grammatically incorrect in Python."
+                }
+            ];
+            let coding = {
+                mission: `Declare a variable named 'nobita_score' using snake_case, assign it the integer value 90, and print it.`,
+                solution: "nobita_score = 90\nprint(nobita_score)"
+            };
+
+            if (level.id === 1) {
+                realWorld = `<strong>Google Crawler Engine:</strong> Google developers wrote their earliest search engine web crawlers using Python. They chose Python because its clean, readable structure allowed them to easily write algorithms that scrape text and rank index data across billions of websites.`;
+                mcqs = [
+                    {
+                        q: `Which of the following describes a key advantage of Python?`,
+                        opts: ["Reads almost like plain English", "Requires semi-colons on every line", "It is only compiled, not interpreted", "Only works on Windows"],
+                        ans: 0,
+                        explain: "Python is designed for high readability and removes unnecessary syntactic boilerplates, reading similar to basic English."
+                    },
+                    {
+                        q: `In Python, a SyntaxError is raised when...`,
+                        opts: ["The CPU runs too hot", "The code breaks a grammatical rule of the language", "The output is mathematically incorrect", "Variables are set to zero"],
+                        ans: 1,
+                        explain: "Syntax errors occur when the interpreter scans code that breaks the structural grammar rules of the Python language."
+                    }
+                ];
+                coding = {
+                    mission: `Write a statement that prints the string "I love Python!" to the console output.`,
+                    solution: `print("I love Python!")`
+                };
+            } else if (level.id === 2) {
+                realWorld = `<strong>Spotify Recommendation Backend:</strong> Spotify interprets algorithms written in Python at runtime to recommend daily music mixes. Interpretation allows engineers to test algorithm changes on live user data instantly without compiler wait delays.`;
+                mcqs = [
+                    {
+                        q: `What is the role of the PVM (Python Virtual Machine)?`,
+                        opts: ["To turn off the computer on compilation error", "To translate Python code directly to HTML", "To interpret compiled bytecode on the host computer CPU", "To generate random print outputs"],
+                        ans: 2,
+                        explain: "The PVM is the runtime engine that executes Python's platform-independent compiled bytecode instructions."
+                    },
+                    {
+                        q: `Why is an interpreted language slower than a compiled one?`,
+                        opts: ["Compiled code must be translated line-by-line during runtime", "Interpreted code runs through PVM translation overhead at runtime", "Interpreted code has memory limits", "It is actually faster"],
+                        ans: 1,
+                        explain: "Interpreted languages translate instructions at runtime, adding minor overhead compared to compiled programs that execute binary files directly."
+                    }
+                ];
+                coding = {
+                    mission: `Create a variable named 'jelly' and store the string "Translation Jelly" inside it, then print its type using print(type(jelly)).`,
+                    solution: `jelly = "Translation Jelly"\nprint(type(jelly))`
+                };
+            } else if (level.id === 3) {
+                realWorld = `<strong>NASA Dashboard Separation:</strong> NASA separates frontend visuals from Python backends. The frontend displays live rocket telemetry to engineers, while Python servers process sensor readings, filter errors, and fetch historical databases.`;
+                mcqs = [
+                    {
+                        q: `Which programming languages are the core standard of frontend web interfaces?`,
+                        opts: ["Python, Java, and C++", "HTML, CSS, and JavaScript", "SQL, Go, and Ruby", "Python only"],
+                        ans: 1,
+                        explain: "Web browsers render HTML for layout structure, CSS for styling visual aesthetics, and JavaScript for client-side interactions."
+                    },
+                    {
+                        q: `Which error is raised if you try to add a string to an integer?`,
+                        opts: ["SyntaxError", "TypeError", "NameError", "ZeroDivisionError"],
+                        ans: 1,
+                        explain: "Adding incompatible types (like text and numbers) causes a TypeError because Python cannot execute '+' across those types without conversion."
+                    }
+                ];
+                coding = {
+                    mission: `Convert the number 100 into a string using the str() function, store it in 'string_value', and print it.`,
+                    solution: `string_value = str(100)\nprint(string_value)`
+                };
+            }
+
+            return { title, realWorld, mcqs, coding };
+        }
+
+        function showAnywhereDoorPracticeRoom() {
+            const overlayAd = document.getElementById('adPopup');
+            const card = document.getElementById('adCard');
+            if (!overlayAd || !card) return;
+
+            const data = generatePracticeRoomContent(level);
+
+            card.innerHTML = `
+                <div class="ad-header">
+                    <div class="ad-title-block">
+                        <div class="ad-title">🚪 Anywhere Door Practice Room</div>
+                        <div class="ad-sub">Level ${level.id} — ${data.title}</div>
+                    </div>
+                    <button class="ad-close" id="adCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="ad-tabs">
+                    <button class="ad-tab-btn active" data-tab="example">
+                        <i class="fas fa-industry"></i> Real-World Example
+                    </button>
+                    <button class="ad-tab-btn" data-tab="mcqs">
+                        <i class="fas fa-check-double"></i> Practice MCQs
+                    </button>
+                    <button class="ad-tab-btn" data-tab="coding">
+                        <i class="fas fa-terminal"></i> Practice Coding
+                    </button>
+                </div>
+
+                <div class="ad-body">
+                    <!-- Example Tab -->
+                    <div class="ad-pane active" id="adPane-example">
+                        <div class="ad-example-card">
+                            <div class="ad-example-meta">
+                                <i class="fas fa-rocket"></i> Python in the Wild:
+                            </div>
+                            <p class="ad-example-body">${data.realWorld}</p>
+                        </div>
+                    </div>
+
+                    <!-- MCQs Tab -->
+                    <div class="ad-pane" id="adPane-mcqs">
+                        ${data.mcqs.map((q, qi) => `
+                            <div class="ad-mcq-block" data-qi="${qi}">
+                                <div class="ad-mcq-q">Q${qi + 1}: ${q.q}</div>
+                                <div class="ad-mcq-options">
+                                    ${q.opts.map((opt, oi) => `
+                                        <div class="ad-mcq-option" data-oi="${oi}">${opt}</div>
+                                    `).join('')}
+                                </div>
+                                <div class="ad-mcq-feedback" id="adFeedback-${qi}" style="display:none;"></div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <!-- Coding Tab -->
+                    <div class="ad-pane" id="adPane-coding">
+                        <div class="ad-code-card">
+                            <p style="font-size:13.5px; font-weight:600; line-height:1.5; color:#5c0024;">
+                                📋 <strong>Mission:</strong> ${data.coding.mission}
+                            </p>
+                            <textarea class="ad-code-editor" id="adRetryEditor" rows="4" placeholder="# Write your practice Python code here..."></textarea>
+                            <button class="ad-verify-btn" id="btnVerifyAd">
+                                <i class="fas fa-play"></i> Run & Verify Code
+                            </button>
+                            <div class="ad-console" id="adConsole"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const tabBtns = card.querySelectorAll('.ad-tab-btn');
+            const tabPanes = card.querySelectorAll('.ad-pane');
+
+            tabBtns.forEach(btn => {
+                btn.onclick = () => {
+                    playPocketSynth('click');
+                    const targetTab = btn.getAttribute('data-tab');
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    card.querySelector(`#adPane-${targetTab}`).classList.add('active');
+                };
+            });
+
+            data.mcqs.forEach((q, qi) => {
+                const qBlock = card.querySelector(`.ad-mcq-block[data-qi="${qi}"]`);
+                const options = qBlock.querySelectorAll('.ad-mcq-option');
+                const feedbackEl = card.querySelector(`#adFeedback-${qi}`);
+
+                options.forEach(opt => {
+                    opt.onclick = () => {
+                        const oi = parseInt(opt.getAttribute('data-oi'));
+                        options.forEach(o => o.classList.remove('correct', 'incorrect'));
+                        
+                        if (oi === q.ans) {
+                            opt.classList.add('correct');
+                            feedbackEl.style.display = 'block';
+                            feedbackEl.style.color = '#2e7d32';
+                            feedbackEl.innerHTML = `✅ Correct! ${q.explain}`;
+                            playPocketSynth('click');
+                        } else {
+                            opt.classList.add('incorrect');
+                            feedbackEl.style.display = 'block';
+                            feedbackEl.style.color = '#c62828';
+                            feedbackEl.innerHTML = `❌ Incorrect. Try again! Hint: ${q.explain}`;
+                            playPocketSynth('error');
+                        }
+                    };
+                });
+            });
+
+            document.getElementById('btnVerifyAd').onclick = () => {
+                const code = document.getElementById('adRetryEditor').value.trim();
+                const solution = data.coding.solution.trim();
+                const consoleEl = document.getElementById('adConsole');
+                consoleEl.classList.add('show');
+
+                if (normalizeCode(code) === normalizeCode(solution)) {
+                    consoleEl.style.borderLeftColor = '#4caf50';
+                    consoleEl.style.background = '#e8f5e9';
+                    consoleEl.style.color = '#2e7d32';
+                    consoleEl.innerHTML = `
+                        <div class="ad-trophy">🏆</div>
+                        <strong>✅ Verified successfully!</strong><br/>
+                        Doraemon says: "Fantastic practice work! Your code executes cleanly. (This does not affect your official level score)."
+                    `;
+                    launchConfetti();
+                } else {
+                    consoleEl.style.borderLeftColor = '#ff4081';
+                    consoleEl.style.background = '#fdf2f5';
+                    consoleEl.style.color = '#c2185b';
+                    consoleEl.innerHTML = `
+                        <strong>❌ Verification failed!</strong><br/>
+                        Check your code parameters and try again. Make sure naming matches exactly!
+                    `;
+                    playPocketSynth('error');
+                }
+            };
+
+            document.getElementById('adCloseBtn').onclick = () => {
+                overlayAd.classList.remove('visible');
+            };
+
+            overlayAd.classList.add('visible');
+            overlayAd.onclick = (e) => {
+                if (e.target === overlayAd) overlayAd.classList.remove('visible');
+            };
+        }
+
+        window.activateAnywhereDoor = function() {
+            showAnywhereDoorPracticeRoom();
+            return { success: true };
+        };
 
         // ── Boot ─────────────────────────────────────────────────
         buildStepper();
