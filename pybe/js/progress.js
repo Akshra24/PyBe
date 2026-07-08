@@ -16,7 +16,7 @@ function getProgress() {
             progress.attempts = progress.attempts || {};
             progress.unlockedGadgets = progress.unlockedGadgets || [];
             // Reset currentLevel if it was artificially set to 100 in the past, or if completed is empty
-            const expectedLevel = (progress.completed && progress.completed.length > 0) ? progress.completed.length + 1 : 0;
+            const expectedLevel = (progress.completed && progress.completed.length > 0) ? progress.completed.length + 1 : 1;
             if (progress.currentLevel > expectedLevel) {
                 progress.currentLevel = expectedLevel;
             }
