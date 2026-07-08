@@ -254,28 +254,18 @@
         }
 
         // One-time reset to ensure testing progress starts fresh
-        if (!localStorage.getItem('pybe_journey_reset_v3')) {
+        if (!localStorage.getItem('pybe_journey_reset_v4')) {
             localStorage.removeItem('pybe_progress_v1');
             localStorage.removeItem('pybe_student_name');
             localStorage.removeItem('pybe_project_code');
             localStorage.removeItem('pybe_github_link');
             localStorage.removeItem('pybe_project_type');
-            localStorage.setItem('pybe_journey_reset_v3', 'true');
+            localStorage.setItem('pybe_journey_reset_v4', 'true');
         }
 
         // ── Load progress ──────────────────────────────────────
         let progress = window.PyBe ? window.PyBe.getProgress() : { currentLevel: 0, completed: [] };
 
-        // Force all levels to be unlocked permanently once the intro story is completed/skipped
-        if (progress.currentLevel > 0) {
-            if (progress.completed && progress.completed.length === 100) {
-                progress.completed = [];
-            }
-            progress.currentLevel = 100;
-            if (window.PyBe && window.PyBe.saveProgress) {
-                window.PyBe.saveProgress(progress);
-            }
-        }
 
         // ── Build 10×10 grid ────────────────────────────────────
         const grid = document.getElementById('levelGrid');
@@ -898,7 +888,7 @@
                 if (typeInterval) clearInterval(typeInterval);
                 
                 progress.completed = [];
-                progress.currentLevel = 100;
+                progress.currentLevel = 1;
                 window.PyBe.saveProgress(progress);
                 
                 buildGrid();

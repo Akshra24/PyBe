@@ -365,18 +365,8 @@
         function renderTest() {
             const t = level.test;
             
-            // Pre-fill answers for levels 1 to 10
-            if (levelId <= 10) {
-                t.questions.forEach((q, qi) => {
-                    if (q.type === 'mcq' || q.type === 'tf') {
-                        testAnswers[qi] = q.answer;
-                    } else if (q.type === 'fill') {
-                        shortAnswerTexts[qi] = q.answer;
-                    } else if (q.type === 'short') {
-                        shortAnswerTexts[qi] = q.sampleAnswer || "Python is chosen for its readability, simple English-like rules, and powerful libraries.";
-                    }
-                });
-            }
+            // No pre-fill answers
+
             sectionContent.innerHTML = `
                 <div class="sec-test">
                     <div class="sec-heading-block">
@@ -558,7 +548,7 @@
                 return;
             }
             const hasScenario = !!level.scenario;
-            const starterCode = (levelId <= 10 && level.solution) ? level.solution : (level.starterCode || '');
+            const starterCode = level.starterCode || '';
             sectionContent.innerHTML = `
                 <div class="sec-coding">
                     <div class="sec-heading-block">
