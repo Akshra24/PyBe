@@ -154,10 +154,6 @@
                 <i class="fas fa-fire streak-flame"></i>
                 <span id="navStreakText"></span>
             </div>
-            <button class="nav-pocket-btn" id="navPocketBtn">
-                <i class="fas fa-shopping-bag"></i> 4D Pocket
-                <span class="badge" id="pocketBadge" style="display:none;">!</span>
-            </button>
         </div>
 
         <!-- Level Grid -->
@@ -222,6 +218,7 @@
     <script src="js/levels_data.js"></script>
     <script src="js/levels.js"></script>
     <script src="js/floating_pocket.js"></script>
+    <script src="js/xp_system.js"></script>
     <script>
     (function () {
         const TOTAL_LEVELS = 100;
@@ -271,7 +268,13 @@
 
         // Force all levels to be unlocked permanently once the intro story is completed/skipped
         if (progress.currentLevel > 0) {
+            if (progress.completed && progress.completed.length === 100) {
+                progress.completed = [];
+            }
             progress.currentLevel = 100;
+            if (window.PyBe && window.PyBe.saveProgress) {
+                window.PyBe.saveProgress(progress);
+            }
         }
 
         // ── Build 10×10 grid ────────────────────────────────────
@@ -894,6 +897,7 @@
             function exitStory() {
                 if (typeInterval) clearInterval(typeInterval);
                 
+                progress.completed = [];
                 progress.currentLevel = 100;
                 window.PyBe.saveProgress(progress);
                 
@@ -1267,11 +1271,8 @@
         }
 
         // Register event listeners
-        const navPocketBtn = document.getElementById('navPocketBtn');
         const pocketCloseBtn = document.getElementById('pocketCloseBtn');
         const pocketModalEl = document.getElementById('pocketModal');
-
-        if (navPocketBtn) navPocketBtn.onclick = openPocketModal;
         if (pocketCloseBtn) pocketCloseBtn.onclick = closePocketModal;
         if (pocketModalEl) {
             pocketModalEl.onclick = (e) => {

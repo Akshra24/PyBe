@@ -9,16 +9,20 @@
     window.PyBeFloatingPocketLoaded = true;
 
     const GADGETS = [
-        { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks stepper shortcuts. (Fires cloud fly-by sweep!)", maxUses: 3, cooldown: 60, milestone: 10 },
-        { id: 20,  name: "Time Cloth", icon: "⏳", desc: "Wraps mistakes to reverse time! Retry one incorrect test question or code submission per level, restoring lost marks and explaining the mistake. (Once per level)", maxUses: 1, cooldown: 120, milestone: 20 },
-        { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space. Enables fast chapter map jumps. (Flashes pink warp portal!)", maxUses: 999, cooldown: 10, milestone: 30 },
-        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Shines a light on coding bugs! Identifies the error type (syntax, runtime, or logical) and highlights the line containing the error in your editor. (Once per activation)", maxUses: 3, cooldown: 90, milestone: 40 },
-        { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structure reference sheets. (Spawns glowing memory slices!)", maxUses: 3, cooldown: 90, milestone: 10 },
-        { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loop lines. (Shrinks page layout size!)", maxUses: 999, cooldown: 30, milestone: 60 },
-        { id: 70,  name: "Big Light",      icon: "🔍", desc: "Inspects large variables. Shows detailed trace logs. (Expands page layout size!)", maxUses: 999, cooldown: 30, milestone: 70 },
-        { id: 80,  name: "Computer Pencil", icon: "✏️", desc: "Writes clean code. Unlocks automated completions. (Paints glowing lines across screen!)", maxUses: 3, cooldown: 150, milestone: 80 },
-        { id: 90,  name: "Gourmet Tablecloth", icon: "🍽️", desc: "Boosts coding focus. Unlocks alternative visual retro themes. (Spawns falling sweets!)", maxUses: 4, cooldown: 180, milestone: 90 },
-        { id: 100, name: "Super Python Glove", icon: "🥊", desc: "Smashes any bug in sight. Certified Python wizard badge! (Triggers screen punch bug strike!)", maxUses: 1, cooldown: 300, milestone: 100 }
+        { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks stepper shortcuts. (Fires cloud fly-by sweep!)", maxUses: 3, cooldown: 60, milestone: 0 },
+        { id: 20,  name: "Time Cloth", icon: "⏳", desc: "Wraps mistakes to reverse time! Retry one incorrect test question or code submission per level, restoring lost marks and explaining the mistake. (Once per level)", maxUses: 1, cooldown: 120, milestone: 0 },
+        { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space. Enables fast chapter map jumps. (Flashes pink warp portal!)", maxUses: 999, cooldown: 10, milestone: 0 },
+        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Shines a light on coding bugs! Identifies the error type (syntax, runtime, or logical) and highlights the line containing the error in your editor. (Once per activation)", maxUses: 3, cooldown: 90, milestone: 0 },
+        { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structure reference sheets. (Spawns glowing memory slices!)", maxUses: 3, cooldown: 90, milestone: 0 },
+        { id: 25,  name: "Translation Jelly", icon: "🍮", desc: "Instantly translates lessons into simple English, Hindi, Hinglish, or beginner explanations with analogies and breakdowns. (Unlocks after Level 10)", maxUses: 5, cooldown: 60, milestone: 10 },
+        { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loop lines. (Shrinks page layout size!)", maxUses: 999, cooldown: 30, milestone: 20 },
+        { id: 65,  name: "Lucky Star",       icon: "⭐", desc: "Restores one lost daily streak every seven days! Automatically updates your active streak. (Once per 7 days)", maxUses: 1, cooldown: 604800, milestone: 30 },
+        { id: 70,  name: "Big Light",      icon: "🔍", desc: "Inspects large variables. Shows detailed trace logs. (Expands page layout size!)", maxUses: 999, cooldown: 30, milestone: 40 },
+        { id: 75,  name: "Time TV",        icon: "📺", desc: "Launches the temporal dashboard! View previous level attempts, coding submissions, accuracy rates, and topic strengths. (Unlocks after Level 50)", maxUses: 999, cooldown: 15, milestone: 50 },
+        { id: 80,  name: "Computer Pencil", icon: "✏️", desc: "Writes clean code. Unlocks automated completions. (Paints glowing lines across screen!)", maxUses: 3, cooldown: 150, milestone: 60 },
+        { id: 85,  name: "Energy Capsule",   icon: "💊", desc: "Provides one extra coding submission during a coding round without incrementing attempts or reducing efficiency scores. (Once per coding round)", maxUses: 3, cooldown: 60, milestone: 70 },
+        { id: 90,  name: "Gourmet Tablecloth", icon: "🍽️", desc: "Boosts coding focus. Unlocks alternative visual retro themes. (Spawns falling sweets!)", maxUses: 4, cooldown: 180, milestone: 80 },
+        { id: 100, name: "Super Python Glove", icon: "🥊", desc: "Smashes any bug in sight. Certified Python wizard badge! (Triggers screen punch bug strike!)", maxUses: 1, cooldown: 300, milestone: 90 }
     ];
 
     // ===== POCKET STATE persistence =====
@@ -129,6 +133,34 @@
                 gain.connect(ctx.destination);
                 osc.start();
                 osc.stop(now + 0.12);
+            } else if (type === 'star') {
+                const notes = [523.25, 659.25, 783.99, 1046.50, 1567.98, 2093.00];
+                notes.forEach((freq, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, now + i * 0.08);
+                    gain.gain.setValueAtTime(0.12, now + i * 0.08);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.08 + 0.3);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(now + i * 0.08);
+                    osc.stop(now + i * 0.08 + 0.3);
+                });
+            } else if (type === 'capsule') {
+                const notes = [440, 554, 659, 880];
+                notes.forEach((freq, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, now + i * 0.05);
+                    gain.gain.setValueAtTime(0.1, now + i * 0.05);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.05 + 0.15);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start(now + i * 0.05);
+                    osc.stop(now + i * 0.05 + 0.18);
+                });
             } else if (type === 'bread') {
                 // Twinkling chime
                 const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51, 1567.98];
@@ -707,6 +739,28 @@
             100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
         }
 
+        /* Translation Jelly fall column */
+        .fp-jelly-column {
+            position: absolute;
+            top: -200px;
+            color: #ffb300;
+            text-shadow: 0 0 10px rgba(255, 179, 0, 0.8);
+            font-family: 'Fira Code', monospace;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 1.2;
+            pointer-events: none;
+            opacity: 0;
+            animation: fpJellyFall 1.8s linear forwards;
+        }
+
+        @keyframes fpJellyFall {
+            0% { transform: translateY(0); opacity: 0; }
+            15% { opacity: 0.95; }
+            85% { opacity: 0.95; }
+            100% { transform: translateY(120vh); opacity: 0; }
+        }
+
         /* Punch graphic glove */
         .fp-punch-fx {
             position: absolute;
@@ -967,6 +1021,255 @@
             color: #4e342e;
             padding-left: 26px;
         }
+
+        /* Time TV Retro-Futuristic Styles */
+        .ttv-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 8, 22, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000005;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .ttv-overlay.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .ttv-card {
+            background: #2b1f1d;
+            border: 12px solid #5d4037;
+            border-radius: 40px;
+            box-shadow: 0 40px 90px rgba(0, 0, 0, 0.6), inset 0 0 50px rgba(0, 0, 0, 0.8);
+            width: 850px;
+            max-width: 95%;
+            max-height: 90vh;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: scale(0.8) translateY(50px);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-family: 'Quicksand', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .ttv-overlay.visible .ttv-card {
+            transform: scale(1) translateY(0);
+        }
+
+        .ttv-screen {
+            background: #111e18;
+            border: 16px solid #424242;
+            border-radius: 30px;
+            box-shadow: inset 0 0 35px rgba(0,255,100,0.25), 0 0 20px rgba(0,0,0,0.5);
+            padding: 25px;
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+        }
+
+        .ttv-screen::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 10;
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+            opacity: 0.85;
+        }
+
+        .ttv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px dashed rgba(0, 255, 100, 0.3);
+            padding-bottom: 12px;
+        }
+
+        .ttv-title {
+            font-size: 24px;
+            font-weight: 900;
+            color: #00ff66;
+            text-shadow: 0 0 10px rgba(0, 255, 100, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ttv-close {
+            background: none;
+            border: none;
+            color: #00ff66;
+            font-size: 26px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .ttv-close:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 15px rgba(0, 255, 100, 0.8);
+        }
+
+        .ttv-cabinet-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding: 0 10px;
+        }
+
+        .ttv-knobs {
+            display: flex;
+            gap: 15px;
+        }
+
+        .ttv-knob {
+            width: 32px;
+            height: 32px;
+            background: #4e342e;
+            border: 3px solid #3e2723;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .ttv-knob:hover {
+            transform: rotate(30deg);
+        }
+
+        .ttv-knob::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 12px;
+            background: #00ff66;
+            top: 2px;
+            left: 11px;
+        }
+
+        .ttv-speaker-grille {
+            width: 120px;
+            height: 12px;
+            background: repeating-linear-gradient(90deg, #3e2723, #3e2723 4px, #2b1f1d 4px, #2b1f1d 8px);
+            border-radius: 6px;
+        }
+
+        .ttv-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+        }
+
+        .ttv-panel {
+            background: rgba(0, 40, 10, 0.3);
+            border: 1px solid rgba(0, 255, 100, 0.2);
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .ttv-panel-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #00ff66;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ttv-radial-wrap {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ttv-stats-card {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .ttv-stat-val {
+            font-size: 26px;
+            font-weight: 900;
+            color: #00ff66;
+            text-shadow: 0 0 10px rgba(0, 255, 100, 0.4);
+        }
+
+        .ttv-sw-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .ttv-sw-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 13.5px;
+        }
+
+        .ttv-sw-item.strong { border-left: 4px solid #4caf50; }
+        .ttv-sw-item.weak { border-left: 4px solid #ef5350; }
+
+        .ttv-table-wrap {
+            max-height: 180px;
+            overflow-y: auto;
+            border: 1px solid rgba(0, 255, 100, 0.15);
+            border-radius: 12px;
+        }
+
+        .ttv-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .ttv-table th, .ttv-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid rgba(0, 255, 100, 0.1);
+        }
+
+        .ttv-table th {
+            background: rgba(0, 255, 100, 0.1);
+            color: #00ff66;
+            font-weight: 800;
+        }
+
+        .ttv-table tr:hover {
+            background: rgba(0, 255, 100, 0.04);
+        }
+
+        .ttv-code-badge {
+            background: rgba(0, 255, 100, 0.2);
+            color: #00ff66;
+            border: 1px solid #00ff66;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 11px;
+            cursor: pointer;
+            font-family: monospace;
+        }
     `;
 
     // ===== DOM CREATION & STYLES INJECTION =====
@@ -1041,6 +1344,17 @@
             </div>
         `;
         document.body.appendChild(mbPopup);
+
+        // 7. Create Time TV dashboard popup
+        const ttvPopup = document.createElement('div');
+        ttvPopup.className = 'ttv-overlay';
+        ttvPopup.id = 'timeTvPopup';
+        ttvPopup.innerHTML = `
+            <div class="ttv-card" id="timeTvCard">
+                <!-- Built dynamically by showTimeTvDashboard() -->
+            </div>
+        `;
+        document.body.appendChild(ttvPopup);
     }
 
     // ===== STATE & COOLDOWNS CONTROLLER =====
@@ -1111,8 +1425,12 @@
             } else {
                 slot.classList.add('locked');
                 slot.innerHTML = `
-                    <div class="fp-slot-icon"><i class="fas fa-lock" style="font-size:20px; opacity:0.5;"></i></div>
-                    <div class="fp-slot-name">Lvl ${g.milestone}</div>
+                    <div class="fp-slot-icon" style="position:relative; opacity: 0.6;">
+                        ${g.icon}
+                        <i class="fas fa-lock" style="position:absolute; bottom:-4px; right:-4px; font-size:12px; color:#ef5350; background:#111; border-radius:50%; padding:2px; box-shadow:0 0 5px rgba(0,0,0,0.5);"></i>
+                    </div>
+                    <div class="fp-slot-name" style="opacity:0.6;">${g.name}</div>
+                    <div style="font-size: 10px; color: #ef5350; font-weight: 700; margin-top: 2px;">Lvl ${g.milestone}</div>
                 `;
                 slot.onclick = () => {
                     playPocketSynth('error');
@@ -1182,14 +1500,17 @@
 
         detail.innerHTML = `
             <div class="fp-detail-header">
-                <div class="fp-detail-large-icon">${isUnlocked ? gadget.icon : "🔒"}</div>
+                <div class="fp-detail-large-icon" style="position:relative;">
+                    ${gadget.icon}
+                    ${isUnlocked ? '' : '<i class="fas fa-lock" style="position:absolute; bottom:0; right:0; font-size:16px; color:#ef5350; background:#1e1e1e; border-radius:50%; padding:4px;"></i>'}
+                </div>
                 <div class="fp-detail-title-block">
-                    <div class="fp-detail-name">${isUnlocked ? gadget.name : "Locked Gadget"}</div>
+                    <div class="fp-detail-name">${gadget.name}</div>
                     ${statusHTML}
                 </div>
             </div>
             <div class="fp-detail-desc">
-                ${isUnlocked ? gadget.desc : `Complete ${gadget.milestone} Python levels to unlock the ${gadget.name} and add it to your 4D pocket inventory.`}
+                ${isUnlocked ? gadget.desc : `🔒 <strong>This gadget is locked!</strong> Complete and clear up to <strong>Level ${gadget.milestone}</strong> to unlock the ${gadget.name} and add it to your active 4D pocket inventory.`}
             </div>
             <div class="fp-detail-stats">
                 <div class="fp-stat-box">
@@ -1223,10 +1544,13 @@
         if (gadget.id === 10) synthType = 'copter';
         else if (gadget.id === 20) synthType = 'jelly';
         else if (gadget.id === 30) synthType = 'door';
-        else if (gadget.id === 40) synthType = 'furoshiki';
+        else if (gadget.id === 40) synthType = 'flashlight';
         else if (gadget.id === 50) synthType = 'bread';
+        else if (gadget.id === 25) synthType = 'bread';
         else if (gadget.id === 60) synthType = 'light';
+        else if (gadget.id === 65) synthType = 'star';
         else if (gadget.id === 70) synthType = 'light_big';
+        else if (gadget.id === 75) synthType = 'furoshiki';
         else if (gadget.id === 80) synthType = 'pencil';
         else if (gadget.id === 90) synthType = 'tablecloth';
         else if (gadget.id === 100) synthType = 'glove';
@@ -1289,6 +1613,8 @@
                             if (pocketState.uses[20] < 1) pocketState.uses[20]++;
                             savePocketState();
                             rebuildInventoryGrid();
+                        } else {
+                            if (window.unlockAchievement) window.unlockAchievement('time_lord');
                         }
                     } else {
                         showPocketToast("Open a level and activate Time Cloth to rewind a mistake! ⏳");
@@ -1322,17 +1648,81 @@
             }, 2500);
 
         } else if (gadgetId === 40) {
-            // Time Furoshiki: black-and-white rewind screen
+            // Search Light: spotlight sweep effect
             const filter = document.getElementById('floatingPocketRewindFilter');
             if (filter) {
+                filter.style.background = 'rgba(255, 235, 59, 0.15)'; // Yellow tint
+                filter.style.transition = 'opacity 0.3s';
                 filter.style.opacity = '1';
+                playPocketSynth('flashlight');
                 setTimeout(() => {
                     filter.style.opacity = '0';
                     overlay.style.display = 'none';
-                }, 3000);
+                    overlay.innerHTML = '';
+                    
+                    const isLevelPage = window.location.pathname.includes('level.html');
+                    if (isLevelPage && window.activateSearchLight) {
+                        const res = window.activateSearchLight();
+                        if (res && !res.success) {
+                            showPocketToast(res.reason);
+                            if (pocketState.uses[40] < 3) pocketState.uses[40]++;
+                            savePocketState();
+                            rebuildInventoryGrid();
+                        } else {
+                            if (window.unlockAchievement) window.unlockAchievement('bug_hunter');
+                        }
+                    } else {
+                        showPocketToast("Open a level and activate Search Light to scan your editor! 🔦");
+                        if (pocketState.uses[40] < 3) pocketState.uses[40]++;
+                        savePocketState();
+                        rebuildInventoryGrid();
+                    }
+                }, 1000);
             } else {
                 overlay.style.display = 'none';
             }
+
+        } else if (gadgetId === 25) {
+            // Translation Jelly: matrix falls
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const col = document.createElement('div');
+                    col.className = 'fp-jelly-column';
+                    col.style.left = Math.random() * 98 + '%';
+                    let text = '';
+                    const chars = 'TranslateJelly翻訳जेलीHinglish';
+                    for (let j = 0; j < 12; j++) {
+                        text += chars[Math.floor(Math.random() * chars.length)] + '<br>';
+                    }
+                    col.innerHTML = text;
+                    col.style.animationDuration = (Math.random() * 1.0 + 1.2) + 's';
+                    overlay.appendChild(col);
+                    setTimeout(() => col.remove(), 2000);
+                }, i * 60);
+            }
+
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                overlay.innerHTML = '';
+                
+                const isLevelPage = window.location.pathname.includes('level.html');
+                if (isLevelPage && window.activateTranslationJelly) {
+                    const res = window.activateTranslationJelly();
+                    if (res && !res.success) {
+                        showPocketToast(res.reason);
+                        if (pocketState.uses[25] < 5) pocketState.uses[25]++;
+                        savePocketState();
+                        rebuildInventoryGrid();
+                    } else {
+                        if (window.unlockAchievement) window.unlockAchievement('polyglot');
+                    }
+                } else {
+                    showPocketToast("Open a level and activate Translation Jelly to translate the lesson! 🍮");
+                    if (pocketState.uses[25] < 5) pocketState.uses[25]++;
+                    savePocketState();
+                    rebuildInventoryGrid();
+                }
+            }, 1800);
 
         } else if (gadgetId === 50) {
             // Memory Bread: float in holographic bread slices
@@ -1390,6 +1780,74 @@
                 overlay.style.display = 'none';
             }, 6000);
 
+        } else if (gadgetId === 65) {
+            // Lucky Star: Sparkles visual chime and restores streak
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const star = document.createElement('div');
+                    star.className = 'fp-sweet';
+                    star.innerHTML = '⭐';
+                    star.style.left = (Math.random() * 95) + '%';
+                    star.style.top = '100vh';
+                    star.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                    star.style.position = 'absolute';
+                    star.style.transition = 'all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    star.style.textShadow = '0 0 10px #ffeb3b';
+                    overlay.appendChild(star);
+                    
+                    setTimeout(() => {
+                        star.style.transform = `translateY(-110vh) rotate(${Math.random() * 720}deg)`;
+                        star.style.opacity = '0';
+                    }, 50);
+                    
+                    setTimeout(() => star.remove(), 1600);
+                }, i * 80);
+            }
+
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                overlay.innerHTML = '';
+                
+                try {
+                    const progressKey = 'pybe_progress';
+                    const progress = JSON.parse(localStorage.getItem(progressKey) || '{}');
+                    
+                    const prevStreak = progress.prevStreak || 0;
+                    if (prevStreak > progress.streak) {
+                        const restoredVal = prevStreak;
+                        progress.streak = restoredVal;
+                        progress.prevStreak = 0;
+                        localStorage.setItem(progressKey, JSON.stringify(progress));
+                        
+                        const navStreak = document.getElementById('navStreak');
+                        const navStreakText = document.getElementById('navStreakText');
+                        if (navStreak && navStreakText) {
+                            navStreak.style.display = 'flex';
+                            navStreakText.textContent = `${restoredVal} day streak`;
+                        }
+                        
+                        showPocketToast(`✨ Lucky Star Restored Streak to ${restoredVal} Days! 🔥`);
+                        launchConfetti();
+                    } else {
+                        progress.streak = (progress.streak || 0) + 1;
+                        localStorage.setItem(progressKey, JSON.stringify(progress));
+                        
+                        const navStreak = document.getElementById('navStreak');
+                        const navStreakText = document.getElementById('navStreakText');
+                        if (navStreak && navStreakText) {
+                            navStreak.style.display = 'flex';
+                            navStreakText.textContent = `${progress.streak} day streak`;
+                        }
+                        
+                        showPocketToast(`✨ Streak Boosted by 1 Day! Current Streak: ${progress.streak} Days! ⭐`);
+                        launchConfetti();
+                    }
+                } catch(e) {
+                    console.error("Error restoring streak", e);
+                    showPocketToast("✨ Lucky Star activated!");
+                }
+            }, 2000);
+
         } else if (gadgetId === 70) {
             // Big Light: enlarges page font sizes temporarily
             document.body.style.transition = 'transform 0.8s ease-in-out';
@@ -1406,6 +1864,23 @@
                 document.body.style.transform = '';
                 overlay.style.display = 'none';
             }, 6000);
+
+        } else if (gadgetId === 75) {
+            // Time TV: TV screen scan filter
+            const flash = document.createElement('div');
+            flash.style.cssText = 'position:fixed; inset:0; background:rgba(0, 255, 100, 0.3); z-index:99999999; pointer-events:none; opacity:1; transition:opacity 0.5s;';
+            document.body.appendChild(flash);
+            setTimeout(() => { flash.style.opacity = '0'; setTimeout(() => flash.remove(), 500); }, 150);
+
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                if (window.activateTimeTv) {
+                    window.activateTimeTv();
+                    if (window.unlockAchievement) window.unlockAchievement('historian');
+                } else {
+                    showPocketToast("Open Time TV in the Floating Pocket! 📺");
+                }
+            }, 500);
 
         } else if (gadgetId === 80) {
             // Computer Pencil: draw glowing canvas lines
@@ -1458,6 +1933,52 @@
                     overlay.innerHTML = '';
                 }, 600);
             }, 3000);
+
+        } else if (gadgetId === 85) {
+            // Energy Capsule: capsule splash particles
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const cap = document.createElement('div');
+                    cap.className = 'fp-sweet';
+                    cap.innerHTML = '💊';
+                    cap.style.left = (Math.random() * 95) + '%';
+                    cap.style.top = '100vh';
+                    cap.style.fontSize = '30px';
+                    cap.style.position = 'absolute';
+                    cap.style.transition = 'all 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    overlay.appendChild(cap);
+                    
+                    setTimeout(() => {
+                        cap.style.transform = `translateY(-110vh) scale(0.6) rotate(${Math.random() * 360}deg)`;
+                        cap.style.opacity = '0';
+                    }, 50);
+                    
+                    setTimeout(() => cap.remove(), 1500);
+                }, i * 70);
+            }
+
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                overlay.innerHTML = '';
+                
+                const isLevelPage = window.location.pathname.includes('level.html');
+                const codingSection = document.getElementById('codeEditor');
+                
+                if (isLevelPage && codingSection && window.activateEnergyCapsule) {
+                    const res = window.activateEnergyCapsule();
+                    if (res && !res.success) {
+                        showPocketToast(res.reason);
+                        if (pocketState.uses[85] < 3) pocketState.uses[85]++;
+                        savePocketState();
+                        rebuildInventoryGrid();
+                    }
+                } else {
+                    showPocketToast("Enter a coding round to consume the Energy Capsule! 💊");
+                    if (pocketState.uses[85] < 3) pocketState.uses[85]++;
+                    savePocketState();
+                    rebuildInventoryGrid();
+                }
+            }, 1600);
 
         } else if (gadgetId === 90) {
             // Gourmet Tablecloth: falling sweets emojis
@@ -1757,6 +2278,279 @@
             overlay.classList.remove('visible');
         }
     }
+
+    // ===== TIME TV TEMPORAL DASHBOARD CONTROLLER =====
+    function getHistoricalAttempts() {
+        let history = localStorage.getItem('pybe_time_tv_history');
+        if (history) {
+            try {
+                return JSON.parse(history);
+            } catch (e) {}
+        }
+        
+        const seed = [
+            {
+                levelId: 1,
+                title: "What is Programming?",
+                attemptsCount: 2,
+                accuracy: 75,
+                incorrectAnswers: ["Variables are always integers", "A compiled program translates line-by-line"],
+                codeSubmission: `print("I love Python!")`,
+                strengths: ["Syntax Basics", "Print Statements"],
+                weaknesses: ["Compiler vs Interpreter"]
+            },
+            {
+                levelId: 2,
+                title: "Python Interpreter",
+                attemptsCount: 1,
+                accuracy: 100,
+                incorrectAnswers: [],
+                codeSubmission: `jelly = "Translation Jelly"\nprint(type(jelly))`,
+                strengths: ["Runtime Engines", "Interpretation Rules"],
+                weaknesses: []
+            },
+            {
+                levelId: 3,
+                title: "Error Handling & Frontend Basics",
+                attemptsCount: 3,
+                accuracy: 66,
+                incorrectAnswers: ["SyntaxError is raised during math operations", "Javascript runs on the server side"],
+                codeSubmission: `string_value = str(100)\nprint(string_value)`,
+                strengths: ["Type Casting"],
+                weaknesses: ["Error Categorizations"]
+            },
+            {
+                levelId: 4,
+                title: "Declaring Variables",
+                attemptsCount: 1,
+                accuracy: 100,
+                incorrectAnswers: [],
+                codeSubmission: `dorayaki_count = 5\nprint(dorayaki_count)`,
+                strengths: ["Variable Assignment"],
+                weaknesses: []
+            },
+            {
+                levelId: 10,
+                title: "Variables Naming Rules",
+                attemptsCount: 2,
+                accuracy: 80,
+                incorrectAnswers: ["my-variable = 10 is correct", "Keywords can be used as variables"],
+                codeSubmission: `user_age_limit = 18\nprint(user_age_limit)`,
+                strengths: ["PEP 8 Conventions", "snake_case styling"],
+                weaknesses: ["Reserved Keyword constraints"]
+            }
+        ];
+        
+        localStorage.setItem('pybe_time_tv_history', JSON.stringify(seed));
+        return seed;
+    }
+
+    function showTimeTvDashboard() {
+        const overlay = document.getElementById('timeTvPopup');
+        const card = document.getElementById('timeTvCard');
+        if (!overlay || !card) return;
+
+        const history = getHistoricalAttempts();
+        
+        let totalAccuracy = 0;
+        let count = 0;
+        let strengths = {};
+        let weaknesses = {};
+
+        history.forEach(h => {
+            totalAccuracy += h.accuracy;
+            count++;
+            
+            h.strengths.forEach(s => { strengths[s] = (strengths[s] || 0) + 1; });
+            h.weaknesses.forEach(w => { weaknesses[w] = (weaknesses[w] || 0) + 1; });
+        });
+
+        const avgAccuracy = count > 0 ? Math.round(totalAccuracy / count) : 0;
+        
+        let streakCount = 1;
+        try {
+            const progress = JSON.parse(localStorage.getItem('pybe_progress') || '{}');
+            streakCount = progress.streak || 1;
+        } catch(e) {}
+
+        const plotData = history.slice(-8);
+        let pathD = "M 50,170";
+        let pointsHtml = "";
+        plotData.forEach((h, idx) => {
+            const x = 50 + (idx * 50);
+            const y = 170 - (h.accuracy * 1.5); 
+            if (idx === 0) pathD = `M ${x},${y}`;
+            else pathD += ` L ${x},${y}`;
+            pointsHtml += `
+                <circle cx="${x}" cy="${y}" r="6" fill="#00ff66" style="cursor:pointer; filter: drop-shadow(0 0 3px #00ff66);">
+                    <title>${h.title}: ${h.accuracy}% Accuracy</title>
+                </circle>
+            `;
+        });
+
+        card.innerHTML = `
+            <div class="ttv-screen">
+                <div class="ttv-header">
+                    <div class="ttv-title">📺 Time TV Temporal Dashboard</div>
+                    <button class="ttv-close" id="ttvCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="ttv-grid">
+                    <div style="display:flex; flex-direction:column; gap:16px;">
+                        <div class="ttv-panel">
+                            <div class="ttv-panel-title">📈 Learning Progress Graph</div>
+                            <svg viewBox="0 0 450 180" style="width:100%; height:130px; overflow:visible;">
+                                <line x1="50" y1="20" x2="400" y2="20" stroke="rgba(0, 255, 100, 0.15)" stroke-dasharray="4"/>
+                                <line x1="50" y1="95" x2="400" y2="95" stroke="rgba(0, 255, 100, 0.15)" stroke-dasharray="4"/>
+                                <line x1="50" y1="170" x2="400" y2="170" stroke="rgba(0, 255, 100, 0.3)" stroke-width="2"/>
+                                
+                                <text x="10" y="25" fill="#00ff66" font-size="10">100%</text>
+                                <text x="15" y="100" fill="#00ff66" font-size="10">50%</text>
+                                <text x="20" y="175" fill="#00ff66" font-size="10">0%</text>
+
+                                ${plotData.length > 0 ? `<path d="${pathD}" fill="none" stroke="#00ff66" stroke-width="3" stroke-linecap="round" style="filter: drop-shadow(0 0 4px rgba(0,255,100,0.5));"/>` : ''}
+                                ${pointsHtml}
+                            </svg>
+                        </div>
+
+                        <div class="ttv-panel">
+                            <div class="ttv-panel-title">📊 Topic-Wise SWOT Analysis</div>
+                            <div class="ttv-grid" style="grid-template-columns: 1fr 1fr; gap:10px;">
+                                <div>
+                                    <div style="font-size:12px; font-weight:800; color:#4caf50; margin-bottom:6px;">💪 Strengths</div>
+                                    <div class="ttv-sw-list">
+                                        ${Object.keys(strengths).length > 0 
+                                            ? Object.keys(strengths).map(s => `<div class="ttv-sw-item strong">${s}</div>`).join('')
+                                            : `<div style="font-size:12px; color:#aaa;">Clear levels to identify strengths!</div>`
+                                        }
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-size:12px; font-weight:800; color:#ef5350; margin-bottom:6px;">⚠️ Weaknesses</div>
+                                    <div class="ttv-sw-list">
+                                        ${Object.keys(weaknesses).length > 0 
+                                            ? Object.keys(weaknesses).map(w => `<div class="ttv-sw-item weak">${w}</div>`).join('')
+                                            : `<div style="font-size:12px; color:#aaa;">No current weaknesses found!</div>`
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; flex-direction:column; gap:16px;">
+                        <div class="ttv-panel" style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                            <div class="ttv-radial-wrap">
+                                <svg width="70" height="70" viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#223" stroke-width="3.5" />
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#00ff66" stroke-width="3.5" stroke-dasharray="${avgAccuracy}, 100" style="filter: drop-shadow(0 0 2px rgba(0,255,100,0.5));" />
+                                </svg>
+                                <div class="ttv-stats-card">
+                                    <span style="font-size:11px; text-transform:uppercase; color:#00ff66; opacity:0.8;">Accuracy</span>
+                                    <span class="ttv-stat-val">${avgAccuracy}%</span>
+                                </div>
+                            </div>
+                            <div class="ttv-radial-wrap">
+                                <div style="font-size:36px;">🔥</div>
+                                <div class="ttv-stats-card">
+                                    <span style="font-size:11px; text-transform:uppercase; color:#00ff66; opacity:0.8;">Active Streak</span>
+                                    <span class="ttv-stat-val">${streakCount} Days</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ttv-panel" style="flex-grow:1; display:flex; flex-direction:column;">
+                            <div class="ttv-panel-title">📜 History Log & Attempts</div>
+                            <div class="ttv-table-wrap">
+                                <table class="ttv-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Level</th>
+                                            <th>Title</th>
+                                            <th>Score</th>
+                                            <th>Code</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${history.map(h => `
+                                            <tr>
+                                                <td>#${h.levelId}</td>
+                                                <td><strong>${h.title}</strong></td>
+                                                <td style="color:${h.accuracy >= 60 ? '#00ff66' : '#ef5350'}">${h.accuracy}%</td>
+                                                <td>
+                                                    ${h.codeSubmission 
+                                                        ? `<span class="ttv-code-badge" onclick="window.showTtvCode('${h.title}', \`${h.codeSubmission.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\n/g, '\\n')}\`)">View Code</span>` 
+                                                        : '<span style="color:#666;">N/A</span>'
+                                                    }
+                                                </td>
+                                            </tr>
+                                        `).join('')}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ttv-cabinet-detail">
+                <div class="ttv-knobs">
+                    <div class="ttv-knob" onclick="window.playPocketSynth('click')"></div>
+                    <div class="ttv-knob" onclick="window.playPocketSynth('click')"></div>
+                </div>
+                <div style="font-size:12px; font-weight:800; color:#5d4037;">TV-MODEL: T-1000</div>
+                <div class="ttv-speaker-grille"></div>
+            </div>
+        `;
+
+        document.getElementById('ttvCloseBtn').onclick = () => {
+            overlay.classList.remove('visible');
+        };
+
+        overlay.classList.add('visible');
+        overlay.onclick = (e) => {
+            if (e.target === overlay) overlay.classList.remove('visible');
+        };
+    }
+
+    window.activateTimeTv = function() {
+        showTimeTvDashboard();
+        return { success: true };
+    };
+
+    window.showTtvCode = function(levelTitle, codeText) {
+        const codeConsole = document.createElement('div');
+        codeConsole.style.cssText = `
+            position: absolute;
+            inset: 40px 40px;
+            background: #1e1e1e;
+            border: 4px solid #00ff66;
+            border-radius: 20px;
+            padding: 20px;
+            z-index: 100000006;
+            color: #d4d4d4;
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 0 30px rgba(0, 255, 100, 0.4);
+        `;
+        
+        codeConsole.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(0, 255, 100, 0.3); padding-bottom:10px;">
+                <strong style="color:#00ff66;">📺 Time TV Playback — ${levelTitle}</strong>
+                <button style="background:none; border:none; color:#00ff66; font-size:20px; cursor:pointer;" onclick="this.parentElement.parentElement.remove();">×</button>
+            </div>
+            <pre style="flex-grow:1; overflow:auto; margin:0; padding:10px; background:#111; border-radius:10px; line-height:1.5; white-space:pre-wrap;">${codeText}</pre>
+        `;
+        const screen = document.querySelector('.ttv-screen');
+        if (screen) screen.appendChild(codeConsole);
+    };
+
+    window.playPocketSynth = playPocketSynth;
 
     // ===== OPEN/CLOSE INVENTORY INTERFACES =====
     function openPocketModal() {
