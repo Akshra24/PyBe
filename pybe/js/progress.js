@@ -32,20 +32,24 @@ function saveProgress(progress) {
         const today = new Date().toISOString().split("T")[0];
         const prevDate = progress.lastPlayed;
 
-        if (prevDate) {
-            const diffMs = new Date(today) - new Date(prevDate + 'T00:00:00');
-            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-            if (diffDays === 0) {
-                // same day — keep streak
-            } else if (diffDays === 1) {
-                // consecutive day — increment streak
-                progress.streak = (progress.streak || 1) + 1;
+        if (progress.completed && progress.completed.length > 0) {
+            if (prevDate) {
+                const diffMs = new Date(today) - new Date(prevDate + 'T00:00:00');
+                const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                if (diffDays === 0) {
+                    // same day — keep streak
+                } else if (diffDays === 1) {
+                    // consecutive day — increment streak
+                    progress.streak = (progress.streak || 1) + 1;
+                } else {
+                    // gap — reset streak
+                    progress.streak = 1;
+                }
             } else {
-                // gap — reset streak
                 progress.streak = 1;
             }
         } else {
-            progress.streak = 1;
+            progress.streak = 0;
         }
 
         progress.lastPlayed = today;

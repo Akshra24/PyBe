@@ -254,13 +254,13 @@
         }
 
         // One-time reset to ensure testing progress starts fresh
-        if (!localStorage.getItem('pybe_journey_reset_v5')) {
+        if (!localStorage.getItem('pybe_journey_reset_v6')) {
             localStorage.removeItem('pybe_progress_v1');
             localStorage.removeItem('pybe_student_name');
             localStorage.removeItem('pybe_project_code');
             localStorage.removeItem('pybe_github_link');
             localStorage.removeItem('pybe_project_type');
-            localStorage.setItem('pybe_journey_reset_v5', 'true');
+            localStorage.setItem('pybe_journey_reset_v6', 'true');
         }
 
         // ── Load progress ──────────────────────────────────────
@@ -387,9 +387,9 @@
         const streak = progress.streak || 0;
         const streakEl = document.getElementById('navStreak');
         const streakTextEl = document.getElementById('navStreakText');
-        if (streak > 0 && streakEl && streakTextEl) {
+        if (streakEl && streakTextEl) {
             streakEl.style.display = 'flex';
-            streakTextEl.textContent = `${streak} day streak`;
+            streakTextEl.textContent = `${streak}`;
         }
 
         const pctText = document.getElementById('progressPercent');
