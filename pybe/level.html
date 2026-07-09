@@ -187,6 +187,7 @@
         }
 
         function canGoToSection(targetIdx) {
+            if (localStorage.getItem('pybe_dev_mode') !== 'false') return true;
             if (targetIdx <= currentSection) return true;
             if (targetIdx <= maxSectionUnlocked) return true;
             if (targetIdx === currentSection + 1 && isSectionCleared(currentSection)) return true;
@@ -364,8 +365,7 @@
         // ── Render Test ──────────────────────────────────────────
         function renderTest() {
             const t = level.test;
-            
-            // No pre-fill answers
+            const isDev = localStorage.getItem('pybe_dev_mode') !== 'false';
 
             sectionContent.innerHTML = `
                 <div class="sec-test">
@@ -379,6 +379,11 @@
                         <button class="btn btn-submit" id="btnSubmitTest">
                             <i class="fas fa-check-circle"></i> Submit Answers
                         </button>
+                        ${isDev ? `
+                        <button class="btn btn-run" id="btnDevAutoFillTest" style="background:#8e44ad; border-color:#8e44ad; margin-left: 10px;">
+                            <i class="fas fa-magic"></i> Auto-fill Test
+                        </button>
+                        ` : ''}
                     </div>
                 </div>
             `;
@@ -389,6 +394,39 @@
             });
 
             document.getElementById('btnSubmitTest').addEventListener('click', submitTest);
+
+            if (isDev && document.getElementById('btnDevAutoFillTest')) {
+                document.getElementById('btnDevAutoFillTest').addEventListener('click', () => {
+                    t.questions.forEach((q, qi) => {
+                        if (q.type === 'mcq') {
+                            const radio = document.querySelector(`input[name="q${qi}"][value="${q.answer}"]`);
+                            if (radio) {
+                                radio.checked = true;
+                                radio.dispatchEvent(new Event('change'));
+                            }
+                        } else if (q.type === 'fill') {
+                            const el = document.getElementById('fill-' + qi);
+                            if (el) {
+                                el.value = q.answer;
+                                el.dispatchEvent(new Event('input'));
+                            }
+                        } else if (q.type === 'tf') {
+                            const radio = document.querySelector(`input[name="tf${qi}"][value="${q.answer}"]`);
+                            if (radio) {
+                                radio.checked = true;
+                                radio.dispatchEvent(new Event('change'));
+                            }
+                        } else if (q.type === 'short') {
+                            const el = document.getElementById('short-' + qi);
+                            if (el) {
+                                el.value = q.sampleAnswer || "This is a placeholder developer response that meets length requirement of 15 chars.";
+                                el.dispatchEvent(new Event('input'));
+                            }
+                        }
+                    });
+                    showToast('Test answers filled! Click Submit Answers to pass. 🚀');
+                });
+            }
         }
 
         function buildQuestionEl(q, qi) {
@@ -548,7 +586,9 @@
                 return;
             }
             const hasScenario = !!level.scenario;
-            const starterCode = level.starterCode || '';
+            const starterCode = ''; // No comments or pre-filled code in the editor — completely empty!
+            const isDev = localStorage.getItem('pybe_dev_mode') !== 'false';
+
             sectionContent.innerHTML = `
                 <div class="sec-coding">
                     <div class="sec-heading-block">
@@ -562,15 +602,19 @@
                         <p class="scenario-text">${level.scenario}</p>
                     </div>` : ''}
 
-                    <div class="code-area">
-                        <div class="code-area-header">
-                            <div class="code-dot red"></div>
-                            <div class="code-dot yellow"></div>
-                            <div class="code-dot green"></div>
-                            <span>python</span>
+                    <div class="code-area-container" style="display: flex; gap: 20px; align-items: stretch; max-width: 900px; margin: 0 auto 20px; width: 100%;">
+                        <div class="code-area" style="flex: 1; margin: 0;">
+                            <div class="code-area-header">
+                                <div class="code-dot red"></div>
+                                <div class="code-dot yellow"></div>
+                                <div class="code-dot green"></div>
+                                <span>python</span>
+                            </div>
+                            <textarea class="code-editor" id="codeEditor" spellcheck="false"
+                                placeholder="# Write your Python code here...">${starterCode}</textarea>
                         </div>
-                        <textarea class="code-editor" id="codeEditor" spellcheck="false"
-                            placeholder="# Write your Python code here...">${starterCode}</textarea>
+                        <div class="copter-helper-panel" id="copterHelperPanel" style="display: none; width: 340px; background: #E8F6FF; border: 3.5px solid #00AEEF; border-radius: 20px; padding: 18px; box-shadow: 0 8px 24px rgba(0, 174, 239, 0.15); flex-direction: column; overflow-y: auto; max-height: 380px; scrollbar-width: thin; scrollbar-color: #00AEEF transparent; z-index: 100;">
+                        </div>
                     </div>
 
                     <div class="action-row">
@@ -583,6 +627,11 @@
                         <button class="btn btn-hint" id="btnHintCode">
                             <i class="fas fa-lightbulb"></i> Hint
                         </button>
+                        ${isDev ? `
+                        <button class="btn btn-run" id="btnDevAutoFillCode" style="background:#8e44ad; border-color:#8e44ad;">
+                            <i class="fas fa-magic"></i> Auto-fill Solution
+                        </button>
+                        ` : ''}
                     </div>
 
                     <div class="console-output" id="consoleOutput"></div>
@@ -598,6 +647,17 @@
             document.getElementById('btnHintCode').addEventListener('click', () => {
                 document.getElementById('hintBubble').classList.toggle('show');
             });
+
+            if (isDev && document.getElementById('btnDevAutoFillCode')) {
+                document.getElementById('btnDevAutoFillCode').addEventListener('click', () => {
+                    const editor = document.getElementById('codeEditor');
+                    if (editor && level.solution) {
+                        editor.value = level.solution;
+                        editor.dispatchEvent(new Event('input'));
+                        showToast('Coding solution auto-filled! Click Run or Submit. 🚀');
+                    }
+                });
+            }
 
             // Run
             document.getElementById('btnRun').addEventListener('click', () => {

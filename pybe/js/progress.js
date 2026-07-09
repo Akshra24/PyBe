@@ -15,15 +15,25 @@ function getProgress() {
             progress = JSON.parse(data);
             progress.attempts = progress.attempts || {};
             progress.unlockedGadgets = progress.unlockedGadgets || [];
+        }
+
+        // Developer/Testing Bypass: unlock all levels & gadgets if devMode is enabled
+        const isDev = localStorage.getItem('pybe_dev_mode') !== 'false';
+        if (isDev) {
+            progress.currentLevel = 100;
+            progress.completed = Array.from({length: 100}, (_, i) => i + 1);
+            if (!progress.streak) progress.streak = 5;
+        } else {
             // Reset currentLevel if it was artificially set to 100 in the past, or if completed is empty
             const expectedLevel = (progress.completed && progress.completed.length > 0) ? progress.completed.length + 1 : 1;
             if (progress.currentLevel > expectedLevel) {
                 progress.currentLevel = expectedLevel;
             }
         }
+
         return progress;
     } catch (e) {
-        return { currentLevel: 0, completed: [], lastPlayed: null, attempts: {}, streak: 0, unlockedGadgets: [] };
+        return { currentLevel: 100, completed: Array.from({length: 100}, (_, i) => i + 1), lastPlayed: null, attempts: {}, streak: 5, unlockedGadgets: [] };
     }
 }
 

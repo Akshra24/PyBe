@@ -9,20 +9,20 @@
     window.PyBeFloatingPocketLoaded = true;
 
     const GADGETS = [
-        { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks stepper shortcuts. (Fires cloud fly-by sweep!)", maxUses: 3, cooldown: 60, milestone: 0 },
-        { id: 20,  name: "Time Cloth", icon: "⏳", desc: "Wraps mistakes to reverse time! Retry one incorrect test question or code submission per level, restoring lost marks and explaining the mistake. (Once per level)", maxUses: 1, cooldown: 120, milestone: 0 },
-        { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space. Enables fast chapter map jumps. (Flashes pink warp portal!)", maxUses: 999, cooldown: 10, milestone: 0 },
-        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Shines a light on coding bugs! Identifies the error type (syntax, runtime, or logical) and highlights the line containing the error in your editor. (Once per activation)", maxUses: 3, cooldown: 90, milestone: 0 },
-        { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structure reference sheets. (Spawns glowing memory slices!)", maxUses: 3, cooldown: 90, milestone: 0 },
-        { id: 25,  name: "Translation Jelly", icon: "🍮", desc: "Instantly translates lessons into simple English, Hindi, Hinglish, or beginner explanations with analogies and breakdowns. (Unlocks after Level 10)", maxUses: 5, cooldown: 60, milestone: 10 },
-        { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loop lines. (Shrinks page layout size!)", maxUses: 999, cooldown: 30, milestone: 20 },
-        { id: 65,  name: "Lucky Star",       icon: "⭐", desc: "Restores one lost daily streak every seven days! Automatically updates your active streak. (Once per 7 days)", maxUses: 1, cooldown: 604800, milestone: 30 },
-        { id: 70,  name: "Big Light",      icon: "🔍", desc: "Inspects large variables. Shows detailed trace logs. (Expands page layout size!)", maxUses: 999, cooldown: 30, milestone: 40 },
-        { id: 75,  name: "Time TV",        icon: "📺", desc: "Launches the temporal dashboard! View previous level attempts, coding submissions, accuracy rates, and topic strengths. (Unlocks after Level 50)", maxUses: 999, cooldown: 15, milestone: 50 },
-        { id: 80,  name: "Computer Pencil", icon: "✏️", desc: "Writes clean code. Unlocks automated completions. (Paints glowing lines across screen!)", maxUses: 3, cooldown: 150, milestone: 60 },
-        { id: 85,  name: "Energy Capsule",   icon: "💊", desc: "Provides one extra coding submission during a coding round without incrementing attempts or reducing efficiency scores. (Once per coding round)", maxUses: 3, cooldown: 60, milestone: 70 },
-        { id: 90,  name: "Gourmet Tablecloth", icon: "🍽️", desc: "Boosts coding focus. Unlocks alternative visual retro themes. (Spawns falling sweets!)", maxUses: 4, cooldown: 180, milestone: 80 },
-        { id: 100, name: "Super Python Glove", icon: "🥊", desc: "Smashes any bug in sight. Certified Python wizard badge! (Triggers screen punch bug strike!)", maxUses: 1, cooldown: 300, milestone: 90 }
+        { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks stepper shortcuts. (Fires cloud fly-by sweep!)", maxUses: 999, cooldown: 3, milestone: 0 },
+        { id: 20,  name: "Time Cloth", icon: "⏳", desc: "Wraps mistakes to reverse time! Retry one incorrect test question or code submission per level, restoring lost marks and explaining the mistake. (Once per level)", maxUses: 999, cooldown: 3, milestone: 0 },
+        { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space. Enables fast chapter map jumps. (Flashes pink warp portal!)", maxUses: 999, cooldown: 3, milestone: 0 },
+        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Shines a light on coding bugs! Identifies the error type (syntax, runtime, or logical) and highlights the line containing the error in your editor. (Once per activation)", maxUses: 999, cooldown: 3, milestone: 0 },
+        { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structure reference sheets. (Spawns glowing memory slices!)", maxUses: 999, cooldown: 3, milestone: 0 },
+        { id: 25,  name: "Translation Jelly", icon: "🍮", desc: "Instantly translates lessons into simple English, Hindi, Hinglish, or beginner explanations with analogies and breakdowns. (Unlocks after Level 10)", maxUses: 999, cooldown: 3, milestone: 10 },
+        { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loop lines. (Shrinks page layout size!)", maxUses: 999, cooldown: 3, milestone: 20 },
+        { id: 65,  name: "Lucky Star",       icon: "⭐", desc: "Restores one lost daily streak every seven days! Automatically updates your active streak. (Once per 7 days)", maxUses: 999, cooldown: 3, milestone: 30 },
+        { id: 70,  name: "Big Light",      icon: "🔍", desc: "Inspects large variables. Shows detailed trace logs. (Expands page layout size!)", maxUses: 999, cooldown: 3, milestone: 40 },
+        { id: 75,  name: "Time TV",        icon: "📺", desc: "Launches the temporal dashboard! View previous level attempts, coding submissions, accuracy rates, and topic strengths. (Unlocks after Level 50)", maxUses: 999, cooldown: 3, milestone: 50 },
+        { id: 80,  name: "Computer Pencil", icon: "✏️", desc: "Writes clean code. Unlocks automated completions. (Paints glowing lines across screen!)", maxUses: 999, cooldown: 3, milestone: 60 },
+        { id: 85,  name: "Energy Capsule",   icon: "💊", desc: "Provides one extra coding submission during a coding round without incrementing attempts or reducing efficiency scores. (Once per coding round)", maxUses: 999, cooldown: 3, milestone: 70 },
+        { id: 90,  name: "Gourmet Tablecloth", icon: "🍽️", desc: "Boosts coding focus. Unlocks alternative visual retro themes. (Spawns falling sweets!)", maxUses: 999, cooldown: 3, milestone: 80 },
+        { id: 100, name: "Super Python Glove", icon: "🥊", desc: "Smashes any bug in sight. Certified Python wizard badge! (Triggers screen punch bug strike!)", maxUses: 999, cooldown: 3, milestone: 90 }
     ];
 
     // ===== POCKET STATE persistence =====
@@ -41,7 +41,7 @@
         
         // Ensure all gadgets are initialized in state
         GADGETS.forEach(g => {
-            if (pocketState.uses[g.id] === undefined) {
+            if (pocketState.uses[g.id] === undefined || g.maxUses === 999) {
                 pocketState.uses[g.id] = g.maxUses;
             }
             if (pocketState.cooldowns[g.id] === undefined) {
@@ -1270,6 +1270,300 @@
             cursor: pointer;
             font-family: monospace;
         }
+
+        /* Bamboo Copter Flowchart Modal */
+        .bc-popup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 42, 58, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 999999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .bc-popup-overlay.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .bc-card {
+            background: #E8F6FF;
+            border: 4px solid #00AEEF;
+            border-radius: 28px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 30px;
+            box-shadow: 0 20px 50px rgba(0, 174, 239, 0.3);
+            transform: scale(1.15);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            scrollbar-width: thin;
+            scrollbar-color: #00AEEF transparent;
+        }
+
+        .bc-popup-overlay.visible .bc-card {
+            transform: scale(1);
+        }
+
+        .bc-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            font-size: 32px;
+            font-weight: 800;
+            color: #00AEEF;
+            cursor: pointer;
+            line-height: 1;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .bc-close-btn:hover {
+            transform: rotate(90deg) scale(1.1);
+            color: #0077b6;
+        }
+
+        .bc-header {
+            text-align: center;
+            margin-bottom: 24px;
+            border-bottom: 2px dashed rgba(0, 174, 239, 0.2);
+            padding-bottom: 15px;
+        }
+
+        .bc-header-title {
+            font-family: 'Nunito', sans-serif;
+            font-size: 22px;
+            font-weight: 900;
+            color: #00AEEF;
+            text-shadow: 0 2px 4px rgba(0, 174, 239, 0.1);
+            margin-bottom: 4px;
+        }
+
+        .bc-header-subtitle {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 600;
+            color: #5b745f;
+        }
+
+        .bc-flow-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+            gap: 2px;
+        }
+
+        .bc-node {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 18px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 14.5px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin: 4px 0;
+            max-width: 100%;
+            text-align: left;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .bc-node:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+
+        .bc-node strong {
+            color: inherit;
+            font-weight: 800;
+        }
+
+        .bc-node-icon {
+            font-size: 18px;
+        }
+
+        .bc-node-lbl {
+            line-height: 1.4;
+        }
+
+        /* Node Types */
+        .bc-start {
+            background: #E8F5E9;
+            border: 2.5px solid #4CAF50;
+            color: #2E7D32;
+        }
+
+        .bc-end {
+            background: #FFEBEE;
+            border: 2.5px solid #FF5252;
+            color: #C62828;
+        }
+
+        .bc-input {
+            background: #E3F2FD;
+            border: 2.5px solid #2196F3;
+            color: #0D47A1;
+        }
+
+        .bc-store {
+            background: #FFFFFF;
+            border: 2.5px solid #90CAF9;
+            color: #1565C0;
+        }
+
+        .bc-decision {
+            background: #FFFDE7;
+            border: 2.5px solid #FBC02D;
+            color: #F57F17;
+        }
+
+        .bc-loop {
+            background: #F3E5F5;
+            border: 2.5px solid #AB47BC;
+            color: #4A148C;
+        }
+
+        .bc-output {
+            background: #FFF3E0;
+            border: 2.5px solid #FF9800;
+            color: #E65100;
+        }
+
+        .bc-action {
+            background: #ECEFF1;
+            border: 2.5px solid #78909C;
+            color: #37474F;
+        }
+
+        .bc-empty {
+            background: #F5F5F5;
+            border: 2.5px solid #BDBDBD;
+            color: #616161;
+            border-style: dotted;
+        }
+
+        .bc-arrow {
+            font-size: 18px;
+            color: #00AEEF;
+            margin: 2px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: bcArrowBlink 1.5s infinite alternate;
+        }
+
+        @keyframes bcArrowBlink {
+            0% { opacity: 0.6; transform: translateY(-2px); }
+            100% { opacity: 1; transform: translateY(2px); }
+        }
+
+        /* Decision Branching layout */
+        .bc-branches-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .bc-branch {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255,255,255,0.4);
+            border-radius: 18px;
+            padding: 10px;
+            border: 2px dashed rgba(0, 174, 239, 0.25);
+        }
+
+        .bc-branch-label {
+            font-family: 'Nunito', sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .bc-branch-yes .bc-branch-label {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+
+        .bc-branch-no .bc-branch-label {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+
+        .bc-branch-flow {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bc-merge-dot {
+            width: 10px;
+            height: 10px;
+            background: #00AEEF;
+            border-radius: 50%;
+            margin: 8px 0;
+            box-shadow: 0 0 8px rgba(0, 174, 239, 0.5);
+        }
+
+        /* Loop Container */
+        .bc-loop-container {
+            border-left: 3px solid #AB47BC;
+            margin: 8px 0 8px 15px;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+        }
+
+        .bc-loop-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .bc-loop-arrow-back {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            color: #AB47BC;
+            margin-top: 8px;
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Zoom-out effect on level/home content */
+        .level-wrapper, .home-wrapper {
+            transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), filter 0.8s ease, opacity 0.8s ease;
+        }
+
+        .level-wrapper.zoomed-out, .home-wrapper.zoomed-out {
+            transform: scale(0.9);
+            filter: blur(3px);
+            opacity: 0.65;
+            pointer-events: none;
+        }
     `;
 
     // ===== DOM CREATION & STYLES INJECTION =====
@@ -1355,6 +1649,17 @@
             </div>
         `;
         document.body.appendChild(ttvPopup);
+
+        // 8. Create Bamboo Copter flowchart popup
+        const bcPopup = document.createElement('div');
+        bcPopup.className = 'bc-popup-overlay';
+        bcPopup.id = 'bambooCopterPopup';
+        bcPopup.innerHTML = `
+            <div class="bc-card" id="bambooCopterCard">
+                <!-- Built dynamically by showBambooCopterPopup() -->
+            </div>
+        `;
+        document.body.appendChild(bcPopup);
     }
 
     // ===== STATE & COOLDOWNS CONTROLLER =====
@@ -1589,7 +1894,10 @@
                     setTimeout(() => cloud.remove(), 2000);
                 }, i * 150);
             }
-            setTimeout(() => { overlay.style.display = 'none'; }, 3500);
+            setTimeout(() => { 
+                overlay.style.display = 'none'; 
+                showBambooCopterPopup();
+            }, 1800);
 
         } else if (gadgetId === 20) {
             // Time Cloth: pink-red time warp filter
@@ -2549,6 +2857,452 @@
         const screen = document.querySelector('.ttv-screen');
         if (screen) screen.appendChild(codeConsole);
     };
+
+    // ===== BAMBOO COPTER FLOWCHART PARSER, TRANSLATOR & RENDERER =====
+    function parsePython(code) {
+        if (!code || code.trim().length === 0) {
+            return [];
+        }
+        
+        const lines = code.split('\n')
+            .map(l => ({ original: l, text: l.trim(), indent: l.length - l.trimStart().length }))
+            .filter(l => l.text.length > 0 && !l.text.startsWith('#'));
+
+        let index = 0;
+        
+        function parseBlock(currentIndent) {
+            const statements = [];
+            while (index < lines.length) {
+                const line = lines[index];
+                if (line.indent < currentIndent) {
+                    break;
+                }
+                
+                if (line.text.startsWith('if ') || line.text.startsWith('if(')) {
+                    let cond = line.text;
+                    if (cond.endsWith(':')) cond = cond.slice(0, -1);
+                    cond = cond.substring(2).trim();
+                    
+                    index++;
+                    const thenBlock = parseBlock(line.indent + 1);
+                    let elseBlock = null;
+                    
+                    if (index < lines.length) {
+                        const nextLine = lines[index];
+                        if (nextLine.indent === line.indent) {
+                            if (nextLine.text.startsWith('else:') || nextLine.text.startsWith('else :')) {
+                                index++;
+                                elseBlock = parseBlock(nextLine.indent + 1);
+                            } else if (nextLine.text.startsWith('elif ')) {
+                                elseBlock = parseBlock(nextLine.indent);
+                            }
+                        }
+                    }
+                    statements.push({
+                        type: 'if',
+                        condition: cond,
+                        then: thenBlock,
+                        else: elseBlock
+                    });
+                } else if (line.text.startsWith('for ') || line.text.startsWith('for(')) {
+                    let loopInfo = line.text;
+                    if (loopInfo.endsWith(':')) loopInfo = loopInfo.slice(0, -1);
+                    loopInfo = loopInfo.substring(3).trim();
+                    
+                    index++;
+                    const body = parseBlock(line.indent + 1);
+                    statements.push({
+                        type: 'for',
+                        loop: loopInfo,
+                        body: body
+                    });
+                } else if (line.text.startsWith('while ') || line.text.startsWith('while(')) {
+                    let cond = line.text;
+                    if (cond.endsWith(':')) cond = cond.slice(0, -1);
+                    cond = cond.substring(5).trim();
+                    
+                    index++;
+                    const body = parseBlock(line.indent + 1);
+                    statements.push({
+                        type: 'while',
+                        condition: cond,
+                        body: body
+                    });
+                } else if (line.text.startsWith('def ')) {
+                    let funcInfo = line.text;
+                    if (funcInfo.endsWith(':')) funcInfo = funcInfo.slice(0, -1);
+                    funcInfo = funcInfo.substring(3).trim();
+                    
+                    index++;
+                    const body = parseBlock(line.indent + 1);
+                    statements.push({
+                        type: 'def',
+                        func: funcInfo,
+                        body: body
+                    });
+                } else {
+                    statements.push({
+                        type: 'simple',
+                        text: line.text
+                    });
+                    index++;
+                }
+            }
+            return statements;
+        }
+        
+        return parseBlock(0);
+    }
+
+    function toEnglish(text) {
+        let clean = text.trim();
+        if (clean === '[]') return 'an empty list';
+        if (clean === '{}') return 'an empty dictionary';
+        
+        if ((clean.startsWith('"') && clean.endsWith('"')) || (clean.startsWith("'") && clean.endsWith("'"))) {
+            return clean.slice(1, -1);
+        }
+        
+        const listCompRegex = /^\[(.*)\s+for\s+(\w+)\s+in\s+(.*)\]$/;
+        if (listCompRegex.test(clean)) {
+            const m = clean.match(listCompRegex);
+            const expr = toEnglish(m[1]);
+            const varName = m[2];
+            const iterable = toEnglish(m[3]);
+            return `list of <strong>${expr}</strong> for each <strong>${varName}</strong> in <strong>${iterable}</strong>`;
+        }
+
+        clean = clean.replace(/range\s*\(\s*(\d+)\s*\)/g, 'numbers from 0 to $1 - 1');
+        clean = clean.replace(/range\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)/g, 'numbers from $1 to $2 - 1');
+
+        clean = clean.replace(/==/g, ' is equal to ')
+                     .replace(/!=/g, ' is not equal to ')
+                     .replace(/>=/g, ' is greater than or equal to ')
+                     .replace(/<=/g, ' is less than or equal to ')
+                     .replace(/>/g, ' is greater than ')
+                     .replace(/</g, ' is less than ')
+                     .replace(/\band\b/g, ' and ')
+                     .replace(/\bor\b/g, ' or ')
+                     .replace(/\bnot\b/g, ' not ');
+                     
+        clean = clean.replace(/len\((.*?)\)/g, 'length of $1');
+        
+        clean = clean.replace(/(\w+)\.upper\(\)/g, 'uppercase version of $1');
+        clean = clean.replace(/(\w+)\.lower\(\)/g, 'lowercase version of $1');
+        
+        clean = clean.replace(/(\w+)\.append\((.*?)\)/g, 'add $2 to $1');
+        clean = clean.replace(/(\w+)\.remove\((.*?)\)/g, 'remove $2 from $1');
+        clean = clean.replace(/(\w+)\.pop\(\)/g, 'remove last item of $1');
+        
+        return clean;
+    }
+
+    function translateSimple(text) {
+        let clean = text.trim();
+        const inputRegex = /^(\w+)\s*=\s*input\((.*)\)$/;
+        const printRegex = /^print\((.*)\)$/;
+        const assignRegex = /^(\w+)\s*=\s*(.*)$/;
+        const returnRegex = /^return\s*(.*)$/;
+        const appendRegex = /^(\w+)\.append\((.*)\)$/;
+        const removeRegex = /^(\w+)\.remove\((.*)\)$/;
+        
+        if (inputRegex.test(clean)) {
+            const m = clean.match(inputRegex);
+            const varName = m[1];
+            const prompt = toEnglish(m[2]);
+            return {
+                class: 'bc-input',
+                icon: '📥',
+                label: `Ask user: <strong>"${prompt}"</strong> and store in <strong>${varName}</strong>`
+            };
+        }
+        
+        if (printRegex.test(clean)) {
+            const m = clean.match(printRegex);
+            const expr = toEnglish(m[1]);
+            return {
+                class: 'bc-output',
+                icon: '🖨️',
+                label: `Print output: <strong>${expr}</strong>`
+            };
+        }
+        
+        if (appendRegex.test(clean)) {
+            const m = clean.match(appendRegex);
+            const listName = m[1];
+            const valName = toEnglish(m[2]);
+            return {
+                class: 'bc-store',
+                icon: '📦',
+                label: `Add <strong>${valName}</strong> to list <strong>${listName}</strong>`
+            };
+        }
+
+        if (removeRegex.test(clean)) {
+            const m = clean.match(removeRegex);
+            const listName = m[1];
+            const valName = toEnglish(m[2]);
+            return {
+                class: 'bc-store',
+                icon: '📦',
+                label: `Remove <strong>${valName}</strong> from list <strong>${listName}</strong>`
+            };
+        }
+        
+        if (assignRegex.test(clean)) {
+            const m = clean.match(assignRegex);
+            const varName = m[1];
+            const val = toEnglish(m[2]);
+            return {
+                class: 'bc-store',
+                icon: '📦',
+                label: `Store <strong>${val}</strong> in variable <strong>${varName}</strong>`
+            };
+        }
+        
+        if (returnRegex.test(clean)) {
+            const m = clean.match(returnRegex);
+            const val = toEnglish(m[1]);
+            return {
+                class: 'bc-store',
+                icon: '📤',
+                label: `Return <strong>${val || 'nothing'}</strong>`
+            };
+        }
+        
+        return {
+            class: 'bc-action',
+            icon: '⚙️',
+            label: `Run step: <code>${clean}</code>`
+        };
+    }
+
+    function renderFlowchartHTML(statements) {
+        let html = '';
+        
+        html += `
+            <div class="bc-node bc-start">
+                <span class="bc-node-icon">🏁</span>
+                <span class="bc-node-lbl">START</span>
+            </div>
+            <div class="bc-arrow"><i class="fas fa-arrow-down"></i></div>
+        `;
+        
+        function renderList(list) {
+            let subHtml = '';
+            list.forEach((stmt, idx) => {
+                if (stmt.type === 'simple') {
+                    const trans = translateSimple(stmt.text);
+                    subHtml += `
+                        <div class="bc-node ${trans.class}">
+                            <span class="bc-node-icon">${trans.icon}</span>
+                            <span class="bc-node-lbl">${trans.label}</span>
+                        </div>
+                    `;
+                    if (idx < list.length - 1 || list[idx+1]) {
+                        subHtml += `<div class="bc-arrow"><i class="fas fa-arrow-down"></i></div>`;
+                    }
+                } else if (stmt.type === 'if') {
+                    const condEng = toEnglish(stmt.condition);
+                    subHtml += `
+                        <div class="bc-node bc-decision">
+                            <span class="bc-node-icon">🧠</span>
+                            <span class="bc-node-lbl">Is ${condEng}?</span>
+                        </div>
+                        <div class="bc-branches-container">
+                            <div class="bc-branch bc-branch-yes">
+                                <div class="bc-branch-label">YES ↙</div>
+                                <div class="bc-branch-flow">
+                                    ${renderList(stmt.then)}
+                                </div>
+                            </div>
+                            <div class="bc-branch bc-branch-no">
+                                <div class="bc-branch-label">NO ↘</div>
+                                <div class="bc-branch-flow">
+                                    ${stmt.else ? renderList(stmt.else) : `
+                                        <div class="bc-node bc-empty">
+                                            <span class="bc-node-icon">⏩</span>
+                                            <span class="bc-node-lbl">Do nothing</span>
+                                        </div>
+                                    `}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    if (idx < list.length - 1) {
+                        subHtml += `
+                            <div class="bc-merge-dot"></div>
+                            <div class="bc-arrow"><i class="fas fa-arrow-down"></i></div>
+                        `;
+                    }
+                } else if (stmt.type === 'for') {
+                    const loopEng = toEnglish(stmt.loop);
+                    subHtml += `
+                        <div class="bc-node bc-loop">
+                            <span class="bc-node-icon">🔄</span>
+                            <span class="bc-node-lbl">Loop: For each ${loopEng}</span>
+                        </div>
+                        <div class="bc-loop-container">
+                            <div class="bc-loop-body">
+                                ${renderList(stmt.body)}
+                            </div>
+                            <div class="bc-loop-arrow-back">
+                                <span>loop back ↺</span>
+                            </div>
+                        </div>
+                    `;
+                    if (idx < list.length - 1) {
+                        subHtml += `<div class="bc-arrow"><i class="fas fa-arrow-down"></i></div>`;
+                    }
+                } else if (stmt.type === 'while') {
+                    const condEng = toEnglish(stmt.condition);
+                    subHtml += `
+                        <div class="bc-node bc-loop">
+                            <span class="bc-node-icon">🔄</span>
+                            <span class="bc-node-lbl">Loop: While ${condEng} is true</span>
+                        </div>
+                        <div class="bc-loop-container">
+                            <div class="bc-loop-body">
+                                ${renderList(stmt.body)}
+                            </div>
+                            <div class="bc-loop-arrow-back">
+                                <span>loop back ↺</span>
+                            </div>
+                        </div>
+                    `;
+                    if (idx < list.length - 1) {
+                        subHtml += `<div class="bc-arrow"><i class="fas fa-arrow-down"></i></div>`;
+                    }
+                } else if (stmt.type === 'def') {
+                    subHtml += `
+                        <div class="bc-node bc-action">
+                            <span class="bc-node-icon">⚙️</span>
+                            <span class="bc-node-lbl">Define task: ${stmt.func}</span>
+                        </div>
+                        <div class="bc-loop-container">
+                            <div class="bc-loop-body">
+                                ${renderList(stmt.body)}
+                            </div>
+                        </div>
+                    `;
+                    if (idx < list.length - 1) {
+                        subHtml += `<div class="bc-arrow"><i class="fas fa-arrow-down"></i></div>`;
+                    }
+                }
+            });
+            return subHtml;
+        }
+        
+        if (statements.length === 0) {
+            html += `
+                <div class="bc-node bc-empty">
+                    <span class="bc-node-icon">💡</span>
+                    <span class="bc-node-lbl">Your editor is empty or has only comments.<br>Type some Python code to visualize its logic flow!</span>
+                </div>
+            `;
+        } else {
+            html += renderList(statements);
+        }
+        
+        html += `
+            <div class="bc-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="bc-node bc-end">
+                <span class="bc-node-icon">🏁</span>
+                <span class="bc-node-lbl">END</span>
+            </div>
+        `;
+        
+        return html;
+    }
+
+    function showBambooCopterPopup() {
+        let code = '';
+        
+        // Priority 1: Level Solution code, so the learner can see the expected flowchart workflow to help them code!
+        const params = new URLSearchParams(window.location.search);
+        const levelId = parseInt(params.get('id'));
+        if (levelId && window.levels && window.levels[levelId - 1]) {
+            const lvl = window.levels[levelId - 1];
+            code = lvl.solution || lvl.starterCode || '';
+        }
+        
+        // Priority 2: Fallback to the current code in the editor
+        if (!code || code.trim().length === 0) {
+            const editor = document.getElementById('codeEditor');
+            if (editor && editor.value.trim().length > 0) {
+                code = editor.value;
+            }
+        }
+        
+        let usingDemo = false;
+        if (!code || code.trim().length === 0) {
+            usingDemo = true;
+            code = `name = input("Enter your name")\n\nif len(name) > 5:\n    print("Long Name")\nelse:\n    print("Short Name")`;
+        }
+
+        const statements = parsePython(code);
+        const flowchartHTML = renderFlowchartHTML(statements);
+
+        // Check if side-by-side panel is available in DOM (e.g. level.html)
+        const panel = document.getElementById('copterHelperPanel');
+        if (panel) {
+            playPocketSynth('click');
+            panel.innerHTML = `
+                <div style="position: relative; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px dashed rgba(0, 174, 239, 0.2); text-align: center;">
+                    <button onclick="document.getElementById('copterHelperPanel').style.display='none'" style="position: absolute; right: 0; top: 0; background: none; border: none; font-size: 20px; font-weight: 800; color: #00AEEF; cursor: pointer; line-height: 1;">&times;</button>
+                    <div style="font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 900; color: #00AEEF;">🚁 Bamboo Copter Helper</div>
+                    <div style="font-family: 'Quicksand', sans-serif; font-size: 11px; color: #2e7d32; font-weight: 700; margin-top: 4px;">Target Logic Flow</div>
+                </div>
+                <div class="bc-flow-body" style="display: flex; flex-direction: column; align-items: center; gap: 2px;">
+                    ${flowchartHTML}
+                </div>
+            `;
+            // Toggle panel display
+            if (panel.style.display === 'flex') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'flex';
+            }
+            return;
+        }
+
+        // Full-screen Modal Fallback (e.g. home.html)
+        const card = document.getElementById('bambooCopterCard');
+        if (!card) return;
+
+        card.innerHTML = `
+            <button class="bc-close-btn" id="bambooCopterCloseBtn">&times;</button>
+            <div class="bc-header">
+                <div class="bc-header-title">🚁 Bamboo Copter Activated!</div>
+                <div class="bc-header-subtitle">"Let's fly above the code and understand how it thinks."</div>
+                ${usingDemo ? `
+                    <div style="font-size:12px; color:#ef5350; margin-top:8px; font-weight:700;">💡 Demo Mode (Write code in the editor to map your own logic flow!)</div>
+                ` : `
+                    <div style="font-size:12.5px; color:#2e7d32; margin-top:8px; font-weight:700; background:rgba(46, 125, 50, 0.1); display:inline-block; padding:4px 10px; border-radius:20px;">💡 Target Workflow (Follow this logic to solve the level!)</div>
+                `}
+            </div>
+            <div class="bc-flow-body">
+                ${flowchartHTML}
+            </div>
+        `;
+
+        document.getElementById('bambooCopterCloseBtn').onclick = closeBambooCopterPopup;
+
+        const wrapper = document.querySelector('.level-wrapper') || document.querySelector('.home-wrapper');
+        if (wrapper) wrapper.classList.add('zoomed-out');
+
+        const overlay = document.getElementById('bambooCopterPopup');
+        if (overlay) overlay.classList.add('visible');
+    }
+
+    function closeBambooCopterPopup() {
+        playPocketSynth('click');
+        const overlay = document.getElementById('bambooCopterPopup');
+        if (overlay) overlay.classList.remove('visible');
+
+        const wrapper = document.querySelector('.level-wrapper') || document.querySelector('.home-wrapper');
+        if (wrapper) wrapper.classList.remove('zoomed-out');
+    }
 
     window.playPocketSynth = playPocketSynth;
 
