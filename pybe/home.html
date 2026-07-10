@@ -253,14 +253,22 @@
             }
         }
 
-        // One-time reset to ensure testing progress starts fresh
-        if (!localStorage.getItem('pybe_journey_reset_v7')) {
+        // Reset progress if reset query parameter is present, or if it is a new version reset
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('reset') === 'true' || !localStorage.getItem('pybe_journey_reset_v11')) {
             localStorage.removeItem('pybe_progress_v1');
+            localStorage.removeItem('pybe_progress');
+            localStorage.removeItem('pybe_pocket_state_v1');
+            localStorage.removeItem('pybe_time_tv_history');
             localStorage.removeItem('pybe_student_name');
             localStorage.removeItem('pybe_project_code');
             localStorage.removeItem('pybe_github_link');
             localStorage.removeItem('pybe_project_type');
-            localStorage.setItem('pybe_journey_reset_v7', 'true');
+            localStorage.removeItem('pybe_dev_mode'); // Clear dev mode to force student mode
+            localStorage.setItem('pybe_journey_reset_v11', 'true');
+            if (urlParams.get('reset') === 'true') {
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
         }
 
         // ── Load progress ──────────────────────────────────────
@@ -298,13 +306,14 @@
                     let starsHTML = '';
                     if (state === 'completed') {
                         const attempts = (progress.attempts && progress.attempts[lvl]) || 1;
-                        let stars = 5;
-                        if (attempts === 2) stars = 4;
-                        else if (attempts === 3) stars = 3;
-                        else if (attempts === 4 || attempts === 5) stars = 2;
-                        else if (attempts > 5) stars = 1;
+                        let stars = 0;
+                        if (attempts === 1) stars = 3;
+                        else if (attempts === 2) stars = 2;
+                        else if (attempts === 3) stars = 1;
 
-                        starsHTML = `<div class="card-stars">${Array(stars).fill('<i class="fas fa-star"></i>').join('')}</div>`;
+                        if (stars > 0) {
+                            starsHTML = `<div class="card-stars">${Array(stars).fill('<i class="fas fa-star"></i>').join('')}</div>`;
+                        }
                     }
                     card.innerHTML = `
                         ${starsHTML}
@@ -510,6 +519,12 @@
             const storyContainer = document.createElement('div');
             storyContainer.className = 'story-container';
             storyContainer.id = 'storyContainer';
+            
+            // Hide floating pocket button during story mode
+            const style = document.createElement('style');
+            style.id = 'tempStoryStyle';
+            style.innerHTML = '#floatingPocketBtn { display: none !important; }';
+            document.head.appendChild(style);
             
             // Build Cinematic Stars
             let starsHTML = '';
@@ -892,6 +907,10 @@
                 window.PyBe.saveProgress(progress);
                 
                 buildGrid();
+                
+                // Show floating pocket button again
+                const tempStyle = document.getElementById('tempStoryStyle');
+                if (tempStyle) tempStyle.remove();
                 
                 storyContainer.classList.add('fade-out');
                 setTimeout(() => {

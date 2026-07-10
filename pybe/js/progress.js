@@ -18,7 +18,7 @@ function getProgress() {
         }
 
         // Developer/Testing Bypass: unlock all levels & gadgets if devMode is enabled
-        const isDev = localStorage.getItem('pybe_dev_mode') !== 'false';
+        const isDev = localStorage.getItem('pybe_dev_mode') === 'true';
         if (isDev) {
             progress.currentLevel = 100;
             progress.completed = Array.from({length: 100}, (_, i) => i + 1);
@@ -33,7 +33,7 @@ function getProgress() {
 
         return progress;
     } catch (e) {
-        return { currentLevel: 100, completed: Array.from({length: 100}, (_, i) => i + 1), lastPlayed: null, attempts: {}, streak: 5, unlockedGadgets: [] };
+        return { currentLevel: 1, completed: [], lastPlayed: null, attempts: {}, streak: 0, unlockedGadgets: [] };
     }
 }
 
@@ -59,6 +59,8 @@ function saveProgress(progress) {
                     progress.streak = 1;
                 }
             } else {
+                // gap — reset streak
+                progress.prevStreak = progress.streak || 1;
                 progress.streak = 1;
             }
         } else {

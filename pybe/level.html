@@ -29,6 +29,10 @@
                 <h2 id="levelTitle">Loading...</h2>
                 <p id="levelConcept">—</p>
             </div>
+            <!-- Attempts Box -->
+            <div class="attempts-badge" id="attemptsBadge">
+                <i class="fas fa-redo-alt"></i> Attempts: <span id="attemptsVal">0</span>
+            </div>
         </div>
 
         <!-- ── SECTION STEPPER ── -->
@@ -134,6 +138,7 @@
     <script src="js/levels_data.js"></script>
     <script src="js/confetti.js"></script>
     <script src="js/floating_pocket.js"></script>
+    <script src="js/xp_system.js"></script>
     <script>
     (function () {
         // ── Load level from URL ──────────────────────────────────
@@ -149,6 +154,16 @@
         let testSubmitted  = false;
         let codingSubmitted = false;   // Track if coding solution is submitted and correct
         let shortAnswerTexts = {};     // index -> typed text
+        let xpAwardedSections = new Set();
+
+        function updateAttemptsBadge() {
+            const progress = window.PyBe ? window.PyBe.getProgress() : {};
+            const attempts = (progress.attempts && progress.attempts[levelId]) || 0;
+            const badgeVal = document.getElementById('attemptsVal');
+            if (badgeVal) {
+                badgeVal.textContent = attempts;
+            }
+        }
 
         // ── Navigation Gate Checkers ─────────────────────────────
         function isSectionCleared(idx) {
@@ -187,7 +202,9 @@
         }
 
         function canGoToSection(targetIdx) {
-            if (localStorage.getItem('pybe_dev_mode') !== 'false') return true;
+            if (localStorage.getItem('pybe_dev_mode') === 'true') return true;
+            const progress = window.PyBe ? window.PyBe.getProgress() : {};
+            if (progress.completed && progress.completed.includes(levelId)) return true;
             if (targetIdx <= currentSection) return true;
             if (targetIdx <= maxSectionUnlocked) return true;
             if (targetIdx === currentSection + 1 && isSectionCleared(currentSection)) return true;
@@ -304,6 +321,18 @@
                 return;
             }
 
+            // Award lesson / theory XP
+            if (!xpAwardedSections.has(currentSection)) {
+                const secType = sections[currentSection];
+                if (secType === 'description') {
+                    if (window.awardXp) window.awardXp(20, "Lesson Read 📖");
+                    xpAwardedSections.add(currentSection);
+                } else if (secType === 'theory' || secType === 'qna') {
+                    if (window.awardXp) window.awardXp(20, "Theory Reviewed 💡");
+                    xpAwardedSections.add(currentSection);
+                }
+            }
+
             goToSection(currentSection + 1);
         });
 
@@ -365,7 +394,7 @@
         // ── Render Test ──────────────────────────────────────────
         function renderTest() {
             const t = level.test;
-            const isDev = localStorage.getItem('pybe_dev_mode') !== 'false';
+            const isDev = localStorage.getItem('pybe_dev_mode') === 'true';
 
             sectionContent.innerHTML = `
                 <div class="sec-test">
@@ -378,6 +407,9 @@
                     <div class="test-submit-row" id="testSubmitRow">
                         <button class="btn btn-submit" id="btnSubmitTest">
                             <i class="fas fa-check-circle"></i> Submit Answers
+                        </button>
+                        <button class="btn btn-retry" id="btnRetryTest" style="display:none; background:#7f8c8d; border-color:#7f8c8d; margin-left: 10px;">
+                            <i class="fas fa-redo"></i> Retry Test
                         </button>
                         ${isDev ? `
                         <button class="btn btn-run" id="btnDevAutoFillTest" style="background:#8e44ad; border-color:#8e44ad; margin-left: 10px;">
@@ -394,6 +426,12 @@
             });
 
             document.getElementById('btnSubmitTest').addEventListener('click', submitTest);
+            document.getElementById('btnRetryTest').addEventListener('click', () => {
+                testAnswers    = {};
+                shortAnswerTexts = {};
+                testSubmitted  = false;
+                renderTest();
+            });
 
             if (isDev && document.getElementById('btnDevAutoFillTest')) {
                 document.getElementById('btnDevAutoFillTest').addEventListener('click', () => {
@@ -446,8 +484,9 @@
                 wrap.querySelectorAll('input').forEach(inp => {
                     inp.addEventListener('change', e => {
                         testAnswers[qi] = parseInt(e.target.value);
-                        wrap.querySelectorAll('.q-option').forEach(l => l.classList.remove('selected'));
+                        wrap.querySelectorAll('.q-option').forEach(l => l.classList.remove('selected', 'correct', 'incorrect'));
                         wrap.querySelector(`label[data-oi="${e.target.value}"]`).classList.add('selected');
+                        wrap.classList.remove('incorrect', 'correct');
                     });
                     if (testAnswers[qi] !== undefined && parseInt(inp.value) === testAnswers[qi]) {
                         inp.checked = true;
@@ -463,6 +502,7 @@
                     </div>`;
                 wrap.querySelector(`#fill-${qi}`).addEventListener('input', e => {
                     shortAnswerTexts[qi] = e.target.value;
+                    wrap.classList.remove('incorrect', 'correct');
                 });
 
             } else if (q.type === 'tf') {
@@ -474,8 +514,9 @@
                 wrap.querySelectorAll('input').forEach(inp => {
                     inp.addEventListener('change', e => {
                         testAnswers[qi] = e.target.value;
-                        wrap.querySelectorAll('.q-tf-btn').forEach(l => l.classList.remove('selected'));
+                        wrap.querySelectorAll('.q-tf-btn').forEach(l => l.classList.remove('selected', 'correct', 'incorrect'));
                         wrap.querySelector(`input[value="${e.target.value}"]`).closest('label').classList.add('selected');
+                        wrap.classList.remove('incorrect', 'correct');
                     });
                     if (testAnswers[qi] !== undefined && inp.value === testAnswers[qi]) {
                         inp.checked = true;
@@ -492,6 +533,7 @@
                     </div>`;
                 wrap.querySelector(`#short-${qi}`).addEventListener('input', e => {
                     shortAnswerTexts[qi] = e.target.value;
+                    wrap.classList.remove('incorrect', 'correct');
                 });
             }
 
@@ -502,6 +544,7 @@
             if (testSubmitted) return;
             if (window.PyBe && window.PyBe.recordAttempt) {
                 window.PyBe.recordAttempt(levelId);
+                updateAttemptsBadge();
             }
             const t = level.test;
             let score   = 0;
@@ -537,7 +580,7 @@
                         card.querySelectorAll('.q-option').forEach(l => {
                             l.classList.remove('correct', 'incorrect');
                             const oi = parseInt(l.dataset.oi);
-                            if (oi === q.answer) l.classList.add('correct');
+                            if (correct && oi === q.answer) l.classList.add('correct');
                             if (parseInt(userAns) === oi && oi !== q.answer) l.classList.add('incorrect');
                         });
                     } else if (q.type === 'fill' || q.type === 'short') {
@@ -545,7 +588,7 @@
                     } else if (q.type === 'tf') {
                         card.querySelectorAll('.q-tf-btn').forEach(l => {
                             const v = l.querySelector('input').value;
-                            if (v === q.answer) l.classList.add('correct');
+                            if (correct && v === q.answer) l.classList.add('correct');
                             if (v === userAns && v !== q.answer) l.classList.add('incorrect');
                         });
                     }
@@ -555,22 +598,75 @@
             });
 
             testSubmitted = true;
-            document.getElementById('testSubmitRow').style.display = 'none';
 
             const pct = Math.round((score / total) * 100);
+
+            // Log to Time TV History
+            try {
+                let history = [];
+                try {
+                    history = JSON.parse(localStorage.getItem('pybe_time_tv_history') || '[]');
+                } catch(e) {}
+                if (!Array.isArray(history)) history = [];
+
+                let existing = history.find(h => h.levelId === levelId);
+                let incorrectList = [];
+                t.questions.forEach((q, qi) => {
+                    const card = document.querySelector(`.question-card[data-qi="${qi}"]`);
+                    if (card && card.classList.contains('incorrect')) {
+                        incorrectList.push(q.question);
+                    }
+                });
+
+                if (existing) {
+                    existing.attemptsCount++;
+                    existing.accuracy = pct;
+                    existing.incorrectAnswers = incorrectList;
+                    if (incorrectList.length > 0 && !existing.weaknesses.includes(level.concept || "General Python")) {
+                        existing.weaknesses.push(level.concept || "General Python");
+                    }
+                } else {
+                    history.push({
+                        levelId: levelId,
+                        title: level.title || `Level ${levelId}`,
+                        attemptsCount: 1,
+                        accuracy: pct,
+                        incorrectAnswers: incorrectList,
+                        codeSubmission: "",
+                        strengths: pct >= 60 ? [level.concept || "General Python"] : [],
+                        weaknesses: incorrectList.length > 0 ? [level.concept || "General Python"] : []
+                    });
+                }
+                localStorage.setItem('pybe_time_tv_history', JSON.stringify(history));
+            } catch(e) { console.error("Error saving Time TV history", e); }
+
+            document.getElementById('testSubmitRow').style.display = 'none';
             const resultEl = document.getElementById('testResult');
             const passed = pct >= 60;
+
+            const isTimeClothUsed = sessionStorage.getItem('pybe_time_cloth_used_' + levelId) === 'true';
+            if (passed && !xpAwardedSections.has('test')) {
+                xpAwardedSections.add('test');
+                if (!isTimeClothUsed) {
+                    if (pct === 100) {
+                        if (window.awardXp) window.awardXp(80, "Perfect Test Score! 🎯");
+                        if (window.unlockAchievement) window.unlockAchievement('perfect_marks');
+                    } else {
+                        if (window.awardXp) window.awardXp(50, "Test Cleared! ❓");
+                    }
+                }
+            }
 
             resultEl.style.display = 'block';
             resultEl.className = `test-result ${passed ? 'passed' : 'failed'}`;
             resultEl.innerHTML = `
                 <div class="result-score">${score} / ${total} correct (${pct}%)</div>
                 <div class="result-msg">${passed ? '✅ Great job! You\'re ready for the next section.' : '⚠️ Review the material and try again!'}</div>
-                ${!passed ? '<button class="btn btn-retry" id="btnRetryTest"><i class="fas fa-redo"></i> Retry Test</button>' : ''}
+                ${!passed ? '<button class="btn btn-retry" id="btnResultRetryTest"><i class="fas fa-redo"></i> Retry Test</button>' : ''}
             `;
 
             if (!passed) {
-                document.getElementById('btnRetryTest').addEventListener('click', () => {
+                document.getElementById('btnResultRetryTest').addEventListener('click', () => {
                     testAnswers    = {};
                     shortAnswerTexts = {};
                     testSubmitted  = false;
@@ -587,7 +683,7 @@
             }
             const hasScenario = !!level.scenario;
             const starterCode = ''; // No comments or pre-filled code in the editor — completely empty!
-            const isDev = localStorage.getItem('pybe_dev_mode') !== 'false';
+            const isDev = localStorage.getItem('pybe_dev_mode') === 'true';
 
             sectionContent.innerHTML = `
                 <div class="sec-coding">
@@ -673,15 +769,63 @@
                 const code     = document.getElementById('codeEditor').value.trim();
                 const solution = (level.solution || '').trim();
 
-                if (window.PyBe && window.PyBe.recordAttempt) {
-                    window.PyBe.recordAttempt(levelId);
+                const capsuleActive = !!window.energyCapsuleActive;
+                if (capsuleActive) {
+                    window.energyCapsuleActive = false;
+                    const btn = document.getElementById('btnSubmitCode');
+                    if (btn) btn.classList.remove('capsule-active');
+                } else {
+                    if (window.PyBe && window.PyBe.recordAttempt) {
+                        window.PyBe.recordAttempt(levelId);
+                        updateAttemptsBadge();
+                    }
                 }
+
+                // Log coding submission to Time TV History
+                try {
+                    let history = [];
+                    try {
+                        history = JSON.parse(localStorage.getItem('pybe_time_tv_history') || '[]');
+                    } catch(e) {}
+                    if (!Array.isArray(history)) history = [];
+
+                    let existing = history.find(h => h.levelId === levelId);
+                    const isSuccess = normalizeCode(code) === normalizeCode(solution);
+                    
+                    if (existing) {
+                        if (!capsuleActive) existing.attemptsCount++;
+                        existing.codeSubmission = code;
+                        if (!isSuccess && !existing.weaknesses.includes("Coding Submissions")) {
+                            existing.weaknesses.push("Coding Submissions");
+                        }
+                        if (isSuccess && !existing.strengths.includes("Coding Execution")) {
+                            existing.strengths.push("Coding Execution");
+                        }
+                    } else {
+                        history.push({
+                            levelId: levelId,
+                            title: level.title || `Level ${levelId}`,
+                            attemptsCount: capsuleActive ? 0 : 1,
+                            accuracy: isSuccess ? 100 : 0,
+                            incorrectAnswers: isSuccess ? [] : ["Coding Submission Error"],
+                            codeSubmission: code,
+                            strengths: isSuccess ? ["Coding Execution"] : [],
+                            weaknesses: isSuccess ? [] : ["Coding Submissions"]
+                        });
+                    }
+                    localStorage.setItem('pybe_time_tv_history', JSON.stringify(history));
+                } catch(e) { console.error("Error saving Time TV history", e); }
 
                 if (normalizeCode(code) === normalizeCode(solution)) {
                     codingSubmitted = true;
+                    if (!xpAwardedSections.has('coding')) {
+                        xpAwardedSections.add('coding');
+                        if (window.awardXp) window.awardXp(80, "Coding Round Complete! 💻");
+                    }
                     const consoleEl = document.getElementById('consoleOutput');
                     consoleEl.innerHTML = `<span class="console-success">✅ Code is correct!\n🤖 Doraemon says: "Excellent job! Click the Finish button in the bottom navigation to complete the level."</span>`;
                     consoleEl.classList.add('show');
+                    if (capsuleActive) showToast("💊 Energy Capsule verified correct code! Shielded attempt.");
                 } else {
                     codingSubmitted = false;
                     const editor = document.getElementById('codeEditor');
@@ -690,6 +834,7 @@
                     const consoleEl = document.getElementById('consoleOutput');
                     consoleEl.innerHTML = `<span class="console-error">❌ Not quite right!\n🤖 Doraemon says: "${level.wrongHint || 'Check your code and try again.'}"</span>`;
                     consoleEl.classList.add('show');
+                    if (capsuleActive) showToast("💊 Energy Capsule consumed! This mistake was shielded.");
                 }
             });
         }
@@ -870,6 +1015,12 @@
 
             // Passed! Complete and go home
             window.PyBe.completeLevel(levelId);
+            if (levelId === 1) {
+                if (window.unlockAchievement) window.unlockAchievement('first_steps');
+            }
+            if (sessionStorage.getItem('pybe_time_cloth_used_' + levelId) === 'true') {
+                if (window.unlockAchievement) window.unlockAchievement('time_lord');
+            }
             launchConfetti();
             setTimeout(() => { window.location.href = 'home.html'; }, 800);
         }
@@ -932,6 +1083,23 @@
         (function injectTimeCloth() {
             const style = document.createElement('style');
             style.innerHTML = `
+                .attempts-badge {
+                    background: #FFF3E0;
+                    border: 2px solid #FFB74D;
+                    border-radius: 12px;
+                    padding: 8px 16px;
+                    font-family: 'Nunito', sans-serif;
+                    font-weight: 800;
+                    font-size: 14px;
+                    color: #FF6D00;
+                    box-shadow: 0 4px 12px rgba(255, 109, 0, 0.15);
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    margin-left: auto;
+                    white-space: nowrap;
+                }
+
                 .tc-popup-overlay {
                     position: fixed;
                     inset: 0;
@@ -1454,6 +1622,175 @@
                     from { transform: translateY(0); }
                     to { transform: translateY(-10px); }
                 }
+
+                /* Translation Jelly Styles */
+                .tj-popup-overlay {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(8, 4, 20, 0.85);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 100000004;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.4s ease;
+                }
+
+                .tj-popup-overlay.visible {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+                .tj-card {
+                    background: #fffdf6;
+                    border: 6px solid #ffb300;
+                    border-radius: 35px;
+                    box-shadow: 0 30px 70px rgba(255, 179, 0, 0.35);
+                    width: 540px;
+                    max-width: 90%;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    position: relative;
+                    transform: scale(0.8) translateY(30px);
+                    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                    font-family: 'Quicksand', sans-serif;
+                    color: #5d4037;
+                }
+
+                .tj-popup-overlay.visible .tj-card {
+                    transform: scale(1) translateY(0);
+                }
+
+                .tj-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 2px dashed rgba(255, 179, 0, 0.3);
+                    padding-bottom: 12px;
+                }
+
+                .tj-title {
+                    font-size: 22px;
+                    font-weight: 900;
+                    color: #ff8f00;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .tj-close {
+                    background: none;
+                    border: none;
+                    color: #ff8f00;
+                    font-size: 22px;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                }
+
+                .tj-close:hover {
+                    transform: scale(1.2);
+                    color: #ffb300;
+                }
+
+                .tj-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+
+                .tj-option-btn {
+                    background: #fff;
+                    border: 2px solid rgba(255, 179, 0, 0.2);
+                    border-radius: 16px;
+                    padding: 14px 20px;
+                    font-weight: 700;
+                    font-size: 14.5px;
+                    color: #5d4037;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+                }
+
+                .tj-option-btn:hover {
+                    border-color: #ffb300;
+                    background: rgba(255, 179, 0, 0.04);
+                    transform: translateY(-2px);
+                }
+
+                .tj-option-icon {
+                    font-size: 24px;
+                }
+
+                .tj-option-meta {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2px;
+                }
+
+                .tj-option-title {
+                    font-size: 15px;
+                    font-weight: 800;
+                    color: #ff6f00;
+                }
+
+                .tj-option-desc {
+                    font-size: 12.5px;
+                    color: #795548;
+                    font-weight: 500;
+                }
+
+                .tj-active-banner {
+                    background: rgba(255, 179, 0, 0.1);
+                    border: 2.5px solid #ffb300;
+                    border-radius: 16px;
+                    padding: 12px 16px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 13.5px;
+                    font-weight: 700;
+                    color: #ff6f00;
+                    animation: adFade 0.3s ease-out;
+                }
+
+                .tj-banner-reset-btn {
+                    background: #ffb300;
+                    color: white;
+                    border: none;
+                    padding: 6px 12px;
+                    border-radius: 20px;
+                    font-weight: 800;
+                    font-size: 12px;
+                    cursor: pointer;
+                    transition: background 0.2s;
+                }
+
+                .tj-banner-reset-btn:hover {
+                    background: #ff8f00;
+                }
+
+                /* Energy Capsule Styles */
+                .btn-submit.capsule-active {
+                    border: 2.5px solid #00e5ff !important;
+                    box-shadow: 0 0 15px #00e5ff !important;
+                    animation: pulseCyan 1.5s infinite alternate;
+                }
+
+                @keyframes pulseCyan {
+                    from { box-shadow: 0 0 5px #00e5ff; }
+                    to { box-shadow: 0 0 20px #00e5ff; }
+                }
             `;
             document.head.appendChild(style);
 
@@ -1477,328 +1814,129 @@
                 </div>
             `;
             document.body.appendChild(adPopup);
+
+            // 4. Append DOM overlay for Translation Jelly
+            const tjPopup = document.createElement('div');
+            tjPopup.className = 'tj-popup-overlay';
+            tjPopup.id = 'tjPopup';
+            tjPopup.innerHTML = `
+                <div class="tj-card" id="tjCard">
+                    <!-- Populated dynamically -->
+                </div>
+            `;
+            document.body.appendChild(tjPopup);
         })();
 
-        function getMistakeExplanation(m) {
-            if (m.type === 'coding') {
-                return `Your coding solution was incorrect. Make sure you match variables case-sensitivity, check spellings of variable names, assign correct values, and print output exactly as instructed.`;
-            }
-            const q = m.qObj;
-            if (q && q.question.toLowerCase().includes('valid')) {
-                return `Variable names in Python must start with a letter (a-z, A-Z) or an underscore (_). They cannot start with numbers, contain spaces, hyphens, or symbols like $, @, %.`;
-            }
-            if (q && q.question.toLowerCase().includes('keyword')) {
-                return `Keywords like 'while', 'if', 'else', 'for', 'class', and 'def' are reserved by Python's compiler to define program control structure. Re-using them as variable names throws a SyntaxError.`;
-            }
-            if (q && q.question.toLowerCase().includes('convention') || q && q.question.toLowerCase().includes('snake')) {
-                return `Python's PEP 8 style guide recommends snake_case naming convention (all lowercase letters, with words separated by underscores like my_variable_name) to build clear and readable code.`;
-            }
-            if (m.userAnswer === 'false' || m.userAnswer === 'true') {
-                return `Boolean constants in Python are case-sensitive. True and False must always have their first letter capitalized. 'true' or 'false' in lowercase will cause a NameError.`;
-            }
-            return `You submitted '${m.userAnswer}'. Python rules require '${m.correctAnswer}'. Review the spelling and parameters, then select the correct answer.`;
-        }
-
-        function showRetryPanel(m) {
-            const container = document.getElementById('tcRetryPanelContainer');
-            if (!container) return;
-
-            const explanation = getMistakeExplanation(m);
-            let inputHtml = "";
-            if (m.type === 'coding') {
-                inputHtml = `
-                    <div class="tc-input-label">Rewrite your code solution:</div>
-                    <textarea class="tc-input-text" id="tcRetryCodeInput" rows="4">${m.userAnswer}</textarea>
-                `;
-            } else {
-                const q = m.qObj;
-                if (q.type === 'mcq') {
-                    inputHtml = `
-                        <div class="tc-input-label">Choose correct option:</div>
-                        <select class="tc-input-mcq" id="tcRetryMcqInput">
-                            ${q.options.map((opt, oi) => `
-                                <option value="${oi}" ${oi === parseInt(testAnswers[m.qi]) ? 'selected' : ''}>${opt}</option>
-                            `).join('')}
-                        </select>
-                    `;
-                } else if (q.type === 'tf') {
-                    inputHtml = `
-                        <div class="tc-input-label">Select answer:</div>
-                        <select class="tc-input-mcq" id="tcRetryTfInput">
-                            <option value="true" ${testAnswers[m.qi] === 'true' ? 'selected' : ''}>True</option>
-                            <option value="false" ${testAnswers[m.qi] === 'false' ? 'selected' : ''}>False</option>
-                        </select>
-                    `;
-                } else if (q.type === 'fill') {
-                    inputHtml = `
-                        <div class="tc-input-label">Type correct text:</div>
-                        <input type="text" class="tc-input-text" id="tcRetryFillInput" value="${m.userAnswer}" autocomplete="off">
-                    `;
-                } else if (q.type === 'short') {
-                    inputHtml = `
-                        <div class="tc-input-label">Elaborate your explanation:</div>
-                        <textarea class="tc-input-text" id="tcRetryShortInput" rows="3">${m.userAnswer}</textarea>
-                    `;
-                }
-            }
-
-            container.innerHTML = `
-                <div class="tc-retry-panel">
-                    <div class="tc-explain-box">
-                        <strong>⏳ Explanation of previous mistake:</strong><br/>
-                        ${explanation}
-                    </div>
-                    ${inputHtml}
-                    <button class="tc-action-btn" id="btnApplyTimeCloth">
-                        <i class="fas fa-undo"></i> Wrap with Time Cloth & Rewind
-                    </button>
-                </div>
-            `;
-
-            document.getElementById('btnApplyTimeCloth').onclick = () => {
-                const card = document.getElementById('timeClothCard');
-                card.style.animation = 'tcWarp 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards';
-
-                try {
-                    const AudioContext = window.AudioContext || window.webkitAudioContext;
-                    if (AudioContext) {
-                        const ctx = new AudioContext();
-                        const now = ctx.currentTime;
-                        const osc = ctx.createOscillator();
-                        const gain = ctx.createGain();
-                        osc.type = 'sine';
-                        osc.frequency.setValueAtTime(600, now);
-                        osc.frequency.exponentialRampToValueAtTime(150, now + 1.0);
-                        gain.gain.setValueAtTime(0.2, now);
-                        gain.gain.linearRampToValueAtTime(0.01, now + 1.0);
-                        osc.connect(gain);
-                        gain.connect(ctx.destination);
-                        osc.start();
-                        osc.stop(now + 1.0);
-                    }
-                } catch(e) {}
-
-                setTimeout(() => {
-                    let corrected = false;
-                    if (m.type === 'coding') {
-                        const newCode = document.getElementById('tcRetryCodeInput').value.trim();
-                        const editor = document.getElementById('codeEditor');
-                        if (editor) editor.value = newCode;
-                        
-                        if (normalizeCode(newCode) === normalizeCode(m.correctAnswer.trim())) {
-                            corrected = true;
-                            codingSubmitted = true;
-                            const consoleEl = document.getElementById('consoleOutput');
-                            if (consoleEl) {
-                                consoleEl.innerHTML = `<span class="console-success">✅ Code is correct!\n🤖 Doraemon says: "Time Cloth restored your marks! Click the Finish button in the bottom navigation to complete the level."</span>`;
-                                consoleEl.classList.add('show');
-                            }
-                        } else {
-                            const consoleEl = document.getElementById('consoleOutput');
-                            if (consoleEl) {
-                                consoleEl.innerHTML = `<span class="console-error">❌ Code is still incorrect! Mistake is not fully solved, but Time Cloth was consumed.</span>`;
-                                consoleEl.classList.add('show');
-                            }
-                        }
-                    } else {
-                        const q = m.qObj;
-                        let newVal = "";
-                        if (q.type === 'mcq') {
-                            newVal = parseInt(document.getElementById('tcRetryMcqInput').value);
-                            testAnswers[m.qi] = newVal;
-                            corrected = newVal === q.answer;
-                        } else if (q.type === 'tf') {
-                            newVal = document.getElementById('tcRetryTfInput').value;
-                            testAnswers[m.qi] = newVal;
-                            corrected = newVal === q.answer;
-                        } else if (q.type === 'fill') {
-                            newVal = document.getElementById('tcRetryFillInput').value.trim();
-                            const fillInput = document.getElementById('fill-' + m.qi);
-                            if (fillInput) fillInput.value = newVal;
-                            corrected = newVal.toLowerCase() === q.answer.toLowerCase();
-                        } else if (q.type === 'short') {
-                            newVal = document.getElementById('tcRetryShortInput').value.trim();
-                            const shortInput = document.getElementById('short-' + m.qi);
-                            if (shortInput) shortInput.value = newVal;
-                            corrected = newVal.length > 15;
-                        }
-
-                        const qCard = document.querySelector(`.question-card[data-qi="${m.qi}"]`);
-                        if (qCard) {
-                            qCard.classList.remove('incorrect');
-                            if (corrected) {
-                                qCard.classList.add('correct');
-                                if (q.type === 'mcq') {
-                                    qCard.querySelectorAll('.q-option').forEach(l => {
-                                        l.classList.remove('correct', 'incorrect', 'selected');
-                                        const oi = parseInt(l.dataset.oi);
-                                        if (oi === q.answer) l.classList.add('correct');
-                                        if (oi === newVal) l.classList.add('selected');
-                                    });
-                                } else if (q.type === 'tf') {
-                                    qCard.querySelectorAll('.q-tf-btn').forEach(l => {
-                                        l.classList.remove('correct', 'incorrect', 'selected');
-                                        const v = l.querySelector('input').value;
-                                        if (v === q.answer) l.classList.add('correct');
-                                        if (v === newVal) l.classList.add('selected');
-                                    });
-                                }
-                            } else {
-                                qCard.classList.add('incorrect');
-                            }
-                        }
-                    }
-
-                    sessionStorage.setItem('pybe_time_cloth_used_' + levelId, 'true');
-
-                    if (corrected) {
-                        launchConfetti();
-                        showToast("✨ Mistake corrected! Marks restored successfully!");
-                        
-                        if (m.type !== 'coding') {
-                            const t = level.test;
-                            let score = 0;
-                            t.questions.forEach((qObj, i) => {
-                                let qCorrect = false;
-                                if (qObj.type === 'fill') {
-                                    const el = document.getElementById('fill-' + i);
-                                    const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
-                                    qCorrect = val === qObj.answer.toLowerCase();
-                                } else if (qObj.type === 'short') {
-                                    const el = document.getElementById('short-' + i);
-                                    qCorrect = (el ? el.value.trim() : '').length > 15;
-                                } else if (qObj.type === 'tf') {
-                                    qCorrect = String(testAnswers[i]) === String(qObj.answer);
-                                } else {
-                                    qCorrect = parseInt(testAnswers[i]) === qObj.answer;
-                                }
-                                if (qCorrect) score++;
-                            });
-                            const pct = Math.round((score / t.questions.length) * 100);
-                            const resultEl = document.getElementById('testResult');
-                            if (resultEl) {
-                                const passed = pct >= 60;
-                                resultEl.className = `test-result ${passed ? 'passed' : 'failed'}`;
-                                resultEl.querySelector('.result-score').textContent = `${score} / ${t.questions.length} correct (${pct}%)`;
-                                resultEl.querySelector('.result-msg').innerHTML = passed ? '✅ Great job! You\'re ready for the next section.' : '⚠️ Review the material and try again!';
-                            }
-                        }
-                    } else {
-                        showToast("Time Cloth reversed time but retry answer was incorrect!");
-                    }
-
-                    setTimeout(() => {
-                        card.style.animation = '';
-                        document.getElementById('timeClothPopup').classList.remove('visible');
-                    }, 500);
-                }, 1200);
-            };
-        }
-
-        function showTimeClothSelector(mistakes) {
-            const overlay = document.getElementById('timeClothPopup');
-            const card = document.getElementById('timeClothCard');
-            if (!overlay || !card) return;
-
-            card.innerHTML = `
-                <div class="tc-header">
-                    <div class="tc-title">⏳ Time Cloth mistake rewinder</div>
-                    <button class="tc-close" id="tcCloseBtn">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="tc-body" id="tcBodyContent">
-                    <p style="font-size:14px; margin-bottom:10px; font-weight:600;">Wrap a mistake with the Time Cloth to reverse time and retry it!</p>
-                    <div style="display:flex; flex-direction:column; gap:12px;" id="tcMistakesList">
-                        ${mistakes.map((m, index) => `
-                            <div class="tc-mistake-item" data-index="${index}">
-                                <div class="tc-mistake-badge">${m.type === 'coding' ? 'Coding Challenge' : 'Test Question ' + (m.qi + 1)}</div>
-                                <div class="tc-mistake-header">${m.type === 'coding' ? 'Solution error' : m.question}</div>
-                                <div class="tc-mistake-text"><strong>Your submission:</strong> <code>${m.userAnswer}</code></div>
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div id="tcRetryPanelContainer"></div>
-                </div>
-            `;
-
-            document.getElementById('tcCloseBtn').onclick = () => {
-                overlay.classList.remove('visible');
-            };
-
-            const items = card.querySelectorAll('.tc-mistake-item');
-            items.forEach(item => {
-                item.onclick = () => {
-                    const idx = parseInt(item.getAttribute('data-index'));
-                    showRetryPanel(mistakes[idx]);
-                };
-            });
-
-            overlay.classList.add('visible');
-            overlay.onclick = (e) => {
-                if (e.target === overlay) overlay.classList.remove('visible');
-            };
-        }
-
         window.activateTimeCloth = function() {
-            if (sessionStorage.getItem('pybe_time_cloth_used_' + levelId) === 'true') {
-                return { success: false, reason: "Time Cloth can only be used once per level! ⏳" };
-            }
-            
-            const mistakes = [];
             const t = level.test;
+            let hasTestMistakes = false;
+            let incorrectCount = 0;
+
             if (testSubmitted && t && t.questions) {
                 t.questions.forEach((q, qi) => {
                     let correct = false;
-                    let userAnsVal = "";
                     if (q.type === 'fill') {
                         const el = document.getElementById('fill-' + qi);
                         const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
                         correct = val === q.answer.toLowerCase();
-                        userAnsVal = val;
                     } else if (q.type === 'short') {
                         const el = document.getElementById('short-' + qi);
                         correct = (el ? el.value.trim() : '').length > 15;
-                        userAnsVal = el ? el.value.trim() : '';
                     } else if (q.type === 'tf') {
                         correct = String(testAnswers[qi]) === String(q.answer);
-                        userAnsVal = testAnswers[qi];
                     } else {
                         correct = parseInt(testAnswers[qi]) === q.answer;
-                        userAnsVal = q.options[testAnswers[qi]] || "";
                     }
-                    
                     if (!correct) {
-                        mistakes.push({
-                            type: 'test',
-                            qi: qi,
-                            question: q.question,
-                            userAnswer: userAnsVal,
-                            correctAnswer: q.type === 'mcq' ? q.options[q.answer] : q.answer,
-                            qObj: q
-                        });
+                        hasTestMistakes = true;
+                        incorrectCount++;
                     }
                 });
             }
-            
+
             const codeEditor = document.getElementById('codeEditor');
-            if (codeEditor) {
-                const code = codeEditor.value.trim();
-                if (code.length > 0 && !codingSubmitted) {
-                    mistakes.push({
-                        type: 'coding',
-                        question: 'Coding Round Solution',
-                        userAnswer: code,
-                        correctAnswer: level.solution
-                    });
+            let hasCodingMistakes = false;
+            if (codeEditor && !codingSubmitted) {
+                const progress = window.PyBe ? window.PyBe.getProgress() : {};
+                const attempts = (progress.attempts && progress.attempts[levelId]) || 0;
+                if (attempts > 0) {
+                    hasCodingMistakes = true;
                 }
             }
-            
-            if (mistakes.length === 0) {
+
+            if (!hasTestMistakes && !hasCodingMistakes) {
                 return { success: false, reason: "No mistakes found to rewind yet! Submit incorrect answers or code first. ⏳" };
             }
-            
-            showTimeClothSelector(mistakes);
+
+            // Consume Time Cloth
+            sessionStorage.setItem('pybe_time_cloth_used_' + levelId, 'true');
+
+            // Play pocket sound
+            if (window.playPocketSynth) window.playPocketSynth('time_cloth');
+
+            // 1. Decrement attempts in progress state
+            if (window.PyBe) {
+                const progress = window.PyBe.getProgress();
+                if (progress.attempts && progress.attempts[levelId]) {
+                    progress.attempts[levelId] = Math.max(0, progress.attempts[levelId] - 1);
+                    window.PyBe.saveProgress(progress);
+                    updateAttemptsBadge();
+                }
+            }
+
+            // 2. Decrement attempts in Time TV history
+            try {
+                let history = JSON.parse(localStorage.getItem('pybe_time_tv_history') || '[]');
+                let existing = history.find(h => h.levelId === levelId);
+                if (existing) {
+                    existing.attemptsCount = Math.max(0, existing.attemptsCount - 1);
+                    localStorage.setItem('pybe_time_tv_history', JSON.stringify(history));
+                }
+            } catch(e) { console.error("Error updating Time TV history", e); }
+
+            // Revert action based on where the mistake is
+            if (hasTestMistakes) {
+                // Reset test submission state
+                testSubmitted = false;
+
+                // Hide results card
+                const resultEl = document.getElementById('testResult');
+                if (resultEl) resultEl.style.display = 'none';
+
+                // Show submit row and show the Retry Test button inside it
+                const submitRowEl = document.getElementById('testSubmitRow');
+                if (submitRowEl) submitRowEl.style.display = 'flex';
+                const retryBtnEl = document.getElementById('btnRetryTest');
+                if (retryBtnEl) retryBtnEl.style.display = 'inline-flex';
+
+                // Selectively lock correct and unlock incorrect cards
+                t.questions.forEach((q, qi) => {
+                    const card = document.querySelector(`.question-card[data-qi="${qi}"]`);
+                    if (card) {
+                        const isCorrect = !card.classList.contains('incorrect');
+                        if (isCorrect) {
+                            // Lock correct card inputs, disable pointer events and reduce opacity
+                            card.style.pointerEvents = 'none';
+                            card.style.opacity = '0.75';
+                            card.querySelectorAll('input, textarea').forEach(inp => {
+                                inp.disabled = true;
+                            });
+                        } else {
+                            // Unlock incorrect card inputs for retry, restore opacity and pointer events
+                            card.style.pointerEvents = '';
+                            card.style.opacity = '';
+                            card.querySelectorAll('input, textarea').forEach(inp => {
+                                inp.disabled = false;
+                            });
+                        }
+                    }
+                });
+
+                showToast(`⏳ Time Cloth active! ${incorrectCount} incorrect questions are unlocked. Change your answers and submit again!`);
+            } else {
+                showToast("⏳ Time Cloth active! Reverted your failed coding attempt. Edit your code and submit again!");
+            }
+
             return { success: true };
         }
 
@@ -2202,10 +2340,273 @@
             return { success: true };
         };
 
+        // ── TRANSLATION JELLY INTEGRATION ────────────────────────
+        function getTranslationJellyContent(level, lang) {
+            const title = level.title || "Python Concept";
+            const concept = level.concept || "";
+            
+            if (level.id === 1) {
+                if (lang === 'simple') {
+                    return `
+                        <h3>What is Programming?</h3>
+                        <p>Programming means giving step-by-step rules to a computer. Python is a friendly coding language because it is easy to read and write.</p>
+                        <ul>
+                            <li><strong>Rule 1:</strong> Type instructions in the correct order.</li>
+                            <li><strong>Rule 2:</strong> Use print() to display text outputs on the screen.</li>
+                        </ul>
+                    `;
+                } else if (lang === 'hindi') {
+                    return `
+                        <h3>प्रोग्रामिंग क्या है?</h3>
+                        <p>प्रोग्रामिंग का मतलब है कंप्यूटर को क्रमबद्ध निर्देश देना। पायथन एक बहुत ही सरल भाषा है जो अंग्रेजी जैसी पढ़ी और समझी जा सकती है।</p>
+                        <ul>
+                            <li><strong>नियम 1:</strong> निर्देशों को सही क्रम में लिखें।</li>
+                            <li><strong>नियम 2:</strong> स्क्रीन पर टेक्स्ट दिखाने के लिए <code>print()</code> का उपयोग करें।</li>
+                        </ul>
+                    `;
+                } else if (lang === 'hinglish') {
+                    return `
+                        <h3>Programming Kya Hai?</h3>
+                        <p>Programming ka matlab hai computer ko step-by-step instructions dena taaki wo kaam kar sake. Python ek bohot hi easy language hai jo read aur write karne me simple hoti hai.</p>
+                        <ul>
+                            <li><strong>Rule 1:</strong> Instructions ko correct order me likhe.</li>
+                            <li><strong>Rule 2:</strong> Screen par output dekhne ke liye <code>print()</code> function ka use kare.</li>
+                        </ul>
+                    `;
+                } else if (lang === 'analogy') {
+                    return `
+                        <h3>💡 Beginner Analogy: Instructing Doraemon</h3>
+                        <p>Imagine telling Doraemon how to make a cup of instant noodles. You can't just say "make noodles" without opening the cup and boiling water first! You must give step-by-step rules:</p>
+                        <ol>
+                            <li>Open the wrapper cover.</li>
+                            <li>Add hot water from the thermos.</li>
+                            <li>Wait for exactly 3 minutes.</li>
+                        </ol>
+                        <p>Programming is writing this exact step-by-step recipe for computers to follow. <code>print()</code> is like Doraemon pulling out a gadget to show you the result!</p>
+                    `;
+                }
+            }
+            
+            if (level.id === 10) {
+                if (lang === 'simple') {
+                    return `
+                        <h3>Variables Naming Rules</h3>
+                        <p>You can name variable boxes in Python using simple rules. Breaking these rules raises a SyntaxError!</p>
+                        <ul>
+                            <li>Start with a letter or underscore (_). Never start with a number!</li>
+                            <li>Use only letters, numbers, and underscores. No spaces or hyphens.</li>
+                            <li>Never use Python words (like if, else, while).</li>
+                        </ul>
+                    `;
+                } else if (lang === 'hindi') {
+                    return `
+                        <h3>वैरिएबल नामकरण के नियम</h3>
+                        <p>पायथन में आप बक्से (वैरिएबल) का नामकरण सरल नियमों के तहत कर सकते हैं। इन नियमों को तोड़ने पर सिंटैक्स एरर आता है!</p>
+                        <ul>
+                            <li>नाम हमेशा अक्षर या अंडरस्कोर (_) से शुरू होना चाहिए। नंबर से कभी शुरू न करें!</li>
+                            <li>केवल अक्षरों, नंबरों और अंडरस्कोर का उपयोग करें। स्पेस या हाइफन का प्रयोग न करें।</li>
+                            <li>पायथन के आरक्षित शब्दों (जैसे if, else, while) का उपयोग न करें।</li>
+                        </ul>
+                    `;
+                } else if (lang === 'hinglish') {
+                    return `
+                        <h3>Variable Naming Ke Rules</h3>
+                        <p>Python me variables (data storage boxes) ka naam rakhne ke kuch rules hote hai. Agar rules tode to SyntaxError aayega!</p>
+                        <ul>
+                            <li>Hamesha letter ya underscore (_) se start kare. Number se start nahi kar sakte!</li>
+                            <li>Sirf letters, numbers aur underscores use kare. Space ya hyphens allow nahi hai.</li>
+                            <li>Python ke reserved keywords (jaise if, else, while, def) ko variable name mat banaye.</li>
+                        </ul>
+                    `;
+                } else if (lang === 'analogy') {
+                    return `
+                        <h3>💡 Beginner Analogy: Labeling Storage Boxes</h3>
+                        <p>Imagine storage boxes in Doraemon's room. You want to label a box containing Dorayaki.</p>
+                        <ul>
+                            <li>If you write the label on tape and stick it, it is valid: <code>dorayaki_box</code> (snake_case).</li>
+                            <li>If you leave a space (like <code>dorayaki box</code>), the label falls apart because Python reads it as two separate items!</li>
+                            <li>If you start with a number (like <code>1_dorayaki</code>), Python gets confused thinking you are writing the quantity instead of the label itself.</li>
+                        </ul>
+                    `;
+                }
+            }
+
+            if (lang === 'simple') {
+                return `
+                    <h3>${title} Summary</h3>
+                    <p>Concepts: ${concept}. Learn the fundamentals carefully.</p>
+                    <p>Double-check your parameters and variables spelling to complete the challenges successfully.</p>
+                `;
+            } else if (lang === 'hindi') {
+                return `
+                    <h3>${title} (हिंदी)</h3>
+                    <p>विषय: ${concept}। इस पाठ के मूलभूत सिद्धांतों को ध्यानपूर्वक पढ़ें।</p>
+                    <p>चुनौतियों को सफलतापूर्वक पूरा करने के लिए अपने मापदंडों और वर्तनी (spelling) की दोबारा जांच करें।</p>
+                `;
+            } else if (lang === 'hinglish') {
+                return `
+                    <h3>${title} Hinglish Notes</h3>
+                    <p>Topic: ${concept}. Is lesson ke concepts ko dhyan se samjhein.</p>
+                    <p>Task clear karne ke liye variable spellings aur syntax checks ka dhyaan rakhein.</p>
+                `;
+            } else if (lang === 'analogy') {
+                return `
+                    <h3>💡 Analogy: Doraemon & Nobita</h3>
+                    <p>Topic: "${title}" is like Doraemon giving Nobita a specific gadget. If Nobita uses it correctly, it helps him solve his homework. If Nobita inputs wrong arguments, the gadget backfires (Runtime Error)!</p>
+                    <p>Understand the parameters of this level to use the tool correctly!</p>
+                `;
+            }
+        }
+
+        function applyTranslationJelly(lang) {
+            goToSection(0);
+
+            const descBody = document.getElementById('descBodyContent');
+            if (!descBody) return;
+
+            const transData = getTranslationJellyContent(level, lang);
+            
+            let langLabel = "";
+            if (lang === 'simple') langLabel = "Simple English Summary";
+            else if (lang === 'hindi') langLabel = "Hindi (हिन्दी) Translation";
+            else if (lang === 'hinglish') langLabel = "Hinglish Translation";
+            else if (lang === 'analogy') langLabel = "Beginner Analogy Mode";
+
+            const existingBanner = document.getElementById('tjBanner');
+            if (existingBanner) existingBanner.remove();
+
+            const banner = document.createElement('div');
+            banner.className = 'tj-active-banner';
+            banner.id = 'tjBanner';
+            banner.innerHTML = `
+                <span>🍮 Translation Jelly Active: <strong>${langLabel}</strong></span>
+                <button class="tj-banner-reset-btn" id="btnResetTranslation">Show Original</button>
+            `;
+            
+            const descPanel = document.querySelector('.sec-description');
+            if (descPanel) {
+                descPanel.insertBefore(banner, descPanel.querySelector('.desc-body-content'));
+            }
+
+            descBody.innerHTML = transData;
+
+            document.getElementById('btnResetTranslation').onclick = () => {
+                const b = document.getElementById('tjBanner');
+                if (b) b.remove();
+                descBody.innerHTML = level.description.body;
+                playPocketSynth('click');
+            };
+
+            launchConfetti();
+            
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (AudioContext) {
+                    const ctx = new AudioContext();
+                    const now = ctx.currentTime;
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(300, now);
+                    osc.frequency.linearRampToValueAtTime(1000, now + 0.5);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.6);
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    osc.start();
+                    osc.stop(now + 0.6);
+                }
+            } catch(e) {}
+        }
+
+        function showTranslationJellySelector() {
+            const overlay = document.getElementById('tjPopup');
+            const card = document.getElementById('tjCard');
+            if (!overlay || !card) return;
+
+            card.innerHTML = `
+                <div class="tj-header">
+                    <div class="tj-title">🍮 Translation Jelly Translator</div>
+                    <button class="tj-close" id="tjCloseBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="tj-body">
+                    <p style="font-size:14px; font-weight:600; margin-bottom:8px;">Choose your translation style to convert this lesson instantly:</p>
+                    
+                    <button class="tj-option-btn" data-lang="simple">
+                        <span class="tj-option-icon">🇬🇧</span>
+                        <div class="tj-option-meta">
+                            <span class="tj-option-title">Simple English</span>
+                            <span class="tj-option-desc">Easy sentence structures and vocabulary</span>
+                        </div>
+                    </button>
+
+                    <button class="tj-option-btn" data-lang="hindi">
+                        <span class="tj-option-icon">🇮🇳</span>
+                        <div class="tj-option-meta">
+                            <span class="tj-option-title">Hindi (हिन्दी)</span>
+                            <span class="tj-option-desc">शुद्ध और सरल हिंदी अनुवाद</span>
+                        </div>
+                    </button>
+
+                    <button class="tj-option-btn" data-lang="hinglish">
+                        <span class="tj-option-icon">🗣️</span>
+                        <div class="tj-option-meta">
+                            <span class="tj-option-title">Hinglish</span>
+                            <span class="tj-option-desc">Hindi written in English characters</span>
+                        </div>
+                    </button>
+
+                    <button class="tj-option-btn" data-lang="analogy">
+                        <span class="tj-option-icon">💡</span>
+                        <div class="tj-option-meta">
+                            <span class="tj-option-title">Beginner Analogy</span>
+                            <span class="tj-option-desc">Fun analogies, metaphors and visual steps</span>
+                        </div>
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('tjCloseBtn').onclick = () => {
+                overlay.classList.remove('visible');
+            };
+
+            const btns = card.querySelectorAll('.tj-option-btn');
+            btns.forEach(btn => {
+                btn.onclick = () => {
+                    const lang = btn.getAttribute('data-lang');
+                    applyTranslationJelly(lang);
+                    overlay.classList.remove('visible');
+                };
+            });
+
+            overlay.classList.add('visible');
+            overlay.onclick = (e) => {
+                if (e.target === overlay) overlay.classList.remove('visible');
+            };
+        }
+
+        window.activateTranslationJelly = function() {
+            showTranslationJellySelector();
+            return { success: true };
+        };
+
+        window.activateEnergyCapsule = function() {
+            window.energyCapsuleActive = true;
+            const btn = document.getElementById('btnSubmitCode');
+            if (btn) {
+                btn.classList.add('capsule-active');
+            }
+            showToast("💊 Energy Capsule active! Your next coding submission is shielded.");
+            return { success: true };
+        };
+
         // ── Boot ─────────────────────────────────────────────────
         buildStepper();
         renderSection(sections[currentSection]);
         updateNavButtons();
+        updateAttemptsBadge();
 
     })();
     </script>

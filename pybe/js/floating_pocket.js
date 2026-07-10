@@ -1921,8 +1921,6 @@
                             if (pocketState.uses[20] < 1) pocketState.uses[20]++;
                             savePocketState();
                             rebuildInventoryGrid();
-                        } else {
-                            if (window.unlockAchievement) window.unlockAchievement('time_lord');
                         }
                     } else {
                         showPocketToast("Open a level and activate Time Cloth to rewind a mistake! ⏳");
