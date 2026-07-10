@@ -8,6 +8,327 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Hamburger Menu Button */
+        .menu-btn {
+            background: none;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--blue);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            margin-right: 8px;
+        }
+        .menu-btn:hover {
+            background: rgba(0, 174, 239, 0.1);
+            transform: scale(1.08);
+        }
+        .menu-btn:active {
+            transform: scale(0.92);
+        }
+
+        /* Slide-out Sidebar Drawer */
+        .menu-drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 15, 30, 0.45);
+            backdrop-filter: blur(3px);
+            z-index: 99999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .menu-drawer-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu-drawer {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 300px;
+            height: 100vh;
+            background: #111e29;
+            box-shadow: 4px 0 24px rgba(0, 174, 239, 0.25);
+            z-index: 100000;
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            border-right: 4px solid #00AEEF;
+        }
+        .menu-drawer.open {
+            left: 0;
+        }
+        .drawer-header {
+            padding: 20px 24px;
+            background: #162635;
+            border-bottom: 2px dashed rgba(0, 174, 239, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .drawer-title {
+            font-family: 'Nunito', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: #00AEEF;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .drawer-close-btn {
+            background: none;
+            border: none;
+            color: #6B7B8A;
+            font-size: 22px;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .drawer-close-btn:hover {
+            color: #00AEEF;
+        }
+        .drawer-items {
+            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .drawer-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 20px;
+            background: #1a2c3d;
+            border: 2px solid transparent;
+            border-radius: 14px;
+            color: #FFF;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .drawer-item:hover {
+            background: #20374d;
+            border-color: #00AEEF;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 174, 239, 0.15);
+        }
+        .drawer-item i {
+            font-size: 18px;
+            color: #00AEEF;
+        }
+        .drawer-footer {
+            margin-top: auto;
+            padding: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: #6B7B8A;
+            font-family: 'Quicksand', sans-serif;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Profile Modal Overlay */
+        .profile-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 15, 30, 0.6);
+            backdrop-filter: blur(6px);
+            z-index: 100001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .profile-modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .profile-modal-card {
+            width: 90%;
+            max-width: 480px;
+            background: #111e29;
+            border: 4px solid #00AEEF;
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 12px 36px rgba(0, 174, 239, 0.3);
+            transform: scale(0.85);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+        .profile-modal-overlay.open .profile-modal-card {
+            transform: scale(1);
+        }
+        .profile-modal-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #6B7B8A;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .profile-modal-close:hover {
+            color: #00AEEF;
+        }
+        .avatar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .current-avatar-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #E8F6FF;
+            border: 4px solid #00AEEF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            box-shadow: 0 8px 20px rgba(0, 174, 239, 0.2);
+            margin-bottom: 16px;
+            transition: transform 0.3s ease;
+        }
+        .current-avatar-container:hover {
+            transform: scale(1.05);
+        }
+        .avatar-grid {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .avatar-option {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #1c2e3f;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .avatar-option:hover {
+            transform: scale(1.1);
+            background: #243b52;
+        }
+        .avatar-option.selected {
+            border-color: #00AEEF;
+            background: #E8F6FF;
+            box-shadow: 0 0 10px rgba(0, 174, 239, 0.4);
+        }
+        .profile-name-section {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .profile-name-label {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #6B7B8A;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .profile-name-input {
+            width: 100%;
+            padding: 12px 18px;
+            background: #1a2c3d;
+            border: 2px solid rgba(0, 174, 239, 0.2);
+            border-radius: 12px;
+            color: #FFF;
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .profile-name-input:focus {
+            border-color: #00AEEF;
+            background: #20354a;
+            box-shadow: 0 0 12px rgba(0, 174, 239, 0.25);
+        }
+        .profile-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .profile-stat-card {
+            background: #162635;
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: transform 0.2s;
+        }
+        .profile-stat-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 174, 239, 0.2);
+        }
+        .profile-stat-val {
+            font-family: 'Nunito', sans-serif;
+            font-size: 22px;
+            font-weight: 900;
+            color: #00AEEF;
+            margin-bottom: 4px;
+        }
+        .profile-stat-lbl {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            color: #6B7B8A;
+        }
+        .profile-stat-card.full-width {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #162635 0%, #1e3549 100%);
+            border: 2px solid #FFD54F;
+            box-shadow: 0 4px 15px rgba(255, 213, 79, 0.1);
+        }
+        .profile-stat-card.full-width .profile-stat-val {
+            color: #FFD54F;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .sa-explanation {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 11.5px;
+            color: #8C9CAE;
+            line-height: 1.45;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px dashed rgba(255, 255, 255, 0.08);
+            margin-top: 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -119,6 +440,9 @@
         <!-- Navbar -->
         <div class="navbar">
             <div class="nav-logo">
+                <button class="menu-btn" id="menuBtn" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <svg width="36" height="36" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
                     <ellipse cx="100" cy="155" rx="65" ry="60" fill="#00AEEF"/>
                     <ellipse cx="100" cy="165" rx="40" ry="40" fill="#FFFFFF"/>
@@ -181,6 +505,74 @@
             <div class="unlock-name" id="unlockGadgetName">Bamboo Copter</div>
             <div class="unlock-desc" id="unlockGadgetDesc">Flies over code obstacles. Unlocks advanced stepper shortcuts.</div>
             <button class="claim-btn" id="claimGadgetBtn">Claim Gadget 🎒</button>
+        </div>
+    </div>
+
+    <!-- Slide-out Sidebar Drawer -->
+    <div class="menu-drawer-overlay" id="menuDrawerOverlay"></div>
+    <div class="menu-drawer" id="menuDrawer">
+        <div class="drawer-header">
+            <div class="drawer-title">
+                <span>🤖 PyBe Navigation</span>
+            </div>
+            <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
+        </div>
+        <div class="drawer-items">
+            <div class="drawer-item" id="btnDrawerProfile">
+                <i class="fas fa-user-circle"></i>
+                <span>My Profile</span>
+            </div>
+        </div>
+        <div class="drawer-footer">
+            <span>PyBe Journey v1.1</span>
+        </div>
+    </div>
+
+    <!-- My Profile Modal -->
+    <div class="profile-modal-overlay" id="profileModalOverlay">
+        <div class="profile-modal-card">
+            <button class="profile-modal-close" id="profileModalCloseBtn">&times;</button>
+            
+            <!-- Avatar Selection -->
+            <div class="avatar-section">
+                <div class="current-avatar-container" id="currentAvatar">👦</div>
+                <div class="avatar-grid">
+                    <div class="avatar-option" data-avatar="🐱" title="Doraemon">🐱</div>
+                    <div class="avatar-option" data-avatar="👦" title="Nobita">👦</div>
+                    <div class="avatar-option" data-avatar="👧" title="Shizuka">👧</div>
+                    <div class="avatar-option" data-avatar="🦍" title="Gian">🦍</div>
+                    <div class="avatar-option" data-avatar="🦊" title="Suneo">🦊</div>
+                </div>
+            </div>
+
+            <!-- Profile Name Input -->
+            <div class="profile-name-section">
+                <span class="profile-name-label">STUDENT NAME</span>
+                <input type="text" class="profile-name-input" id="profileNameInput" placeholder="Enter your name...">
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="profile-stats">
+                <div class="profile-stat-card">
+                    <div class="profile-stat-val" id="profileStatCleared">0</div>
+                    <div class="profile-stat-lbl">Levels Cleared</div>
+                </div>
+                <div class="profile-stat-card">
+                    <div class="profile-stat-val" id="profileStatStreak">0 🔥</div>
+                    <div class="profile-stat-lbl">Daily Streak</div>
+                </div>
+                <div class="profile-stat-card full-width">
+                    <div class="profile-stat-val" id="profileStatSA">0 🏆</div>
+                    <div class="profile-stat-lbl">Super Accuracy (SA) Points</div>
+                </div>
+            </div>
+
+            <!-- Explanation -->
+            <div class="sa-explanation">
+                <strong>How SA Points are calculated:</strong><br>
+                SA Points = Stars × MCQ Test Score% per level.<br>
+                <em>Earn stars by solving levels in fewer attempts!</em>
+            </div>
         </div>
     </div>
 
@@ -1278,6 +1670,139 @@
             const modal = document.getElementById('pocketModal');
             if (modal) modal.classList.remove('visible');
         }
+
+        // ── Hamburger Menu & Profile ──────────────────────────────
+        function initMenuAndProfile() {
+            const menuBtn = document.getElementById('menuBtn');
+            const menuDrawer = document.getElementById('menuDrawer');
+            const menuDrawerOverlay = document.getElementById('menuDrawerOverlay');
+            const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+            
+            const btnDrawerProfile = document.getElementById('btnDrawerProfile');
+            
+            const profileModalOverlay = document.getElementById('profileModalOverlay');
+            const profileModalCloseBtn = document.getElementById('profileModalCloseBtn');
+            const profileNameInput = document.getElementById('profileNameInput');
+            const currentAvatar = document.getElementById('currentAvatar');
+            
+            // Drawer open/close
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    if (typeof playSynthSound === 'function') playSynthSound('click');
+                    menuDrawer.classList.add('open');
+                    menuDrawerOverlay.classList.add('open');
+                });
+            }
+            
+            function closeDrawer() {
+                menuDrawer.classList.remove('open');
+                menuDrawerOverlay.classList.remove('open');
+            }
+            
+            if (drawerCloseBtn) {
+                drawerCloseBtn.addEventListener('click', () => {
+                    if (typeof playSynthSound === 'function') playSynthSound('click');
+                    closeDrawer();
+                });
+            }
+            if (menuDrawerOverlay) {
+                menuDrawerOverlay.addEventListener('click', closeDrawer);
+            }
+            
+            if (btnDrawerProfile) {
+                btnDrawerProfile.addEventListener('click', () => {
+                    closeDrawer();
+                    openProfileModal();
+                });
+            }
+            
+            // Profile Modal Open/Close
+            function openProfileModal() {
+                if (typeof playSynthSound === 'function') playSynthSound('click');
+                
+                // Load info
+                const progress = window.PyBe ? window.PyBe.getProgress() : { currentLevel: 1, completed: [], streak: 0, attempts: {}, testScores: {} };
+                const name = localStorage.getItem('pybe_student_name') || 'Nobita';
+                const avatar = localStorage.getItem('pybe_profile_avatar') || '👦';
+                
+                profileNameInput.value = name;
+                currentAvatar.textContent = avatar;
+                
+                // Set active class in options
+                document.querySelectorAll('.avatar-option').forEach(opt => {
+                    if (opt.getAttribute('data-avatar') === avatar) {
+                        opt.classList.add('selected');
+                    } else {
+                        opt.classList.remove('selected');
+                    }
+                });
+                
+                // Completed count
+                const completed = progress.completed ? progress.completed.length : 0;
+                document.getElementById('profileStatCleared').textContent = completed;
+                
+                // Streak
+                const streak = progress.streak || 0;
+                document.getElementById('profileStatStreak').textContent = streak + " 🔥";
+                
+                // SA Points Calculation
+                let totalSA = 0;
+                if (progress.completed) {
+                    progress.completed.forEach(lvlId => {
+                        const attempts = (progress.attempts && progress.attempts[lvlId]) || 1;
+                        let stars = 0;
+                        if (attempts === 1) stars = 3;
+                        else if (attempts === 2) stars = 2;
+                        else if (attempts === 3) stars = 1;
+
+                        const testScore = (progress.testScores && progress.testScores[lvlId] !== undefined) ? progress.testScores[lvlId] : 100;
+                        totalSA += stars * testScore;
+                    });
+                }
+                document.getElementById('profileStatSA').textContent = totalSA.toLocaleString() + " 🏆";
+                
+                profileModalOverlay.classList.add('open');
+            }
+            
+            function closeProfileModal() {
+                if (typeof playSynthSound === 'function') playSynthSound('click');
+                profileModalOverlay.classList.remove('open');
+            }
+            
+            if (profileModalCloseBtn) {
+                profileModalCloseBtn.addEventListener('click', closeProfileModal);
+            }
+            if (profileModalOverlay) {
+                profileModalOverlay.addEventListener('click', (e) => {
+                    if (e.target === profileModalOverlay) closeProfileModal();
+                });
+            }
+            
+            // Avatar Selector click
+            document.querySelectorAll('.avatar-option').forEach(opt => {
+                opt.addEventListener('click', () => {
+                    if (typeof playSynthSound === 'function') playSynthSound('click');
+                    const avatar = opt.getAttribute('data-avatar');
+                    localStorage.setItem('pybe_profile_avatar', avatar);
+                    currentAvatar.textContent = avatar;
+                    
+                    document.querySelectorAll('.avatar-option').forEach(o => o.classList.remove('selected'));
+                    opt.classList.add('selected');
+                });
+            });
+            
+            // Name Input save
+            if (profileNameInput) {
+                profileNameInput.addEventListener('input', (e) => {
+                    const val = e.target.value.trim();
+                    if (val) {
+                        localStorage.setItem('pybe_student_name', val);
+                    }
+                });
+            }
+        }
+
+        initMenuAndProfile();
 
         // Register event listeners
         const pocketCloseBtn = document.getElementById('pocketCloseBtn');

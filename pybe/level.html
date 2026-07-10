@@ -392,15 +392,117 @@
         }
 
         // ── Render Test ──────────────────────────────────────────
+        function showSubmittedTestState() {
+            const t = level.test;
+            let score = 0;
+            let total = t.questions.length;
+            
+            t.questions.forEach((q, qi) => {
+                const userAns = testAnswers[qi];
+                let correct = false;
+
+                if (q.type === 'fill') {
+                    const input = document.getElementById(`fill-${qi}`);
+                    const val = (input ? input.value.trim().toLowerCase() : '').replace(/"/g, '');
+                    const expected = (q.answer.toLowerCase()).replace(/"/g, '');
+                    correct = val === expected;
+                } else if (q.type === 'short') {
+                    const ta = document.getElementById(`short-${qi}`);
+                    const val = (ta ? ta.value.trim() : '');
+                    correct = val.length > 15;
+                } else if (q.type === 'tf') {
+                    correct = userAns === q.answer;
+                } else {
+                    correct = parseInt(userAns) === q.answer;
+                }
+
+                if (correct) score++;
+
+                const card = document.querySelector(`.question-card[data-qi="${qi}"]`);
+                if (card) {
+                    card.classList.add(correct ? 'correct' : 'incorrect');
+                    card.querySelectorAll('input, textarea').forEach(el => el.disabled = true);
+                    
+                    if (q.type === 'mcq') {
+                        card.querySelectorAll('.q-option').forEach(l => {
+                            l.style.pointerEvents = 'none';
+                            l.classList.remove('correct', 'incorrect');
+                            const oi = parseInt(l.dataset.oi);
+                            if (oi === q.answer) l.classList.add('correct');
+                            if (parseInt(userAns) === oi && oi !== q.answer) l.classList.add('incorrect');
+                        });
+                    } else if (q.type === 'tf') {
+                        card.querySelectorAll('.q-tf-btn').forEach(l => {
+                            l.style.pointerEvents = 'none';
+                            const v = l.querySelector('input').value;
+                            if (v === q.answer) l.classList.add('correct');
+                            if (v === userAns && v !== q.answer) l.classList.add('incorrect');
+                        });
+                    }
+                }
+            });
+
+            const pct = Math.round((score / total) * 100);
+            const passed = pct >= 60;
+            
+            document.getElementById('testSubmitRow').style.display = 'none';
+            const resultEl = document.getElementById('testResult');
+            resultEl.style.display = 'block';
+            resultEl.className = `test-result ${passed ? 'passed' : 'failed'}`;
+            resultEl.innerHTML = `
+                <div class="result-score">${score} / ${total} correct (${pct}%)</div>
+                <div class="result-msg">${passed ? '✅ Great job! You\'re ready for the next section.' : '⚠️ Review the material and try again!'}</div>
+                <button class="btn btn-retry" id="btnResultRetryTest" style="background:#7f8c8d; border-color:#7f8c8d; margin-top: 15px;"><i class="fas fa-redo"></i> Retry Test</button>
+            `;
+            
+            document.getElementById('btnResultRetryTest').addEventListener('click', () => {
+                testAnswers = {};
+                shortAnswerTexts = {};
+                testSubmitted = false;
+                renderTest();
+            });
+        }
+
         function renderTest() {
             const t = level.test;
             const isDev = localStorage.getItem('pybe_dev_mode') === 'true';
 
+            const progress = window.PyBe ? window.PyBe.getProgress() : null;
+            const completed = progress && progress.completed && progress.completed.includes(level.id);
+            const score = (progress && progress.testScores && progress.testScores[level.id] !== undefined) ? progress.testScores[level.id] : (completed ? 100 : null);
+
+            // Load saved answers if completed and not already submitted
+            if (completed && !testSubmitted) {
+                const saved = progress && progress.savedAnswers ? progress.savedAnswers[level.id] : null;
+                if (saved) {
+                    testAnswers = saved.testAnswers || {};
+                    shortAnswerTexts = saved.shortAnswerTexts || {};
+                    testSubmitted = true;
+                } else {
+                    // Back-compat auto-fill
+                    t.questions.forEach((q, qi) => {
+                        testAnswers[qi] = q.answer;
+                        if (q.type === 'fill' || q.type === 'short') {
+                            shortAnswerTexts[qi] = q.answer || q.sampleAnswer || 'Completed';
+                        }
+                    });
+                    testSubmitted = true;
+                }
+            }
+
             sectionContent.innerHTML = `
                 <div class="sec-test">
-                    <div class="sec-heading-block">
-                        <h2 class="sec-main-heading">🧠 Test Your Understanding</h2>
-                        <p class="sec-sub-heading">${t.intro || 'Answer all questions below.'}</p>
+                    <div class="sec-heading-block" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 24px;">
+                        <div>
+                            <h2 class="sec-main-heading">🧠 Test Your Understanding</h2>
+                            <p class="sec-sub-heading">${t.intro || 'Answer all questions below.'}</p>
+                        </div>
+                        ${(completed && score !== null) ? `
+                        <div class="previous-score-badge" style="background: rgba(46, 204, 113, 0.15); border: 2px solid #2ecc71; color: #27ae60; padding: 8px 16px; border-radius: 12px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.1);">
+                            <i class="fas fa-award"></i>
+                            <span>Latest Score: ${score}%</span>
+                        </div>
+                        ` : ''}
                     </div>
                     <div class="test-questions" id="testQuestions"></div>
                     <div class="test-result" id="testResult" style="display:none;"></div>
@@ -432,6 +534,10 @@
                 testSubmitted  = false;
                 renderTest();
             });
+
+            if (testSubmitted) {
+                showSubmittedTestState();
+            }
 
             if (isDev && document.getElementById('btnDevAutoFillTest')) {
                 document.getElementById('btnDevAutoFillTest').addEventListener('click', () => {
@@ -643,6 +749,36 @@
             document.getElementById('testSubmitRow').style.display = 'none';
             const resultEl = document.getElementById('testResult');
             const passed = pct >= 60;
+
+            if (passed && window.PyBe) {
+                const progress = window.PyBe.getProgress();
+                progress.testScores = progress.testScores || {};
+                progress.testScores[levelId] = pct;
+
+                progress.savedAnswers = progress.savedAnswers || {};
+                progress.savedAnswers[levelId] = {
+                    testAnswers: testAnswers,
+                    shortAnswerTexts: shortAnswerTexts
+                };
+
+                window.PyBe.saveProgress(progress);
+
+                // Update badge dynamically
+                let badgeEl = document.querySelector('.previous-score-badge');
+                if (!badgeEl) {
+                    const headingBlock = document.querySelector('.sec-heading-block');
+                    if (headingBlock) {
+                        badgeEl = document.createElement('div');
+                        badgeEl.className = 'previous-score-badge';
+                        badgeEl.style.cssText = 'background: rgba(46, 204, 113, 0.15); border: 2px solid #2ecc71; color: #27ae60; padding: 8px 16px; border-radius: 12px; font-family: "Nunito", sans-serif; font-weight: 800; font-size: 15px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.1);';
+                        badgeEl.innerHTML = `<i class="fas fa-award"></i> <span>Latest Score: ${pct}%</span>`;
+                        headingBlock.appendChild(badgeEl);
+                    }
+                } else {
+                    const span = badgeEl.querySelector('span');
+                    if (span) span.textContent = `Latest Score: ${pct}%`;
+                }
+            }
 
             const isTimeClothUsed = sessionStorage.getItem('pybe_time_cloth_used_' + levelId) === 'true';
             if (passed && !xpAwardedSections.has('test')) {
