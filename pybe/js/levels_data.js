@@ -84,22 +84,22 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The set of grammar rules in a programming language is called its _____. (syntax / vocabulary / voice / font)",
+                    "question": "The set of grammar rules in a programming language is called its _____. (syntax / vocabulary / voice / font) (syntax / nameerror / syntaxerror / typeerror)",
                     "answer": "syntax"
                 },
                 {
                     "type": "fill",
-                    "question": "A complete set of instructions that tells a computer to accomplish a task is called a _____. (program / recipe / document / image)",
+                    "question": "A complete set of instructions that tells a computer to accomplish a task is called a _____. (program / recipe / document / image) (syntax / program / readable / code)",
                     "answer": "program"
                 },
                 {
                     "type": "fill",
-                    "question": "Python was designed to be _____ and easy to read. (complex / beautiful / readable / expensive)",
+                    "question": "Python was designed to be _____ and easy to read. (complex / beautiful / readable / expensive) (program / readable / syntax / code)",
                     "answer": "readable"
                 },
                 {
                     "type": "fill",
-                    "question": "A single instruction written in a programming language is called _____. (code / music / art / speech)",
+                    "question": "A single instruction written in a programming language is called _____. (code / music / art / speech) (readable / program / code / syntax)",
                     "answer": "code"
                 },
                 {
@@ -188,17 +188,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "Python's Virtual Machine (PVM) reads and executes _____, which is an intermediate step between source code and machine code.",
+                    "question": "Python's Virtual Machine (PVM) reads and executes _____, which is an intermediate step between source code and machine code. (syntax checking / interpreted / variable / bytecode)",
                     "answer": "bytecode"
                 },
                 {
                     "type": "fill",
-                    "question": "The phase where Python checks your code for correct grammar before running it is called _____.",
+                    "question": "The phase where Python checks your code for correct grammar before running it is called _____. (syntaxerror / nameerror / typeerror / syntax checking)",
                     "answer": "syntax checking"
                 },
                 {
                     "type": "fill",
-                    "question": "A language that translates and executes code one line at a time, in real time, is called an _____ language.",
+                    "question": "A language that translates and executes code one line at a time, in real time, is called an _____ language. (bytecode / variable / interpreted / syntax checking)",
                     "answer": "interpreted"
                 },
                 {
@@ -308,22 +308,22 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The part of a website that you actually see and interact with is called the _____. (frontend / backend / database / server)",
+                    "question": "The part of a website that you actually see and interact with is called the _____. (frontend / backend / database / server) (database / server / backend / frontend)",
                     "answer": "frontend"
                 },
                 {
                     "type": "fill",
-                    "question": "When Python checks your code for grammatical correctness before running it, this is called _____. (compiling / syntax checking / debugging / rendering)",
+                    "question": "When Python checks your code for grammatical correctness before running it, this is called _____. (compiling / syntax checking / debugging / rendering) (syntaxerror / nameerror / typeerror / syntax checking)",
                     "answer": "syntax checking"
                 },
                 {
                     "type": "fill",
-                    "question": "A bug where your code runs without crashing but produces the wrong output is called a _____ error. (syntax / runtime / logic / type)",
+                    "question": "A bug where your code runs without crashing but produces the wrong output is called a _____ error. (syntax / runtime / logic / type) (syntax checking / backend / frontend / logic)",
                     "answer": "logic"
                 },
                 {
                     "type": "fill",
-                    "question": "Python is most commonly used in the _____ part of a web application. (frontend / backend / database / browser UI)",
+                    "question": "Python is most commonly used in the _____ part of a web application. (frontend / backend / database / browser UI) (backend / server / frontend / database)",
                     "answer": "backend"
                 },
                 {
@@ -429,22 +429,22 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "Python was created in the year _____. (1989 / 1991 / 1995 / 2000)",
+                    "question": "Python was created in the year _____. (1989 / 1991 / 1995 / 2000) (2000 / 1989 / 1991 / 1995)",
                     "answer": "1991"
                 },
                 {
                     "type": "fill",
-                    "question": "The set of guiding principles for Python's design is called the _____ of Python. (rules / guidelines / zen / philosophy)",
+                    "question": "The set of guiding principles for Python's design is called the _____ of Python. (rules / guidelines / zen / philosophy) (1991 / zen / 2020 / google)",
                     "answer": "zen"
                 },
                 {
                     "type": "fill",
-                    "question": "Python 2 was officially retired in the year _____. (2018 / 2019 / 2020 / 2021)",
+                    "question": "Python 2 was officially retired in the year _____. (2018 / 2019 / 2020 / 2021) (1995 / 1991 / 2020 / 1989)",
                     "answer": "2020"
                 },
                 {
                     "type": "fill",
-                    "question": "The company where Guido van Rossum worked on Python's ecosystem is _____. (Google / Microsoft / Apple / Amazon)",
+                    "question": "The company where Guido van Rossum worked on Python's ecosystem is _____. (Google / Microsoft / Apple / Amazon) (2020 / zen / google / 1991)",
                     "answer": "google"
                 },
                 {
@@ -568,17 +568,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "Python script files must be saved with the _____ file extension.",
+                    "question": "Python script files must be saved with the _____ file extension. (shell / variable / py / F5)",
                     "answer": "py"
                 },
                 {
                     "type": "fill",
-                    "question": "In IDLE, you can run a saved script file by pressing the _____ key on your keyboard. (F1 / F5 / Tab / Enter)",
+                    "question": "In IDLE, you can run a saved script file by pressing the _____ key on your keyboard. (F1 / F5 / Tab / Enter) (shell / py / F5 / Variable)",
                     "answer": "F5"
                 },
                 {
                     "type": "fill",
-                    "question": "The environment that runs code line-by-line instantly but doesn't save it is called the interactive _____.",
+                    "question": "The environment that runs code line-by-line instantly but doesn't save it is called the interactive _____. (shell / F5 / variable / py)",
                     "answer": "shell"
                 },
                 {
@@ -684,17 +684,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "Python is _____ -- meaning print() and Print() are treated as completely different instructions.",
+                    "question": "Python is _____ -- meaning print() and Print() are treated as completely different instructions. (variable / parentheses / string / case-sensitive)",
                     "answer": "case-sensitive"
                 },
                 {
                     "type": "fill",
-                    "question": "The brackets () after the word print are called _____.",
+                    "question": "The brackets () after the word print are called _____. (parentheses / semicolon / colon / comma)",
                     "answer": "parentheses"
                 },
                 {
                     "type": "fill",
-                    "question": "In Python, a sequence of characters inside quotation marks is called a _____.",
+                    "question": "In Python, a sequence of characters inside quotation marks is called a _____. (case-sensitive / string / variable / parentheses)",
                     "answer": "string"
                 },
                 {
@@ -800,17 +800,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "In Python, you can write a comment by placing the _____ character at the start of the line.",
+                    "question": "In Python, you can write a comment by placing the _____ character at the start of the line. (commenting / hash / humans / variable)",
                     "answer": "hash"
                 },
                 {
                     "type": "fill",
-                    "question": "Adding a hash symbol in front of a line of code to temporarily disable it is called _____ out code.",
+                    "question": "Adding a hash symbol in front of a line of code to temporarily disable it is called _____ out code. (commenting / variable / hash / humans)",
                     "answer": "commenting"
                 },
                 {
                     "type": "fill",
-                    "question": "Comments are written for _____ to read, not the computer interpreter.",
+                    "question": "Comments are written for _____ to read, not the computer interpreter. (variable / humans / commenting / hash)",
                     "answer": "humans"
                 },
                 {
@@ -916,17 +916,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The symbol '=' used to store a value in a variable is called the _____ operator.",
+                    "question": "The symbol '=' used to store a value in a variable is called the _____ operator. (name / memory / assignment / variable)",
                     "answer": "assignment"
                 },
                 {
                     "type": "fill",
-                    "question": "If you try to print a variable that hasn't been created yet, Python raises a _____Error.",
+                    "question": "If you try to print a variable that hasn't been created yet, Python raises a _____Error. (typeerror / syntaxerror / name / nameerror)",
                     "answer": "name"
                 },
                 {
                     "type": "fill",
-                    "question": "Variables are stored in the computer's _____ while your program runs.",
+                    "question": "Variables are stored in the computer's _____ while your program runs. (name / memory / variable / assignment)",
                     "answer": "memory"
                 },
                 {
@@ -1032,17 +1032,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The variable naming convention where words are separated by underscores is called _____ case.",
+                    "question": "The variable naming convention where words are separated by underscores is called _____ case. (underscore / syntax / variable / snake)",
                     "answer": "snake"
                 },
                 {
                     "type": "fill",
-                    "question": "If you try to use an invalid variable name, Python raises a _____Error.",
+                    "question": "If you try to use an invalid variable name, Python raises a _____Error. (syntax / nameerror / syntaxerror / typeerror)",
                     "answer": "syntax"
                 },
                 {
                     "type": "fill",
-                    "question": "Variable names can only start with a letter or the _____ character.",
+                    "question": "Variable names can only start with a letter or the _____ character. (snake / syntax / variable / underscore)",
                     "answer": "underscore"
                 },
                 {
@@ -1077,38 +1077,112 @@ window.levels = [
         "id": 11,
         "title": "Data types (int, float, str, bool)",
         "concept": "Understanding basic data types in Python: integers, floats, strings, and booleans",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Basic Data Types",
             "subheading": "Integers, Floats, Strings, and Booleans",
             "body": "<p>In programming, computers don't just store generic values; they classify data into specific categories called <strong>data types</strong>. Knowing the data type tells Python what kind of value it is and what operations can be performed on it.</p>\n\n<h3>The 4 Core Data Types in Python</h3>\n<ul class=\"desc-list\">\n    <li><strong>Integer (<code>int</code>):</strong> Whole numbers without decimal points. They can be positive, negative, or zero. Examples: <code>10</code>, <code>-5</code>, <code>0</code>.</li>\n    <li><strong>Floating-Point (<code>float</code>):</strong> Decimal numbers. Used for precise math. Examples: <code>3.14</code>, <code>-10.5</code>, <code>0.0</code>.</li>\n    <li><strong>String (<code>str</code>):</strong> Text values enclosed inside quotation marks. Anything inside quotes is a string, even numbers! Examples: <code>\"Doraemon\"</code>, <code>'Python'</code>, <code>\"123\"</code>.</li>\n    <li><strong>Boolean (<code>bool</code>):</strong> Logical values that can only be either <code>True</code> or <code>False</code>. First letters must be capitalized! Examples: <code>True</code>, <code>False</code>.</li>\n</ul>\n\n<h3>Checking Data Types with type()</h3>\n<p>Python has a built-in function called <code>type()</code> that tells you the exact type of any value or variable:</p>\n\n<pre class=\"code-example\">print(type(42))        # Outputs: &lt;class 'int'&gt;\nprint(type(9.9))       # Outputs: &lt;class 'float'&gt;\nprint(type(\"Hello\"))   # Outputs: &lt;class 'str'&gt;\nprint(type(True))      # Outputs: &lt;class 'bool'&gt;</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Strings vs Numbers:</strong> Be careful! <code>print(type(5))</code> is an <code>int</code>, but <code>print(type(\"5\"))</code> is a <code>str</code>. You cannot perform mathematical operations on text numbers without converting them first!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a data type?", "a": "A data type is an attribute of data which tells the Python interpreter how the programmer intends to use the data (e.g. as a text string, as a decimal number, or as a true/false value)." },
-            { "q": "What is the difference between int and float?", "a": "An <strong>int</strong> (integer) represents a whole number with no decimals (e.g. <code>7</code>). A <strong>float</strong> (floating-point number) represents a number with a decimal point (e.g. <code>7.0</code> or <code>3.14</code>)." },
-            { "q": "Why are booleans capitalized in Python?", "a": "Python syntax mandates that boolean logical values must be written exactly as <code>True</code> and <code>False</code> (with uppercase 'T' and 'F'). Lowercase <code>true</code> or <code>false</code> will be treated as variable names and trigger a **NameError**." },
-            { "q": "Is '99' treated as a number in Python?", "a": "<strong>No.</strong> Because it is surrounded by quotes, Python treats <code>\"99\"</code> as a text string (<code>str</code>). If you try to add a number to it, like <code>\"99\" + 1</code>, Python will throw a **TypeError**." },
-            { "q": "How do I check the data type of a variable?", "a": "You can pass the variable into the built-in <code>type()</code> function. For example, calling <code>print(type(my_variable))</code> will output the class of the data type." }
+            {
+                "q": "What is a data type?",
+                "a": "A data type is an attribute of data which tells the Python interpreter how the programmer intends to use the data (e.g. as a text string, as a decimal number, or as a true/false value)."
+            },
+            {
+                "q": "What is the difference between int and float?",
+                "a": "An <strong>int</strong> (integer) represents a whole number with no decimals (e.g. <code>7</code>). A <strong>float</strong> (floating-point number) represents a number with a decimal point (e.g. <code>7.0</code> or <code>3.14</code>)."
+            },
+            {
+                "q": "Why are booleans capitalized in Python?",
+                "a": "Python syntax mandates that boolean logical values must be written exactly as <code>True</code> and <code>False</code> (with uppercase 'T' and 'F'). Lowercase <code>true</code> or <code>false</code> will be treated as variable names and trigger a **NameError**."
+            },
+            {
+                "q": "Is '99' treated as a number in Python?",
+                "a": "<strong>No.</strong> Because it is surrounded by quotes, Python treats <code>\"99\"</code> as a text string (<code>str</code>). If you try to add a number to it, like <code>\"99\" + 1</code>, Python will throw a **TypeError**."
+            },
+            {
+                "q": "How do I check the data type of a variable?",
+                "a": "You can pass the variable into the built-in <code>type()</code> function. For example, calling <code>print(type(my_variable))</code> will output the class of the data type."
+            }
         ],
-
         "test": {
             "intro": "Let's test your understanding of Python's basic data types!",
             "questions": [
-                { "type": "mcq", "question": "What is the data type of the value 5.5?", "options": ["int", "float", "str", "bool"], "answer": 1 },
-                { "type": "mcq", "question": "Which of the following is a valid boolean value in Python?", "options": ["\"True\"", "true", "True", "1"], "answer": 2 },
-                { "type": "mcq", "question": "What does type(\"100\") return?", "options": ["<class 'int'>", "<class 'str'>", "<class 'float'>", "<class 'bool'>"], "answer": 1 },
-                { "type": "fill", "question": "A decimal number like 12.34 belongs to the _____ data type in Python.", "answer": "float" },
-                { "type": "fill", "question": "The logical data type that holds only True or False values is called _____.", "answer": "bool" },
-                { "type": "fill", "question": "Whole numbers like -50 belong to the _____ data type.", "answer": "int" },
-                { "type": "tf", "question": "In Python, True and true are identical and can be used interchangeably.", "answer": "false" },
-                { "type": "tf", "question": "A string data type can contain letters, numbers, and symbols inside quotation marks.", "answer": "true" },
-                { "type": "tf", "question": "The statement x = 10.0 creates an integer variable.", "answer": "false" },
-                { "type": "short", "question": "Explain why x = 40 and y = \"40\" are different data types, and how that impacts operations on them.", "sampleAnswer": "The variable x is an integer (int) because it is a whole number without quotation marks, while y is a string (str) because it is enclosed in quotes. You can perform mathematical operations on x (like adding or multiplying), but performing math on y (like y + 5) will cause a TypeError because you cannot add a number to text." }
+                {
+                    "type": "mcq",
+                    "question": "What is the data type of the value 5.5?",
+                    "options": [
+                        "int",
+                        "float",
+                        "str",
+                        "bool"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following is a valid boolean value in Python?",
+                    "options": [
+                        "\"True\"",
+                        "true",
+                        "True",
+                        "1"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does type(\"100\") return?",
+                    "options": [
+                        "<class 'int'>",
+                        "<class 'str'>",
+                        "<class 'float'>",
+                        "<class 'bool'>"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "A decimal number like 12.34 belongs to the _____ data type in Python. (int / bool / str / float)",
+                    "answer": "float"
+                },
+                {
+                    "type": "fill",
+                    "question": "The logical data type that holds only True or False values is called _____. (bool / float / int / str)",
+                    "answer": "bool"
+                },
+                {
+                    "type": "fill",
+                    "question": "Whole numbers like -50 belong to the _____ data type. (bool / float / str / int)",
+                    "answer": "int"
+                },
+                {
+                    "type": "tf",
+                    "question": "In Python, True and true are identical and can be used interchangeably.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A string data type can contain letters, numbers, and symbols inside quotation marks.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement x = 10.0 creates an integer variable.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why x = 40 and y = \"40\" are different data types, and how that impacts operations on them.",
+                    "sampleAnswer": "The variable x is an integer (int) because it is a whole number without quotation marks, while y is a string (str) because it is enclosed in quotes. You can perform mathematical operations on x (like adding or multiplying), but performing math on y (like y + 5) will cause a TypeError because you cannot add a number to text."
+                }
             ]
         },
-
         "scenario": "Create four variables: 'my_int' with value 10, 'my_float' with value 20.5, 'my_str' with value 'Doraemon', and 'my_bool' with value True. Then, print the type of 'my_bool' using print(type(my_bool)).",
         "hint": "Define the four variables on separate lines, then write 'print(type(my_bool))'. Make sure True is capitalized and has no quotes.",
         "wrongHint": "Make sure you define 'my_int = 10', 'my_float = 20.5', 'my_str = \"Doraemon\"', and 'my_bool = True' correctly, and print(type(my_bool))!",
@@ -1119,38 +1193,112 @@ window.levels = [
         "id": 12,
         "title": "Type conversion / type casting",
         "concept": "Converting values from one data type to another using int(), float(), str(), and bool()",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Type Conversion & Casting",
             "subheading": "Converting data categories manually and automatically",
             "body": "<p>In Python, you often need to convert values from one data type to another. For example, you cannot do math with a string like <code>\"5\"</code> -- you must convert it to a number first. This process is called <strong>Type Conversion</strong> or <strong>Type Casting</strong>.</p>\n\n<h3>1. Implicit Type Conversion (Automatic)</h3>\n<p>Sometimes, Python converts data types automatically. For example, if you add an integer to a float, Python will convert the integer to a float first so that it doesn't lose decimal precision:</p>\n\n<pre class=\"code-example\">result = 10 + 5.5\nprint(result)  # Outputs: 15.5\nprint(type(result))  # Outputs: &lt;class 'float'&gt;</pre>\n\n<h3>2. Explicit Type Casting (Manual)</h3>\n<p>To convert data types manually, you use built-in functions. Here are the most common ones:</p>\n<ul class=\"desc-list\">\n    <li><strong><code>int()</code>:</strong> Converts a value to an integer. If converting a float, it chops off the decimal part (truncation). Example: <code>int(7.9)</code> becomes <code>7</code>.</li>\n    <li><strong><code>float()</code>:</strong> Converts a value to a float. Example: <code>float(5)</code> becomes <code>5.0</code>.</li>\n    <li><strong><code>str()</code>:</strong> Converts a value to a text string. Example: <code>str(42)</code> becomes <code>\"42\"</code>.</li>\n    <li><strong><code>bool()</code>:</strong> Converts a value to a boolean. Zero (<code>0</code>), <code>None</code>, and empty containers (like <code>\"\"</code>) become <code>False</code>; all other values become <code>True</code>.</li>\n</ul>\n\n<h3>Common Type Casting Pitfalls</h3>\n<p>Trying to cast incompatible types will trigger a <strong>ValueError</strong>. For example, writing <code>int(\"hello\")</code> or <code>int(\"5.5\")</code> directly will crash your program. To convert the string <code>\"5.5\"</code> to an integer, you must first convert it to a float, and then to an integer: <code>int(float(\"5.5\"))</code>.</p>"
         },
-
         "qna": [
-            { "q": "What is type casting?", "a": "Type casting (also known as type conversion) is the process of converting a value from one data type to another, such as converting a string representation of a number into an actual integer." },
-            { "q": "What is the difference between implicit and explicit type conversion?", "a": "<strong>Implicit</strong> conversion is done automatically by Python at runtime (e.g. adding <code>3</code> and <code>1.5</code> yields <code>4.5</code>). <strong>Explicit</strong> conversion is done manually by the programmer using casting functions like <code>int()</code> or <code>str()</code>." },
-            { "q": "Does int(9.99) round the number to 10?", "a": "<strong>No.</strong> The <code>int()</code> function performs **truncation**, which means it completely drops the decimal portion of the number. Therefore, <code>int(9.99)</code> evaluates to <code>9</code>, not 10." },
-            { "q": "How can I convert the string \"12.5\" into an integer?", "a": "Calling <code>int(\"12.5\")</code> directly will raise a **ValueError**. You must first convert the string to a float, and then cast it to an integer: <code>int(float(\"12.5\"))</code>." },
-            { "q": "What values evaluate to False when cast to a boolean?", "a": "In Python, empty values (like empty strings <code>\"\"</code>), the number <code>0</code> (or <code>0.0</code>), and <code>None</code> evaluate to <code>False</code>. Almost all other values evaluate to <code>True</code>." }
+            {
+                "q": "What is type casting?",
+                "a": "Type casting (also known as type conversion) is the process of converting a value from one data type to another, such as converting a string representation of a number into an actual integer."
+            },
+            {
+                "q": "What is the difference between implicit and explicit type conversion?",
+                "a": "<strong>Implicit</strong> conversion is done automatically by Python at runtime (e.g. adding <code>3</code> and <code>1.5</code> yields <code>4.5</code>). <strong>Explicit</strong> conversion is done manually by the programmer using casting functions like <code>int()</code> or <code>str()</code>."
+            },
+            {
+                "q": "Does int(9.99) round the number to 10?",
+                "a": "<strong>No.</strong> The <code>int()</code> function performs **truncation**, which means it completely drops the decimal portion of the number. Therefore, <code>int(9.99)</code> evaluates to <code>9</code>, not 10."
+            },
+            {
+                "q": "How can I convert the string \"12.5\" into an integer?",
+                "a": "Calling <code>int(\"12.5\")</code> directly will raise a **ValueError**. You must first convert the string to a float, and then cast it to an integer: <code>int(float(\"12.5\"))</code>."
+            },
+            {
+                "q": "What values evaluate to False when cast to a boolean?",
+                "a": "In Python, empty values (like empty strings <code>\"\"</code>), the number <code>0</code> (or <code>0.0</code>), and <code>None</code> evaluate to <code>False</code>. Almost all other values evaluate to <code>True</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's test your knowledge of type casting and conversion in Python!",
             "questions": [
-                { "type": "mcq", "question": "What is the result of int(8.99)?", "options": ["8", "9", "8.99", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "Which of the following statements will raise a ValueError?", "options": ["float(\"7.8\")", "int(\"7.8\")", "str(7.8)", "int(\"7\")"], "answer": 1 },
-                { "type": "mcq", "question": "What does bool(\"\") (empty string) evaluate to?", "options": ["True", "False", "Error", "None"], "answer": 1 },
-                { "type": "fill", "question": "Manual conversion of data types by the programmer using functions is called _____ type conversion.", "answer": "explicit" },
-                { "type": "fill", "question": "The function used to convert a value into a floating-point decimal number is _____.", "answer": "float" },
-                { "type": "fill", "question": "If you add an integer and a float, Python automatically outputs the result as a _____.", "answer": "float" },
-                { "type": "tf", "question": "The statement int(float(\"3.7\")) is a valid way to convert the string \"3.7\" to the integer 3.", "answer": "true" },
-                { "type": "tf", "question": "The statement str(50) converts the integer 50 into a string value.", "answer": "true" },
-                { "type": "tf", "question": "The boolean expression bool(\"False\") evaluates to False.", "answer": "false" },
-                { "type": "short", "question": "Explain why int(\"15.9\") raises a ValueError and describe how you would successfully extract the integer 15 from it.", "sampleAnswer": "The int() function cannot directly convert a string containing a decimal point into an integer. To do it successfully, you must first convert the string to a float using float(\"15.9\") and then cast that float to an integer using int(), resulting in: int(float(\"15.9\"))." }
+                {
+                    "type": "mcq",
+                    "question": "What is the result of int(8.99)?",
+                    "options": [
+                        "8",
+                        "9",
+                        "8.99",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following statements will raise a ValueError?",
+                    "options": [
+                        "float(\"7.8\")",
+                        "int(\"7.8\")",
+                        "str(7.8)",
+                        "int(\"7\")"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does bool(\"\") (empty string) evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Manual conversion of data types by the programmer using functions is called _____ type conversion. (variable / function / explicit / float)",
+                    "answer": "explicit"
+                },
+                {
+                    "type": "fill",
+                    "question": "The function used to convert a value into a floating-point decimal number is _____. (int / bool / str / float)",
+                    "answer": "float"
+                },
+                {
+                    "type": "fill",
+                    "question": "If you add an integer and a float, Python automatically outputs the result as a _____. (int / bool / str / float)",
+                    "answer": "float"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement int(float(\"3.7\")) is a valid way to convert the string \"3.7\" to the integer 3.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement str(50) converts the integer 50 into a string value.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The boolean expression bool(\"False\") evaluates to False.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why int(\"15.9\") raises a ValueError and describe how you would successfully extract the integer 15 from it.",
+                    "sampleAnswer": "The int() function cannot directly convert a string containing a decimal point into an integer. To do it successfully, you must first convert the string to a float using float(\"15.9\") and then cast that float to an integer using int(), resulting in: int(float(\"15.9\"))."
+                }
             ]
         },
-
         "scenario": "Take the variable price_str = \"19.99\". Convert it to a float and store it in 'price_float'. Then, convert 'price_float' to an integer and store it in 'price_int'. Finally, print 'price_int'.",
         "hint": "First define price_float = float(price_str), then define price_int = int(price_float), and write print(price_int).",
         "wrongHint": "Make sure you convert price_str to float, then to int, and print the final integer price_int!",
@@ -1161,38 +1309,112 @@ window.levels = [
         "id": 13,
         "title": "Taking input with input()",
         "concept": "How to read user input in Python using the input() function and convert it using type casting",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Reading User Input",
             "subheading": "Making your programs interactive with input()",
             "body": "<p>Up until now, our programs have only printed static outputs. To make a program truly interactive, we need to accept data from the user. In Python, this is done using the <strong><code>input()</code></strong> function.</p>\n\n<h3>Basic Usage</h3>\n<p>The <code>input()</code> function pauses the program and waits for the user to type something. You can provide a text message (called a <strong>prompt</strong>) to guide the user:</p>\n\n<pre class=\"code-example\">name = input(\"Enter your name: \")\nprint(\"Hello, \" + name)</pre>\n\n<h3>The Golden Rule of input()</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Always a String:</strong> The <code>input()</code> function <strong>always returns a string (str)</strong>, even if the user types a number! For example, if you type <code>25</code>, Python stores the text <code>\"25\"</code>.</div>\n</div>\n\n<h3>Reading Numbers (Type Casting Input)</h3>\n<p>Since <code>input()</code> always returns text, you cannot perform math operations on it directly. If you want to read an integer or a float, you must wrap the <code>input()</code> function inside <code>int()</code> or <code>float()</code>:</p>\n\n<pre class=\"code-example\"># Read as integer\nage = int(input(\"Enter your age: \"))\nprint(age + 1)  # Works perfectly!\n\n# Read as decimal\nheight = float(input(\"Enter your height (in meters): \"))\nprint(height)</pre>"
         },
-
         "qna": [
-            { "q": "What does the input() function do?", "a": "The <code>input()</code> function pauses program execution, prints a prompt message to the console, and waits for the user to type text and press Enter. It then returns that user input." },
-            { "q": "What data type is returned by input()?", "a": "It <strong>always returns a string (str)</strong>. Even if the user types a whole number like <code>42</code> or a decimal like <code>9.9</code>, it is returned as text (e.g. <code>\"42\"</code>)." },
-            { "q": "How do I read a number from the user so I can do math on it?", "a": "You must wrap the <code>input()</code> function in a type casting function, such as <code>int(input())</code> for whole numbers or <code>float(input())</code> for decimals." },
-            { "q": "What happens if a user types text when int(input()) is expected?", "a": "Python will throw a **ValueError** because it cannot convert text letters into a number. The program will crash unless the exception is handled." },
-            { "q": "Is the prompt message inside input() required?", "a": "No, it is optional. Writing <code>val = input()</code> will wait for user input without displaying any instruction message." }
+            {
+                "q": "What does the input() function do?",
+                "a": "The <code>input()</code> function pauses program execution, prints a prompt message to the console, and waits for the user to type text and press Enter. It then returns that user input."
+            },
+            {
+                "q": "What data type is returned by input()?",
+                "a": "It <strong>always returns a string (str)</strong>. Even if the user types a whole number like <code>42</code> or a decimal like <code>9.9</code>, it is returned as text (e.g. <code>\"42\"</code>)."
+            },
+            {
+                "q": "How do I read a number from the user so I can do math on it?",
+                "a": "You must wrap the <code>input()</code> function in a type casting function, such as <code>int(input())</code> for whole numbers or <code>float(input())</code> for decimals."
+            },
+            {
+                "q": "What happens if a user types text when int(input()) is expected?",
+                "a": "Python will throw a **ValueError** because it cannot convert text letters into a number. The program will crash unless the exception is handled."
+            },
+            {
+                "q": "Is the prompt message inside input() required?",
+                "a": "No, it is optional. Writing <code>val = input()</code> will wait for user input without displaying any instruction message."
+            }
         ],
-
         "test": {
             "intro": "Let's test your understanding of getting user input in Python!",
             "questions": [
-                { "type": "mcq", "question": "What data type does the input() function return by default?", "options": ["int", "float", "str", "bool"], "answer": 2 },
-                { "type": "mcq", "question": "Which of these is the correct way to get the user's age as an integer?", "options": ["age = input(\"Enter age: \")", "age = int(input(\"Enter age: \"))", "age = float(input(\"Enter age: \"))", "age = int(\"input()\")"], "answer": 1 },
-                { "type": "mcq", "question": "If the user inputs 10 in response to x = input(), what is the type of x?", "options": ["int", "float", "str", "bool"], "answer": 2 },
-                { "type": "fill", "question": "The guiding text inside the input() parentheses is called the _____.", "answer": "prompt" },
-                { "type": "fill", "question": "Converting user input text to a number using int() is a process called type _____.", "answer": "casting" },
-                { "type": "fill", "question": "If the user enters 'ten' when running x = int(input()), Python raises a _____Error.", "answer": "value" },
-                { "type": "tf", "question": "input() automatically returns a float if the user types a decimal number.", "answer": "false" },
-                { "type": "tf", "question": "You can combine string inputs directly with other strings using the + operator.", "answer": "true" },
-                { "type": "tf", "question": "Leaving the input() parentheses empty will cause a SyntaxError.", "answer": "false" },
-                { "type": "short", "question": "Explain why num = input(\"Enter number: \") followed by print(num + 5) causes a TypeError, and how to fix it.", "sampleAnswer": "The input() function always returns a string, so num holds text (like '10'). Python cannot add an integer (5) to a string, which causes a TypeError. To fix it, cast the input string into an integer first: num = int(input(\"Enter number: \"))." }
+                {
+                    "type": "mcq",
+                    "question": "What data type does the input() function return by default?",
+                    "options": [
+                        "int",
+                        "float",
+                        "str",
+                        "bool"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of these is the correct way to get the user's age as an integer?",
+                    "options": [
+                        "age = input(\"Enter age: \")",
+                        "age = int(input(\"Enter age: \"))",
+                        "age = float(input(\"Enter age: \"))",
+                        "age = int(\"input()\")"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If the user inputs 10 in response to x = input(), what is the type of x?",
+                    "options": [
+                        "int",
+                        "float",
+                        "str",
+                        "bool"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The guiding text inside the input() parentheses is called the _____. (variable / casting / prompt / value)",
+                    "answer": "prompt"
+                },
+                {
+                    "type": "fill",
+                    "question": "Converting user input text to a number using int() is a process called type _____. (prompt / variable / casting / value)",
+                    "answer": "casting"
+                },
+                {
+                    "type": "fill",
+                    "question": "If the user enters 'ten' when running x = int(input()), Python raises a _____Error. (value / typeerror / nameerror / syntaxerror)",
+                    "answer": "value"
+                },
+                {
+                    "type": "tf",
+                    "question": "input() automatically returns a float if the user types a decimal number.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can combine string inputs directly with other strings using the + operator.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Leaving the input() parentheses empty will cause a SyntaxError.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why num = input(\"Enter number: \") followed by print(num + 5) causes a TypeError, and how to fix it.",
+                    "sampleAnswer": "The input() function always returns a string, so num holds text (like '10'). Python cannot add an integer (5) to a string, which causes a TypeError. To fix it, cast the input string into an integer first: num = int(input(\"Enter number: \"))."
+                }
             ]
         },
-
         "scenario": "Write a program that asks the user for their favorite gadget using the prompt \"Enter your favorite gadget: \". Store it in 'favorite_gadget'. Then, print \"Doraemon gave me a \" concatenated with the value of 'favorite_gadget'.",
         "hint": "Use input(\"Enter your favorite gadget: \") to get the value, then use the + operator to join the strings in print().",
         "wrongHint": "Make sure you use the exact prompt and concatenate the strings properly!",
@@ -1203,38 +1425,112 @@ window.levels = [
         "id": 14,
         "title": "Output formatting",
         "concept": "Formatting print outputs in Python using concatenation, commas, and f-strings",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Output Formatting",
             "subheading": "Styling and presenting printed text",
             "body": "<p>When printing messages, presenting your data cleanly is very important. Python offers three primary ways to format output statements.</p>\n\n<h3>1. String Concatenation (+)</h3>\n<p>You can join multiple strings together using the <code>+</code> operator. Note that you must handle spacing manually, and you can only concatenate strings (non-strings must be explicitly cast to <code>str</code>):</p>\n\n<pre class=\"code-example\">name = \"Nobita\"\nprint(\"Hello \" + name + \"!\")  # Outputs: Hello Nobita!</pre>\n\n<h3>2. Using Commas (,)</h3>\n<p>Inside the <code>print()</code> function, you can separate different values with commas. Python automatically converts other data types (like numbers) to text and inserts a single space between the items:</p>\n\n<pre class=\"code-example\">age = 10\nprint(\"Age:\", age)  # Outputs: Age: 10</pre>\n\n<h3>3. f-Strings (Formatted String Literals)</h3>\n<p>This is the modern and most popular way! Prefix your string with the letter <code>f</code> or <code>F</code>. You can then insert variables or expressions directly inside the text by wrapping them in curly braces <code>{}</code>:</p>\n\n<pre class=\"code-example\">name = \"Doraemon\"\nitems = 4\nprint(f\"{name} has {items} gadgets.\")  # Outputs: Doraemon has 4 gadgets.</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>f-String Power:</strong> You can even run calculations directly inside f-string curly braces! For example, <code>print(f\"Next year I will be {age + 1}\")</code> will calculate and display <code>11</code>.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is string concatenation in Python?", "a": "String concatenation is joining multiple strings together into one using the <code>+</code> operator." },
-            { "q": "What is the limitation of concatenating strings with +?", "a": "You can only join strings. If you attempt to concatenate a string with an integer or float (e.g. <code>\"Score: \" + 10</code>), Python raises a **TypeError**." },
-            { "q": "How do commas inside print() work?", "a": "Commas allow you to print multiple arguments of different data types in one statement. Python automatically converts them and inserts a single space between each item." },
-            { "q": "What is an f-string?", "a": "An f-string (formatted string literal) is a string prefixed with the letter <code>f</code>. It lets you embed variables or expressions directly inside the text using curly braces <code>{}</code>." },
-            { "q": "Why are f-strings preferred by Python developers?", "a": "f-strings are cleaner to read, easier to write, execute faster, and automatically handle type conversions for variables inside the curly braces." }
+            {
+                "q": "What is string concatenation in Python?",
+                "a": "String concatenation is joining multiple strings together into one using the <code>+</code> operator."
+            },
+            {
+                "q": "What is the limitation of concatenating strings with +?",
+                "a": "You can only join strings. If you attempt to concatenate a string with an integer or float (e.g. <code>\"Score: \" + 10</code>), Python raises a **TypeError**."
+            },
+            {
+                "q": "How do commas inside print() work?",
+                "a": "Commas allow you to print multiple arguments of different data types in one statement. Python automatically converts them and inserts a single space between each item."
+            },
+            {
+                "q": "What is an f-string?",
+                "a": "An f-string (formatted string literal) is a string prefixed with the letter <code>f</code>. It lets you embed variables or expressions directly inside the text using curly braces <code>{}</code>."
+            },
+            {
+                "q": "Why are f-strings preferred by Python developers?",
+                "a": "f-strings are cleaner to read, easier to write, execute faster, and automatically handle type conversions for variables inside the curly braces."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of output formatting in Python!",
             "questions": [
-                { "type": "mcq", "question": "Which prefix is used to define a formatted f-string?", "options": ["s", "f", "r", "p"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of print(\"Hello\", \"World\")?", "options": ["HelloWorld", "Hello World", "Hello, World", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "Which of the following statements raises a TypeError?", "options": ["print(\"Score: \" + str(10))", "print(\"Score:\", 10)", "print(f\"Score: {10}\")", "print(\"Score: \" + 10)"], "answer": 3 },
-                { "type": "fill", "question": "In f-strings, variables are placed inside _____ braces.", "answer": "curly" },
-                { "type": "fill", "question": "The operator used to join strings together is the _____ symbol.", "answer": "+" },
-                { "type": "fill", "question": "Separating print items with a comma automatically inserts a _____ character between them.", "answer": "space" },
-                { "type": "tf", "question": "f-strings automatically convert non-string variables into strings when printing.", "answer": "true" },
-                { "type": "tf", "question": "You can write arithmetic expressions inside f-string curly braces.", "answer": "true" },
-                { "type": "tf", "question": "String concatenation automatically adds spaces between the joined strings.", "answer": "false" },
-                { "type": "short", "question": "Compare print() with commas vs f-strings, and explain when f-strings are more useful.", "sampleAnswer": "Using commas in print() is easy for simple outputs and inserts default spaces. f-strings, however, are far more useful for complex text because they allow you to place variables and expressions exactly where they belong in a template, which is cleaner and supports math calculations directly." }
+                {
+                    "type": "mcq",
+                    "question": "Which prefix is used to define a formatted f-string?",
+                    "options": [
+                        "s",
+                        "f",
+                        "r",
+                        "p"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of print(\"Hello\", \"World\")?",
+                    "options": [
+                        "HelloWorld",
+                        "Hello World",
+                        "Hello, World",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following statements raises a TypeError?",
+                    "options": [
+                        "print(\"Score: \" + str(10))",
+                        "print(\"Score:\", 10)",
+                        "print(f\"Score: {10}\")",
+                        "print(\"Score: \" + 10)"
+                    ],
+                    "answer": 3
+                },
+                {
+                    "type": "fill",
+                    "question": "In f-strings, variables are placed inside _____ braces. (parentheses / square / braces / curly)",
+                    "answer": "curly"
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator used to join strings together is the _____ symbol. (/ / * / + / -)",
+                    "answer": "+"
+                },
+                {
+                    "type": "fill",
+                    "question": "Separating print items with a comma automatically inserts a _____ character between them. (curly / + / space / variable)",
+                    "answer": "space"
+                },
+                {
+                    "type": "tf",
+                    "question": "f-strings automatically convert non-string variables into strings when printing.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can write arithmetic expressions inside f-string curly braces.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "String concatenation automatically adds spaces between the joined strings.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Compare print() with commas vs f-strings, and explain when f-strings are more useful.",
+                    "sampleAnswer": "Using commas in print() is easy for simple outputs and inserts default spaces. f-strings, however, are far more useful for complex text because they allow you to place variables and expressions exactly where they belong in a template, which is cleaner and supports math calculations directly."
+                }
             ]
         },
-
         "scenario": "Define two variables: character = \"Doraemon\" and dorayakis = 12. Print the message \"Doraemon has 12 dorayakis!\" using an f-string referencing both variables.",
         "hint": "Set up the variables, then print an f-string: f\"{character} has {dorayakis} dorayakis!\".",
         "wrongHint": "Make sure you start the string with 'f' and use curly braces around the variable names!",
@@ -1245,38 +1541,112 @@ window.levels = [
         "id": 15,
         "title": "Keywords in Python",
         "concept": "Reserved keywords in Python, how to view them, and why they cannot be used as variable names",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Keywords in Python",
             "subheading": "Python's reserved vocabulary",
             "body": "<p>Just like human languages have specific words with fixed, unchangeable meanings, programming languages have <strong>reserved words</strong> called <strong>keywords</strong>.</p>\n\n<h3>What are Keywords?</h3>\n<p>Keywords are words that have a special predefined meaning and utility in Python. The Python interpreter uses them to understand the structure, loops, logic, and commands of your program.</p>\n\n<h3>The Golden Rule of Keywords</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Syntax Error:</strong> Because keywords are reserved by the language, <strong>you cannot use them as variable names, function names, or any other identifiers</strong>! Doing so will result in a <strong>SyntaxError</strong>.</div>\n</div>\n\n<h3>Common Python Keywords</h3>\n<ul class=\"desc-list\">\n    <li><strong>Logic & Booleans:</strong> <code>True</code>, <code>False</code>, <code>None</code>, <code>and</code>, <code>or</code>, <code>not</code></li>\n    <li><strong>Conditionals:</strong> <code>if</code>, <code>elif</code>, <code>else</code></li>\n    <li><strong>Loops:</strong> <code>for</code>, <code>while</code>, <code>break</code>, <code>continue</code>, <code>in</code></li>\n    <li><strong>Functions & Classes:</strong> <code>def</code>, <code>class</code>, <code>return</code>, <code>pass</code>, <code>lambda</code></li>\n    <li><strong>Structure:</strong> <code>import</code>, <code>from</code>, <code>as</code>, <code>try</code>, <code>except</code></li>\n</ul>\n\n<h3>How to View All Keywords</h3>\n<p>Python provides a built-in module called <code>keyword</code> that lists all reserved words in the system. You can print them by importing the module and reading <code>keyword.kwlist</code>:</p>\n\n<pre class=\"code-example\">import keyword\nprint(keyword.kwlist)</pre>\n\n<p>All Python keywords (except <code>True</code>, <code>False</code>, and <code>None</code>) are written in <strong>completely lowercase</strong> letters!</p>"
         },
-
         "qna": [
-            { "q": "What are reserved keywords in Python?", "a": "Reserved keywords are words that Python has set aside for its own syntax and commands (like <code>if</code>, <code>for</code>, and <code>def</code>). They cannot be reassigned or used as names for variables." },
-            { "q": "Why does using a keyword as a variable name cause an error?", "a": "If Python allowed keywords to be variable names, the interpreter could not distinguish between a control flow instruction (like <code>if</code>) and your variable, making the code ambiguous and impossible to execute." },
-            { "q": "How many keywords does Python have?", "a": "Python 3 has approximately 35 keywords. The exact count may vary slightly depending on the specific Python version." },
-            { "q": "Are keywords case-sensitive?", "a": "Yes. Keywords must be typed exactly as defined. Most are all lowercase (e.g. <code>while</code>). Only three keywords start with an uppercase letter: <code>True</code>, <code>False</code>, and <code>None</code>. Capitalizing other keywords (like writing <code>IF</code> instead of <code>if</code>) will result in errors." },
-            { "q": "Is 'print' a reserved keyword?", "a": "<strong>No.</strong> <code>print</code> is a built-in function, not a reserved keyword. However, you should still never use it as a variable name because doing so will overwrite the printing functionality, causing future print statements to fail!" }
+            {
+                "q": "What are reserved keywords in Python?",
+                "a": "Reserved keywords are words that Python has set aside for its own syntax and commands (like <code>if</code>, <code>for</code>, and <code>def</code>). They cannot be reassigned or used as names for variables."
+            },
+            {
+                "q": "Why does using a keyword as a variable name cause an error?",
+                "a": "If Python allowed keywords to be variable names, the interpreter could not distinguish between a control flow instruction (like <code>if</code>) and your variable, making the code ambiguous and impossible to execute."
+            },
+            {
+                "q": "How many keywords does Python have?",
+                "a": "Python 3 has approximately 35 keywords. The exact count may vary slightly depending on the specific Python version."
+            },
+            {
+                "q": "Are keywords case-sensitive?",
+                "a": "Yes. Keywords must be typed exactly as defined. Most are all lowercase (e.g. <code>while</code>). Only three keywords start with an uppercase letter: <code>True</code>, <code>False</code>, and <code>None</code>. Capitalizing other keywords (like writing <code>IF</code> instead of <code>if</code>) will result in errors."
+            },
+            {
+                "q": "Is 'print' a reserved keyword?",
+                "a": "<strong>No.</strong> <code>print</code> is a built-in function, not a reserved keyword. However, you should still never use it as a variable name because doing so will overwrite the printing functionality, causing future print statements to fail!"
+            }
         ],
-
         "test": {
             "intro": "Let's test your understanding of Python's reserved keywords!",
             "questions": [
-                { "type": "mcq", "question": "Which of the following is NOT a reserved keyword in Python?", "options": ["for", "if", "loop", "while"], "answer": 2 },
-                { "type": "mcq", "question": "Which of these keywords is capitalized in Python?", "options": ["true", "None", "else", "import"], "answer": 1 },
-                { "type": "mcq", "question": "What error will you get if you try to assign def = 5?", "options": ["NameError", "TypeError", "SyntaxError", "ValueError"], "answer": 2 },
-                { "type": "fill", "question": "The built-in module used to view all Python keywords is named _____.", "answer": "keyword" },
-                { "type": "fill", "question": "The list of keywords is retrieved using the attribute keyword._____.", "answer": "kwlist" },
-                { "type": "fill", "question": "Python keywords are case-_____, meaning 'True' is a keyword but 'true' is not.", "answer": "sensitive" },
-                { "type": "tf", "question": "You can technically use print as a variable name, although it is highly discouraged.", "answer": "true" },
-                { "type": "tf", "question": "Every single reserved keyword in Python is written in all-lowercase letters.", "answer": "false" },
-                { "type": "tf", "question": "Reserved keywords can be used to define loop boundaries and logical steps.", "answer": "true" },
-                { "type": "short", "question": "Explain why while = 10 causes an error, but While = 10 is allowed.", "sampleAnswer": "The word 'while' in lowercase is a reserved keyword used to start a loop, so Python raises a SyntaxError when you try to use it as a variable name. However, because Python is case-sensitive, 'While' with a capital 'W' is treated as a completely different word and is not reserved, making it valid as a variable name." }
+                {
+                    "type": "mcq",
+                    "question": "Which of the following is NOT a reserved keyword in Python?",
+                    "options": [
+                        "for",
+                        "if",
+                        "loop",
+                        "while"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of these keywords is capitalized in Python?",
+                    "options": [
+                        "true",
+                        "None",
+                        "else",
+                        "import"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What error will you get if you try to assign def = 5?",
+                    "options": [
+                        "NameError",
+                        "TypeError",
+                        "SyntaxError",
+                        "ValueError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The built-in module used to view all Python keywords is named _____. (typeerror / nameerror / syntaxerror / keyword)",
+                    "answer": "keyword"
+                },
+                {
+                    "type": "fill",
+                    "question": "The list of keywords is retrieved using the attribute keyword._____. (sensitive / variable / kwlist / keyword)",
+                    "answer": "kwlist"
+                },
+                {
+                    "type": "fill",
+                    "question": "Python keywords are case-_____, meaning 'True' is a keyword but 'true' is not. (variable / sensitive / keyword / kwlist)",
+                    "answer": "sensitive"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can technically use print as a variable name, although it is highly discouraged.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Every single reserved keyword in Python is written in all-lowercase letters.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Reserved keywords can be used to define loop boundaries and logical steps.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why while = 10 causes an error, but While = 10 is allowed.",
+                    "sampleAnswer": "The word 'while' in lowercase is a reserved keyword used to start a loop, so Python raises a SyntaxError when you try to use it as a variable name. However, because Python is case-sensitive, 'While' with a capital 'W' is treated as a completely different word and is not reserved, making it valid as a variable name."
+                }
             ]
         },
-
         "scenario": "Import the built-in 'keyword' module, and then print the list of keywords using 'print(keyword.kwlist)'.",
         "hint": "Write 'import keyword' on line 1, and 'print(keyword.kwlist)' on line 2.",
         "wrongHint": "Make sure you import the keyword module and print keyword.kwlist exactly!",
@@ -1287,38 +1657,112 @@ window.levels = [
         "id": 16,
         "title": "Arithmetic operators",
         "concept": "Performing mathematical calculations using +, -, *, /, //, %, and **",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Arithmetic Operators",
             "subheading": "Doing math calculations in Python",
             "body": "<p>Python can be used as a highly capable calculator! We perform math operations in code using symbols called <strong>Arithmetic Operators</strong>.</p>\n\n<h3>The 7 Arithmetic Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong>Addition (<code>+</code>):</strong> Adds two values. Example: <code>5 + 3</code> yields <code>8</code>.</li>\n    <li><strong>Subtraction (<code>-</code>):</strong> Subtracts the right value from the left value. Example: <code>10 - 4</code> yields <code>6</code>.</li>\n    <li><strong>Multiplication (<code>*</code>):</strong> Multiplies two values. Example: <code>3 * 4</code> yields <code>12</code>.</li>\n    <li><strong>Division (<code>/</code>):</strong> Divides the left value by the right. <strong>CRITICAL RULE: Division in Python always returns a float (decimal number)</strong>, even if the division is perfectly even! Example: <code>4 / 2</code> yields <code>2.0</code>.</li>\n    <li><strong>Floor Division (<code>//</code>):</strong> Divides and rounds down to the nearest whole integer, discarding any decimal remainders. Example: <code>7 // 2</code> yields <code>3</code>.</li>\n    <li><strong>Modulus (<code>%</code>):</strong> Divides two numbers and returns the remainder of the division. Example: <code>7 % 2</code> yields <code>1</code>.</li>\n    <li><strong>Exponentiation (<code>**</code>):</strong> Calculates power (the base raised to the power of the exponent). Example: <code>2 ** 3</code> is 2 cubed, yielding <code>8</code>.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Operator Precedence:</strong> Python follows standard mathematical order of operations (PEMDAS/BODMAS). Exponentiation is evaluated first, followed by multiplication/division, and finally addition/subtraction. You can use parentheses <code>()</code> to force calculations to occur first!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is the difference between regular division (/) and floor division (//)?", "a": "Regular division (<code>/</code>) returns a decimal float representing the exact quotient (e.g. <code>5 / 2</code> evaluates to <code>2.5</code>). Floor division (<code>//</code>) rounds the result down to the nearest whole integer, discarding the decimal fraction (e.g. <code>5 // 2</code> evaluates to <code>2</code>)." },
-            { "q": "How does the modulus (%) operator work?", "a": "The modulus operator calculates and returns the remainder after division. For example, <code>10 % 3</code> returns <code>1</code> because 3 fits into 10 three times (making 9) with a remaining remainder of 1." },
-            { "q": "How do you calculate powers (exponents) in Python?", "a": "You use the double asterisk operator (<code>**</code>). For example, writing <code>3 ** 4</code> represents 3 raised to the power of 4, yielding <code>81</code>." },
-            { "q": "Why does print(8 / 2) output 4.0 instead of 4?", "a": "In Python 3, the single slash division operator (<code>/</code>) is programmed to always output a floating-point data type (<code>float</code>) to preserve decimal accuracy." },
-            { "q": "Can you use arithmetic operators on strings?", "a": "Yes, but only <code>+</code> (for joining/concatenating strings) and <code>*</code> (for repeating a string by an integer). For example, <code>\"Hi\" * 3</code> yields <code>\"HiHiHi\"</code>. Subtraction, division, and exponents will trigger a **TypeError**." }
+            {
+                "q": "What is the difference between regular division (/) and floor division (//)?",
+                "a": "Regular division (<code>/</code>) returns a decimal float representing the exact quotient (e.g. <code>5 / 2</code> evaluates to <code>2.5</code>). Floor division (<code>//</code>) rounds the result down to the nearest whole integer, discarding the decimal fraction (e.g. <code>5 // 2</code> evaluates to <code>2</code>)."
+            },
+            {
+                "q": "How does the modulus (%) operator work?",
+                "a": "The modulus operator calculates and returns the remainder after division. For example, <code>10 % 3</code> returns <code>1</code> because 3 fits into 10 three times (making 9) with a remaining remainder of 1."
+            },
+            {
+                "q": "How do you calculate powers (exponents) in Python?",
+                "a": "You use the double asterisk operator (<code>**</code>). For example, writing <code>3 ** 4</code> represents 3 raised to the power of 4, yielding <code>81</code>."
+            },
+            {
+                "q": "Why does print(8 / 2) output 4.0 instead of 4?",
+                "a": "In Python 3, the single slash division operator (<code>/</code>) is programmed to always output a floating-point data type (<code>float</code>) to preserve decimal accuracy."
+            },
+            {
+                "q": "Can you use arithmetic operators on strings?",
+                "a": "Yes, but only <code>+</code> (for joining/concatenating strings) and <code>*</code> (for repeating a string by an integer). For example, <code>\"Hi\" * 3</code> yields <code>\"HiHiHi\"</code>. Subtraction, division, and exponents will trigger a **TypeError**."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python math and arithmetic operators!",
             "questions": [
-                { "type": "mcq", "question": "What is the output of print(5 / 2)?", "options": ["2", "2.5", "3", "2.0"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of print(5 // 2)?", "options": ["2", "2.5", "3", "2.0"], "answer": 0 },
-                { "type": "mcq", "question": "What does 2 ** 4 evaluate to?", "options": ["8", "16", "32", "64"], "answer": 1 },
-                { "type": "fill", "question": "The operator used to get the remainder of a division is the _____ operator.", "answer": "modulus" },
-                { "type": "fill", "question": "The operator used to raise a number to an exponential power is _____.", "answer": "**" },
-                { "type": "fill", "question": "In Python, division using the '/' operator always returns a data type of _____.", "answer": "float" },
-                { "type": "tf", "question": "The statement 7 % 2 evaluates to 1.", "answer": "true" },
-                { "type": "tf", "question": "Floor division (//) rounds the division result up to the nearest whole integer.", "answer": "false" },
-                { "type": "tf", "question": "The statement 10 % 5 evaluates to 0.", "answer": "true" },
-                { "type": "short", "question": "Compare the results of x = 11 / 3, y = 11 // 3, and z = 11 % 3.", "sampleAnswer": "x is 3.6666... because regular division returns the exact float quotient. y is 3 because floor division truncates and rounds down to the nearest integer. z is 2 because modulus returns the remainder left over from the division (11 - 3*3 = 2)." }
+                {
+                    "type": "mcq",
+                    "question": "What is the output of print(5 / 2)?",
+                    "options": [
+                        "2",
+                        "2.5",
+                        "3",
+                        "2.0"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of print(5 // 2)?",
+                    "options": [
+                        "2",
+                        "2.5",
+                        "3",
+                        "2.0"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does 2 ** 4 evaluate to?",
+                    "options": [
+                        "8",
+                        "16",
+                        "32",
+                        "64"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator used to get the remainder of a division is the _____ operator. (modulus / variable / float / **)",
+                    "answer": "modulus"
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator used to raise a number to an exponential power is _____. (+ / - / ** / *)",
+                    "answer": "**"
+                },
+                {
+                    "type": "fill",
+                    "question": "In Python, division using the '/' operator always returns a data type of _____. (int / bool / str / float)",
+                    "answer": "float"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement 7 % 2 evaluates to 1.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Floor division (//) rounds the division result up to the nearest whole integer.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement 10 % 5 evaluates to 0.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Compare the results of x = 11 / 3, y = 11 // 3, and z = 11 % 3.",
+                    "sampleAnswer": "x is 3.6666... because regular division returns the exact float quotient. y is 3 because floor division truncates and rounds down to the nearest integer. z is 2 because modulus returns the remainder left over from the division (11 - 3*3 = 2)."
+                }
             ]
         },
-
         "scenario": "Define three variables: base = 3, power = 3, and result which calculates 'base' raised to the power of 'power' using the exponentiation operator. Finally, print 'result'.",
         "hint": "Assign the base and power values, write result = base ** power, and print(result).",
         "wrongHint": "Make sure you define 'result = base ** power' and print result without quotes!",
@@ -1329,38 +1773,112 @@ window.levels = [
         "id": 17,
         "title": "Assignment operators",
         "concept": "Storing values and updating variables using =, +=, -=, *=, and /= in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Assignment Operators",
             "subheading": "Storing and updating variable values",
             "body": "<p>We already know the basic assignment operator (<code>=</code>), which stores a value inside a variable. Python also provides <strong>compound assignment operators</strong> (or shortcut operators) that allow you to modify a variable's value and reassign it in a single step!</p>\n\n<h3>Common Assignment Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong>Assignment (<code>=</code>):</strong> Stores the right-hand value inside the left-hand variable. Example: <code>x = 10</code>.</li>\n    <li><strong>Add and Assign (<code>+=</code>):</strong> Adds the right-hand value to the variable and stores the sum. E.g. <code>x += 5</code> is identical to <code>x = x + 5</code>.</li>\n    <li><strong>Subtract and Assign (<code>-=</code>):</strong> Subtracts the right-hand value from the variable and stores the difference. E.g. <code>x -= 2</code> is identical to <code>x = x - 2</code>.</li>\n    <li><strong>Multiply and Assign (<code>*=</code>):</strong> Multiplies the variable by the right-hand value and stores the product. E.g. <code>x *= 3</code> is identical to <code>x = x * 3</code>.</li>\n    <li><strong>Divide and Assign (<code>/=</code>):</strong> Divides the variable by the right-hand value and stores the quotient. <strong>Note: updates the variable's type to a float!</strong> E.g. <code>x /= 2</code> is identical to <code>x = x / 2</code>.</li>\n    <li><strong>Modulus and Assign (<code>%=</code>):</strong> Takes modulus and stores the remainder. E.g. <code>x %= 3</code> is identical to <code>x = x % 3</code>.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why use shortcuts?</strong> Writing compound assignments like <code>score += 10</code> makes your code cleaner, shorter, and easier for the computer to optimize during execution.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is an assignment operator?", "a": "An assignment operator is used to assign values to variables. The primary assignment operator is <code>=</code>, but compound operators like <code>+=</code> or <code>-=</code> also perform operations on the variable before assigning." },
-            { "q": "What is the meaning of x += 3?", "a": "It is a compound assignment shortcut meaning <code>x = x + 3</code>. It reads the current value of <code>x</code>, adds <code>3</code> to it, and reassigns the new value back to <code>x</code>." },
-            { "q": "What is a compound assignment operator?", "a": "A compound assignment operator combines an arithmetic operation with an assignment (e.g. <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>) to perform updates on variables in a single expression." },
-            { "q": "Does writing x =+ 5 work the same as x += 5?", "a": "<strong>No.</strong> Writing <code>x =+ 5</code> assigns positive 5 (<code>+5</code>) to <code>x</code>. The mathematical compound operator must be written with the calculation operator first, followed by the equal sign (<code>+=</code>)." },
-            { "q": "Can you use compound assignment on strings?", "a": "Yes! You can use <code>+=</code> to append text to an existing string (e.g. <code>text = \"Hello\"; text += \" Nobita\"</code> makes it <code>\"Hello Nobita\"</code>) or <code>*=</code> to repeat the string." }
+            {
+                "q": "What is an assignment operator?",
+                "a": "An assignment operator is used to assign values to variables. The primary assignment operator is <code>=</code>, but compound operators like <code>+=</code> or <code>-=</code> also perform operations on the variable before assigning."
+            },
+            {
+                "q": "What is the meaning of x += 3?",
+                "a": "It is a compound assignment shortcut meaning <code>x = x + 3</code>. It reads the current value of <code>x</code>, adds <code>3</code> to it, and reassigns the new value back to <code>x</code>."
+            },
+            {
+                "q": "What is a compound assignment operator?",
+                "a": "A compound assignment operator combines an arithmetic operation with an assignment (e.g. <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>) to perform updates on variables in a single expression."
+            },
+            {
+                "q": "Does writing x =+ 5 work the same as x += 5?",
+                "a": "<strong>No.</strong> Writing <code>x =+ 5</code> assigns positive 5 (<code>+5</code>) to <code>x</code>. The mathematical compound operator must be written with the calculation operator first, followed by the equal sign (<code>+=</code>)."
+            },
+            {
+                "q": "Can you use compound assignment on strings?",
+                "a": "Yes! You can use <code>+=</code> to append text to an existing string (e.g. <code>text = \"Hello\"; text += \" Nobita\"</code> makes it <code>\"Hello Nobita\"</code>) or <code>*=</code> to repeat the string."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python assignment operators!",
             "questions": [
-                { "type": "mcq", "question": "If x = 10, what is the value of x after running x += 5?", "options": ["5", "10", "15", "Error"], "answer": 2 },
-                { "type": "mcq", "question": "Which of the following is equivalent to count = count * 2?", "options": ["count =* 2", "count = count ** 2", "count *= 2", "count *== 2"], "answer": 2 },
-                { "type": "mcq", "question": "If score = 20, what is the value and type of score after score /= 2?", "options": ["10 (int)", "10.0 (float)", "20 (int)", "Error"], "answer": 1 },
-                { "type": "fill", "question": "The shortcut operator '-=' represents subtract and _____.", "answer": "assign" },
-                { "type": "fill", "question": "If x = 7, the statement x %= 3 will update x to the value _____.", "answer": "1" },
-                { "type": "fill", "question": "The basic assignment operator in Python is the _____ symbol.", "answer": "=" },
-                { "type": "tf", "question": "The command x += 1 is a valid way to increment a variable by 1.", "answer": "true" },
-                { "type": "tf", "question": "The statement x =+ 10 is identical in action to x += 10.", "answer": "false" },
-                { "type": "tf", "question": "Using text = \"A\"; text *= 3 updates the text variable to hold 'AAA'.", "answer": "true" },
-                { "type": "short", "question": "If x = 5, explain the difference in result between running x += 2 and x =+ 2.", "sampleAnswer": "Running x += 2 performs addition, adding 2 to x's current value to update x to 7. Running x =+ 2 performs direct assignment of positive 2, overwriting x's old value to update x to 2." }
+                {
+                    "type": "mcq",
+                    "question": "If x = 10, what is the value of x after running x += 5?",
+                    "options": [
+                        "5",
+                        "10",
+                        "15",
+                        "Error"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following is equivalent to count = count * 2?",
+                    "options": [
+                        "count =* 2",
+                        "count = count ** 2",
+                        "count *= 2",
+                        "count *== 2"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "If score = 20, what is the value and type of score after score /= 2?",
+                    "options": [
+                        "10 (int)",
+                        "10.0 (float)",
+                        "20 (int)",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The shortcut operator '-=' represents subtract and _____. (variable / assign / = / 1)",
+                    "answer": "assign"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 7, the statement x %= 3 will update x to the value _____. (3 / 2 / 1 / 0)",
+                    "answer": "1"
+                },
+                {
+                    "type": "fill",
+                    "question": "The basic assignment operator in Python is the _____ symbol. (- / + / = / *)",
+                    "answer": "="
+                },
+                {
+                    "type": "tf",
+                    "question": "The command x += 1 is a valid way to increment a variable by 1.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement x =+ 10 is identical in action to x += 10.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using text = \"A\"; text *= 3 updates the text variable to hold 'AAA'.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If x = 5, explain the difference in result between running x += 2 and x =+ 2.",
+                    "sampleAnswer": "Running x += 2 performs addition, adding 2 to x's current value to update x to 7. Running x =+ 2 performs direct assignment of positive 2, overwriting x's old value to update x to 2."
+                }
             ]
         },
-
         "scenario": "Define pocket_space = 100. Reduce it by 20 using the '-=' compound assignment operator, then double it using the '*=' compound operator. Finally, print pocket_space.",
         "hint": "Write pocket_space -= 20, then pocket_space *= 2, and print(pocket_space).",
         "wrongHint": "Make sure you update pocket_space using compound operators and print its final value!",
@@ -1371,38 +1889,112 @@ window.levels = [
         "id": 18,
         "title": "Comparison operators",
         "concept": "Comparing values in Python using ==, !=, >, <, >=, and <= to produce boolean results",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Comparison Operators",
             "subheading": "Comparing values and making decisions",
             "body": "<p>When writing programs, we often need to compare two values. For example: Is Nobita's exam score greater than 50? Is the user's password correct? Python uses <strong>Comparison Operators</strong> (or relational operators) to solve these questions.</p>\n\n<h3>The 6 Comparison Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong>Equal to (<code>==</code>):</strong> Checks if two values are equal. Note: Use double equals <code>==</code> for comparison, and single equal <code>=</code> for assignment! Example: <code>5 == 5</code> yields <code>True</code>.</li>\n    <li><strong>Not equal to (<code>!=</code>):</strong> Checks if two values are different. Example: <code>5 != 3</code> yields <code>True</code>.</li>\n    <li><strong>Greater than (<code>&gt;</code>):</strong> Checks if the left value is strictly larger than the right. Example: <code>10 &gt; 5</code> yields <code>True</code>.</li>\n    <li><strong>Less than (<code>&lt;</code>):</strong> Checks if the left value is strictly smaller than the right. Example: <code>3 &lt; 8</code> yields <code>True</code>.</li>\n    <li><strong>Greater than or equal to (<code>&gt;=</code>):</strong> Checks if the left value is larger or equal. Example: <code>10 &gt;= 10</code> yields <code>True</code>.</li>\n    <li><strong>Less than or equal to (<code>&lt;=</code>):</strong> Checks if the left value is smaller or equal. Example: <code>5 &lt;= 6</code> yields <code>True</code>.</li>\n</ul>\n\n<h3>String Comparisons</h3>\n<p>Python can also compare strings! String comparisons are case-sensitive. For example, <code>\"apple\" == \"Apple\"</code> evaluates to <code>False</code> because the capital letter 'A' is distinct from the lowercase 'a'.</p>\n\n<blockquote class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>TypeError Warning:</strong> You cannot compare incompatible data types (like <code>5 &gt; \"3\"</code>) using inequality operators. Doing so will raise a <strong>TypeError</strong>!</div>\n</blockquote>"
         },
-
         "qna": [
-            { "q": "What are comparison operators?", "a": "Comparison operators are symbols used to compare two values. The result of any comparison operation is a boolean value: either <code>True</code> or <code>False</code>." },
-            { "q": "What is the difference between = and ==?", "a": "The single equal sign (<code>=</code>) is the **assignment operator**, used to store a value inside a variable (e.g. <code>x = 5</code>). The double equal sign (<code>==</code>) is the **comparison operator**, used to check if two values are equal (e.g. <code>x == 5</code> returns <code>True</code> or <code>False</code>)." },
-            { "q": "How does the 'not equal' (!=) operator work?", "a": "The <code>!=</code> operator compares two values and returns <code>True</code> if they are different, and <code>False</code> if they are identical." },
-            { "q": "Can you compare an integer and a float?", "a": "Yes! Python can compare integers and floats directly. For example, <code>10 == 10.0</code> evaluates to <code>True</code>." },
-            { "q": "Are string comparisons case-sensitive in Python?", "a": "Yes, string comparisons are strictly case-sensitive. For example, <code>\"Doraemon\" == \"doraemon\"</code> evaluates to <code>False</code> because capitalization matters in Python." }
+            {
+                "q": "What are comparison operators?",
+                "a": "Comparison operators are symbols used to compare two values. The result of any comparison operation is a boolean value: either <code>True</code> or <code>False</code>."
+            },
+            {
+                "q": "What is the difference between = and ==?",
+                "a": "The single equal sign (<code>=</code>) is the **assignment operator**, used to store a value inside a variable (e.g. <code>x = 5</code>). The double equal sign (<code>==</code>) is the **comparison operator**, used to check if two values are equal (e.g. <code>x == 5</code> returns <code>True</code> or <code>False</code>)."
+            },
+            {
+                "q": "How does the 'not equal' (!=) operator work?",
+                "a": "The <code>!=</code> operator compares two values and returns <code>True</code> if they are different, and <code>False</code> if they are identical."
+            },
+            {
+                "q": "Can you compare an integer and a float?",
+                "a": "Yes! Python can compare integers and floats directly. For example, <code>10 == 10.0</code> evaluates to <code>True</code>."
+            },
+            {
+                "q": "Are string comparisons case-sensitive in Python?",
+                "a": "Yes, string comparisons are strictly case-sensitive. For example, <code>\"Doraemon\" == \"doraemon\"</code> evaluates to <code>False</code> because capitalization matters in Python."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of comparison operators in Python!",
             "questions": [
-                { "type": "mcq", "question": "Which operator is used to check if two values are equal?", "options": ["=", "==", "===", "!="], "answer": 1 },
-                { "type": "mcq", "question": "What does the expression 5 != 5 evaluate to?", "options": ["True", "False", "Error", "None"], "answer": 1 },
-                { "type": "mcq", "question": "Which of the following comparisons raises a TypeError?", "options": ["5 == 5.0", "5 != \"5\"", "5 > \"3\"", "\"apple\" == \"orange\""], "answer": 2 },
-                { "type": "fill", "question": "Comparison operators in Python always return a data type of _____.", "answer": "bool" },
-                { "type": "fill", "question": "The operator used to check if a value is greater than or equal to another is _____.", "answer": ">=" },
-                { "type": "fill", "question": "If x = 12 and y = 15, the expression x < y evaluates to _____.", "answer": "True" },
-                { "type": "tf", "question": "\"Python\" == \"python\" evaluates to True.", "answer": "false" },
-                { "type": "tf", "question": "The comparison 10 >= 10 evaluates to True.", "answer": "true" },
-                { "type": "tf", "question": "The single equal sign (=) is used to check if two values are equal in Python.", "answer": "false" },
-                { "type": "short", "question": "If score = 85, explain what expressions you would write to check if the score is a passing mark (50 or above) and if it is a perfect mark (100).", "sampleAnswer": "To check if the score is passing, write 'score >= 50'. To check if the score is perfect, write 'score == 100'." }
+                {
+                    "type": "mcq",
+                    "question": "Which operator is used to check if two values are equal?",
+                    "options": [
+                        "=",
+                        "==",
+                        "===",
+                        "!="
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does the expression 5 != 5 evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following comparisons raises a TypeError?",
+                    "options": [
+                        "5 == 5.0",
+                        "5 != \"5\"",
+                        "5 > \"3\"",
+                        "\"apple\" == \"orange\""
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Comparison operators in Python always return a data type of _____. (bool / float / int / str)",
+                    "answer": "bool"
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator used to check if a value is greater than or equal to another is _____. (- / + / >= / *)",
+                    "answer": ">="
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 12 and y = 15, the expression x < y evaluates to _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "tf",
+                    "question": "\"Python\" == \"python\" evaluates to True.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The comparison 10 >= 10 evaluates to True.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The single equal sign (=) is used to check if two values are equal in Python.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "If score = 85, explain what expressions you would write to check if the score is a passing mark (50 or above) and if it is a perfect mark (100).",
+                    "sampleAnswer": "To check if the score is passing, write 'score >= 50'. To check if the score is perfect, write 'score == 100'."
+                }
             ]
         },
-
         "scenario": "Define two variables: user_guess = 42 and correct_answer = 42. Create a variable 'is_correct' that compares if 'user_guess' is equal to 'correct_answer'. Finally, print 'is_correct'.",
         "hint": "Assign the values, then write is_correct = user_guess == correct_answer, and print(is_correct).",
         "wrongHint": "Make sure you compare user_guess and correct_answer using the == operator and print the result!",
@@ -1413,38 +2005,112 @@ window.levels = [
         "id": 19,
         "title": "Logical operators",
         "concept": "Combining boolean expressions using and, or, and not in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Logical Operators",
             "subheading": "Combining and reversing true/false statements",
             "body": "<p>Sometimes, decisions in your code depend on multiple conditions. For example: \"If a user has a key AND the door is locked, open the door.\" Python uses <strong>Logical Operators</strong> to combine or modify boolean conditions.</p>\n\n<h3>The 3 Logical Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>and</code>:</strong> Returns <code>True</code> <strong>only if BOTH conditions are True</strong>. If even one part is False, the result is <code>False</code>. Example: <code>True and False</code> yields <code>False</code>.</li>\n    <li><strong><code>or</code>:</strong> Returns <code>True</code> <strong>if AT LEAST ONE condition is True</strong>. It only returns <code>False</code> if both parts are False. Example: <code>True or False</code> yields <code>True</code>.</li>\n    <li><strong><code>not</code>:</strong> Inverts (reverses) a boolean value. Turns <code>True</code> into <code>False</code>, and <code>False</code> into <code>True</code>. Example: <code>not True</code> yields <code>False</code>.</li>\n</ul>\n\n<h3>Order of Evaluation (Precedence)</h3>\n<p>Unless overridden by parentheses, Python evaluates logical operations in this order: <code>not</code> first, then <code>and</code>, and finally <code>or</code>. Using parentheses <code>()</code> is highly recommended to make your code clear and ensure calculations happen in the correct order!</p>"
         },
-
         "qna": [
-            { "q": "What are logical operators used for?", "a": "Logical operators are used to connect two or more conditional expressions, or to reverse a boolean expression, yielding a final true/false result." },
-            { "q": "When does the 'and' operator return True?", "a": "The <code>and</code> operator returns <code>True</code> if and only if both conditions being evaluated are <code>True</code>." },
-            { "q": "When does the 'or' operator return True?", "a": "The <code>or</code> operator returns <code>True</code> if at least one of the conditions is <code>True</code>. It only returns <code>False</code> when both conditions are <code>False</code>." },
-            { "q": "How does the 'not' operator work?", "a": "The <code>not</code> operator flips the boolean state. It takes a value and reverses it (e.g. <code>not True</code> becomes <code>False</code>, and <code>not False</code> becomes <code>True</code>)." },
-            { "q": "What is short-circuit evaluation?", "a": "In an <code>and</code> statement, if the first condition is <code>False</code>, Python doesn't check the second because the result is guaranteed to be False. In an <code>or</code> statement, if the first condition is <code>True</code>, Python doesn't check the second because the result is guaranteed to be True. This is called short-circuiting." }
+            {
+                "q": "What are logical operators used for?",
+                "a": "Logical operators are used to connect two or more conditional expressions, or to reverse a boolean expression, yielding a final true/false result."
+            },
+            {
+                "q": "When does the 'and' operator return True?",
+                "a": "The <code>and</code> operator returns <code>True</code> if and only if both conditions being evaluated are <code>True</code>."
+            },
+            {
+                "q": "When does the 'or' operator return True?",
+                "a": "The <code>or</code> operator returns <code>True</code> if at least one of the conditions is <code>True</code>. It only returns <code>False</code> when both conditions are <code>False</code>."
+            },
+            {
+                "q": "How does the 'not' operator work?",
+                "a": "The <code>not</code> operator flips the boolean state. It takes a value and reverses it (e.g. <code>not True</code> becomes <code>False</code>, and <code>not False</code> becomes <code>True</code>)."
+            },
+            {
+                "q": "What is short-circuit evaluation?",
+                "a": "In an <code>and</code> statement, if the first condition is <code>False</code>, Python doesn't check the second because the result is guaranteed to be False. In an <code>or</code> statement, if the first condition is <code>True</code>, Python doesn't check the second because the result is guaranteed to be True. This is called short-circuiting."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's logical operators!",
             "questions": [
-                { "type": "mcq", "question": "What does True and False evaluate to?", "options": ["True", "False", "None", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "What does False or True evaluate to?", "options": ["True", "False", "None", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "What does the expression not (10 > 5) evaluate to?", "options": ["True", "False", "Error", "None"], "answer": 1 },
-                { "type": "fill", "question": "The logical operator that returns True only if both conditions are True is _____.", "answer": "and" },
-                { "type": "fill", "question": "The operator used to invert a boolean value is _____.", "answer": "not" },
-                { "type": "fill", "question": "If x = True and y = False, the expression x or y evaluates to _____.", "answer": "True" },
-                { "type": "tf", "question": "The logical statement not False evaluates to True.", "answer": "true" },
-                { "type": "tf", "question": "In the expression A and B, if A is False, Python evaluates B anyway.", "answer": "false" },
-                { "type": "tf", "question": "The statement 5 > 3 or 2 > 10 evaluates to False.", "answer": "false" },
-                { "type": "short", "question": "If has_key = True and is_locked = False, explain what 'has_key and not is_locked' evaluates to.", "sampleAnswer": "It evaluates to True. has_key is True, and is_locked is False (so not is_locked becomes True). Since both parts are True, the 'and' returns True." }
+                {
+                    "type": "mcq",
+                    "question": "What does True and False evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "None",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does False or True evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "None",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does the expression not (10 > 5) evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The logical operator that returns True only if both conditions are True is _____. (if / elif / and / else)",
+                    "answer": "and"
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator used to invert a boolean value is _____. (if / else / not / elif)",
+                    "answer": "not"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = True and y = False, the expression x or y evaluates to _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "tf",
+                    "question": "The logical statement not False evaluates to True.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "In the expression A and B, if A is False, Python evaluates B anyway.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement 5 > 3 or 2 > 10 evaluates to False.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "If has_key = True and is_locked = False, explain what 'has_key and not is_locked' evaluates to.",
+                    "sampleAnswer": "It evaluates to True. has_key is True, and is_locked is False (so not is_locked becomes True). Since both parts are True, the 'and' returns True."
+                }
             ]
         },
-
         "scenario": "Define two variables: has_dorayaki = True and is_hungry = True. Create a variable 'should_eat' that is True if 'has_dorayaki' is True AND 'is_hungry' is True. Finally, print 'should_eat'.",
         "hint": "Set up the variables, write should_eat = has_dorayaki and is_hungry, and print the result.",
         "wrongHint": "Make sure you combine conditions using the logical operator 'and' and print should_eat!",
@@ -1455,38 +2121,112 @@ window.levels = [
         "id": 20,
         "title": "Membership operators",
         "concept": "Checking if a value or character is present in a sequence using 'in' and 'not in' in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Membership Operators",
             "subheading": "Checking for presence inside collections",
             "body": "<p>When programming, we often need to check if an item exists inside a collection. For example: Is the letter <code>\"a\"</code> in the word <code>\"apple\"</code>? Is the name <code>\"nobita\"</code> in a list of users? Python makes this incredibly simple using <strong>Membership Operators</strong>.</p>\n\n<h3>The 2 Membership Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>in</code>:</strong> Evaluates to <code>True</code> if the specified value is found inside the sequence. Otherwise, it returns <code>False</code>.\n        <pre class=\"code-example\">text = \"Bamboo Copter\"\nprint(\"Bamboo\" in text)  # Outputs: True\nprint(\"door\" in text)    # Outputs: False</pre>\n    </li>\n    <li><strong><code>not in</code>:</strong> Evaluates to <code>True</code> if the specified value is <strong>not</strong> found inside the sequence. If it is found, it returns <code>False</code>.\n        <pre class=\"code-example\">text = \"Anywhere Door\"\nprint(\"copter\" not in text)  # Outputs: True</pre>\n    </li>\n</ul>\n\n<h3>Important Details</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Case Sensitivity:</strong> Membership tests are strictly case-sensitive. For example, <code>\"bamboo\" in \"Bamboo Copter\"</code> will evaluate to <code>False</code> because the letters have different casing!</div>\n</div>\n<p>Membership operators work on any Python sequence data type, including strings (which we've seen) and lists/tuples (which you will learn about in future levels).</p>"
         },
-
         "qna": [
-            { "q": "What are membership operators?", "a": "Membership operators are used to test if a value or variable is part of a sequence (such as strings, lists, or tuples)." },
-            { "q": "What does the 'in' operator do?", "a": "The <code>in</code> operator evaluates to <code>True</code> if the specified element is found in the sequence, and <code>False</code> otherwise." },
-            { "q": "What does the 'not in' operator do?", "a": "The <code>not in</code> operator evaluates to <code>True</code> if the specified element is not present in the sequence, and <code>False</code> if it is present." },
-            { "q": "Can I search for multiple words inside a string using 'in'?", "a": "Yes! You can search for a single character (e.g. <code>\"a\" in \"cat\"</code>) or entire substrings/words (e.g. <code>\"Anywhere Door\" in \"Doraemon opened the Anywhere Door.\"</code>)." },
-            { "q": "Are membership operations case-sensitive?", "a": "Yes, they are case-sensitive. Searching for <code>\"python\" in \"Python programming\"</code> returns <code>False</code> because capital P and lowercase p do not match." }
+            {
+                "q": "What are membership operators?",
+                "a": "Membership operators are used to test if a value or variable is part of a sequence (such as strings, lists, or tuples)."
+            },
+            {
+                "q": "What does the 'in' operator do?",
+                "a": "The <code>in</code> operator evaluates to <code>True</code> if the specified element is found in the sequence, and <code>False</code> otherwise."
+            },
+            {
+                "q": "What does the 'not in' operator do?",
+                "a": "The <code>not in</code> operator evaluates to <code>True</code> if the specified element is not present in the sequence, and <code>False</code> if it is present."
+            },
+            {
+                "q": "Can I search for multiple words inside a string using 'in'?",
+                "a": "Yes! You can search for a single character (e.g. <code>\"a\" in \"cat\"</code>) or entire substrings/words (e.g. <code>\"Anywhere Door\" in \"Doraemon opened the Anywhere Door.\"</code>)."
+            },
+            {
+                "q": "Are membership operations case-sensitive?",
+                "a": "Yes, they are case-sensitive. Searching for <code>\"python\" in \"Python programming\"</code> returns <code>False</code> because capital P and lowercase p do not match."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python membership operators!",
             "questions": [
-                { "type": "mcq", "question": "Which operator is used to test if a value is present in a sequence?", "options": ["is", "in", "has", "not"], "answer": 1 },
-                { "type": "mcq", "question": "What does \"a\" in \"Apple\" evaluate to?", "options": ["True", "False", "None", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "What does \"key\" not in \"pocket\" evaluate to?", "options": ["True", "False", "None", "Error"], "answer": 0 },
-                { "type": "fill", "question": "The operator that returns True if a value is NOT present in a sequence is _____ in.", "answer": "not" },
-                { "type": "fill", "question": "Membership operators check if a value is part of a _____.", "answer": "sequence" },
-                { "type": "fill", "question": "If word = \"Doraemon\", then the expression \"Dora\" in word evaluates to _____.", "answer": "True" },
-                { "type": "tf", "question": "Membership operators can only search for single characters, not substrings.", "answer": "false" },
-                { "type": "tf", "question": "\"pocket\" in \"Doraemon's pocket\" evaluates to True.", "answer": "true" },
-                { "type": "tf", "question": "\"A\" not in \"apple\" evaluates to True.", "answer": "true" },
-                { "type": "short", "question": "If sentence = \"Doraemon loves dorayakis\", explain what \"dorayaki\" in sentence and \"Dorayaki\" in sentence evaluate to, and why.", "sampleAnswer": "'dorayaki' in sentence is True because the lowercase word exists inside 'dorayakis'. 'Dorayaki' in sentence is False because membership checks are case-sensitive." }
+                {
+                    "type": "mcq",
+                    "question": "Which operator is used to test if a value is present in a sequence?",
+                    "options": [
+                        "is",
+                        "in",
+                        "has",
+                        "not"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does \"a\" in \"Apple\" evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "None",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does \"key\" not in \"pocket\" evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "None",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator that returns True if a value is NOT present in a sequence is _____ in. (if / else / not / elif)",
+                    "answer": "not"
+                },
+                {
+                    "type": "fill",
+                    "question": "Membership operators check if a value is part of a _____. (not / True / sequence / variable)",
+                    "answer": "sequence"
+                },
+                {
+                    "type": "fill",
+                    "question": "If word = \"Doraemon\", then the expression \"Dora\" in word evaluates to _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "tf",
+                    "question": "Membership operators can only search for single characters, not substrings.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "\"pocket\" in \"Doraemon's pocket\" evaluates to True.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "\"A\" not in \"apple\" evaluates to True.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If sentence = \"Doraemon loves dorayakis\", explain what \"dorayaki\" in sentence and \"Dorayaki\" in sentence evaluate to, and why.",
+                    "sampleAnswer": "'dorayaki' in sentence is True because the lowercase word exists inside 'dorayakis'. 'Dorayaki' in sentence is False because membership checks are case-sensitive."
+                }
             ]
         },
-
         "scenario": "Define a variable gadget_list = \"Bamboo Copter, Anywhere Door, Translation Konjac\". Create a boolean variable 'has_door' that checks if the string \"Door\" is present in gadget_list. Finally, print 'has_door'.",
         "hint": "Set up the string, write has_door = \"Door\" in gadget_list, and print(has_door).",
         "wrongHint": "Make sure you search for the substring 'Door' (case-sensitive) in gadget_list and print the boolean result has_door!",
@@ -1497,38 +2237,112 @@ window.levels = [
         "id": 21,
         "title": "Identity operators",
         "concept": "Comparing memory locations of objects using 'is' and 'is not' vs value comparison '=='",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Identity Operators",
             "subheading": "Checking memory locations in Python",
             "body": "<p>In Python, variables don't hold values directly; they point to objects stored in the computer's memory. Sometimes, we need to check if two variables point to the <strong>exact same memory address</strong> (object identity), rather than just checking if their values are equal.</p>\n\n<h3>The 2 Identity Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>is</code>:</strong> Evaluates to <code>True</code> if both variables refer to the exact same object in memory.</li>\n    <li><strong><code>is not</code>:</strong> Evaluates to <code>True</code> if both variables refer to different objects in memory.</li>\n</ul>\n\n<h3>The Big Difference: is vs ==</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>==</code> (Equality):</strong> Checks if the **values** of the two objects are equal.</li>\n    <li><strong><code>is</code> (Identity):</strong> Checks if the variables point to the **same object address** in memory.</li>\n</ul>\n\n<pre class=\"code-example\">list_a = [1, 2, 3]\nlist_b = [1, 2, 3]\nlist_c = list_a\n\nprint(list_a == list_b) # Outputs: True (they have identical contents)\nprint(list_a is list_b)  # Outputs: False (stored in different memory slots)\nprint(list_a is list_c)  # Outputs: True (list_c points to list_a's address)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Python Optimization (Caching):</strong> For performance, Python reuses the same memory address for small integers (between -5 and 256) and small strings. Therefore, if <code>x = 5</code> and <code>y = 5</code>, <code>x is y</code> evaluates to <code>True</code>. However, for collections like lists or dictionaries, Python always creates new objects in memory!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What do identity operators do?", "a": "Identity operators (<code>is</code> and <code>is not</code>) check whether two variables point to the exact same object located at the same memory address." },
-            { "q": "What is the difference between == and is?", "a": "The <code>==</code> operator compares the values of two objects to check if they are equal (value equality). The <code>is</code> operator compares the memory addresses of two variables to check if they point to the exact same object (address identity)." },
-            { "q": "Why does list_a is list_b return False even if they contain the same values?", "a": "Lists are mutable collections. When you create two lists, Python allocates separate boxes in memory for each list. Because they are in different memory addresses, <code>is</code> returns <code>False</code>." },
-            { "q": "How does 'is not' differ from '!='?", "a": "The <code>!=</code> operator checks if values are different. The <code>is not</code> operator checks if the variables point to different objects in memory, even if their contents are equal." },
-            { "q": "What is the id() function?", "a": "The built-in <code>id()</code> function returns the unique integer memory address of an object. If <code>x is y</code> is True, then <code>id(x)</code> will equal <code>id(y)</code>." }
+            {
+                "q": "What do identity operators do?",
+                "a": "Identity operators (<code>is</code> and <code>is not</code>) check whether two variables point to the exact same object located at the same memory address."
+            },
+            {
+                "q": "What is the difference between == and is?",
+                "a": "The <code>==</code> operator compares the values of two objects to check if they are equal (value equality). The <code>is</code> operator compares the memory addresses of two variables to check if they point to the exact same object (address identity)."
+            },
+            {
+                "q": "Why does list_a is list_b return False even if they contain the same values?",
+                "a": "Lists are mutable collections. When you create two lists, Python allocates separate boxes in memory for each list. Because they are in different memory addresses, <code>is</code> returns <code>False</code>."
+            },
+            {
+                "q": "How does 'is not' differ from '!='?",
+                "a": "The <code>!=</code> operator checks if values are different. The <code>is not</code> operator checks if the variables point to different objects in memory, even if their contents are equal."
+            },
+            {
+                "q": "What is the id() function?",
+                "a": "The built-in <code>id()</code> function returns the unique integer memory address of an object. If <code>x is y</code> is True, then <code>id(x)</code> will equal <code>id(y)</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python identity operators!",
             "questions": [
-                { "type": "mcq", "question": "Which operator checks if two variables refer to the exact same object address?", "options": ["==", "is", "in", "equals"], "answer": 1 },
-                { "type": "mcq", "question": "What does x is y compare?", "options": ["Value equality", "Memory address identity", "Data type equivalence", "Variable spelling"], "answer": 1 },
-                { "type": "mcq", "question": "If list_a = [1, 2] and list_b = [1, 2], what does list_a is list_b evaluate to?", "options": ["True", "False", "Error", "None"], "answer": 1 },
-                { "type": "fill", "question": "The operator used to check if two variables point to different objects in memory is _____ not.", "answer": "is" },
-                { "type": "fill", "question": "The built-in function that returns the unique memory address of an object is _____.", "answer": "id" },
-                { "type": "fill", "question": "While '==' checks value equality, the 'is' operator checks _____ identity.", "answer": "object" },
-                { "type": "tf", "question": "The expression 10 is 10.0 evaluates to True in Python.", "answer": "false" },
-                { "type": "tf", "question": "Python caches and reuses memory locations for small integers to optimize performance.", "answer": "true" },
-                { "type": "tf", "question": "If x is not y is True, it means x and y are stored in different memory addresses.", "answer": "true" },
-                { "type": "short", "question": "If a = [5, 10] and b = a, explain what a == b and a is b evaluate to, and why.", "sampleAnswer": "Both evaluate to True. a == b is True because they hold the same values. a is b is True because assigning b = a makes b refer to the exact same list object address in memory." }
+                {
+                    "type": "mcq",
+                    "question": "Which operator checks if two variables refer to the exact same object address?",
+                    "options": [
+                        "==",
+                        "is",
+                        "in",
+                        "equals"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does x is y compare?",
+                    "options": [
+                        "Value equality",
+                        "Memory address identity",
+                        "Data type equivalence",
+                        "Variable spelling"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If list_a = [1, 2] and list_b = [1, 2], what does list_a is list_b evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator used to check if two variables point to different objects in memory is _____ not. (is / else / if / elif)",
+                    "answer": "is"
+                },
+                {
+                    "type": "fill",
+                    "question": "The built-in function that returns the unique memory address of an object is _____. (variable / object / is / id)",
+                    "answer": "id"
+                },
+                {
+                    "type": "fill",
+                    "question": "While '==' checks value equality, the 'is' operator checks _____ identity. (object / is / variable / id)",
+                    "answer": "object"
+                },
+                {
+                    "type": "tf",
+                    "question": "The expression 10 is 10.0 evaluates to True in Python.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Python caches and reuses memory locations for small integers to optimize performance.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "If x is not y is True, it means x and y are stored in different memory addresses.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If a = [5, 10] and b = a, explain what a == b and a is b evaluate to, and why.",
+                    "sampleAnswer": "Both evaluate to True. a == b is True because they hold the same values. a is b is True because assigning b = a makes b refer to the exact same list object address in memory."
+                }
             ]
         },
-
         "scenario": "Define a list nobita_bag = [\"dorayaki\", \"notebook\"]. Point 'doraemon_bag' to the same list object (doraemon_bag = nobita_bag). Create a variable 'same_bag' that checks if 'nobita_bag' is the same object as 'doraemon_bag' using the identity operator. Finally, print 'same_bag'.",
         "hint": "Set up the list, point doraemon_bag = nobita_bag, assign same_bag = nobita_bag is doraemon_bag, and print the result.",
         "wrongHint": "Make sure you assign doraemon_bag to point to nobita_bag, use 'is' to check identity, and print same_bag!",
@@ -1539,38 +2353,112 @@ window.levels = [
         "id": 22,
         "title": "Operator precedence",
         "concept": "Order of operations (PEMDAS/BODMAS) in Python, combining arithmetic, comparison, and logical operators",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Operator Precedence",
             "subheading": "Rules governing the order of execution",
             "body": "<p>When you write complex expressions with multiple operators, like <code>10 - 2 * 3</code> or <code>5 &gt; 3 and 2 &lt; 1</code>, Python needs a set of rules to determine which operations to run first. These rules are called <strong>Operator Precedence</strong> (similar to PEMDAS/BODMAS in school math).</p>\n\n<h3>The Order of Precedence (Highest to Lowest)</h3>\n<ol class=\"desc-list\">\n    <li><strong>Parentheses <code>()</code>:</strong> Anything inside brackets is evaluated first!</li>\n    <li><strong>Exponentiation <code>**</code>:</strong> Raising a number to a power.</li>\n    <li><strong>Multiplication, Division, Floor Division, Modulus <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></strong></li>\n    <li><strong>Addition, Subtraction <code>+</code>, <code>-</code></strong></li>\n    <li><strong>Comparison, Membership, Identity:</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>in</code>, <code>is</code></li>\n    <li><strong>Logical NOT:</strong> <code>not</code></li>\n    <li><strong>Logical AND:</strong> <code>and</code></li>\n    <li><strong>Logical OR:</strong> <code>or</code></li>\n</ol>\n\n<h3>Associativity (Left-to-Right)</h3>\n<p>If two operators have the same precedence (like addition <code>+</code> and subtraction <code>-</code>), Python evaluates them from **left to right**.</p>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Best Practice:</strong> Always use parentheses <code>()</code> in complex calculations! It ensures the code executes in the exact order you want, and makes your code much easier for others to read. E.g., <code>(5 + 3) * 2</code> forces addition to happen first, yielding <code>16</code> instead of <code>11</code>.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is operator precedence?", "a": "Operator precedence determines the order in which operators are evaluated in expressions containing multiple operators." },
-            { "q": "Which arithmetic operator has the highest precedence?", "a": "Exponentiation (<code>**</code>) has the highest precedence among math operators. Parentheses <code>()</code> override everything." },
-            { "q": "How do logical operators rank in precedence?", "a": "Logical operators rank as: <code>not</code> first, then <code>and</code>, and finally <code>or</code>." },
-            { "q": "What happens when operators have equal precedence?", "a": "When operators have equal precedence, Python evaluates them from left to right (left-to-right associativity)." },
-            { "q": "Why should I use parentheses in expressions?", "a": "Parentheses clarify the programmer's intent, prevent calculation bugs, and allow you to override standard math order to achieve the desired result." }
+            {
+                "q": "What is operator precedence?",
+                "a": "Operator precedence determines the order in which operators are evaluated in expressions containing multiple operators."
+            },
+            {
+                "q": "Which arithmetic operator has the highest precedence?",
+                "a": "Exponentiation (<code>**</code>) has the highest precedence among math operators. Parentheses <code>()</code> override everything."
+            },
+            {
+                "q": "How do logical operators rank in precedence?",
+                "a": "Logical operators rank as: <code>not</code> first, then <code>and</code>, and finally <code>or</code>."
+            },
+            {
+                "q": "What happens when operators have equal precedence?",
+                "a": "When operators have equal precedence, Python evaluates them from left to right (left-to-right associativity)."
+            },
+            {
+                "q": "Why should I use parentheses in expressions?",
+                "a": "Parentheses clarify the programmer's intent, prevent calculation bugs, and allow you to override standard math order to achieve the desired result."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python operator precedence!",
             "questions": [
-                { "type": "mcq", "question": "What is the output of print(10 - 2 * 3)?", "options": ["24", "4", "6", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of print((10 - 2) * 3)?", "options": ["24", "4", "6", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "Which of these operators has the highest precedence?", "options": ["*", "**", "+", "/"], "answer": 1 },
-                { "type": "fill", "question": "The operator with the absolute highest precedence that overrides all other rules is _____.", "answer": "parentheses" },
-                { "type": "fill", "question": "In the expression True or False and False, the _____ operator is evaluated first.", "answer": "and" },
-                { "type": "fill", "question": "If operators have identical precedence levels, Python evaluates them from _____ to right.", "answer": "left" },
-                { "type": "tf", "question": "Exponentiation (**) has higher precedence than multiplication (*).", "answer": "true" },
-                { "type": "tf", "question": "Comparison operators have lower precedence than logical operators like 'and'.", "answer": "false" },
-                { "type": "tf", "question": "The expression 2 ** 3 * 2 evaluates to 16.", "answer": "true" },
-                { "type": "short", "question": "Predict the output of '5 + 2 * 10 > 20 and not 2 == 3' step-by-step.", "sampleAnswer": "Multiplication happens first: 2*10 = 20. Addition: 5+20 = 25. Comparisons: 25 > 20 is True and 2 == 3 is False. Logical NOT: not False is True. Logical AND: True and True evaluates to True." }
+                {
+                    "type": "mcq",
+                    "question": "What is the output of print(10 - 2 * 3)?",
+                    "options": [
+                        "24",
+                        "4",
+                        "6",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of print((10 - 2) * 3)?",
+                    "options": [
+                        "24",
+                        "4",
+                        "6",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of these operators has the highest precedence?",
+                    "options": [
+                        "*",
+                        "**",
+                        "+",
+                        "/"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The operator with the absolute highest precedence that overrides all other rules is _____. (parentheses / semicolon / colon / comma)",
+                    "answer": "parentheses"
+                },
+                {
+                    "type": "fill",
+                    "question": "In the expression True or False and False, the _____ operator is evaluated first. (if / elif / and / else)",
+                    "answer": "and"
+                },
+                {
+                    "type": "fill",
+                    "question": "If operators have identical precedence levels, Python evaluates them from _____ to right. (parentheses / variable / and / left)",
+                    "answer": "left"
+                },
+                {
+                    "type": "tf",
+                    "question": "Exponentiation (**) has higher precedence than multiplication (*).",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Comparison operators have lower precedence than logical operators like 'and'.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The expression 2 ** 3 * 2 evaluates to 16.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Predict the output of '5 + 2 * 10 > 20 and not 2 == 3' step-by-step.",
+                    "sampleAnswer": "Multiplication happens first: 2*10 = 20. Addition: 5+20 = 25. Comparisons: 25 > 20 is True and 2 == 3 is False. Logical NOT: not False is True. Logical AND: True and True evaluates to True."
+                }
             ]
         },
-
         "scenario": "Define a variable 'calculation' that evaluates to 40. Write the expression using: 5, 3, and 5 with addition (+) and multiplication (*). Use parentheses to make sure addition happens before multiplication! Finally, print 'calculation'.",
         "hint": "Write calculation = (5 + 3) * 5, then print(calculation).",
         "wrongHint": "Make sure you write calculation = (5 + 3) * 5 to force the addition to happen first!",
@@ -1581,38 +2469,112 @@ window.levels = [
         "id": 23,
         "title": "Practice questions on operators",
         "concept": "Solving complex combination expressions with arithmetic, comparison, identity, membership, and logical operators",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Operator Challenge Room",
             "subheading": "Mastering combined operator challenges",
             "body": "<p>Welcome to a dedicated training room! Now that you have learned about arithmetic, assignment, comparison, logical, membership, and identity operators, it is time to practice combining them into complex logic structures.</p>\n\n<h3>The Evaluation Checklist</h3>\n<p>To solve complex combined expressions without making mistakes, always run your evaluation in this order:</p>\n<ol class=\"desc-list\">\n    <li><strong>Parentheses <code>()</code>:</strong> Always resolve brackets first.</li>\n    <li><strong>Arithmetic Math:</strong> Exponents (<code>**</code>) first, then multiplication/division/modulus/floor-division (<code>*</code>, <code>/</code>, <code>%</code>, <code>//</code>), then addition/subtraction (<code>+</code>, <code>-</code>).</li>\n    <li><strong>Comparisons:</strong> Greater/less-than and equality checks (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>).</li>\n    <li><strong>Identity & Membership:</strong> <code>is</code>, <code>is not</code>, <code>in</code>, <code>not in</code>.</li>\n    <li><strong>Logical Operators:</strong> Logical <code>not</code> first, then <code>and</code>, and finally <code>or</code>.</li>\n</ol>\n\n<h3>Walkthrough Example</h3>\n<pre class=\"code-example\">expression = 5 + 2 == 7 or 10 // 3 &gt; 3\n\n# Step 1: Evaluate math\n# 5 + 2 is 7. 10 // 3 is 3.\n# expression becomes: 7 == 7 or 3 &gt; 3\n\n# Step 2: Evaluate comparisons\n# 7 == 7 is True. 3 &gt; 3 is False.\n# expression becomes: True or False\n\n# Step 3: Evaluate logical\n# True or False evaluates to True!</pre>"
         },
-
         "qna": [
-            { "q": "Why is practicing combined operators important?", "a": "In real-world software, decisions depend on multiple variables (e.g. checking user login validity, order values, and account clearance). Combining operators is standard practice for logic statements." },
-            { "q": "In what order are math and comparison operators evaluated?", "a": "Arithmetic math operations (like <code>+</code> or <code>//</code>) are always evaluated before comparison operations (like <code>==</code> or <code>&gt;</code>)." },
-            { "q": "Does logical 'and' evaluate before logical 'or'?", "a": "Yes, <code>and</code> has a higher precedence than <code>or</code>. For example, <code>True or False and False</code> is evaluated as <code>True or (False and False)</code>, resulting in <code>True</code>." },
-            { "q": "What happens when membership or identity operators are combined with logical operators?", "a": "Identity (<code>is</code>) and membership (<code>in</code>) checks evaluate first as comparisons, and their boolean outputs are then combined using logical connectors." },
-            { "q": "How can I guarantee specific order of evaluation in complex logic statements?", "a": "Always group sub-expressions using parentheses <code>()</code>. E.g., writing <code>(x &gt; 5) and (y &lt; 10)</code> makes the evaluation order clear and readable." }
+            {
+                "q": "Why is practicing combined operators important?",
+                "a": "In real-world software, decisions depend on multiple variables (e.g. checking user login validity, order values, and account clearance). Combining operators is standard practice for logic statements."
+            },
+            {
+                "q": "In what order are math and comparison operators evaluated?",
+                "a": "Arithmetic math operations (like <code>+</code> or <code>//</code>) are always evaluated before comparison operations (like <code>==</code> or <code>&gt;</code>)."
+            },
+            {
+                "q": "Does logical 'and' evaluate before logical 'or'?",
+                "a": "Yes, <code>and</code> has a higher precedence than <code>or</code>. For example, <code>True or False and False</code> is evaluated as <code>True or (False and False)</code>, resulting in <code>True</code>."
+            },
+            {
+                "q": "What happens when membership or identity operators are combined with logical operators?",
+                "a": "Identity (<code>is</code>) and membership (<code>in</code>) checks evaluate first as comparisons, and their boolean outputs are then combined using logical connectors."
+            },
+            {
+                "q": "How can I guarantee specific order of evaluation in complex logic statements?",
+                "a": "Always group sub-expressions using parentheses <code>()</code>. E.g., writing <code>(x &gt; 5) and (y &lt; 10)</code> makes the evaluation order clear and readable."
+            }
         ],
-
         "test": {
             "intro": "Let's test your ability to resolve combined operator expressions!",
             "questions": [
-                { "type": "mcq", "question": "What is the output of print(10 - 3 * 2 == 4)?", "options": ["True", "False", "None", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "What does True or False and not True evaluate to?", "options": ["True", "False", "None", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "If list_a = [1, 2] and list_b = list_a, what does (1 in list_a) and (list_a is list_b) evaluate to?", "options": ["True", "False", "Error", "None"], "answer": 0 },
-                { "type": "fill", "question": "If x = 15, the expression x % 2 == 1 and x < 20 evaluates to _____.", "answer": "True" },
-                { "type": "fill", "question": "The expression not ('a' in 'banana' or 'z' in 'apple') evaluates to _____.", "answer": "False" },
-                { "type": "fill", "question": "If y = 10, the statement y is not 10.0 evaluates to _____.", "answer": "True" },
-                { "type": "tf", "question": "5 + 2 * 3 == 21 evaluates to True.", "answer": "false" },
-                { "type": "tf", "question": "('Door' in 'Anywhere Door') and not (5 is 5.0) evaluates to True.", "answer": "true" },
-                { "type": "tf", "question": "Logical 'or' is evaluated before logical 'and' in Python expressions.", "answer": "false" },
-                { "type": "short", "question": "Explain step-by-step why 'not 10 > 5 and \"apple\" in \"pineapple\"' evaluates to False.", "sampleAnswer": "10 > 5 is True, and 'apple' in 'pineapple' is True. This leaves: not True and True. The logical 'not' runs first, giving: False and True. Finally, the 'and' returns False." }
+                {
+                    "type": "mcq",
+                    "question": "What is the output of print(10 - 3 * 2 == 4)?",
+                    "options": [
+                        "True",
+                        "False",
+                        "None",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does True or False and not True evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "None",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "If list_a = [1, 2] and list_b = list_a, what does (1 in list_a) and (list_a is list_b) evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 15, the expression x % 2 == 1 and x < 20 evaluates to _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "fill",
+                    "question": "The expression not ('a' in 'banana' or 'z' in 'apple') evaluates to _____. (True / undefined / False / None)",
+                    "answer": "False"
+                },
+                {
+                    "type": "fill",
+                    "question": "If y = 10, the statement y is not 10.0 evaluates to _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "tf",
+                    "question": "5 + 2 * 3 == 21 evaluates to True.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "('Door' in 'Anywhere Door') and not (5 is 5.0) evaluates to True.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Logical 'or' is evaluated before logical 'and' in Python expressions.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain step-by-step why 'not 10 > 5 and \"apple\" in \"pineapple\"' evaluates to False.",
+                    "sampleAnswer": "10 > 5 is True, and 'apple' in 'pineapple' is True. This leaves: not True and True. The logical 'not' runs first, giving: False and True. Finally, the 'and' returns False."
+                }
             ]
         },
-
         "scenario": "Define score = 75 and has_completed_project = True. Create a variable 'is_eligible' that is True if 'score' is greater than or equal to 70 AND 'has_completed_project' is True. Finally, print 'is_eligible'.",
         "hint": "Assign the values, then write is_eligible = score >= 70 and has_completed_project, and print it.",
         "wrongHint": "Make sure you combine conditions using the logical operator 'and' and print the eligibility!",
@@ -1623,38 +2585,112 @@ window.levels = [
         "id": 24,
         "title": "Real life logic building",
         "concept": "Translating business rules and real-life scenarios into Python logical expressions",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Real-Life Logic Building",
             "subheading": "Translating real-world problems into code",
             "body": "<p>Programming is about solving real-world problems. In this lesson, we will practice translating descriptive business requirements and daily logical decisions into Python expressions.</p>\n\n<h3>Example Scenario 1: Movie Ticket Discounts</h3>\n<p><strong>Requirement:</strong> \"A movie theater offers discounted tickets if the visitor is a child (under 12) OR a senior citizen (65 or older).\"</p>\n<blockquote class=\"desc-callout callout-highlight\">\n    <strong>Python translation:</strong> <code>is_discounted = age &lt; 12 or age &gt;= 65</code>\n</blockquote>\n\n<h3>Example Scenario 2: Web Login Authentication</h3>\n<p><strong>Requirement:</strong> \"A user can log in if their username is correct AND their password is correct, provided their account is NOT suspended.\"</p>\n<blockquote class=\"desc-callout callout-highlight\">\n    <strong>Python translation:</strong> <code>can_login = is_username_correct and is_password_correct and not is_suspended</code>\n</blockquote>\n\n<h3>Example Scenario 3: Roller Coaster Ride Eligibility</h3>\n<p><strong>Requirement:</strong> \"To ride the roller coaster, a person must be at least 120cm tall AND weigh less than 150kg.\"</p>\n<blockquote class=\"desc-callout callout-highlight\">\n    <strong>Python translation:</strong> <code>can_ride = height_cm &gt;= 120 and weight_kg &lt; 150</code>\n</blockquote>\n\n<p>Translating rules carefully is critical to avoid software bugs and security issues in real-world applications!</p>"
         },
-
         "qna": [
-            { "q": "What is logic building?", "a": "Logic building is the process of translating real-world problems, rules, and conditions into structured, unambiguous code statements." },
-            { "q": "How do you write a rule like 'A and B, unless C' in Python?", "a": "The word 'unless' acts as a negation. You would write this as: <code>(A and B) and not C</code>." },
-            { "q": "How do you check if a number is between two values, inclusive?", "a": "To check if age is between 18 and 30 inclusive, you write: <code>age &gt;= 18 and age &lt;= 30</code>. You can also write the shortcut: <code>18 &lt;= age &lt;= 30</code>." },
-            { "q": "Why are parentheses important when combining 'and' and 'or' logic?", "a": "Because <code>and</code> is evaluated before <code>or</code>, omitting parentheses can lead to bugs. For example, <code>(is_admin or has_permit) and is_logged_in</code> works differently from <code>is_admin or (has_permit and is_logged_in)</code>." },
-            { "q": "How can I verify if my real-world logical translation is correct?", "a": "By testing the logic with different combinations of inputs (e.g. testing an admin user, a suspended user, and a guest user) to check that the boolean output matches the expected result." }
+            {
+                "q": "What is logic building?",
+                "a": "Logic building is the process of translating real-world problems, rules, and conditions into structured, unambiguous code statements."
+            },
+            {
+                "q": "How do you write a rule like 'A and B, unless C' in Python?",
+                "a": "The word 'unless' acts as a negation. You would write this as: <code>(A and B) and not C</code>."
+            },
+            {
+                "q": "How do you check if a number is between two values, inclusive?",
+                "a": "To check if age is between 18 and 30 inclusive, you write: <code>age &gt;= 18 and age &lt;= 30</code>. You can also write the shortcut: <code>18 &lt;= age &lt;= 30</code>."
+            },
+            {
+                "q": "Why are parentheses important when combining 'and' and 'or' logic?",
+                "a": "Because <code>and</code> is evaluated before <code>or</code>, omitting parentheses can lead to bugs. For example, <code>(is_admin or has_permit) and is_logged_in</code> works differently from <code>is_admin or (has_permit and is_logged_in)</code>."
+            },
+            {
+                "q": "How can I verify if my real-world logical translation is correct?",
+                "a": "By testing the logic with different combinations of inputs (e.g. testing an admin user, a suspended user, and a guest user) to check that the boolean output matches the expected result."
+            }
         ],
-
         "test": {
             "intro": "Let's check your ability to build logical expressions for real-life business rules!",
             "questions": [
-                { "type": "mcq", "question": "A customer gets free shipping if they are premium OR if their order is over 50. Which expression represents this?", "options": ["free = premium and order > 50", "free = premium or order > 50", "free = not premium and order > 50", "free = premium or order >= 50"], "answer": 1 },
-                { "type": "mcq", "question": "To enter a concert, you must have a ticket AND be accompanied by an adult if you are under 18. If under_18 is True, how is this checked?", "options": ["can_enter = ticket and accompanied", "can_enter = ticket or accompanied", "can_enter = not ticket and accompanied", "can_enter = ticket and not accompanied"], "answer": 0 },
-                { "type": "mcq", "question": "An alarm triggers if it is night AND a window is open, OR if a smoke sensor is active. Which expression is correct?", "options": ["alarm = is_night and is_window_open or smoke", "alarm = (is_night and is_window_open) or smoke", "alarm = is_night and (is_window_open or smoke)", "alarm = is_night or is_window_open and smoke"], "answer": 1 },
-                { "type": "fill", "question": "To check if a score is strictly between 80 and 90 (exclusive), you write: score > 80 and score < _____.", "answer": "90" },
-                { "type": "fill", "question": "The logical expression to check if a user is NOT banned is written as: not _____.", "answer": "is_banned" },
-                { "type": "fill", "question": "If age = 15, the expression: age >= 13 and age <= 19 evaluates to _____.", "answer": "True" },
-                { "type": "tf", "question": "The statement: is_weekend and is_sunny will return True if it is a sunny Monday.", "answer": "false" },
-                { "type": "tf", "question": "Parentheses are unnecessary when combining 'and' and 'or' because calculations evaluate left-to-right.", "answer": "false" },
-                { "type": "tf", "question": "The expression: score < 0 or score > 100 checks if a score is invalid (assuming valid range is 0 to 100).", "answer": "true" },
-                { "type": "short", "question": "Write a logical expression that checks if a visitor can ride a theme park attraction. The requirements: they must be at least 140cm tall, and they must NOT have a heart condition.", "sampleAnswer": "can_ride = height_cm >= 140 and not has_heart_condition" }
+                {
+                    "type": "mcq",
+                    "question": "A customer gets free shipping if they are premium OR if their order is over 50. Which expression represents this?",
+                    "options": [
+                        "free = premium and order > 50",
+                        "free = premium or order > 50",
+                        "free = not premium and order > 50",
+                        "free = premium or order >= 50"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "To enter a concert, you must have a ticket AND be accompanied by an adult if you are under 18. If under_18 is True, how is this checked?",
+                    "options": [
+                        "can_enter = ticket and accompanied",
+                        "can_enter = ticket or accompanied",
+                        "can_enter = not ticket and accompanied",
+                        "can_enter = ticket and not accompanied"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "An alarm triggers if it is night AND a window is open, OR if a smoke sensor is active. Which expression is correct?",
+                    "options": [
+                        "alarm = is_night and is_window_open or smoke",
+                        "alarm = (is_night and is_window_open) or smoke",
+                        "alarm = is_night and (is_window_open or smoke)",
+                        "alarm = is_night or is_window_open and smoke"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To check if a score is strictly between 80 and 90 (exclusive), you write: score > 80 and score < _____. (90 / 92 / 89 / 91)",
+                    "answer": "90"
+                },
+                {
+                    "type": "fill",
+                    "question": "The logical expression to check if a user is NOT banned is written as: not _____. (variable / 90 / is_banned / True)",
+                    "answer": "is_banned"
+                },
+                {
+                    "type": "fill",
+                    "question": "If age = 15, the expression: age >= 13 and age <= 19 evaluates to _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement: is_weekend and is_sunny will return True if it is a sunny Monday.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Parentheses are unnecessary when combining 'and' and 'or' because calculations evaluate left-to-right.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The expression: score < 0 or score > 100 checks if a score is invalid (assuming valid range is 0 to 100).",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write a logical expression that checks if a visitor can ride a theme park attraction. The requirements: they must be at least 140cm tall, and they must NOT have a heart condition.",
+                    "sampleAnswer": "can_ride = height_cm >= 140 and not has_heart_condition"
+                }
             ]
         },
-
         "scenario": "A customer is eligible for a bank loan if their annual_income is at least 50000 AND their credit_score is greater than 700 AND they do NOT have a criminal_record (boolean False). Define variables: annual_income = 55000, credit_score = 720, and criminal_record = False. Create a variable 'loan_approved' containing the condition, and print it.",
         "hint": "Set up the variables, combine requirements using 'and' (with 'not' for criminal_record), and print(loan_approved).",
         "wrongHint": "Make sure you write loan_approved = annual_income >= 50000 and credit_score > 700 and not criminal_record, and print it!",
@@ -1665,38 +2701,112 @@ window.levels = [
         "id": 25,
         "title": "Beginner coding challenge",
         "concept": "First algorithmic coding exercises",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Beginner Coding Challenge",
             "subheading": "Put your knowledge to the test!",
             "body": "<p>Congratulations on reaching <strong>Level 25</strong>, which marks the completion of <strong>STAGE 3: Operators & Logic</strong>!</p>\n\n<p>Now, you will face your first major coding challenge. Instead of writing simple one-line checks, you will combine all the concepts you have learned so far:</p>\n<ul class=\"desc-list\">\n    <li>Storing and manipulating values inside <strong>variables</strong>.</li>\n    <li>Using <strong>arithmetic operators</strong> like floor division (<code>//</code>) and modulus (<code>%</code>).</li>\n    <li>Constructing clean, formatted outputs using <strong>f-strings</strong>.</li>\n</ul>\n\n<p>Solving coding challenges requires a systematic approach. Make sure you read the requirements carefully, define the correct variables, run the necessary calculations, and double-check your output formatting. Good luck!</p>"
         },
-
         "qna": [
-            { "q": "What is an algorithmic coding challenge?", "a": "An algorithmic coding challenge is a structured problem where you are given a description, inputs, and expected outputs, and you must write code to solve it." },
-            { "q": "How should I approach a coding challenge?", "a": "First, carefully read and understand the problem requirements. Identify inputs, expected outputs, and boundaries. Plan the logic in your mind or using code comments, then write and test your solution." },
-            { "q": "Can I use multiple operators together in coding challenges?", "a": "Yes! You can chain calculations, comparisons, and logical checks. Use parentheses <code>()</code> to guarantee the operations execute in the order you expect." },
-            { "q": "What is formatting and why is it verified in challenges?", "a": "Formatting guarantees that output matches expected user interfaces or API structures. Printing raw numbers is often not enough; you must present data in clean, readable sentence formats using f-strings." },
-            { "q": "What are edge cases?", "a": "Edge cases are unusual or extreme inputs that might break a program (like negative values, extremely large numbers, or zero). Designing programs to handle edge cases is an essential coding skill." }
+            {
+                "q": "What is an algorithmic coding challenge?",
+                "a": "An algorithmic coding challenge is a structured problem where you are given a description, inputs, and expected outputs, and you must write code to solve it."
+            },
+            {
+                "q": "How should I approach a coding challenge?",
+                "a": "First, carefully read and understand the problem requirements. Identify inputs, expected outputs, and boundaries. Plan the logic in your mind or using code comments, then write and test your solution."
+            },
+            {
+                "q": "Can I use multiple operators together in coding challenges?",
+                "a": "Yes! You can chain calculations, comparisons, and logical checks. Use parentheses <code>()</code> to guarantee the operations execute in the order you expect."
+            },
+            {
+                "q": "What is formatting and why is it verified in challenges?",
+                "a": "Formatting guarantees that output matches expected user interfaces or API structures. Printing raw numbers is often not enough; you must present data in clean, readable sentence formats using f-strings."
+            },
+            {
+                "q": "What are edge cases?",
+                "a": "Edge cases are unusual or extreme inputs that might break a program (like negative values, extremely large numbers, or zero). Designing programs to handle edge cases is an essential coding skill."
+            }
         ],
-
         "test": {
             "intro": "Let's check your preparation for the final Stage 3 coding challenge!",
             "questions": [
-                { "type": "mcq", "question": "Which steps describe the correct order of solving a coding challenge?", "options": ["Write code, debug, submit without reading", "Understand requirements, plan logic, write code, test", "Copy from internet, paste, run", "Guess options, submit, repeat"], "answer": 1 },
-                { "type": "mcq", "question": "If a challenge asks you to calculate the area of a rectangle given length and width, which operator do you use?", "options": ["+", "-", "*", "/"], "answer": 2 },
-                { "type": "mcq", "question": "If a challenge requires you to read a user's age as a whole integer from input, which syntax is correct?", "options": ["age = input()", "age = int(input())", "age = float(input())", "age = str(input())"], "answer": 1 },
-                { "type": "fill", "question": "A test case with extreme or unusual inputs that could potentially break a program is called an _____ case.", "answer": "edge" },
-                { "type": "fill", "question": "The formatting style that embeds variables directly inside string curly braces is called an _____-string.", "answer": "f" },
-                { "type": "fill", "question": "If x = 10 and y = 3, then x // y evaluates to the integer _____.", "answer": "3" },
-                { "type": "tf", "question": "Algorithmic challenges only accept one specific way of writing the code, and other valid approaches will fail.", "answer": "false" },
-                { "type": "tf", "question": "It is a good practice to plan your code on paper or in comments before writing it.", "answer": "true" },
-                { "type": "tf", "question": "The statement print('Result:', result) is a basic way of formatting output.", "answer": "true" },
-                { "type": "short", "question": "If a challenge asks you to check if a number is positive and even, what logical expression would you write?", "sampleAnswer": "number > 0 and number % 2 == 0" }
+                {
+                    "type": "mcq",
+                    "question": "Which steps describe the correct order of solving a coding challenge?",
+                    "options": [
+                        "Write code, debug, submit without reading",
+                        "Understand requirements, plan logic, write code, test",
+                        "Copy from internet, paste, run",
+                        "Guess options, submit, repeat"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If a challenge asks you to calculate the area of a rectangle given length and width, which operator do you use?",
+                    "options": [
+                        "+",
+                        "-",
+                        "*",
+                        "/"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "If a challenge requires you to read a user's age as a whole integer from input, which syntax is correct?",
+                    "options": [
+                        "age = input()",
+                        "age = int(input())",
+                        "age = float(input())",
+                        "age = str(input())"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "A test case with extreme or unusual inputs that could potentially break a program is called an _____ case. (edge / 3 / variable / f)",
+                    "answer": "edge"
+                },
+                {
+                    "type": "fill",
+                    "question": "The formatting style that embeds variables directly inside string curly braces is called an _____-string. (f / variable / 3 / edge)",
+                    "answer": "f"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 10 and y = 3, then x // y evaluates to the integer _____. (5 / 4 / 3 / 2)",
+                    "answer": "3"
+                },
+                {
+                    "type": "tf",
+                    "question": "Algorithmic challenges only accept one specific way of writing the code, and other valid approaches will fail.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "It is a good practice to plan your code on paper or in comments before writing it.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement print('Result:', result) is a basic way of formatting output.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If a challenge asks you to check if a number is positive and even, what logical expression would you write?",
+                    "sampleAnswer": "number > 0 and number % 2 == 0"
+                }
             ]
         },
-
         "scenario": "Doraemon has a budget of 100 coins and wants to buy as many dorayakis as possible. Each dorayaki costs 15 coins. Calculate: 1. The maximum number of whole dorayakis Doraemon can buy using floor division (//) and store it in 'max_dorayakis'. 2. The leftover change (remaining coins) using modulus (%) and store it in 'leftover_coins'. Finally, print the result using exactly this format (use an f-string): 'Doraemon can buy {max_dorayakis} dorayakis with {leftover_coins} coins left.'",
         "hint": "Set max_dorayakis = budget // cost_per_dorayaki, leftover_coins = budget % cost_per_dorayaki, and print using the specified f-string.",
         "wrongHint": "Make sure you use floor division and modulus, and print the exact format: 'Doraemon can buy {max_dorayakis} dorayakis with {leftover_coins} coins left.'!",
@@ -1707,35 +2817,109 @@ window.levels = [
         "id": 26,
         "title": "Why decisions in programming",
         "concept": "Understanding the concept of conditional branching and why programs need decision-making paths",
-        "sections": ["description", "qna", "test"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test"
+        ],
         "description": {
             "heading": "Why Decisions in Programming",
             "subheading": "How programs make choices and adapt",
             "body": "<p>Up until now, all the Python programs we have written have run line-by-line, sequentially, from top to bottom. Every single line of code executed, no matter what inputs or values were active. This is called a linear execution flow.</p>\n\n<p>But real life isn't a straight line. We make choices based on criteria: <em>\"If it is raining, take an umbrella. Otherwise, leave it at home.\"</em></p>\n\n<h3>The Concept of Conditional Branching</h3>\n<p>Computer programs need this same intelligence. We call this <strong>Conditional Branching</strong> or **Decision Making**. Without decision-making capability, software would be completely static and inflexible:</p>\n<ul class=\"desc-list\">\n    <li>A **login page** would let everyone in because it couldn't check <em>if</em> the password is correct.</li>\n    <li>An **ATM** would dispense cash even if you have zero balance because it couldn't check <em>if</em> you have sufficient funds.</li>\n    <li>A **video game** wouldn't show a \"Game Over\" screen because it couldn't check <em>if</em> player lives have hit zero.</li>\n</ul>\n\n<h3>How Decisions Work in Python</h3>\n<p>In Python, decision-making is controlled by checking expressions that resolve to a boolean value (<code>True</code> or <code>False</code>). Based on that true/false state, the program branches and executes a specific block of code while skipping other blocks completely.</p>\n\n<blockquote class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>What's Next?</strong> In the following levels, we will learn the exact syntax to implement these decisions using keywords like <code>if</code>, <code>else</code>, and <code>elif</code>!</div>\n</blockquote>"
         },
-
         "qna": [
-            { "q": "Why does code need decision-making statements?", "a": "Without them, programs can only run sequentially, executing every line of code. Decision-making statements allow programs to choose which code block to run based on runtime conditions." },
-            { "q": "What is conditional branching?", "a": "Conditional branching is the mechanism by which a program executes different instructions or paths (branches) depending on whether a given condition evaluates to True or False." },
-            { "q": "How do computers evaluate decisions?", "a": "Computers evaluate decisions by checking conditional expressions. These expressions resolve to a boolean value: either <code>True</code> or <code>False</code>. If True, one branch executes; if False, another does." },
-            { "q": "Give a real-life example of decision-making logic in software.", "a": "An ATM withdrawal: <strong>If</strong> the requested cash amount is less than or equal to the account balance, dispense the money. <strong>Else</strong>, display an error message." },
-            { "q": "What keywords does Python use for decision making?", "a": "Python uses the keywords <code>if</code>, <code>elif</code> (short for else-if), and <code>else</code> to control code execution flow." }
+            {
+                "q": "Why does code need decision-making statements?",
+                "a": "Without them, programs can only run sequentially, executing every line of code. Decision-making statements allow programs to choose which code block to run based on runtime conditions."
+            },
+            {
+                "q": "What is conditional branching?",
+                "a": "Conditional branching is the mechanism by which a program executes different instructions or paths (branches) depending on whether a given condition evaluates to True or False."
+            },
+            {
+                "q": "How do computers evaluate decisions?",
+                "a": "Computers evaluate decisions by checking conditional expressions. These expressions resolve to a boolean value: either <code>True</code> or <code>False</code>. If True, one branch executes; if False, another does."
+            },
+            {
+                "q": "Give a real-life example of decision-making logic in software.",
+                "a": "An ATM withdrawal: <strong>If</strong> the requested cash amount is less than or equal to the account balance, dispense the money. <strong>Else</strong>, display an error message."
+            },
+            {
+                "q": "What keywords does Python use for decision making?",
+                "a": "Python uses the keywords <code>if</code>, <code>elif</code> (short for else-if), and <code>else</code> to control code execution flow."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of why decision making is necessary in coding!",
             "questions": [
-                { "type": "mcq", "question": "What is the primary purpose of decision-making statements in programming?", "options": ["To speed up program execution", "To run code conditionally based on specific criteria", "To repeat code blocks multiple times", "To delete variables from memory"], "answer": 1 },
-                { "type": "mcq", "question": "Which flow describes a sequential program?", "options": ["Lines execute out of order randomly", "Lines execute one after another from top to bottom", "Lines execute only if a button is clicked", "Lines are skipped automatically"], "answer": 1 },
-                { "type": "mcq", "question": "What data type must a decision condition evaluate to in Python?", "options": ["An integer", "A string", "A boolean (True or False)", "A float"], "answer": 2 },
-                { "type": "fill", "question": "The concept of executing different blocks of code based on conditions is called conditional _____.", "answer": "branching" },
-                { "type": "fill", "question": "In Python, the statement used to run code ONLY if a condition is True starts with the keyword _____.", "answer": "if" },
-                { "type": "fill", "question": "If a condition is False, the fallback code block that runs is defined by the keyword _____.", "answer": "else" },
-                { "type": "tf", "question": "Sequential code executes every line from start to finish without skipping any statement.", "answer": "true" },
-                { "type": "tf", "question": "A program can make a decision without using boolean values.", "answer": "false" },
-                { "type": "tf", "question": "Decision statements allow programs to interact dynamically with user inputs.", "answer": "true" },
-                { "type": "short", "question": "Give three real-world examples of conditional decisions in common mobile applications.", "sampleAnswer": "1. Messengers: If message is sent, show one check; if delivered, show two checks. 2. Stores: If cart total is over 50, apply free shipping. 3. Games: If lives are 0, end the game." }
+                {
+                    "type": "mcq",
+                    "question": "What is the primary purpose of decision-making statements in programming?",
+                    "options": [
+                        "To speed up program execution",
+                        "To run code conditionally based on specific criteria",
+                        "To repeat code blocks multiple times",
+                        "To delete variables from memory"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which flow describes a sequential program?",
+                    "options": [
+                        "Lines execute out of order randomly",
+                        "Lines execute one after another from top to bottom",
+                        "Lines execute only if a button is clicked",
+                        "Lines are skipped automatically"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What data type must a decision condition evaluate to in Python?",
+                    "options": [
+                        "An integer",
+                        "A string",
+                        "A boolean (True or False)",
+                        "A float"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The concept of executing different blocks of code based on conditions is called conditional _____. (else / if / branching / variable)",
+                    "answer": "branching"
+                },
+                {
+                    "type": "fill",
+                    "question": "In Python, the statement used to run code ONLY if a condition is True starts with the keyword _____. (if / else / elif / for)",
+                    "answer": "if"
+                },
+                {
+                    "type": "fill",
+                    "question": "If a condition is False, the fallback code block that runs is defined by the keyword _____. (elif / else / if / for)",
+                    "answer": "else"
+                },
+                {
+                    "type": "tf",
+                    "question": "Sequential code executes every line from start to finish without skipping any statement.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A program can make a decision without using boolean values.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Decision statements allow programs to interact dynamically with user inputs.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Give three real-world examples of conditional decisions in common mobile applications.",
+                    "sampleAnswer": "1. Messengers: If message is sent, show one check; if delivered, show two checks. 2. Stores: If cart total is over 50, apply free shipping. 3. Games: If lives are 0, end the game."
+                }
             ]
         }
     },
@@ -1743,38 +2927,112 @@ window.levels = [
         "id": 27,
         "title": "if statement",
         "concept": "Executing code conditionally using the 'if' statement, indentation syntax, and conditional blocks in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The if Statement",
             "subheading": "Running code only when a condition is True",
             "body": "<p>The simplest way to make a decision in Python is by using the <strong><code>if</code> statement</strong>. It tells the computer to run a block of code ONLY if a certain condition is True.</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">if condition:\n    # code to run if condition is True</pre>\n\n<h3>Two Crucial Python Syntax Rules</h3>\n<ol class=\"desc-list\">\n    <li><strong>The Colon (<code>:</code>):</strong> You must place a colon at the end of the <code>if</code> line. This indicates that a new block of code is about to start.</li>\n    <li><strong>Indentation:</strong> In Python, we do not use curly braces <code>{}</code> to group blocks of code. Instead, we indent (typically 4 spaces or 1 tab) the code block. All statements with the same level of indentation are part of that conditional block!</li>\n</ol>\n\n<pre class=\"code-example\">is_raining = True\nif is_raining:\n    print(\"Grab your umbrella!\")\n    print(\"Put on a raincoat!\")\nprint(\"Have a nice day!\") # This always runs because it is not indented!</pre>\n\n<p>If <code>is_raining</code> is <code>False</code>, Python skips the indented lines completely and prints only \"Have a nice day!\".</p>"
         },
-
         "qna": [
-            { "q": "What does the 'if' statement do?", "a": "The <code>if</code> statement checks if a condition is True. If so, it runs the indented code block directly underneath. If the condition is False, Python skips that block." },
-            { "q": "Why is indentation syntactically required in Python?", "a": "Unlike languages like JavaScript or C++ that use curly brackets <code>{}</code> to group statements, Python uses indentation level. Incorrect indentation will cause an <code>IndentationError</code>." },
-            { "q": "What is the standard indentation size?", "a": "The standard Python style (PEP 8) recommends using <strong>4 spaces</strong> per indentation level. Be consistent and avoid mixing tabs and spaces!" },
-            { "q": "What happens if I forget the colon (:) at the end of the if line?", "a": "Forgetting the colon will result in a <code>SyntaxError</code> because Python requires the colon to mark the start of a conditional block." },
-            { "q": "Can I use a boolean variable directly as the condition?", "a": "Yes! If <code>is_active = True</code>, you can simply write <code>if is_active:</code> instead of <code>if is_active == True:</code>. It is cleaner and more professional." }
+            {
+                "q": "What does the 'if' statement do?",
+                "a": "The <code>if</code> statement checks if a condition is True. If so, it runs the indented code block directly underneath. If the condition is False, Python skips that block."
+            },
+            {
+                "q": "Why is indentation syntactically required in Python?",
+                "a": "Unlike languages like JavaScript or C++ that use curly brackets <code>{}</code> to group statements, Python uses indentation level. Incorrect indentation will cause an <code>IndentationError</code>."
+            },
+            {
+                "q": "What is the standard indentation size?",
+                "a": "The standard Python style (PEP 8) recommends using <strong>4 spaces</strong> per indentation level. Be consistent and avoid mixing tabs and spaces!"
+            },
+            {
+                "q": "What happens if I forget the colon (:) at the end of the if line?",
+                "a": "Forgetting the colon will result in a <code>SyntaxError</code> because Python requires the colon to mark the start of a conditional block."
+            },
+            {
+                "q": "Can I use a boolean variable directly as the condition?",
+                "a": "Yes! If <code>is_active = True</code>, you can simply write <code>if is_active:</code> instead of <code>if is_active == True:</code>. It is cleaner and more professional."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's basic if statement!",
             "questions": [
-                { "type": "mcq", "question": "What is the correct syntax for a basic if statement in Python?", "options": ["if x > 5 print(x)", "if (x > 5) { print(x) }", "if x > 5:", "if x > 5 then:"], "answer": 2 },
-                { "type": "mcq", "question": "How does Python determine which lines of code belong inside an if block?", "options": ["By placing them inside parentheses ()", "By indenting the lines", "By ending lines with a semicolon ;", "By placing them on the same line"], "answer": 1 },
-                { "type": "mcq", "question": "Which error is raised if you forget to indent code inside an if block?", "options": ["SyntaxError", "TypeError", "IndentationError", "NameError"], "answer": 2 },
-                { "type": "fill", "question": "In Python, you must put a _____ character at the end of the line containing the if condition.", "answer": "colon" },
-                { "type": "fill", "question": "The recommended number of spaces to use for indentation in Python is _____.", "answer": "4" },
-                { "type": "fill", "question": "If has_key = False, the code inside the block 'if has_key:' will be _____ during execution.", "answer": "skipped" },
-                { "type": "tf", "question": "You can use curly brackets {} to group code blocks in Python just like in JavaScript.", "answer": "false" },
-                { "type": "tf", "question": "Mixing spaces and tabs for indentation in the same code block can cause an IndentationError.", "answer": "true" },
-                { "type": "tf", "question": "The condition in an if statement must always evaluate to a boolean (True or False).", "answer": "true" },
-                { "type": "short", "question": "If temperature = 32, explain what happens when this code runs:\nif temperature > 30:\n    print('Hot')\nprint('Done')", "sampleAnswer": "Since temperature is 32, which is greater than 30, the condition is True. Python runs the indented line printing 'Hot', then runs the unindented sequential line printing 'Done'." }
+                {
+                    "type": "mcq",
+                    "question": "What is the correct syntax for a basic if statement in Python?",
+                    "options": [
+                        "if x > 5 print(x)",
+                        "if (x > 5) { print(x) }",
+                        "if x > 5:",
+                        "if x > 5 then:"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "How does Python determine which lines of code belong inside an if block?",
+                    "options": [
+                        "By placing them inside parentheses ()",
+                        "By indenting the lines",
+                        "By ending lines with a semicolon ;",
+                        "By placing them on the same line"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which error is raised if you forget to indent code inside an if block?",
+                    "options": [
+                        "SyntaxError",
+                        "TypeError",
+                        "IndentationError",
+                        "NameError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "In Python, you must put a _____ character at the end of the line containing the if condition. (semicolon / comma / period / colon)",
+                    "answer": "colon"
+                },
+                {
+                    "type": "fill",
+                    "question": "The recommended number of spaces to use for indentation in Python is _____. (6 / 5 / 4 / 3)",
+                    "answer": "4"
+                },
+                {
+                    "type": "fill",
+                    "question": "If has_key = False, the code inside the block 'if has_key:' will be _____ during execution. (skipped / variable / colon / 4)",
+                    "answer": "skipped"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use curly brackets {} to group code blocks in Python just like in JavaScript.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Mixing spaces and tabs for indentation in the same code block can cause an IndentationError.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The condition in an if statement must always evaluate to a boolean (True or False).",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If temperature = 32, explain what happens when this code runs:\nif temperature > 30:\n    print('Hot')\nprint('Done')",
+                    "sampleAnswer": "Since temperature is 32, which is greater than 30, the condition is True. Python runs the indented line printing 'Hot', then runs the unindented sequential line printing 'Done'."
+                }
             ]
         },
-
         "scenario": "Define a variable is_raining = True. Write an if statement that checks if is_raining is True. If it is, print the message 'Take an umbrella!'.",
         "hint": "Write if is_raining:, then on the next line indent 4 spaces and print('Take an umbrella!').",
         "wrongHint": "Make sure you check is_raining, end the if statement with a colon, and indent the print statement properly!",
@@ -1785,38 +3043,112 @@ window.levels = [
         "id": 28,
         "title": "if-else",
         "concept": "Providing an alternative path when a condition is false using the 'if-else' statement in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The if-else Statement",
             "subheading": "Providing a fallback choice",
             "body": "<p>Sometimes you want to run one block of code if a condition is True, and a <strong>different block</strong> of code if it is False. This is handled using the <strong><code>if-else</code> statement</strong>.</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">if condition:\n    # Runs if condition is True\nelse:\n    # Runs if condition is False</pre>\n\n<h3>Important Syntax Rules</h3>\n<ol class=\"desc-list\">\n    <li><strong>No Condition for Else:</strong> The <code>else</code> keyword represents a catch-all fallback. It never takes a condition.</li>\n    <li><strong>The Colon:</strong> Just like <code>if</code>, the <code>else</code> keyword must end with a colon (<code>:</code>).</li>\n    <li><strong>Alignment:</strong> The <code>else</code> keyword must be at the exact same indentation level (aligned vertically) as the <code>if</code> keyword.</li>\n    <li><strong>Indented Blocks:</strong> The code inside both the <code>if</code> and <code>else</code> blocks must be indented.</li>\n</ol>\n\n<pre class=\"code-example\">score = 45\nif score &gt;= 50:\n    print(\"You passed!\")\nelse:\n    print(\"You failed. Try again!\")</pre>\n<p>Since <code>score</code> is <code>45</code>, <code>score &gt;= 50</code> is False. Python skips the first print block, goes straight to the <code>else</code> block, and prints \"You failed. Try again!\".</p>"
         },
-
         "qna": [
-            { "q": "When should I use an if-else statement?", "a": "Use <code>if-else</code> when you have two mutually exclusive choices: one block of code should run if the condition is True, and another different block should run if the condition is False." },
-            { "q": "Does the else block accept a condition expression?", "a": "No, <code>else</code> is a fallback. It simple handles any cases that do not satisfy the <code>if</code> condition, so it does not accept a condition." },
-            { "q": "How must the 'else' keyword be aligned in the editor?", "a": "It must be aligned vertically with the exact same indentation level as its matching <code>if</code> statement. Alignment mismatches will throw a <code>SyntaxError</code>." },
-            { "q": "Can I write regular code after an if-else block?", "a": "Yes! Unindented code written after the <code>if-else</code> structure will execute sequentially, regardless of which branch of the decision was evaluated." },
-            { "q": "What happens if both the if and else code blocks are placed on a single line?", "a": "While single-line statements are occasionally possible for trivial instructions, standard Python blocks require new lines and proper indentations for formatting correctness." }
+            {
+                "q": "When should I use an if-else statement?",
+                "a": "Use <code>if-else</code> when you have two mutually exclusive choices: one block of code should run if the condition is True, and another different block should run if the condition is False."
+            },
+            {
+                "q": "Does the else block accept a condition expression?",
+                "a": "No, <code>else</code> is a fallback. It simple handles any cases that do not satisfy the <code>if</code> condition, so it does not accept a condition."
+            },
+            {
+                "q": "How must the 'else' keyword be aligned in the editor?",
+                "a": "It must be aligned vertically with the exact same indentation level as its matching <code>if</code> statement. Alignment mismatches will throw a <code>SyntaxError</code>."
+            },
+            {
+                "q": "Can I write regular code after an if-else block?",
+                "a": "Yes! Unindented code written after the <code>if-else</code> structure will execute sequentially, regardless of which branch of the decision was evaluated."
+            },
+            {
+                "q": "What happens if both the if and else code blocks are placed on a single line?",
+                "a": "While single-line statements are occasionally possible for trivial instructions, standard Python blocks require new lines and proper indentations for formatting correctness."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's if-else statement!",
             "questions": [
-                { "type": "mcq", "question": "Which keyword executes code when the if condition evaluates to False?", "options": ["elseif", "else", "then", "otherwise"], "answer": 1 },
-                { "type": "mcq", "question": "Which of the following has correct syntax for an if-else structure?", "options": ["if x > 5: print(x) else: print(y)", "if x > 5:\n    print(x)\nelse:\n    print(y)", "if x > 5:\n    print(x)\n    else:\n    print(y)", "if x > 5:\n    print(x)\nelse x <= 5:\n    print(y)"], "answer": 1 },
-                { "type": "mcq", "question": "Does the else keyword take a conditional expression?", "options": ["Yes, always", "No, never", "Only if it is a number", "Only if it is a boolean"], "answer": 1 },
-                { "type": "fill", "question": "The else keyword must always be followed by a _____ symbol.", "answer": "colon" },
-                { "type": "fill", "question": "If age = 18, then age >= 18 is True, so the _____ block of an if-else statement executes.", "answer": "if" },
-                { "type": "fill", "question": "If age = 15, then age >= 18 is False, so the _____ block of an if-else statement executes.", "answer": "else" },
-                { "type": "tf", "question": "The else keyword must have the exact same indentation level as its matching if keyword.", "answer": "true" },
-                { "type": "tf", "question": "A single if statement can have multiple else blocks directly connected to it.", "answer": "false" },
-                { "type": "tf", "question": "Writing else: on the same line as the if block is valid in Python.", "answer": "false" },
-                { "type": "short", "question": "Correct the indentation of this snippet:\nx = 10\nif x > 5:\nprint('Big')\nelse:\nprint('Small')", "sampleAnswer": "Align x = 10, if, and else. Indent print('Big') and print('Small') by 4 spaces." }
+                {
+                    "type": "mcq",
+                    "question": "Which keyword executes code when the if condition evaluates to False?",
+                    "options": [
+                        "elseif",
+                        "else",
+                        "then",
+                        "otherwise"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following has correct syntax for an if-else structure?",
+                    "options": [
+                        "if x > 5: print(x) else: print(y)",
+                        "if x > 5:\n    print(x)\nelse:\n    print(y)",
+                        "if x > 5:\n    print(x)\n    else:\n    print(y)",
+                        "if x > 5:\n    print(x)\nelse x <= 5:\n    print(y)"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Does the else keyword take a conditional expression?",
+                    "options": [
+                        "Yes, always",
+                        "No, never",
+                        "Only if it is a number",
+                        "Only if it is a boolean"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The else keyword must always be followed by a _____ symbol. (semicolon / comma / period / colon)",
+                    "answer": "colon"
+                },
+                {
+                    "type": "fill",
+                    "question": "If age = 18, then age >= 18 is True, so the _____ block of an if-else statement executes. (if / else / elif / for)",
+                    "answer": "if"
+                },
+                {
+                    "type": "fill",
+                    "question": "If age = 15, then age >= 18 is False, so the _____ block of an if-else statement executes. (elif / else / if / for)",
+                    "answer": "else"
+                },
+                {
+                    "type": "tf",
+                    "question": "The else keyword must have the exact same indentation level as its matching if keyword.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A single if statement can have multiple else blocks directly connected to it.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Writing else: on the same line as the if block is valid in Python.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Correct the indentation of this snippet:\nx = 10\nif x > 5:\nprint('Big')\nelse:\nprint('Small')",
+                    "sampleAnswer": "Align x = 10, if, and else. Indent print('Big') and print('Small') by 4 spaces."
+                }
             ]
         },
-
         "scenario": "Write an if-else statement to check if a user is allowed to enter a game zone. Define age = 15. If age is greater than or equal to 18, print 'Access Granted'. Otherwise (else), print 'Access Denied'.",
         "hint": "Write if age >= 18:, indent and print('Access Granted'), then write else: aligned with if, and print('Access Denied').",
         "wrongHint": "Make sure you check if age >= 18, use colons, align else with if, and print the exact messages!",
@@ -1827,38 +3159,112 @@ window.levels = [
         "id": 29,
         "title": "elif",
         "concept": "Checking multiple distinct conditions sequentially using the 'elif' statement in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The elif Keyword",
             "subheading": "Checking multiple distinct conditions",
             "body": "<p>What if your decision has more than two possible outcomes? E.g., if a score is 90 or more, print Grade A; if it's 80 or more, print Grade B; otherwise, print Grade C. In Python, we write \"else if\" as <strong><code>elif</code></strong>.</p>\n\n<h3>Syntax Structure</h3>\n<pre class=\"code-example\">if condition_1:\n    # Runs if condition_1 is True\nelif condition_2:\n    # Runs if condition_1 is False AND condition_2 is True\nelse:\n    # Runs if all preceding conditions are False</pre>\n\n<h3>Crucial Rules of elif</h3>\n<ol class=\"desc-list\">\n    <li><strong>Sequential Evaluation:</strong> Python checks conditions from top to bottom. The moment it finds a condition that evaluates to True, it runs that block and **skips the remaining checks entirely** (even if other conditions would also be True!).</li>\n    <li><strong>Chain Length:</strong> You can add as many <code>elif</code> statements as you need between the initial <code>if</code> and the final optional <code>else</code> block.</li>\n</ol>\n\n<pre class=\"code-example\">score = 85\nif score &gt;= 90:\n    print(\"Grade A\")\nelif score &gt;= 80:\n    print(\"Grade B\")\nelse:\n    print(\"Grade C\")\n# Output: Grade B (85 &gt;= 80 is True, so Grade C is skipped)</pre>"
         },
-
         "qna": [
-            { "q": "What does 'elif' stand for?", "a": "It stands for <strong>else if</strong>. It checks a condition only when all preceding <code>if</code> and <code>elif</code> checks have evaluated to False." },
-            { "q": "How many 'elif' blocks can follow a single 'if'?", "a": "You can chain as many <code>elif</code> statements as you need. There is no limit." },
-            { "q": "Why is the order of conditions important in an if-elif block?", "a": "Since Python evaluates top-to-bottom and stops checking once it finds a True condition, placing broad conditions first can hide more specific conditions beneath them, causing logic bugs." },
-            { "q": "Can I use 'elif' without a preceding 'if' statement?", "a": "No, an <code>elif</code> statement must always belong to an active block initiated by a starting <code>if</code> statement. Doing otherwise triggers a <code>SyntaxError</code>." },
-            { "q": "Is the final 'else' block mandatory?", "a": "No, the final <code>else</code> is optional. If all conditions are False and there is no <code>else</code>, Python simply skips the entire block and moves on." }
+            {
+                "q": "What does 'elif' stand for?",
+                "a": "It stands for <strong>else if</strong>. It checks a condition only when all preceding <code>if</code> and <code>elif</code> checks have evaluated to False."
+            },
+            {
+                "q": "How many 'elif' blocks can follow a single 'if'?",
+                "a": "You can chain as many <code>elif</code> statements as you need. There is no limit."
+            },
+            {
+                "q": "Why is the order of conditions important in an if-elif block?",
+                "a": "Since Python evaluates top-to-bottom and stops checking once it finds a True condition, placing broad conditions first can hide more specific conditions beneath them, causing logic bugs."
+            },
+            {
+                "q": "Can I use 'elif' without a preceding 'if' statement?",
+                "a": "No, an <code>elif</code> statement must always belong to an active block initiated by a starting <code>if</code> statement. Doing otherwise triggers a <code>SyntaxError</code>."
+            },
+            {
+                "q": "Is the final 'else' block mandatory?",
+                "a": "No, the final <code>else</code> is optional. If all conditions are False and there is no <code>else</code>, Python simply skips the entire block and moves on."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's elif statement!",
             "questions": [
-                { "type": "mcq", "question": "What does elif stand for in Python?", "options": ["else life", "else if", "element if", "error life"], "answer": 1 },
-                { "type": "mcq", "question": "How many elif blocks can follow a single if statement?", "options": ["Only one", "At most two", "Unlimited", "None"], "answer": 2 },
-                { "type": "mcq", "question": "If score = 95 is run, what is printed?\nif score >= 80: print('Pass')\nelif score >= 90: print('Excellent')", "options": ["Pass", "Excellent", "Pass and Excellent", "Nothing"], "answer": 0 },
-                { "type": "fill", "question": "In Python, the elif keyword must be followed by a condition and end with a _____.", "answer": "colon" },
-                { "type": "fill", "question": "The fallback block that runs only if all if/elif conditions are False is the _____ block.", "answer": "else" },
-                { "type": "fill", "question": "If x = 0, the code: if x > 0: print('P') elif x < 0: print('N') else: print('Z') prints _____.", "answer": "Z" },
-                { "type": "tf", "question": "You can write an elif statement before the starting if statement.", "answer": "false" },
-                { "type": "tf", "question": "Once any branch in an if-elif-else chain executes, all subsequent branches are skipped.", "answer": "true" },
-                { "type": "tf", "question": "The final else block executes if at least one elif condition is True.", "answer": "false" },
-                { "type": "short", "question": "Explain why this code prints 'Grade C' for score = 95:\nif score >= 70: print('Grade C')\nelif score >= 90: print('Grade A')", "sampleAnswer": "Since 95 >= 70 is True, Python executes the first block ('Grade C') and immediately exits, skipping the remaining checks." }
+                {
+                    "type": "mcq",
+                    "question": "What does elif stand for in Python?",
+                    "options": [
+                        "else life",
+                        "else if",
+                        "element if",
+                        "error life"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How many elif blocks can follow a single if statement?",
+                    "options": [
+                        "Only one",
+                        "At most two",
+                        "Unlimited",
+                        "None"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "If score = 95 is run, what is printed?\nif score >= 80: print('Pass')\nelif score >= 90: print('Excellent')",
+                    "options": [
+                        "Pass",
+                        "Excellent",
+                        "Pass and Excellent",
+                        "Nothing"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "In Python, the elif keyword must be followed by a condition and end with a _____. (semicolon / comma / period / colon)",
+                    "answer": "colon"
+                },
+                {
+                    "type": "fill",
+                    "question": "The fallback block that runs only if all if/elif conditions are False is the _____ block. (elif / else / if / for)",
+                    "answer": "else"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 0, the code: if x > 0: print('P') elif x < 0: print('N') else: print('Z') prints _____. (colon / Z / else / Variable)",
+                    "answer": "Z"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can write an elif statement before the starting if statement.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Once any branch in an if-elif-else chain executes, all subsequent branches are skipped.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The final else block executes if at least one elif condition is True.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why this code prints 'Grade C' for score = 95:\nif score >= 70: print('Grade C')\nelif score >= 90: print('Grade A')",
+                    "sampleAnswer": "Since 95 >= 70 is True, Python executes the first block ('Grade C') and immediately exits, skipping the remaining checks."
+                }
             ]
         },
-
         "scenario": "Write an if-elif-else statement to categorize a package's weight. Define weight = 8. If weight is less than or equal to 2, print 'Light'. Else if weight is less than or equal to 10, print 'Medium'. Otherwise (else), print 'Heavy'.",
         "hint": "Write if weight <= 2:, then elif weight <= 10:, then else:, and print the corresponding labels.",
         "wrongHint": "Make sure you use colons, proper indentation, and print the exact labels!",
@@ -1869,38 +3275,112 @@ window.levels = [
         "id": 30,
         "title": "Nested conditions",
         "concept": "Placing conditional statements inside other conditional statements in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Nested Conditions",
             "subheading": "Decisions within decisions",
             "body": "<p>Sometimes, a decision depends on another decision. For example: Is it the weekend? If yes, is it sunny? If yes, go to the beach. In programming, placing a conditional statement <strong>inside another conditional statement</strong> is called <strong>Nesting</strong>.</p>\n\n<h3>Syntax and Indentation Levels</h3>\n<p>Nesting requires careful indentation. Each nested statement must be indented by an additional level (e.g. 4 more spaces) relative to the outer statement. Correct alignment is essential for Python to understand your code structure!</p>\n\n<pre class=\"code-example\">is_weekend = True\nis_sunny = False\n\nif is_weekend:\n    print(\"It's the weekend!\")\n    if is_sunny:\n        print(\"Let's go to the beach!\")\n    else:\n        print(\"Let's watch a movie!\") # Runs because is_sunny is False\nelse:\n    print(\"Go to school!\")</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Readability Tip:</strong> Try to avoid nesting code too deeply (e.g. more than 3 levels). Deeply nested code is hard to read and debug. You can often simplify nested logic by using logical operators like <code>and</code> or <code>or</code>!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What are nested conditions?", "a": "Nested conditions are conditional statements (like <code>if</code> or <code>if-else</code>) written inside the execution block of another conditional statement." },
-            { "q": "How does Python determine which block an else statement belongs to?", "a": "Python matches an <code>else</code> statement to the preceding <code>if</code> statement that shares the exact same vertical alignment (indentation level)." },
-            { "q": "Is there a limit to nesting depth in Python?", "a": "There is no strict compiler limit, but nesting deeper than 3 levels is considered poor practice because it creates hard-to-read code." },
-            { "q": "When should I use nesting instead of a logical 'and'?", "a": "Use nesting if you need to run specific intermediate operations (e.g. log actions or update variables) after the first check passes but before the second check runs." },
-            { "q": "What happens if the outer condition evaluates to False?", "a": "If the outer condition is False, Python skips the entire block, which means all inner nested conditions are completely ignored." }
+            {
+                "q": "What are nested conditions?",
+                "a": "Nested conditions are conditional statements (like <code>if</code> or <code>if-else</code>) written inside the execution block of another conditional statement."
+            },
+            {
+                "q": "How does Python determine which block an else statement belongs to?",
+                "a": "Python matches an <code>else</code> statement to the preceding <code>if</code> statement that shares the exact same vertical alignment (indentation level)."
+            },
+            {
+                "q": "Is there a limit to nesting depth in Python?",
+                "a": "There is no strict compiler limit, but nesting deeper than 3 levels is considered poor practice because it creates hard-to-read code."
+            },
+            {
+                "q": "When should I use nesting instead of a logical 'and'?",
+                "a": "Use nesting if you need to run specific intermediate operations (e.g. log actions or update variables) after the first check passes but before the second check runs."
+            },
+            {
+                "q": "What happens if the outer condition evaluates to False?",
+                "a": "If the outer condition is False, Python skips the entire block, which means all inner nested conditions are completely ignored."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's nested conditions!",
             "questions": [
-                { "type": "mcq", "question": "What is a nested condition in programming?", "options": ["Putting loops inside functions", "Placing a conditional statement inside another conditional statement", "Using multiple logical operators in one line", "Writing code in comments"], "answer": 1 },
-                { "type": "mcq", "question": "How does Python match an else block to its corresponding if statement?", "options": ["By matching parentheses", "By checking their vertical alignment (indentation)", "By evaluation order", "By variable names"], "answer": 1 },
-                { "type": "mcq", "question": "If x = 5 and y = 10, what does this print?\nif x > 2:\n    if y < 5: print('A')\n    else: print('B')", "options": ["A", "B", "A and B", "Nothing"], "answer": 1 },
-                { "type": "fill", "question": "Each level of nesting in Python code requires another level of _____.", "answer": "indentation" },
-                { "type": "fill", "question": "If the outer condition is False, all nested inner conditions inside it are _____.", "answer": "skipped" },
-                { "type": "fill", "question": "To keep code clean, instead of deep nesting, you can combine conditions using _____ operators.", "answer": "logical" },
-                { "type": "tf", "question": "An inner else statement must be aligned with its corresponding inner if statement.", "answer": "true" },
-                { "type": "tf", "question": "If the outer condition is False, the inner else statement can still run.", "answer": "false" },
-                { "type": "tf", "question": "Nested statements can have their own nested statements inside them.", "answer": "true" },
-                { "type": "short", "question": "Explain why this code prints nothing: if x > 5: (where x = 3) if y > 10: print('Yes')", "sampleAnswer": "The outer condition x > 5 (3 > 5) evaluates to False. Python skips the entire block, ignoring the inner y check." }
+                {
+                    "type": "mcq",
+                    "question": "What is a nested condition in programming?",
+                    "options": [
+                        "Putting loops inside functions",
+                        "Placing a conditional statement inside another conditional statement",
+                        "Using multiple logical operators in one line",
+                        "Writing code in comments"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How does Python match an else block to its corresponding if statement?",
+                    "options": [
+                        "By matching parentheses",
+                        "By checking their vertical alignment (indentation)",
+                        "By evaluation order",
+                        "By variable names"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If x = 5 and y = 10, what does this print?\nif x > 2:\n    if y < 5: print('A')\n    else: print('B')",
+                    "options": [
+                        "A",
+                        "B",
+                        "A and B",
+                        "Nothing"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Each level of nesting in Python code requires another level of _____. (logical / indentation / variable / skipped)",
+                    "answer": "indentation"
+                },
+                {
+                    "type": "fill",
+                    "question": "If the outer condition is False, all nested inner conditions inside it are _____. (skipped / variable / indentation / logical)",
+                    "answer": "skipped"
+                },
+                {
+                    "type": "fill",
+                    "question": "To keep code clean, instead of deep nesting, you can combine conditions using _____ operators. (indentation / variable / skipped / logical)",
+                    "answer": "logical"
+                },
+                {
+                    "type": "tf",
+                    "question": "An inner else statement must be aligned with its corresponding inner if statement.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "If the outer condition is False, the inner else statement can still run.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Nested statements can have their own nested statements inside them.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why this code prints nothing: if x > 5: (where x = 3) if y > 10: print('Yes')",
+                    "sampleAnswer": "The outer condition x > 5 (3 > 5) evaluates to False. Python skips the entire block, ignoring the inner y check."
+                }
             ]
         },
-
         "scenario": "Write a nested condition to check access credentials. Define has_id = True and is_guest = False. First, check if has_id is True. If it is, print 'ID verified.'. Inside that block, check if is_guest is True: if it is, print 'Guest access approved.'; otherwise (else), print 'Member access approved.'. If has_id is False (outer else), print 'No ID. Access Denied.'.",
         "hint": "Write if has_id:, indent print('ID verified.') and write if is_guest: below it, indenting the guest outcomes. Write else: aligned with if has_id:.",
         "wrongHint": "Make sure you nested is_guest under has_id, align colons, and print the exact messages!",
@@ -1911,38 +3391,112 @@ window.levels = [
         "id": 31,
         "title": "Multiple conditions",
         "concept": "Combining multiple conditions in an 'if' statement using logical operators 'and', 'or', and 'not' in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Multiple Conditions",
             "subheading": "Combining choices with logical operators",
             "body": "<p>In Level 30, we saw that nesting conditions too deeply can make code complex and hard to read. A much cleaner way to handle multiple checks in a single decision is by combining conditions using <strong>logical operators</strong> (<code>and</code>, <code>or</code>, <code>not</code>).</p>\n\n<h3>Nesting vs Combining</h3>\n<p>Instead of nesting if statements like this:</p>\n<pre class=\"code-example\">if is_weekend:\n    if is_sunny:\n        print(\"Go to the beach!\")</pre>\n\n<p>We can combine them on a single line using <code>and</code>:</p>\n<pre class=\"code-example\">if is_weekend and is_sunny:\n    print(\"Go to the beach!\")</pre>\n\n<h3>Reviewing Logical Operators in Decisions</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>and</code>:</strong> The code block runs ONLY if <strong>both</strong> conditions evaluate to True.</li>\n    <li><strong><code>or</code>:</strong> The code block runs if <strong>at least one</strong> condition evaluates to True.</li>\n    <li><strong><code>not</code>:</strong> Inverts the boolean result of a check. E.g. <code>if not is_locked:</code> runs if is_locked is False.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Syntax Reminder:</strong> Even with combined conditions, the colon (<code>:</code>) goes at the very end of the <code>if</code> line, and the lines belonging to the execution block must be indented by 4 spaces. Always use parentheses <code>()</code> to make complex combinations readable!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "When should I combine conditions instead of nesting them?", "a": "Combine conditions when you want to execute a block of code only when a set of conditions are all met (using <code>and</code>) or when at least one condition is met (using <code>or</code>), without needing intermediate operations." },
-            { "q": "Can I combine more than two conditions in a single if statement?", "a": "Yes! You can chain multiple checks together. For example: <code>if age &gt;= 18 and has_id and not is_suspended:</code>." },
-            { "q": "How does Python evaluate combined expressions with different logical operators?", "a": "Python evaluates <code>and</code> before <code>or</code> because of precedence. To avoid logical errors and ensure your checks run in the correct order, wrap grouped conditions inside parentheses <code>()</code>." },
-            { "q": "What is short-circuit evaluation in combined if statements?", "a": "In an <code>and</code> check, if the first condition is False, Python stops evaluating immediately. In an <code>or</code> check, if the first condition is True, Python stops immediately. This saves computing power." },
-            { "q": "Can I check variables of different data types in the same conditional line?", "a": "Yes, as long as each separate expression evaluates to a boolean value. E.g., <code>if age &gt;= 18 and user_role == 'admin':</code>." }
+            {
+                "q": "When should I combine conditions instead of nesting them?",
+                "a": "Combine conditions when you want to execute a block of code only when a set of conditions are all met (using <code>and</code>) or when at least one condition is met (using <code>or</code>), without needing intermediate operations."
+            },
+            {
+                "q": "Can I combine more than two conditions in a single if statement?",
+                "a": "Yes! You can chain multiple checks together. For example: <code>if age &gt;= 18 and has_id and not is_suspended:</code>."
+            },
+            {
+                "q": "How does Python evaluate combined expressions with different logical operators?",
+                "a": "Python evaluates <code>and</code> before <code>or</code> because of precedence. To avoid logical errors and ensure your checks run in the correct order, wrap grouped conditions inside parentheses <code>()</code>."
+            },
+            {
+                "q": "What is short-circuit evaluation in combined if statements?",
+                "a": "In an <code>and</code> check, if the first condition is False, Python stops evaluating immediately. In an <code>or</code> check, if the first condition is True, Python stops immediately. This saves computing power."
+            },
+            {
+                "q": "Can I check variables of different data types in the same conditional line?",
+                "a": "Yes, as long as each separate expression evaluates to a boolean value. E.g., <code>if age &gt;= 18 and user_role == 'admin':</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of combining multiple conditions in Python!",
             "questions": [
-                { "type": "mcq", "question": "Which operator checks if both conditions are True in a single if statement?", "options": ["or", "and", "not", "is"], "answer": 1 },
-                { "type": "mcq", "question": "What is printed when this code is executed?\nx = 5\ny = 10\nif x > 3 or y < 5: print('Hello')\nelse: print('Goodbye')", "options": ["Hello", "Goodbye", "Hello and Goodbye", "Nothing"], "answer": 0 },
-                { "type": "mcq", "question": "If is_logged_in = True and has_permission = False, which condition evaluates to True?", "options": ["if is_logged_in and has_permission:", "if is_logged_in or has_permission:", "if not is_logged_in and has_permission:", "if is_logged_in and not is_logged_in:"], "answer": 1 },
-                { "type": "fill", "question": "The logical operator that requires only one of the combined conditions to be True is _____.", "answer": "or" },
-                { "type": "fill", "question": "To override the standard evaluation order where 'and' runs before 'or', you should use _____.", "answer": "parentheses" },
-                { "type": "fill", "question": "If x = 7, the expression x > 5 and x < 10 evaluates to the boolean _____.", "answer": "True" },
-                { "type": "tf", "question": "Chaining multiple 'and' operators in a single if statement requires all conditions to be True for the block to run.", "answer": "true" },
-                { "type": "tf", "question": "In the check: if A or B:, if A evaluates to True, Python still evaluates B to verify its correctness.", "answer": "false" },
-                { "type": "tf", "question": "The statement: if not is_sunny: runs only when is_sunny is False.", "answer": "true" },
-                { "type": "short", "question": "Explain what is wrong with this statement: if score >= 50 and <= 100:", "sampleAnswer": "Each logical comparison must be a complete expression with both a left and right side. It should be: if score >= 50 and score <= 100:" }
+                {
+                    "type": "mcq",
+                    "question": "Which operator checks if both conditions are True in a single if statement?",
+                    "options": [
+                        "or",
+                        "and",
+                        "not",
+                        "is"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is printed when this code is executed?\nx = 5\ny = 10\nif x > 3 or y < 5: print('Hello')\nelse: print('Goodbye')",
+                    "options": [
+                        "Hello",
+                        "Goodbye",
+                        "Hello and Goodbye",
+                        "Nothing"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "If is_logged_in = True and has_permission = False, which condition evaluates to True?",
+                    "options": [
+                        "if is_logged_in and has_permission:",
+                        "if is_logged_in or has_permission:",
+                        "if not is_logged_in and has_permission:",
+                        "if is_logged_in and not is_logged_in:"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The logical operator that requires only one of the combined conditions to be True is _____. (elif / else / if / or)",
+                    "answer": "or"
+                },
+                {
+                    "type": "fill",
+                    "question": "To override the standard evaluation order where 'and' runs before 'or', you should use _____. (parentheses / semicolon / colon / comma)",
+                    "answer": "parentheses"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 7, the expression x > 5 and x < 10 evaluates to the boolean _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "tf",
+                    "question": "Chaining multiple 'and' operators in a single if statement requires all conditions to be True for the block to run.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "In the check: if A or B:, if A evaluates to True, Python still evaluates B to verify its correctness.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement: if not is_sunny: runs only when is_sunny is False.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain what is wrong with this statement: if score >= 50 and <= 100:",
+                    "sampleAnswer": "Each logical comparison must be a complete expression with both a left and right side. It should be: if score >= 50 and score <= 100:"
+                }
             ]
         },
-
         "scenario": "Write a program to check admission discount eligibility. Define age = 8 and has_membership = True. Create a variable 'gets_discount' which is True if the visitor's age is less than 12 AND they have a membership. Finally, print 'gets_discount'.",
         "hint": "Assign the values, then write gets_discount = age < 12 and has_membership, and print(gets_discount).",
         "wrongHint": "Make sure you combine conditions using the logical operator 'and' and print the gets_discount variable!",
@@ -1953,38 +3507,112 @@ window.levels = [
         "id": 32,
         "title": "Short-hand if",
         "concept": "Writing concise single-line 'if' statements when there is only one statement to execute in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Short-Hand if",
             "subheading": "Writing single-line conditional statements",
             "body": "<p>If you only have a single statement to execute inside your <code>if</code> block, you can write it all on a single line! This is known as <strong>Short-Hand <code>if</code></strong>.</p>\n\n<h3>Standard vs Short-Hand Syntax</h3>\n<p>Standard multi-line <code>if</code> statement:</p>\n<pre class=\"code-example\">x = 10\nif x &gt; 5:\n    print(\"x is positive\")</pre>\n\n<p>Short-hand single-line <code>if</code> statement:</p>\n<pre class=\"code-example\">x = 10\nif x &gt; 5: print(\"x is positive\")</pre>\n\n<p>Both snippets do the exact same thing. The short-hand version is useful for making simple checks concise and saving space in your files.</p>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Readability Note:</strong> You should only use short-hand single-line checks for very short and simple statements. Chaining too many commands on one line makes code hard to read and goes against Python's clean code style guidelines!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a short-hand if statement?", "a": "A short-hand if statement is a syntax shortcut that allows you to write a complete <code>if</code> check and its execution body on a single line." },
-            { "q": "What is the syntax for short-hand if?", "a": "Simply write the condition, a colon, a space, and the single statement to execute. E.g. <code>if condition: statement</code>." },
-            { "q": "Can I write multiple statements on the same line after the colon?", "a": "Technically, Python allows separating multiple statements with a semicolon (e.g. <code>if x &gt; 5: print('Yes'); x = 0</code>), but this is considered bad practice because it decreases code readability." },
-            { "q": "When should I avoid using short-hand if?", "a": "Avoid it when the condition is long, when there are multiple statements to run, or when using complex nested structures. Keep code clean and easy to scan." },
-            { "q": "Does short-hand if run faster?", "a": "No, it performs exactly the same as the multi-line version. It is just syntactic sugar to make source files cleaner for developers." }
+            {
+                "q": "What is a short-hand if statement?",
+                "a": "A short-hand if statement is a syntax shortcut that allows you to write a complete <code>if</code> check and its execution body on a single line."
+            },
+            {
+                "q": "What is the syntax for short-hand if?",
+                "a": "Simply write the condition, a colon, a space, and the single statement to execute. E.g. <code>if condition: statement</code>."
+            },
+            {
+                "q": "Can I write multiple statements on the same line after the colon?",
+                "a": "Technically, Python allows separating multiple statements with a semicolon (e.g. <code>if x &gt; 5: print('Yes'); x = 0</code>), but this is considered bad practice because it decreases code readability."
+            },
+            {
+                "q": "When should I avoid using short-hand if?",
+                "a": "Avoid it when the condition is long, when there are multiple statements to run, or when using complex nested structures. Keep code clean and easy to scan."
+            },
+            {
+                "q": "Does short-hand if run faster?",
+                "a": "No, it performs exactly the same as the multi-line version. It is just syntactic sugar to make source files cleaner for developers."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's short-hand if statement!",
             "questions": [
-                { "type": "mcq", "question": "Which of the following is a valid short-hand if statement in Python?", "options": ["if x > 5: print(x)", "if x > 5 then print(x)", "if x > 5: { print(x) }", "if x > 5: print x"], "answer": 0 },
-                { "type": "mcq", "question": "When is it recommended to use short-hand if?", "options": ["For all conditionals", "Only when there is a single simple statement to execute", "When nesting multiple checks", "Never"], "answer": 1 },
-                { "type": "mcq", "question": "What separates multiple statements on a single line in Python (though discouraged)?", "options": [", (comma)", "; (semicolon)", ". (period)", "/ (slash)"], "answer": 1 },
-                { "type": "fill", "question": "The syntax shortcut where the condition and execution body are written on one line is called _____ if.", "answer": "short-hand" },
-                { "type": "fill", "question": "In the statement 'if x > 5: print(x)', the print statement is placed directly after the _____ character.", "answer": "colon" },
-                { "type": "fill", "question": "If x = 4, the expression 'if x > 5: print(\"Yes\")' will execute _____ lines of output.", "answer": "0" },
-                { "type": "tf", "question": "Short-hand if statements require indenting the code block on the next line.", "answer": "false" },
-                { "type": "tf", "question": "Writing 'if score >= 50: print(\"Passed\")' is syntactically valid in Python.", "answer": "true" },
-                { "type": "tf", "question": "Short-hand if performs checks faster than standard multi-line if statements.", "answer": "false" },
-                { "type": "short", "question": "Rewrite this multi-line code into a single-line short-hand if statement:\nif is_active:\n    print('Online')", "sampleAnswer": "if is_active: print('Online')" }
+                {
+                    "type": "mcq",
+                    "question": "Which of the following is a valid short-hand if statement in Python?",
+                    "options": [
+                        "if x > 5: print(x)",
+                        "if x > 5 then print(x)",
+                        "if x > 5: { print(x) }",
+                        "if x > 5: print x"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "When is it recommended to use short-hand if?",
+                    "options": [
+                        "For all conditionals",
+                        "Only when there is a single simple statement to execute",
+                        "When nesting multiple checks",
+                        "Never"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What separates multiple statements on a single line in Python (though discouraged)?",
+                    "options": [
+                        ", (comma)",
+                        "; (semicolon)",
+                        ". (period)",
+                        "/ (slash)"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The syntax shortcut where the condition and execution body are written on one line is called _____ if. (0 / colon / variable / short-hand)",
+                    "answer": "short-hand"
+                },
+                {
+                    "type": "fill",
+                    "question": "In the statement 'if x > 5: print(x)', the print statement is placed directly after the _____ character. (semicolon / comma / period / colon)",
+                    "answer": "colon"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 4, the expression 'if x > 5: print(\"Yes\")' will execute _____ lines of output. (1 / 0 / 2 / -1)",
+                    "answer": "0"
+                },
+                {
+                    "type": "tf",
+                    "question": "Short-hand if statements require indenting the code block on the next line.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Writing 'if score >= 50: print(\"Passed\")' is syntactically valid in Python.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Short-hand if performs checks faster than standard multi-line if statements.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Rewrite this multi-line code into a single-line short-hand if statement:\nif is_active:\n    print('Online')",
+                    "sampleAnswer": "if is_active: print('Online')"
+                }
             ]
         },
-
         "scenario": "Define a variable has_gadget = True. Write a single-line short-hand if statement to check if has_gadget is True. If it is, print the message 'Gadget Ready!'.",
         "hint": "Write: if has_gadget: print('Gadget Ready!') on one line.",
         "wrongHint": "Make sure you write the entire statement on a single line, directly after the colon!",
@@ -1995,38 +3623,112 @@ window.levels = [
         "id": 33,
         "title": "Ternary operator",
         "concept": "Evaluating conditional expressions in a single line using the ternary operator format in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Ternary Operator",
             "subheading": "Conditional expressions on a single line",
             "body": "<p>We have seen short-hand <code>if</code> for running single statements. What if we want to <strong>assign a value to a variable</strong> based on a condition? E.g., if score is 50 or more, result is \"Pass\", else result is \"Fail\".</p>\n\n<p>Instead of writing 4 lines of block code, we can use Python's <strong>Ternary Operator</strong> (also called a conditional expression) to do this in a single line!</p>\n\n<h3>Syntax Structure</h3>\n<pre class=\"code-example\">variable = value_if_true if condition else value_if_false</pre>\n\n<pre class=\"code-example\">score = 80\nresult = \"Pass\" if score &gt;= 50 else \"Fail\"\nprint(result) # Outputs: Pass</pre>\n\n<h3>Analyzing the Expression</h3>\n<ol class=\"desc-list\">\n    <li>First, specify the value you want if the condition is True (<code>\"Pass\"</code>).</li>\n    <li>Second, write the keyword <code>if</code> and the condition to test (<code>score &gt;= 50</code>).</li>\n    <li>Third, write the keyword <code>else</code> and the value you want if the condition is False (<code>\"Fail\"</code>).</li>\n</ol>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>No Colons:</strong> Notice that colons (<code>:</code>) are NOT used anywhere in a ternary operator expression. You can even pass ternary expressions directly inside functions, like <code>print(\"Access granted\" if is_admin else \"Access denied\")</code>!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is the ternary operator in Python?", "a": "The ternary operator is a shortcut syntax that evaluates a condition and returns one value if the condition is True, and an alternative value if it is False, all on a single line." },
-            { "q": "What is the syntax for the ternary operator?", "a": "The format is: <code>value_if_true if condition else value_if_false</code>." },
-            { "q": "Why is it called 'ternary'?", "a": "Because it takes three parts (operands): the true value, the condition itself, and the false value." },
-            { "q": "Can I use the ternary operator inside a print statement?", "a": "Yes! E.g. <code>print('Yes' if active else 'No')</code> is a common way to print values conditionally." },
-            { "q": "Do I need to put a colon after if or else in a ternary operator?", "a": "No. Colons are not used in Python's single-line conditional expressions." }
+            {
+                "q": "What is the ternary operator in Python?",
+                "a": "The ternary operator is a shortcut syntax that evaluates a condition and returns one value if the condition is True, and an alternative value if it is False, all on a single line."
+            },
+            {
+                "q": "What is the syntax for the ternary operator?",
+                "a": "The format is: <code>value_if_true if condition else value_if_false</code>."
+            },
+            {
+                "q": "Why is it called 'ternary'?",
+                "a": "Because it takes three parts (operands): the true value, the condition itself, and the false value."
+            },
+            {
+                "q": "Can I use the ternary operator inside a print statement?",
+                "a": "Yes! E.g. <code>print('Yes' if active else 'No')</code> is a common way to print values conditionally."
+            },
+            {
+                "q": "Do I need to put a colon after if or else in a ternary operator?",
+                "a": "No. Colons are not used in Python's single-line conditional expressions."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's ternary operator!",
             "questions": [
-                { "type": "mcq", "question": "Which of the following is the correct syntax for the ternary operator in Python?", "options": ["condition ? val1 : val2", "val1 if condition else val2", "if condition then val1 else val2", "val1 else val2 if condition"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of: print('High' if 10 > 20 else 'Low')?", "options": ["High", "Low", "True", "False"], "answer": 1 },
-                { "type": "mcq", "question": "If score = 80, what is stored in result after: result = 'A' if score >= 90 else 'B'?", "options": ["A", "B", "True", "False"], "answer": 1 },
-                { "type": "fill", "question": "The ternary operator in Python consists of _____ parts or operands.", "answer": "3" },
-                { "type": "fill", "question": "In the expression x = 'Yes' if is_ok else 'No', if is_ok is False, x holds the value _____.", "answer": "No" },
-                { "type": "fill", "question": "Unlike block-level conditions, the ternary operator does not use the _____ character.", "answer": "colon" },
-                { "type": "tf", "question": "The ternary operator is mainly used to perform conditional variable assignments or return operations.", "answer": "true" },
-                { "type": "tf", "question": "The syntax: result = score >= 50 ? 'Pass' : 'Fail' is valid Python code.", "answer": "false" },
-                { "type": "tf", "question": "You can nest ternary operators inside other ternary operators in Python.", "answer": "true" },
-                { "type": "short", "question": "Convert this block into a ternary operator expression: if age >= 18: ticket = 'Adult' else: ticket = 'Child'", "sampleAnswer": "ticket = 'Adult' if age >= 18 else 'Child'" }
+                {
+                    "type": "mcq",
+                    "question": "Which of the following is the correct syntax for the ternary operator in Python?",
+                    "options": [
+                        "condition ? val1 : val2",
+                        "val1 if condition else val2",
+                        "if condition then val1 else val2",
+                        "val1 else val2 if condition"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of: print('High' if 10 > 20 else 'Low')?",
+                    "options": [
+                        "High",
+                        "Low",
+                        "True",
+                        "False"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If score = 80, what is stored in result after: result = 'A' if score >= 90 else 'B'?",
+                    "options": [
+                        "A",
+                        "B",
+                        "True",
+                        "False"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The ternary operator in Python consists of _____ parts or operands. (5 / 4 / 3 / 2)",
+                    "answer": "3"
+                },
+                {
+                    "type": "fill",
+                    "question": "In the expression x = 'Yes' if is_ok else 'No', if is_ok is False, x holds the value _____. (3 / Variable / colon / No)",
+                    "answer": "No"
+                },
+                {
+                    "type": "fill",
+                    "question": "Unlike block-level conditions, the ternary operator does not use the _____ character. (semicolon / comma / period / colon)",
+                    "answer": "colon"
+                },
+                {
+                    "type": "tf",
+                    "question": "The ternary operator is mainly used to perform conditional variable assignments or return operations.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The syntax: result = score >= 50 ? 'Pass' : 'Fail' is valid Python code.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can nest ternary operators inside other ternary operators in Python.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Convert this block into a ternary operator expression: if age >= 18: ticket = 'Adult' else: ticket = 'Child'",
+                    "sampleAnswer": "ticket = 'Adult' if age >= 18 else 'Child'"
+                }
             ]
         },
-
         "scenario": "Define a variable score = 85. Create a variable 'status' using the ternary operator. Set status to 'Pass' if score is greater than or equal to 60, otherwise set it to 'Fail'. Finally, print 'status'.",
         "hint": "Write status = 'Pass' if score >= 60 else 'Fail', and print(status).",
         "wrongHint": "Make sure you write the ternary expression correctly on a single line and print the status variable!",
@@ -2037,38 +3739,112 @@ window.levels = [
         "id": 34,
         "title": "Decision based coding problems",
         "concept": "Solving algorithmic problems requiring multiple paths of execution and conditional checks in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Decision-Based Coding",
             "subheading": "Solving conditional algorithms",
             "body": "<p>Now that you have mastered <code>if</code>, <code>else</code>, <code>elif</code>, nested conditions, and ternary operators, you are ready to tackle decision-based algorithms. In software, conditional logic represents the business rules that govern application behaviors.</p>\n\n<h3>How to Approach Decision-Based Problems</h3>\n<ol class=\"desc-list\">\n    <li><strong>Identify Input Criteria:</strong> What variables are given? What are their types?</li>\n    <li><strong>List Distinct States:</strong> What are the mutually exclusive outcomes? (e.g. positive, negative, zero).</li>\n    <li><strong>Order Your Conditions:</strong> Place specific, strict checks at the top of your <code>if-elif</code> chain, and broader fallbacks at the bottom.</li>\n    <li><strong>Verify Boundary Conditions:</strong> Check boundary values (like checking exactly 0 or 100) carefully to determine if you need strict (<code>&gt;</code>) or inclusive (<code>&gt;=</code>) comparisons.</li>\n</ol>\n\n<h3>Example Problem: Leap Year Check</h3>\n<p>A year is leap if it is divisible by 4. However, centurial years (ending in 00) must also be divisible by 400. Solving this requires combining modulus operations (<code>year % 4 == 0</code>) and nested comparisons to handle rules cleanly!</p>"
         },
-
         "qna": [
-            { "q": "What are decision-based coding problems?", "a": "These are programming problems where the main goal is to correctly route different inputs to their appropriate outcomes using conditional structures." },
-            { "q": "When should I use an if-elif chain versus nesting?", "a": "Use an <code>if-elif</code> chain for sequential, flat choices where only one branch should execute. Use nesting when a secondary decision depends directly on the outcome of a first decision." },
-            { "q": "How do boundary values affect decision blocks?", "a": "Logical errors frequently occur at boundary values. Ensure you use the correct comparison operator (e.g. <code>&gt;=</code> vs <code>&gt;</code>) based on requirements." },
-            { "q": "What is the best way to handle multiple checks in a single conditional statement?", "a": "Combine them with logical operators (<code>and</code>, <code>or</code>, <code>not</code>) and use parentheses <code>()</code> to keep code readable and ensure proper evaluation order." },
-            { "q": "How can I verify that my conditional logic covers all possibilities?", "a": "Write test cases that hit every branch of your code, checking positive, negative, zero, and boundary inputs to verify correctness." }
+            {
+                "q": "What are decision-based coding problems?",
+                "a": "These are programming problems where the main goal is to correctly route different inputs to their appropriate outcomes using conditional structures."
+            },
+            {
+                "q": "When should I use an if-elif chain versus nesting?",
+                "a": "Use an <code>if-elif</code> chain for sequential, flat choices where only one branch should execute. Use nesting when a secondary decision depends directly on the outcome of a first decision."
+            },
+            {
+                "q": "How do boundary values affect decision blocks?",
+                "a": "Logical errors frequently occur at boundary values. Ensure you use the correct comparison operator (e.g. <code>&gt;=</code> vs <code>&gt;</code>) based on requirements."
+            },
+            {
+                "q": "What is the best way to handle multiple checks in a single conditional statement?",
+                "a": "Combine them with logical operators (<code>and</code>, <code>or</code>, <code>not</code>) and use parentheses <code>()</code> to keep code readable and ensure proper evaluation order."
+            },
+            {
+                "q": "How can I verify that my conditional logic covers all possibilities?",
+                "a": "Write test cases that hit every branch of your code, checking positive, negative, zero, and boundary inputs to verify correctness."
+            }
         ],
-
         "test": {
             "intro": "Let's check your preparation for decision-based coding problems!",
             "questions": [
-                { "type": "mcq", "question": "If a program checks if a number is positive, negative, or zero, which structure is best?", "options": ["A single if statement", "An if-else statement", "An if-elif-else chain", "Nested if statements only"], "answer": 2 },
-                { "type": "mcq", "question": "What happens if you put a general check before a specific check in an if-elif chain?", "options": ["The specific check is never evaluated", "Python throws a syntax error", "The general check is skipped", "The code runs faster"], "answer": 0 },
-                { "type": "mcq", "question": "Which operator checks if a year is divisible by 4 (remainder is 0)?", "options": ["year / 4 == 0", "year // 4 == 0", "year % 4 == 0", "year ** 4 == 0"], "answer": 2 },
-                { "type": "fill", "question": "In a decision tree checking temperature ranges, if no specific ranges are met, execution routes to the final _____ block.", "answer": "else" },
-                { "type": "fill", "question": "The logical check to see if number is positive and even is: number > 0 and number % 2 == _____.", "answer": "0" },
-                { "type": "fill", "question": "If x = -5, the expression x > 0 evaluates to the boolean _____.", "answer": "False" },
-                { "type": "tf", "question": "Putting a general check at the very top of an if-elif-else chain is a recommended best practice.", "answer": "false" },
-                { "type": "tf", "question": "All conditions inside an if statement must evaluate to either True or False.", "answer": "true" },
-                { "type": "tf", "question": "Indentation must match exactly across sibling elif and else blocks.", "answer": "true" },
-                { "type": "short", "question": "Design an if-elif-else outline that checks if a grade is A (90+), B (80-89), or Fail (below 80).", "sampleAnswer": "if grade >= 90: print('A')\nelif grade >= 80: print('B')\nelse: print('Fail')" }
+                {
+                    "type": "mcq",
+                    "question": "If a program checks if a number is positive, negative, or zero, which structure is best?",
+                    "options": [
+                        "A single if statement",
+                        "An if-else statement",
+                        "An if-elif-else chain",
+                        "Nested if statements only"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens if you put a general check before a specific check in an if-elif chain?",
+                    "options": [
+                        "The specific check is never evaluated",
+                        "Python throws a syntax error",
+                        "The general check is skipped",
+                        "The code runs faster"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which operator checks if a year is divisible by 4 (remainder is 0)?",
+                    "options": [
+                        "year / 4 == 0",
+                        "year // 4 == 0",
+                        "year % 4 == 0",
+                        "year ** 4 == 0"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "In a decision tree checking temperature ranges, if no specific ranges are met, execution routes to the final _____ block. (elif / else / if / for)",
+                    "answer": "else"
+                },
+                {
+                    "type": "fill",
+                    "question": "The logical check to see if number is positive and even is: number > 0 and number % 2 == _____. (1 / 0 / 2 / -1)",
+                    "answer": "0"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = -5, the expression x > 0 evaluates to the boolean _____. (True / undefined / False / None)",
+                    "answer": "False"
+                },
+                {
+                    "type": "tf",
+                    "question": "Putting a general check at the very top of an if-elif-else chain is a recommended best practice.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "All conditions inside an if statement must evaluate to either True or False.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Indentation must match exactly across sibling elif and else blocks.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Design an if-elif-else outline that checks if a grade is A (90+), B (80-89), or Fail (below 80).",
+                    "sampleAnswer": "if grade >= 90: print('A')\nelif grade >= 80: print('B')\nelse: print('Fail')"
+                }
             ]
         },
-
         "scenario": "Write a program to determine ticket pricing based on age. Define age = 22. Create a variable 'ticket_price'. If age is less than 12, ticket_price is 5. Else if age is less than 65, ticket_price is 12. Otherwise (else), ticket_price is 7. Finally, print 'ticket_price'.",
         "hint": "Set age = 22, write an if-elif-else chain to set ticket_price, and print ticket_price.",
         "wrongHint": "Make sure you set ticket_price correctly in each branch and print only the price variable!",
@@ -2079,38 +3855,112 @@ window.levels = [
         "id": 35,
         "title": "Logic challenge",
         "concept": "Solving the Stage 4 final logic puzzle combining arithmetic comparisons, nesting, and short-hand operators",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Logic Challenge",
             "subheading": "The final Stage 4 logic challenge!",
             "body": "<p>Welcome to <strong>Level 35</strong>, the final logic challenge of <strong>STAGE 4: Decision Making</strong>!</p>\n\n<p>In this room, you will face a complex logical problem testing your ability to construct multi-level decisions in Python. You must combine all the tools you have mastered so far:</p>\n<ul class=\"desc-list\">\n    <li>Checking multiple conditions and logical states.</li>\n    <li>Nesting decisions accurately with correct vertical indentations.</li>\n    <li>Applying colons (<code>:</code>) to initiate block scopes.</li>\n</ul>\n\n<p>Review the Q&As and quizzes below to verify your structural understanding, then jump into the coding console to resolve the final Stage 4 logic challenge!</p>"
         },
-
         "qna": [
-            { "q": "What is the Stage 4 logic challenge?", "a": "It is a comprehensive problem combining nested checks, variable comparisons, and logical boundaries to verify your mastery of conditional flows." },
-            { "q": "How can I prevent syntax errors in nested conditions?", "a": "By using consistent indentations (4 spaces per level) and ensuring every conditional block (<code>if</code>, <code>elif</code>, <code>else</code>) is terminated with a colon." },
-            { "q": "When is it better to combine checks instead of nesting them?", "a": "If you do not need intermediate code execution between checks, combining conditions using <code>and</code> makes code shorter and easier to read." },
-            { "q": "How do I test if my logic handles negative numbers?", "a": "By verifying that your conditions check less-than-zero states correctly, e.g., <code>if value &lt; 0:</code>." },
-            { "q": "What are the common traps to avoid in this challenge?", "a": "Spelling mistakes in variable names, mixing tabs and spaces, forgetting colons, and misalignment of sibling block elements." }
+            {
+                "q": "What is the Stage 4 logic challenge?",
+                "a": "It is a comprehensive problem combining nested checks, variable comparisons, and logical boundaries to verify your mastery of conditional flows."
+            },
+            {
+                "q": "How can I prevent syntax errors in nested conditions?",
+                "a": "By using consistent indentations (4 spaces per level) and ensuring every conditional block (<code>if</code>, <code>elif</code>, <code>else</code>) is terminated with a colon."
+            },
+            {
+                "q": "When is it better to combine checks instead of nesting them?",
+                "a": "If you do not need intermediate code execution between checks, combining conditions using <code>and</code> makes code shorter and easier to read."
+            },
+            {
+                "q": "How do I test if my logic handles negative numbers?",
+                "a": "By verifying that your conditions check less-than-zero states correctly, e.g., <code>if value &lt; 0:</code>."
+            },
+            {
+                "q": "What are the common traps to avoid in this challenge?",
+                "a": "Spelling mistakes in variable names, mixing tabs and spaces, forgetting colons, and misalignment of sibling block elements."
+            }
         ],
-
         "test": {
             "intro": "Let's complete the final preparation quiz for the logic challenge!",
             "questions": [
-                { "type": "mcq", "question": "What does not (True or False) and (5 > 2) evaluate to?", "options": ["True", "False", "Error", "None"], "answer": 1 },
-                { "type": "mcq", "question": "Which statement is equivalent to: is_member = True if age >= 18 else False?", "options": ["is_member = age >= 18", "is_member = True", "is_member = age > 18", "is_member = age <= 18"], "answer": 0 },
-                { "type": "mcq", "question": "If you have 3 conditions that must all be True, which operator do you use?", "options": ["or", "and", "not", "is"], "answer": 1 },
-                { "type": "fill", "question": "Chained elif blocks are evaluated from top to _____ in Python.", "answer": "bottom" },
-                { "type": "fill", "question": "The error thrown when mixing tabs and spaces in Python is _____Error.", "answer": "Indentation" },
-                { "type": "fill", "question": "If x = 10, the expression: x > 5 or x < 0 evaluates to the boolean _____.", "answer": "True" },
-                { "type": "tf", "question": "An else block is executed if none of the if/elif conditions in that block are True.", "answer": "true" },
-                { "type": "tf", "question": "A ternary operator in Python can have an if without an else.", "answer": "false" },
-                { "type": "tf", "question": "The logical 'not' operator has lower precedence than 'and' in Python.", "answer": "false" },
-                { "type": "short", "question": "Explain why this nested block prints 'No': if x > 10: (where x = 12) if x < 15: if x % 2 != 0: print('Yes') else: print('No')", "sampleAnswer": "12 satisfies x > 10 and x < 15. The third check is 12 % 2 != 0, which is False. This executes the inner else block, printing 'No'." }
+                {
+                    "type": "mcq",
+                    "question": "What does not (True or False) and (5 > 2) evaluate to?",
+                    "options": [
+                        "True",
+                        "False",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which statement is equivalent to: is_member = True if age >= 18 else False?",
+                    "options": [
+                        "is_member = age >= 18",
+                        "is_member = True",
+                        "is_member = age > 18",
+                        "is_member = age <= 18"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "If you have 3 conditions that must all be True, which operator do you use?",
+                    "options": [
+                        "or",
+                        "and",
+                        "not",
+                        "is"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Chained elif blocks are evaluated from top to _____ in Python. (variable / Indentation / bottom / True)",
+                    "answer": "bottom"
+                },
+                {
+                    "type": "fill",
+                    "question": "The error thrown when mixing tabs and spaces in Python is _____Error. (Indentation / Variable / bottom / True)",
+                    "answer": "Indentation"
+                },
+                {
+                    "type": "fill",
+                    "question": "If x = 10, the expression: x > 5 or x < 0 evaluates to the boolean _____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "tf",
+                    "question": "An else block is executed if none of the if/elif conditions in that block are True.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A ternary operator in Python can have an if without an else.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The logical 'not' operator has lower precedence than 'and' in Python.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why this nested block prints 'No': if x > 10: (where x = 12) if x < 15: if x % 2 != 0: print('Yes') else: print('No')",
+                    "sampleAnswer": "12 satisfies x > 10 and x < 15. The third check is 12 % 2 != 0, which is False. This executes the inner else block, printing 'No'."
+                }
             ]
         },
-
         "scenario": "Doraemon needs a gadget select algorithm. Define is_emergency = True and distance_meters = 1500. Create a variable 'gadget'. If is_emergency is True: if distance_meters is less than 1000, gadget is 'Anywhere Door'; otherwise, gadget is 'Bamboo Copter'. If is_emergency is False (outer else), gadget is 'Walk'. Finally, print 'gadget'.",
         "hint": "Write the outer if-else for is_emergency, and nest the distance check inside the emergency block.",
         "wrongHint": "Make sure you nest the conditions properly, check bounds, and print the gadget variable name!",
@@ -2121,38 +3971,112 @@ window.levels = [
         "id": 36,
         "title": "Why loops exist",
         "concept": "Understanding the concept of iteration, code repetition, and dry execution rules to avoid code duplication in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Why Loops Exist",
             "subheading": "The power of iteration",
             "body": "<p>Imagine Doraemon asks Nobita to write <em>\"I will not forget my homework!\"</em> <strong>100 times</strong> as a punishment. Writing <code>print(\"I will not forget my homework!\")</code> 100 times manually is slow, boring, and makes code extremely long!</p>\n\n<p>What if Doraemon wants it 1,000 times? Or what if we need to print a message an unknown number of times (e.g. based on user input)? This is why we use **Loops**.</p>\n\n<h3>Key Benefits of Loops</h3>\n<ul class=\"desc-list\">\n    <li><strong>Avoid Duplication:</strong> Loops help you keep your code **DRY** (Don't Repeat Yourself).</li>\n    <li><strong>Dynamic Repetition:</strong> Loops can run as many times as a variable or user input dictates.</li>\n    <li><strong>Efficiency:</strong> Write the code once, and let the computer run it thousands of times!</li>\n</ul>\n\n<h3>Loops in Python</h3>\n<p>Python provides two main types of loops:</p>\n<ol class=\"desc-list\">\n    <li><strong><code>for</code> loops:</strong> Best for iterating over sequences (like strings or lists) or repeating code a specific number of times.</li>\n    <li><strong><code>while</code> loops:</strong> Best for repeating code as long as a certain condition remains True.</li>\n</ol>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>What is an Iteration?</strong> In programming, a single cycle or execution of a loop is called an <strong>iteration</strong>.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "Why do we need loops in programming?", "a": "Loops allow us to repeat a block of code multiple times without writing the same lines repeatedly, keeping our code clean, maintainable, and efficient." },
-            { "q": "What does DRY stand for?", "a": "DRY stands for <strong>Don't Repeat Yourself</strong>. It is a core programming principle aimed at reducing duplication of code." },
-            { "q": "What are the two main types of loops in Python?", "a": "Python features <code>for</code> loops (for iterating over a sequence or specific range) and <code>while</code> loops (for repeating actions as long as a condition is True)." },
-            { "q": "What is a single loop execution called?", "a": "A single cycle or execution of a loop is called an <strong>iteration</strong>." },
-            { "q": "What happens if a loop has no condition to stop?", "a": "It will run forever. This is called an <strong>infinite loop</strong>, which can freeze or crash your program. We must always ensure our loops have a path to terminate!" }
+            {
+                "q": "Why do we need loops in programming?",
+                "a": "Loops allow us to repeat a block of code multiple times without writing the same lines repeatedly, keeping our code clean, maintainable, and efficient."
+            },
+            {
+                "q": "What does DRY stand for?",
+                "a": "DRY stands for <strong>Don't Repeat Yourself</strong>. It is a core programming principle aimed at reducing duplication of code."
+            },
+            {
+                "q": "What are the two main types of loops in Python?",
+                "a": "Python features <code>for</code> loops (for iterating over a sequence or specific range) and <code>while</code> loops (for repeating actions as long as a condition is True)."
+            },
+            {
+                "q": "What is a single loop execution called?",
+                "a": "A single cycle or execution of a loop is called an <strong>iteration</strong>."
+            },
+            {
+                "q": "What happens if a loop has no condition to stop?",
+                "a": "It will run forever. This is called an <strong>infinite loop</strong>, which can freeze or crash your program. We must always ensure our loops have a path to terminate!"
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of why loops exist!",
             "questions": [
-                { "type": "mcq", "question": "Which software design principle is directly promoted by using loops?", "options": ["KISS (Keep It Simple, Stupid)", "DRY (Don't Repeat Yourself)", "YAGNI (You Aren't Gonna Need It)", "SOLID"], "answer": 1 },
-                { "type": "mcq", "question": "What is a single repetition of a loop called?", "options": ["Rotation", "Iteration", "Recursion", "Cycle"], "answer": 1 },
-                { "type": "mcq", "question": "What occurs when a loop has no condition to stop?", "options": ["A SyntaxError is thrown", "An infinite loop", "The program runs faster", "Python deletes the code"], "answer": 1 },
-                { "type": "fill", "question": "The DRY principle stands for Don't _____ Yourself.", "answer": "Repeat" },
-                { "type": "fill", "question": "The loop that repeats as long as a condition is True is the _____ loop.", "answer": "while" },
-                { "type": "fill", "question": "The loop used when you know in advance how many times to repeat is the _____ loop.", "answer": "for" },
-                { "type": "tf", "question": "Writing print statements 100 times manually is the best way to repeat code.", "answer": "false" },
-                { "type": "tf", "question": "An infinite loop will run forever unless the program is forcefully terminated.", "answer": "true" },
-                { "type": "tf", "question": "Python supports both 'for' and 'while' loop structures.", "answer": "true" },
-                { "type": "short", "question": "Explain why duplicating lines of code to repeat an action is a bad practice.", "sampleAnswer": "It makes code long and hard to update. If you need to change the message, you have to modify it in every duplicate line, leading to bugs." }
+                {
+                    "type": "mcq",
+                    "question": "Which software design principle is directly promoted by using loops?",
+                    "options": [
+                        "KISS (Keep It Simple, Stupid)",
+                        "DRY (Don't Repeat Yourself)",
+                        "YAGNI (You Aren't Gonna Need It)",
+                        "SOLID"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is a single repetition of a loop called?",
+                    "options": [
+                        "Rotation",
+                        "Iteration",
+                        "Recursion",
+                        "Cycle"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What occurs when a loop has no condition to stop?",
+                    "options": [
+                        "A SyntaxError is thrown",
+                        "An infinite loop",
+                        "The program runs faster",
+                        "Python deletes the code"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The DRY principle stands for Don't _____ Yourself. (Variable / for / Repeat / while)",
+                    "answer": "Repeat"
+                },
+                {
+                    "type": "fill",
+                    "question": "The loop that repeats as long as a condition is True is the _____ loop. (if / while / elif / else)",
+                    "answer": "while"
+                },
+                {
+                    "type": "fill",
+                    "question": "The loop used when you know in advance how many times to repeat is the _____ loop. (elif / for / else / if)",
+                    "answer": "for"
+                },
+                {
+                    "type": "tf",
+                    "question": "Writing print statements 100 times manually is the best way to repeat code.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "An infinite loop will run forever unless the program is forcefully terminated.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Python supports both 'for' and 'while' loop structures.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why duplicating lines of code to repeat an action is a bad practice.",
+                    "sampleAnswer": "It makes code long and hard to update. If you need to change the message, you have to modify it in every duplicate line, leading to bugs."
+                }
             ]
         },
-
         "scenario": "Nobita has to write 'I will do my homework!' 3 times. Show him how tedious manual replication is by printing this exact message 3 separate times on 3 separate lines using print().",
         "hint": "Use three print statements on three separate lines.",
         "wrongHint": "Make sure you print 'I will do my homework!' exactly 3 times!",
@@ -2163,38 +4087,112 @@ window.levels = [
         "id": 37,
         "title": "for loop",
         "concept": "Iterating over sequences like strings, lists, or ranges using the 'for' loop in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The for Loop",
             "subheading": "Iterating over sequences",
             "body": "<p>A <strong><code>for</code> loop</strong> is used to iterate over a sequence (such as a string, list, or range of numbers). Python's <code>for</code> loop works like: <em>\"For each item inside this sequence, execute this code block.\"</em></p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">for item in sequence:\n    # code to run for each item</pre>\n\n<h3>Syntax Rules</h3>\n<ol class=\"desc-list\">\n    <li><strong>The Colon:</strong> The <code>for</code> loop header must always end with a colon (<code>:</code>).</li>\n    <li><strong>Indentation:</strong> The code inside the loop must be indented (typically 4 spaces).</li>\n</ol>\n\n<h3>Looping through a String</h3>\n<pre class=\"code-example\">word = \"Cat\"\nfor letter in word:\n    print(letter)</pre>\n<p>Output:</p>\n<pre class=\"code-example\">C\na\nt</pre>\n\n<p>Here, the loop variable <code>letter</code> automatically takes the value of each character in the string <code>\"Cat\"</code> one by one and prints it.</p>"
         },
-
         "qna": [
-            { "q": "What is a 'for' loop in Python?", "a": "A <code>for</code> loop is a control flow structure used to iterate over any sequence (like a string, list, or range) sequentially." },
-            { "q": "How does a 'for' loop know when to stop?", "a": "It stops automatically once it reaches the end of the sequence it is iterating over." },
-            { "q": "What is the role of the loop variable in a 'for' loop?", "a": "The loop variable (e.g. <code>letter</code> in <code>for letter in word:</code>) stores the value of the current item in the sequence for that specific iteration." },
-            { "q": "Do I need to manually increment the loop variable in a 'for' loop?", "a": "No, Python handles this automatically, updating the variable to the next item at the start of each iteration." },
-            { "q": "Can I use a for loop to iterate over a string?", "a": "Yes! Iterating over a string checks each character one by one, from first to last." }
+            {
+                "q": "What is a 'for' loop in Python?",
+                "a": "A <code>for</code> loop is a control flow structure used to iterate over any sequence (like a string, list, or range) sequentially."
+            },
+            {
+                "q": "How does a 'for' loop know when to stop?",
+                "a": "It stops automatically once it reaches the end of the sequence it is iterating over."
+            },
+            {
+                "q": "What is the role of the loop variable in a 'for' loop?",
+                "a": "The loop variable (e.g. <code>letter</code> in <code>for letter in word:</code>) stores the value of the current item in the sequence for that specific iteration."
+            },
+            {
+                "q": "Do I need to manually increment the loop variable in a 'for' loop?",
+                "a": "No, Python handles this automatically, updating the variable to the next item at the start of each iteration."
+            },
+            {
+                "q": "Can I use a for loop to iterate over a string?",
+                "a": "Yes! Iterating over a string checks each character one by one, from first to last."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's for loop!",
             "questions": [
-                { "type": "mcq", "question": "Which keyword is used to start a loop that iterates over a sequence?", "options": ["while", "for", "loop", "repeat"], "answer": 1 },
-                { "type": "mcq", "question": "In 'for x in \"Python\":', what is x?", "options": ["A function name", "A loop variable", "A keyword", "A data type"], "answer": 1 },
-                { "type": "mcq", "question": "How many times will this loop print 'Hello'? for character in 'ABC': print('Hello')", "options": ["1", "3", "0", "Infinite"], "answer": 1 },
-                { "type": "fill", "question": "In a for loop header, you must end the line with the _____ character.", "answer": "colon" },
-                { "type": "fill", "question": "The code block to run inside a for loop must be _____ by 4 spaces.", "answer": "indented" },
-                { "type": "fill", "question": "If we iterate over 'Dora', the loop variable will take the value of letter 'a' during the _____ iteration.", "answer": "4th" },
-                { "type": "tf", "question": "Python's 'for' loop requires manual incrementing of the loop variable.", "answer": "false" },
-                { "type": "tf", "question": "A 'for' loop can iterate through each letter of a string.", "answer": "true" },
-                { "type": "tf", "question": "The loop variable can be named anything as long as it follows variable naming rules.", "answer": "true" },
-                { "type": "short", "question": "Explain what this loop prints when executed: for char in 'Hi': print(char)", "sampleAnswer": "It iterates over the string 'Hi', printing 'H' and 'i' on separate lines." }
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used to start a loop that iterates over a sequence?",
+                    "options": [
+                        "while",
+                        "for",
+                        "loop",
+                        "repeat"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "In 'for x in \"Python\":', what is x?",
+                    "options": [
+                        "A function name",
+                        "A loop variable",
+                        "A keyword",
+                        "A data type"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How many times will this loop print 'Hello'? for character in 'ABC': print('Hello')",
+                    "options": [
+                        "1",
+                        "3",
+                        "0",
+                        "Infinite"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "In a for loop header, you must end the line with the _____ character. (semicolon / comma / period / colon)",
+                    "answer": "colon"
+                },
+                {
+                    "type": "fill",
+                    "question": "The code block to run inside a for loop must be _____ by 4 spaces. (colon / indented / 4th / variable)",
+                    "answer": "indented"
+                },
+                {
+                    "type": "fill",
+                    "question": "If we iterate over 'Dora', the loop variable will take the value of letter 'a' during the _____ iteration. (Variable / colon / 4th / indented)",
+                    "answer": "4th"
+                },
+                {
+                    "type": "tf",
+                    "question": "Python's 'for' loop requires manual incrementing of the loop variable.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A 'for' loop can iterate through each letter of a string.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The loop variable can be named anything as long as it follows variable naming rules.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain what this loop prints when executed: for char in 'Hi': print(char)",
+                    "sampleAnswer": "It iterates over the string 'Hi', printing 'H' and 'i' on separate lines."
+                }
             ]
         },
-
         "scenario": "Write a for loop to print each character of a name. Define name = 'Nobita'. Write a for loop that iterates over name, and inside the loop print the current character.",
         "hint": "Write for char in name:, then indent and write print(char).",
         "wrongHint": "Make sure you iterate over name using a for loop and print each character!",
@@ -2205,38 +4203,112 @@ window.levels = [
         "id": 38,
         "title": "while loop",
         "concept": "Repeating code blocks while a conditional check remains True using the 'while' loop and counter variables in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The while Loop",
             "subheading": "Looping based on conditions",
             "body": "<p>A <strong><code>while</code> loop</strong> repeats a block of code <strong>as long as a condition is True</strong>. It is best used when you do not know in advance how many times the loop needs to run.</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">while condition:\n    # code to run</pre>\n\n<h3>Example using a Counter</h3>\n<pre class=\"code-example\">count = 1\nwhile count &lt;= 3:\n    print(count)\n    count = count + 1 # Crucial! Increment the counter to stop the loop</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">1\n2\n3</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Infinite Loops:</strong> If you forget to update the variable checked in the condition (e.g. <code>count = count + 1</code>), the condition will stay True forever, causing an <strong>infinite loop</strong>! This can freeze your program or crash your environment.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a 'while' loop?", "a": "A <code>while</code> loop is a conditional loop that continues executing its code block repeatedly as long as its condition expression evaluates to True." },
-            { "q": "What is a loop control variable or counter?", "a": "It is a variable used within the loop condition that is modified inside the loop body, ensuring that the condition eventually becomes False so the loop terminates." },
-            { "q": "What happens if I forget to increment my counter variable inside a while loop?", "a": "The loop condition will remain True forever, causing an infinite loop. This freezes your program and consumes system resources." },
-            { "q": "When should I choose a while loop over a for loop?", "a": "Choose a <code>while</code> loop when the number of iterations is not known beforehand and depends on a dynamic condition (e.g. waiting for a user input or game event)." },
-            { "q": "Can a while loop condition check multiple values?", "a": "Yes! You can use logical operators to form compound conditions. E.g. <code>while count &lt; 10 and not game_over:</code>." }
+            {
+                "q": "What is a 'while' loop?",
+                "a": "A <code>while</code> loop is a conditional loop that continues executing its code block repeatedly as long as its condition expression evaluates to True."
+            },
+            {
+                "q": "What is a loop control variable or counter?",
+                "a": "It is a variable used within the loop condition that is modified inside the loop body, ensuring that the condition eventually becomes False so the loop terminates."
+            },
+            {
+                "q": "What happens if I forget to increment my counter variable inside a while loop?",
+                "a": "The loop condition will remain True forever, causing an infinite loop. This freezes your program and consumes system resources."
+            },
+            {
+                "q": "When should I choose a while loop over a for loop?",
+                "a": "Choose a <code>while</code> loop when the number of iterations is not known beforehand and depends on a dynamic condition (e.g. waiting for a user input or game event)."
+            },
+            {
+                "q": "Can a while loop condition check multiple values?",
+                "a": "Yes! You can use logical operators to form compound conditions. E.g. <code>while count &lt; 10 and not game_over:</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's while loop!",
             "questions": [
-                { "type": "mcq", "question": "Which keyword starts a loop that runs as long as a condition is True?", "options": ["for", "while", "until", "repeat"], "answer": 1 },
-                { "type": "mcq", "question": "What happens when the while condition becomes False?", "options": ["An error occurs", "The loop terminates immediately", "The program restarts", "The loop variable is deleted"], "answer": 1 },
-                { "type": "mcq", "question": "How many times does this loop print 'Hello'? count = 5; while count < 5: print('Hello'); count += 1", "options": ["5", "0", "1", "Infinite"], "answer": 1 },
-                { "type": "fill", "question": "A loop that never terminates is called a(n) _____ loop.", "answer": "infinite" },
-                { "type": "fill", "question": "In the code 'count = count + 1', we are _____ the value of count.", "answer": "incrementing" },
-                { "type": "fill", "question": "If the while condition is False on the very first check, the loop body is executed _____ times.", "answer": "0" },
-                { "type": "tf", "question": "A while loop is the best choice when you know the exact number of iterations beforehand.", "answer": "false" },
-                { "type": "tf", "question": "The condition of a while loop must end with a colon (:).", "answer": "true" },
-                { "type": "tf", "question": "A while loop code block must be indented.", "answer": "true" },
-                { "type": "short", "question": "Explain the bug in this while loop: x = 1; while x <= 5: print(x)", "sampleAnswer": "The variable x is never incremented, making the condition always True and causing an infinite loop." }
+                {
+                    "type": "mcq",
+                    "question": "Which keyword starts a loop that runs as long as a condition is True?",
+                    "options": [
+                        "for",
+                        "while",
+                        "until",
+                        "repeat"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens when the while condition becomes False?",
+                    "options": [
+                        "An error occurs",
+                        "The loop terminates immediately",
+                        "The program restarts",
+                        "The loop variable is deleted"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How many times does this loop print 'Hello'? count = 5; while count < 5: print('Hello'); count += 1",
+                    "options": [
+                        "5",
+                        "0",
+                        "1",
+                        "Infinite"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "A loop that never terminates is called a(n) _____ loop. (infinite / variable / 0 / incrementing)",
+                    "answer": "infinite"
+                },
+                {
+                    "type": "fill",
+                    "question": "In the code 'count = count + 1', we are _____ the value of count. (variable / incrementing / infinite / 0)",
+                    "answer": "incrementing"
+                },
+                {
+                    "type": "fill",
+                    "question": "If the while condition is False on the very first check, the loop body is executed _____ times. (1 / 0 / 2 / -1)",
+                    "answer": "0"
+                },
+                {
+                    "type": "tf",
+                    "question": "A while loop is the best choice when you know the exact number of iterations beforehand.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The condition of a while loop must end with a colon (:).",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A while loop code block must be indented.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the bug in this while loop: x = 1; while x <= 5: print(x)",
+                    "sampleAnswer": "The variable x is never incremented, making the condition always True and causing an infinite loop."
+                }
             ]
         },
-
         "scenario": "Nobita wants to count up to 5. Define count = 1. Write a while loop that runs as long as count is less than or equal to 5. Inside the loop, print the value of count, then increment count by 1.",
         "hint": "Write while count <= 5:, then indent and write print(count) followed by count = count + 1.",
         "wrongHint": "Make sure you print count and update its value inside the loop block to avoid an infinite loop!",
@@ -2247,38 +4319,112 @@ window.levels = [
         "id": 39,
         "title": "range()",
         "concept": "Generating sequences of numbers using the range() function with start, stop, and step arguments in Python loops",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The range() Function",
             "subheading": "Generating number sequences",
             "body": "<p>What if you want to run a <code>for</code> loop exactly 5 times? Or count from 10 to 50? In Python, we use the built-in <strong><code>range()</code></strong> function to generate sequences of numbers.</p>\n\n<h3>Usage Forms of range()</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>range(stop)</code>:</strong> Generates numbers from <code>0</code> up to (but NOT including) <code>stop</code>.\n        <br>E.g. <code>range(3)</code> generates <code>0, 1, 2</code>.</li>\n    <li><strong><code>range(start, stop)</code>:</strong> Generates numbers from <code>start</code> up to (but NOT including) <code>stop</code>.\n        <br>E.g. <code>range(2, 6)</code> generates <code>2, 3, 4, 5</code>.</li>\n    <li><strong><code>range(start, stop, step)</code>:</strong> Generates numbers with a specific increment (<code>step</code>).\n        <br>E.g. <code>range(1, 10, 2)</code> generates <code>1, 3, 5, 7, 9</code>.\n        <br>E.g. <code>range(5, 0, -1)</code> generates <code>5, 4, 3, 2, 1</code> (counts backwards!).</li>\n</ul>\n\n<pre class=\"code-example\">for i in range(3):\n    print(i)</pre>\n<p>Output:</p>\n<pre class=\"code-example\">0\n1\n2</pre>"
         },
-
         "qna": [
-            { "q": "What does the range() function do?", "a": "It is a built-in Python function that generates an immutable sequence of numbers, commonly used to control the iterations of a <code>for</code> loop." },
-            { "q": "Does range(5) include the number 5?", "a": "No, Python's <code>range()</code> is half-open, meaning it goes up to but excludes the stop value. <code>range(5)</code> generates <code>0, 1, 2, 3, 4</code>." },
-            { "q": "How do I count starting from a number other than 0?", "a": "Use the two-argument format: <code>range(start, stop)</code>. E.g. <code>range(1, 6)</code> generates 1 through 5." },
-            { "q": "What does the step argument in range() do?", "a": "The third argument specifies the step (increment). E.g. <code>range(0, 10, 2)</code> counts by 2s. It can be negative to count down." },
-            { "q": "Can I convert a range object to a list to inspect its values?", "a": "Yes! Wrap it in the <code>list()</code> function. E.g. <code>list(range(3))</code> returns <code>[0, 1, 2]</code>." }
+            {
+                "q": "What does the range() function do?",
+                "a": "It is a built-in Python function that generates an immutable sequence of numbers, commonly used to control the iterations of a <code>for</code> loop."
+            },
+            {
+                "q": "Does range(5) include the number 5?",
+                "a": "No, Python's <code>range()</code> is half-open, meaning it goes up to but excludes the stop value. <code>range(5)</code> generates <code>0, 1, 2, 3, 4</code>."
+            },
+            {
+                "q": "How do I count starting from a number other than 0?",
+                "a": "Use the two-argument format: <code>range(start, stop)</code>. E.g. <code>range(1, 6)</code> generates 1 through 5."
+            },
+            {
+                "q": "What does the step argument in range() do?",
+                "a": "The third argument specifies the step (increment). E.g. <code>range(0, 10, 2)</code> counts by 2s. It can be negative to count down."
+            },
+            {
+                "q": "Can I convert a range object to a list to inspect its values?",
+                "a": "Yes! Wrap it in the <code>list()</code> function. E.g. <code>list(range(3))</code> returns <code>[0, 1, 2]</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's range() function!",
             "questions": [
-                { "type": "mcq", "question": "What numbers are generated by range(3)?", "options": ["1, 2, 3", "0, 1, 2", "0, 1, 2, 3", "1, 2"], "answer": 1 },
-                { "type": "mcq", "question": "What does range(1, 5) generate?", "options": ["1, 2, 3, 4, 5", "1, 2, 3, 4", "0, 1, 2, 3, 4", "2, 3, 4"], "answer": 1 },
-                { "type": "mcq", "question": "Which of the following generates numbers: 5, 4, 3, 2, 1?", "options": ["range(5, 0)", "range(5, 1, -1)", "range(5, 0, -1)", "range(1, 5, -1)"], "answer": 2 },
-                { "type": "fill", "question": "The stop parameter in range(start, stop) is always _____ from the generated sequence.", "answer": "excluded" },
-                { "type": "fill", "question": "The default start value of range() if only one argument is provided is _____.", "answer": "0" },
-                { "type": "fill", "question": "To count by 3s, you must supply 3 as the _____ argument in the range function.", "answer": "step" },
-                { "type": "tf", "question": "The statement range(0, 10, 2) will generate the number 10.", "answer": "false" },
-                { "type": "tf", "question": "A step value in range() can be negative to count backwards.", "answer": "true" },
-                { "type": "tf", "question": "The default step value in range() is 1.", "answer": "true" },
-                { "type": "short", "question": "Write the range expression to generate: 10, 20, 30, 40.", "sampleAnswer": "range(10, 50, 10)" }
+                {
+                    "type": "mcq",
+                    "question": "What numbers are generated by range(3)?",
+                    "options": [
+                        "1, 2, 3",
+                        "0, 1, 2",
+                        "0, 1, 2, 3",
+                        "1, 2"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does range(1, 5) generate?",
+                    "options": [
+                        "1, 2, 3, 4, 5",
+                        "1, 2, 3, 4",
+                        "0, 1, 2, 3, 4",
+                        "2, 3, 4"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following generates numbers: 5, 4, 3, 2, 1?",
+                    "options": [
+                        "range(5, 0)",
+                        "range(5, 1, -1)",
+                        "range(5, 0, -1)",
+                        "range(1, 5, -1)"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The stop parameter in range(start, stop) is always _____ from the generated sequence. (variable / step / excluded / 0)",
+                    "answer": "excluded"
+                },
+                {
+                    "type": "fill",
+                    "question": "The default start value of range() if only one argument is provided is _____. (1 / 0 / 2 / -1)",
+                    "answer": "0"
+                },
+                {
+                    "type": "fill",
+                    "question": "To count by 3s, you must supply 3 as the _____ argument in the range function. (excluded / 0 / variable / step)",
+                    "answer": "step"
+                },
+                {
+                    "type": "tf",
+                    "question": "The statement range(0, 10, 2) will generate the number 10.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A step value in range() can be negative to count backwards.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The default step value in range() is 1.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write the range expression to generate: 10, 20, 30, 40.",
+                    "sampleAnswer": "range(10, 50, 10)"
+                }
             ]
         },
-
         "scenario": "Write a for loop to print even numbers from 2 to 8. Use range() with start, stop, and step parameters to generate: 2, 4, 6, 8. Loop through this range and print each number.",
         "hint": "Use range(2, 10, 2) inside your for loop.",
         "wrongHint": "Make sure you start at 2, go up to 8 (so stop must be at least 9), and step by 2!",
@@ -2289,38 +4435,112 @@ window.levels = [
         "id": 40,
         "title": "Nested loops",
         "concept": "Putting loops inside other loops and tracing their execution in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Nested Loops",
             "subheading": "Loops inside loops",
             "body": "<p>Just like nesting conditional checks, we can also place a loop statement inside the execution body of another loop statement! This is called a <strong>Nested Loop</strong>.</p>\n\n<h3>How Nested Loops Work</h3>\n<ol class=\"desc-list\">\n    <li>The outer loop initiates its first iteration.</li>\n    <li>This triggers the inner loop, which runs **completely from start to finish**.</li>\n    <li>Once the inner loop completes, the outer loop moves to its next step.</li>\n    <li>The inner loop resets and executes its full cycle again. This repeats until the outer loop finishes.</li>\n</ol>\n\n<h3>Basic Syntax Example</h3>\n<pre class=\"code-example\">for i in range(2): # Outer loop\n    for j in range(3): # Inner loop\n        print(i, j)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">0 0\n0 1\n0 2\n1 0\n1 1\n1 2</pre>\n\n<p>Notice that the total number of print iterations is the product of the loops: 2 (outer) &times; 3 (inner) = 6 iterations!</p>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Variable Naming Bug:</strong> Never use the same variable name (e.g. <code>i</code>) for both the outer and inner loop control variables! Doing so overwrites the outer counter, causing serious logic bugs or infinite loops. Always use distinct names, such as <code>i</code> and <code>j</code>.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a nested loop?", "a": "A nested loop is a loop statement placed inside the body of another loop statement." },
-            { "q": "How does a nested loop execute?", "a": "The outer loop triggers the inner loop. For each single iteration of the outer loop, the inner loop executes its entire cycle of iterations before the outer loop proceeds to its next step." },
-            { "q": "How do I calculate the total number of iterations in a nested loop?", "a": "Multiply the number of iterations of the outer loop by the number of iterations of the inner loop. E.g. 3 outer iterations and 4 inner iterations result in 12 total print executions." },
-            { "q": "Can I nest different types of loops, like a 'while' loop inside a 'for' loop?", "a": "Yes! Python allows you to nest any loop type inside any other loop type (e.g. <code>while</code> inside <code>for</code>, or <code>for</code> inside <code>while</code>)." },
-            { "q": "What is a common pitfall of nested loops?", "a": "Using the same loop control variable name for both the outer and inner loops. This overwrites the variable and causes infinite loops or logic errors. Always use unique names (e.g. <code>i</code> for outer, <code>j</code> for inner)." }
+            {
+                "q": "What is a nested loop?",
+                "a": "A nested loop is a loop statement placed inside the body of another loop statement."
+            },
+            {
+                "q": "How does a nested loop execute?",
+                "a": "The outer loop triggers the inner loop. For each single iteration of the outer loop, the inner loop executes its entire cycle of iterations before the outer loop proceeds to its next step."
+            },
+            {
+                "q": "How do I calculate the total number of iterations in a nested loop?",
+                "a": "Multiply the number of iterations of the outer loop by the number of iterations of the inner loop. E.g. 3 outer iterations and 4 inner iterations result in 12 total print executions."
+            },
+            {
+                "q": "Can I nest different types of loops, like a 'while' loop inside a 'for' loop?",
+                "a": "Yes! Python allows you to nest any loop type inside any other loop type (e.g. <code>while</code> inside <code>for</code>, or <code>for</code> inside <code>while</code>)."
+            },
+            {
+                "q": "What is a common pitfall of nested loops?",
+                "a": "Using the same loop control variable name for both the outer and inner loops. This overwrites the variable and causes infinite loops or logic errors. Always use unique names (e.g. <code>i</code> for outer, <code>j</code> for inner)."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's nested loops!",
             "questions": [
-                { "type": "mcq", "question": "What is a nested loop in programming?", "options": ["A loop inside another loop", "A loop inside an if statement", "A function that calls itself", "A loop that never stops"], "answer": 0 },
-                { "type": "mcq", "question": "If the outer loop runs 3 times and the inner loop runs 5 times, how many times does the inner loop body execute in total?", "options": ["8", "15", "5", "3"], "answer": 1 },
-                { "type": "mcq", "question": "Which of the following has a variable naming bug in nested loops?", "options": ["for i in range(3):\n    for j in range(3):", "for i in range(3):\n    for i in range(3):", "for x in range(3):\n    for y in range(3):", "while count < 3:\n    for i in range(3):"], "answer": 1 },
-                { "type": "fill", "question": "For each single iteration of the outer loop, the inner loop runs _____ from start to finish.", "answer": "completely" },
-                { "type": "fill", "question": "Sibling nested statements inside the inner loop of a nested structure must be indented by _____ spaces.", "answer": "8" },
-                { "type": "fill", "question": "In a nested loop with i (outer, range(2)) and j (inner, range(2)), the final output coordinate printed is _____.", "answer": "1 1" },
-                { "type": "tf", "question": "You can nest a while loop inside a for loop.", "answer": "true" },
-                { "type": "tf", "question": "Sibling nested loops must share the same loop variable.", "answer": "false" },
-                { "type": "tf", "question": "Nested loops are frequently used to print 2D grids or coordinates.", "answer": "true" },
-                { "type": "short", "question": "Explain the execution order of: for i in range(2): for j in range(2): print(i, j)", "sampleAnswer": "First, i is 0. The inner loop runs with j = 0 and j = 1, printing '0 0' and '0 1'. Then, i becomes 1. The inner loop resets and runs with j = 0 and j = 1, printing '1 0' and '1 1'." }
+                {
+                    "type": "mcq",
+                    "question": "What is a nested loop in programming?",
+                    "options": [
+                        "A loop inside another loop",
+                        "A loop inside an if statement",
+                        "A function that calls itself",
+                        "A loop that never stops"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "If the outer loop runs 3 times and the inner loop runs 5 times, how many times does the inner loop body execute in total?",
+                    "options": [
+                        "8",
+                        "15",
+                        "5",
+                        "3"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of the following has a variable naming bug in nested loops?",
+                    "options": [
+                        "for i in range(3):\n    for j in range(3):",
+                        "for i in range(3):\n    for i in range(3):",
+                        "for x in range(3):\n    for y in range(3):",
+                        "while count < 3:\n    for i in range(3):"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "For each single iteration of the outer loop, the inner loop runs _____ from start to finish. (completely / 1 1 / 8 / variable)",
+                    "answer": "completely"
+                },
+                {
+                    "type": "fill",
+                    "question": "Sibling nested statements inside the inner loop of a nested structure must be indented by _____ spaces. (8 / 9 / 10 / 7)",
+                    "answer": "8"
+                },
+                {
+                    "type": "fill",
+                    "question": "In a nested loop with i (outer, range(2)) and j (inner, range(2)), the final output coordinate printed is _____. (1 1 / completely / 8 / Variable)",
+                    "answer": "1 1"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can nest a while loop inside a for loop.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Sibling nested loops must share the same loop variable.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Nested loops are frequently used to print 2D grids or coordinates.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the execution order of: for i in range(2): for j in range(2): print(i, j)",
+                    "sampleAnswer": "First, i is 0. The inner loop runs with j = 0 and j = 1, printing '0 0' and '0 1'. Then, i becomes 1. The inner loop resets and runs with j = 0 and j = 1, printing '1 0' and '1 1'."
+                }
             ]
         },
-
         "scenario": "Write a nested loop to print coordinates in a 2x2 grid. The outer loop variable i should iterate through range(2). The inner loop variable j should iterate through range(2). Inside the inner loop, print the values of i and j separated by a space.",
         "hint": "Use for i in range(2): as outer and for j in range(2): indented as inner.",
         "wrongHint": "Make sure you use distinct variables i and j, and indent the print statement properly by 8 spaces!",
@@ -2331,38 +4551,112 @@ window.levels = [
         "id": 41,
         "title": "break",
         "concept": "Terminating a loop execution prematurely when a specific condition is met using the 'break' keyword in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The break Statement",
             "subheading": "Exiting a loop prematurely",
             "body": "<p>Sometimes you want to stop a loop immediately, before it completes all its iterations. In Python, the <strong><code>break</code></strong> statement is used to exit a loop prematurely.</p>\n\n<p>When Python encounters <code>break</code> inside a loop, it <strong>jumps out of the loop block</strong> immediately. Execution then proceeds to the first line of code written after the loop.</p>\n\n<h3>Example</h3>\n<pre class=\"code-example\">for num in range(1, 10):\n    if num == 5:\n        break # Exit the loop immediately when num is 5\n    print(num)\nprint(\"Loop finished!\")</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">1\n2\n3\n4\nLoop finished!</pre>\n\n<p>Notice that <code>5</code> is not printed. The loop stopped the moment <code>num</code> became <code>5</code>. The <code>break</code> statement works inside both <code>for</code> and <code>while</code> loops. It is especially useful for stopping search operations once an item is found!</p>"
         },
-
         "qna": [
-            { "q": "What does the break statement do in a loop?", "a": "The <code>break</code> statement terminates the current loop immediately, shifting execution flow to the first line of code outside the loop block." },
-            { "q": "In what situations is break commonly used?", "a": "It is commonly used when searching for an item (to stop looping once found) or to exit a <code>while True</code> loop based on user input or a specific termination condition." },
-            { "q": "Does break exit all loops in a nested structure?", "a": "No. The <code>break</code> keyword only terminates the **innermost loop** that contains it. The outer loops will continue running." },
-            { "q": "Can I use break inside an if statement that is not inside a loop?", "a": "No. Using <code>break</code> outside a loop triggers a SyntaxError: <code>'break' outside loop</code>." },
-            { "q": "What happens to the remaining iterations of a loop after a break is executed?", "a": "They are completely skipped. The loop is finished and will not iterate any further." }
+            {
+                "q": "What does the break statement do in a loop?",
+                "a": "The <code>break</code> statement terminates the current loop immediately, shifting execution flow to the first line of code outside the loop block."
+            },
+            {
+                "q": "In what situations is break commonly used?",
+                "a": "It is commonly used when searching for an item (to stop looping once found) or to exit a <code>while True</code> loop based on user input or a specific termination condition."
+            },
+            {
+                "q": "Does break exit all loops in a nested structure?",
+                "a": "No. The <code>break</code> keyword only terminates the **innermost loop** that contains it. The outer loops will continue running."
+            },
+            {
+                "q": "Can I use break inside an if statement that is not inside a loop?",
+                "a": "No. Using <code>break</code> outside a loop triggers a SyntaxError: <code>'break' outside loop</code>."
+            },
+            {
+                "q": "What happens to the remaining iterations of a loop after a break is executed?",
+                "a": "They are completely skipped. The loop is finished and will not iterate any further."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's break statement!",
             "questions": [
-                { "type": "mcq", "question": "What keyword is used to exit a loop immediately?", "options": ["exit", "stop", "break", "continue"], "answer": 2 },
-                { "type": "mcq", "question": "What is printed by this code?\nfor i in range(1, 5):\n    if i == 3: break\n    print(i)", "options": ["1, 2, 3, 4", "1, 2", "1, 2, 3", "3, 4"], "answer": 1 },
-                { "type": "mcq", "question": "If break is executed inside a nested inner loop, which loop stops?", "options": ["Only the inner loop", "Only the outer loop", "Both loops", "Neither loop"], "answer": 0 },
-                { "type": "fill", "question": "The break statement is syntactically invalid if it is not placed inside a _____.", "answer": "loop" },
-                { "type": "fill", "question": "If count = 1 and we run: while True: print('A'); break, the letter 'A' is printed _____ times.", "answer": "1" },
-                { "type": "fill", "question": "In a loop of range(1, 6), if we break when i == 4, the numbers printed before breaking are 1, 2, and _____.", "answer": "3" },
-                { "type": "tf", "question": "The break statement can be used inside both 'for' and 'while' loops.", "answer": "true" },
-                { "type": "tf", "question": "A break statement will execute the else block of a loop in Python.", "answer": "false" },
-                { "type": "tf", "question": "Placing a break statement directly inside a standalone if-statement outside any loop is valid.", "answer": "false" },
-                { "type": "short", "question": "Explain what happens when this code runs: x = 1; while x < 10: if x == 3: break; print(x); x += 1", "sampleAnswer": "It prints 1, then 2. When x reaches 3, the condition x == 3 triggers break, terminating the loop. Only 1 and 2 print." }
+                {
+                    "type": "mcq",
+                    "question": "What keyword is used to exit a loop immediately?",
+                    "options": [
+                        "exit",
+                        "stop",
+                        "break",
+                        "continue"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is printed by this code?\nfor i in range(1, 5):\n    if i == 3: break\n    print(i)",
+                    "options": [
+                        "1, 2, 3, 4",
+                        "1, 2",
+                        "1, 2, 3",
+                        "3, 4"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If break is executed inside a nested inner loop, which loop stops?",
+                    "options": [
+                        "Only the inner loop",
+                        "Only the outer loop",
+                        "Both loops",
+                        "Neither loop"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "The break statement is syntactically invalid if it is not placed inside a _____. (1 / variable / 3 / loop)",
+                    "answer": "loop"
+                },
+                {
+                    "type": "fill",
+                    "question": "If count = 1 and we run: while True: print('A'); break, the letter 'A' is printed _____ times. (3 / 2 / 1 / 0)",
+                    "answer": "1"
+                },
+                {
+                    "type": "fill",
+                    "question": "In a loop of range(1, 6), if we break when i == 4, the numbers printed before breaking are 1, 2, and _____. (5 / 4 / 3 / 2)",
+                    "answer": "3"
+                },
+                {
+                    "type": "tf",
+                    "question": "The break statement can be used inside both 'for' and 'while' loops.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A break statement will execute the else block of a loop in Python.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Placing a break statement directly inside a standalone if-statement outside any loop is valid.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain what happens when this code runs: x = 1; while x < 10: if x == 3: break; print(x); x += 1",
+                    "sampleAnswer": "It prints 1, then 2. When x reaches 3, the condition x == 3 triggers break, terminating the loop. Only 1 and 2 print."
+                }
             ]
         },
-
         "scenario": "Nobita is searching for the number 7. Write a for loop to search through numbers from 1 to 10. Use for num in range(1, 11):. If num is equal to 7, execute a break statement to stop searching. Otherwise, print the value of num.",
         "hint": "Check if num == 7:, indent and break, otherwise print(num).",
         "wrongHint": "Make sure you break out of the loop when num == 7 and print only the numbers before 7!",
@@ -2373,38 +4667,112 @@ window.levels = [
         "id": 42,
         "title": "continue",
         "concept": "Skipping the remaining code in the current iteration and moving to the next cycle using the 'continue' keyword in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The continue Statement",
             "subheading": "Skipping the current iteration",
             "body": "<p>What if you don't want to stop the whole loop, but just want to <strong>skip the rest of the current iteration</strong> and jump straight to the next one? In Python, we use the <strong><code>continue</code></strong> statement to do exactly this.</p>\n\n<p>When Python encounters <code>continue</code> inside a loop:</p>\n<ol class=\"desc-list\">\n    <li>It immediately skips the remaining lines of code inside the loop for the current cycle.</li>\n    <li>It jumps straight back to the header of the loop to begin the **next iteration** check.</li>\n</ol>\n\n<h3>Example</h3>\n<pre class=\"code-example\">for num in range(1, 6):\n    if num == 3:\n        continue # Skip printing 3 and go to next number\n    print(num)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">1\n2\n4\n5</pre>\n\n<p>Notice that `3` is skipped, but the loop continues printing `4` and `5`. Unlike <code>break</code> which stops the whole loop, <code>continue</code> only skips the current iteration.</p>"
         },
-
         "qna": [
-            { "q": "What does the continue statement do?", "a": "The <code>continue</code> statement skips the rest of the code in the current loop iteration and moves execution straight to the next iteration of the loop." },
-            { "q": "How does continue differ from break?", "a": "<code>break</code> exits the entire loop completely, whereas <code>continue</code> only skips the remaining code of the current iteration and keeps the loop running for subsequent cycles." },
-            { "q": "What happens to the counter variable in a while loop if continue is executed before it is incremented?", "a": "If you skip the increment statement inside a <code>while</code> loop by calling <code>continue</code> before it, the loop variable is never updated, which will cause an infinite loop!" },
-            { "q": "Can I use continue inside both for and while loops?", "a": "Yes, <code>continue</code> works in both <code>for</code> and <code>while</code> loops." },
-            { "q": "Does continue trigger a SyntaxError if used outside a loop?", "a": "Yes, using <code>continue</code> outside a loop triggers a SyntaxError: <code>'continue' not properly in loop</code>." }
+            {
+                "q": "What does the continue statement do?",
+                "a": "The <code>continue</code> statement skips the rest of the code in the current loop iteration and moves execution straight to the next iteration of the loop."
+            },
+            {
+                "q": "How does continue differ from break?",
+                "a": "<code>break</code> exits the entire loop completely, whereas <code>continue</code> only skips the remaining code of the current iteration and keeps the loop running for subsequent cycles."
+            },
+            {
+                "q": "What happens to the counter variable in a while loop if continue is executed before it is incremented?",
+                "a": "If you skip the increment statement inside a <code>while</code> loop by calling <code>continue</code> before it, the loop variable is never updated, which will cause an infinite loop!"
+            },
+            {
+                "q": "Can I use continue inside both for and while loops?",
+                "a": "Yes, <code>continue</code> works in both <code>for</code> and <code>while</code> loops."
+            },
+            {
+                "q": "Does continue trigger a SyntaxError if used outside a loop?",
+                "a": "Yes, using <code>continue</code> outside a loop triggers a SyntaxError: <code>'continue' not properly in loop</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's continue statement!",
             "questions": [
-                { "type": "mcq", "question": "Which keyword is used to skip the rest of the current loop iteration and move to the next?", "options": ["pass", "continue", "skip", "break"], "answer": 1 },
-                { "type": "mcq", "question": "What is printed by this code?\nfor i in range(1, 4):\n    if i == 2: continue\n    print(i)", "options": ["1, 2, 3", "1, 3", "1", "3"], "answer": 1 },
-                { "type": "mcq", "question": "If continue is executed in a while loop, where does Python jump to?", "options": ["The first line outside the loop", "The next loop iteration check at the top", "The end of the program", "The previous line of code"], "answer": 1 },
-                { "type": "fill", "question": "While break terminates the entire loop, _____ only skips the current iteration.", "answer": "continue" },
-                { "type": "fill", "question": "If we use continue in a while loop, we must ensure the loop counter is updated _____ the continue statement is called.", "answer": "before" },
-                { "type": "fill", "question": "If continue is used in a range(5) loop, and we skip when i is odd, the numbers printed will be 0, 2, and _____.", "answer": "4" },
-                { "type": "tf", "question": "The continue keyword terminates the entire loop immediately.", "answer": "false" },
-                { "type": "tf", "question": "A continue statement can only be used inside loops.", "answer": "true" },
-                { "type": "tf", "question": "Iteration variables in a for loop still auto-update when continue is called.", "answer": "true" },
-                { "type": "short", "question": "Explain why this while loop is infinite: x = 1; while x <= 3: if x == 2: continue; print(x); x += 1", "sampleAnswer": "When x is 2, continue skips the rest of the block including x += 1. x stays 2 forever, creating an infinite loop." }
+                {
+                    "type": "mcq",
+                    "question": "Which keyword is used to skip the rest of the current loop iteration and move to the next?",
+                    "options": [
+                        "pass",
+                        "continue",
+                        "skip",
+                        "break"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is printed by this code?\nfor i in range(1, 4):\n    if i == 2: continue\n    print(i)",
+                    "options": [
+                        "1, 2, 3",
+                        "1, 3",
+                        "1",
+                        "3"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If continue is executed in a while loop, where does Python jump to?",
+                    "options": [
+                        "The first line outside the loop",
+                        "The next loop iteration check at the top",
+                        "The end of the program",
+                        "The previous line of code"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "While break terminates the entire loop, _____ only skips the current iteration. (else / continue / if / elif)",
+                    "answer": "continue"
+                },
+                {
+                    "type": "fill",
+                    "question": "If we use continue in a while loop, we must ensure the loop counter is updated _____ the continue statement is called. (continue / variable / before / 4)",
+                    "answer": "before"
+                },
+                {
+                    "type": "fill",
+                    "question": "If continue is used in a range(5) loop, and we skip when i is odd, the numbers printed will be 0, 2, and _____. (6 / 5 / 4 / 3)",
+                    "answer": "4"
+                },
+                {
+                    "type": "tf",
+                    "question": "The continue keyword terminates the entire loop immediately.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A continue statement can only be used inside loops.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Iteration variables in a for loop still auto-update when continue is called.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why this while loop is infinite: x = 1; while x <= 3: if x == 2: continue; print(x); x += 1",
+                    "sampleAnswer": "When x is 2, continue skips the rest of the block including x += 1. x stays 2 forever, creating an infinite loop."
+                }
             ]
         },
-
         "scenario": "Nobita wants to print odd numbers from 1 to 5. Write a for loop using range(1, 6). If num is even (num % 2 == 0), execute a continue statement to skip printing. Otherwise, print the value of num.",
         "hint": "Check if num % 2 == 0:, indent and continue, then print(num) below it.",
         "wrongHint": "Make sure you skip even numbers using continue and print only 1, 3, 5!",
@@ -2415,38 +4783,112 @@ window.levels = [
         "id": 43,
         "title": "pass",
         "concept": "Using the 'pass' statement as a syntactical placeholder for empty code blocks in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The pass Statement",
             "subheading": "The placeholder statement",
             "body": "<p>In Python, blocks of code (like loops, conditional statements, functions, and classes) cannot be empty. If you define a loop or condition without any code inside, Python will raise an <code>IndentationError</code> or <code>SyntaxError</code>.</p>\n\n<p>What if you want to write a loop structure now, but implement its code logic later? This is where the <strong><code>pass</code></strong> statement comes in. It is a <strong>null statement</strong> (does absolutely nothing) used as a syntactical placeholder.</p>\n\n<h3>Example</h3>\n<pre class=\"code-example\">for num in range(5):\n    if num == 3:\n        pass # TODO: Add special handling for 3 later!\n    print(num)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">0\n1\n2\n3\n4</pre>\n\n<p>Notice that `3` is printed normally. The <code>pass</code> statement executes silently and performs no action. However, it successfully prevented Python from raising a syntax error! You can use <code>pass</code> in empty loops, empty functions, or empty conditional blocks.</p>"
         },
-
         "qna": [
-            { "q": "What does the pass statement do in Python?", "a": "The <code>pass</code> statement is a null operation. When it is executed, nothing happens. It is used as a placeholder where code is syntactically required but no action is needed." },
-            { "q": "Why does Python need a pass statement?", "a": "Since Python uses indentation to define code blocks, empty blocks are not allowed. The <code>pass</code> statement satisfies this syntax requirement without executing any logic." },
-            { "q": "How does pass differ from continue?", "a": "<code>continue</code> skips the rest of the current iteration and jumps to the next cycle. <code>pass</code> does absolutely nothing and allows the program to continue executing the rest of the code inside the current iteration." },
-            { "q": "Can I use pass in empty if statements or functions?", "a": "Yes! You can use <code>pass</code> anywhere a code block is syntactically required, including <code>if</code> statements, functions, classes, and loops." },
-            { "q": "Does pass print anything to the screen?", "a": "No, it executes silently and performs no actions." }
+            {
+                "q": "What does the pass statement do in Python?",
+                "a": "The <code>pass</code> statement is a null operation. When it is executed, nothing happens. It is used as a placeholder where code is syntactically required but no action is needed."
+            },
+            {
+                "q": "Why does Python need a pass statement?",
+                "a": "Since Python uses indentation to define code blocks, empty blocks are not allowed. The <code>pass</code> statement satisfies this syntax requirement without executing any logic."
+            },
+            {
+                "q": "How does pass differ from continue?",
+                "a": "<code>continue</code> skips the rest of the current iteration and jumps to the next cycle. <code>pass</code> does absolutely nothing and allows the program to continue executing the rest of the code inside the current iteration."
+            },
+            {
+                "q": "Can I use pass in empty if statements or functions?",
+                "a": "Yes! You can use <code>pass</code> anywhere a code block is syntactically required, including <code>if</code> statements, functions, classes, and loops."
+            },
+            {
+                "q": "Does pass print anything to the screen?",
+                "a": "No, it executes silently and performs no actions."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's pass statement!",
             "questions": [
-                { "type": "mcq", "question": "What is the pass statement in Python?", "options": ["A loop control keyword", "A null statement placeholder", "A debugging tool", "A variable declaration"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of this code?\nfor i in range(3):\n    if i == 1: pass\n    print(i)", "options": ["0, 2", "0, 1, 2", "1, 2", "0"], "answer": 1 },
-                { "type": "mcq", "question": "If you write an empty loop block in Python without the pass statement, what happens?", "options": ["The loop runs infinitely", "Python throws an IndentationError or SyntaxError", "The loop is ignored", "Nothing"], "answer": 1 },
-                { "type": "fill", "question": "The pass statement is a _____ statement that performs no action.", "answer": "null" },
-                { "type": "fill", "question": "Unlike continue, which skips to the next iteration, the _____ statement lets execution flow normally down the current block.", "answer": "pass" },
-                { "type": "fill", "question": "If we want to define a function but write its body later, we can write _____ in its body.", "answer": "pass" },
-                { "type": "tf", "question": "The pass statement is used to exit loops early.", "answer": "false" },
-                { "type": "tf", "question": "Using pass avoids syntax errors in empty conditional blocks.", "answer": "true" },
-                { "type": "tf", "question": "The pass statement prints a warning message to the console when executed.", "answer": "false" },
-                { "type": "short", "question": "Explain why this code raises an error, and how to fix it: if x > 5: print('Done')", "sampleAnswer": "The if block is empty, which raises an IndentationError. Fix it by placing 'pass' indented under the if line." }
+                {
+                    "type": "mcq",
+                    "question": "What is the pass statement in Python?",
+                    "options": [
+                        "A loop control keyword",
+                        "A null statement placeholder",
+                        "A debugging tool",
+                        "A variable declaration"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of this code?\nfor i in range(3):\n    if i == 1: pass\n    print(i)",
+                    "options": [
+                        "0, 2",
+                        "0, 1, 2",
+                        "1, 2",
+                        "0"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If you write an empty loop block in Python without the pass statement, what happens?",
+                    "options": [
+                        "The loop runs infinitely",
+                        "Python throws an IndentationError or SyntaxError",
+                        "The loop is ignored",
+                        "Nothing"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The pass statement is a _____ statement that performs no action. (pass / function / null / variable)",
+                    "answer": "null"
+                },
+                {
+                    "type": "fill",
+                    "question": "Unlike continue, which skips to the next iteration, the _____ statement lets execution flow normally down the current block. (else / elif / pass / if)",
+                    "answer": "pass"
+                },
+                {
+                    "type": "fill",
+                    "question": "If we want to define a function but write its body later, we can write _____ in its body. (else / elif / pass / if)",
+                    "answer": "pass"
+                },
+                {
+                    "type": "tf",
+                    "question": "The pass statement is used to exit loops early.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using pass avoids syntax errors in empty conditional blocks.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The pass statement prints a warning message to the console when executed.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why this code raises an error, and how to fix it: if x > 5: print('Done')",
+                    "sampleAnswer": "The if block is empty, which raises an IndentationError. Fix it by placing 'pass' indented under the if line."
+                }
             ]
         },
-
         "scenario": "Write an if statement that does nothing when x is even, using the pass statement. Define x = 4. If x is even (x % 2 == 0), use pass. Otherwise (else), print 'Odd'.",
         "hint": "Write if x % 2 == 0:, indent and write pass. Align else: with if and print('Odd').",
         "wrongHint": "Make sure you use the pass keyword in the even block to avoid a syntax error!",
@@ -2457,38 +4899,112 @@ window.levels = [
         "id": 44,
         "title": "Pattern printing",
         "concept": "Constructing geometric shapes and grids using nested loops and string multiplication in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Pattern Printing",
             "subheading": "Building grids and shapes",
             "body": "<p>In Level 40, we learned how nested loops execute. One of the most famous applications of nested loops is <strong>Pattern Printing</strong>! It is a classic programming exercise to practice loop control by printing grids, triangles, or pyramids of symbols (usually asterisks <code>*</code>).</p>\n\n<h3>Printing a 3x3 Grid</h3>\n<pre class=\"code-example\">for i in range(3):\n    for j in range(3):\n        print(\"*\", end=\" \") # end=\" \" keeps prints on the same line\n    print() # Prints a newline to move to the next row</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">* * *\n* * *\n* * *</pre>\n\n<h3>The print() end Parameter</h3>\n<p>By default, Python's <code>print()</code> function ends with a newline character (<code>\\n</code>), which starts a new line. Passing <code>end=\" \"</code> tells Python to end the print with a space instead, keeping subsequent prints on the same row.</p>\n\n<h3>Printing a Triangle with String Multiplication</h3>\n<p>Python allows you to multiply a string by an integer to repeat it. E.g. <code>\"*\" * 3</code> returns <code>\"***\"</code>. We can print a triangle easily using this feature:</p>\n<pre class=\"code-example\">for i in range(1, 4):\n    print(\"*\" * i)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">*\n**\n***</pre>"
         },
-
         "qna": [
-            { "q": "What is pattern printing?", "a": "Pattern printing is a programming exercise where nested loops or string multiplication are used to display geometric shapes or grids of symbols (such as stars or numbers) in the console." },
-            { "q": "What does the end parameter do in the print() function?", "a": "By default, <code>print()</code> ends with a newline character (<code>\\n</code>), which starts a new line. Specifying <code>end=\" \"</code> replaces it with a space, so subsequent prints stay on the same line." },
-            { "q": "How do I print an empty line to start a new row?", "a": "Simply call <code>print()</code> without any arguments. E.g. <code>print()</code>." },
-            { "q": "What is string multiplication in Python?", "a": "It is a Python feature where multiplying a string by an integer <code>n</code> repeats the string <code>n</code> times. E.g. <code>print(\"*\" * 3)</code> outputs <code>***</code>." },
-            { "q": "When should I use nested loops instead of string multiplication for patterns?", "a": "Use nested loops when the symbols inside the row are dynamic or depend on the column position (e.g. printing coordinates or a grid of increasing numbers like <code>1 2 3</code>)." }
+            {
+                "q": "What is pattern printing?",
+                "a": "Pattern printing is a programming exercise where nested loops or string multiplication are used to display geometric shapes or grids of symbols (such as stars or numbers) in the console."
+            },
+            {
+                "q": "What does the end parameter do in the print() function?",
+                "a": "By default, <code>print()</code> ends with a newline character (<code>\\n</code>), which starts a new line. Specifying <code>end=\" \"</code> replaces it with a space, so subsequent prints stay on the same line."
+            },
+            {
+                "q": "How do I print an empty line to start a new row?",
+                "a": "Simply call <code>print()</code> without any arguments. E.g. <code>print()</code>."
+            },
+            {
+                "q": "What is string multiplication in Python?",
+                "a": "It is a Python feature where multiplying a string by an integer <code>n</code> repeats the string <code>n</code> times. E.g. <code>print(\"*\" * 3)</code> outputs <code>***</code>."
+            },
+            {
+                "q": "When should I use nested loops instead of string multiplication for patterns?",
+                "a": "Use nested loops when the symbols inside the row are dynamic or depend on the column position (e.g. printing coordinates or a grid of increasing numbers like <code>1 2 3</code>)."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's pattern printing techniques!",
             "questions": [
-                { "type": "mcq", "question": "How does Python's print() function behave by default after printing its arguments?", "options": ["It stays on the same line", "It prints a space", "It moves to a new line", "It prints a tab"], "answer": 2 },
-                { "type": "mcq", "question": "What does print('*', end=' ') accomplish?", "options": ["Prints * and starts a new line", "Prints * and ends with a space, staying on the same line", "Prints * three times", "Raises a SyntaxError"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of print('A' * 4)?", "options": ["A4", "AAAA", "A A A A", "Error"], "answer": 1 },
-                { "type": "fill", "question": "To move execution to a new row after printing a line of characters, we write an empty _____ function call.", "answer": "print" },
-                { "type": "fill", "question": "The expression print('*' * 0) will output _____ characters.", "answer": "0" },
-                { "type": "fill", "question": "In a nested loop printing a grid, the outer loop controls the number of _____.", "answer": "rows" },
-                { "type": "tf", "question": "String multiplication works with floating-point numbers.", "answer": "false" },
-                { "type": "tf", "question": "Using end='' inside print() prevents starting a new line.", "answer": "true" },
-                { "type": "tf", "question": "The inner loop in a grid-printing nested loop controls the characters in a single row.", "answer": "true" },
-                { "type": "short", "question": "Write a nested loop snippet to print a 2x4 grid of stars (*).", "sampleAnswer": "for i in range(2):\n    for j in range(4):\n        print('*', end='')\n    print()" }
+                {
+                    "type": "mcq",
+                    "question": "How does Python's print() function behave by default after printing its arguments?",
+                    "options": [
+                        "It stays on the same line",
+                        "It prints a space",
+                        "It moves to a new line",
+                        "It prints a tab"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does print('*', end=' ') accomplish?",
+                    "options": [
+                        "Prints * and starts a new line",
+                        "Prints * and ends with a space, staying on the same line",
+                        "Prints * three times",
+                        "Raises a SyntaxError"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of print('A' * 4)?",
+                    "options": [
+                        "A4",
+                        "AAAA",
+                        "A A A A",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To move execution to a new row after printing a line of characters, we write an empty _____ function call. (input / min / print / len)",
+                    "answer": "print"
+                },
+                {
+                    "type": "fill",
+                    "question": "The expression print('*' * 0) will output _____ characters. (1 / 0 / 2 / -1)",
+                    "answer": "0"
+                },
+                {
+                    "type": "fill",
+                    "question": "In a nested loop printing a grid, the outer loop controls the number of _____. (variable / rows / print / 0)",
+                    "answer": "rows"
+                },
+                {
+                    "type": "tf",
+                    "question": "String multiplication works with floating-point numbers.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using end='' inside print() prevents starting a new line.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The inner loop in a grid-printing nested loop controls the characters in a single row.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write a nested loop snippet to print a 2x4 grid of stars (*).",
+                    "sampleAnswer": "for i in range(2):\n    for j in range(4):\n        print('*', end='')\n    print()"
+                }
             ]
         },
-
         "scenario": "Write a program to print a right-angled triangle pattern of stars with a height of 3. Loop through rows using for i in range(1, 4):. In each row i, print i number of stars using string multiplication print('*' * i).",
         "hint": "Write for i in range(1, 4):, then indent and write print('*' * i).",
         "wrongHint": "Make sure you print a triangle of stars (*) with height 3, printing 1, 2, and then 3 stars!",
@@ -2499,38 +5015,112 @@ window.levels = [
         "id": 45,
         "title": "Loop coding challenge",
         "concept": "Solving the Stage 5 final coding challenge using combined loop logic and conditions in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Loop Coding Challenge",
             "subheading": "The final Stage 5 loop challenge!",
             "body": "<p>Welcome to <strong>Level 45</strong>, the final challenge of <strong>STAGE 5: Loops</strong>! In this room, you will face an algorithmic problem requiring you to compute mathematical aggregates and control loop executions.</p>\n\n<p>You have mastered:</p>\n<ul class=\"desc-list\">\n    <li><code>for</code> and <code>while</code> loops.</li>\n    <li>Controlling iterations with <code>range()</code>.</li>\n    <li>Breaking loops early with <code>break</code> and skipping with <code>continue</code>.</li>\n    <li>Nesting loops and pattern layouts.</li>\n</ul>\n\n<p>Verify your readiness using the review questions and diagnostic tests below, then complete the final loop challenge inside the coding editor!</p>"
         },
-
         "qna": [
-            { "q": "What is the Stage 5 loop coding challenge?", "a": "It is a comprehensive problem testing your ability to construct and control loops using conditions and control statements (like <code>break</code> and <code>continue</code>) in Python." },
-            { "q": "How do I choose between a for loop and a while loop for a challenge?", "a": "Use a <code>for</code> loop when iterating over a known range or sequence. Use a <code>while</code> loop when the number of cycles is determined dynamically by a condition." },
-            { "q": "How do I avoid infinite loops in a while loop challenge?", "a": "Ensure the loop condition variable is modified correctly inside the loop body, or that a <code>break</code> statement is guaranteed to execute." },
-            { "q": "Can I place multiple break statements in a single loop?", "a": "Yes! A loop can have multiple <code>if</code> conditions that trigger <code>break</code> statements. When any of them are met, the loop terminates immediately." },
-            { "q": "What are the key things to verify before submitting loop code?", "a": "Check the start and stop bounds, ensure variables are updated correctly, verify indentations, and verify the console outputs!" }
+            {
+                "q": "What is the Stage 5 loop coding challenge?",
+                "a": "It is a comprehensive problem testing your ability to construct and control loops using conditions and control statements (like <code>break</code> and <code>continue</code>) in Python."
+            },
+            {
+                "q": "How do I choose between a for loop and a while loop for a challenge?",
+                "a": "Use a <code>for</code> loop when iterating over a known range or sequence. Use a <code>while</code> loop when the number of cycles is determined dynamically by a condition."
+            },
+            {
+                "q": "How do I avoid infinite loops in a while loop challenge?",
+                "a": "Ensure the loop condition variable is modified correctly inside the loop body, or that a <code>break</code> statement is guaranteed to execute."
+            },
+            {
+                "q": "Can I place multiple break statements in a single loop?",
+                "a": "Yes! A loop can have multiple <code>if</code> conditions that trigger <code>break</code> statements. When any of them are met, the loop terminates immediately."
+            },
+            {
+                "q": "What are the key things to verify before submitting loop code?",
+                "a": "Check the start and stop bounds, ensure variables are updated correctly, verify indentations, and verify the console outputs!"
+            }
         ],
-
         "test": {
             "intro": "Let's check your preparation for the loop coding challenge!",
             "questions": [
-                { "type": "mcq", "question": "Which loop is best suited to iterate over a list of items?", "options": ["while loop", "for loop", "infinite loop", "pass loop"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of this code?\ncount = 0\nfor i in range(1, 6):\n    if i % 2 == 0: count += 1\nprint(count)", "options": ["5", "2", "3", "0"], "answer": 1 },
-                { "type": "mcq", "question": "If a while loop condition is 'while True:', how can the loop stop?", "options": ["It can never stop", "Using a break statement inside the loop", "Using a continue statement", "When the counter reaches 100"], "answer": 1 },
-                { "type": "fill", "question": "To calculate the sum of numbers in a loop, we add each number to an accumulator variable initialized to _____.", "answer": "0" },
-                { "type": "fill", "question": "The statement that skips the rest of the current iteration is _____.", "answer": "continue" },
-                { "type": "fill", "question": "If total = 0, and we loop 'for i in range(1, 4): total += i', the final value of total is _____.", "answer": "6" },
-                { "type": "tf", "question": "You can use a break statement inside a for loop.", "answer": "true" },
-                { "type": "tf", "question": "A continue statement terminates the entire loop.", "answer": "false" },
-                { "type": "tf", "question": "The loop condition 'while count <= 5:' will execute the loop body one last time when count is exactly 5.", "answer": "true" },
-                { "type": "short", "question": "Explain what this loop computes: product = 1; for i in range(1, 5): product *= i", "sampleAnswer": "It computes the product (factorial) of numbers from 1 to 4: 1 * 2 * 3 * 4 = 24." }
+                {
+                    "type": "mcq",
+                    "question": "Which loop is best suited to iterate over a list of items?",
+                    "options": [
+                        "while loop",
+                        "for loop",
+                        "infinite loop",
+                        "pass loop"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of this code?\ncount = 0\nfor i in range(1, 6):\n    if i % 2 == 0: count += 1\nprint(count)",
+                    "options": [
+                        "5",
+                        "2",
+                        "3",
+                        "0"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If a while loop condition is 'while True:', how can the loop stop?",
+                    "options": [
+                        "It can never stop",
+                        "Using a break statement inside the loop",
+                        "Using a continue statement",
+                        "When the counter reaches 100"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To calculate the sum of numbers in a loop, we add each number to an accumulator variable initialized to _____. (1 / 0 / 2 / -1)",
+                    "answer": "0"
+                },
+                {
+                    "type": "fill",
+                    "question": "The statement that skips the rest of the current iteration is _____. (else / continue / if / elif)",
+                    "answer": "continue"
+                },
+                {
+                    "type": "fill",
+                    "question": "If total = 0, and we loop 'for i in range(1, 4): total += i', the final value of total is _____. (7 / 8 / 5 / 6)",
+                    "answer": "6"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use a break statement inside a for loop.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A continue statement terminates the entire loop.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The loop condition 'while count <= 5:' will execute the loop body one last time when count is exactly 5.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain what this loop computes: product = 1; for i in range(1, 5): product *= i",
+                    "sampleAnswer": "It computes the product (factorial) of numbers from 1 to 4: 1 * 2 * 3 * 4 = 24."
+                }
             ]
         },
-
         "scenario": "Doraemon needs to count his dorayaki buns. Find the sum of all odd numbers from 1 to 9. Initialize dorayaki_sum = 0. Write a for loop to iterate over all odd numbers from 1 to 9 using range(1, 10, 2). Inside the loop, add the current number to dorayaki_sum, and finally print dorayaki_sum.",
         "hint": "Loop for i in range(1, 10, 2): and add i to dorayaki_sum.",
         "wrongHint": "Make sure you sum only the odd numbers (1, 3, 5, 7, 9) and print the final sum value!",
@@ -2541,38 +5131,112 @@ window.levels = [
         "id": 46,
         "title": "Introduction to strings",
         "concept": "Understanding string creation, single vs double quotes, multi-line strings, and basic operations like concatenation and repetition in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Introduction to Strings",
             "subheading": "Working with text data",
             "body": "<p>Text data in Python is represented as a <strong>String</strong> (a sequence of characters). You will work with strings in almost every program you write!</p>\n\n<h3>Creating Strings</h3>\n<ul class=\"desc-list\">\n    <li><strong>Single or Double Quotes:</strong> You can define strings using single quotes (<code>'hello'</code>) or double quotes (<code>\"hello\"</code>). Both work identically. Double quotes are useful when your string contains a single quote contract, like <code>\"Nobita's gadget\"</code>!</li>\n    <li><strong>Triple Quotes:</strong> For multi-line text blocks, enclose your string inside triple quotes (<code>'''hello'''</code> or <code>\"\"\"hello\"\"\"</code>).</li>\n</ul>\n\n<h3>Basic String Operations</h3>\n<ol class=\"desc-list\">\n    <li><strong>Concatenation (addition):</strong> Combine strings together using the <code>+</code> operator. E.g. <code>\"Dora\" + \"emon\"</code> &rarr; <code>\"Doraemon\"</code>.</li>\n    <li><strong>Repetition (multiplication):</strong> Repeat strings multiple times using the <code>*</code> operator. E.g. <code>\"A\" * 3</code> &rarr; <code>\"AAA\"</code>.</li>\n</ol>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>TypeError Warning:</strong> You cannot concatenate a string and a number directly using the <code>+</code> operator (e.g. <code>\"Score: \" + 10</code>). You must first convert the number to a string using the <code>str()</code> function, or use f-strings!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a string in Python?", "a": "A string is a sequence of characters used to store and manipulate text data." },
-            { "q": "What is the difference between single and double quotes?", "a": "In Python, there is no structural difference. Both are used to create strings. Using one type makes it easier to include the other type inside the string (e.g. <code>\"Nobita's gadget\"</code>)." },
-            { "q": "How do I create a string that spans multiple lines?", "a": "Use triple quotes (three single quotes <code>'''</code> or three double quotes <code>\"\"\"</code>) to enclose multi-line strings." },
-            { "q": "Can I concatenate a string and an integer directly using '+'?", "a": "No. Doing so raises a TypeError. You must first convert the integer to a string using <code>str()</code>, or use f-strings. E.g. <code>\"Age: \" + str(10)</code>." },
-            { "q": "What happens when I multiply a string by a negative number?", "a": "Multiplying a string by 0 or a negative integer returns an empty string (<code>\"\"</code>)." }
+            {
+                "q": "What is a string in Python?",
+                "a": "A string is a sequence of characters used to store and manipulate text data."
+            },
+            {
+                "q": "What is the difference between single and double quotes?",
+                "a": "In Python, there is no structural difference. Both are used to create strings. Using one type makes it easier to include the other type inside the string (e.g. <code>\"Nobita's gadget\"</code>)."
+            },
+            {
+                "q": "How do I create a string that spans multiple lines?",
+                "a": "Use triple quotes (three single quotes <code>'''</code> or three double quotes <code>\"\"\"</code>) to enclose multi-line strings."
+            },
+            {
+                "q": "Can I concatenate a string and an integer directly using '+'?",
+                "a": "No. Doing so raises a TypeError. You must first convert the integer to a string using <code>str()</code>, or use f-strings. E.g. <code>\"Age: \" + str(10)</code>."
+            },
+            {
+                "q": "What happens when I multiply a string by a negative number?",
+                "a": "Multiplying a string by 0 or a negative integer returns an empty string (<code>\"\"</code>)."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of basic Python strings!",
             "questions": [
-                { "type": "mcq", "question": "How do you define a string in Python?", "options": ["Using single or double quotes", "Using curly braces {}", "Using square brackets []", "Without any quotes"], "answer": 0 },
-                { "type": "mcq", "question": "What does 'Hi ' + 'there' evaluate to?", "options": ["Hithere", "Hi there", "Hi+there", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "Which quote type is used for multi-line strings?", "options": ["Single quotes '", "Double quotes \"", "Triple quotes \"\"\"", "Backticks `"], "answer": 2 },
-                { "type": "fill", "question": "Combining two strings together using the '+' operator is called _____.", "answer": "concatenation" },
-                { "type": "fill", "question": "The result of 'Bye' * 2 is _____.", "answer": "ByeBye" },
-                { "type": "fill", "question": "Direct combination of 'Score: ' + 10 raises a _____Error.", "answer": "Type" },
-                { "type": "tf", "question": "Single quotes and double quotes can be mixed in the same string boundary (e.g. 'Hello\").", "answer": "false" },
-                { "type": "tf", "question": "A string in Python is immutable (cannot be changed in place).", "answer": "true" },
-                { "type": "tf", "question": "String multiplication works with any integer value.", "answer": "true" },
-                { "type": "short", "question": "Explain why this code raises an error: print('Age: ' + 12)", "sampleAnswer": "Python doesn't auto-convert integers to strings during concatenation. Convert it first using str(12)." }
+                {
+                    "type": "mcq",
+                    "question": "How do you define a string in Python?",
+                    "options": [
+                        "Using single or double quotes",
+                        "Using curly braces {}",
+                        "Using square brackets []",
+                        "Without any quotes"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does 'Hi ' + 'there' evaluate to?",
+                    "options": [
+                        "Hithere",
+                        "Hi there",
+                        "Hi+there",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which quote type is used for multi-line strings?",
+                    "options": [
+                        "Single quotes '",
+                        "Double quotes \"",
+                        "Triple quotes \"\"\"",
+                        "Backticks `"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Combining two strings together using the '+' operator is called _____. (Type / variable / concatenation / ByeBye)",
+                    "answer": "concatenation"
+                },
+                {
+                    "type": "fill",
+                    "question": "The result of 'Bye' * 2 is _____. (ByeBye / Type / Variable / concatenation)",
+                    "answer": "ByeBye"
+                },
+                {
+                    "type": "fill",
+                    "question": "Direct combination of 'Score: ' + 10 raises a _____Error. (TypeError / NameError / SyntaxError / Type)",
+                    "answer": "Type"
+                },
+                {
+                    "type": "tf",
+                    "question": "Single quotes and double quotes can be mixed in the same string boundary (e.g. 'Hello\").",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A string in Python is immutable (cannot be changed in place).",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "String multiplication works with any integer value.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why this code raises an error: print('Age: ' + 12)",
+                    "sampleAnswer": "Python doesn't auto-convert integers to strings during concatenation. Convert it first using str(12)."
+                }
             ]
         },
-
         "scenario": "Nobita wants to create a personalized greeting. Define first_name = 'Nobita' and last_name = 'Nobi'. Combine them into a variable 'full_name' with a space in between (using concatenation '+'), and print full_name.",
         "hint": "Use: full_name = first_name + ' ' + last_name.",
         "wrongHint": "Make sure you join them with a space and print only full_name!",
@@ -2583,38 +5247,112 @@ window.levels = [
         "id": 47,
         "title": "Indexing",
         "concept": "Accessing individual characters in a string using positive and negative indices in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "String Indexing",
             "subheading": "Accessing characters by position",
             "body": "<p>Every character in a string has a specific position number called an <strong>Index</strong>. We can access any character in a string using its index.</p>\n\n<h3>Positive Indexing (Left to Right)</h3>\n<p>In Python, indexing starts at <strong><code>0</code></strong> for the first character!</p>\n<p>For string <code>word = \"Python\"</code>:</p>\n<ul class=\"desc-list\">\n    <li><code>word[0]</code> &rarr; <code>'P'</code> (First character)</li>\n    <li><code>word[1]</code> &rarr; <code>'y'</code></li>\n    <li><code>word[5]</code> &rarr; <code>'n'</code> (Last character)</li>\n</ul>\n\n<h3>Negative Indexing (Right to Left)</h3>\n<p>Negative indices start at <strong><code>-1</code></strong> for the last character, allowing you to easily read backwards!</p>\n<ul class=\"desc-list\">\n    <li><code>word[-1]</code> &rarr; <code>'n'</code> (Last character)</li>\n    <li><code>word[-2]</code> &rarr; <code>'o'</code></li>\n    <li><code>word[-6]</code> &rarr; <code>'P'</code></li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>IndexError:</strong> Trying to access an index that is out of bounds (e.g. <code>word[10]</code> for a 6-letter string) will crash your program with an <code>IndexError: string index out of range</code>. Also remember that strings are <strong>immutable</strong>; you cannot change characters directly using <code>word[0] = 'X'</code>!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is indexing in strings?", "a": "Indexing is the method used to access a single character in a string using its position number enclosed in square brackets <code>[]</code>." },
-            { "q": "Where does string indexing start in Python?", "a": "Indexing always starts at <strong>0</strong> for the first character (positive index) and <strong>-1</strong> for the last character (negative index)." },
-            { "q": "What is negative indexing?", "a": "Negative indexing counts backward from the end of the string (right to left), with <code>[-1]</code> representing the last character, <code>[-2]</code> the second to last, and so on." },
-            { "q": "What happens if I try to access an index that is out of range?", "a": "Python raises an <code>IndexError: string index out of range</code>." },
-            { "q": "Can I use indexing to modify a character in a string directly?", "a": "No, because strings are immutable. Trying to edit them raises a <code>TypeError</code>." }
+            {
+                "q": "What is indexing in strings?",
+                "a": "Indexing is the method used to access a single character in a string using its position number enclosed in square brackets <code>[]</code>."
+            },
+            {
+                "q": "Where does string indexing start in Python?",
+                "a": "Indexing always starts at <strong>0</strong> for the first character (positive index) and <strong>-1</strong> for the last character (negative index)."
+            },
+            {
+                "q": "What is negative indexing?",
+                "a": "Negative indexing counts backward from the end of the string (right to left), with <code>[-1]</code> representing the last character, <code>[-2]</code> the second to last, and so on."
+            },
+            {
+                "q": "What happens if I try to access an index that is out of range?",
+                "a": "Python raises an <code>IndexError: string index out of range</code>."
+            },
+            {
+                "q": "Can I use indexing to modify a character in a string directly?",
+                "a": "No, because strings are immutable. Trying to edit them raises a <code>TypeError</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python string indexing!",
             "questions": [
-                { "type": "mcq", "question": "Which index accesses the first character of a string text?", "options": ["text[1]", "text[0]", "text[-0]", "text[first]"], "answer": 1 },
-                { "type": "mcq", "question": "Which index accesses the last character of a string text?", "options": ["text[-1]", "text[len(text)]", "text[last]", "text[0]"], "answer": 0 },
-                { "type": "mcq", "question": "If s = 'Dora', what is s[-2]?", "options": ["D", "o", "r", "a"], "answer": 2 },
-                { "type": "fill", "question": "Indexing in Python is done using _____ brackets.", "answer": "square" },
-                { "type": "fill", "question": "Accessing an index that does not exist in the string raises a(n) _____Error.", "answer": "Index" },
-                { "type": "fill", "question": "If s = 'Fly', s[0] returns the character _____.", "answer": "F" },
-                { "type": "tf", "question": "Negative indices count characters from right to left starting at -0.", "answer": "false" },
-                { "type": "tf", "question": "Writing s[0] = 'X' is a valid way to edit a string.", "answer": "false" },
-                { "type": "tf", "question": "The maximum index of a string is its length minus 1.", "answer": "true" },
-                { "type": "short", "question": "Explain why s[4] raises an error if s = 'Cute'.", "sampleAnswer": "'Cute' has a length of 4 (indices 0, 1, 2, 3). Index 4 is out of bounds, raising an IndexError." }
+                {
+                    "type": "mcq",
+                    "question": "Which index accesses the first character of a string text?",
+                    "options": [
+                        "text[1]",
+                        "text[0]",
+                        "text[-0]",
+                        "text[first]"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which index accesses the last character of a string text?",
+                    "options": [
+                        "text[-1]",
+                        "text[len(text)]",
+                        "text[last]",
+                        "text[0]"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "If s = 'Dora', what is s[-2]?",
+                    "options": [
+                        "D",
+                        "o",
+                        "r",
+                        "a"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Indexing in Python is done using _____ brackets. (curly / braces / parentheses / square)",
+                    "answer": "square"
+                },
+                {
+                    "type": "fill",
+                    "question": "Accessing an index that does not exist in the string raises a(n) _____Error. (TypeError / Index / SyntaxError / NameError)",
+                    "answer": "Index"
+                },
+                {
+                    "type": "fill",
+                    "question": "If s = 'Fly', s[0] returns the character _____. (Index / F / square / Variable)",
+                    "answer": "F"
+                },
+                {
+                    "type": "tf",
+                    "question": "Negative indices count characters from right to left starting at -0.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Writing s[0] = 'X' is a valid way to edit a string.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The maximum index of a string is its length minus 1.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain why s[4] raises an error if s = 'Cute'.",
+                    "sampleAnswer": "'Cute' has a length of 4 (indices 0, 1, 2, 3). Index 4 is out of bounds, raising an IndexError."
+                }
             ]
         },
-
         "scenario": "Access characters from Doraemon's name. Define word = 'Doraemon'. Access the first character and store it in 'first_letter'. Access the last character (using negative indexing) and store it in 'last_letter'. Print first_letter and last_letter on separate lines.",
         "hint": "Use word[0] and word[-1].",
         "wrongHint": "Make sure you print first_letter and last_letter separately!",
@@ -2625,38 +5363,112 @@ window.levels = [
         "id": 48,
         "title": "Slicing",
         "concept": "Extracting substrings using the slice syntax (start:stop:step) in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "String Slicing",
             "subheading": "Extracting substrings",
             "body": "<p>What if you want to extract a <strong>part of a string</strong> (a substring), not just a single character? E.g., getting <code>\"Dora\"</code> from <code>\"Doraemon\"</code>. In Python, we do this using <strong>Slicing</strong>.</p>\n\n<h3>Slicing Syntax</h3>\n<pre class=\"code-example\">string[start:stop:step]</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>start</code>:</strong> The index where the slice begins (included).</li>\n    <li><strong><code>stop</code>:</strong> The index where the slice ends (<strong>excluded</strong>).</li>\n    <li><strong><code>step</code>:</strong> The increment size (optional, defaults to <code>1</code>).</li>\n</ul>\n\n<h3>Examples with word = \"Doraemon\"</h3>\n<ul class=\"desc-list\">\n    <li><code>word[0:4]</code> &rarr; <code>\"Dora\"</code> (indices 0, 1, 2, 3)</li>\n    <li><code>word[4:8]</code> &rarr; <code>\"emon\"</code> (indices 4, 5, 6, 7)</li>\n</ul>\n\n<h3>Omitting Parameters</h3>\n<ul class=\"desc-list\">\n    <li><code>word[:4]</code> &rarr; <code>\"Dora\"</code> (starts at index 0 if start is omitted)</li>\n    <li><code>word[4:]</code> &rarr; <code>\"emon\"</code> (goes to the end of the string if stop is omitted)</li>\n    <li><code>word[::-1]</code> &rarr; <code>\"nomearoD\"</code> (reverses the string! A step of <code>-1</code> counts backwards)</li>\n</ul>"
         },
-
         "qna": [
-            { "q": "What is string slicing?", "a": "Slicing is the technique of extracting a range of characters (a substring) from a string using start, stop, and step positions." },
-            { "q": "Is the stop index included in the sliced result?", "a": "No, the stop index is <strong>excluded</strong>. E.g. <code>s[1:4]</code> extracts characters at indices 1, 2, and 3." },
-            { "q": "What happens if I omit the start index in a slice?", "a": "If omitted, Python defaults the start to <strong>0</strong> (the beginning of the string)." },
-            { "q": "What is the step parameter in slicing?", "a": "The step parameter specifies the step size for slicing. E.g. <code>s[::2]</code> extracts every second character." },
-            { "q": "How can I reverse a string using slicing?", "a": "Use the slice expression <code>string[::-1]</code>. Specifying a step of <code>-1</code> tells Python to extract characters backward from end to start." }
+            {
+                "q": "What is string slicing?",
+                "a": "Slicing is the technique of extracting a range of characters (a substring) from a string using start, stop, and step positions."
+            },
+            {
+                "q": "Is the stop index included in the sliced result?",
+                "a": "No, the stop index is <strong>excluded</strong>. E.g. <code>s[1:4]</code> extracts characters at indices 1, 2, and 3."
+            },
+            {
+                "q": "What happens if I omit the start index in a slice?",
+                "a": "If omitted, Python defaults the start to <strong>0</strong> (the beginning of the string)."
+            },
+            {
+                "q": "What is the step parameter in slicing?",
+                "a": "The step parameter specifies the step size for slicing. E.g. <code>s[::2]</code> extracts every second character."
+            },
+            {
+                "q": "How can I reverse a string using slicing?",
+                "a": "Use the slice expression <code>string[::-1]</code>. Specifying a step of <code>-1</code> tells Python to extract characters backward from end to start."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python string slicing!",
             "questions": [
-                { "type": "mcq", "question": "What does text[1:3] extract from text = 'Python'?", "options": ["Py", "yt", "yth", "ytho"], "answer": 1 },
-                { "type": "mcq", "question": "What is the default start value of a slice if it is left blank (e.g. text[:3])?", "options": ["1", "0", "-1", "length of string"], "answer": 1 },
-                { "type": "mcq", "question": "Which slice reverses the string s?", "options": ["s[reverse]", "s[0:-1]", "s[::-1]", "s[-1:0]"], "answer": 2 },
-                { "type": "fill", "question": "In string slicing, the stop index is always _____ from the output substring.", "answer": "excluded" },
-                { "type": "fill", "question": "If s = 'Doraemon', s[:4] returns _____.", "answer": "Dora" },
-                { "type": "fill", "question": "The slice s[::3] will select every _____ character.", "answer": "3rd" },
-                { "type": "tf", "question": "Slicing raises an IndexError if the stop index is greater than the string length.", "answer": "false" },
-                { "type": "tf", "question": "The slice s[3:] extracts characters from index 3 up to the end of the string.", "answer": "true" },
-                { "type": "tf", "question": "Slicing returns a brand new string.", "answer": "true" },
-                { "type": "short", "question": "If s = 'Python', what does s[1:5:2] return? Explain.", "sampleAnswer": "It starts at index 1 ('y'), goes up to index 5 ('n', excluded), stepping by 2. It selects indices 1 and 3, returning 'yh'." }
+                {
+                    "type": "mcq",
+                    "question": "What does text[1:3] extract from text = 'Python'?",
+                    "options": [
+                        "Py",
+                        "yt",
+                        "yth",
+                        "ytho"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the default start value of a slice if it is left blank (e.g. text[:3])?",
+                    "options": [
+                        "1",
+                        "0",
+                        "-1",
+                        "length of string"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which slice reverses the string s?",
+                    "options": [
+                        "s[reverse]",
+                        "s[0:-1]",
+                        "s[::-1]",
+                        "s[-1:0]"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "In string slicing, the stop index is always _____ from the output substring. (variable / 3rd / excluded / Dora)",
+                    "answer": "excluded"
+                },
+                {
+                    "type": "fill",
+                    "question": "If s = 'Doraemon', s[:4] returns _____. (excluded / Variable / 3rd / Dora)",
+                    "answer": "Dora"
+                },
+                {
+                    "type": "fill",
+                    "question": "The slice s[::3] will select every _____ character. (Variable / Dora / excluded / 3rd)",
+                    "answer": "3rd"
+                },
+                {
+                    "type": "tf",
+                    "question": "Slicing raises an IndexError if the stop index is greater than the string length.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The slice s[3:] extracts characters from index 3 up to the end of the string.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Slicing returns a brand new string.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If s = 'Python', what does s[1:5:2] return? Explain.",
+                    "sampleAnswer": "It starts at index 1 ('y'), goes up to index 5 ('n', excluded), stepping by 2. It selects indices 1 and 3, returning 'yh'."
+                }
             ]
         },
-
         "scenario": "Extract substrings from Doraemon's name. Define word = 'Doraemon'. Slice the first 4 characters ('Dora') and store them in 'part1'. Slice the remaining characters ('emon') and store them in 'part2'. Print part1 and part2 on separate lines.",
         "hint": "Use word[:4] and word[4:].",
         "wrongHint": "Make sure you slice the parts correctly and print them!",
@@ -2667,38 +5479,112 @@ window.levels = [
         "id": 49,
         "title": "String methods (upper/lower)",
         "concept": "Modifying character casing using string methods like upper(), lower(), isupper(), and islower() in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Casing Methods",
             "subheading": "upper(), lower(), isupper(), and islower()",
             "body": "<p>Python strings have built-in functions called <strong>Methods</strong> that allow us to perform common text manipulations easily.</p>\n\n<h3>Case Conversion Methods</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>upper()</code>:</strong> Returns a new string with all letters converted to UPPERCASE. E.g. <code>\"Dora\".upper()</code> &rarr; <code>\"DORA\"</code>.</li>\n    <li><strong><code>lower()</code>:</strong> Returns a new string with all letters converted to lowercase. E.g. <code>\"Dora\".lower()</code> &rarr; <code>\"dora\"</code>.</li>\n</ul>\n\n<h3>Case Check Methods (Boolean)</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>isupper()</code>:</strong> Returns <code>True</code> if all alphabetic characters in the string are uppercase. E.g. <code>\"DORA\".isupper()</code> &rarr; <code>True</code>.</li>\n    <li><strong><code>islower()</code>:</strong> Returns <code>True</code> if all alphabetic characters in the string are lowercase. E.g. <code>\"dora\".islower()</code> &rarr; <code>True</code>.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Method Syntax:</strong> Methods are invoked using dot notation: <code>string.method()</code>. Always include parentheses <code>()</code>. Remember that strings are immutable, so methods never change the original variable; they return a brand new string!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a string method?", "a": "A method is a function built into Python string objects that performs operations on them when called using dot notation (e.g. <code>text.upper()</code>)." },
-            { "q": "Do upper() and lower() modify the original string?", "a": "No, because strings are immutable. These methods return a brand new string with the modified casing." },
-            { "q": "How do check-methods like isupper() differ from upper()?", "a": "<code>upper()</code> changes the letters to uppercase, returning a new string. <code>isupper()</code> checks the string, returning a boolean (<code>True</code> or <code>False</code>)." },
-            { "q": "What happens when I call lower() on a string containing numbers or symbols?", "a": "Numbers and symbols remain unchanged; only alphabetic characters are converted to lowercase." },
-            { "q": "Why are parentheses () required when calling string methods?", "a": "Parentheses are required to execute (call) the method. Forgetting them returns the method reference rather than running the code." }
+            {
+                "q": "What is a string method?",
+                "a": "A method is a function built into Python string objects that performs operations on them when called using dot notation (e.g. <code>text.upper()</code>)."
+            },
+            {
+                "q": "Do upper() and lower() modify the original string?",
+                "a": "No, because strings are immutable. These methods return a brand new string with the modified casing."
+            },
+            {
+                "q": "How do check-methods like isupper() differ from upper()?",
+                "a": "<code>upper()</code> changes the letters to uppercase, returning a new string. <code>isupper()</code> checks the string, returning a boolean (<code>True</code> or <code>False</code>)."
+            },
+            {
+                "q": "What happens when I call lower() on a string containing numbers or symbols?",
+                "a": "Numbers and symbols remain unchanged; only alphabetic characters are converted to lowercase."
+            },
+            {
+                "q": "Why are parentheses () required when calling string methods?",
+                "a": "Parentheses are required to execute (call) the method. Forgetting them returns the method reference rather than running the code."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's casing methods!",
             "questions": [
-                { "type": "mcq", "question": "Which method converts a string to all lowercase letters?", "options": ["lower()", "to_lower()", "lowercase()", "islower()"], "answer": 0 },
-                { "type": "mcq", "question": "What is the output of 'Py123'.upper()?", "options": ["PY", "PY123", "py123", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "If s = 'hello', what does s.isupper() return?", "options": ["True", "False", "None", "Error"], "answer": 1 },
-                { "type": "fill", "question": "To convert a string to uppercase, we use the _____ method.", "answer": "upper" },
-                { "type": "fill", "question": "The return type of s.islower() is always a _____ value.", "answer": "boolean" },
-                { "type": "fill", "question": "Because strings are immutable, casing methods return a _____ string instead of updating the variable.", "answer": "new" },
-                { "type": "tf", "question": "Calling s.lower() updates the original variable s directly.", "answer": "false" },
-                { "type": "tf", "question": "'12345'.isupper() will return True.", "answer": "false" },
-                { "type": "tf", "question": "Parentheses are necessary to invoke string methods in Python.", "answer": "true" },
-                { "type": "short", "question": "If text = 'Dora', what is stored inside text after running text.upper()? Explain.", "sampleAnswer": "text remains 'Dora' because strings are immutable. text.upper() returns 'DORA', but it is not stored back in text." }
+                {
+                    "type": "mcq",
+                    "question": "Which method converts a string to all lowercase letters?",
+                    "options": [
+                        "lower()",
+                        "to_lower()",
+                        "lowercase()",
+                        "islower()"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of 'Py123'.upper()?",
+                    "options": [
+                        "PY",
+                        "PY123",
+                        "py123",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "If s = 'hello', what does s.isupper() return?",
+                    "options": [
+                        "True",
+                        "False",
+                        "None",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To convert a string to uppercase, we use the _____ method. (variable / upper / boolean / new)",
+                    "answer": "upper"
+                },
+                {
+                    "type": "fill",
+                    "question": "The return type of s.islower() is always a _____ value. (float / boolean / int / str)",
+                    "answer": "boolean"
+                },
+                {
+                    "type": "fill",
+                    "question": "Because strings are immutable, casing methods return a _____ string instead of updating the variable. (boolean / upper / variable / new)",
+                    "answer": "new"
+                },
+                {
+                    "type": "tf",
+                    "question": "Calling s.lower() updates the original variable s directly.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "'12345'.isupper() will return True.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Parentheses are necessary to invoke string methods in Python.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If text = 'Dora', what is stored inside text after running text.upper()? Explain.",
+                    "sampleAnswer": "text remains 'Dora' because strings are immutable. text.upper() returns 'DORA', but it is not stored back in text."
+                }
             ]
         },
-
         "scenario": "Convert a string to uppercase and lowercase. Define word = 'Doraemon'. Convert word to uppercase and store it in 'up_word'. Convert word to lowercase and store it in 'low_word'. Print up_word and low_word on separate lines.",
         "hint": "Use word.upper() and word.lower().",
         "wrongHint": "Make sure you store the outputs in up_word and low_word, then print them!",
@@ -2709,38 +5595,112 @@ window.levels = [
         "id": 50,
         "title": "replace()",
         "concept": "Replacing occurrences of substrings inside a string using the replace() method in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The replace() Method",
             "subheading": "Replacing characters or words",
             "body": "<p>What if you want to swap one word for another inside a text? Python provides the built-in <strong><code>replace()</code></strong> method to do this easily.</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">string.replace(old, new, count)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>old</code>:</strong> The substring you want to search for.</li>\n    <li><strong><code>new</code>:</strong> The new substring you want to insert.</li>\n    <li><strong><code>count</code>:</strong> (Optional) The maximum number of replacements to perform starting from the left. If omitted, all occurrences are replaced.</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"I like apples\".replace(\"apples\", \"bananas\")</code> &rarr; <code>\"I like bananas\"</code></li>\n    <li><code>\"banana\".replace(\"a\", \"o\")</code> &rarr; <code>\"bonono\"</code> (replaces all occurrences!)</li>\n    <li><code>\"banana\".replace(\"a\", \"o\", 2)</code> &rarr; <code>\"bonona\"</code> (replaces only the first 2 occurrences)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Immutability check:</strong> Just like casing methods, <code>replace()</code> returns a brand new string and does not modify the original variable. It is also case-sensitive, meaning replacing <code>\"apple\"</code> will not match <code>\"Apple\"</code>!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does the replace() method do?", "a": "The <code>replace()</code> method searches a string for a specified substring and returns a new string where all occurrences of that substring are replaced with a new value." },
-            { "q": "Is the replacement case-sensitive?", "a": "Yes! E.g. <code>\"Apple\".replace(\"a\", \"o\")</code> will not replace anything because <code>\"a\"</code> is lowercase, while <code>\"Apple\"</code> starts with uppercase <code>\"A\"</code>." },
-            { "q": "What is the role of the optional count argument in replace()?", "a": "The <code>count</code> argument specifies how many occurrences of the old substring to replace starting from the left. If omitted, all occurrences are replaced." },
-            { "q": "Can I replace a single character or multiple characters?", "a": "You can replace both! It works with single characters, words, or longer phrases." },
-            { "q": "What happens if the old substring is not found in the string?", "a": "The method simply returns a copy of the original string unchanged, without raising errors." }
+            {
+                "q": "What does the replace() method do?",
+                "a": "The <code>replace()</code> method searches a string for a specified substring and returns a new string where all occurrences of that substring are replaced with a new value."
+            },
+            {
+                "q": "Is the replacement case-sensitive?",
+                "a": "Yes! E.g. <code>\"Apple\".replace(\"a\", \"o\")</code> will not replace anything because <code>\"a\"</code> is lowercase, while <code>\"Apple\"</code> starts with uppercase <code>\"A\"</code>."
+            },
+            {
+                "q": "What is the role of the optional count argument in replace()?",
+                "a": "The <code>count</code> argument specifies how many occurrences of the old substring to replace starting from the left. If omitted, all occurrences are replaced."
+            },
+            {
+                "q": "Can I replace a single character or multiple characters?",
+                "a": "You can replace both! It works with single characters, words, or longer phrases."
+            },
+            {
+                "q": "What happens if the old substring is not found in the string?",
+                "a": "The method simply returns a copy of the original string unchanged, without raising errors."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's replace() method!",
             "questions": [
-                { "type": "mcq", "question": "Which method is used to swap characters or substrings?", "options": ["swap()", "replace()", "change()", "update()"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of: 'apple'.replace('p', 'm', 1)?", "options": ["ammle", "ample", "ampple", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "What does 'Doraemon'.replace('X', 'Y') return?", "options": ["Doraemon", "DoraemonY", "Error", "None"], "answer": 0 },
-                { "type": "fill", "question": "The replace() method takes two mandatory arguments: the old substring and the _____ substring.", "answer": "new" },
-                { "type": "fill", "question": "If we want to replace only the first occurrence, we pass _____ as the third argument in the replace function.", "answer": "1" },
-                { "type": "fill", "question": "Suffixing .replace(' ', '') to a string removes all _____ characters.", "answer": "space" },
-                { "type": "tf", "question": "The replace() method modifies the string in-place.", "answer": "false" },
-                { "type": "tf", "question": "The replacement operation in Python's replace() is case-sensitive.", "answer": "true" },
-                { "type": "tf", "question": "You can use replace() to delete a substring by replacing it with an empty string ''.", "answer": "true" },
-                { "type": "short", "question": "If text = 'cat dog cat', write the replace expression to change only the first 'cat' to 'cow'.", "sampleAnswer": "text.replace('cat', 'cow', 1)" }
+                {
+                    "type": "mcq",
+                    "question": "Which method is used to swap characters or substrings?",
+                    "options": [
+                        "swap()",
+                        "replace()",
+                        "change()",
+                        "update()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of: 'apple'.replace('p', 'm', 1)?",
+                    "options": [
+                        "ammle",
+                        "ample",
+                        "ampple",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does 'Doraemon'.replace('X', 'Y') return?",
+                    "options": [
+                        "Doraemon",
+                        "DoraemonY",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "The replace() method takes two mandatory arguments: the old substring and the _____ substring. (space / 1 / variable / new)",
+                    "answer": "new"
+                },
+                {
+                    "type": "fill",
+                    "question": "If we want to replace only the first occurrence, we pass _____ as the third argument in the replace function. (3 / 2 / 1 / 0)",
+                    "answer": "1"
+                },
+                {
+                    "type": "fill",
+                    "question": "Suffixing .replace(' ', '') to a string removes all _____ characters. (new / 1 / space / variable)",
+                    "answer": "space"
+                },
+                {
+                    "type": "tf",
+                    "question": "The replace() method modifies the string in-place.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The replacement operation in Python's replace() is case-sensitive.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use replace() to delete a substring by replacing it with an empty string ''.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "If text = 'cat dog cat', write the replace expression to change only the first 'cat' to 'cow'.",
+                    "sampleAnswer": "text.replace('cat', 'cow', 1)"
+                }
             ]
         },
-
         "scenario": "Correct a spelling error using replace. Define sentence = 'Doraemon likes apples and apples.'. Use replace() to replace 'apples' with 'dorayaki'. Store the result in 'updated_sentence' and print it.",
         "hint": "Use sentence.replace('apples', 'dorayaki').",
         "wrongHint": "Make sure you replace all occurrences of apples and print updated_sentence!",
@@ -2751,38 +5711,112 @@ window.levels = [
         "id": 51,
         "title": "find()",
         "concept": "Searching for substrings within strings and finding their index positions",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The find() Method",
             "subheading": "Searching for substrings",
             "body": "<p>What if you want to know <strong>where</strong> a specific word or character appears inside a string? Python provides the <strong><code>find()</code></strong> method to search for substrings and return their index position.</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">string.find(substring, start, end)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>substring</code>:</strong> The text you want to search for.</li>\n    <li><strong><code>start</code>:</strong> (Optional) The index to start searching from (defaults to 0).</li>\n    <li><strong><code>end</code>:</strong> (Optional) The index to stop searching at (defaults to end of string).</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"Doraemon\".find(\"ora\")</code> &rarr; <code>1</code> (found at index 1)</li>\n    <li><code>\"Doraemon\".find(\"z\")</code> &rarr; <code>-1</code> (not found, returns -1)</li>\n    <li><code>\"banana\".find(\"a\", 2)</code> &rarr; <code>3</code> (searches from index 2 onwards)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Important Note:</strong> <code>find()</code> returns <strong>-1</strong> if the substring is not found. This is different from using the <code>in</code> operator which returns <code>True</code> or <code>False</code>. The search is also case-sensitive!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does the find() method return?", "a": "The <code>find()</code> method returns the <strong>index</strong> of the first occurrence of the specified substring. If the substring is not found, it returns <strong>-1</strong>." },
-            { "q": "Is the search in find() case-sensitive?", "a": "Yes! <code>\"Doraemon\".find(\"d\")</code> returns <strong>-1</strong> because the lowercase 'd' is not found (the string starts with uppercase 'D')." },
-            { "q": "What is the difference between find() and index()?", "a": "Both methods work similarly, but <code>index()</code> raises a <code>ValueError</code> if the substring is not found, while <code>find()</code> returns <strong>-1</strong> without raising an error." },
-            { "q": "How can I search for a substring starting from a specific position?", "a": "Use the optional <code>start</code> parameter. E.g. <code>\"banana\".find(\"a\", 2)</code> starts searching from index 2." },
-            { "q": "What happens if I search for an empty string?", "a": "Searching for an empty string <code>\"\"</code> always returns <code>0</code> (the start of the string)." }
+            {
+                "q": "What does the find() method return?",
+                "a": "The <code>find()</code> method returns the <strong>index</strong> of the first occurrence of the specified substring. If the substring is not found, it returns <strong>-1</strong>."
+            },
+            {
+                "q": "Is the search in find() case-sensitive?",
+                "a": "Yes! <code>\"Doraemon\".find(\"d\")</code> returns <strong>-1</strong> because the lowercase 'd' is not found (the string starts with uppercase 'D')."
+            },
+            {
+                "q": "What is the difference between find() and index()?",
+                "a": "Both methods work similarly, but <code>index()</code> raises a <code>ValueError</code> if the substring is not found, while <code>find()</code> returns <strong>-1</strong> without raising an error."
+            },
+            {
+                "q": "How can I search for a substring starting from a specific position?",
+                "a": "Use the optional <code>start</code> parameter. E.g. <code>\"banana\".find(\"a\", 2)</code> starts searching from index 2."
+            },
+            {
+                "q": "What happens if I search for an empty string?",
+                "a": "Searching for an empty string <code>\"\"</code> always returns <code>0</code> (the start of the string)."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's find() method!",
             "questions": [
-                { "type": "mcq", "question": "What does 'hello'.find('l') return?", "options": ["2", "3", "-1", "1"], "answer": 0 },
-                { "type": "mcq", "question": "What does 'Python'.find('z') return?", "options": ["0", "-1", "Error", "None"], "answer": 1 },
-                { "type": "mcq", "question": "Which method returns -1 when a substring is not found?", "options": ["index()", "find()", "search()", "locate()"], "answer": 1 },
-                { "type": "fill", "question": "The find() method returns the _____ of the first occurrence of a substring.", "answer": "index" },
-                { "type": "fill", "question": "If a substring is not found, find() returns _____.", "answer": "-1" },
-                { "type": "fill", "question": "The search in find() is _____-sensitive.", "answer": "case" },
-                { "type": "tf", "question": "find() raises an error if the substring is not found.", "answer": "false" },
-                { "type": "tf", "question": "You can specify a starting position for the search in find().", "answer": "true" },
-                { "type": "tf", "question": "find() returns the index of the last occurrence of the substring.", "answer": "false" },
-                { "type": "short", "question": "Explain the difference between find() and index() methods.", "sampleAnswer": "find() returns -1 when substring is not found, while index() raises a ValueError." }
+                {
+                    "type": "mcq",
+                    "question": "What does 'hello'.find('l') return?",
+                    "options": [
+                        "2",
+                        "3",
+                        "-1",
+                        "1"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does 'Python'.find('z') return?",
+                    "options": [
+                        "0",
+                        "-1",
+                        "Error",
+                        "None"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which method returns -1 when a substring is not found?",
+                    "options": [
+                        "index()",
+                        "find()",
+                        "search()",
+                        "locate()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The find() method returns the _____ of the first occurrence of a substring. (index / nameerror / typeerror / syntaxerror)",
+                    "answer": "index"
+                },
+                {
+                    "type": "fill",
+                    "question": "If a substring is not found, find() returns _____. (-1 / 1 / -2 / 0)",
+                    "answer": "-1"
+                },
+                {
+                    "type": "fill",
+                    "question": "The search in find() is _____-sensitive. (-1 / index / variable / case)",
+                    "answer": "case"
+                },
+                {
+                    "type": "tf",
+                    "question": "find() raises an error if the substring is not found.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can specify a starting position for the search in find().",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "find() returns the index of the last occurrence of the substring.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the difference between find() and index() methods.",
+                    "sampleAnswer": "find() returns -1 when substring is not found, while index() raises a ValueError."
+                }
             ]
         },
-
         "scenario": "Find the position of a word in a sentence. Define sentence = 'Doraemon loves dorayaki'. Use find() to locate the position of 'loves' and store it in 'position'. Print position.",
         "hint": "Use sentence.find('loves').",
         "wrongHint": "Make sure you store the result in position and print it!",
@@ -2793,38 +5827,112 @@ window.levels = [
         "id": 52,
         "title": "split()",
         "concept": "Breaking strings into lists of words using delimiters",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The split() Method",
             "subheading": "Breaking strings into lists",
             "body": "<p>What if you have a sentence and want to extract each word separately? Python's <strong><code>split()</code></strong> method breaks a string into a <strong>list</strong> of smaller strings based on a separator (delimiter).</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">string.split(separator, maxsplit)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>separator</code>:</strong> The character(s) to split on (defaults to <strong>whitespace</strong> if omitted).</li>\n    <li><strong><code>maxsplit</code>:</strong> (Optional) Maximum number of splits to perform.</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"Doraemon loves dorayaki\".split()</code> &rarr; <code>[\"Doraemon\", \"loves\", \"dorayaki\"]</code> (splits on whitespace)</li>\n    <li><code>\"apple,banana,cherry\".split(\",\")</code> &rarr; <code>[\"apple\", \"banana\", \"cherry\"]</code> (splits on comma)</li>\n    <li><code>\"one-two-three\".split(\"-\")</code> &rarr; <code>[\"one\", \"two\", \"three\"]</code> (splits on hyphen)</li>\n    <li><code>\"a,b,c\".split(\",\", 1)</code> &rarr; <code>[\"a\", \"b,c\"]</code> (splits only once)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Use Case:</strong> <code>split()</code> is incredibly useful for parsing data, reading CSV files, processing user input, and breaking down sentences into individual words for analysis!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does the split() method do?", "a": "The <code>split()</code> method breaks a string into a list of substrings based on a specified separator (delimiter). If no separator is provided, it splits on whitespace." },
-            { "q": "What is the default separator in split()?", "a": "If no separator is specified, <code>split()</code> defaults to splitting on <strong>whitespace</strong> (spaces, tabs, newlines)." },
-            { "q": "Can I split on characters other than whitespace?", "a": "Yes! You can specify any character or string as the separator. E.g. <code>\"a,b,c\".split(\",\")</code> splits on commas." },
-            { "q": "What does the maxsplit parameter do?", "a": "The <code>maxsplit</code> parameter limits the number of splits. E.g. <code>\"a,b,c\".split(\",\", 1)</code> splits only once, resulting in <code>[\"a\", \"b,c\"]</code>." },
-            { "q": "What type of data does split() return?", "a": "The <code>split()</code> method always returns a <strong>list</strong> of strings." }
+            {
+                "q": "What does the split() method do?",
+                "a": "The <code>split()</code> method breaks a string into a list of substrings based on a specified separator (delimiter). If no separator is provided, it splits on whitespace."
+            },
+            {
+                "q": "What is the default separator in split()?",
+                "a": "If no separator is specified, <code>split()</code> defaults to splitting on <strong>whitespace</strong> (spaces, tabs, newlines)."
+            },
+            {
+                "q": "Can I split on characters other than whitespace?",
+                "a": "Yes! You can specify any character or string as the separator. E.g. <code>\"a,b,c\".split(\",\")</code> splits on commas."
+            },
+            {
+                "q": "What does the maxsplit parameter do?",
+                "a": "The <code>maxsplit</code> parameter limits the number of splits. E.g. <code>\"a,b,c\".split(\",\", 1)</code> splits only once, resulting in <code>[\"a\", \"b,c\"]</code>."
+            },
+            {
+                "q": "What type of data does split() return?",
+                "a": "The <code>split()</code> method always returns a <strong>list</strong> of strings."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's split() method!",
             "questions": [
-                { "type": "mcq", "question": "What does 'hello world'.split() return?", "options": ["['hello', 'world']", "['hello world']", "helloworld", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "What does 'a,b,c'.split(',') return?", "options": ["['a', 'b', 'c']", "['a,b,c']", "abc", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "What is the default separator in split()?", "options": ["Comma", "Space", "Whitespace", "None"], "answer": 2 },
-                { "type": "fill", "question": "The split() method returns a _____.", "answer": "list" },
-                { "type": "fill", "question": "To split a string on commas, use _____ as the separator.", "answer": "," },
-                { "type": "fill", "question": "The parameter that limits the number of splits is called _____.", "answer": "maxsplit" },
-                { "type": "tf", "question": "split() modifies the original string.", "answer": "false" },
-                { "type": "tf", "question": "You can split on multiple characters at once using split().", "answer": "false" },
-                { "type": "tf", "question": "split() always returns a list of strings.", "answer": "true" },
-                { "type": "short", "question": "How would you split '2024-01-15' into year, month, and day?", "sampleAnswer": "Use '2024-01-15'.split('-') to get ['2024', '01', '15']." }
+                {
+                    "type": "mcq",
+                    "question": "What does 'hello world'.split() return?",
+                    "options": [
+                        "['hello', 'world']",
+                        "['hello world']",
+                        "helloworld",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does 'a,b,c'.split(',') return?",
+                    "options": [
+                        "['a', 'b', 'c']",
+                        "['a,b,c']",
+                        "abc",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the default separator in split()?",
+                    "options": [
+                        "Comma",
+                        "Space",
+                        "Whitespace",
+                        "None"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The split() method returns a _____. (int / float / str / list)",
+                    "answer": "list"
+                },
+                {
+                    "type": "fill",
+                    "question": "To split a string on commas, use _____ as the separator. (- / + / * / ,)",
+                    "answer": ","
+                },
+                {
+                    "type": "fill",
+                    "question": "The parameter that limits the number of splits is called _____. (list / , / variable / maxsplit)",
+                    "answer": "maxsplit"
+                },
+                {
+                    "type": "tf",
+                    "question": "split() modifies the original string.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can split on multiple characters at once using split().",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "split() always returns a list of strings.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "How would you split '2024-01-15' into year, month, and day?",
+                    "sampleAnswer": "Use '2024-01-15'.split('-') to get ['2024', '01', '15']."
+                }
             ]
         },
-
         "scenario": "Split a sentence into words. Define sentence = 'Doraemon Nobita Shizuka Gian Suneo'. Use split() to break the sentence into a list of words and store it in 'words'. Print words.",
         "hint": "Use sentence.split() to split on whitespace.",
         "wrongHint": "Make sure you store the result in words and print it!",
@@ -2835,38 +5943,112 @@ window.levels = [
         "id": 53,
         "title": "join()",
         "concept": "Combining lists of strings back into a single string using a separator",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The join() Method",
             "subheading": "Combining lists into strings",
             "body": "<p>The <strong><code>join()</code></strong> method is the opposite of <code>split()</code> — it combines a list of strings into a single string, placing a separator between each element.</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">separator.join(list_of_strings)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>separator</code>:</strong> The string to place between each element (e.g., space, comma, hyphen).</li>\n    <li><strong><code>list_of_strings</code>:</strong> The list (or any iterable) of strings to join.</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\" \".join([\"Doraemon\", \"loves\", \"dorayaki\"])</code> &rarr; <code>\"Doraemon loves dorayaki\"</code> (joins with space)</li>\n    <li><code>\",\".join([\"apple\", \"banana\", \"cherry\"])</code> &rarr; <code>\"apple,banana,cherry\"</code> (joins with comma)</li>\n    <li><code>\"-\".join([\"2024\", \"01\", \"15\"])</code> &rarr; <code>\"2024-01-15\"</code> (joins with hyphen)</li>\n    <li><code>\"\".join([\"h\", \"e\", \"l\", \"l\", \"o\"])</code> &rarr; <code>\"hello\"</code> (joins with empty string)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Important Note:</strong> <code>join()</code> is called on the <strong>separator string</strong>, not the list! Also, all elements in the list must be strings — you cannot join a list containing numbers directly without converting them first.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does the join() method do?", "a": "The <code>join()</code> method combines a list of strings into a single string, placing a specified separator between each element." },
-            { "q": "How is the join() method called?", "a": "Unlike most string methods, <code>join()</code> is called on the <strong>separator string</strong>, passing the list as an argument. E.g. <code>\" \".join(my_list)</code>." },
-            { "q": "Can I join a list containing numbers?", "a": "No, all elements must be strings. You must convert numbers to strings first using <code>str()</code> or a list comprehension." },
-            { "q": "What happens if I use an empty string as the separator?", "a": "Using an empty string <code>\"\"</code> as the separator concatenates all elements without any characters between them." },
-            { "q": "What is the relationship between split() and join()?", "a": "They are inverse operations! <code>split()</code> breaks a string into a list, while <code>join()</code> combines a list back into a string." }
+            {
+                "q": "What does the join() method do?",
+                "a": "The <code>join()</code> method combines a list of strings into a single string, placing a specified separator between each element."
+            },
+            {
+                "q": "How is the join() method called?",
+                "a": "Unlike most string methods, <code>join()</code> is called on the <strong>separator string</strong>, passing the list as an argument. E.g. <code>\" \".join(my_list)</code>."
+            },
+            {
+                "q": "Can I join a list containing numbers?",
+                "a": "No, all elements must be strings. You must convert numbers to strings first using <code>str()</code> or a list comprehension."
+            },
+            {
+                "q": "What happens if I use an empty string as the separator?",
+                "a": "Using an empty string <code>\"\"</code> as the separator concatenates all elements without any characters between them."
+            },
+            {
+                "q": "What is the relationship between split() and join()?",
+                "a": "They are inverse operations! <code>split()</code> breaks a string into a list, while <code>join()</code> combines a list back into a string."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python's join() method!",
             "questions": [
-                { "type": "mcq", "question": "What does ' '.join(['hello', 'world']) return?", "options": ["['hello', 'world']", "hello world", "helloworld", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "What does ','.join(['a', 'b', 'c']) return?", "options": ["a,b,c", "['a', 'b', 'c']", "abc", "Error"], "answer": 0 },
-                { "type": "mcq", "question": "Which string is the method called on in join()?", "options": ["The list", "The separator", "The first element", "None"], "answer": 1 },
-                { "type": "fill", "question": "The join() method is called on the _____ string.", "answer": "separator" },
-                { "type": "fill", "question": "All elements in the list must be _____ to use join().", "answer": "strings" },
-                { "type": "fill", "question": "Using an empty string '' as the separator _____ the elements.", "answer": "concatenates" },
-                { "type": "tf", "question": "join() is the opposite of split().", "answer": "true" },
-                { "type": "tf", "question": "You can join a list of integers directly.", "answer": "false" },
-                { "type": "tf", "question": "The separator is placed between elements, not at the start or end.", "answer": "true" },
-                { "type": "short", "question": "How would you join ['2024', '01', '15'] with hyphens?", "sampleAnswer": "Use '-'.join(['2024', '01', '15']) to get '2024-01-15'." }
+                {
+                    "type": "mcq",
+                    "question": "What does ' '.join(['hello', 'world']) return?",
+                    "options": [
+                        "['hello', 'world']",
+                        "hello world",
+                        "helloworld",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does ','.join(['a', 'b', 'c']) return?",
+                    "options": [
+                        "a,b,c",
+                        "['a', 'b', 'c']",
+                        "abc",
+                        "Error"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which string is the method called on in join()?",
+                    "options": [
+                        "The list",
+                        "The separator",
+                        "The first element",
+                        "None"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The join() method is called on the _____ string. (concatenates / strings / variable / separator)",
+                    "answer": "separator"
+                },
+                {
+                    "type": "fill",
+                    "question": "All elements in the list must be _____ to use join(). (separator / strings / concatenates / variable)",
+                    "answer": "strings"
+                },
+                {
+                    "type": "fill",
+                    "question": "Using an empty string '' as the separator _____ the elements. (strings / variable / separator / concatenates)",
+                    "answer": "concatenates"
+                },
+                {
+                    "type": "tf",
+                    "question": "join() is the opposite of split().",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can join a list of integers directly.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "The separator is placed between elements, not at the start or end.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "How would you join ['2024', '01', '15'] with hyphens?",
+                    "sampleAnswer": "Use '-'.join(['2024', '01', '15']) to get '2024-01-15'."
+                }
             ]
         },
-
         "scenario": "Join a list of names into a sentence. Define names = ['Doraemon', 'Nobita', 'Shizuka']. Use join() with a space and comma to create 'Doraemon, Nobita, Shizuka' and store it in 'sentence'. Print sentence.",
         "hint": "Use ', '.join(names) to join with comma and space.",
         "wrongHint": "Make sure you use ', ' as the separator and print the result!",
@@ -2877,38 +6059,112 @@ window.levels = [
         "id": 54,
         "title": "Escape characters",
         "concept": "Using special characters like newlines, tabs, and quotes inside strings with backslash",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Escape Characters",
             "subheading": "Special characters in strings",
             "body": "<p>Sometimes you need to include special characters in your strings that can't be typed directly — like a <strong>newline</strong>, <strong>tab</strong>, or even a <strong>quote</strong> inside a quoted string. Python uses the <strong>backslash (\\)</strong> to create these <strong>escape characters</strong>.</p>\n\n<h3>Common Escape Characters</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>\\n</code></strong> — Newline (moves to the next line)</li>\n    <li><strong><code>\\t</code></strong> — Tab (horizontal spacing)</li>\n    <li><strong><code>\\'</code></strong> — Single quote (inside single-quoted strings)</li>\n    <li><strong><code>\\\"</code></strong> — Double quote (inside double-quoted strings)</li>\n    <li><strong><code>\\\\</code></strong> — Backslash (to display a literal backslash)</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"Hello\\nWorld\"</code> &rarr; Displays as two lines</li>\n    <li><code>\"Name:\\tDoraemon\"</code> &rarr; Displays with tab spacing</li>\n    <li><code>'Nobita\\'s gadget'</code> &rarr; Displays as <code>Nobita's gadget</code></li>\n    <li><code>\"Path: C:\\\\Users\\\\Doraemon\"</code> &rarr; Displays as <code>Path: C:\\Users\\Doraemon</code></li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Pro Tip:</strong> For Windows file paths, you can either use double backslashes <code>\\\\</code> or use <strong>raw strings</strong> with the <code>r</code> prefix: <code>r\"C:\\Users\\Doraemon\"</code> — raw strings treat backslashes literally!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What are escape characters?", "a": "Escape characters are special sequences starting with a backslash (\\) that represent characters that can't be typed directly, like newlines, tabs, or quotes inside quoted strings." },
-            { "q": "What does \\n do in a string?", "a": "<code>\\n</code> creates a <strong>newline</strong> — it moves the cursor to the beginning of the next line." },
-            { "q": "How do I include a single quote inside a single-quoted string?", "a": "Use the escape sequence <code>\\'</code>. E.g. <code>'It\\'s Doraemon'</code> displays as <code>It's Doraemon</code>." },
-            { "q": "Why do I need double backslashes for file paths?", "a": "Because a single backslash is the escape character. To display a literal backslash, you need to escape it as <code>\\\\</code>." },
-            { "q": "What is a raw string?", "a": "A raw string (prefixed with <code>r</code>) treats backslashes as literal characters, not escape sequences. Useful for file paths and regex patterns." }
+            {
+                "q": "What are escape characters?",
+                "a": "Escape characters are special sequences starting with a backslash (\\) that represent characters that can't be typed directly, like newlines, tabs, or quotes inside quoted strings."
+            },
+            {
+                "q": "What does \\n do in a string?",
+                "a": "<code>\\n</code> creates a <strong>newline</strong> — it moves the cursor to the beginning of the next line."
+            },
+            {
+                "q": "How do I include a single quote inside a single-quoted string?",
+                "a": "Use the escape sequence <code>\\'</code>. E.g. <code>'It\\'s Doraemon'</code> displays as <code>It's Doraemon</code>."
+            },
+            {
+                "q": "Why do I need double backslashes for file paths?",
+                "a": "Because a single backslash is the escape character. To display a literal backslash, you need to escape it as <code>\\\\</code>."
+            },
+            {
+                "q": "What is a raw string?",
+                "a": "A raw string (prefixed with <code>r</code>) treats backslashes as literal characters, not escape sequences. Useful for file paths and regex patterns."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python escape characters!",
             "questions": [
-                { "type": "mcq", "question": "Which escape character creates a newline?", "options": ["\\n", "\\t", "\\\\", "\\r"], "answer": 0 },
-                { "type": "mcq", "question": "What does 'Hello\\nWorld' display as?", "options": ["Hello\\nWorld", "Hello World", "Hello on one line, World on next", "Error"], "answer": 2 },
-                { "type": "mcq", "question": "How do you display a literal backslash?", "options": ["\\", "\\\\", "//", "/"], "answer": 1 },
-                { "type": "fill", "question": "The escape character for tab is _____.", "answer": "\\t" },
-                { "type": "fill", "question": "To include a double quote inside a double-quoted string, use _____.", "answer": "\\\"" },
-                { "type": "fill", "question": "Raw strings are prefixed with the letter _____.", "answer": "r" },
-                { "type": "tf", "question": "Escape characters start with a forward slash (/).", "answer": "false" },
-                { "type": "tf", "question": "You can use \\n to create line breaks in printed output.", "answer": "true" },
-                { "type": "tf", "question": "Raw strings ignore escape sequences.", "answer": "true" },
-                { "type": "short", "question": "How would you print 'C:\\Users\\Doraemon' correctly?", "sampleAnswer": "Use print('C:\\\\Users\\\\Doraemon') or print(r'C:\\Users\\Doraemon')." }
+                {
+                    "type": "mcq",
+                    "question": "Which escape character creates a newline?",
+                    "options": [
+                        "\\n",
+                        "\\t",
+                        "\\\\",
+                        "\\r"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does 'Hello\\nWorld' display as?",
+                    "options": [
+                        "Hello\\nWorld",
+                        "Hello World",
+                        "Hello on one line, World on next",
+                        "Error"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you display a literal backslash?",
+                    "options": [
+                        "\\",
+                        "\\\\",
+                        "//",
+                        "/"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The escape character for tab is _____. (* / \\t / + / -)",
+                    "answer": "\\t"
+                },
+                {
+                    "type": "fill",
+                    "question": "To include a double quote inside a double-quoted string, use _____. (+ / - / \\\" / *)",
+                    "answer": "\\\""
+                },
+                {
+                    "type": "fill",
+                    "question": "Raw strings are prefixed with the letter _____. (r / a / w / x)",
+                    "answer": "r"
+                },
+                {
+                    "type": "tf",
+                    "question": "Escape characters start with a forward slash (/).",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use \\n to create line breaks in printed output.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Raw strings ignore escape sequences.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "How would you print 'C:\\Users\\Doraemon' correctly?",
+                    "sampleAnswer": "Use print('C:\\\\Users\\\\Doraemon') or print(r'C:\\Users\\Doraemon')."
+                }
             ]
         },
-
         "scenario": "Create a multi-line message with escape characters. Define message = 'Hello\\nWelcome to PyBe!\\nLet\\'s learn Python together.' Print message to see the formatted output.",
         "hint": "Use \\n for newlines and \\' for the apostrophe.",
         "wrongHint": "Make sure you use \\n for line breaks and \\' for the apostrophe!",
@@ -2919,38 +6175,112 @@ window.levels = [
         "id": 55,
         "title": "f-Strings",
         "concept": "Embedding variables and expressions directly inside strings using f-string notation",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "f-Strings (Formatted String Literals)",
             "subheading": "Modern string formatting",
             "body": "<p><strong>f-Strings</strong> (introduced in Python 3.6) are the most modern and readable way to format strings in Python. They allow you to <strong>embed variables and expressions directly inside strings</strong> using curly braces <code>{}</code>.</p>\n\n<h3>f-String Syntax</h3>\n<pre class=\"code-example\">f\"Text with {variable} embedded\"</pre>\n<ul class=\"desc-list\">\n    <li>Prefix the string with the letter <code>f</code></li>\n    <li>Place variables or expressions inside <code>{}</code> curly braces</li>\n    <li>Python automatically converts them to strings!</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>name = \"Doraemon\"; f\"Hello {name}!\"</code> &rarr; <code>\"Hello Doraemon!\"</code></li>\n    <li><code>age = 10; f\"Age: {age}\"</code> &rarr; <code>\"Age: 10\"</code> (no str() needed!)</li>\n    <li><code>f\"2 + 3 = {2 + 3}\"</code> &rarr; <code>\"2 + 3 = 5\"</code> (expressions work!)</li>\n    <li><code>f\"{name.upper()} is awesome!\"</code> &rarr; <code>\"DORAEMON is awesome!\"</code> (methods work!)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why f-Strings?</strong> They're faster than <code>.format()</code> and <code>%</code> formatting, more readable, and automatically handle type conversion. They're the recommended way to format strings in modern Python!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What are f-Strings?", "a": "f-Strings (formatted string literals) are a way to embed variables and expressions directly inside strings by prefixing the string with <code>f</code> and using curly braces <code>{}</code>." },
-            { "q": "How do I create an f-String?", "a": "Prefix your string with the letter <code>f</code> and place variables inside curly braces. E.g. <code>f\"Hello {name}\"</code>." },
-            { "q": "Do I need to convert numbers to strings in f-Strings?", "a": "No! f-Strings automatically convert any variable or expression to a string. No need for <code>str()</code>." },
-            { "q": "Can I use expressions inside f-Strings?", "a": "Yes! You can use any valid Python expression inside the curly braces, including math operations, function calls, and method calls." },
-            { "q": "What happens if I forget the 'f' prefix?", "a": "The string will be treated as a regular string, and the curly braces will be displayed literally instead of evaluating the variables inside." }
+            {
+                "q": "What are f-Strings?",
+                "a": "f-Strings (formatted string literals) are a way to embed variables and expressions directly inside strings by prefixing the string with <code>f</code> and using curly braces <code>{}</code>."
+            },
+            {
+                "q": "How do I create an f-String?",
+                "a": "Prefix your string with the letter <code>f</code> and place variables inside curly braces. E.g. <code>f\"Hello {name}\"</code>."
+            },
+            {
+                "q": "Do I need to convert numbers to strings in f-Strings?",
+                "a": "No! f-Strings automatically convert any variable or expression to a string. No need for <code>str()</code>."
+            },
+            {
+                "q": "Can I use expressions inside f-Strings?",
+                "a": "Yes! You can use any valid Python expression inside the curly braces, including math operations, function calls, and method calls."
+            },
+            {
+                "q": "What happens if I forget the 'f' prefix?",
+                "a": "The string will be treated as a regular string, and the curly braces will be displayed literally instead of evaluating the variables inside."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python f-Strings!",
             "questions": [
-                { "type": "mcq", "question": "What prefix do you use to create an f-String?", "options": ["s", "f", "r", "b"], "answer": 1 },
-                { "type": "mcq", "question": "What does f'Age: {age}' evaluate to if age = 10?", "options": ["Age: age", "Age: 10", "Age: {10}", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "Can you use expressions inside f-String curly braces?", "options": ["No", "Yes", "Only math", "Only strings"], "answer": 1 },
-                { "type": "fill", "question": "Variables are placed inside _____ braces in f-Strings.", "answer": "curly" },
-                { "type": "fill", "question": "f-Strings automatically convert variables to _____.", "answer": "strings" },
-                { "type": "fill", "question": "The expression f\"{2+3}\" evaluates to _____.", "answer": "5" },
-                { "type": "tf", "question": "You need to use str() to convert numbers in f-Strings.", "answer": "false" },
-                { "type": "tf", "question": "f-Strings are available in Python 3.6 and later.", "answer": "true" },
-                { "type": "tf", "question": "You can call methods on variables inside f-Strings.", "answer": "true" },
-                { "type": "short", "question": "Write an f-String that combines name='Doraemon' and gadget='Anywhere Door'.", "sampleAnswer": "f\"{name} has the {gadget}\"" }
+                {
+                    "type": "mcq",
+                    "question": "What prefix do you use to create an f-String?",
+                    "options": [
+                        "s",
+                        "f",
+                        "r",
+                        "b"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does f'Age: {age}' evaluate to if age = 10?",
+                    "options": [
+                        "Age: age",
+                        "Age: 10",
+                        "Age: {10}",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Can you use expressions inside f-String curly braces?",
+                    "options": [
+                        "No",
+                        "Yes",
+                        "Only math",
+                        "Only strings"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Variables are placed inside _____ braces in f-Strings. (parentheses / square / braces / curly)",
+                    "answer": "curly"
+                },
+                {
+                    "type": "fill",
+                    "question": "f-Strings automatically convert variables to _____. (curly / strings / 5 / variable)",
+                    "answer": "strings"
+                },
+                {
+                    "type": "fill",
+                    "question": "The expression f\"{2+3}\" evaluates to _____. (7 / 6 / 5 / 4)",
+                    "answer": "5"
+                },
+                {
+                    "type": "tf",
+                    "question": "You need to use str() to convert numbers in f-Strings.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "f-Strings are available in Python 3.6 and later.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can call methods on variables inside f-Strings.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write an f-String that combines name='Doraemon' and gadget='Anywhere Door'.",
+                    "sampleAnswer": "f\"{name} has the {gadget}\""
+                }
             ]
         },
-
         "scenario": "Create a personalized message using f-Strings. Define name = 'Doraemon' and gadget = 'Anywhere Door'. Use an f-String to create 'Doraemon uses the Anywhere Door!' and store it in 'message'. Print message.",
         "hint": "Use f\"{name} uses the {gadget}!\" to create the message.",
         "wrongHint": "Make sure you use the f prefix and curly braces around variables!",
@@ -2961,38 +6291,112 @@ window.levels = [
         "id": 56,
         "title": "Lists",
         "concept": "Creating, accessing, and modifying ordered mutable collections in Python",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Introduction to Lists",
             "subheading": "Ordered, mutable collections",
             "body": "<p>A <strong>List</strong> is Python's most versatile collection type. It's an <strong>ordered</strong> sequence of items that can be of <strong>any type</strong> — numbers, strings, or even other lists! Lists are <strong>mutable</strong>, meaning you can change them after creation.</p>\n\n<h3>Creating Lists</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>square brackets <code>[]</code></strong> to create lists</li>\n    <li>Separate items with <strong>commas</strong></li>\n    <li>Lists can contain mixed data types</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets = [\"Anywhere Door\", \"Time Machine\", \"Bamboo Copter\"]</code></li>\n    <li><code>numbers = [1, 2, 3, 4, 5]</code></li>\n    <li><code>mixed = [\"Doraemon\", 10, True, 3.14]</code></li>\n    <li><code>empty = []</code> (empty list)</li>\n</ul>\n\n<h3>Accessing List Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets[0]</code> &rarr; First element (index 0)</li>\n    <li><code>gadgets[-1]</code> &rarr; Last element</li>\n    <li><code>gadgets[1:3]</code> &rarr; Slice (elements at index 1 and 2)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>IndexError:</strong> Trying to access an index that doesn't exist (e.g. <code>gadgets[10]</code> for a 3-item list) will crash your program!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a list in Python?", "a": "A list is an ordered, mutable collection of items that can hold any data type. Items are stored in square brackets <code>[]</code> and separated by commas." },
-            { "q": "Are lists mutable or immutable?", "a": "Lists are <strong>mutable</strong>, meaning you can modify them after creation by adding, removing, or changing elements." },
-            { "q": "Can a list contain different data types?", "a": "Yes! Lists can contain mixed data types — strings, integers, floats, booleans, or even other lists." },
-            { "q": "How do you access the first element of a list?", "a": "Use index <code>[0]</code>. Python uses zero-based indexing, so the first element is always at index 0." },
-            { "q": "What happens if you try to access an index that doesn't exist?", "a": "Python raises an <code>IndexError: list index out of range</code>. Always ensure your index is within the list's bounds." }
+            {
+                "q": "What is a list in Python?",
+                "a": "A list is an ordered, mutable collection of items that can hold any data type. Items are stored in square brackets <code>[]</code> and separated by commas."
+            },
+            {
+                "q": "Are lists mutable or immutable?",
+                "a": "Lists are <strong>mutable</strong>, meaning you can modify them after creation by adding, removing, or changing elements."
+            },
+            {
+                "q": "Can a list contain different data types?",
+                "a": "Yes! Lists can contain mixed data types — strings, integers, floats, booleans, or even other lists."
+            },
+            {
+                "q": "How do you access the first element of a list?",
+                "a": "Use index <code>[0]</code>. Python uses zero-based indexing, so the first element is always at index 0."
+            },
+            {
+                "q": "What happens if you try to access an index that doesn't exist?",
+                "a": "Python raises an <code>IndexError: list index out of range</code>. Always ensure your index is within the list's bounds."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python lists!",
             "questions": [
-                { "type": "mcq", "question": "How do you create a list in Python?", "options": ["Using curly braces {}", "Using square brackets []", "Using parentheses ()", "Using angle brackets <>"], "answer": 1 },
-                { "type": "mcq", "question": "What is the index of the first element in a list?", "options": ["1", "0", "-1", "first"], "answer": 1 },
-                { "type": "mcq", "question": "Which of these is a valid list?", "options": ["(1, 2, 3)", "{1, 2, 3}", "[1, 2, 3]", "<1, 2, 3>"], "answer": 2 },
-                { "type": "fill", "question": "Lists are created using _____ brackets.", "answer": "square" },
-                { "type": "fill", "question": "Accessing an invalid index raises an _____Error.", "answer": "Index" },
-                { "type": "fill", "question": "The last element of a list can be accessed using index _____.", "answer": "-1" },
-                { "type": "tf", "question": "Lists can only contain items of the same type.", "answer": "false" },
-                { "type": "tf", "question": "Lists are mutable (can be changed after creation).", "answer": "true" },
-                { "type": "tf", "question": "List indexing starts at 1.", "answer": "false" },
-                { "type": "short", "question": "Explain what happens when you access my_list[-1].", "sampleAnswer": "It returns the last element of the list. Negative indices count from the end." }
+                {
+                    "type": "mcq",
+                    "question": "How do you create a list in Python?",
+                    "options": [
+                        "Using curly braces {}",
+                        "Using square brackets []",
+                        "Using parentheses ()",
+                        "Using angle brackets <>"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the index of the first element in a list?",
+                    "options": [
+                        "1",
+                        "0",
+                        "-1",
+                        "first"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of these is a valid list?",
+                    "options": [
+                        "(1, 2, 3)",
+                        "{1, 2, 3}",
+                        "[1, 2, 3]",
+                        "<1, 2, 3>"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Lists are created using _____ brackets. (curly / braces / parentheses / square)",
+                    "answer": "square"
+                },
+                {
+                    "type": "fill",
+                    "question": "Accessing an invalid index raises an _____Error. (TypeError / Index / SyntaxError / NameError)",
+                    "answer": "Index"
+                },
+                {
+                    "type": "fill",
+                    "question": "The last element of a list can be accessed using index _____. (-1 / 1 / -2 / 0)",
+                    "answer": "-1"
+                },
+                {
+                    "type": "tf",
+                    "question": "Lists can only contain items of the same type.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Lists are mutable (can be changed after creation).",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "List indexing starts at 1.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain what happens when you access my_list[-1].",
+                    "sampleAnswer": "It returns the last element of the list. Negative indices count from the end."
+                }
             ]
         },
-
         "scenario": "Create a list of Doraemon's gadgets and access elements. Define gadgets = ['Anywhere Door', 'Time Machine', 'Bamboo Copter']. Access the first gadget and store it in 'first_gadget'. Access the last gadget (using negative indexing) and store it in 'last_gadget'. Print both on separate lines.",
         "hint": "Use gadgets[0] and gadgets[-1].",
         "wrongHint": "Make sure you print first_gadget and last_gadget separately!",
@@ -3003,38 +6407,112 @@ window.levels = [
         "id": 57,
         "title": "List methods",
         "concept": "Using built-in methods to add, remove, and modify list elements",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "List Methods",
             "subheading": "Adding, removing, and sorting",
             "body": "<p>Python lists come with powerful <strong>built-in methods</strong> to manipulate their contents. These methods make it easy to add, remove, and organize elements.</p>\n\n<h3>Common List Methods</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>append(item)</code></strong> — Adds an item to the <strong>end</strong> of the list</li>\n    <li><strong><code>insert(index, item)</code></strong> — Inserts an item at a specific position</li>\n    <li><strong><code>remove(item)</code></strong> — Removes the <strong>first occurrence</strong> of an item</li>\n    <li><strong><code>pop(index)</code></strong> — Removes and returns item at index (default: last)</li>\n    <li><strong><code>sort()</code></strong> — Sorts the list in <strong>ascending order</strong> (modifies in-place)</li>\n    <li><strong><code>reverse()</code></strong> — Reverses the list in-place</li>\n    <li><strong><code>count(item)</code></strong> — Returns how many times an item appears</li>\n    <li><strong><code>index(item)</code></strong> — Returns the index of the first occurrence</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets.append(\"Memory Bread\")</code> &rarr; Adds to end</li>\n    <li><code>gadgets.insert(0, \"Anywhere Door\")</code> &rarr; Inserts at beginning</li>\n    <li><code>gadgets.remove(\"Time Machine\")</code> &rarr; Removes first match</li>\n    <li><code>gadgets.pop()</code> &rarr; Removes and returns last item</li>\n    <li><code>numbers.sort()</code> &rarr; Sorts numbers ascending</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>In-place vs Return:</strong> Methods like <code>append()</code>, <code>sort()</code>, and <code>reverse()</code> modify the list <strong>in-place</strong> and return <code>None</code>. Don't assign them back to the list!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does the append() method do?", "a": "<code>append(item)</code> adds an item to the <strong>end</strong> of the list. It modifies the list in-place and returns None." },
-            { "q": "What is the difference between remove() and pop()?", "a": "<code>remove(item)</code> removes the first occurrence of a specific value, while <code>pop(index)</code> removes and returns an item at a specific index (or the last item if no index is given)." },
-            { "q": "Does sort() return a new sorted list?", "a": "No! <code>sort()</code> sorts the list <strong>in-place</strong> and returns <code>None</code>. If you want a new sorted list without modifying the original, use <code>sorted(my_list)</code> instead." },
-            { "q": "How do I insert an item at a specific position?", "a": "Use <code>insert(index, item)</code>. The item will be inserted at the specified index, pushing existing elements to the right." },
-            { "q": "What happens if I try to remove an item that doesn't exist?", "a": "Python raises a <code>ValueError: list.remove(x): x not in list</code>. Always check if the item exists before removing, or handle the exception." }
+            {
+                "q": "What does the append() method do?",
+                "a": "<code>append(item)</code> adds an item to the <strong>end</strong> of the list. It modifies the list in-place and returns None."
+            },
+            {
+                "q": "What is the difference between remove() and pop()?",
+                "a": "<code>remove(item)</code> removes the first occurrence of a specific value, while <code>pop(index)</code> removes and returns an item at a specific index (or the last item if no index is given)."
+            },
+            {
+                "q": "Does sort() return a new sorted list?",
+                "a": "No! <code>sort()</code> sorts the list <strong>in-place</strong> and returns <code>None</code>. If you want a new sorted list without modifying the original, use <code>sorted(my_list)</code> instead."
+            },
+            {
+                "q": "How do I insert an item at a specific position?",
+                "a": "Use <code>insert(index, item)</code>. The item will be inserted at the specified index, pushing existing elements to the right."
+            },
+            {
+                "q": "What happens if I try to remove an item that doesn't exist?",
+                "a": "Python raises a <code>ValueError: list.remove(x): x not in list</code>. Always check if the item exists before removing, or handle the exception."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python list methods!",
             "questions": [
-                { "type": "mcq", "question": "Which method adds an item to the end of a list?", "options": ["add()", "append()", "insert()", "push()"], "answer": 1 },
-                { "type": "mcq", "question": "What does my_list.pop() do by default?", "options": ["Removes first item", "Removes last item", "Removes all items", "Does nothing"], "answer": 1 },
-                { "type": "mcq", "question": "Which method sorts a list in-place?", "options": ["sorted()", "sort()", "order()", "arrange()"], "answer": 1 },
-                { "type": "fill", "question": "The _____ method inserts an item at a specific index.", "answer": "insert" },
-                { "type": "fill", "question": "The _____ method removes the first occurrence of an item.", "answer": "remove" },
-                { "type": "fill", "question": "Methods that modify in-place return _____.", "answer": "None" },
-                { "type": "tf", "question": "append() returns the modified list.", "answer": "false" },
-                { "type": "tf", "question": "pop() removes and returns an item.", "answer": "true" },
-                { "type": "tf", "question": "sort() creates a new sorted list.", "answer": "false" },
-                { "type": "short", "question": "Why shouldn't you write my_list = my_list.sort()?", "sampleAnswer": "Because sort() returns None, not the sorted list. This would replace your list with None. Just use my_list.sort()." }
+                {
+                    "type": "mcq",
+                    "question": "Which method adds an item to the end of a list?",
+                    "options": [
+                        "add()",
+                        "append()",
+                        "insert()",
+                        "push()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does my_list.pop() do by default?",
+                    "options": [
+                        "Removes first item",
+                        "Removes last item",
+                        "Removes all items",
+                        "Does nothing"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which method sorts a list in-place?",
+                    "options": [
+                        "sorted()",
+                        "sort()",
+                        "order()",
+                        "arrange()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The _____ method inserts an item at a specific index. (len / print / insert / input)",
+                    "answer": "insert"
+                },
+                {
+                    "type": "fill",
+                    "question": "The _____ method removes the first occurrence of an item. (input / len / print / remove)",
+                    "answer": "remove"
+                },
+                {
+                    "type": "fill",
+                    "question": "Methods that modify in-place return _____. (remove / insert / None / Variable)",
+                    "answer": "None"
+                },
+                {
+                    "type": "tf",
+                    "question": "append() returns the modified list.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "pop() removes and returns an item.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "sort() creates a new sorted list.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Why shouldn't you write my_list = my_list.sort()?",
+                    "sampleAnswer": "Because sort() returns None, not the sorted list. This would replace your list with None. Just use my_list.sort()."
+                }
             ]
         },
-
         "scenario": "Add and remove items from a gadget list. Define gadgets = ['Anywhere Door', 'Time Machine']. Use append() to add 'Bamboo Copter' to the list. Then use remove() to remove 'Time Machine'. Print the final gadgets list.",
         "hint": "Use gadgets.append('Bamboo Copter') and gadgets.remove('Time Machine').",
         "wrongHint": "Make sure you don't assign the result back to gadgets!",
@@ -3045,38 +6523,112 @@ window.levels = [
         "id": 58,
         "title": "List comprehension",
         "concept": "Creating lists dynamically using concise one-line syntax with loops and conditions",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "List Comprehension",
             "subheading": "Elegant list creation",
             "body": "<p><strong>List comprehension</strong> is a beautiful Python feature that lets you create lists using a single, concise line of code. It combines a <code>for</code> loop (and optionally an <code>if</code> condition) into one expression!</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">[expression for item in iterable]</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>expression</code></strong> — What each element will be</li>\n    <li><strong><code>item</code></strong> — Variable representing each element</li>\n    <li><strong><code>iterable</code></strong> — The sequence to loop over</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>[x*2 for x in range(5)]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (double each number)</li>\n    <li><code>[x.upper() for x in [\"dora\", \"emon\"]]</code> &rarr; <code>[\"DORA\", \"EMON\"]</code> (uppercase each)</li>\n    <li><code>[x for x in range(10) if x % 2 == 0]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (only evens)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why use it?</strong> List comprehensions are more readable, faster, and considered more \"Pythonic\" than traditional for loops with append().</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is list comprehension?", "a": "List comprehension is a concise way to create lists using a single line of code that combines a for loop (and optionally an if condition) into one expression." },
-            { "q": "What is the basic syntax of list comprehension?", "a": "The syntax is <code>[expression for item in iterable]</code>. You can also add a condition: <code>[expression for item in iterable if condition]</code>." },
-            { "q": "Can I add a condition to filter elements in list comprehension?", "a": "Yes! Add an <code>if</code> clause at the end: <code>[x for x in range(10) if x % 2 == 0]</code> creates a list of only even numbers." },
-            { "q": "How is list comprehension different from a for loop?", "a": "List comprehension creates a new list in one line, while a for loop with append() requires multiple lines. List comprehensions are generally faster and more readable." },
-            { "q": "Can I use list comprehension with strings?", "a": "Yes! You can iterate over strings: <code>[char.upper() for char in \\\"hello\\\"]</code> creates <code>['H', 'E', 'L', 'L', 'O']</code>." }
+            {
+                "q": "What is list comprehension?",
+                "a": "List comprehension is a concise way to create lists using a single line of code that combines a for loop (and optionally an if condition) into one expression."
+            },
+            {
+                "q": "What is the basic syntax of list comprehension?",
+                "a": "The syntax is <code>[expression for item in iterable]</code>. You can also add a condition: <code>[expression for item in iterable if condition]</code>."
+            },
+            {
+                "q": "Can I add a condition to filter elements in list comprehension?",
+                "a": "Yes! Add an <code>if</code> clause at the end: <code>[x for x in range(10) if x % 2 == 0]</code> creates a list of only even numbers."
+            },
+            {
+                "q": "How is list comprehension different from a for loop?",
+                "a": "List comprehension creates a new list in one line, while a for loop with append() requires multiple lines. List comprehensions are generally faster and more readable."
+            },
+            {
+                "q": "Can I use list comprehension with strings?",
+                "a": "Yes! You can iterate over strings: <code>[char.upper() for char in \\\"hello\\\"]</code> creates <code>['H', 'E', 'L', 'L', 'O']</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python list comprehensions!",
             "questions": [
-                { "type": "mcq", "question": "What does [x*2 for x in range(3)] create?", "options": ["[0, 1, 2]", "[0, 2, 4]", "[2, 4, 6]", "[0, 0, 0]"], "answer": 1 },
-                { "type": "mcq", "question": "Which symbol starts a list comprehension?", "options": ["()", "{}", "[]", "<>"], "answer": 2 },
-                { "type": "mcq", "question": "How do you filter elements in list comprehension?", "options": ["using where", "using if", "using filter", "using select"], "answer": 1 },
-                { "type": "fill", "question": "List comprehension uses _____ brackets.", "answer": "square" },
-                { "type": "fill", "question": "The keyword used to iterate in list comprehension is _____.", "answer": "for" },
-                { "type": "fill", "question": "To filter elements, add an _____ clause at the end.", "answer": "if" },
-                { "type": "tf", "question": "List comprehension can only create numeric lists.", "answer": "false" },
-                { "type": "tf", "question": "List comprehension is more Pythonic than for loops with append().", "answer": "true" },
-                { "type": "tf", "question": "You can use list comprehension without any condition.", "answer": "true" },
-                { "type": "short", "question": "Write a list comprehension that squares numbers 1-5.", "sampleAnswer": "[x**2 for x in range(1, 6)]" }
+                {
+                    "type": "mcq",
+                    "question": "What does [x*2 for x in range(3)] create?",
+                    "options": [
+                        "[0, 1, 2]",
+                        "[0, 2, 4]",
+                        "[2, 4, 6]",
+                        "[0, 0, 0]"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which symbol starts a list comprehension?",
+                    "options": [
+                        "()",
+                        "{}",
+                        "[]",
+                        "<>"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you filter elements in list comprehension?",
+                    "options": [
+                        "using where",
+                        "using if",
+                        "using filter",
+                        "using select"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "List comprehension uses _____ brackets. (curly / braces / parentheses / square)",
+                    "answer": "square"
+                },
+                {
+                    "type": "fill",
+                    "question": "The keyword used to iterate in list comprehension is _____. (elif / for / else / if)",
+                    "answer": "for"
+                },
+                {
+                    "type": "fill",
+                    "question": "To filter elements, add an _____ clause at the end. (if / else / elif / for)",
+                    "answer": "if"
+                },
+                {
+                    "type": "tf",
+                    "question": "List comprehension can only create numeric lists.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "List comprehension is more Pythonic than for loops with append().",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use list comprehension without any condition.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write a list comprehension that squares numbers 1-5.",
+                    "sampleAnswer": "[x**2 for x in range(1, 6)]"
+                }
             ]
         },
-
         "scenario": "Create a list of squared numbers using list comprehension. Use list comprehension to create a list of squares for numbers 1 to 5 (1, 4, 9, 16, 25) and store it in 'squares'. Print squares.",
         "hint": "Use [x**2 for x in range(1, 6)].",
         "wrongHint": "Make sure you use range(1, 6) to get numbers 1-5!",
@@ -3087,38 +6639,112 @@ window.levels = [
         "id": 59,
         "title": "Tuples",
         "concept": "Creating and using ordered immutable sequences for fixed data",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Tuples",
             "subheading": "Immutable ordered sequences",
             "body": "<p>A <strong>Tuple</strong> is similar to a list, but with one key difference: it's <strong>immutable</strong> — once created, it <strong>cannot be changed</strong>. Tuples are perfect for data that should remain constant throughout your program.</p>\n\n<h3>Creating Tuples</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>parentheses <code>()</code></strong> to create tuples</li>\n    <li>Separate items with <strong>commas</strong></li>\n    <li>Single-item tuples need a trailing comma: <code>(item,)</code></li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>coordinates = (10, 20)</code> (x, y position)</li>\n    <li><code>colors = (\"red\", \"green\", \"blue\")</code> (RGB values)</li>\n    <li><code>single = (\"Doraemon\",)</code> (single item with comma)</li>\n    <li><code>empty = ()</code> (empty tuple)</li>\n</ul>\n\n<h3>Tuple vs List</h3>\n<ul class=\"desc-list\">\n    <li><strong>Tuples:</strong> Immutable, faster, use parentheses <code>()</code></li>\n    <li><strong>Lists:</strong> Mutable, slower, use square brackets <code>[]</code></li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Immutable:</strong> You cannot add, remove, or modify tuple elements after creation. Trying to do so raises a <code>TypeError</code>!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a tuple in Python?", "a": "A tuple is an ordered, immutable collection of items. Like lists, tuples can hold multiple data types, but unlike lists, they cannot be modified after creation." },
-            { "q": "What does immutable mean?", "a": "Immutable means the object cannot be changed after it's created. You cannot add, remove, or modify elements in a tuple." },
-            { "q": "How do you create a tuple?", "a": "Use parentheses <code>()</code> with comma-separated items. E.g. <code>my_tuple = (1, 2, 3)</code>. For a single item, use a trailing comma: <code>(item,)</code>." },
-            { "q": "What is the main difference between tuples and lists?", "a": "Tuples are <strong>immutable</strong> (cannot be changed) and use <code>()</code>, while lists are <strong>mutable</strong> (can be changed) and use <code>[]</code>." },
-            { "q": "When should I use a tuple instead of a list?", "a": "Use tuples for data that should remain constant (like coordinates, configuration settings, or database records). Use lists when you need to modify the data." }
+            {
+                "q": "What is a tuple in Python?",
+                "a": "A tuple is an ordered, immutable collection of items. Like lists, tuples can hold multiple data types, but unlike lists, they cannot be modified after creation."
+            },
+            {
+                "q": "What does immutable mean?",
+                "a": "Immutable means the object cannot be changed after it's created. You cannot add, remove, or modify elements in a tuple."
+            },
+            {
+                "q": "How do you create a tuple?",
+                "a": "Use parentheses <code>()</code> with comma-separated items. E.g. <code>my_tuple = (1, 2, 3)</code>. For a single item, use a trailing comma: <code>(item,)</code>."
+            },
+            {
+                "q": "What is the main difference between tuples and lists?",
+                "a": "Tuples are <strong>immutable</strong> (cannot be changed) and use <code>()</code>, while lists are <strong>mutable</strong> (can be changed) and use <code>[]</code>."
+            },
+            {
+                "q": "When should I use a tuple instead of a list?",
+                "a": "Use tuples for data that should remain constant (like coordinates, configuration settings, or database records). Use lists when you need to modify the data."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python tuples!",
             "questions": [
-                { "type": "mcq", "question": "Which brackets are used to create tuples?", "options": ["Square brackets []", "Curly braces {}", "Parentheses ()", "Angle brackets <>"], "answer": 2 },
-                { "type": "mcq", "question": "Can you modify a tuple after creation?", "options": ["Yes", "No", "Only if empty", "Only with special methods"], "answer": 1 },
-                { "type": "mcq", "question": "What do you need for a single-item tuple?", "options": ["Nothing special", "A trailing comma", "Double parentheses", "A semicolon"], "answer": 1 },
-                { "type": "fill", "question": "Tuples are _____ (cannot be changed).", "answer": "immutable" },
-                { "type": "fill", "question": "Tuples are generally _____ than lists.", "answer": "faster" },
-                { "type": "fill", "question": "Lists use _____ brackets, tuples use parentheses.", "answer": "square" },
-                { "type": "tf", "question": "Tuples can contain mixed data types.", "answer": "true" },
-                { "type": "tf", "question": "You can append items to a tuple.", "answer": "false" },
-                { "type": "tf", "question": "Tuples support indexing like lists.", "answer": "true" },
-                { "type": "short", "question": "Why might you choose a tuple over a list?", "sampleAnswer": "Choose tuples for data that shouldn't change, like coordinates or configuration values. They're also faster and more memory-efficient." }
+                {
+                    "type": "mcq",
+                    "question": "Which brackets are used to create tuples?",
+                    "options": [
+                        "Square brackets []",
+                        "Curly braces {}",
+                        "Parentheses ()",
+                        "Angle brackets <>"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Can you modify a tuple after creation?",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Only if empty",
+                        "Only with special methods"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What do you need for a single-item tuple?",
+                    "options": [
+                        "Nothing special",
+                        "A trailing comma",
+                        "Double parentheses",
+                        "A semicolon"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Tuples are _____ (cannot be changed). (immutable / static / mutable / dynamic)",
+                    "answer": "immutable"
+                },
+                {
+                    "type": "fill",
+                    "question": "Tuples are generally _____ than lists. (variable / faster / square / immutable)",
+                    "answer": "faster"
+                },
+                {
+                    "type": "fill",
+                    "question": "Lists use _____ brackets, tuples use parentheses. (curly / braces / parentheses / square)",
+                    "answer": "square"
+                },
+                {
+                    "type": "tf",
+                    "question": "Tuples can contain mixed data types.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can append items to a tuple.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Tuples support indexing like lists.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Why might you choose a tuple over a list?",
+                    "sampleAnswer": "Choose tuples for data that shouldn't change, like coordinates or configuration values. They're also faster and more memory-efficient."
+                }
             ]
         },
-
         "scenario": "Create a tuple with Doraemon's favorite colors. Define colors = ('blue', 'red', 'white'). Access the first color and store it in 'first_color'. Print first_color.",
         "hint": "Use colors[0] to access the first element.",
         "wrongHint": "Make sure you use parentheses () to create the tuple!",
@@ -3129,38 +6755,112 @@ window.levels = [
         "id": 60,
         "title": "Sets",
         "concept": "Using unordered collections to store unique items and perform set operations",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Sets",
             "subheading": "Unordered unique collections",
             "body": "<p>A <strong>Set</strong> is an unordered collection of <strong>unique</strong> items. Unlike lists, sets cannot contain duplicate values, and they don't maintain any specific order. Sets are perfect for removing duplicates and performing mathematical set operations.</p>\n\n<h3>Creating Sets</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>curly braces <code>{}</code></strong> to create sets</li>\n    <li>Or use the <code>set()</code> constructor</li>\n    <li>Duplicates are automatically removed</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>{1, 2, 3, 2, 1}</code> &rarr; <code>{1, 2, 3}</code> (duplicates removed)</li>\n    <li><code>set([\"a\", \"b\", \"a\"])</code> &rarr; <code>{\"a\", \"b\"}</code> (from list)</li>\n    <li><code>empty_set = set()</code> (empty set — <code>{}</code> creates empty dict!)</li>\n</ul>\n\n<h3>Set Operations</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>add()</code></strong> — Add an element</li>\n    <li><strong><code>remove()</code></strong> — Remove an element</li>\n    <li><strong><code>union()</code></strong> or <code>|</code> — Combine sets</li>\n    <li><strong><code>intersection()</code></strong> or <code>&</code> — Common elements</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>No Indexing:</strong> Sets are unordered, so you cannot access elements by index (no <code>set[0]</code>). Use loops or convert to list if you need indexing!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a set in Python?", "a": "A set is an unordered collection of unique items. It automatically removes duplicates and doesn't maintain any specific order." },
-            { "q": "What happens if you try to add a duplicate to a set?", "a": "Nothing! Sets automatically ignore duplicate values. If you add an item that already exists, the set remains unchanged." },
-            { "q": "How do you create an empty set?", "a": "Use <code>set()</code>. Using <code>{}</code> creates an empty dictionary, not a set!" },
-            { "q": "Can you access set elements by index?", "a": "No! Sets are unordered, so they don't support indexing. You must use loops or convert to a list if you need indexed access." },
-            { "q": "What are some common set operations?", "a": "Common operations include <code>add()</code>, <code>remove()</code>, <code>union()</code> (combine), and <code>intersection()</code> (find common elements)." }
+            {
+                "q": "What is a set in Python?",
+                "a": "A set is an unordered collection of unique items. It automatically removes duplicates and doesn't maintain any specific order."
+            },
+            {
+                "q": "What happens if you try to add a duplicate to a set?",
+                "a": "Nothing! Sets automatically ignore duplicate values. If you add an item that already exists, the set remains unchanged."
+            },
+            {
+                "q": "How do you create an empty set?",
+                "a": "Use <code>set()</code>. Using <code>{}</code> creates an empty dictionary, not a set!"
+            },
+            {
+                "q": "Can you access set elements by index?",
+                "a": "No! Sets are unordered, so they don't support indexing. You must use loops or convert to a list if you need indexed access."
+            },
+            {
+                "q": "What are some common set operations?",
+                "a": "Common operations include <code>add()</code>, <code>remove()</code>, <code>union()</code> (combine), and <code>intersection()</code> (find common elements)."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python sets!",
             "questions": [
-                { "type": "mcq", "question": "Which brackets are used to create sets?", "options": ["Square brackets []", "Parentheses ()", "Curly braces {}", "Angle brackets <>"], "answer": 2 },
-                { "type": "mcq", "question": "What does {1, 2, 2, 3} evaluate to?", "options": ["{1, 2, 2, 3}", "{1, 2, 3}", "{1, 3}", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "How do you create an empty set?", "options": ["{}", "set()", "[]", "()"], "answer": 1 },
-                { "type": "fill", "question": "Sets automatically remove duplicates and are _____.", "answer": "unordered" },
-                { "type": "fill", "question": "To add an element to a set, use the _____ method.", "answer": "add" },
-                { "type": "fill", "question": "Sets do not support _____.", "answer": "indexing" },
-                { "type": "tf", "question": "Sets maintain the order of elements.", "answer": "false" },
-                { "type": "tf", "question": "You can have duplicate values in a set.", "answer": "false" },
-                { "type": "tf", "question": "{} creates an empty set.", "answer": "false" },
-                { "type": "short", "question": "Why would you use a set instead of a list?", "sampleAnswer": "Use sets when you need unique items and don't care about order, or when you need fast membership testing and set operations like union/intersection." }
+                {
+                    "type": "mcq",
+                    "question": "Which brackets are used to create sets?",
+                    "options": [
+                        "Square brackets []",
+                        "Parentheses ()",
+                        "Curly braces {}",
+                        "Angle brackets <>"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does {1, 2, 2, 3} evaluate to?",
+                    "options": [
+                        "{1, 2, 2, 3}",
+                        "{1, 2, 3}",
+                        "{1, 3}",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you create an empty set?",
+                    "options": [
+                        "{}",
+                        "set()",
+                        "[]",
+                        "()"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Sets automatically remove duplicates and are _____. (indexed / ordered / unordered / sorted)",
+                    "answer": "unordered"
+                },
+                {
+                    "type": "fill",
+                    "question": "To add an element to a set, use the _____ method. (variable / add / unordered / indexing)",
+                    "answer": "add"
+                },
+                {
+                    "type": "fill",
+                    "question": "Sets do not support _____. (indexing / typeerror / nameerror / syntaxerror)",
+                    "answer": "indexing"
+                },
+                {
+                    "type": "tf",
+                    "question": "Sets maintain the order of elements.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can have duplicate values in a set.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "{} creates an empty set.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Why would you use a set instead of a list?",
+                    "sampleAnswer": "Use sets when you need unique items and don't care about order, or when you need fast membership testing and set operations like union/intersection."
+                }
             ]
         },
-
         "scenario": "Create a set of unique gadgets. Define gadgets = {'Anywhere Door', 'Time Machine', 'Anywhere Door'}. Print gadgets to see duplicates removed. Then add 'Bamboo Copter' using add() and print gadgets again.",
         "hint": "Use gadgets.add('Bamboo Copter') to add an element.",
         "wrongHint": "Make sure you use curly braces {} and print gadgets twice!",
@@ -3171,38 +6871,112 @@ window.levels = [
         "id": 61,
         "title": "Dictionary",
         "concept": "Key-value pair data structures",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Dictionaries",
             "subheading": "Key-value pair data structures",
             "body": "<p>A <strong>Dictionary</strong> is a collection of key-value pairs. Dictionaries are unordered (ordered by insertion from Python 3.7+), mutable, and indexed by keys (which must be unique and of immutable types).</p>\n\n<h3>Creating Dictionaries</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>curly braces <code>{}</code></strong> with <code>key: value</code> pairs</li>\n    <li>Or use the <code>dict()</code> constructor</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>doraemon = {\"name\": \"Doraemon\", \"color\": \"blue\", \"age\": 10}</code></li>\n    <li><code>empty_dict = {}</code></li>\n</ul>\n\n<h3>Accessing and Modifying Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>doraemon[\"color\"]</code> &rarr; <code>\"blue\"</code> (Accessing value)</li>\n    <li><code>doraemon.get(\"pocket\", \"no pocket\")</code> &rarr; <code>\"no pocket\"</code> (Safe access using get())</li>\n    <li><code>doraemon[\"height\"] = 129.3</code> &rarr; Adds a new key-value pair</li>\n    <li><code>doraemon[\"color\"] = \"yellow\"</code> &rarr; Updates existing key</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>KeyError:</strong> Trying to access a key that does not exist in a dictionary using square brackets (e.g. <code>doraemon[\"pocket\"]</code>) will raise a <code>KeyError</code>. Use the <code>get()</code> method to avoid this!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a dictionary in Python?", "a": "A dictionary is a mutable collection of key-value pairs. Each key is mapped to a value, and keys must be unique and immutable (like strings, numbers, or tuples)." },
-            { "q": "How do you access a value in a dictionary?", "a": "You can access a value using its key inside square brackets (e.g. <code>my_dict[\"key\"]</code>) or by using the <code>get()</code> method (e.g. <code>my_dict.get(\"key\")</code>)." },
-            { "q": "What is the difference between my_dict[\"key\"] and my_dict.get(\"key\")?", "a": "If the key does not exist, <code>my_dict[\"key\"]</code> raises a <code>KeyError</code>, whereas <code>my_dict.get(\"key\")</code> returns <code>None</code> (or a default value you specify) without raising an error." },
-            { "q": "Can you have duplicate keys in a dictionary?", "a": "No, keys must be unique. If you assign a value to an existing key, it will overwrite the previous value." },
-            { "q": "How do you add or update a key-value pair?", "a": "Simply assign a value to the key: <code>my_dict[\"new_key\"] = value</code>. If the key exists, it updates it; if it doesn't, it adds it." }
+            {
+                "q": "What is a dictionary in Python?",
+                "a": "A dictionary is a mutable collection of key-value pairs. Each key is mapped to a value, and keys must be unique and immutable (like strings, numbers, or tuples)."
+            },
+            {
+                "q": "How do you access a value in a dictionary?",
+                "a": "You can access a value using its key inside square brackets (e.g. <code>my_dict[\"key\"]</code>) or by using the <code>get()</code> method (e.g. <code>my_dict.get(\"key\")</code>)."
+            },
+            {
+                "q": "What is the difference between my_dict[\"key\"] and my_dict.get(\"key\")?",
+                "a": "If the key does not exist, <code>my_dict[\"key\"]</code> raises a <code>KeyError</code>, whereas <code>my_dict.get(\"key\")</code> returns <code>None</code> (or a default value you specify) without raising an error."
+            },
+            {
+                "q": "Can you have duplicate keys in a dictionary?",
+                "a": "No, keys must be unique. If you assign a value to an existing key, it will overwrite the previous value."
+            },
+            {
+                "q": "How do you add or update a key-value pair?",
+                "a": "Simply assign a value to the key: <code>my_dict[\"new_key\"] = value</code>. If the key exists, it updates it; if it doesn't, it adds it."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python dictionaries!",
             "questions": [
-                { "type": "mcq", "question": "Which brackets are used to create dictionaries?", "options": ["Square brackets []", "Parentheses ()", "Curly braces {}", "Angle brackets <>"], "answer": 2 },
-                { "type": "mcq", "question": "What happens if you try to access a non-existent key using square brackets?", "options": ["Returns None", "Raises a KeyError", "Creates the key automatically", "Returns False"], "answer": 1 },
-                { "type": "mcq", "question": "What is the output of empty = {}; empty.get('pocket', 'not found')?", "options": ["not found", "None", "KeyError", "empty"], "answer": 0 },
-                { "type": "fill", "question": "Dictionaries store data as key-_____ pairs.", "answer": "value" },
-                { "type": "fill", "question": "To get a list of all keys in a dictionary, use the _____() method.", "answer": "keys" },
-                { "type": "fill", "question": "A safe way to access keys without raising KeyError is the _____() method.", "answer": "get" },
-                { "type": "tf", "question": "Dictionary keys must be unique.", "answer": "true" },
-                { "type": "tf", "question": "You can have duplicate values in a dictionary.", "answer": "true" },
-                { "type": "tf", "question": "{} creates an empty dictionary.", "answer": "true" },
-                { "type": "short", "question": "How do you check if a key is present in a dictionary?", "sampleAnswer": "Use the 'in' operator, for example: 'key' in my_dict." }
+                {
+                    "type": "mcq",
+                    "question": "Which brackets are used to create dictionaries?",
+                    "options": [
+                        "Square brackets []",
+                        "Parentheses ()",
+                        "Curly braces {}",
+                        "Angle brackets <>"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens if you try to access a non-existent key using square brackets?",
+                    "options": [
+                        "Returns None",
+                        "Raises a KeyError",
+                        "Creates the key automatically",
+                        "Returns False"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the output of empty = {}; empty.get('pocket', 'not found')?",
+                    "options": [
+                        "not found",
+                        "None",
+                        "KeyError",
+                        "empty"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "Dictionaries store data as key-_____ pairs. (value / typeerror / nameerror / syntaxerror)",
+                    "answer": "value"
+                },
+                {
+                    "type": "fill",
+                    "question": "To get a list of all keys in a dictionary, use the _____() method. (syntaxerror / nameerror / typeerror / keys)",
+                    "answer": "keys"
+                },
+                {
+                    "type": "fill",
+                    "question": "A safe way to access keys without raising KeyError is the _____() method. (variable / keys / get / value)",
+                    "answer": "get"
+                },
+                {
+                    "type": "tf",
+                    "question": "Dictionary keys must be unique.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can have duplicate values in a dictionary.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "{} creates an empty dictionary.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "How do you check if a key is present in a dictionary?",
+                    "sampleAnswer": "Use the 'in' operator, for example: 'key' in my_dict."
+                }
             ]
         },
-
         "scenario": "Create a dictionary containing Doraemon's details. Define a dictionary named 'doraemon' with keys 'color' set to 'blue' and 'type' set to 'robot'. Add a new key 'pocket' set to True. Print the doraemon dictionary.",
         "hint": "Use doraemon = {'color': 'blue', 'type': 'robot'} and then doraemon['pocket'] = True.",
         "wrongHint": "Make sure you create the dictionary correctly, add the 'pocket' key, and print the dictionary!",
@@ -3213,38 +6987,112 @@ window.levels = [
         "id": 62,
         "title": "Nested dictionary",
         "concept": "Structuring complex hierarchical data",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Nested Dictionaries",
             "subheading": "Structuring complex hierarchical data",
             "body": "<p>A <strong>Nested Dictionary</strong> is a dictionary that contains other dictionaries as values. This is extremely useful for structuring complex hierarchical data, like user profiles, nested objects, or database records.</p>\n\n<h3>Creating a Nested Dictionary</h3>\n<ul class=\"desc-list\">\n    <li>Place a dictionary inside another dictionary as a value associated with a key.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">users = {\n    \"user1\": {\n        \"name\": \"Doraemon\",\n        \"color\": \"blue\"\n    },\n    \"user2\": {\n        \"name\": \"Nobita\",\n        \"color\": \"yellow\"\n    }\n}</pre>\n\n<h3>Accessing Nested Elements</h3>\n<ul class=\"desc-list\">\n    <li>Chain the square brackets <code>[]</code> to access nested values.</li>\n    <li><code>users[\"user1\"][\"name\"]</code> &rarr; <code>\"Doraemon\"</code></li>\n    <li><code>users[\"user2\"][\"color\"]</code> &rarr; <code>\"yellow\"</code></li>\n</ul>\n\n<h3>Modifying Nested Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>users[\"user2\"][\"color\"] = \"red\"</code> &rarr; Changes Nobita's color to red</li>\n    <li><code>users[\"user1\"][\"pocket\"] = True</code> &rarr; Adds 'pocket' to Doraemon's dictionary</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Chaining get():</strong> To safely access nested elements, you can chain <code>.get()</code>. But be careful: if a outer key is missing, <code>.get()</code> returns <code>None</code>, and calling <code>.get()</code> on <code>None</code> will crash your program. Use: <code>users.get(\"user1\", {}).get(\"name\")</code>.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a nested dictionary?", "a": "A nested dictionary is a dictionary where the values of one or more keys are themselves dictionaries." },
-            { "q": "How do you access a value inside a nested dictionary?", "a": "You access a value by chaining keys in square brackets, starting with the outermost key: <code>dict[outer_key][inner_key]</code>." },
-            { "q": "Can you have multiple levels of nesting in a dictionary?", "a": "Yes! You can nest dictionaries inside nested dictionaries as deep as you need, e.g. <code>dict[level1][level2][level3]</code>." },
-            { "q": "How do you add a new key-value pair to an existing nested dictionary?", "a": "Access the nested dictionary first, and then assign the value: <code>dict[outer_key][new_inner_key] = value</code>." },
-            { "q": "How can you safely access nested keys without raising an error?", "a": "Use <code>.get()</code> with an empty dictionary fallback for intermediate keys: <code>dict.get(outer_key, {}).get(inner_key)</code>." }
+            {
+                "q": "What is a nested dictionary?",
+                "a": "A nested dictionary is a dictionary where the values of one or more keys are themselves dictionaries."
+            },
+            {
+                "q": "How do you access a value inside a nested dictionary?",
+                "a": "You access a value by chaining keys in square brackets, starting with the outermost key: <code>dict[outer_key][inner_key]</code>."
+            },
+            {
+                "q": "Can you have multiple levels of nesting in a dictionary?",
+                "a": "Yes! You can nest dictionaries inside nested dictionaries as deep as you need, e.g. <code>dict[level1][level2][level3]</code>."
+            },
+            {
+                "q": "How do you add a new key-value pair to an existing nested dictionary?",
+                "a": "Access the nested dictionary first, and then assign the value: <code>dict[outer_key][new_inner_key] = value</code>."
+            },
+            {
+                "q": "How can you safely access nested keys without raising an error?",
+                "a": "Use <code>.get()</code> with an empty dictionary fallback for intermediate keys: <code>dict.get(outer_key, {}).get(inner_key)</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of Python nested dictionaries!",
             "questions": [
-                { "type": "mcq", "question": "Given info = {'dora': {'color': 'blue'}}, how do you access 'blue'?", "options": ["info['dora', 'color']", "info['dora']['color']", "info['dora'](color)", "info.dora.color"], "answer": 1 },
-                { "type": "mcq", "question": "What type of structure is a nested dictionary?", "options": ["Flat structure", "Hierarchical structure", "Sequential structure", "Tabular structure"], "answer": 1 },
-                { "type": "mcq", "question": "What is the result of info = {'dora': {'color': 'blue'}}; info['dora'].get('pocket', 'none')?", "options": ["None", "none", "KeyError", "blue"], "answer": 1 },
-                { "type": "fill", "question": "To access nested dictionary values, you _____ key lookups.", "answer": "chain" },
-                { "type": "fill", "question": "If info = {'a': {'b': 1}}, then info['a']['b'] is equal to _____.", "answer": "1" },
-                { "type": "fill", "question": "Using info.get('a', {}) returns an empty _____ if 'a' is not found.", "answer": "dictionary" },
-                { "type": "tf", "question": "You can change a value inside a nested dictionary.", "answer": "true" },
-                { "type": "tf", "question": "Nested dictionaries can only have one level of nesting.", "answer": "false" },
-                { "type": "tf", "question": "info['a']['b'] will raise an error if key 'a' doesn't exist.", "answer": "true" },
-                { "type": "short", "question": "Write the expression to add a key 'age' with value 10 to a nested dictionary 'nobita' inside 'friends'.", "sampleAnswer": "friends['nobita']['age'] = 10" }
+                {
+                    "type": "mcq",
+                    "question": "Given info = {'dora': {'color': 'blue'}}, how do you access 'blue'?",
+                    "options": [
+                        "info['dora', 'color']",
+                        "info['dora']['color']",
+                        "info['dora'](color)",
+                        "info.dora.color"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What type of structure is a nested dictionary?",
+                    "options": [
+                        "Flat structure",
+                        "Hierarchical structure",
+                        "Sequential structure",
+                        "Tabular structure"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the result of info = {'dora': {'color': 'blue'}}; info['dora'].get('pocket', 'none')?",
+                    "options": [
+                        "None",
+                        "none",
+                        "KeyError",
+                        "blue"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To access nested dictionary values, you _____ key lookups. (1 / dictionary / variable / chain)",
+                    "answer": "chain"
+                },
+                {
+                    "type": "fill",
+                    "question": "If info = {'a': {'b': 1}}, then info['a']['b'] is equal to _____. (3 / 2 / 1 / 0)",
+                    "answer": "1"
+                },
+                {
+                    "type": "fill",
+                    "question": "Using info.get('a', {}) returns an empty _____ if 'a' is not found. (dictionary / chain / variable / 1)",
+                    "answer": "dictionary"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can change a value inside a nested dictionary.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Nested dictionaries can only have one level of nesting.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "info['a']['b'] will raise an error if key 'a' doesn't exist.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write the expression to add a key 'age' with value 10 to a nested dictionary 'nobita' inside 'friends'.",
+                    "sampleAnswer": "friends['nobita']['age'] = 10"
+                }
             ]
         },
-
         "scenario": "Define a nested dictionary representing character gadgets. Create a dictionary named 'inventory' containing 'doraemon' as a key, whose value is another dictionary with key 'primary' set to 'Anywhere Door'. Modify this nested dictionary to add a key 'secondary' with value 'Time Machine' under 'doraemon'. Print the final inventory dictionary.",
         "hint": "Use inventory = {'doraemon': {'primary': 'Anywhere Door'}} and inventory['doraemon']['secondary'] = 'Time Machine'.",
         "wrongHint": "Make sure you nest the dictionaries correctly and print the main inventory dictionary!",
@@ -3255,38 +7103,112 @@ window.levels = [
         "id": 63,
         "title": "len(), max(), min()",
         "concept": "Core aggregate functions on collections",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "len(), max(), and min() Functions",
             "subheading": "Core aggregate functions on collections",
             "body": "<p>Python provides several extremely useful built-in functions that work across all collections (lists, tuples, sets, dictionaries, and even strings) to get their size, maximum value, and minimum value.</p>\n\n<h3>1. The <code>len()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the number of items (length) in a collection.</li>\n    <li><code>len([1, 2, 3])</code> &rarr; <code>3</code></li>\n    <li><code>len(\"Doraemon\")</code> &rarr; <code>8</code></li>\n</ul>\n\n<h3>2. The <code>max()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the largest item in a collection.</li>\n    <li><code>max([5, 12, 3])</code> &rarr; <code>12</code></li>\n    <li><code>max(\"abc\")</code> &rarr; <code>\"c\"</code> (alphabetically largest)</li>\n</ul>\n\n<h3>3. The <code>min()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the smallest item in a collection.</li>\n    <li><code>min([5, 12, 3])</code> &rarr; <code>3</code></li>\n    <li><code>min(\"abc\")</code> &rarr; <code>\"a\"</code> (alphabetically smallest)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Comparing Mixed Types:</strong> Calling <code>max()</code> or <code>min()</code> on a collection with mixed, incomparable types (e.g. <code>[10, \"apple\"]</code>) will raise a <code>TypeError</code>!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does len() do?", "a": "<code>len()</code> returns the number of elements in a collection, such as a list, set, dictionary, tuple, or the number of characters in a string." },
-            { "q": "What does max() and min() return for strings?", "a": "They compare characters based on their Unicode value (alphabetical order). E.g. <code>min(\"doraemon\")</code> returns <code>\"a\"</code>." },
-            { "q": "Can you use max() and min() on dictionaries?", "a": "Yes! By default, they will find the maximum/minimum of the dictionary's <strong>keys</strong>, not its values." },
-            { "q": "What happens if you pass an empty collection to max() or min()?", "a": "Passing an empty collection raises a <code>ValueError</code>. You can prevent this by passing a default value, e.g. <code>max([], default=0)</code>." },
-            { "q": "Does len() work on numeric values like integers?", "a": "No. <code>len()</code> only works on sequences and collections. Calling <code>len(123)</code> will raise a <code>TypeError</code>." }
+            {
+                "q": "What does len() do?",
+                "a": "<code>len()</code> returns the number of elements in a collection, such as a list, set, dictionary, tuple, or the number of characters in a string."
+            },
+            {
+                "q": "What does max() and min() return for strings?",
+                "a": "They compare characters based on their Unicode value (alphabetical order). E.g. <code>min(\"doraemon\")</code> returns <code>\"a\"</code>."
+            },
+            {
+                "q": "Can you use max() and min() on dictionaries?",
+                "a": "Yes! By default, they will find the maximum/minimum of the dictionary's <strong>keys</strong>, not its values."
+            },
+            {
+                "q": "What happens if you pass an empty collection to max() or min()?",
+                "a": "Passing an empty collection raises a <code>ValueError</code>. You can prevent this by passing a default value, e.g. <code>max([], default=0)</code>."
+            },
+            {
+                "q": "Does len() work on numeric values like integers?",
+                "a": "No. <code>len()</code> only works on sequences and collections. Calling <code>len(123)</code> will raise a <code>TypeError</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of len(), max(), and min()!",
             "questions": [
-                { "type": "mcq", "question": "What does len('Python') return?", "options": ["5", "6", "7", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "What is the result of max([2, 8, 1])?", "options": ["1", "2", "8", "TypeError"], "answer": 2 },
-                { "type": "mcq", "question": "What happens if you run min([1, 'a'])?", "options": ["1", "'a'", "None", "Raises TypeError"], "answer": 3 },
-                { "type": "fill", "question": "The _____ function returns the number of elements in a list.", "answer": "len" },
-                { "type": "fill", "question": "To find the smallest element in a collection, use the _____ function.", "answer": "min" },
-                { "type": "fill", "question": "When used on a dictionary, max() compares the dictionary _____.", "answer": "keys" },
-                { "type": "tf", "question": "len() can be used to find the length of an integer directly.", "answer": "false" },
-                { "type": "tf", "question": "max() and min() are built-in functions, not list methods.", "answer": "true" },
-                { "type": "tf", "question": "min() on a string returns the alphabetically earliest character.", "answer": "true" },
-                { "type": "short", "question": "Write the code to find the length of the list [10, 20, 30].", "sampleAnswer": "len([10, 20, 30])" }
+                {
+                    "type": "mcq",
+                    "question": "What does len('Python') return?",
+                    "options": [
+                        "5",
+                        "6",
+                        "7",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the result of max([2, 8, 1])?",
+                    "options": [
+                        "1",
+                        "2",
+                        "8",
+                        "TypeError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens if you run min([1, 'a'])?",
+                    "options": [
+                        "1",
+                        "'a'",
+                        "None",
+                        "Raises TypeError"
+                    ],
+                    "answer": 3
+                },
+                {
+                    "type": "fill",
+                    "question": "The _____ function returns the number of elements in a list. (input / len / min / print)",
+                    "answer": "len"
+                },
+                {
+                    "type": "fill",
+                    "question": "To find the smallest element in a collection, use the _____ function. (min / input / len / print)",
+                    "answer": "min"
+                },
+                {
+                    "type": "fill",
+                    "question": "When used on a dictionary, max() compares the dictionary _____. (syntaxerror / nameerror / typeerror / keys)",
+                    "answer": "keys"
+                },
+                {
+                    "type": "tf",
+                    "question": "len() can be used to find the length of an integer directly.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "max() and min() are built-in functions, not list methods.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "min() on a string returns the alphabetically earliest character.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write the code to find the length of the list [10, 20, 30].",
+                    "sampleAnswer": "len([10, 20, 30])"
+                }
             ]
         },
-
         "scenario": "Analyze a list of scores. Define scores = [78, 92, 56, 89, 95, 84]. Find the number of scores using len() and store it in 'count'. Find the highest score using max() and store it in 'highest'. Find the lowest score using min() and store it in 'lowest'. Print all three values on separate lines in that order.",
         "hint": "Use len(scores), max(scores), and min(scores).",
         "wrongHint": "Make sure you print count, highest, and lowest on three separate lines!",
@@ -3297,38 +7219,112 @@ window.levels = [
         "id": 64,
         "title": "Sorting",
         "concept": "Sorting collections using sort() and sorted()",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Sorting Collections",
             "subheading": "In-place sort() vs. returns-new sorted()",
             "body": "<p>Python offers two primary ways to sort collections. Understanding the difference between them is crucial for writing bug-free and efficient code.</p>\n\n<h3>1. The <code>sort()</code> Method (In-place)</h3>\n<ul class=\"desc-list\">\n    <li>Only available for <strong>lists</strong>.</li>\n    <li>Modifies the original list **in-place** (permanently changing its order).</li>\n    <li>Returns <code>None</code>.</li>\n    <li><code>numbers = [3, 1, 4]; numbers.sort(); print(numbers)</code> &rarr; <code>[1, 3, 4]</code></li>\n</ul>\n\n<h3>2. The <code>sorted()</code> Function (Returns new list)</h3>\n<ul class=\"desc-list\">\n    <li>Available for **any iterable** (lists, tuples, strings, dictionaries, sets).</li>\n    <li>Leaves the original collection **unchanged**.</li>\n    <li>Returns a **new sorted list**.</li>\n    <li><code>numbers = [3, 1, 4]; sorted_nums = sorted(numbers); print(sorted_nums)</code> &rarr; <code>[1, 3, 4]</code></li>\n</ul>\n\n<h3>Reverse Sorting</h3>\n<p>Both support sorting in descending order using the <code>reverse=True</code> parameter:</p>\n<ul class=\"desc-list\">\n    <li><code>numbers.sort(reverse=True)</code></li>\n    <li><code>new_list = sorted(numbers, reverse=True)</code></li>\n</ul>"
         },
-
         "qna": [
-            { "q": "What is the difference between sort() and sorted()?", "a": "<code>sort()</code> is a list method that modifies the list in-place and returns <code>None</code>. <code>sorted()</code> is a built-in function that works on any iterable, leaves the original unchanged, and returns a new sorted list." },
-            { "q": "Can you use sort() on a tuple?", "a": "No, tuples are immutable, so they cannot be modified in-place. Trying to use <code>my_tuple.sort()</code> raises an <code>AttributeError</code>. You can, however, use the <code>sorted(my_tuple)</code> function, which returns a new sorted list." },
-            { "q": "How do you sort a list in descending order?", "a": "Pass the argument <code>reverse=True</code> to either <code>sort()</code> or <code>sorted()</code>. E.g. <code>my_list.sort(reverse=True)</code>." },
-            { "q": "What does sorted() return when you pass a string?", "a": "It returns a sorted **list** of characters, e.g. <code>sorted(\"cba\")</code> returns <code>['a', 'b', 'c']</code>." },
-            { "q": "Can you sort a list of strings?", "a": "Yes! Strings are sorted alphabetically (lexicographically) by default. Capital letters come before lowercase letters in ASCII/Unicode sorting." }
+            {
+                "q": "What is the difference between sort() and sorted()?",
+                "a": "<code>sort()</code> is a list method that modifies the list in-place and returns <code>None</code>. <code>sorted()</code> is a built-in function that works on any iterable, leaves the original unchanged, and returns a new sorted list."
+            },
+            {
+                "q": "Can you use sort() on a tuple?",
+                "a": "No, tuples are immutable, so they cannot be modified in-place. Trying to use <code>my_tuple.sort()</code> raises an <code>AttributeError</code>. You can, however, use the <code>sorted(my_tuple)</code> function, which returns a new sorted list."
+            },
+            {
+                "q": "How do you sort a list in descending order?",
+                "a": "Pass the argument <code>reverse=True</code> to either <code>sort()</code> or <code>sorted()</code>. E.g. <code>my_list.sort(reverse=True)</code>."
+            },
+            {
+                "q": "What does sorted() return when you pass a string?",
+                "a": "It returns a sorted **list** of characters, e.g. <code>sorted(\"cba\")</code> returns <code>['a', 'b', 'c']</code>."
+            },
+            {
+                "q": "Can you sort a list of strings?",
+                "a": "Yes! Strings are sorted alphabetically (lexicographically) by default. Capital letters come before lowercase letters in ASCII/Unicode sorting."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of sorting in Python!",
             "questions": [
-                { "type": "mcq", "question": "Which of the following sorts a list in-place?", "options": ["sorted(my_list)", "my_list.sort()", "my_list.sorted()", "sort(my_list)"], "answer": 1 },
-                { "type": "mcq", "question": "What does my_list.sort() return?", "options": ["The sorted list", "None", "A new list", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "Can you call sort() on a tuple?", "options": ["Yes, it returns a sorted tuple", "Yes, it modifies the tuple in-place", "No, tuples have no sort method", "Only if it contains numbers"], "answer": 2 },
-                { "type": "fill", "question": "To sort a collection in descending order, pass the parameter reverse=_____.", "answer": "True" },
-                { "type": "fill", "question": "The sorted() function returns a new _____.", "answer": "list" },
-                { "type": "fill", "question": "The sort() method sorts a list _____-place.", "answer": "in" },
-                { "type": "tf", "question": "sorted() modifies the original collection.", "answer": "false" },
-                { "type": "tf", "question": "You can use sorted() on dictionaries.", "answer": "true" },
-                { "type": "tf", "question": "Strings are sorted alphabetically.", "answer": "true" },
-                { "type": "short", "question": "What is the return type of sorted('hello')?", "sampleAnswer": "A list of strings/characters, specifically ['e', 'h', 'l', 'l', 'o']." }
+                {
+                    "type": "mcq",
+                    "question": "Which of the following sorts a list in-place?",
+                    "options": [
+                        "sorted(my_list)",
+                        "my_list.sort()",
+                        "my_list.sorted()",
+                        "sort(my_list)"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does my_list.sort() return?",
+                    "options": [
+                        "The sorted list",
+                        "None",
+                        "A new list",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Can you call sort() on a tuple?",
+                    "options": [
+                        "Yes, it returns a sorted tuple",
+                        "Yes, it modifies the tuple in-place",
+                        "No, tuples have no sort method",
+                        "Only if it contains numbers"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "To sort a collection in descending order, pass the parameter reverse=_____. (None / True / undefined / False)",
+                    "answer": "True"
+                },
+                {
+                    "type": "fill",
+                    "question": "The sorted() function returns a new _____. (int / float / str / list)",
+                    "answer": "list"
+                },
+                {
+                    "type": "fill",
+                    "question": "The sort() method sorts a list _____-place. (else / in / elif / if)",
+                    "answer": "in"
+                },
+                {
+                    "type": "tf",
+                    "question": "sorted() modifies the original collection.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use sorted() on dictionaries.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Strings are sorted alphabetically.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "What is the return type of sorted('hello')?",
+                    "sampleAnswer": "A list of strings/characters, specifically ['e', 'h', 'l', 'l', 'o']."
+                }
             ]
         },
-
         "scenario": "Perform both types of sorting. Define a list named 'prices' with values [25, 10, 45, 5]. Use sorted() to create a new sorted list in descending order and store it in 'prices_desc'. Then use sort() on the original 'prices' list to sort it in-place in ascending order. Print both prices_desc and prices on separate lines.",
         "hint": "Use prices_desc = sorted(prices, reverse=True) and prices.sort().",
         "wrongHint": "Make sure you print prices_desc first, then prices on the next line!",
@@ -3339,38 +7335,112 @@ window.levels = [
         "id": 65,
         "title": "Collection coding challenge",
         "concept": "Solving complex collection puzzles",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Collection Coding Challenge",
             "subheading": "Mastering lists, tuples, sets, and dictionaries",
             "body": "<p>Congratulations! You've reached the end of the Collections module. It's time to put your knowledge to the test by solving a practical programming challenge that combines various collection types.</p>\n\n<h3>Review of Collections</h3>\n<ul class=\"desc-list\">\n    <li><strong>Lists:</strong> Ordered, mutable, allows duplicates. Great for lists of items you want to change.</li>\n    <li><strong>Tuples:</strong> Ordered, immutable, allows duplicates. Great for fixed data (e.g. coordinates, key-value keys).</li>\n    <li><strong>Sets:</strong> Unordered, mutable, unique elements. Great for removing duplicates and testing membership.</li>\n    <li><strong>Dictionaries:</strong> Key-value mapping, keys must be unique. Great for lookup tables and structured objects.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Challenge Prompt:</strong> We want to identify the unique items present in a list, sort them alphabetically, and map them to their length in a dictionary!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "How can you remove duplicates from a list?", "a": "The easiest way is to convert the list to a set using <code>set(my_list)</code>, then optionally convert it back to a list using <code>list()</code>." },
-            { "q": "How do you count occurrences of items in a list?", "a": "You can use a loop with a dictionary, or the built-in <code>list.count()</code> method, or the <code>collections.Counter</code> class." },
-            { "q": "Can set elements be dictionary keys?", "a": "Yes! Set elements must be hashable (immutable), just like dictionary keys. So you can map unique string items from a set to dictionary values." },
-            { "q": "What happens when you sort a set?", "a": "Using <code>sorted(my_set)</code> returns a sorted <strong>list</strong> of the set elements, as sets themselves cannot be sorted." },
-            { "q": "How do you combine elements from a list into a dictionary?", "a": "You can use a dictionary comprehension, for example: <code>{item: len(item) for item in items}</code>." }
+            {
+                "q": "How can you remove duplicates from a list?",
+                "a": "The easiest way is to convert the list to a set using <code>set(my_list)</code>, then optionally convert it back to a list using <code>list()</code>."
+            },
+            {
+                "q": "How do you count occurrences of items in a list?",
+                "a": "You can use a loop with a dictionary, or the built-in <code>list.count()</code> method, or the <code>collections.Counter</code> class."
+            },
+            {
+                "q": "Can set elements be dictionary keys?",
+                "a": "Yes! Set elements must be hashable (immutable), just like dictionary keys. So you can map unique string items from a set to dictionary values."
+            },
+            {
+                "q": "What happens when you sort a set?",
+                "a": "Using <code>sorted(my_set)</code> returns a sorted <strong>list</strong> of the set elements, as sets themselves cannot be sorted."
+            },
+            {
+                "q": "How do you combine elements from a list into a dictionary?",
+                "a": "You can use a dictionary comprehension, for example: <code>{item: len(item) for item in items}</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's test your overall collections mastery!",
             "questions": [
-                { "type": "mcq", "question": "Which structure guarantees only unique elements?", "options": ["List", "Tuple", "Set", "Dictionary"], "answer": 2 },
-                { "type": "mcq", "question": "Which structure is immutable?", "options": ["List", "Tuple", "Set", "Dictionary"], "answer": 1 },
-                { "type": "mcq", "question": "What is the return type of sorted({3, 1, 2})?", "options": ["Set", "List", "Tuple", "Dict"], "answer": 1 },
-                { "type": "fill", "question": "To add an element to a set, use the _____ method.", "answer": "add" },
-                { "type": "fill", "question": "To add an element to a list, use the _____ method.", "answer": "append" },
-                { "type": "fill", "question": "Converting a list to a set automatically removes _____.", "answer": "duplicates" },
-                { "type": "tf", "question": "Dictionaries can have lists as keys.", "answer": "false" },
-                { "type": "tf", "question": "Tuples can contain mutable lists.", "answer": "true" },
-                { "type": "tf", "question": "The expression len({1, 1, 2}) evaluates to 2.", "answer": "true" },
-                { "type": "short", "question": "Write a dictionary comprehension that maps 1, 2 to their squares.", "sampleAnswer": "{x: x**2 for x in (1, 2)}" }
+                {
+                    "type": "mcq",
+                    "question": "Which structure guarantees only unique elements?",
+                    "options": [
+                        "List",
+                        "Tuple",
+                        "Set",
+                        "Dictionary"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which structure is immutable?",
+                    "options": [
+                        "List",
+                        "Tuple",
+                        "Set",
+                        "Dictionary"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the return type of sorted({3, 1, 2})?",
+                    "options": [
+                        "Set",
+                        "List",
+                        "Tuple",
+                        "Dict"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "To add an element to a set, use the _____ method. (variable / add / append / duplicates)",
+                    "answer": "add"
+                },
+                {
+                    "type": "fill",
+                    "question": "To add an element to a list, use the _____ method. (print / append / len / input)",
+                    "answer": "append"
+                },
+                {
+                    "type": "fill",
+                    "question": "Converting a list to a set automatically removes _____. (add / append / duplicates / variable)",
+                    "answer": "duplicates"
+                },
+                {
+                    "type": "tf",
+                    "question": "Dictionaries can have lists as keys.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Tuples can contain mutable lists.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "The expression len({1, 1, 2}) evaluates to 2.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Write a dictionary comprehension that maps 1, 2 to their squares.",
+                    "sampleAnswer": "{x: x**2 for x in (1, 2)}"
+                }
             ]
         },
-
         "scenario": "Remove duplicates and map item lengths. Define words = ['dorayaki', 'apple', 'dorayaki', 'banana', 'apple']. Convert this list to a set to get unique words, then sort them alphabetically to get a sorted list of unique words. Finally, create a dictionary where keys are the sorted unique words and values are their lengths. Print the final dictionary.",
         "hint": "First, do unique_words = sorted(list(set(words))), then create the dict using comprehension: {w: len(w) for w in unique_words}.",
         "wrongHint": "Make sure you convert the list to a set to remove duplicates, sort the results alphabetically, map them to their lengths, and print the dictionary!",
@@ -3381,38 +7451,112 @@ window.levels = [
         "id": 66,
         "title": "Why functions",
         "concept": "Reusing and modularizing your Python code",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Why Functions?",
             "subheading": "Reusing and modularizing your Python code",
             "body": "<p>Imagine you need to print a banner message 10 times in different parts of your code. Copy-pasting the print statement works, but what if you need to change the message? You'd have to edit all 10 places! This is where <strong>functions</strong> come in.</p>\n\n<h3>Core Principles</h3>\n<ul class=\"desc-list\">\n    <li><strong>DRY (Don't Repeat Yourself):</strong> Avoid copy-pasting code. Write once, use everywhere!</li>\n    <li><strong>Modularity:</strong> Break complex code into smaller, organized, and manageable chunks.</li>\n    <li><strong>Readability:</strong> Named functions make it easy to understand what the code does (e.g. <code>calculate_score()</code>).</li>\n    <li><strong>Maintainability:</strong> Bug fixes or updates only need to be done in one place.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>What is a Function?</strong> A function is a named block of code designed to perform a specific task. Defining a function is like writing a recipe; it doesn't do anything until you actually follow (call) it!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does the DRY principle stand for?", "a": "DRY stands for <strong>Don't Repeat Yourself</strong>. It's a programming best practice aimed at reducing repetition of code." },
-            { "q": "How do functions improve readability?", "a": "By grouping statements under a descriptive name (like <code>draw_circle()</code>), we tell the reader what the block of code does without them needing to read every line of logic." },
-            { "q": "What is modularity?", "a": "Modularity is the practice of breaking down a large program into small, independent sub-programs (modules or functions) that are easy to build and test." },
-            { "q": "Does defining a function execute its code?", "a": "No, defining a function only registers it in memory. It will not execute until you explicitly call it." },
-            { "q": "When should I write a function?", "a": "Write a function whenever you find yourself repeating the same lines of code, or when a block of code becomes too long and does a distinct, logical task." }
+            {
+                "q": "What does the DRY principle stand for?",
+                "a": "DRY stands for <strong>Don't Repeat Yourself</strong>. It's a programming best practice aimed at reducing repetition of code."
+            },
+            {
+                "q": "How do functions improve readability?",
+                "a": "By grouping statements under a descriptive name (like <code>draw_circle()</code>), we tell the reader what the block of code does without them needing to read every line of logic."
+            },
+            {
+                "q": "What is modularity?",
+                "a": "Modularity is the practice of breaking down a large program into small, independent sub-programs (modules or functions) that are easy to build and test."
+            },
+            {
+                "q": "Does defining a function execute its code?",
+                "a": "No, defining a function only registers it in memory. It will not execute until you explicitly call it."
+            },
+            {
+                "q": "When should I write a function?",
+                "a": "Write a function whenever you find yourself repeating the same lines of code, or when a block of code becomes too long and does a distinct, logical task."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of why we use functions in programming!",
             "questions": [
-                { "type": "mcq", "question": "What is the primary benefit of the DRY principle?", "options": ["Faster execution", "Reduced code repetition", "Simpler syntax", "More parameters"], "answer": 1 },
-                { "type": "mcq", "question": "What is breaking code into self-contained blocks called?", "options": ["Linearity", "Modularity", "Precedence", "Nesting"], "answer": 1 },
-                { "type": "mcq", "question": "What happens when you define a function?", "options": ["It runs immediately", "It compiles to binary", "It is registered in memory but doesn't run", "It prompts user input"], "answer": 2 },
-                { "type": "fill", "question": "DRY stands for Don't _____ Yourself.", "answer": "Repeat" },
-                { "type": "fill", "question": "A function is a named _____ of code.", "answer": "block" },
-                { "type": "fill", "question": "Grouping code into small independent parts is called _____.", "answer": "modularity" },
-                { "type": "tf", "question": "Functions make code harder to debug.", "answer": "false" },
-                { "type": "tf", "question": "You should write a function if you copy-paste the same code multiple times.", "answer": "true" },
-                { "type": "tf", "question": "A program can only have one function.", "answer": "false" },
-                { "type": "short", "question": "Explain the concept of code reusability.", "sampleAnswer": "Code reusability means writing a block of code once (like in a function) and invoking it multiple times throughout a program without rewriting it." }
+                {
+                    "type": "mcq",
+                    "question": "What is the primary benefit of the DRY principle?",
+                    "options": [
+                        "Faster execution",
+                        "Reduced code repetition",
+                        "Simpler syntax",
+                        "More parameters"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is breaking code into self-contained blocks called?",
+                    "options": [
+                        "Linearity",
+                        "Modularity",
+                        "Precedence",
+                        "Nesting"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens when you define a function?",
+                    "options": [
+                        "It runs immediately",
+                        "It compiles to binary",
+                        "It is registered in memory but doesn't run",
+                        "It prompts user input"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "DRY stands for Don't _____ Yourself. (Variable / modularity / Repeat / block)",
+                    "answer": "Repeat"
+                },
+                {
+                    "type": "fill",
+                    "question": "A function is a named _____ of code. (Repeat / block / modularity / variable)",
+                    "answer": "block"
+                },
+                {
+                    "type": "fill",
+                    "question": "Grouping code into small independent parts is called _____. (modularity / Repeat / block / variable)",
+                    "answer": "modularity"
+                },
+                {
+                    "type": "tf",
+                    "question": "Functions make code harder to debug.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You should write a function if you copy-paste the same code multiple times.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "A program can only have one function.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the concept of code reusability.",
+                    "sampleAnswer": "Code reusability means writing a block of code once (like in a function) and invoking it multiple times throughout a program without rewriting it."
+                }
             ]
         },
-
         "scenario": "Define a simple welcome function. Create a function named 'greet' that prints the string 'Hello, PyBe Explorer!'. Run the function once to see the message printed.",
         "hint": "Use def greet(): followed by print('Hello, PyBe Explorer!') and then call greet().",
         "wrongHint": "Make sure you define greet() and then call it by typing greet() at the bottom!",
@@ -3423,38 +7567,112 @@ window.levels = [
         "id": 67,
         "title": "Creating functions",
         "concept": "Defining functions with def",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Creating Functions",
             "subheading": "Defining functions with def",
             "body": "<p>In Python, we create functions using the <strong><code>def</code></strong> keyword. Let's look at the basic structure of a function definition and how to call it.</p>\n\n<h3>Syntax of a Function</h3>\n<pre class=\"code-example\">def function_name():\n    # code block inside function\n    print(\"Hello from function!\")</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>def</code>:</strong> Keyword telling Python we are defining a function.</li>\n    <li><strong><code>function_name</code>:</strong> The name of the function (use snake_case, similar to variables).</li>\n    <li><strong>Parentheses <code>()</code>:</strong> Where inputs go (can be empty).</li>\n    <li><strong>Colon <code>:</code>:</strong> Ends the function header.</li>\n    <li><strong>Indented Block:</strong> The code statements that will run when the function is called.</li>\n</ul>\n\n<h3>Calling a Function</h3>\n<p>To run (call) a function, write its name followed by parentheses:</p>\n<pre class=\"code-example\">function_name()</pre>"
         },
-
         "qna": [
-            { "q": "What keyword is used to start a function definition?", "a": "The <code>def</code> keyword is used to start a function definition." },
-            { "q": "What is the difference between defining and calling a function?", "a": "Defining a function creates the block of code and names it. Calling a function actually executes that block of code." },
-            { "q": "Why do function names need parentheses when called?", "a": "The parentheses indicate to Python that you want to execute (call) the function. Without parentheses, Python refers to the function object itself rather than running it." },
-            { "q": "Does Python require indentation for function bodies?", "a": "Yes! All statements inside the function body must be consistently indented (usually 4 spaces). Indentation determines where the function ends." },
-            { "q": "Can a function name start with a number?", "a": "No, function names follow the same naming rules as variables. They must start with a letter or underscore, and cannot be Python keywords." }
+            {
+                "q": "What keyword is used to start a function definition?",
+                "a": "The <code>def</code> keyword is used to start a function definition."
+            },
+            {
+                "q": "What is the difference between defining and calling a function?",
+                "a": "Defining a function creates the block of code and names it. Calling a function actually executes that block of code."
+            },
+            {
+                "q": "Why do function names need parentheses when called?",
+                "a": "The parentheses indicate to Python that you want to execute (call) the function. Without parentheses, Python refers to the function object itself rather than running it."
+            },
+            {
+                "q": "Does Python require indentation for function bodies?",
+                "a": "Yes! All statements inside the function body must be consistently indented (usually 4 spaces). Indentation determines where the function ends."
+            },
+            {
+                "q": "Can a function name start with a number?",
+                "a": "No, function names follow the same naming rules as variables. They must start with a letter or underscore, and cannot be Python keywords."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of creating and calling functions!",
             "questions": [
-                { "type": "mcq", "question": "Which keyword defines a function in Python?", "options": ["function", "def", "define", "func"], "answer": 1 },
-                { "type": "mcq", "question": "How do you call a function named 'say_hello'?", "options": ["call say_hello", "say_hello()", "say_hello[]", "say_hello"], "answer": 1 },
-                { "type": "mcq", "question": "What happens if you omit parentheses when calling a function?", "options": ["It raises a SyntaxError", "It runs anyway", "It refers to the function object but does not execute it", "It returns None"], "answer": 2 },
-                { "type": "fill", "question": "Functions are defined using the _____ keyword.", "answer": "def" },
-                { "type": "fill", "question": "The body of a function must be _____.", "answer": "indented" },
-                { "type": "fill", "question": "A function header must end with a _____.", "answer": ":" },
-                { "type": "tf", "question": "def stands for define.", "answer": "true" },
-                { "type": "tf", "question": "Function names must follow the same rules as variable names.", "answer": "true" },
-                { "type": "tf", "question": "You can call a function before defining it in a script.", "answer": "false" },
-                { "type": "short", "question": "What is the syntax error in: 'def test() print(\"ok\")'?", "sampleAnswer": "It is missing the colon ':' at the end of the def statement, and the print function must be indented on the next line." }
+                {
+                    "type": "mcq",
+                    "question": "Which keyword defines a function in Python?",
+                    "options": [
+                        "function",
+                        "def",
+                        "define",
+                        "func"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "How do you call a function named 'say_hello'?",
+                    "options": [
+                        "call say_hello",
+                        "say_hello()",
+                        "say_hello[]",
+                        "say_hello"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens if you omit parentheses when calling a function?",
+                    "options": [
+                        "It raises a SyntaxError",
+                        "It runs anyway",
+                        "It refers to the function object but does not execute it",
+                        "It returns None"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Functions are defined using the _____ keyword. (else / elif / def / if)",
+                    "answer": "def"
+                },
+                {
+                    "type": "fill",
+                    "question": "The body of a function must be _____. (def / indented / : / variable)",
+                    "answer": "indented"
+                },
+                {
+                    "type": "fill",
+                    "question": "A function header must end with a _____. (: / * / + / -)",
+                    "answer": ":"
+                },
+                {
+                    "type": "tf",
+                    "question": "def stands for define.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Function names must follow the same rules as variable names.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can call a function before defining it in a script.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "What is the syntax error in: 'def test() print(\"ok\")'?",
+                    "sampleAnswer": "It is missing the colon ':' at the end of the def statement, and the print function must be indented on the next line."
+                }
             ]
         },
-
         "scenario": "Define and run an intro function. Create a function named 'doraemon_intro' that prints 'I am Doraemon, a robot cat!'. Call the function at the bottom of the script.",
         "hint": "Use def doraemon_intro(): and indent the print statement. Don't forget to call doraemon_intro() at the end.",
         "wrongHint": "Make sure you call doraemon_intro() at the bottom!",
@@ -3465,38 +7683,112 @@ window.levels = [
         "id": 68,
         "title": "Parameters",
         "concept": "Passing inputs into your functions",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Function Parameters",
             "subheading": "Passing inputs into your functions",
             "body": "<p>Functions become much more powerful when we can feed them information. <strong>Parameters</strong> allow functions to accept input values and use them inside their logic.</p>\n\n<h3>Parameters vs. Arguments</h3>\n<ul class=\"desc-list\">\n    <li><strong>Parameter:</strong> The variable listed inside the parentheses in the function <strong>definition</strong> (e.g. <code>name</code>).</li>\n    <li><strong>Argument:</strong> The actual value sent to the function when it is <strong>called</strong> (e.g. <code>\"Nobita\"</code>).</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def greet(name):\n    print(\"Hello, \" + name)\n\ngreet(\"Nobita\")  # Output: Hello, Nobita\ngreet(\"Shizuka\") # Output: Hello, Shizuka</pre>\n\n<h3>Multiple Parameters</h3>\n<p>You can define functions with multiple parameters by separating them with commas:</p>\n<pre class=\"code-example\">def add_nums(a, b):\n    print(a + b)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>TypeError:</strong> If a function expects a certain number of parameters, you must pass the exact same number of arguments when calling it, otherwise Python will throw an error!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is the difference between a parameter and an argument?", "a": "A parameter is the variable name inside the function definition. An argument is the actual value passed to that parameter during a function call." },
-            { "q": "Can you pass multiple parameters to a function?", "a": "Yes! You can specify as many parameters as needed, separated by commas: <code>def func(x, y, z):</code>." },
-            { "q": "What happens if you pass the wrong number of arguments?", "a": "Python raises a <code>TypeError</code> stating that the function is missing required positional arguments, or that too many arguments were given." },
-            { "q": "Do parameters have specific data types?", "a": "In Python, parameters are dynamically typed. They will accept any data type passed to them, unless you use type hints." },
-            { "q": "Are variables created inside a function (including parameters) accessible outside?", "a": "No, they have local scope. They only exist inside the function and disappear once the function completes execution." }
+            {
+                "q": "What is the difference between a parameter and an argument?",
+                "a": "A parameter is the variable name inside the function definition. An argument is the actual value passed to that parameter during a function call."
+            },
+            {
+                "q": "Can you pass multiple parameters to a function?",
+                "a": "Yes! You can specify as many parameters as needed, separated by commas: <code>def func(x, y, z):</code>."
+            },
+            {
+                "q": "What happens if you pass the wrong number of arguments?",
+                "a": "Python raises a <code>TypeError</code> stating that the function is missing required positional arguments, or that too many arguments were given."
+            },
+            {
+                "q": "Do parameters have specific data types?",
+                "a": "In Python, parameters are dynamically typed. They will accept any data type passed to them, unless you use type hints."
+            },
+            {
+                "q": "Are variables created inside a function (including parameters) accessible outside?",
+                "a": "No, they have local scope. They only exist inside the function and disappear once the function completes execution."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of parameters and arguments!",
             "questions": [
-                { "type": "mcq", "question": "What is the variable in a function definition called?", "options": ["Argument", "Parameter", "Constant", "Key"], "answer": 1 },
-                { "type": "mcq", "question": "What is the actual value passed in a function call called?", "options": ["Argument", "Parameter", "Variable", "Statement"], "answer": 0 },
-                { "type": "mcq", "question": "What error is raised when arguments mismatch parameters?", "options": ["ValueError", "TypeError", "SyntaxError", "NameError"], "answer": 1 },
-                { "type": "fill", "question": "Variables inside def parentheses are called _____.", "answer": "parameters" },
-                { "type": "fill", "question": "Multiple parameters are separated by _____.", "answer": "commas" },
-                { "type": "fill", "question": "Values passed during function call are called _____.", "answer": "arguments" },
-                { "type": "tf", "question": "A function can only take one parameter.", "answer": "false" },
-                { "type": "tf", "question": "Arguments and parameters must match in count.", "answer": "true" },
-                { "type": "tf", "question": "Parameter variables can be accessed outside the function body.", "answer": "false" },
-                { "type": "short", "question": "Given: 'def mult(x, y): print(x * y)'. Write the call to multiply 4 and 5.", "sampleAnswer": "mult(4, 5)" }
+                {
+                    "type": "mcq",
+                    "question": "What is the variable in a function definition called?",
+                    "options": [
+                        "Argument",
+                        "Parameter",
+                        "Constant",
+                        "Key"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is the actual value passed in a function call called?",
+                    "options": [
+                        "Argument",
+                        "Parameter",
+                        "Variable",
+                        "Statement"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "What error is raised when arguments mismatch parameters?",
+                    "options": [
+                        "ValueError",
+                        "TypeError",
+                        "SyntaxError",
+                        "NameError"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Variables inside def parentheses are called _____. (parameters / commas / arguments / variable)",
+                    "answer": "parameters"
+                },
+                {
+                    "type": "fill",
+                    "question": "Multiple parameters are separated by _____. (commas / semicolon / comma / colon)",
+                    "answer": "commas"
+                },
+                {
+                    "type": "fill",
+                    "question": "Values passed during function call are called _____. (commas / arguments / variable / parameters)",
+                    "answer": "arguments"
+                },
+                {
+                    "type": "tf",
+                    "question": "A function can only take one parameter.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Arguments and parameters must match in count.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Parameter variables can be accessed outside the function body.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Given: 'def mult(x, y): print(x * y)'. Write the call to multiply 4 and 5.",
+                    "sampleAnswer": "mult(4, 5)"
+                }
             ]
         },
-
         "scenario": "Create a parameter-driven greeting. Write a function named 'greet_friend' that takes one parameter: 'name'. The function should print 'Hello, Nobita!' when passed 'Nobita'. Call the function with 'Nobita' as the argument.",
         "hint": "Use def greet_friend(name): and print(f'Hello, {name}!'). Then call greet_friend('Nobita').",
         "wrongHint": "Make sure you print 'Hello, ' followed by the name parameter and an exclamation mark!",
@@ -3507,38 +7799,112 @@ window.levels = [
         "id": 69,
         "title": "Return statement",
         "concept": "Returning values back from function calls",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "The Return Statement",
             "subheading": "Returning values back from function calls",
             "body": "<p>So far, our functions have only printed values to the screen. But often, we want a function to perform a calculation and **send the result back** to the main program. We do this using the <strong><code>return</code></strong> statement.</p>\n\n<h3>Return Syntax</h3>\n<pre class=\"code-example\">def square(x):\n    return x * x\n\nresult = square(4)\nprint(result)  # Output: 16</pre>\n\n<h3>Print vs. Return</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>print()</code>:</strong> Displays text on the screen for the user. It **does not** give any data to the program (returns <code>None</code>).</li>\n    <li><strong><code>return</code>:</strong> Sends data back to the program. This data can be stored in a variable, used in math, or printed later.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Exit Code:</strong> The <code>return</code> statement immediately exits the function. Any code written inside the function *after* a return statement will never be run (known as dead code)!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What does the return statement do?", "a": "It terminates function execution and sends a value (or values) back to the caller." },
-            { "q": "Can you store a return value in a variable?", "a": "Yes! That's the main purpose of return. E.g. <code>my_val = calculate_total()</code>." },
-            { "q": "What does a function return if it doesn't have a return statement?", "a": "It returns <code>None</code> by default once the function reaches the end of its body." },
-            { "q": "What is dead code?", "a": "Dead code is code written after a return statement inside a function. Since the function exits on return, this code is unreachable and will never execute." },
-            { "q": "Can a function return multiple values?", "a": "Yes! You can return multiple values separated by commas: <code>return x, y</code>. Python returns them grouped together as a single <strong>tuple</strong>." }
+            {
+                "q": "What does the return statement do?",
+                "a": "It terminates function execution and sends a value (or values) back to the caller."
+            },
+            {
+                "q": "Can you store a return value in a variable?",
+                "a": "Yes! That's the main purpose of return. E.g. <code>my_val = calculate_total()</code>."
+            },
+            {
+                "q": "What does a function return if it doesn't have a return statement?",
+                "a": "It returns <code>None</code> by default once the function reaches the end of its body."
+            },
+            {
+                "q": "What is dead code?",
+                "a": "Dead code is code written after a return statement inside a function. Since the function exits on return, this code is unreachable and will never execute."
+            },
+            {
+                "q": "Can a function return multiple values?",
+                "a": "Yes! You can return multiple values separated by commas: <code>return x, y</code>. Python returns them grouped together as a single <strong>tuple</strong>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of function return values!",
             "questions": [
-                { "type": "mcq", "question": "Which statement exits a function and sends a value back?", "options": ["send", "output", "return", "exit"], "answer": 2 },
-                { "type": "mcq", "question": "What is returned by a function that has no return statement?", "options": ["0", "None", "False", "Error"], "answer": 1 },
-                { "type": "mcq", "question": "What happens to code written inside a function after a return statement?", "options": ["It runs first", "It raises a warning", "It is ignored (dead code)", "It executes after returning"], "answer": 2 },
-                { "type": "fill", "question": "The _____ statement terminates the function and sends a value back.", "answer": "return" },
-                { "type": "fill", "question": "By default, functions with no return statement return _____.", "answer": "None" },
-                { "type": "fill", "question": "Code after return that cannot be reached is called _____ code.", "answer": "dead" },
-                { "type": "tf", "question": "print() and return do the exact same thing.", "answer": "false" },
-                { "type": "tf", "question": "A function can have multiple return statements (e.g. in different if branches).", "answer": "true" },
-                { "type": "tf", "question": "You can use the returned value of a function in mathematical expressions.", "answer": "true" },
-                { "type": "short", "question": "What does return 5, 10 output in terms of data type?", "sampleAnswer": "It returns a tuple: (5, 10)." }
+                {
+                    "type": "mcq",
+                    "question": "Which statement exits a function and sends a value back?",
+                    "options": [
+                        "send",
+                        "output",
+                        "return",
+                        "exit"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is returned by a function that has no return statement?",
+                    "options": [
+                        "0",
+                        "None",
+                        "False",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens to code written inside a function after a return statement?",
+                    "options": [
+                        "It runs first",
+                        "It raises a warning",
+                        "It is ignored (dead code)",
+                        "It executes after returning"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "The _____ statement terminates the function and sends a value back. (return / if / else / elif)",
+                    "answer": "return"
+                },
+                {
+                    "type": "fill",
+                    "question": "By default, functions with no return statement return _____. (dead / return / None / Variable)",
+                    "answer": "None"
+                },
+                {
+                    "type": "fill",
+                    "question": "Code after return that cannot be reached is called _____ code. (dead / return / variable / None)",
+                    "answer": "dead"
+                },
+                {
+                    "type": "tf",
+                    "question": "print() and return do the exact same thing.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "A function can have multiple return statements (e.g. in different if branches).",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can use the returned value of a function in mathematical expressions.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "What does return 5, 10 output in terms of data type?",
+                    "sampleAnswer": "It returns a tuple: (5, 10)."
+                }
             ]
         },
-
         "scenario": "Write a sum function that returns a value. Define a function named 'add_numbers' that accepts two parameters 'a' and 'b'. It should return their sum. Call the function with 5 and 7, store the returned value in a variable 'total', and print 'total'.",
         "hint": "Use def add_numbers(a, b): return a + b. Then total = add_numbers(5, 7) and print(total).",
         "wrongHint": "Make sure you return the sum and assign the function call to total before printing!",
@@ -3549,38 +7915,112 @@ window.levels = [
         "id": 70,
         "title": "Default arguments",
         "concept": "Specifying fallback parameter values",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Default Arguments",
             "subheading": "Specifying fallback parameter values",
             "body": "<p>Sometimes, we want a parameter to have a fallback value if the caller doesn't provide one. These are called <strong>default arguments</strong>.</p>\n\n<h3>Syntax</h3>\n<pre class=\"code-example\">def greet(name=\"Friend\"):\n    print(\"Hello, \" + name)\n\ngreet()         # Output: Hello, Friend (uses default)\ngreet(\"Nobita\") # Output: Hello, Nobita (overrides default)</pre>\n\n<h3>Order of Arguments</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Golden Rule:</strong> In a function signature, non-default arguments <strong>must</strong> come before default arguments. Otherwise, Python will raise a <code>SyntaxError</code>!</div>\n</div>\n<pre class=\"code-example\"># Correct:\ndef greet(greeting, name=\"Friend\"): ...\n\n# Incorrect (SyntaxError):\ndef greet(name=\"Friend\", greeting): ...</pre>"
         },
-
         "qna": [
-            { "q": "What is a default argument?", "a": "A default argument is a value provided in the function definition that is automatically assigned to a parameter if the caller does not pass a value for it." },
-            { "q": "Can default arguments be overridden?", "a": "Yes! If the caller passes a value for that parameter, the passed value overrides the default value." },
-            { "q": "Where must parameters with default values be placed?", "a": "They must always be placed <strong>after</strong> any parameters that do not have default values." },
-            { "q": "Why does Python enforce this order?", "a": "So Python can unambiguously match positional arguments. If defaults came first, passing fewer arguments would make it impossible to tell which parameters were omitted." },
-            { "q": "Can a default argument be a list or dictionary?", "a": "Yes, but it is highly discouraged to use mutable default arguments (like <code>[]</code> or <code>{}</code>) because they are shared across all calls. Use <code>None</code> instead." }
+            {
+                "q": "What is a default argument?",
+                "a": "A default argument is a value provided in the function definition that is automatically assigned to a parameter if the caller does not pass a value for it."
+            },
+            {
+                "q": "Can default arguments be overridden?",
+                "a": "Yes! If the caller passes a value for that parameter, the passed value overrides the default value."
+            },
+            {
+                "q": "Where must parameters with default values be placed?",
+                "a": "They must always be placed <strong>after</strong> any parameters that do not have default values."
+            },
+            {
+                "q": "Why does Python enforce this order?",
+                "a": "So Python can unambiguously match positional arguments. If defaults came first, passing fewer arguments would make it impossible to tell which parameters were omitted."
+            },
+            {
+                "q": "Can a default argument be a list or dictionary?",
+                "a": "Yes, but it is highly discouraged to use mutable default arguments (like <code>[]</code> or <code>{}</code>) because they are shared across all calls. Use <code>None</code> instead."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of default arguments!",
             "questions": [
-                { "type": "mcq", "question": "Where must default arguments be placed in a function definition?", "options": ["At the very beginning", "Anywhere", "After non-default arguments", "Inside the body only"], "answer": 2 },
-                { "type": "mcq", "question": "What does greet() print if defined as def greet(name='User'): print(name)?", "options": ["User", "None", "Error", "Empty string"], "answer": 0 },
-                { "type": "mcq", "question": "Is def func(a=5, b) valid in Python?", "options": ["Yes, completely valid", "No, it raises a SyntaxError", "No, it raises a TypeError", "Only if called with arguments"], "answer": 1 },
-                { "type": "fill", "question": "Default arguments must follow _____-default arguments.", "answer": "non" },
-                { "type": "fill", "question": "If an argument is provided, it _____ the default value.", "answer": "overrides" },
-                { "type": "fill", "question": "Assigning a default value to a parameter makes that argument _____.", "answer": "optional" },
-                { "type": "tf", "question": "A function can have multiple parameters with default values.", "answer": "true" },
-                { "type": "tf", "question": "Using empty lists [] as default arguments is a recommended practice.", "answer": "false" },
-                { "type": "tf", "question": "You can call a function with default arguments without passing any values.", "answer": "true" },
-                { "type": "short", "question": "Correct the signature: def info(tag='Cat', name):", "sampleAnswer": "def info(name, tag='Cat'):" }
+                {
+                    "type": "mcq",
+                    "question": "Where must default arguments be placed in a function definition?",
+                    "options": [
+                        "At the very beginning",
+                        "Anywhere",
+                        "After non-default arguments",
+                        "Inside the body only"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does greet() print if defined as def greet(name='User'): print(name)?",
+                    "options": [
+                        "User",
+                        "None",
+                        "Error",
+                        "Empty string"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Is def func(a=5, b) valid in Python?",
+                    "options": [
+                        "Yes, completely valid",
+                        "No, it raises a SyntaxError",
+                        "No, it raises a TypeError",
+                        "Only if called with arguments"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Default arguments must follow _____-default arguments. (variable / overrides / optional / non)",
+                    "answer": "non"
+                },
+                {
+                    "type": "fill",
+                    "question": "If an argument is provided, it _____ the default value. (optional / non / overrides / variable)",
+                    "answer": "overrides"
+                },
+                {
+                    "type": "fill",
+                    "question": "Assigning a default value to a parameter makes that argument _____. (optional / variable / non / overrides)",
+                    "answer": "optional"
+                },
+                {
+                    "type": "tf",
+                    "question": "A function can have multiple parameters with default values.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using empty lists [] as default arguments is a recommended practice.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can call a function with default arguments without passing any values.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Correct the signature: def info(tag='Cat', name):",
+                    "sampleAnswer": "def info(name, tag='Cat'):"
+                }
             ]
         },
-
         "scenario": "Define a function with a default parameter. Create a function named 'make_gadget' that takes two parameters: 'gadget_name' and 'owner' with a default value of 'Doraemon'. The function should return the string '{owner} owns the {gadget_name}'. Call 'make_gadget' with only 'Anywhere Door' as the argument, store the return value in 'message', and print it.",
         "hint": "Use def make_gadget(gadget_name, owner='Doraemon'): return f'{owner} owns the {gadget_name}'. Then call it with one argument.",
         "wrongHint": "Make sure you print message and place the default parameter second in the signature!",
@@ -3591,38 +8031,112 @@ window.levels = [
         "id": 71,
         "title": "Keyword arguments",
         "concept": "Passing inputs explicitly by name",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Keyword Arguments",
             "subheading": "Passing inputs explicitly by name",
             "body": "<p>In Python, you can pass arguments to a function using their parameter names: <code>parameter_name = value</code>. These are called <strong>keyword arguments</strong>.</p>\n\n<h3>Benefits of Keyword Arguments</h3>\n<ul class=\"desc-list\">\n    <li><strong>Order doesn't matter:</strong> You can pass arguments in any order, and Python will match them by name rather than position!</li>\n    <li><strong>Readability:</strong> It is instantly clear what each value represents.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_info(name, age):\n    print(f\"{name} is {age} years old.\")\n\n# These two calls do the exact same thing:\nprint_info(\"Nobita\", 10)\nprint_info(age=10, name=\"Nobita\")</pre>\n\n<h3>Mixing Positional and Keyword Arguments</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Strict Order Rule:</strong> You can mix positional and keyword arguments, but positional arguments <strong>must always</strong> come first. Positional argument following keyword argument raises a <code>SyntaxError</code>!</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is a keyword argument?", "a": "A keyword argument is an argument passed to a function preceded by a parameter name and an equals sign (e.g. <code>name=\"Nobita\"</code>)." },
-            { "q": "Does the order of keyword arguments matter?", "a": "No, order does not matter for keyword arguments. Python matches them to parameters by their names." },
-            { "q": "Can I mix positional arguments and keyword arguments?", "a": "Yes! But you must place all positional arguments first before any keyword arguments. E.g. <code>func(10, y=20)</code> is valid, but <code>func(x=10, 20)</code> is not." },
-            { "q": "What error is raised if a positional argument follows a keyword argument?", "a": "Python raises a <code>SyntaxError: positional argument follows keyword argument</code>." },
-            { "q": "Why are keyword arguments helpful for functions with many parameters?", "a": "They allow you to specify only the parameters you want to change, leaving optional arguments to use their defaults, without keeping track of parameter order." }
+            {
+                "q": "What is a keyword argument?",
+                "a": "A keyword argument is an argument passed to a function preceded by a parameter name and an equals sign (e.g. <code>name=\"Nobita\"</code>)."
+            },
+            {
+                "q": "Does the order of keyword arguments matter?",
+                "a": "No, order does not matter for keyword arguments. Python matches them to parameters by their names."
+            },
+            {
+                "q": "Can I mix positional arguments and keyword arguments?",
+                "a": "Yes! But you must place all positional arguments first before any keyword arguments. E.g. <code>func(10, y=20)</code> is valid, but <code>func(x=10, 20)</code> is not."
+            },
+            {
+                "q": "What error is raised if a positional argument follows a keyword argument?",
+                "a": "Python raises a <code>SyntaxError: positional argument follows keyword argument</code>."
+            },
+            {
+                "q": "Why are keyword arguments helpful for functions with many parameters?",
+                "a": "They allow you to specify only the parameters you want to change, leaving optional arguments to use their defaults, without keeping track of parameter order."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of keyword arguments!",
             "questions": [
-                { "type": "mcq", "question": "Which of these is a keyword argument call?", "options": ["func(10)", "func(x=10)", "func('x', 10)", "func([10])"], "answer": 1 },
-                { "type": "mcq", "question": "What happens if a positional argument follows a keyword argument?", "options": ["Raises SyntaxError", "It runs fine", "Raises ValueError", "Returns None"], "answer": 0 },
-                { "type": "mcq", "question": "Given def show(a, b): print(a, b), what does show(b=2, a=1) print?", "options": ["2 1", "1 2", "a b", "Error"], "answer": 1 },
-                { "type": "fill", "question": "Keyword arguments are matched to parameters by _____.", "answer": "name" },
-                { "type": "fill", "question": "Positional arguments must come _____ keyword arguments.", "answer": "before" },
-                { "type": "fill", "question": "The syntax error raised is 'positional argument _____ keyword argument'.", "answer": "follows" },
-                { "type": "tf", "question": "The order of keyword arguments in a call must match the definition.", "answer": "false" },
-                { "type": "tf", "question": "Using keyword arguments improves code readability.", "answer": "true" },
-                { "type": "tf", "question": "show(a=1, 2) is a valid function call.", "answer": "false" },
-                { "type": "short", "question": "Rewrite call: func(10, 'blue') using keyword arguments (x and color).", "sampleAnswer": "func(x=10, color='blue') or func(color='blue', x=10)" }
+                {
+                    "type": "mcq",
+                    "question": "Which of these is a keyword argument call?",
+                    "options": [
+                        "func(10)",
+                        "func(x=10)",
+                        "func('x', 10)",
+                        "func([10])"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What happens if a positional argument follows a keyword argument?",
+                    "options": [
+                        "Raises SyntaxError",
+                        "It runs fine",
+                        "Raises ValueError",
+                        "Returns None"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Given def show(a, b): print(a, b), what does show(b=2, a=1) print?",
+                    "options": [
+                        "2 1",
+                        "1 2",
+                        "a b",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "Keyword arguments are matched to parameters by _____. (typeerror / syntaxerror / name / nameerror)",
+                    "answer": "name"
+                },
+                {
+                    "type": "fill",
+                    "question": "Positional arguments must come _____ keyword arguments. (name / variable / before / follows)",
+                    "answer": "before"
+                },
+                {
+                    "type": "fill",
+                    "question": "The syntax error raised is 'positional argument _____ keyword argument'. (follows / variable / before / name)",
+                    "answer": "follows"
+                },
+                {
+                    "type": "tf",
+                    "question": "The order of keyword arguments in a call must match the definition.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Using keyword arguments improves code readability.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "show(a=1, 2) is a valid function call.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Rewrite call: func(10, 'blue') using keyword arguments (x and color).",
+                    "sampleAnswer": "func(x=10, color='blue') or func(color='blue', x=10)"
+                }
             ]
         },
-
         "scenario": "Define a function and call it using keyword arguments. Define a function named 'greet' with two parameters: 'greeting' and 'name'. Inside the function, print '{greeting}, {name}!'. Call this function using keyword arguments in reversed order, specifically setting name='Shizuka' and greeting='Hello'.",
         "hint": "Use def greet(greeting, name): print(f'{greeting}, {name}!'). Call it using greet(name='Shizuka', greeting='Hello').",
         "wrongHint": "Make sure you call the greet function with keyword arguments and print the exact format!",
@@ -3633,38 +8147,112 @@ window.levels = [
         "id": 72,
         "title": "*args",
         "concept": "Accepting a variable number of positional arguments",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Arbitrary Positional Arguments: *args",
             "subheading": "Accepting a variable number of positional arguments",
             "body": "<p>What if you want to write a function that can accept any number of inputs? For example, a function that sums up numbers, whether you pass 2, 5, or 100 values. In Python, you can achieve this using <strong><code>*args</code></strong>.</p>\n\n<h3>The Asterisk <code>*</code> Prefix</h3>\n<ul class=\"desc-list\">\n    <li>The <code>*</code> before a parameter name tells Python to collect all remaining positional arguments into a single <strong>tuple</strong>.</li>\n    <li>By convention, we name this parameter <strong><code>args</code></strong> (short for arguments), but any name like <code>*numbers</code> is valid.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_all(*args):\n    print(args)  # args is a tuple\n\nprint_all(1, 2, 3)  # Output: (1, 2, 3)</pre>\n\n<h3>Iterating Over *args</h3>\n<p>Since <code>args</code> is a standard tuple, you can loop through its elements, use index indexing, or pass it to built-in functions like <code>sum()</code> or <code>len()</code>!</p>"
         },
-
         "qna": [
-            { "q": "What does the asterisk * do in *args?", "a": "The asterisk <code>*</code> is an unpacking operator. In a function definition, it bundles all positional arguments passed to the function into a single tuple." },
-            { "q": "Is the name 'args' mandatory?", "a": "No. The name <code>args</code> is a standard convention. You can name it anything, like <code>*items</code> or <code>*numbers</code>, as long as it has the <code>*</code> prefix." },
-            { "q": "What data type is args inside the function?", "a": "Inside the function, <code>args</code> is a <strong>tuple</strong> containing all the positional arguments." },
-            { "q": "Can you have regular parameters before *args?", "a": "Yes! You can define regular positional parameters first. Any remaining arguments will be caught by <code>*args</code>. E.g. <code>def func(first, *rest):</code>." },
-            { "q": "What happens if you pass no arguments to a function with *args?", "a": "It runs fine! <code>args</code> will simply be an empty tuple <code>()</code>." }
+            {
+                "q": "What does the asterisk * do in *args?",
+                "a": "The asterisk <code>*</code> is an unpacking operator. In a function definition, it bundles all positional arguments passed to the function into a single tuple."
+            },
+            {
+                "q": "Is the name 'args' mandatory?",
+                "a": "No. The name <code>args</code> is a standard convention. You can name it anything, like <code>*items</code> or <code>*numbers</code>, as long as it has the <code>*</code> prefix."
+            },
+            {
+                "q": "What data type is args inside the function?",
+                "a": "Inside the function, <code>args</code> is a <strong>tuple</strong> containing all the positional arguments."
+            },
+            {
+                "q": "Can you have regular parameters before *args?",
+                "a": "Yes! You can define regular positional parameters first. Any remaining arguments will be caught by <code>*args</code>. E.g. <code>def func(first, *rest):</code>."
+            },
+            {
+                "q": "What happens if you pass no arguments to a function with *args?",
+                "a": "It runs fine! <code>args</code> will simply be an empty tuple <code>()</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of *args in Python!",
             "questions": [
-                { "type": "mcq", "question": "What data type is args inside a function?", "options": ["List", "Tuple", "Dictionary", "Set"], "answer": 1 },
-                { "type": "mcq", "question": "Which parameter definition collects arbitrary positional arguments?", "options": ["**args", "*args", "args*", "args"], "answer": 1 },
-                { "type": "mcq", "question": "What is printed by def f(*a): print(len(a)); f(10, 20)?", "options": ["1", "2", "0", "Error"], "answer": 1 },
-                { "type": "fill", "question": "The asterisk * collects positional arguments into a _____.", "answer": "tuple" },
-                { "type": "fill", "question": "The convention name for arbitrary positional arguments is _____.", "answer": "args" },
-                { "type": "fill", "question": "If f(*args) is called with no arguments, args is an empty _____.", "answer": "tuple" },
-                { "type": "tf", "question": "You can only have one *args parameter in a function signature.", "answer": "true" },
-                { "type": "tf", "question": "You can change tuple elements inside args.", "answer": "false" },
-                { "type": "tf", "question": "args holds keyword arguments.", "answer": "false" },
-                { "type": "short", "question": "Explain the difference between *args and regular parameters.", "sampleAnswer": "*args collects any number of positional arguments into a single tuple, whereas regular parameters expect exactly one argument each." }
+                {
+                    "type": "mcq",
+                    "question": "What data type is args inside a function?",
+                    "options": [
+                        "List",
+                        "Tuple",
+                        "Dictionary",
+                        "Set"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which parameter definition collects arbitrary positional arguments?",
+                    "options": [
+                        "**args",
+                        "*args",
+                        "args*",
+                        "args"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What is printed by def f(*a): print(len(a)); f(10, 20)?",
+                    "options": [
+                        "1",
+                        "2",
+                        "0",
+                        "Error"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The asterisk * collects positional arguments into a _____. (str / int / float / tuple)",
+                    "answer": "tuple"
+                },
+                {
+                    "type": "fill",
+                    "question": "The convention name for arbitrary positional arguments is _____. (args / variable / function / tuple)",
+                    "answer": "args"
+                },
+                {
+                    "type": "fill",
+                    "question": "If f(*args) is called with no arguments, args is an empty _____. (str / int / float / tuple)",
+                    "answer": "tuple"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can only have one *args parameter in a function signature.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can change tuple elements inside args.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "args holds keyword arguments.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain the difference between *args and regular parameters.",
+                    "sampleAnswer": "*args collects any number of positional arguments into a single tuple, whereas regular parameters expect exactly one argument each."
+                }
             ]
         },
-
         "scenario": "Sum a variable number of integers. Write a function named 'sum_all' that takes a variable number of parameters using '*args'. Inside, return the sum of all elements in 'args' (hint: use sum(args)). Call the function with arguments 1, 2, 3, 4, store the return value in 'result', and print it.",
         "hint": "Use def sum_all(*args): return sum(args). Then call it and print the result.",
         "wrongHint": "Make sure you use sum_all(1, 2, 3, 4) and print the sum result!",
@@ -3675,38 +8263,112 @@ window.levels = [
         "id": 73,
         "title": "**kwargs",
         "concept": "Accepting a variable number of keyword arguments",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Arbitrary Keyword Arguments: **kwargs",
             "subheading": "Accepting a variable number of keyword arguments",
             "body": "<p>While <code>*args</code> collects positional arguments, Python gives us a way to accept any number of named (keyword) arguments. This is done using <strong><code>**kwargs</code></strong> (double asterisks).</p>\n\n<h3>The Double Asterisk <code>**</code> Prefix</h3>\n<ul class=\"desc-list\">\n    <li>The <code>**</code> collects all arbitrary keyword arguments into a <strong>dictionary</strong>.</li>\n    <li>By convention, we name this parameter <strong><code>kwargs</code></strong> (short for keyword arguments).</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_profile(**kwargs):\n    print(kwargs)  # kwargs is a dictionary\n\nprint_profile(name=\"Doraemon\", age=10)\n# Output: {'name': 'Doraemon', 'age': 10}</pre>\n\n<h3>Looping through **kwargs</h3>\n<p>Since <code>kwargs</code> is a dictionary, you can use methods like <code>.keys()</code>, <code>.values()</code>, and <code>.items()</code> to loop over key-value pairs inside the function body!</p>"
         },
-
         "qna": [
-            { "q": "What is the purpose of **kwargs?", "a": "It collects any arbitrary keyword arguments passed to the function into a single dictionary." },
-            { "q": "What data type is kwargs inside the function?", "a": "Inside the function, <code>kwargs</code> is a standard Python <strong>dictionary</strong>." },
-            { "q": "What is the ordering of parameters in a function when mixing arguments?", "a": "The ordering must be: positional parameters, then <code>*args</code>, then <code>**kwargs</code>." },
-            { "q": "Is 'kwargs' a reserved keyword in Python?", "a": "No, it is a standard name convention. You can use any name (e.g. <code>**details</code>) as long as it has the <code>**</code> prefix." },
-            { "q": "What happens if you pass no keyword arguments to **kwargs?", "a": "The function executes successfully, and <code>kwargs</code> is set to an empty dictionary <code>{}</code>." }
+            {
+                "q": "What is the purpose of **kwargs?",
+                "a": "It collects any arbitrary keyword arguments passed to the function into a single dictionary."
+            },
+            {
+                "q": "What data type is kwargs inside the function?",
+                "a": "Inside the function, <code>kwargs</code> is a standard Python <strong>dictionary</strong>."
+            },
+            {
+                "q": "What is the ordering of parameters in a function when mixing arguments?",
+                "a": "The ordering must be: positional parameters, then <code>*args</code>, then <code>**kwargs</code>."
+            },
+            {
+                "q": "Is 'kwargs' a reserved keyword in Python?",
+                "a": "No, it is a standard name convention. You can use any name (e.g. <code>**details</code>) as long as it has the <code>**</code> prefix."
+            },
+            {
+                "q": "What happens if you pass no keyword arguments to **kwargs?",
+                "a": "The function executes successfully, and <code>kwargs</code> is set to an empty dictionary <code>{}</code>."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of **kwargs in Python!",
             "questions": [
-                { "type": "mcq", "question": "What data type is kwargs inside a function?", "options": ["List", "Tuple", "Dictionary", "Set"], "answer": 2 },
-                { "type": "mcq", "question": "Which prefix identifies arbitrary keyword arguments?", "options": ["*", "**", "***", "&"], "answer": 1 },
-                { "type": "mcq", "question": "Which order of parameters is correct?", "options": ["func(*args, **kwargs, a)", "func(a, *args, **kwargs)", "func(**kwargs, *args, a)", "func(a, **kwargs, *args)"], "answer": 1 },
-                { "type": "fill", "question": "The double asterisk prefix collects keyword arguments into a _____.", "answer": "dictionary" },
-                { "type": "fill", "question": "The standard name for arbitrary keyword arguments is _____.", "answer": "kwargs" },
-                { "type": "fill", "question": "To get key-value pairs from kwargs, call the _____() method.", "answer": "items" },
-                { "type": "tf", "question": "kwargs keys are strings matching the argument names.", "answer": "true" },
-                { "type": "tf", "question": "You can add new items to the kwargs dictionary inside the function.", "answer": "true" },
-                { "type": "tf", "question": "kwargs can accept positional arguments.", "answer": "false" },
-                { "type": "short", "question": "Write a function signature that takes one positional parameter 'x' and arbitrary kwargs.", "sampleAnswer": "def func(x, **kwargs):" }
+                {
+                    "type": "mcq",
+                    "question": "What data type is kwargs inside a function?",
+                    "options": [
+                        "List",
+                        "Tuple",
+                        "Dictionary",
+                        "Set"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which prefix identifies arbitrary keyword arguments?",
+                    "options": [
+                        "*",
+                        "**",
+                        "***",
+                        "&"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which order of parameters is correct?",
+                    "options": [
+                        "func(*args, **kwargs, a)",
+                        "func(a, *args, **kwargs)",
+                        "func(**kwargs, *args, a)",
+                        "func(a, **kwargs, *args)"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "fill",
+                    "question": "The double asterisk prefix collects keyword arguments into a _____. (dictionary / kwargs / variable / items)",
+                    "answer": "dictionary"
+                },
+                {
+                    "type": "fill",
+                    "question": "The standard name for arbitrary keyword arguments is _____. (variable / kwargs / dictionary / items)",
+                    "answer": "kwargs"
+                },
+                {
+                    "type": "fill",
+                    "question": "To get key-value pairs from kwargs, call the _____() method. (variable / kwargs / dictionary / items)",
+                    "answer": "items"
+                },
+                {
+                    "type": "tf",
+                    "question": "kwargs keys are strings matching the argument names.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can add new items to the kwargs dictionary inside the function.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "kwargs can accept positional arguments.",
+                    "answer": "false"
+                },
+                {
+                    "type": "short",
+                    "question": "Write a function signature that takes one positional parameter 'x' and arbitrary kwargs.",
+                    "sampleAnswer": "def func(x, **kwargs):"
+                }
             ]
         },
-
         "scenario": "Display profile details using kwargs. Define a function named 'print_profile' that accepts arbitrary keyword arguments using '**kwargs'. Inside, loop over kwargs items (using .items()) and print each pair on a new line in the format '{key}: {value}'. Call 'print_profile' with arguments name='Doraemon' and color='blue'.",
         "hint": "Use for key, value in kwargs.items(): print(f'{key}: {value}') inside print_profile.",
         "wrongHint": "Make sure you call the function passing name='Doraemon' and color='blue'!",
@@ -3717,38 +8379,112 @@ window.levels = [
         "id": 74,
         "title": "Variable scope (global)",
         "concept": "Understanding local vs global scopes",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Variable Scope",
             "subheading": "Understanding local vs global scopes",
             "body": "<p>Where you define a variable determines where you can access it in your code. This concept is called <strong>variable scope</strong>.</p>\n\n<h3>1. Local Scope</h3>\n<ul class=\"desc-list\">\n    <li>Variables created <strong>inside</strong> a function belong to the local scope of that function.</li>\n    <li>They can only be used inside that function and cease to exist once the function ends.</li>\n</ul>\n\n<h3>2. Global Scope</h3>\n<ul class=\"desc-list\">\n    <li>Variables created in the <strong>main body</strong> of a Python script (outside any functions) belong to the global scope.</li>\n    <li>They are accessible from anywhere in your code, including inside functions.</li>\n</ul>\n\n<h3>The <code>global</code> Keyword</h3>\n<p>By default, you can **read** global variables inside a function, but you cannot **modify** them. If you try to change a global variable inside a function, Python will create a new local variable with the same name.</p>\n<p>To modify a global variable inside a function, declare it with the <strong><code>global</code></strong> keyword:</p>\n<pre class=\"code-example\">count = 0\n\ndef increment():\n    global count\n    count += 1</pre>"
         },
-
         "qna": [
-            { "q": "What is variable scope?", "a": "Variable scope refers to the region of a program where a variable is defined and can be accessed." },
-            { "q": "Can I read a global variable inside a function?", "a": "Yes! You can read its value inside a function without any special keywords." },
-            { "q": "What happens if I assign a value to a global variable name inside a function without declaring 'global'?", "a": "Python creates a new **local variable** with the same name. The global variable remains unchanged." },
-            { "q": "What is variable shadowing?", "a": "Variable shadowing occurs when a local variable shares the same name as a global variable. Inside the function, the local variable takes precedence, shadowing the global one." },
-            { "q": "What does the global keyword do?", "a": "The <code>global</code> keyword tells Python that the variable name references the global scope, allowing you to modify the global variable from inside a function." }
+            {
+                "q": "What is variable scope?",
+                "a": "Variable scope refers to the region of a program where a variable is defined and can be accessed."
+            },
+            {
+                "q": "Can I read a global variable inside a function?",
+                "a": "Yes! You can read its value inside a function without any special keywords."
+            },
+            {
+                "q": "What happens if I assign a value to a global variable name inside a function without declaring 'global'?",
+                "a": "Python creates a new **local variable** with the same name. The global variable remains unchanged."
+            },
+            {
+                "q": "What is variable shadowing?",
+                "a": "Variable shadowing occurs when a local variable shares the same name as a global variable. Inside the function, the local variable takes precedence, shadowing the global one."
+            },
+            {
+                "q": "What does the global keyword do?",
+                "a": "The <code>global</code> keyword tells Python that the variable name references the global scope, allowing you to modify the global variable from inside a function."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of variable scopes and the global keyword!",
             "questions": [
-                { "type": "mcq", "question": "Where are local variables accessible?", "options": ["Everywhere in the file", "Only inside the function they are defined in", "Only in outer scopes", "Nowhere"], "answer": 1 },
-                { "type": "mcq", "question": "Which keyword lets you modify a global variable inside a function?", "options": ["extern", "global", "static", "modify"], "answer": 1 },
-                { "type": "mcq", "question": "What does Python do if you write x = 5 inside a function when global x exists (without 'global x')?", "options": ["Raises SyntaxError", "Modifies global x", "Creates a new local variable named x", "Raises NameError"], "answer": 2 },
-                { "type": "fill", "question": "Variables defined outside functions reside in the _____ scope.", "answer": "global" },
-                { "type": "fill", "question": "Variables defined inside functions reside in the _____ scope.", "answer": "local" },
-                { "type": "fill", "question": "To change a global variable inside a function, use the _____ keyword.", "answer": "global" },
-                { "type": "tf", "question": "You can read a global variable inside a function without using the 'global' keyword.", "answer": "true" },
-                { "type": "tf", "question": "Local variables exist in memory after their function exits.", "answer": "false" },
-                { "type": "tf", "question": "Global variables should be used sparingly because they can make debugging difficult.", "answer": "true" },
-                { "type": "short", "question": "Explain local scope in your own words.", "sampleAnswer": "Local scope is the scope inside a function. Variables defined inside a function are local to it and cannot be accessed outside of it." }
+                {
+                    "type": "mcq",
+                    "question": "Where are local variables accessible?",
+                    "options": [
+                        "Everywhere in the file",
+                        "Only inside the function they are defined in",
+                        "Only in outer scopes",
+                        "Nowhere"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which keyword lets you modify a global variable inside a function?",
+                    "options": [
+                        "extern",
+                        "global",
+                        "static",
+                        "modify"
+                    ],
+                    "answer": 1
+                },
+                {
+                    "type": "mcq",
+                    "question": "What does Python do if you write x = 5 inside a function when global x exists (without 'global x')?",
+                    "options": [
+                        "Raises SyntaxError",
+                        "Modifies global x",
+                        "Creates a new local variable named x",
+                        "Raises NameError"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "fill",
+                    "question": "Variables defined outside functions reside in the _____ scope. (elif / if / else / global)",
+                    "answer": "global"
+                },
+                {
+                    "type": "fill",
+                    "question": "Variables defined inside functions reside in the _____ scope. (global / local / nonlocal / builtin)",
+                    "answer": "local"
+                },
+                {
+                    "type": "fill",
+                    "question": "To change a global variable inside a function, use the _____ keyword. (elif / if / else / global)",
+                    "answer": "global"
+                },
+                {
+                    "type": "tf",
+                    "question": "You can read a global variable inside a function without using the 'global' keyword.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Local variables exist in memory after their function exits.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Global variables should be used sparingly because they can make debugging difficult.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "Explain local scope in your own words.",
+                    "sampleAnswer": "Local scope is the scope inside a function. Variables defined inside a function are local to it and cannot be accessed outside of it."
+                }
             ]
         },
-
         "scenario": "Modify a global counter inside a function. Define a global variable named 'count' initialized to 0. Write a function named 'increment' that uses the 'global' keyword to modify 'count' by adding 1. Call the increment function once, and then print the value of count.",
         "hint": "Use global count inside increment(), then count += 1.",
         "wrongHint": "Make sure you declare 'global count' before modifying count, and print count at the end!",
@@ -3759,38 +8495,112 @@ window.levels = [
         "id": 75,
         "title": "Recursion",
         "concept": "Functions that call themselves",
-        "sections": ["description", "qna", "test", "coding"],
-
+        "sections": [
+            "description",
+            "qna",
+            "test",
+            "coding"
+        ],
         "description": {
             "heading": "Recursion",
             "subheading": "Functions that call themselves",
             "body": "<p><strong>Recursion</strong> is a powerful programming technique where a function **calls itself** to solve a problem. It works by breaking down a complex problem into smaller, simpler sub-problems of the same type.</p>\n\n<h3>The Two Essential Parts of Recursion</h3>\n<ul class=\"desc-list\">\n    <li><strong>Base Case:</strong> The stopping condition. It returns a value directly without making another recursive call. Without it, the function would call itself forever!</li>\n    <li><strong>Recursive Case:</strong> The part where the function calls itself with a simpler or smaller input, moving closer to the base case.</li>\n</ul>\n\n<h3>Example: Factorial</h3>\n<p>The factorial of a number <code>n</code> (denoted <code>n!</code>) is <code>n * (n-1) * (n-2) * ... * 1</code>.</p>\n<pre class=\"code-example\">def factorial(n):\n    if n <= 1:  # Base Case\n        return 1\n    else:       # Recursive Case\n        return n * factorial(n - 1)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>RecursionError:</strong> If you forget a base case or your inputs don't approach it, Python will exceed its call stack size limit and crash with a <code>RecursionError: maximum recursion depth exceeded</code>.</div>\n</div>"
         },
-
         "qna": [
-            { "q": "What is recursion?", "a": "Recursion is a programming technique where a function calls itself during execution to solve a smaller instance of the same problem." },
-            { "q": "What is a base case?", "a": "The base case is the condition that terminates the recursive loop. Without it, a function would call itself infinitely." },
-            { "q": "What happens if a recursive function does not have a base case?", "a": "It leads to infinite recursion, eventually causing a <code>RecursionError: maximum recursion depth exceeded</code>." },
-            { "q": "Can every recursive function be written using loops?", "a": "Yes! Any recursive algorithm can be rewritten using iteration (for or while loops). Iteration is often more memory-efficient, but recursion can make code cleaner and simpler for certain tasks (like traversing trees)." },
-            { "q": "What is the call stack?", "a": "The call stack is the memory structure Python uses to keep track of active function calls. In recursion, every self-call adds a new frame to the call stack until the base case is reached." }
+            {
+                "q": "What is recursion?",
+                "a": "Recursion is a programming technique where a function calls itself during execution to solve a smaller instance of the same problem."
+            },
+            {
+                "q": "What is a base case?",
+                "a": "The base case is the condition that terminates the recursive loop. Without it, a function would call itself infinitely."
+            },
+            {
+                "q": "What happens if a recursive function does not have a base case?",
+                "a": "It leads to infinite recursion, eventually causing a <code>RecursionError: maximum recursion depth exceeded</code>."
+            },
+            {
+                "q": "Can every recursive function be written using loops?",
+                "a": "Yes! Any recursive algorithm can be rewritten using iteration (for or while loops). Iteration is often more memory-efficient, but recursion can make code cleaner and simpler for certain tasks (like traversing trees)."
+            },
+            {
+                "q": "What is the call stack?",
+                "a": "The call stack is the memory structure Python uses to keep track of active function calls. In recursion, every self-call adds a new frame to the call stack until the base case is reached."
+            }
         ],
-
         "test": {
             "intro": "Let's check your understanding of recursion!",
             "questions": [
-                { "type": "mcq", "question": "What is the stopping condition in a recursive function called?", "options": ["Stop Case", "Terminator", "Base Case", "Default Case"], "answer": 2 },
-                { "type": "mcq", "question": "What error is raised if a function calls itself infinitely?", "options": ["RecursionError", "OverflowError", "InfiniteError", "StackError"], "answer": 0 },
-                { "type": "mcq", "question": "Which of these algorithms is naturally recursive?", "options": ["Factorial calculation", "Linear search", "Printing a string", "Adding two numbers"], "answer": 0 },
-                { "type": "fill", "question": "Recursion is when a function calls _____.", "answer": "itself" },
-                { "type": "fill", "question": "The stopping condition is the _____ case.", "answer": "base" },
-                { "type": "fill", "question": "Infinite recursion leads to exceeding the maximum call _____ depth.", "answer": "stack" },
-                { "type": "tf", "question": "A recursive function can have more than one base case.", "answer": "true" },
-                { "type": "tf", "question": "Recursion is always more memory-efficient than loops.", "answer": "false" },
-                { "type": "tf", "question": "Base cases prevent stack overflows.", "answer": "true" },
-                { "type": "short", "question": "State the two components required in any valid recursive function.", "sampleAnswer": "A base case (stopping condition) and a recursive case (calling itself with a reduced input)." }
+                {
+                    "type": "mcq",
+                    "question": "What is the stopping condition in a recursive function called?",
+                    "options": [
+                        "Stop Case",
+                        "Terminator",
+                        "Base Case",
+                        "Default Case"
+                    ],
+                    "answer": 2
+                },
+                {
+                    "type": "mcq",
+                    "question": "What error is raised if a function calls itself infinitely?",
+                    "options": [
+                        "RecursionError",
+                        "OverflowError",
+                        "InfiniteError",
+                        "StackError"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "mcq",
+                    "question": "Which of these algorithms is naturally recursive?",
+                    "options": [
+                        "Factorial calculation",
+                        "Linear search",
+                        "Printing a string",
+                        "Adding two numbers"
+                    ],
+                    "answer": 0
+                },
+                {
+                    "type": "fill",
+                    "question": "Recursion is when a function calls _____. (self / super / parent / itself)",
+                    "answer": "itself"
+                },
+                {
+                    "type": "fill",
+                    "question": "The stopping condition is the _____ case. (parent / super / base / self)",
+                    "answer": "base"
+                },
+                {
+                    "type": "fill",
+                    "question": "Infinite recursion leads to exceeding the maximum call _____ depth. (itself / variable / base / stack)",
+                    "answer": "stack"
+                },
+                {
+                    "type": "tf",
+                    "question": "A recursive function can have more than one base case.",
+                    "answer": "true"
+                },
+                {
+                    "type": "tf",
+                    "question": "Recursion is always more memory-efficient than loops.",
+                    "answer": "false"
+                },
+                {
+                    "type": "tf",
+                    "question": "Base cases prevent stack overflows.",
+                    "answer": "true"
+                },
+                {
+                    "type": "short",
+                    "question": "State the two components required in any valid recursive function.",
+                    "sampleAnswer": "A base case (stopping condition) and a recursive case (calling itself with a reduced input)."
+                }
             ]
         },
-
         "scenario": "Implement factorial recursively. Define a function 'factorial(n)' that returns 1 if n <= 1 (base case), otherwise returns n * factorial(n - 1) (recursive case). Call the function passing 5, store the returned value in 'result', and print result.",
         "hint": "Use def factorial(n): if n <= 1: return 1 else: return n * factorial(n-1). Call factorial(5).",
         "wrongHint": "Make sure you calculate factorial(5) which should output 120, and print it!",
@@ -3872,17 +8682,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "An error that occurs during the execution of a grammatically correct program is called an _____. (exception / parsing error / compiler error / indentation error)",
+                    "question": "An error that occurs during the execution of a grammatically correct program is called an _____. (exception / parsing error / compiler error / indentation error) (variable / Zero / exception / Name)",
                     "answer": "exception"
                 },
                 {
                     "type": "fill",
-                    "question": "If you try to call a function name that has not been defined, Python raises a _____Error.",
+                    "question": "If you try to call a function name that has not been defined, Python raises a _____Error. (TypeError / NameError / Name / SyntaxError)",
                     "answer": "Name"
                 },
                 {
                     "type": "fill",
-                    "question": "Dividing any number by zero in Python triggers a _____DivisionError.",
+                    "question": "Dividing any number by zero in Python triggers a _____DivisionError. (NameError / Zero / TypeError / SyntaxError)",
                     "answer": "Zero"
                 },
                 {
@@ -3988,17 +8798,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The block of code that handles the error if something crashes in the try block begins with the keyword _____.",
+                    "question": "The block of code that handles the error if something crashes in the try block begins with the keyword _____. (else / elif / if / except)",
                     "answer": "except"
                 },
                 {
                     "type": "fill",
-                    "question": "A try block must have at least one _____ block or finally block to be syntactically correct.",
+                    "question": "A try block must have at least one _____ block or finally block to be syntactically correct. (else / elif / if / except)",
                     "answer": "except"
                 },
                 {
                     "type": "fill",
-                    "question": "If try contains: num = 10 / 2, the except ZeroDivisionError block will be _____.",
+                    "question": "If try contains: num = 10 / 2, the except ZeroDivisionError block will be _____. (skipped / function / except / variable)",
                     "answer": "skipped"
                 },
                 {
@@ -4104,17 +8914,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The keyword used to define code that executes under any circumstances is _____.",
+                    "question": "The keyword used to define code that executes under any circumstances is _____. (elif / else / if / finally)",
                     "answer": "finally"
                 },
                 {
                     "type": "fill",
-                    "question": "If a function returns a value inside the try block, the finally block runs _____ the return takes place. (after / before / instead of)",
+                    "question": "If a function returns a value inside the try block, the finally block runs _____ the return takes place. (after / before / instead of) (finally / function / before / variable)",
                     "answer": "before"
                 },
                 {
                     "type": "fill",
-                    "question": "A try block must have at least one except or _____ block.",
+                    "question": "A try block must have at least one except or _____ block. (elif / else / if / finally)",
                     "answer": "finally"
                 },
                 {
@@ -4220,17 +9030,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To raise an exception with a custom message, you pass the message string inside the _____ of the exception class.",
+                    "question": "To raise an exception with a custom message, you pass the message string inside the _____ of the exception class. (parentheses / semicolon / colon / comma)",
                     "answer": "parentheses"
                 },
                 {
                     "type": "fill",
-                    "question": "If you want to validate that a variable is a string and raise an exception otherwise, the most appropriate exception type is _____Error.",
+                    "question": "If you want to validate that a variable is a string and raise an exception otherwise, the most appropriate exception type is _____Error. (TypeError / NameError / SyntaxError / Type)",
                     "answer": "Type"
                 },
                 {
                     "type": "fill",
-                    "question": "When a raise statement executes outside a try block, the program will immediately _____. (succeed / pause / crash / loop)",
+                    "question": "When a raise statement executes outside a try block, the program will immediately _____. (succeed / pause / crash / loop) (parentheses / variable / crash / Type)",
                     "answer": "crash"
                 },
                 {
@@ -4336,17 +9146,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To close an open file object named `f`, you write `f._____()`.",
+                    "question": "To close an open file object named `f`, you write `f._____()`. (print / len / input / close)",
                     "answer": "close"
                 },
                 {
                     "type": "fill",
-                    "question": "If you try to open a missing file in read mode, Python raises a _____NotFoundError.",
+                    "question": "If you try to open a missing file in read mode, Python raises a _____NotFoundError. (SyntaxError / TypeError / File / NameError)",
                     "answer": "File"
                 },
                 {
                     "type": "fill",
-                    "question": "Opening a file in write mode ('w') will _____ any existing contents of that file. (append / preserve / overwrite / format)",
+                    "question": "Opening a file in write mode ('w') will _____ any existing contents of that file. (append / preserve / overwrite / format) (overwrite / variable / File / close)",
                     "answer": "overwrite"
                 },
                 {
@@ -4452,17 +9262,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To reset the file pointer back to the very beginning of the file, call f._____(0).",
+                    "question": "To reset the file pointer back to the very beginning of the file, call f._____(0). (seek / print / len / input)",
                     "answer": "seek"
                 },
                 {
                     "type": "fill",
-                    "question": "The string sequence that represents a newline in Python is _____.",
+                    "question": "The string sequence that represents a newline in Python is _____. (+ / - / * / \\n)",
                     "answer": "\\n"
                 },
                 {
                     "type": "fill",
-                    "question": "Calling read() at the end of a file returns an _____ string.",
+                    "question": "Calling read() at the end of a file returns an _____ string. (seek / \\n / variable / empty)",
                     "answer": "empty"
                 },
                 {
@@ -4568,17 +9378,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To write a single row of data to a CSV file, use the writer._____() method.",
+                    "question": "To write a single row of data to a CSV file, use the writer._____() method. (variable / csv / writerow / ,)",
                     "answer": "writerow"
                 },
                 {
                     "type": "fill",
-                    "question": "To import the CSV handling module, you write `import _____`.",
+                    "question": "To import the CSV handling module, you write `import _____`. (csv / writerow / , / variable)",
                     "answer": "csv"
                 },
                 {
                     "type": "fill",
-                    "question": "The character separating columns in a standard CSV file is a _____.",
+                    "question": "The character separating columns in a standard CSV file is a _____. (- / + / * / ,)",
                     "answer": ","
                 },
                 {
@@ -4684,17 +9494,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The method used to save a Python dictionary to a JSON file is json._____().",
+                    "question": "The method used to save a Python dictionary to a JSON file is json._____(). (variable / loads / dump / Notation)",
                     "answer": "dump"
                 },
                 {
                     "type": "fill",
-                    "question": "JSON stands for JavaScript Object _____.",
+                    "question": "JSON stands for JavaScript Object _____. (dump / loads / Notation / Variable)",
                     "answer": "Notation"
                 },
                 {
                     "type": "fill",
-                    "question": "If you want to parse JSON from a string named raw_str, call json._____(raw_str).",
+                    "question": "If you want to parse JSON from a string named raw_str, call json._____(raw_str). (dump / variable / Notation / loads)",
                     "answer": "loads"
                 },
                 {
@@ -4800,17 +9610,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To open a file inside a context manager, you write: _____ open('file.txt') as f:",
+                    "question": "To open a file inside a context manager, you write: _____ open('file.txt') as f: (if / else / elif / with)",
                     "answer": "with"
                 },
                 {
                     "type": "fill",
-                    "question": "The method called automatically on the file object when exiting with is _____.",
+                    "question": "The method called automatically on the file object when exiting with is _____. (print / len / input / close)",
                     "answer": "close"
                 },
                 {
                     "type": "fill",
-                    "question": "Opening multiple files in one with statement requires separating them with a _____.",
+                    "question": "Opening multiple files in one with statement requires separating them with a _____. (- / + / * / ,)",
                     "answer": ","
                 },
                 {
@@ -4916,17 +9726,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To append text to a log file, open it in _____ mode.",
+                    "question": "To append text to a log file, open it in _____ mode. (w / r / x / a)",
                     "answer": "a"
                 },
                 {
                     "type": "fill",
-                    "question": "Files are stored in permanent disk storage, whereas variables are stored in temporary _____ memory.",
+                    "question": "Files are stored in permanent disk storage, whereas variables are stored in temporary _____ memory. (\\n / a / RAM / Variable)",
                     "answer": "RAM"
                 },
                 {
                     "type": "fill",
-                    "question": "To write a line break into a log file, write the characters _____.",
+                    "question": "To write a line break into a log file, write the characters _____. (+ / - / * / \\n)",
                     "answer": "\\n"
                 },
                 {
@@ -5032,17 +9842,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "Any file containing Python code with a _____ extension can be imported as a module.",
+                    "question": "Any file containing Python code with a _____ extension can be imported as a module. (* / .py / __name__ / Variable)",
                     "answer": ".py"
                 },
                 {
                     "type": "fill",
-                    "question": "To import all functions from a module directly without dot notation, use: from module import _____.",
+                    "question": "To import all functions from a module directly without dot notation, use: from module import _____. (+ / - / * / /)",
                     "answer": "*"
                 },
                 {
                     "type": "fill",
-                    "question": "The special variable Python uses to check if a file is executed directly is `_____`.",
+                    "question": "The special variable Python uses to check if a file is executed directly is `_____`. (NameError / TypeError / SyntaxError / __name__)",
                     "answer": "__name__"
                 },
                 {
@@ -5148,17 +9958,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "A package is represented as a _____ in your computer's filesystem.",
+                    "question": "A package is represented as a _____ in your computer's filesystem. (variable / directory / __init__.py / add)",
                     "answer": "directory"
                 },
                 {
                     "type": "fill",
-                    "question": "The special initializer file in packages is named `_____`.",
+                    "question": "The special initializer file in packages is named `_____`. (Variable / add / directory / __init__.py)",
                     "answer": "__init__.py"
                 },
                 {
                     "type": "fill",
-                    "question": "To import a function called add from the calculator module inside the mathutils package, write: from mathutils.calculator import _____.",
+                    "question": "To import a function called add from the calculator module inside the mathutils package, write: from mathutils.calculator import _____. (variable / add / directory / __init__.py)",
                     "answer": "add"
                 },
                 {
@@ -5264,17 +10074,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To write the list of installed libraries into requirements.txt, run: pip _____ > requirements.txt.",
+                    "question": "To write the list of installed libraries into requirements.txt, run: pip _____ > requirements.txt. (freeze / requirements.txt / variable / Scripts)",
                     "answer": "freeze"
                 },
                 {
                     "type": "fill",
-                    "question": "On Windows, the activation script is located inside the _____ folder of your environment.",
+                    "question": "On Windows, the activation script is located inside the _____ folder of your environment. (requirements.txt / Scripts / Variable / freeze)",
                     "answer": "Scripts"
                 },
                 {
                     "type": "fill",
-                    "question": "To install packages from a requirements.txt file, write: pip install -r _____.",
+                    "question": "To install packages from a requirements.txt file, write: pip install -r _____. (Scripts / freeze / variable / requirements.txt)",
                     "answer": "requirements.txt"
                 },
                 {
@@ -5380,17 +10190,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To generate a random float between 0.0 and 1.0, call random._____().",
+                    "question": "To generate a random float between 0.0 and 1.0, call random._____(). (random / choice / variable / math)",
                     "answer": "random"
                 },
                 {
                     "type": "fill",
-                    "question": "To use advanced trig functions, you must write `import _____`.",
+                    "question": "To use advanced trig functions, you must write `import _____`. (variable / random / math / choice)",
                     "answer": "math"
                 },
                 {
                     "type": "fill",
-                    "question": "To pick a random element from a list named options, use: random._____(options).",
+                    "question": "To pick a random element from a list named options, use: random._____(options). (choice / random / variable / math)",
                     "answer": "choice"
                 },
                 {
@@ -5496,17 +10306,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To ensure backslashes are treated literally, prefix your pattern string with the letter _____.",
+                    "question": "To ensure backslashes are treated literally, prefix your pattern string with the letter _____. (r / a / w / x)",
                     "answer": "r"
                 },
                 {
                     "type": "fill",
-                    "question": "In regex patterns, the '*' symbol means zero or _____ occurrences of the character.",
+                    "question": "In regex patterns, the '*' symbol means zero or _____ occurrences of the character. (sub / more / r / variable)",
                     "answer": "more"
                 },
                 {
                     "type": "fill",
-                    "question": "To replace all occurrences of a pattern in a string, use the function re._____().",
+                    "question": "To replace all occurrences of a pattern in a string, use the function re._____(). (more / r / variable / sub)",
                     "answer": "sub"
                 },
                 {
@@ -5612,17 +10422,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "An individual realization of a class template is called an _____.",
+                    "question": "An individual realization of a class template is called an _____. (object / attributes / variable / methods)",
                     "answer": "object"
                 },
                 {
                     "type": "fill",
-                    "question": "Variables defined inside a class to hold data are called _____.",
+                    "question": "Variables defined inside a class to hold data are called _____. (constructors / variables / methods / attributes)",
                     "answer": "attributes"
                 },
                 {
                     "type": "fill",
-                    "question": "Functions defined inside a class to perform actions are called _____.",
+                    "question": "Functions defined inside a class to perform actions are called _____. (attributes / constructors / methods / variables)",
                     "answer": "methods"
                 },
                 {
@@ -5728,17 +10538,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "Methods wrapped in double underscores like __init__ are called _____ methods.",
+                    "question": "Methods wrapped in double underscores like __init__ are called _____ methods. (dunder / attributes / variables / methods)",
                     "answer": "dunder"
                 },
                 {
                     "type": "fill",
-                    "question": "The first parameter of the constructor method must always be `_____`.",
+                    "question": "The first parameter of the constructor method must always be `_____`. (child / super / self / parent)",
                     "answer": "self"
                 },
                 {
                     "type": "fill",
-                    "question": "To initialize an attribute named speed using a parameter s, write: self.speed = _____.",
+                    "question": "To initialize an attribute named speed using a parameter s, write: self.speed = _____. (self / s / variable / dunder)",
                     "answer": "s"
                 },
                 {
@@ -5844,17 +10654,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "Redefining a parent class method inside a child class is called method _____.",
+                    "question": "Redefining a parent class method inside a child class is called method _____. (overloading / inheritance / overriding / encapsulation)",
                     "answer": "overriding"
                 },
                 {
                     "type": "fill",
-                    "question": "Inheriting from multiple parent classes in Python is called _____ inheritance.",
+                    "question": "Inheriting from multiple parent classes in Python is called _____ inheritance. (hierarchical / multiple / multilevel / single)",
                     "answer": "multiple"
                 },
                 {
                     "type": "fill",
-                    "question": "To call the parent constructor from a child constructor, write: _____().__init__().",
+                    "question": "To call the parent constructor from a child constructor, write: _____().__init__(). (self / parent / child / super)",
                     "answer": "super"
                 },
                 {
@@ -5960,17 +10770,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "A method used to safely retrieve a private variable's value is called a _____.",
+                    "question": "A method used to safely retrieve a private variable's value is called a _____. (method / constructor / setter / getter)",
                     "answer": "getter"
                 },
                 {
                     "type": "fill",
-                    "question": "A method used to safely update a private variable's value is called a _____.",
+                    "question": "A method used to safely update a private variable's value is called a _____. (getter / setter / method / constructor)",
                     "answer": "setter"
                 },
                 {
                     "type": "fill",
-                    "question": "An attribute prefixed with a single underscore (e.g., _state) is considered _____.",
+                    "question": "An attribute prefixed with a single underscore (e.g., _state) is considered _____. (protected / setter / getter / variable)",
                     "answer": "protected"
                 },
                 {
@@ -6076,17 +10886,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To mark a method as abstract in your parent template, use the decorator @_____-method (replace '-' with nothing).",
+                    "question": "To mark a method as abstract in your parent template, use the decorator @_____-method (replace '-' with nothing). (constructor / abstractmethod / setter / getter)",
                     "answer": "abstractmethod"
                 },
                 {
                     "type": "fill",
-                    "question": "ABC stands for Abstract Base _____.",
+                    "question": "ABC stands for Abstract Base _____. (Class / else / if / elif)",
                     "answer": "Class"
                 },
                 {
                     "type": "fill",
-                    "question": "The concept of matching objects by method interfaces rather than strict type checks is called _____ typing.",
+                    "question": "The concept of matching objects by method interfaces rather than strict type checks is called _____ typing. (variable / Class / abstractmethod / duck)",
                     "answer": "duck"
                 },
                 {
@@ -6192,17 +11002,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "To convert the iterator returned by map() into a list, wrap it in the _____() function.",
+                    "question": "To convert the iterator returned by map() into a list, wrap it in the _____() function. (int / float / str / list)",
                     "answer": "list"
                 },
                 {
                     "type": "fill",
-                    "question": "A lambda function is defined on a single line and contains exactly one _____.",
+                    "question": "A lambda function is defined on a single line and contains exactly one _____. (2 / expression / list / variable)",
                     "answer": "expression"
                 },
                 {
                     "type": "fill",
-                    "question": "To write a lambda that returns the square of x, write: lambda x: x ** _____.",
+                    "question": "To write a lambda that returns the square of x, write: lambda x: x ** _____. (4 / 3 / 2 / 1)",
                     "answer": "2"
                 },
                 {
@@ -6308,17 +11118,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The symbol used to apply decorators in Python is _____.",
+                    "question": "The symbol used to apply decorators in Python is _____. (* / - / @ / +)",
                     "answer": "@"
                 },
                 {
                     "type": "fill",
-                    "question": "Generator functions are highly efficient because they save _____ usage.",
+                    "question": "Generator functions are highly efficient because they save _____ usage. (Stop / memory / variable / @)",
                     "answer": "memory"
                 },
                 {
                     "type": "fill",
-                    "question": "When a generator has no more values to yield, it raises a _____Iteration exception.",
+                    "question": "When a generator has no more values to yield, it raises a _____Iteration exception. (NameError / TypeError / Stop / SyntaxError)",
                     "answer": "Stop"
                 },
                 {
@@ -6424,17 +11234,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The library used to make HTTP calls in Python is called _____.",
+                    "question": "The library used to make HTTP calls in Python is called _____. (Interface / not found / requests / variable)",
                     "answer": "requests"
                 },
                 {
                     "type": "fill",
-                    "question": "An HTTP status code of 404 represents a resource _____ error.",
+                    "question": "An HTTP status code of 404 represents a resource _____ error. (variable / requests / not found / Interface)",
                     "answer": "not found"
                 },
                 {
                     "type": "fill",
-                    "question": "API stands for Application Programming _____.",
+                    "question": "API stands for Application Programming _____. (Interface / not found / requests / Variable)",
                     "answer": "Interface"
                 },
                 {
@@ -6540,17 +11350,17 @@ window.levels = [
                 },
                 {
                     "type": "fill",
-                    "question": "The standard library module used for asynchronous event loops is _____.",
+                    "question": "The standard library module used for asynchronous event loops is _____. (variable / sleep / start / asyncio)",
                     "answer": "asyncio"
                 },
                 {
                     "type": "fill",
-                    "question": "To start a thread object 't', run: t._____().",
+                    "question": "To start a thread object 't', run: t._____(). (asyncio / sleep / variable / start)",
                     "answer": "start"
                 },
                 {
                     "type": "fill",
-                    "question": "Instead of blocking time.sleep(), async uses non-blocking asyncio._____().",
+                    "question": "Instead of blocking time.sleep(), async uses non-blocking asyncio._____(). (asyncio / sleep / variable / start)",
                     "answer": "sleep"
                 },
                 {

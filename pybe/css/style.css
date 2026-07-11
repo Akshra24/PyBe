@@ -3428,3 +3428,44 @@ body.time-night .sky-bg .cloud {
     line-height: 1.6;
     color: #eceff1;
 }
+
+/* ============================================================
+   ANYWHERE DOOR — STEPPER UNLOCKED THEME
+   ============================================================ */
+.step-item.anywhere-door-unlocked .step-circle {
+    border-color: #e91e63 !important;
+    color: #e91e63 !important;
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.25) !important;
+    cursor: pointer !important;
+}
+
+.step-item.anywhere-door-unlocked.active .step-circle {
+    background: #e91e63 !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(233, 30, 99, 0.5) !important;
+}
+
+.step-item.anywhere-door-unlocked.done .step-circle {
+    background: #c2185b !important;
+    border-color: #c2185b !important;
+    color: white !important;
+}
+
+.step-item.anywhere-door-unlocked .step-label {
+    color: #c2185b !important;
+    font-weight: 700;
+}
+
+.step-item.anywhere-door-unlocked.active .step-label {
+    color: #880e4f !important;
+    text-shadow: 0 0 5px rgba(233, 30, 99, 0.2);
+}
+
+.step-item.anywhere-door-unlocked::after {
+    background: #ff80ab !important;
+}
+
+.step-item.anywhere-door-unlocked:hover .step-circle {
+    transform: scale(1.12);
+    box-shadow: 0 0 15px rgba(233, 30, 99, 0.6) !important;
+}

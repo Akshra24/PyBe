@@ -155,6 +155,7 @@
         let codingSubmitted = false;   // Track if coding solution is submitted and correct
         let shortAnswerTexts = {};     // index -> typed text
         let xpAwardedSections = new Set();
+        let anywhereDoorActive = sessionStorage.getItem('pybe_anywhere_door_active_' + levelId) === 'true';
 
         function updateAttemptsBadge() {
             const progress = window.PyBe ? window.PyBe.getProgress() : {};
@@ -203,6 +204,7 @@
 
         function canGoToSection(targetIdx) {
             if (localStorage.getItem('pybe_dev_mode') === 'true') return true;
+            if (anywhereDoorActive) return true; // Anywhere Door bypasses all locks!
             const progress = window.PyBe ? window.PyBe.getProgress() : {};
             if (progress.completed && progress.completed.includes(levelId)) return true;
             if (targetIdx <= currentSection) return true;
@@ -241,9 +243,16 @@
             }
             document.getElementById('sectionStepper').style.display = 'block';
             stepperTrack.innerHTML = '';
+
+            const progress = window.PyBe ? window.PyBe.getProgress() : null;
+            const completed = progress && progress.completed && progress.completed.includes(levelId);
+
             sections.forEach((sec, i) => {
                 const step = document.createElement('div');
                 step.className = 'step-item';
+                if (anywhereDoorActive && !completed) {
+                    step.classList.add('anywhere-door-unlocked');
+                }
                 step.id = `step-${i}`;
                 step.innerHTML = `
                     <div class="step-circle">${i + 1}</div>
@@ -459,6 +468,13 @@
                 testAnswers = {};
                 shortAnswerTexts = {};
                 testSubmitted = false;
+                if (window.PyBe) {
+                    const progress = window.PyBe.getProgress();
+                    if (progress.savedAnswers && progress.savedAnswers[levelId]) {
+                        delete progress.savedAnswers[levelId];
+                        window.PyBe.saveProgress(progress);
+                    }
+                }
                 renderTest();
             });
         }
@@ -471,9 +487,13 @@
             const completed = progress && progress.completed && progress.completed.includes(level.id);
             const score = (progress && progress.testScores && progress.testScores[level.id] !== undefined) ? progress.testScores[level.id] : (completed ? 100 : null);
 
-            // Load saved answers if completed and not already submitted
-            if (completed && !testSubmitted) {
-                const saved = progress && progress.savedAnswers ? progress.savedAnswers[level.id] : null;
+            // Load saved answers if they exist (even if not completed) or if completed
+            const saved = progress && progress.savedAnswers ? progress.savedAnswers[level.id] : null;
+            if (saved && saved.testSubmitted && !testSubmitted) {
+                testAnswers = saved.testAnswers || {};
+                shortAnswerTexts = saved.shortAnswerTexts || {};
+                testSubmitted = true;
+            } else if (completed && !testSubmitted) {
                 if (saved) {
                     testAnswers = saved.testAnswers || {};
                     shortAnswerTexts = saved.shortAnswerTexts || {};
@@ -750,7 +770,7 @@
             const resultEl = document.getElementById('testResult');
             const passed = pct >= 60;
 
-            if (passed && window.PyBe) {
+            if (window.PyBe) {
                 const progress = window.PyBe.getProgress();
                 progress.testScores = progress.testScores || {};
                 progress.testScores[levelId] = pct;
@@ -758,7 +778,8 @@
                 progress.savedAnswers = progress.savedAnswers || {};
                 progress.savedAnswers[levelId] = {
                     testAnswers: testAnswers,
-                    shortAnswerTexts: shortAnswerTexts
+                    shortAnswerTexts: shortAnswerTexts,
+                    testSubmitted: true
                 };
 
                 window.PyBe.saveProgress(progress);
@@ -806,6 +827,13 @@
                     testAnswers    = {};
                     shortAnswerTexts = {};
                     testSubmitted  = false;
+                    if (window.PyBe) {
+                        const progress = window.PyBe.getProgress();
+                        if (progress.savedAnswers && progress.savedAnswers[levelId]) {
+                            delete progress.savedAnswers[levelId];
+                            window.PyBe.saveProgress(progress);
+                        }
+                    }
                     renderTest();
                 });
             }
@@ -2231,239 +2259,98 @@
             return { success: true };
         };
 
-        // ── ANYWHERE DOOR PRACTICE ROOM INTEGRATION ──────────────
-        function generatePracticeRoomContent(level) {
-            const title = level.title || "Python Basics";
-            
-            let realWorld = `Production backend developers use Python daily to automate reporting scripts. NASA researchers use Python scripts to compile climate metrics from weather stations. For instance, declaring tidy variables helps track raw temperatures and sensor heights cleanly without syntax errors!`;
-            let mcqs = [
-                {
-                    q: `Which option demonstrates clean Python naming style?`,
-                    opts: ["dorayakiCount", "dorayaki-count", "dorayaki_count", "DORAYAKICOUNT"],
-                    ans: 2,
-                    explain: "PEP 8 style guide recommends snake_case (all lowercase words joined by underscores) for Python variables."
-                },
-                {
-                    q: `What will happen if you start a variable name with a number?`,
-                    opts: ["Python ignores the number", "It raises a SyntaxError", "The variable becomes read-only", "Nothing, it is fully valid"],
-                    ans: 1,
-                    explain: "Variable names must start with a letter or an underscore. Starting with a number is grammatically incorrect in Python."
-                }
-            ];
-            let coding = {
-                mission: `Declare a variable named 'nobita_score' using snake_case, assign it the integer value 90, and print it.`,
-                solution: "nobita_score = 90\nprint(nobita_score)"
-            };
 
-            if (level.id === 1) {
-                realWorld = `<strong>Google Crawler Engine:</strong> Google developers wrote their earliest search engine web crawlers using Python. They chose Python because its clean, readable structure allowed them to easily write algorithms that scrape text and rank index data across billions of websites.`;
-                mcqs = [
-                    {
-                        q: `Which of the following describes a key advantage of Python?`,
-                        opts: ["Reads almost like plain English", "Requires semi-colons on every line", "It is only compiled, not interpreted", "Only works on Windows"],
-                        ans: 0,
-                        explain: "Python is designed for high readability and removes unnecessary syntactic boilerplates, reading similar to basic English."
-                    },
-                    {
-                        q: `In Python, a SyntaxError is raised when...`,
-                        opts: ["The CPU runs too hot", "The code breaks a grammatical rule of the language", "The output is mathematically incorrect", "Variables are set to zero"],
-                        ans: 1,
-                        explain: "Syntax errors occur when the interpreter scans code that breaks the structural grammar rules of the Python language."
-                    }
-                ];
-                coding = {
-                    mission: `Write a statement that prints the string "I love Python!" to the console output.`,
-                    solution: `print("I love Python!")`
-                };
-            } else if (level.id === 2) {
-                realWorld = `<strong>Spotify Recommendation Backend:</strong> Spotify interprets algorithms written in Python at runtime to recommend daily music mixes. Interpretation allows engineers to test algorithm changes on live user data instantly without compiler wait delays.`;
-                mcqs = [
-                    {
-                        q: `What is the role of the PVM (Python Virtual Machine)?`,
-                        opts: ["To turn off the computer on compilation error", "To translate Python code directly to HTML", "To interpret compiled bytecode on the host computer CPU", "To generate random print outputs"],
-                        ans: 2,
-                        explain: "The PVM is the runtime engine that executes Python's platform-independent compiled bytecode instructions."
-                    },
-                    {
-                        q: `Why is an interpreted language slower than a compiled one?`,
-                        opts: ["Compiled code must be translated line-by-line during runtime", "Interpreted code runs through PVM translation overhead at runtime", "Interpreted code has memory limits", "It is actually faster"],
-                        ans: 1,
-                        explain: "Interpreted languages translate instructions at runtime, adding minor overhead compared to compiled programs that execute binary files directly."
-                    }
-                ];
-                coding = {
-                    mission: `Create a variable named 'jelly' and store the string "Translation Jelly" inside it, then print its type using print(type(jelly)).`,
-                    solution: `jelly = "Translation Jelly"\nprint(type(jelly))`
-                };
-            } else if (level.id === 3) {
-                realWorld = `<strong>NASA Dashboard Separation:</strong> NASA separates frontend visuals from Python backends. The frontend displays live rocket telemetry to engineers, while Python servers process sensor readings, filter errors, and fetch historical databases.`;
-                mcqs = [
-                    {
-                        q: `Which programming languages are the core standard of frontend web interfaces?`,
-                        opts: ["Python, Java, and C++", "HTML, CSS, and JavaScript", "SQL, Go, and Ruby", "Python only"],
-                        ans: 1,
-                        explain: "Web browsers render HTML for layout structure, CSS for styling visual aesthetics, and JavaScript for client-side interactions."
-                    },
-                    {
-                        q: `Which error is raised if you try to add a string to an integer?`,
-                        opts: ["SyntaxError", "TypeError", "NameError", "ZeroDivisionError"],
-                        ans: 1,
-                        explain: "Adding incompatible types (like text and numbers) causes a TypeError because Python cannot execute '+' across those types without conversion."
-                    }
-                ];
-                coding = {
-                    mission: `Convert the number 100 into a string using the str() function, store it in 'string_value', and print it.`,
-                    solution: `string_value = str(100)\nprint(string_value)`
-                };
-            }
 
-            return { title, realWorld, mcqs, coding };
-        }
-
-        function showAnywhereDoorPracticeRoom() {
+        // ── ANYWHERE DOOR INTEGRATION ────────────────────────────
+        function showAnywhereDoorWarpPortal() {
             const overlayAd = document.getElementById('adPopup');
             const card = document.getElementById('adCard');
             if (!overlayAd || !card) return;
 
-            const data = generatePracticeRoomContent(level);
-
+            // Build warp portal content with doors for each section
             card.innerHTML = `
-                <div class="ad-header">
+                <div class="ad-header" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px dashed rgba(255, 64, 129, 0.3); padding-bottom: 12px; z-index: 1;">
                     <div class="ad-title-block">
-                        <div class="ad-title">🚪 Anywhere Door Practice Room</div>
-                        <div class="ad-sub">Level ${level.id} — ${data.title}</div>
+                        <div class="ad-title" style="color: #e91e63; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 22px; display: flex; align-items: center; gap: 8px;">
+                            <span>🚪</span> Anywhere Door Warp Portal
+                        </div>
+                        <div class="ad-sub" style="font-family: 'Quicksand', sans-serif; font-size: 13.5px; color: #880e4f; font-weight: 600; margin-top: 4px;">
+                            Teleport directly to any section of Level ${levelId}!
+                        </div>
                     </div>
-                    <button class="ad-close" id="adCloseBtn">
+                    <button class="ad-close" id="adCloseBtn" style="background: none; border: none; font-size: 20px; color: #e91e63; cursor: pointer; transition: transform 0.2s;">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-
-                <div class="ad-tabs">
-                    <button class="ad-tab-btn active" data-tab="example">
-                        <i class="fas fa-industry"></i> Real-World Example
-                    </button>
-                    <button class="ad-tab-btn" data-tab="mcqs">
-                        <i class="fas fa-check-double"></i> Practice MCQs
-                    </button>
-                    <button class="ad-tab-btn" data-tab="coding">
-                        <i class="fas fa-terminal"></i> Practice Coding
-                    </button>
-                </div>
-
-                <div class="ad-body">
-                    <!-- Example Tab -->
-                    <div class="ad-pane active" id="adPane-example">
-                        <div class="ad-example-card">
-                            <div class="ad-example-meta">
-                                <i class="fas fa-rocket"></i> Python in the Wild:
-                            </div>
-                            <p class="ad-example-body">${data.realWorld}</p>
-                        </div>
-                    </div>
-
-                    <!-- MCQs Tab -->
-                    <div class="ad-pane" id="adPane-mcqs">
-                        ${data.mcqs.map((q, qi) => `
-                            <div class="ad-mcq-block" data-qi="${qi}">
-                                <div class="ad-mcq-q">Q${qi + 1}: ${q.q}</div>
-                                <div class="ad-mcq-options">
-                                    ${q.opts.map((opt, oi) => `
-                                        <div class="ad-mcq-option" data-oi="${oi}">${opt}</div>
-                                    `).join('')}
+                <div class="ad-body" style="padding: 24px 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1;">
+                    <p style="font-family: 'Quicksand', sans-serif; font-size: 15px; font-weight: 600; color: #880e4f; text-align: center; margin-bottom: 28px; line-height: 1.5;">
+                        Open one of the Anywhere Doors to warp to that section instantly.<br>
+                        This will bypass section locks for the rest of your session on this level!
+                    </p>
+                    
+                    <div class="warp-doors-container" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; width: 100%;">
+                        ${sections.map((sec, idx) => {
+                            return `
+                                <div class="warp-door-item" data-index="${idx}" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; width: 120px; transition: transform 0.2s ease-in-out;">
+                                    <div class="pink-warp-door" style="width: 76px; height: 120px; background: #e91e63; border: 4.5px solid #c2185b; border-radius: 14px 14px 2px 2px; position: relative; box-shadow: 0 6px 15px rgba(194, 24, 91, 0.35); display: flex; align-items: center; justify-content: center; overflow: visible; perspective: 400px;">
+                                        <div class="pink-warp-door-knob" style="position: absolute; right: 10px; top: 55px; width: 9px; height: 9px; background: #ffeb3b; border-radius: 50%; border: 1px solid #f57f17; box-shadow: 0 1px 3px rgba(0,0,0,0.35); z-index: 10;"></div>
+                                        <div class="pink-warp-door-inner" style="width: 100%; height: 100%; background: #ff80ab; border-radius: 10px 10px 0 0; display: flex; align-items: center; justify-content: center; font-size: 26px; transition: transform 0.4s ease-in-out; transform-origin: left center; z-index: 5; box-shadow: inset 0 0 10px rgba(0,0,0,0.1);">
+                                            <span style="opacity: 0.9;">${sec === 'description' ? '📖' : sec === 'qna' ? '❓' : sec === 'test' ? '🧠' : '💻'}</span>
+                                        </div>
+                                    </div>
+                                    <div class="warp-door-label" style="margin-top: 12px; font-family: 'Nunito', sans-serif; font-size: 13.5px; font-weight: 800; text-align: center; color: #c2185b;">
+                                        ${STEP_LABELS[sec] || sec}
+                                    </div>
                                 </div>
-                                <div class="ad-mcq-feedback" id="adFeedback-${qi}" style="display:none;"></div>
-                            </div>
-                        `).join('')}
-                    </div>
-
-                    <!-- Coding Tab -->
-                    <div class="ad-pane" id="adPane-coding">
-                        <div class="ad-code-card">
-                            <p style="font-size:13.5px; font-weight:600; line-height:1.5; color:#5c0024;">
-                                📋 <strong>Mission:</strong> ${data.coding.mission}
-                            </p>
-                            <textarea class="ad-code-editor" id="adRetryEditor" rows="4" placeholder="# Write your practice Python code here..."></textarea>
-                            <button class="ad-verify-btn" id="btnVerifyAd">
-                                <i class="fas fa-play"></i> Run & Verify Code
-                            </button>
-                            <div class="ad-console" id="adConsole"></div>
-                        </div>
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             `;
 
-            const tabBtns = card.querySelectorAll('.ad-tab-btn');
-            const tabPanes = card.querySelectorAll('.ad-pane');
-
-            tabBtns.forEach(btn => {
-                btn.onclick = () => {
-                    playPocketSynth('click');
-                    const targetTab = btn.getAttribute('data-tab');
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    tabPanes.forEach(pane => pane.classList.remove('active'));
-                    card.querySelector(`#adPane-${targetTab}`).classList.add('active');
-                };
-            });
-
-            data.mcqs.forEach((q, qi) => {
-                const qBlock = card.querySelector(`.ad-mcq-block[data-qi="${qi}"]`);
-                const options = qBlock.querySelectorAll('.ad-mcq-option');
-                const feedbackEl = card.querySelector(`#adFeedback-${qi}`);
-
-                options.forEach(opt => {
-                    opt.onclick = () => {
-                        const oi = parseInt(opt.getAttribute('data-oi'));
-                        options.forEach(o => o.classList.remove('correct', 'incorrect'));
-                        
-                        if (oi === q.ans) {
-                            opt.classList.add('correct');
-                            feedbackEl.style.display = 'block';
-                            feedbackEl.style.color = '#2e7d32';
-                            feedbackEl.innerHTML = `✅ Correct! ${q.explain}`;
-                            playPocketSynth('click');
-                        } else {
-                            opt.classList.add('incorrect');
-                            feedbackEl.style.display = 'block';
-                            feedbackEl.style.color = '#c62828';
-                            feedbackEl.innerHTML = `❌ Incorrect. Try again! Hint: ${q.explain}`;
-                            playPocketSynth('error');
-                        }
-                    };
-                });
-            });
-
-            document.getElementById('btnVerifyAd').onclick = () => {
-                const code = document.getElementById('adRetryEditor').value.trim();
-                const solution = data.coding.solution.trim();
-                const consoleEl = document.getElementById('adConsole');
-                consoleEl.classList.add('show');
-
-                if (normalizeCode(code) === normalizeCode(solution)) {
-                    consoleEl.style.borderLeftColor = '#4caf50';
-                    consoleEl.style.background = '#e8f5e9';
-                    consoleEl.style.color = '#2e7d32';
-                    consoleEl.innerHTML = `
-                        <div class="ad-trophy">🏆</div>
-                        <strong>✅ Verified successfully!</strong><br/>
-                        Doraemon says: "Fantastic practice work! Your code executes cleanly. (This does not affect your official level score)."
-                    `;
-                    launchConfetti();
-                } else {
-                    consoleEl.style.borderLeftColor = '#ff4081';
-                    consoleEl.style.background = '#fdf2f5';
-                    consoleEl.style.color = '#c2185b';
-                    consoleEl.innerHTML = `
-                        <strong>❌ Verification failed!</strong><br/>
-                        Check your code parameters and try again. Make sure naming matches exactly!
-                    `;
-                    playPocketSynth('error');
-                }
-            };
-
+            // Setup DOM event listeners
             document.getElementById('adCloseBtn').onclick = () => {
                 overlayAd.classList.remove('visible');
             };
+
+            const doorItems = card.querySelectorAll('.warp-door-item');
+            doorItems.forEach(item => {
+                const idx = parseInt(item.getAttribute('data-index'));
+                const doorInner = item.querySelector('.pink-warp-door-inner');
+                
+                // 3D Swing Door Hover Effect
+                item.onmouseenter = () => {
+                    doorInner.style.transform = 'rotateY(-105deg)';
+                    item.style.transform = 'translateY(-4px) scale(1.05)';
+                    if (window.playPocketSynth) window.playPocketSynth('click');
+                };
+                item.onmouseleave = () => {
+                    doorInner.style.transform = '';
+                    item.style.transform = '';
+                };
+
+                // Teleport on click
+                item.onclick = () => {
+                    overlayAd.classList.remove('visible');
+                    
+                    // Unlock all sections
+                    anywhereDoorActive = true;
+                    sessionStorage.setItem('pybe_anywhere_door_active_' + levelId, 'true');
+                    
+                    // Flash pink warp portal screen overlay
+                    const warpFlash = document.createElement('div');
+                    warpFlash.style.cssText = 'position:fixed; inset:0; background:rgba(233, 30, 99, 0.45); z-index:99999999; pointer-events:none; opacity:1; transition:opacity 0.6s;';
+                    document.body.appendChild(warpFlash);
+                    setTimeout(() => { warpFlash.style.opacity = '0'; setTimeout(() => warpFlash.remove(), 600); }, 200);
+
+                    if (window.playPocketSynth) window.playPocketSynth('door');
+                    if (window.launchConfetti) window.launchConfetti();
+                    
+                    goToSection(idx);
+                    buildStepper(); // Redraw stepper with pink anywhere-door active styling!
+                    showToast(`Teleported to ${STEP_LABELS[sections[idx]]}! 🚪✨`);
+                };
+            });
 
             overlayAd.classList.add('visible');
             overlayAd.onclick = (e) => {
@@ -2472,9 +2359,11 @@
         }
 
         window.activateAnywhereDoor = function() {
-            showAnywhereDoorPracticeRoom();
+            showAnywhereDoorWarpPortal();
             return { success: true };
         };
+
+
 
         // ── TRANSLATION JELLY INTEGRATION ────────────────────────
         function getTranslationJellyContent(level, lang) {
