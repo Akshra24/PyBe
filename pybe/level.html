@@ -157,6 +157,31 @@
         let xpAwardedSections = new Set();
         let anywhereDoorActive = sessionStorage.getItem('pybe_anywhere_door_active_' + levelId) === 'true';
 
+        // ── Load saved answers if they exist on boot ──────────────────────
+        (function() {
+            const progress = window.PyBe ? window.PyBe.getProgress() : null;
+            const completed = progress && progress.completed && progress.completed.includes(levelId);
+            const saved = progress && progress.savedAnswers ? progress.savedAnswers[levelId] : null;
+            if (saved) {
+                if (saved.testSubmitted) {
+                    testAnswers = saved.testAnswers || {};
+                    shortAnswerTexts = saved.shortAnswerTexts || {};
+                    testSubmitted = true;
+                }
+            } else if (completed) {
+                const t = level.test;
+                if (t && t.questions) {
+                    t.questions.forEach((q, qi) => {
+                        testAnswers[qi] = q.answer;
+                        if (q.type === 'fill' || q.type === 'short') {
+                            shortAnswerTexts[qi] = q.answer || q.sampleAnswer || 'Completed';
+                        }
+                    });
+                    testSubmitted = true;
+                }
+            }
+        })();
+
         function updateAttemptsBadge() {
             const progress = window.PyBe ? window.PyBe.getProgress() : {};
             const attempts = (progress.attempts && progress.attempts[levelId]) || 0;
@@ -178,12 +203,11 @@
                     t.questions.forEach((q, i) => {
                         let correct = false;
                         if (q.type === 'fill') {
-                            const el = document.getElementById('fill-' + i);
-                            const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
+                            const val = (shortAnswerTexts[i] || '').trim().toLowerCase().replace(/"/g, '');
                             correct = val === q.answer.toLowerCase();
                         } else if (q.type === 'short') {
-                            const el = document.getElementById('short-' + i);
-                            correct = (el ? el.value.trim() : '').length > 15;
+                            const val = (shortAnswerTexts[i] || '').trim();
+                            correct = val.length > 15;
                         } else if (q.type === 'tf') {
                             correct = String(testAnswers[i]) === String(q.answer);
                         } else {
@@ -192,7 +216,7 @@
                         if (correct) score++;
                     });
                     const pct = Math.round((score / t.questions.length) * 100);
-                    return pct >= 60;
+                    return pct >= 75;
                 }
                 return true;
             }
@@ -312,13 +336,20 @@
                             return;
                         }
                         submitTest();
+                        if (isSectionCleared(currentSection)) {
+                            if (currentSection < sections.length - 1) {
+                                goToSection(currentSection + 1);
+                            } else {
+                                finishLevel();
+                            }
+                        }
                         return;
                     } else {
-                        showToast('Score is below 60%. Please retry the test and pass to proceed!');
+                        showToast('Score is below 75%. Please retry the test and pass to proceed!');
                         return;
                     }
                 } else if (sec === 'coding') {
-                    showToast('Please submit the correct coding solution first!');
+                    showToast('Please submit the coding solution first (requires at least 75% accuracy)!');
                     return;
                 }
                 return;
@@ -430,29 +461,45 @@
                 const card = document.querySelector(`.question-card[data-qi="${qi}"]`);
                 if (card) {
                     card.classList.add(correct ? 'correct' : 'incorrect');
-                    card.querySelectorAll('input, textarea').forEach(el => el.disabled = true);
+                    
+                    if (correct) {
+                        card.querySelectorAll('input, textarea').forEach(el => el.disabled = true);
+                    } else {
+                        card.querySelectorAll('input, textarea').forEach(el => el.disabled = false);
+                    }
                     
                     if (q.type === 'mcq') {
                         card.querySelectorAll('.q-option').forEach(l => {
-                            l.style.pointerEvents = 'none';
-                            l.classList.remove('correct', 'incorrect');
                             const oi = parseInt(l.dataset.oi);
-                            if (oi === q.answer) l.classList.add('correct');
-                            if (parseInt(userAns) === oi && oi !== q.answer) l.classList.add('incorrect');
+                            if (correct) {
+                                l.style.pointerEvents = 'none';
+                                l.classList.remove('correct', 'incorrect');
+                                if (oi === q.answer) l.classList.add('correct');
+                            } else {
+                                l.style.pointerEvents = '';
+                                l.classList.remove('correct', 'incorrect');
+                                if (parseInt(userAns) === oi) l.classList.add('incorrect');
+                            }
                         });
                     } else if (q.type === 'tf') {
                         card.querySelectorAll('.q-tf-btn').forEach(l => {
-                            l.style.pointerEvents = 'none';
                             const v = l.querySelector('input').value;
-                            if (v === q.answer) l.classList.add('correct');
-                            if (v === userAns && v !== q.answer) l.classList.add('incorrect');
+                            if (correct) {
+                                l.style.pointerEvents = 'none';
+                                l.classList.remove('correct', 'incorrect');
+                                if (v === q.answer) l.classList.add('correct');
+                            } else {
+                                l.style.pointerEvents = '';
+                                l.classList.remove('correct', 'incorrect');
+                                if (v === userAns) l.classList.add('incorrect');
+                            }
                         });
                     }
                 }
             });
 
             const pct = Math.round((score / total) * 100);
-            const passed = pct >= 60;
+            const passed = pct >= 75;
             
             document.getElementById('testSubmitRow').style.display = 'none';
             const resultEl = document.getElementById('testResult');
@@ -474,6 +521,10 @@
                         delete progress.savedAnswers[levelId];
                         window.PyBe.saveProgress(progress);
                     }
+                    if (window.PyBe.recordAttempt) {
+                        window.PyBe.recordAttempt(levelId);
+                    }
+                    updateAttemptsBadge();
                 }
                 renderTest();
             });
@@ -489,25 +540,21 @@
 
             // Load saved answers if they exist (even if not completed) or if completed
             const saved = progress && progress.savedAnswers ? progress.savedAnswers[level.id] : null;
-            if (saved && saved.testSubmitted && !testSubmitted) {
+            if (saved) {
                 testAnswers = saved.testAnswers || {};
                 shortAnswerTexts = saved.shortAnswerTexts || {};
-                testSubmitted = true;
-            } else if (completed && !testSubmitted) {
-                if (saved) {
-                    testAnswers = saved.testAnswers || {};
-                    shortAnswerTexts = saved.shortAnswerTexts || {};
-                    testSubmitted = true;
-                } else {
-                    // Back-compat auto-fill
-                    t.questions.forEach((q, qi) => {
-                        testAnswers[qi] = q.answer;
-                        if (q.type === 'fill' || q.type === 'short') {
-                            shortAnswerTexts[qi] = q.answer || q.sampleAnswer || 'Completed';
-                        }
-                    });
+                if (saved.testSubmitted && !testSubmitted) {
                     testSubmitted = true;
                 }
+            } else if (completed && !testSubmitted) {
+                // Back-compat auto-fill
+                t.questions.forEach((q, qi) => {
+                    testAnswers[qi] = q.answer;
+                    if (q.type === 'fill' || q.type === 'short') {
+                        shortAnswerTexts[qi] = q.answer || q.sampleAnswer || 'Completed';
+                    }
+                });
+                testSubmitted = true;
             }
 
             sectionContent.innerHTML = `
@@ -528,7 +575,7 @@
                     <div class="test-result" id="testResult" style="display:none;"></div>
                     <div class="test-submit-row" id="testSubmitRow">
                         <button class="btn btn-submit" id="btnSubmitTest">
-                            <i class="fas fa-check-circle"></i> Submit Answers
+                            <i class="fas fa-check-circle"></i> ${sections.indexOf('test') === sections.length - 1 ? 'Submit Answers' : 'Check Score'}
                         </button>
                         <button class="btn btn-retry" id="btnRetryTest" style="display:none; background:#7f8c8d; border-color:#7f8c8d; margin-left: 10px;">
                             <i class="fas fa-redo"></i> Retry Test
@@ -552,11 +599,78 @@
                 testAnswers    = {};
                 shortAnswerTexts = {};
                 testSubmitted  = false;
+                if (window.PyBe && window.PyBe.recordAttempt) {
+                    window.PyBe.recordAttempt(levelId);
+                    updateAttemptsBadge();
+                }
                 renderTest();
             });
 
             if (testSubmitted) {
                 showSubmittedTestState();
+            } else {
+                // If testSubmitted is false, but we have saved answers, lock only correct ones and highlight incorrect choices in red
+                t.questions.forEach((q, qi) => {
+                    const userAns = testAnswers[qi];
+                    if (userAns !== undefined || shortAnswerTexts[qi] !== undefined) {
+                        let correct = false;
+                        if (q.type === 'fill') {
+                            const val = (shortAnswerTexts[qi] || '').trim().toLowerCase().replace(/"/g, '');
+                            correct = val === q.answer.toLowerCase();
+                        } else if (q.type === 'short') {
+                            const val = (shortAnswerTexts[qi] || '').trim();
+                            correct = val.length > 15;
+                        } else if (q.type === 'tf') {
+                            correct = String(userAns) === String(q.answer);
+                        } else {
+                            correct = parseInt(userAns) === q.answer;
+                        }
+
+                        const card = document.querySelector(`.question-card[data-qi="${qi}"]`);
+                        if (card) {
+                            card.classList.add(correct ? 'correct' : 'incorrect');
+                            if (correct) {
+                                card.querySelectorAll('input, textarea').forEach(el => el.disabled = true);
+                                card.style.pointerEvents = 'none';
+                                if (q.type === 'mcq') {
+                                    card.querySelectorAll('.q-option').forEach(l => {
+                                        const oi = parseInt(l.dataset.oi);
+                                        if (oi === q.answer) {
+                                            l.classList.add('correct');
+                                            l.style.pointerEvents = 'none';
+                                        }
+                                    });
+                                } else if (q.type === 'tf') {
+                                    card.querySelectorAll('.q-tf-btn').forEach(l => {
+                                        const v = l.querySelector('input').value;
+                                        if (v === q.answer) {
+                                            l.classList.add('correct');
+                                            l.style.pointerEvents = 'none';
+                                        }
+                                    });
+                                }
+                            } else {
+                                card.querySelectorAll('input, textarea').forEach(el => el.disabled = false);
+                                card.style.pointerEvents = '';
+                                if (q.type === 'mcq') {
+                                    card.querySelectorAll('.q-option').forEach(l => {
+                                        const oi = parseInt(l.dataset.oi);
+                                        if (parseInt(userAns) === oi) {
+                                            l.classList.add('incorrect');
+                                        }
+                                    });
+                                } else if (q.type === 'tf') {
+                                    card.querySelectorAll('.q-tf-btn').forEach(l => {
+                                        const v = l.querySelector('input').value;
+                                        if (v === userAns) {
+                                            l.classList.add('incorrect');
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    }
+                });
             }
 
             if (isDev && document.getElementById('btnDevAutoFillTest')) {
@@ -668,10 +782,6 @@
 
         function submitTest() {
             if (testSubmitted) return;
-            if (window.PyBe && window.PyBe.recordAttempt) {
-                window.PyBe.recordAttempt(levelId);
-                updateAttemptsBadge();
-            }
             const t = level.test;
             let score   = 0;
             let total   = t.questions.length;
@@ -759,7 +869,7 @@
                         accuracy: pct,
                         incorrectAnswers: incorrectList,
                         codeSubmission: "",
-                        strengths: pct >= 60 ? [level.concept || "General Python"] : [],
+                        strengths: pct >= 75 ? [level.concept || "General Python"] : [],
                         weaknesses: incorrectList.length > 0 ? [level.concept || "General Python"] : []
                     });
                 }
@@ -768,7 +878,7 @@
 
             document.getElementById('testSubmitRow').style.display = 'none';
             const resultEl = document.getElementById('testResult');
-            const passed = pct >= 60;
+            const passed = pct >= 75;
 
             if (window.PyBe) {
                 const progress = window.PyBe.getProgress();
@@ -846,7 +956,10 @@
                 return;
             }
             const hasScenario = !!level.scenario;
-            const starterCode = ''; // No comments or pre-filled code in the editor — completely empty!
+            const progress = window.PyBe ? window.PyBe.getProgress() : null;
+            const saved = progress && progress.savedAnswers ? progress.savedAnswers[levelId] : null;
+            const savedCode = saved ? (saved.submittedCode || '') : '';
+            const starterCode = savedCode || '';
             const isDev = localStorage.getItem('pybe_dev_mode') === 'true';
 
             sectionContent.innerHTML = `
@@ -894,7 +1007,9 @@
                         ` : ''}
                     </div>
 
-                    <div class="console-output" id="consoleOutput"></div>
+                    <div class="console-output ${codingSubmitted ? 'show' : ''}" id="consoleOutput">
+                        ${codingSubmitted ? `<span class="console-success">✅ Code submission successful!\n🤖 Doraemon says: "Excellent job! Click the Finish button in the bottom navigation to complete the level."</span>` : ''}
+                    </div>
 
                     <div class="hint-bubble" id="hintBubble">
                         <div class="hint-icon">🤖</div>
@@ -923,8 +1038,22 @@
             document.getElementById('btnRun').addEventListener('click', () => {
                 const code = document.getElementById('codeEditor').value;
                 const output = simulateRun(code);
+                const expectedOutput = simulateRun(level.solution || '');
+                
+                const cleanOutput = output.replace(/\s+/g, '').replace(/['"]/g, '"');
+                const cleanExpected = expectedOutput.replace(/\s+/g, '').replace(/['"]/g, '"');
+                const isCorrect = cleanOutput === cleanExpected;
+                
                 const consoleEl = document.getElementById('consoleOutput');
-                consoleEl.innerHTML = output;
+                consoleEl.innerHTML = `
+                    <div style="font-family: 'Fira Code', monospace; line-height: 1.6;">
+                        <strong>Your Output:</strong>
+                        <pre style="background: rgba(0,0,0,0.2); padding: 8px; border-radius: 4px; margin: 4px 0;">${output}</pre>
+                        <div style="margin-top: 8px; font-weight: bold; color: ${isCorrect ? '#4CAF50' : '#F44336'};">
+                            ${isCorrect ? '✅ Output is correct!' : '❌ Output is incorrect.'}
+                        </div>
+                    </div>
+                `;
                 consoleEl.classList.add('show');
             });
 
@@ -938,11 +1067,24 @@
                     window.energyCapsuleActive = false;
                     const btn = document.getElementById('btnSubmitCode');
                     if (btn) btn.classList.remove('capsule-active');
-                } else {
-                    if (window.PyBe && window.PyBe.recordAttempt) {
-                        window.PyBe.recordAttempt(levelId);
-                        updateAttemptsBadge();
+                }
+
+                // Split solution and user code into non-empty trimmed lines
+                const solLines = solution.split('\n').map(l => l.trim()).filter(l => l !== '');
+                const userLines = code.split('\n').map(l => l.trim()).filter(l => l !== '');
+
+                const total = Math.max(solLines.length, userLines.length);
+                let pct = 0;
+                
+                if (total > 0) {
+                    const normalize = line => line.replace(/\s+/g, '').replace(/['"]/g, '"');
+                    let correctCount = 0;
+                    for (let i = 0; i < Math.min(solLines.length, userLines.length); i++) {
+                        if (normalize(userLines[i]) === normalize(solLines[i])) {
+                            correctCount++;
+                        }
                     }
+                    pct = Math.round((correctCount / total) * 100);
                 }
 
                 // Log coding submission to Time TV History
@@ -954,7 +1096,7 @@
                     if (!Array.isArray(history)) history = [];
 
                     let existing = history.find(h => h.levelId === levelId);
-                    const isSuccess = normalizeCode(code) === normalizeCode(solution);
+                    const isSuccess = pct >= 75;
                     
                     if (existing) {
                         if (!capsuleActive) existing.attemptsCount++;
@@ -970,7 +1112,7 @@
                             levelId: levelId,
                             title: level.title || `Level ${levelId}`,
                             attemptsCount: capsuleActive ? 0 : 1,
-                            accuracy: isSuccess ? 100 : 0,
+                            accuracy: pct,
                             incorrectAnswers: isSuccess ? [] : ["Coding Submission Error"],
                             codeSubmission: code,
                             strengths: isSuccess ? ["Coding Execution"] : [],
@@ -980,25 +1122,41 @@
                     localStorage.setItem('pybe_time_tv_history', JSON.stringify(history));
                 } catch(e) { console.error("Error saving Time TV history", e); }
 
-                if (normalizeCode(code) === normalizeCode(solution)) {
+                if (pct >= 75) {
                     codingSubmitted = true;
                     if (!xpAwardedSections.has('coding')) {
                         xpAwardedSections.add('coding');
                         if (window.awardXp) window.awardXp(80, "Coding Round Complete! 💻");
                     }
                     const consoleEl = document.getElementById('consoleOutput');
-                    consoleEl.innerHTML = `<span class="console-success">✅ Code is correct!\n🤖 Doraemon says: "Excellent job! Click the Finish button in the bottom navigation to complete the level."</span>`;
+                    consoleEl.innerHTML = `<span class="console-success">✅ Code submission successful!\nAccuracy: <strong>${pct}%</strong> (Cleared requirement of 75%)\n\n🤖 Doraemon says: "Excellent job! Click the Finish button in the bottom navigation to complete the level."</span>`;
                     consoleEl.classList.add('show');
                     if (capsuleActive) showToast("💊 Energy Capsule verified correct code! Shielded attempt.");
                 } else {
                     codingSubmitted = false;
+                    if (!capsuleActive) {
+                        if (window.PyBe && window.PyBe.recordAttempt) {
+                            window.PyBe.recordAttempt(levelId);
+                            updateAttemptsBadge();
+                        }
+                    }
                     const editor = document.getElementById('codeEditor');
                     editor.classList.add('shake');
                     setTimeout(() => editor.classList.remove('shake'), 500);
                     const consoleEl = document.getElementById('consoleOutput');
-                    consoleEl.innerHTML = `<span class="console-error">❌ Not quite right!\n🤖 Doraemon says: "${level.wrongHint || 'Check your code and try again.'}"</span>`;
+                    consoleEl.innerHTML = `<span class="console-error">❌ Code submission failed!\nAccuracy: <strong>${pct}%</strong> (Below the 75% requirement)\n\n🤖 Doraemon says: "${level.wrongHint || 'Check your code structure and try again.'}"</span>`;
                     consoleEl.classList.add('show');
                     if (capsuleActive) showToast("💊 Energy Capsule consumed! This mistake was shielded.");
+                }
+
+                // Save code and status to progress answers
+                if (window.PyBe) {
+                    const progress = window.PyBe.getProgress();
+                    progress.savedAnswers = progress.savedAnswers || {};
+                    progress.savedAnswers[levelId] = progress.savedAnswers[levelId] || {};
+                    progress.savedAnswers[levelId].submittedCode = code;
+                    progress.savedAnswers[levelId].codingSubmitted = codingSubmitted;
+                    window.PyBe.saveProgress(progress);
                 }
             });
         }
@@ -1171,7 +1329,7 @@
                     if (sec === 'test') {
                         showToast('Please submit and pass the test first!');
                     } else if (sec === 'coding') {
-                        showToast('Please submit the correct coding solution first!');
+                        showToast('Please submit the coding solution first (requires at least 75% accuracy)!');
                     }
                     return;
                 }
@@ -1994,18 +2152,16 @@
         window.activateTimeCloth = function() {
             const t = level.test;
             let hasTestMistakes = false;
-            let incorrectCount = 0;
 
             if (testSubmitted && t && t.questions) {
                 t.questions.forEach((q, qi) => {
                     let correct = false;
                     if (q.type === 'fill') {
-                        const el = document.getElementById('fill-' + qi);
-                        const val = (el ? el.value.trim().toLowerCase() : '').replace(/"/g, '');
+                        const val = (shortAnswerTexts[qi] || '').trim().toLowerCase().replace(/"/g, '');
                         correct = val === q.answer.toLowerCase();
                     } else if (q.type === 'short') {
-                        const el = document.getElementById('short-' + qi);
-                        correct = (el ? el.value.trim() : '').length > 15;
+                        const val = (shortAnswerTexts[qi] || '').trim();
+                        correct = val.length > 15;
                     } else if (q.type === 'tf') {
                         correct = String(testAnswers[qi]) === String(q.answer);
                     } else {
@@ -2013,32 +2169,19 @@
                     }
                     if (!correct) {
                         hasTestMistakes = true;
-                        incorrectCount++;
                     }
                 });
             }
 
-            const codeEditor = document.getElementById('codeEditor');
-            let hasCodingMistakes = false;
-            if (codeEditor && !codingSubmitted) {
-                const progress = window.PyBe ? window.PyBe.getProgress() : {};
-                const attempts = (progress.attempts && progress.attempts[levelId]) || 0;
-                if (attempts > 0) {
-                    hasCodingMistakes = true;
-                }
-            }
-
-            if (!hasTestMistakes && !hasCodingMistakes) {
-                return { success: false, reason: "No mistakes found to rewind yet! Submit incorrect answers or code first. ⏳" };
+            if (!hasTestMistakes) {
+                return { success: false, reason: "No test mistakes found to rewind! Submit incorrect answers first. ⏳" };
             }
 
             // Consume Time Cloth
             sessionStorage.setItem('pybe_time_cloth_used_' + levelId, 'true');
-
-            // Play pocket sound
             if (window.playPocketSynth) window.playPocketSynth('time_cloth');
 
-            // 1. Decrement attempts in progress state
+            // Decrement attempts in progress state
             if (window.PyBe) {
                 const progress = window.PyBe.getProgress();
                 if (progress.attempts && progress.attempts[levelId]) {
@@ -2048,214 +2191,77 @@
                 }
             }
 
-            // 2. Decrement attempts in Time TV history
-            try {
-                let history = JSON.parse(localStorage.getItem('pybe_time_tv_history') || '[]');
-                let existing = history.find(h => h.levelId === levelId);
-                if (existing) {
-                    existing.attemptsCount = Math.max(0, existing.attemptsCount - 1);
-                    localStorage.setItem('pybe_time_tv_history', JSON.stringify(history));
-                }
-            } catch(e) { console.error("Error updating Time TV history", e); }
+            // Reset test submission state
+            testSubmitted = false;
 
-            // Revert action based on where the mistake is
-            if (hasTestMistakes) {
-                // Reset test submission state
-                testSubmitted = false;
-
-                // Hide results card
-                const resultEl = document.getElementById('testResult');
-                if (resultEl) resultEl.style.display = 'none';
-
-                // Show submit row and show the Retry Test button inside it
-                const submitRowEl = document.getElementById('testSubmitRow');
-                if (submitRowEl) submitRowEl.style.display = 'flex';
-                const retryBtnEl = document.getElementById('btnRetryTest');
-                if (retryBtnEl) retryBtnEl.style.display = 'inline-flex';
-
-                // Selectively lock correct and unlock incorrect cards
-                t.questions.forEach((q, qi) => {
-                    const card = document.querySelector(`.question-card[data-qi="${qi}"]`);
-                    if (card) {
-                        const isCorrect = !card.classList.contains('incorrect');
-                        if (isCorrect) {
-                            // Lock correct card inputs, disable pointer events and reduce opacity
-                            card.style.pointerEvents = 'none';
-                            card.style.opacity = '0.75';
-                            card.querySelectorAll('input, textarea').forEach(inp => {
-                                inp.disabled = true;
-                            });
-                        } else {
-                            // Unlock incorrect card inputs for retry, restore opacity and pointer events
-                            card.style.pointerEvents = '';
-                            card.style.opacity = '';
-                            card.querySelectorAll('input, textarea').forEach(inp => {
-                                inp.disabled = false;
-                            });
-                        }
-                    }
-                });
-
-                showToast(`⏳ Time Cloth active! ${incorrectCount} incorrect questions are unlocked. Change your answers and submit again!`);
-            } else {
-                showToast("⏳ Time Cloth active! Reverted your failed coding attempt. Edit your code and submit again!");
+            // Update localStorage with reset test state (leaving wrong answers in place)
+            if (window.PyBe) {
+                const progress = window.PyBe.getProgress();
+                progress.savedAnswers = progress.savedAnswers || {};
+                progress.savedAnswers[levelId] = {
+                    testAnswers: testAnswers,
+                    shortAnswerTexts: shortAnswerTexts,
+                    testSubmitted: false
+                };
+                window.PyBe.saveProgress(progress);
             }
 
+            // Switch back to Test section and render the unlocked questions with wrong answers selected
+            goToSection(sections.indexOf('test'));
+
+            showToast(`⏳ Time Cloth active! Incorrect questions are unlocked. Choose your answers again!`);
             return { success: true };
-        }
+        };
 
         // ── SEARCH LIGHT INTEGRATION ────────────────────────────
-        function highlightErrorLine(lineIndex) {
-            const editor = document.getElementById('codeEditor');
-            if (!editor) return;
-            
-            const existing = document.getElementById('searchlightBeam');
-            if (existing) existing.remove();
-            
-            const beam = document.createElement('div');
-            beam.id = 'searchlightBeam';
-            
-            const lineHeight = 22;
-            const topOffset = (lineIndex * lineHeight) + 14;
-            
-            beam.style.cssText = `
-                position: absolute;
-                top: ${topOffset}px;
-                left: 0;
-                right: 0;
-                height: 22px;
-                background: rgba(255, 235, 59, 0.18);
-                border-left: 4px solid #ffeb3b;
-                box-shadow: 0 0 10px rgba(255, 235, 59, 0.3);
-                pointer-events: none;
-                z-index: 5;
-                animation: beamPulse 1.2s infinite alternate;
-            `;
-            
-            const parent = editor.parentElement;
-            if (parent) {
-                parent.style.position = 'relative';
-                parent.appendChild(beam);
-            }
-            
-            editor.addEventListener('input', function removeBeam() {
-                const b = document.getElementById('searchlightBeam');
-                if (b) b.remove();
-                editor.removeEventListener('input', removeBeam);
-            });
-        }
-
-        function analyzeCodeForSearchLight(code, solution, level) {
-            const userLines = code.split('\n');
-            const solLines = solution.split('\n');
-            
-            for (let i = 0; i < userLines.length; i++) {
-                const line = userLines[i].trim();
-                
-                if (/\bPrint\s*\(/.test(userLines[i])) {
-                    return { lineIndex: i, type: "Syntax Error", desc: "Python is case-sensitive! You wrote 'Print' with a capital P instead of 'print'." };
-                }
-                if (/\bprint\s+"/.test(userLines[i]) || /\bprint\s+'/.test(userLines[i])) {
-                    return { lineIndex: i, type: "Syntax Error", desc: "In Python 3, print is a function and requires parentheses, e.g., print('hello')." };
-                }
-                
-                let openParens = (line.match(/\(/g) || []).length;
-                let closeParens = (line.match(/\)/g) || []).length;
-                if (openParens !== closeParens) {
-                    return { lineIndex: i, type: "Syntax Error", desc: "Mismatched parentheses. Make sure every opening '(' has a matching closing ')'." };
-                }
-                
-                let doubleQuotes = (line.match(/"/g) || []).length;
-                let singleQuotes = (line.match(/'/g) || []).length;
-                if (doubleQuotes % 2 !== 0 || singleQuotes % 2 !== 0) {
-                    return { lineIndex: i, type: "Syntax Error", desc: "Unmatched quotation marks. Make sure quotes are balanced and match each other." };
-                }
-            }
-
-            const definedVariables = [];
-            for (let i = 0; i < userLines.length; i++) {
-                const line = userLines[i].trim();
-                
-                const assignMatch = line.match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*=/);
-                if (assignMatch) {
-                    definedVariables.push(assignMatch[1]);
-                }
-                
-                const printMatch = line.match(/\bprint\s*\(\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\)/);
-                if (printMatch) {
-                    const varName = printMatch[1];
-                    if (!definedVariables.includes(varName) && varName !== "True" && varName !== "False") {
-                        return { lineIndex: i, type: "Runtime Error (NameError)", desc: `Referencing an undefined variable: '${varName}'. Check spelling and initialization.` };
-                    }
-                }
-
-                if (line.includes('+') && line.includes('print')) {
-                    const strings = line.match(/(["'])(?:(?=(\\?))\2.)*?\1/g) || [];
-                    const hasPlus = line.includes('+');
-                    if (strings.length > 0 && hasPlus) {
-                        if (line.includes(' + 5') || line.includes(' + score') || line.includes(' + count')) {
-                            if (!line.includes('str(')) {
-                                return { lineIndex: i, type: "Runtime Error (TypeError)", desc: "Cannot concatenate string and integer directly. Wrap the number in str(), e.g. str(5)." };
-                            }
-                        }
-                    }
-                }
-            }
-
-            for (let i = 0; i < userLines.length; i++) {
-                const uLine = userLines[i].trim();
-                if (i >= solLines.length) {
-                    return { lineIndex: i, type: "Logical Error", desc: "Extra line detected. Review your solution structure." };
-                }
-                const sLine = solLines[i].trim();
-                
-                if (normalizeCode(uLine) !== normalizeCode(sLine)) {
-                    return { lineIndex: i, type: "Logical Error", desc: "Your logic or value assignment does not match what the level requires." };
-                }
-            }
-            
-            if (userLines.length < solLines.length) {
-                return { lineIndex: userLines.length - 1, type: "Logical Error", desc: "Incomplete code. You are missing one or more steps to solve the level." };
-            }
-
-            return null;
-        }
-
         window.activateSearchLight = function() {
             const editor = document.getElementById('codeEditor');
             if (!editor) {
                 return { success: false, reason: "Please navigate to the Coding tab first! 🔦" };
             }
             
-            const code = editor.value.trim();
-            if (code.length === 0) {
-                return { success: false, reason: "Your editor is empty! Write some code first so we can search for bugs. 🔦" };
-            }
-            
             const solution = (level.solution || '').trim();
-            const analysis = analyzeCodeForSearchLight(editor.value, solution, level);
-            
-            if (!analysis) {
-                return { success: false, reason: "Search Light scanned your code and found NO bugs! Excellent work! 🔦" };
+            if (!solution) {
+                return { success: false, reason: "This level does not have a coding solution! 🔦" };
             }
             
-            highlightErrorLine(analysis.lineIndex);
+            const solLines = solution.split('\n');
+            const userLines = editor.value.split('\n');
             
-            const lines = editor.value.split('\n');
-            let charIndex = 0;
-            for (let i = 0; i < analysis.lineIndex; i++) {
-                charIndex += lines[i].length + 1;
+            // Normalize function to compare lines ignoring spaces and quotes
+            const normalize = line => line.trim().replace(/\s+/g, '').replace(/['"]/g, '"');
+            
+            // Find how many lines the user has correctly written so far
+            let trimmedUserLines = [...userLines];
+            while (trimmedUserLines.length > 0 && trimmedUserLines[trimmedUserLines.length - 1].trim() === "") {
+                trimmedUserLines.pop();
             }
+            
+            let matchCount = 0;
+            while (matchCount < solLines.length && matchCount < trimmedUserLines.length) {
+                if (normalize(trimmedUserLines[matchCount]) === normalize(solLines[matchCount])) {
+                    matchCount++;
+                } else {
+                    break;
+                }
+            }
+            
+            if (matchCount >= solLines.length) {
+                return { success: false, reason: "Your code is already complete! 🔦" };
+            }
+            
+            // Write the next 30% of the solution lines starting from matchCount
+            const linesToWriteCount = Math.max(1, Math.round(solLines.length * 0.3));
+            const startLineIndex = matchCount;
+            const linesToWrite = solLines.slice(startLineIndex, startLineIndex + linesToWriteCount);
+            
+            const matchedCodePart = solLines.slice(0, startLineIndex);
+            const finalLines = [...matchedCodePart, ...linesToWrite];
+            
+            editor.value = finalLines.join('\n');
+            editor.dispatchEvent(new Event('input'));
             editor.focus();
-            editor.setSelectionRange(charIndex, charIndex + lines[analysis.lineIndex].length);
             
-            const consoleEl = document.getElementById('consoleOutput');
-            if (consoleEl) {
-                consoleEl.innerHTML = `<span class="console-error" style="border-left-color: #ffeb3b;">🔦 Search Light detected an error!\n<strong>Type:</strong> ${analysis.type}\n<strong>Line ${analysis.lineIndex + 1}:</strong> ${analysis.desc}</span>`;
-                consoleEl.classList.add('show');
-            }
-            
-            showToast(`🔦 Search Light found a ${analysis.type} on Line ${analysis.lineIndex + 1}!`);
             return { success: true };
         };
 

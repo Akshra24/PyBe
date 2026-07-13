@@ -9,8 +9,17 @@ function getProgress() {
     try {
         const data = localStorage.getItem(STORAGE_KEY);
         let progress;
+        let needsSave = false;
         if (!data) {
-            progress = { currentLevel: 0, completed: [], lastPlayed: null, attempts: {}, streak: 0, unlockedGadgets: [] };
+            progress = {
+                currentLevel: 9,
+                completed: [1, 2, 3, 4, 5, 6, 7, 8],
+                lastPlayed: null,
+                attempts: { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1 },
+                streak: 1,
+                unlockedGadgets: []
+            };
+            needsSave = true;
         } else {
             progress = JSON.parse(data);
             progress.attempts = progress.attempts || {};
@@ -24,16 +33,44 @@ function getProgress() {
             progress.completed = Array.from({length: 100}, (_, i) => i + 1);
             if (!progress.streak) progress.streak = 5;
         } else {
+            // Ensure levels 1-8 are unlocked/completed for development access
+            for (let i = 1; i <= 8; i++) {
+                if (!progress.completed.includes(i)) {
+                    progress.completed.push(i);
+                    needsSave = true;
+                }
+                if (!progress.attempts[i]) {
+                    progress.attempts[i] = 1;
+                    needsSave = true;
+                }
+            }
+            if (progress.currentLevel < 9) {
+                progress.currentLevel = 9;
+                needsSave = true;
+            }
+
             // Reset currentLevel if it was artificially set to 100 in the past, or if completed is empty
             const expectedLevel = (progress.completed && progress.completed.length > 0) ? progress.completed.length + 1 : 1;
             if (progress.currentLevel > expectedLevel) {
                 progress.currentLevel = expectedLevel;
+                needsSave = true;
             }
+        }
+
+        if (needsSave) {
+            saveProgress(progress);
         }
 
         return progress;
     } catch (e) {
-        return { currentLevel: 1, completed: [], lastPlayed: null, attempts: {}, streak: 0, unlockedGadgets: [] };
+        return {
+            currentLevel: 9,
+            completed: [1, 2, 3, 4, 5, 6, 7, 8],
+            lastPlayed: null,
+            attempts: { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1 },
+            streak: 1,
+            unlockedGadgets: []
+        };
     }
 }
 

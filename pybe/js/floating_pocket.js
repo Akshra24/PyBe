@@ -12,7 +12,7 @@
         { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks stepper shortcuts. (Fires cloud fly-by sweep!)", maxUses: 999, cooldown: 3, milestone: 0 },
         { id: 20,  name: "Time Cloth", icon: "⏳", desc: "Wraps mistakes to reverse time! Retry one incorrect test question or code submission per level, restoring lost marks and explaining the mistake. (Once per level)", maxUses: 999, cooldown: 3, milestone: 0 },
         { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space! Bypasses section locks to let you jump directly to any step (Description, Q&A, Test, Coding) inside a level. (Flashes pink warp portal!)", maxUses: 999, cooldown: 3, milestone: 0 },
-        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Shines a light on coding bugs! Identifies the error type (syntax, runtime, or logical) and highlights the line containing the error in your editor. (Once per activation)", maxUses: 999, cooldown: 3, milestone: 0 },
+        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Illuminates the solution! Writes the first 30% (3:10 ratio) lines of the correct code directly in your editor to get you unstuck. (Once per activation)", maxUses: 999, cooldown: 3, milestone: 0 },
         { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structure reference sheets. (Spawns glowing memory slices!)", maxUses: 999, cooldown: 3, milestone: 0 },
         { id: 25,  name: "Translation Jelly", icon: "🍮", desc: "Instantly translates lessons into simple English, Hindi, Hinglish, or beginner explanations with analogies and breakdowns. (Unlocks after Level 10)", maxUses: 999, cooldown: 3, milestone: 10 },
         { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loop lines. (Shrinks page layout size!)", maxUses: 999, cooldown: 3, milestone: 20 },
@@ -1990,8 +1990,6 @@
                             if (pocketState.uses[40] < 3) pocketState.uses[40]++;
                             savePocketState();
                             rebuildInventoryGrid();
-                        } else {
-                            if (window.unlockAchievement) window.unlockAchievement('bug_hunter');
                         }
                     } else {
                         showPocketToast("Open a level and activate Search Light to scan your editor! 🔦");

@@ -174,6 +174,10 @@
     }
 
     function triggerLevelUpModal(level) {
+        if (window.location.pathname.includes('level.html')) {
+            console.log(`Leveled up to ${level}! (Modal suppressed during gameplay)`);
+            return;
+        }
         let overlay = document.getElementById('levelUpOverlay');
         if (!overlay) {
             overlay = document.createElement('div');
@@ -233,7 +237,7 @@
         fast_learner: { title: "Fast Learner ⚡", desc: "Reach active streak of 3 days" },
         diligence: { title: "Diligence 🔥", desc: "Reach active streak of 7 days" },
         time_lord: { title: "Time Lord ⏳", desc: "Activate Time Cloth to reverse a mistake" },
-        bug_hunter: { title: "Bug Hunter 🔦", desc: "Activate Search Light to spot a bug" },
+        bug_hunter: { title: "Bug Hunter 🔦", desc: "Activate Search Light to illuminate the solution code" },
         polyglot: { title: "Polyglot 🍮", desc: "Activate Translation Jelly to translate a lesson" },
         historian: { title: "Historian 📺", desc: "Open Time TV to inspect past attempts" },
         lucky_savior: { title: "Lucky Savior ⭐", desc: "Activate Lucky Star to restore a streak" },
