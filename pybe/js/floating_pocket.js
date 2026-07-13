@@ -884,142 +884,175 @@
             transform: scale(1.15);
         }
 
-        .mb-tabs {
+        .mb-input-bar {
             display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            padding-bottom: 4px;
-            scrollbar-width: none;
-        }
-
-        .mb-tabs::-webkit-scrollbar {
-            display: none;
-        }
-
-        .mb-tab-btn {
+            gap: 10px;
+            align-items: center;
             background: rgba(141, 110, 99, 0.08);
-            border: 1px solid rgba(141, 110, 99, 0.15);
-            color: #5d4037;
-            padding: 8px 16px;
+            border: 2px solid rgba(141, 110, 99, 0.2);
             border-radius: 20px;
+            padding: 6px 12px;
+            margin-bottom: 5px;
+        }
+
+        .mb-level-input {
+            flex: 1;
+            background: none;
+            border: none;
+            outline: none;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 14px;
             font-weight: 700;
+            color: #3e2723;
+        }
+
+        .mb-level-input::placeholder {
+            color: #a1887f;
+        }
+
+        .mb-search-btn {
+            background: #8d6e63;
+            border: none;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 15px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 800;
             font-size: 13px;
             cursor: pointer;
-            white-space: nowrap;
-            transition: all 0.2s;
+            transition: background 0.2s, transform 0.1s;
             display: flex;
             align-items: center;
             gap: 6px;
+            box-shadow: 0 4px 10px rgba(141, 110, 99, 0.2);
         }
 
-        .mb-tab-btn:hover {
-            background: rgba(141, 110, 99, 0.15);
+        .mb-search-btn:hover {
+            background: #70554c;
         }
 
-        .mb-tab-btn.active {
-            background: #8d6e63;
-            color: #fff;
-            border-color: #8d6e63;
-            box-shadow: 0 4px 10px rgba(141, 110, 99, 0.3);
+        .mb-search-btn:active {
+            transform: scale(0.95);
         }
 
-        .mb-content-body {
-            flex-grow: 1;
+        .mb-scroll-content {
+            flex: 1;
             overflow-y: auto;
-            max-height: 48vh;
-            padding-right: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding-right: 8px;
+            max-height: 52vh;
         }
 
-        .mb-content-pane {
-            display: none;
-            animation: mbPaneFade 0.3s ease-out;
+        .mb-scroll-content::-webkit-scrollbar {
+            width: 6px;
         }
 
-        .mb-content-pane.active {
-            display: block;
+        .mb-scroll-content::-webkit-scrollbar-track {
+            background: rgba(141, 110, 99, 0.05);
+            border-radius: 10px;
         }
 
-        @keyframes mbPaneFade {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        .mb-scroll-content::-webkit-scrollbar-thumb {
+            background: rgba(141, 110, 99, 0.3);
+            border-radius: 10px;
         }
 
-        /* Learning content items formatting */
-        .mb-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .mb-scroll-content::-webkit-scrollbar-thumb:hover {
+            background: rgba(141, 110, 99, 0.5);
+        }
+
+        .mb-level-slice {
+            background: #fff;
+            border: 2px dashed rgba(141, 110, 99, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(141, 110, 99, 0.05);
+            position: relative;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
 
-        .mb-item {
-            position: relative;
-            padding-left: 28px;
-            font-size: 14.5px;
-            line-height: 1.5;
-            color: #4e342e;
-        }
-
-        .mb-item::before {
-            content: '📌';
-            position: absolute;
-            left: 0;
-            top: 2px;
-            font-size: 14px;
-        }
-
-        .mb-item.mistake::before {
-            content: '❌';
-        }
-
-        .mb-code-block {
-            background: #f5ebe6;
-            border: 2px solid #d7ccc8;
-            color: #3e2723;
-            padding: 16px;
-            border-radius: 14px;
-            font-family: 'Fira Code', monospace;
-            font-size: 13px;
-            overflow-x: auto;
-            white-space: pre;
-            line-height: 1.5;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
-        }
-
-        .mb-qa-card {
-            background: rgba(141, 110, 99, 0.04);
-            border: 1px solid rgba(141, 110, 99, 0.12);
-            border-radius: 16px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
-        }
-
-        .mb-qa-q {
-            font-weight: 800;
-            font-size: 14.5px;
-            color: #5d4037;
-            margin-bottom: 6px;
-            display: flex;
-            gap: 8px;
-        }
-
-        .mb-qa-q-badge {
+        .mb-level-tag {
             background: #8d6e63;
             color: #fff;
-            border-radius: 4px;
-            padding: 0 4px;
             font-size: 11px;
-            display: inline-flex;
-            align-items: center;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 8px;
+            align-self: flex-start;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .mb-qa-a {
+        .mb-level-title {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+            font-weight: 900;
+            color: #5d4037;
+            margin-top: -2px;
+        }
+
+        .mb-section-heading {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #a1887f;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .mb-bullet-list {
+            margin: 0;
+            padding-left: 20px;
+            color: #4e342e;
             font-size: 13.5px;
             line-height: 1.5;
-            color: #4e342e;
-            padding-left: 26px;
+        }
+
+        .mb-bullet-item {
+            margin-bottom: 6px;
+            list-style-type: disc;
+        }
+
+        .mb-bullet-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .mb-syntax-block {
+            background: #2e2522;
+            color: #f7ebe8;
+            padding: 14px;
+            border-radius: 12px;
+            font-family: 'Fira Code', monospace;
+            font-size: 12.5px;
+            margin: 0;
+            overflow-x: auto;
+            border-left: 4px solid #8d6e63;
+            white-space: pre-wrap;
+        }
+
+        .mb-empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #a1887f;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .mb-empty-icon {
+            font-size: 48px;
+            opacity: 0.6;
         }
 
         /* Time TV Retro-Futuristic Styles */
@@ -2071,16 +2104,17 @@
                 overlay.style.display = 'none';
                 overlay.innerHTML = '';
                 
-                if (isLevelPage && window.levels) {
+                let initialLvl = "";
+                if (isLevelPage) {
                     const params = new URLSearchParams(window.location.search);
-                    const levelId = parseInt(params.get('id')) || 1;
-                    const levelObj = window.levels[levelId - 1];
-                    if (levelObj) {
-                        showMemoryBreadPopup(levelObj);
-                    }
+                    initialLvl = parseInt(params.get('id')) || 1;
                 } else {
-                    showPocketToast("Enter any Python level and activate Memory Bread to memorize its syntax! 🍞");
+                    if (window.PyBe) {
+                        const progress = window.PyBe.getProgress();
+                        initialLvl = progress.currentLevel || 1;
+                    }
                 }
+                showMemoryBreadPopup(initialLvl);
             }, 1800);
 
         } else if (gadgetId === 60) {
@@ -2493,94 +2527,147 @@
         return { title, revisionNotes, syntax, interviewQs, commonMistakes };
     }
 
-    function showMemoryBreadPopup(level) {
-        const data = generateMemoryBreadContent(level);
-        if (!data) return;
+    function showMemoryBreadPopup(arg) {
+        let initialVal = "";
+        if (arg) {
+            if (typeof arg === 'object' && arg.id !== undefined) {
+                initialVal = String(arg.id);
+            } else {
+                initialVal = String(arg);
+            }
+        } else {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const levelId = parseInt(params.get('id'));
+                if (levelId) initialVal = String(levelId);
+            } catch(e) {}
+        }
 
         const card = document.getElementById('memoryBreadCard');
         const overlay = document.getElementById('memoryBreadPopup');
         if (!card || !overlay) return;
 
-        // Render Tabs and content pane shells
+        // Render input bar and scroll container
         card.innerHTML = `
             <div class="mb-header">
                 <div class="mb-header-title-block">
                     <div class="mb-header-title">🍞 Memory Bread Memorizer</div>
-                    <div class="mb-header-sub">Level ${level.id} — ${data.title}</div>
+                    <div class="mb-header-sub">Eat to memorize Python level summaries!</div>
                 </div>
                 <button class="mb-close-btn" id="mbCloseBtn">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
-            <div class="mb-tabs">
-                <button class="mb-tab-btn active" data-tab="notes">
-                    <i class="fas fa-book-open"></i> Notes
-                </button>
-                <button class="mb-tab-btn" data-tab="syntax">
-                    <i class="fas fa-code"></i> Syntax
-                </button>
-                <button class="mb-tab-btn" data-tab="interview">
-                    <i class="fas fa-comments"></i> Interview Qs
-                </button>
-                <button class="mb-tab-btn" data-tab="mistakes">
-                    <i class="fas fa-exclamation-triangle"></i> Mistakes
+            <div class="mb-input-bar">
+                <input type="text" id="mbLevelInput" class="mb-level-input" 
+                    placeholder="Enter level (e.g., 9) or levels (e.g., 9, 10, 11)" 
+                    value="${initialVal}">
+                <button id="mbSearchBtn" class="mb-search-btn">
+                    <i class="fas fa-magic"></i> Eat
                 </button>
             </div>
 
-            <div class="mb-content-body">
-                <!-- Notes Tab -->
-                <div class="mb-content-pane active" id="mbPane-notes">
-                    <ul class="mb-list">
-                        ${data.revisionNotes.map(n => `<li class="mb-item">${n}</li>`).join('')}
-                    </ul>
-                </div>
-
-                <!-- Syntax Tab -->
-                <div class="mb-content-pane" id="mbPane-syntax">
-                    <pre class="mb-code-block">${data.syntax}</pre>
-                </div>
-
-                <!-- Interview Tab -->
-                <div class="mb-content-pane" id="mbPane-interview">
-                    ${data.interviewQs.map(q => `
-                        <div class="mb-qa-card">
-                            <div class="mb-qa-q"><span class="mb-qa-q-badge">Q</span> ${q.q}</div>
-                            <div class="mb-qa-a">${q.a}</div>
-                        </div>
-                    `).join('')}
-                </div>
-
-                <!-- Mistakes Tab -->
-                <div class="mb-content-pane" id="mbPane-mistakes">
-                    <ul class="mb-list">
-                        ${data.commonMistakes.map(m => `<li class="mb-item mistake">${m}</li>`).join('')}
-                    </ul>
-                </div>
+            <div class="mb-scroll-content" id="mbScrollContent">
+                <!-- Populated dynamically -->
             </div>
         `;
 
-        // Bind tab button click events
-        const tabBtns = card.querySelectorAll('.mb-tab-btn');
-        const tabPanes = card.querySelectorAll('.mb-content-pane');
+        function updateBreadContent() {
+            const inputVal = document.getElementById('mbLevelInput').value.trim();
+            const scrollContent = document.getElementById('mbScrollContent');
+            if (!scrollContent) return;
 
-        tabBtns.forEach(btn => {
-            btn.onclick = () => {
-                playPocketSynth('click');
-                const targetTab = btn.getAttribute('data-tab');
+            if (!inputVal) {
+                scrollContent.innerHTML = `
+                    <div class="mb-empty-state">
+                        <div class="mb-empty-icon">🍞</div>
+                        <div>Enter level numbers (e.g., 9 or 9, 10) above and press Enter to eat the Memory Bread!</div>
+                    </div>
+                `;
+                return;
+            }
 
-                // Toggle buttons active class
-                tabBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+            // Parse input (can contain commas, spaces, etc.)
+            const parts = inputVal.split(/[\s,]+/).map(p => parseInt(p.trim())).filter(p => !isNaN(p) && p >= 1 && p <= 100);
 
-                // Toggle panes active class
-                tabPanes.forEach(pane => pane.classList.remove('active'));
-                card.querySelector(`#mbPane-${targetTab}`).classList.add('active');
-            };
-        });
+            if (parts.length === 0) {
+                scrollContent.innerHTML = `
+                    <div class="mb-empty-state">
+                        <div class="mb-empty-icon">❌</div>
+                        <div>Invalid level numbers! Please enter numbers between 1 and 100.</div>
+                    </div>
+                `;
+                return;
+            }
 
-        // Bind close button
+            let html = "";
+            parts.forEach(lvlId => {
+                const levelObj = window.levels ? window.levels[lvlId - 1] : null;
+                if (!levelObj) return;
+
+                const data = generateMemoryBreadContent(levelObj);
+                if (!data) return;
+
+                html += `
+                    <div class="mb-level-slice">
+                        <div class="mb-level-tag">Level ${lvlId}</div>
+                        <div class="mb-level-title">${data.title}</div>
+                        
+                        <div class="mb-section">
+                           <div class="mb-section-heading"><i class="fas fa-book-open"></i> Key Concepts & Notes</div>
+                           <ul class="mb-bullet-list">
+                               ${data.revisionNotes.map(n => `<li class="mb-bullet-item">${n}</li>`).join('')}
+                           </ul>
+                        </div>
+
+                        <div class="mb-section" style="margin-top: 10px;">
+                           <div class="mb-section-heading"><i class="fas fa-code"></i> Python Syntax Examples</div>
+                           <pre class="mb-syntax-block">${data.syntax}</pre>
+                        </div>
+
+                        <div class="mb-section" style="margin-top: 10px;">
+                           <div class="mb-section-heading"><i class="fas fa-exclamation-triangle"></i> Watch Out / Tips</div>
+                           <ul class="mb-bullet-list">
+                               ${data.commonMistakes.map(m => `<li class="mb-bullet-item" style="color: #c0392b; list-style-type: disc;">${m}</li>`).join('')}
+                           </ul>
+                        </div>
+                    </div>
+                `;
+            });
+
+            if (!html) {
+                scrollContent.innerHTML = `
+                    <div class="mb-empty-state">
+                        <div class="mb-empty-icon">❓</div>
+                        <div>No summaries found for those levels.</div>
+                    </div>
+                `;
+            } else {
+                scrollContent.innerHTML = html;
+            }
+        }
+
+        const searchBtn = card.querySelector('#mbSearchBtn');
+        const levelInput = card.querySelector('#mbLevelInput');
+
+        searchBtn.onclick = () => {
+            if (window.playPocketSynth) window.playPocketSynth('click');
+            updateBreadContent();
+        };
+
+        levelInput.onkeydown = (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                if (window.playPocketSynth) window.playPocketSynth('click');
+                updateBreadContent();
+            }
+        };
+
         document.getElementById('mbCloseBtn').onclick = closeMemoryBreadPopup;
+
+        // Render initial content
+        updateBreadContent();
 
         // Display overlay
         overlay.classList.add('visible');
@@ -2592,7 +2679,7 @@
     }
 
     function closeMemoryBreadPopup() {
-        playPocketSynth('click');
+        if (window.playPocketSynth) window.playPocketSynth('click');
         const overlay = document.getElementById('memoryBreadPopup');
         if (overlay) {
             overlay.classList.remove('visible');
