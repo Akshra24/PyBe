@@ -168,7 +168,11 @@
                     shortAnswerTexts = saved.shortAnswerTexts || {};
                     testSubmitted = true;
                 }
+                if (saved.codingSubmitted) {
+                    codingSubmitted = true;
+                }
             } else if (completed) {
+                codingSubmitted = true;
                 const t = level.test;
                 if (t && t.questions) {
                     t.questions.forEach((q, qi) => {
@@ -957,9 +961,10 @@
             }
             const hasScenario = !!level.scenario;
             const progress = window.PyBe ? window.PyBe.getProgress() : null;
+            const completed = progress && progress.completed && progress.completed.includes(levelId);
             const saved = progress && progress.savedAnswers ? progress.savedAnswers[levelId] : null;
             const savedCode = saved ? (saved.submittedCode || '') : '';
-            const starterCode = savedCode || '';
+            const starterCode = savedCode || (completed ? (level.solution || '') : '');
             const isDev = localStorage.getItem('pybe_dev_mode') === 'true';
 
             sectionContent.innerHTML = `

@@ -12,49 +12,21 @@ function getProgress() {
         let needsSave = false;
         if (!data) {
             progress = {
-                currentLevel: 9,
-                completed: [1, 2, 3, 4, 5, 6, 7, 8],
+                currentLevel: 100,
+                completed: Array.from({length: 100}, (_, i) => i + 1),
                 lastPlayed: null,
-                attempts: { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1 },
-                streak: 1,
-                unlockedGadgets: []
+                attempts: {},
+                streak: 5,
+                unlockedGadgets: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
             };
             needsSave = true;
         } else {
             progress = JSON.parse(data);
-            progress.attempts = progress.attempts || {};
-            progress.unlockedGadgets = progress.unlockedGadgets || [];
-        }
-
-        // Developer/Testing Bypass: unlock all levels & gadgets if devMode is enabled
-        const isDev = localStorage.getItem('pybe_dev_mode') === 'true';
-        if (isDev) {
             progress.currentLevel = 100;
             progress.completed = Array.from({length: 100}, (_, i) => i + 1);
-            if (!progress.streak) progress.streak = 5;
-        } else {
-            // Ensure levels 1-8 are unlocked/completed for development access
-            for (let i = 1; i <= 8; i++) {
-                if (!progress.completed.includes(i)) {
-                    progress.completed.push(i);
-                    needsSave = true;
-                }
-                if (!progress.attempts[i]) {
-                    progress.attempts[i] = 1;
-                    needsSave = true;
-                }
-            }
-            if (progress.currentLevel < 9) {
-                progress.currentLevel = 9;
-                needsSave = true;
-            }
-
-            // Reset currentLevel if it was artificially set to 100 in the past, or if completed is empty
-            const expectedLevel = (progress.completed && progress.completed.length > 0) ? progress.completed.length + 1 : 1;
-            if (progress.currentLevel > expectedLevel) {
-                progress.currentLevel = expectedLevel;
-                needsSave = true;
-            }
+            progress.unlockedGadgets = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+            progress.attempts = progress.attempts || {};
+            needsSave = true;
         }
 
         if (needsSave) {
@@ -64,12 +36,12 @@ function getProgress() {
         return progress;
     } catch (e) {
         return {
-            currentLevel: 9,
-            completed: [1, 2, 3, 4, 5, 6, 7, 8],
+            currentLevel: 100,
+            completed: Array.from({length: 100}, (_, i) => i + 1),
             lastPlayed: null,
-            attempts: { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1 },
-            streak: 1,
-            unlockedGadgets: []
+            attempts: {},
+            streak: 5,
+            unlockedGadgets: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
         };
     }
 }
