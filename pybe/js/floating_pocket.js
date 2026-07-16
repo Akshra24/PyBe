@@ -12,9 +12,7 @@
         { id: 10,  name: "Bamboo Copter",  icon: "🚁", desc: "Flies over code obstacles. Unlocks stepper shortcuts. (Fires cloud fly-by sweep!)", maxUses: 999, cooldown: 3, milestone: 0 },
         { id: 20,  name: "Time Cloth", icon: "⏳", desc: "Wraps mistakes to reverse time! Retry one incorrect test question or code submission per level, restoring lost marks and explaining the mistake. (Once per level)", maxUses: 999, cooldown: 3, milestone: 0 },
         { id: 30,  name: "Anywhere Door",   icon: "🚪", desc: "Teleports across space! Bypasses section locks to let you jump directly to any step (Description, Q&A, Test, Coding) inside a level. (Flashes pink warp portal!)", maxUses: 999, cooldown: 3, milestone: 0 },
-        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Illuminates the solution! Writes the first 30% (3:10 ratio) lines of the correct code directly in your editor to get you unstuck. (Once per activation)", maxUses: 999, cooldown: 3, milestone: 0 },
-        { id: 50,  name: "Memory Bread",   icon: "🍞", desc: "Eat to memorize. Unlocks Python data structure reference sheets. (Spawns glowing memory slices!)", maxUses: 999, cooldown: 3, milestone: 0 },
-        { id: 25,  name: "Translation Jelly", icon: "🍮", desc: "Instantly translates lessons into simple English, Hindi, Hinglish, or beginner explanations with analogies and breakdowns. (Unlocks after Level 10)", maxUses: 999, cooldown: 3, milestone: 10 },
+        { id: 40,  name: "Search Light",  icon: "🔦", desc: "Illuminates the solution! Writes the first 30% (3:10 ratio) lines of the correct code directly in your editor to get you unstuck. (Once per activation)", maxUses: 999, cooldown: 3, milestone: 10 },
         { id: 60,  name: "Small Light",    icon: "🔦", desc: "Shrinks code complexity. Highlights redundant loop lines. (Shrinks page layout size!)", maxUses: 999, cooldown: 3, milestone: 20 },
         { id: 65,  name: "Lucky Star",       icon: "⭐", desc: "Restores one lost daily streak every seven days! Automatically updates your active streak. (Once per 7 days)", maxUses: 999, cooldown: 3, milestone: 30 },
         { id: 70,  name: "Big Light",      icon: "🔍", desc: "Inspects large variables. Shows detailed trace logs. (Expands page layout size!)", maxUses: 999, cooldown: 3, milestone: 40 },
@@ -344,6 +342,11 @@
             100% { box-shadow: 0 8px 24px rgba(0, 174, 239, 0.4), 0 0 0 0 rgba(0, 174, 239, 0); }
         }
 
+        /* Scoped border-box reset */
+        #floatingPocketModal, #floatingPocketModal * {
+            box-sizing: border-box;
+        }
+
         /* Inventory Modal */
         .fp-modal {
             position: fixed;
@@ -373,6 +376,9 @@
             border-radius: 32px;
             max-width: 750px;
             width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            overflow-x: hidden;
             padding: 32px;
             box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 45px rgba(0, 174, 239, 0.2);
             color: #fff;
@@ -424,21 +430,27 @@
         }
 
         .fp-body-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            display: flex;
             gap: 24px;
+            width: 100%;
+            align-items: stretch;
         }
 
         @media (max-width: 680px) {
             .fp-body-layout {
-                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+            .fp-detail-panel {
+                width: 100% !important;
             }
         }
 
         .fp-grid {
+            flex: 1;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 12px;
+            min-width: 0;
         }
 
         @media (max-width: 480px) {
@@ -458,6 +470,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             padding: 8px;
+            min-width: 0;
         }
 
         .fp-slot.locked {
@@ -500,10 +513,14 @@
             color: #cfd8dc;
             font-family: 'Nunito', sans-serif;
             line-height: 1.1;
+            word-break: break-word;
+            max-width: 100%;
         }
 
         /* Detail Area */
         .fp-detail-panel {
+            width: 280px;
+            flex-shrink: 0;
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
