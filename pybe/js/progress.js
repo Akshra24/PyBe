@@ -12,38 +12,38 @@ function getProgress() {
         let needsSave = false;
         if (!data) {
             progress = {
-                currentLevel: 12,
-                completed: Array.from({length: 11}, (_, i) => i + 1),
+                currentLevel: 100,
+                completed: Array.from({length: 100}, (_, i) => i + 1),
                 lastPlayed: null,
                 attempts: {},
                 streak: 5,
-                unlockedGadgets: [0, 10]
+                unlockedGadgets: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
             };
             needsSave = true;
         } else {
             progress = JSON.parse(data);
-            progress.currentLevel = 12;
-            progress.completed = Array.from({length: 11}, (_, i) => i + 1);
-            progress.unlockedGadgets = [0, 10];
+            progress.currentLevel = 100;
+            progress.completed = Array.from({length: 100}, (_, i) => i + 1);
+            progress.unlockedGadgets = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90];
             progress.attempts = progress.attempts || {};
 
-            // Clean up saved answers and test scores for locked levels (>= 12)
+            // Clean up saved answers and test scores for locked levels (>= 101)
             if (progress.savedAnswers) {
                 for (const lvlId in progress.savedAnswers) {
-                    if (parseInt(lvlId) >= 12) {
+                    if (parseInt(lvlId) >= 101) {
                         delete progress.savedAnswers[lvlId];
                     }
                 }
             }
             if (progress.testScores) {
                 for (const lvlId in progress.testScores) {
-                    if (parseInt(lvlId) >= 12) {
+                    if (parseInt(lvlId) >= 101) {
                         delete progress.testScores[lvlId];
                     }
                 }
             }
             for (const lvlId in progress.attempts) {
-                if (parseInt(lvlId) >= 12) {
+                if (parseInt(lvlId) >= 101) {
                     delete progress.attempts[lvlId];
                 }
             }
@@ -57,12 +57,12 @@ function getProgress() {
         return progress;
     } catch (e) {
         return {
-            currentLevel: 12,
-            completed: Array.from({length: 11}, (_, i) => i + 1),
+            currentLevel: 100,
+            completed: Array.from({length: 100}, (_, i) => i + 1),
             lastPlayed: null,
             attempts: {},
             streak: 5,
-            unlockedGadgets: [0, 10]
+            unlockedGadgets: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
         };
     }
 }

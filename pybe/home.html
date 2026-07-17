@@ -678,9 +678,8 @@
                 card.className = 'level-card';
                 card.dataset.level = lvl;
 
-                let state = 'locked';
+                let state = 'unlocked';
                 if (progress.completed.includes(lvl)) state = 'completed';
-                else if (progress.currentLevel > 0 && lvl <= progress.currentLevel) state = 'unlocked';
                 card.classList.add(state);
 
                 if (lvl === progress.currentLevel && state === 'unlocked') {
@@ -1541,41 +1540,19 @@
 
         // Check for pending gadget unlocks
         function checkGadgetUnlocks() {
+            // Disabled gadget claim modal popup as requested.
+            // Automatically make sure all pending gadgets are added to unlocked list silently.
             const completedCount = progress.completed.length;
-            
-            // Find gadgets whose milestone is met but not yet in progress.unlockedGadgets
-            const pendingGadget = GADGETS.find(g => completedCount >= g.milestone && !progress.unlockedGadgets.includes(g.milestone));
-            
-            if (pendingGadget) {
-                // Trigger unlock overlay
-                setTimeout(() => {
-                    const overlay = document.getElementById('gadgetUnlockOverlay');
-                    const iconEl = document.getElementById('unlockGadgetIcon');
-                    const nameEl = document.getElementById('unlockGadgetName');
-                    const descEl = document.getElementById('unlockGadgetDesc');
-                    
-                    if (overlay && iconEl && nameEl && descEl) {
-                        iconEl.textContent = pendingGadget.icon;
-                        nameEl.textContent = pendingGadget.name;
-                        descEl.textContent = pendingGadget.desc;
-                        
-                        overlay.classList.add('visible');
-                        playSynthSound('unlock');
-                        
-                        // Handle Claim
-                        document.getElementById('claimGadgetBtn').onclick = () => {
-                            playSynthSound('claim');
-                            progress.unlockedGadgets.push(pendingGadget.milestone);
-                            window.PyBe.saveProgress(progress);
-                            
-                            overlay.classList.remove('visible');
-                            updatePocketBadge();
-                            
-                            // Check for any more pending unlocks (cascade unlocks)
-                            setTimeout(checkGadgetUnlocks, 1000);
-                        };
-                    }
-                }, 1200); // Small delay to let the page load/confetti finish first
+            let updated = false;
+            GADGETS.forEach(g => {
+                if (completedCount >= g.milestone && !progress.unlockedGadgets.includes(g.milestone)) {
+                    progress.unlockedGadgets.push(g.milestone);
+                    updated = true;
+                }
+            });
+            if (updated) {
+                window.PyBe.saveProgress(progress);
+                updatePocketBadge();
             }
         }
 

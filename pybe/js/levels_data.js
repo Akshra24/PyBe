@@ -11,7 +11,110 @@ window.levels = [
         "description": {
             "heading": "What is Programming?",
             "subheading": "The language computers understand",
-            "body": "<p>Programming is the art of writing instructions that a computer can understand and follow. These instructions are written in a <strong>programming language</strong> -- a structured way to communicate with a machine.</p>\n<p>Think of it like this: a recipe tells a cook how to make a dish. A program tells a computer how to accomplish a task. Both need the right ingredients, the right steps, and the right order.</p>\n<p>Python is one such language -- designed to be readable, beginner-friendly, and incredibly powerful. It's used everywhere: websites, AI, games, apps, data science, and more!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e0f7fa 0%, #e1f5fe 100%); border: 3px solid #00AEEF; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 174, 239, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #00838f; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🚪 <strong>Case Study: Nobita's Room-Cleaning Crisis</strong>
+    </h3>
+    <p style="font-size: 15px; color: #37474f; line-height: 1.6; margin-bottom: 16px;">
+        Nobita has exactly <strong>10 minutes</strong> to clean his bedroom before his mom returns! The floor is a disaster zone of comic books, toy blocks, and half-eaten dorayakis. In a panic, Nobita begs Doraemon for a gadget to clean it up.
+    </p>
+
+    <!-- The Gadget Card -->
+    <div style="background: #ffffff; border: 2px solid #E53935; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">🤖</span>
+        <div>
+            <strong style="color: #c62828; font-size: 15px;">Nobita's Mistake:</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Doraemon pulls out the <strong>Helper Robo-Hand</strong>. Nobita shouts: <em>"Clean my room right now!"</em> But the robot just stands still, blinking its red light. It doesn't move!
+            </p>
+        </div>
+    </div>
+
+    <!-- The Concept Box -->
+    <div style="background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">💡</span>
+        <div>
+            <strong style="color: #2e7d32; font-size: 15px;">Doraemon's Lesson:</strong>
+            <p style="font-size: 14px; color: #2e7d32; margin: 4px 0 0 0; line-height: 1.5;">
+                "Computers and robots are extremely fast, but they are also completely brainless. They do not know what 'clean' means. You must give it precise, step-by-step instructions. This list of steps is called a <strong>Program</strong>."
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Comparison Section -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>How to Talk to a Machine (Human vs. Robot)</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    To get a computer to do what you want, you cannot speak in vague human sentences. You must translate your ideas into a step-by-step recipe:
+</p>
+
+<div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- Human Side -->
+    <div style="background: #fff3e0; border: 2px solid #ffb74d; border-radius: 16px; padding: 18px; box-shadow: 0 4px 12px rgba(255, 183, 77, 0.08);">
+        <strong style="color: #e65100; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+            🧑‍🦱 Speaking to Humans (Vague)
+        </strong>
+        <p style="font-size: 13.5px; color: #5d4037; line-height: 1.5; margin: 12px 0 0 0; font-style: italic;">
+            "Clean the room!"
+        </p>
+        <span style="font-size: 12px; color: #8d6e63; display: block; margin-top: 8px;">
+            (Humans use common sense to figure out where things go, but robots don't have common sense!)
+        </span>
+    </div>
+
+    <!-- Robot Side -->
+    <div style="background: #e3f2fd; border: 2px solid #64b5f6; border-radius: 16px; padding: 18px; box-shadow: 0 4px 12px rgba(100, 181, 246, 0.08);">
+        <strong style="color: #0d47a1; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+            🤖 Programming a Robot (Precise)
+        </strong>
+        <ol style="font-size: 13px; color: #1565c0; line-height: 1.6; margin: 12px 0 0 16px; padding: 0; font-weight: 700;">
+            <li>Pick up the comic book from the floor.</li>
+            <li>Place it on the wooden bookshelf.</li>
+            <li>Pick up the toy model from the floor.</li>
+            <li>Drop it inside the toy box.</li>
+        </ol>
+    </div>
+</div>
+
+<!-- Python Explanation -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    💬 <strong>Python: The Universal Translator</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    Robots only understand electric signals (1s and 0s). Since we cannot write code in 1s and 0s, we use a <strong>Programming Language</strong> like <strong>Python</strong>. It acts as our translator: you write code in clean English, and Python translates it to machine language instantly.
+</p>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #9e9e9e; margin-bottom: 8px; font-size: 12px;"># Telling the robot to output a message in Python</div>
+    <span style="color: #e91e63;">print</span>(<span style="color: #4caf50;">"Cleaning complete! 🧹"</span>)
+    
+    <div style="margin-top: 16px; font-family: 'Nunito', sans-serif; font-size: 13px; color: #78909c; border-top: 1px solid #cfd8dc; padding-top: 8px;">
+        💡 <strong>How it works:</strong> <code>print()</code> is the action word, and the text inside <code>"..."</code> is what the robot will show on its screen!
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">💻</span>
+        <strong>Programming</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Writing a guide for computers</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📋</span>
+        <strong>A Program</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The step-by-step recipe itself</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🐍</span>
+        <strong>Python</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The easy language we write in</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -137,7 +240,105 @@ window.levels = [
         "description": {
             "heading": "How Code Works",
             "subheading": "From your idea to the computer's action",
-            "body": "<p>When you write Python code, something fascinating happens behind the scenes. Your human-readable instructions don't go directly to the computer's brain (the CPU). Instead, they go through a <strong>translation process</strong> first.</p>\n\n<p>Python uses an <strong>interpreter</strong> -- a program that reads your code line by line and converts it into something the computer can execute, one instruction at a time. Think of it like having a live translator at a meeting: they translate each sentence as it's spoken, not the whole speech beforehand.</p>\n\n<h3>The Three-Step Process</h3>\n\n<div class=\"desc-callout\">\n<span class=\"callout-icon\">📝</span>\n<div><strong>Step 1 -- Write:</strong> You write Python source code in a <code>.py</code> file using plain English-like instructions.</div>\n</div>\n\n<div class=\"desc-callout\">\n<span class=\"callout-icon\">⚙️</span>\n<div><strong>Step 2 -- Interpret:</strong> Python reads your code. It first checks that your code follows Python's grammar rules (syntax). If there's a mistake, it stops and shows a <strong>SyntaxError</strong>.</div>\n</div>\n\n<div class=\"desc-callout\">\n<span class=\"callout-icon\">▶️</span>\n<div><strong>Step 3 -- Execute:</strong> Python runs your code line by line. If it meets a word it doesn't recognize (a variable that doesn't exist), it stops and shows a <strong>NameError</strong>.</div>\n</div>\n\n<h3>Python is Interpreted</h3>\n<p>Unlike languages like C or Java that are <strong>compiled</strong> (translated all at once before running), Python is <strong>interpreted</strong> -- it translates and runs one line at a time. This makes it slower than compiled languages, but also easier to test and debug because you can run code interactively.</p>\n\n<pre class=\"code-example\"># A simple Python program\nprint(\"Hello from Python!\")\n# Step 1: You write this\n# Step 2: Python interprets it\n# Step 3: Python executes it → prints: Hello from Python!</pre>\n\n<h3>Cross-Platform</h3>\n<p>Because Python handles the translation itself, your <code>.py</code> files can run on Windows, Mac, or Linux without any changes. Python's interpreter exists for all major operating systems, so the same code works everywhere!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border: 3px solid #00AEEF; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 174, 239, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #0d47a1; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🍮 <strong>Case Study: The Translation Jelly vs. Translation Megaphone</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1565c0; line-height: 1.6; margin-bottom: 16px;">
+        Imagine Nobita wants to read a foreign comic book. Doraemon has two different gadgets to help him understand. The way these two gadgets work represents the two main ways computers read code:
+    </p>
+
+    <!-- The Interpreter Card -->
+    <div style="background: #ffffff; border: 2px solid #2e7d32; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">🍮</span>
+        <div>
+            <strong style="color: #2e7d32; font-size: 15px;">Gadget 1: Translation Jelly (The Interpreter)</strong>
+            <p style="font-size: 14px; color: #37474f; margin: 4px 0 0 0; line-height: 1.5;">
+                Nobita eats the jelly and reads. It translates <strong>one sentence at a time</strong> as his eyes move. If there is a scribble on sentence 5, he reads lines 1–4 perfectly, and then gets stuck only on line 5. <strong>(This is Python! It translates and runs your code line-by-line).</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- The Compiler Card -->
+    <div style="background: #ffffff; border: 2px solid #e65100; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">📢</span>
+        <div>
+            <strong style="color: #e65100; font-size: 15px;">Gadget 2: Translation Megaphone (The Compiler)</strong>
+            <p style="font-size: 14px; color: #37474f; margin: 4px 0 0 0; line-height: 1.5;">
+                Nobita puts the entire book into the megaphone. It translates the <strong>entire book all at once</strong> and prints a new copy. If there is a spelling mistake on page 3, the megaphone refuses to print anything at all. <strong>(This is C++ / Java!).</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Comparison Grid -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Interpreter vs. Compiler Comparison</strong>
+</h3>
+<div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- Interpreter Side -->
+    <div style="background: #e8f5e9; border: 2px solid #81c784; border-radius: 16px; padding: 18px; box-shadow: 0 4px 12px rgba(129, 199, 132, 0.08);">
+        <strong style="color: #2e7d32; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+            🐍 Python (Interpreted)
+        </strong>
+        <ul style="font-size: 13px; color: #2e7d32; line-height: 1.6; margin: 12px 0 0 16px; padding: 0; font-weight: 600;">
+            <li>Translates line-by-line in real-time.</li>
+            <li>Starts running immediately.</li>
+            <li>Stops right at the line where an error is found.</li>
+            <li>Much easier to debug and test!</li>
+        </ul>
+    </div>
+
+    <!-- Compiler Side -->
+    <div style="background: #fff3e0; border: 2px solid #ffb74d; border-radius: 16px; padding: 18px; box-shadow: 0 4px 12px rgba(255, 183, 77, 0.08);">
+        <strong style="color: #e65100; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+            💿 C++ / Java (Compiled)
+        </strong>
+        <ul style="font-size: 13px; color: #e65100; line-height: 1.6; margin: 12px 0 0 16px; padding: 0; font-weight: 600;">
+            <li>Translates the whole file before running.</li>
+            <li>Takes time to build before starting.</li>
+            <li>If there is one error, nothing runs.</li>
+            <li>Runs extremely fast once compiled.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- How Python Executes -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    ⚙️ <strong>The 3-Step Execution Flow</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    When you write Python, it follows a simple assembly-line flow:
+</p>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #2e7d32; margin-bottom: 4px;"># Step 1: Write code in plain English-like text</div>
+    <span style="color: #e91e63;">print</span>(<span style="color: #4caf50;">"Step 1 Complete"</span>)
+    
+    <div style="margin-top: 12px; color: #e65100; border-top: 1px solid #cfd8dc; padding-top: 12px;"># Step 2: Interpreter reads the line and checks grammar (syntax)</div>
+    <div style="color: #0d47a1; margin-top: 12px;"># Step 3: Computer executes the instructions immediately</div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🍮</span>
+        <strong>Interpreter</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Translates line-by-line</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📢</span>
+        <strong>Compiler</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Translates all-at-once</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🌍</span>
+        <strong>Cross-Platform</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Same code runs everywhere</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -246,7 +447,93 @@ window.levels = [
         "description": {
             "heading": "Beginner Doubts -- Answered!",
             "subheading": "The stuff every beginner wonders but is afraid to ask",
-            "body": "<p>You have questions. Good ones. Every developer -- even the best in the world -- started by asking exactly these same questions. Let's clear them all up, right now.</p>\n\n<h3>What is Code?</h3>\n<p><strong>Code</strong> is simply a set of written instructions that tell a computer what to do. Think of it like a recipe -- a recipe tells a cook what ingredients to use and in what order to mix them. Code tells a computer what steps to follow and in what order.</p>\n\n<p>Here's the important part: code is written in a <em>language</em> -- a structured notation that humans can read and write, but that a computer can also understand and follow. Python is one such language.</p>\n\n<div class=\"desc-callout\">\n<span class=\"callout-icon\">🧾</span>\n<div><strong>Code vs Program</strong><br>A single instruction is code. A complete, runnable set of instructions that accomplishes a task is called a <strong>program</strong>. When you write a Python file that can run and do something, you've built a program!</div>\n</div>\n\n<h3>What is Syntax?</h3>\n<p>Every language -- spoken or programming -- has <strong>syntax</strong>: a set of rules about how to write it correctly. In English, sentences need a subject and a verb to make sense. In Python, <code>print(\"Hello\")</code> is correct syntax -- but <code>print Hello</code> is not.</p>\n\n<pre class=\"code-example\"># Valid Python syntax\nprint(\"Hello, Doraemon!\")\n\n# Invalid Python syntax\nprint Hello      # NameError\nprint \"Hello\"    # SyntaxError</pre>\n\n<h3>What are Errors?</h3>\n<p>An <strong>error</strong> is Python's way of saying \"I understood what you wrote, but something went wrong.\" Errors are not failures -- they are Python communicating with you. Learning to read them is one of the most important skills you'll develop.</p>\n\n<div class=\"desc-grid\">\n<div class=\"desc-card\"><span class=\"desc-card-icon\">🔴</span><h4>SyntaxError</h4><p>Your code broke Python's grammar rules. Python catches this <em>before</em> running anything.</p></div>\n<div class=\"desc-card\"><span class=\"desc-card-icon\">🟡</span><h4>NameError</h4><p>Python searched its memory for a variable name but couldn't find it.</p></div>\n<div class=\"desc-card\"><span class=\"desc-card-icon\">🟠</span><h4>TypeError</h4><p>You asked Python to do something impossible with a data type -- like adding text to a number.</p></div>\n<div class=\"desc-card\"><span class=\"desc-card-icon\">🔵</span><h4>LogicError</h4><p>Your code runs perfectly but gives the wrong result. The trickiest kind -- Python can't detect it!</p></div>\n</div>\n\n<h3>How are Apps, Websites, and Software Built?</h3>\n<p>Every app, website, and software system has two main parts:</p>\n\n<div class=\"desc-callout\">\n<span class=\"callout-icon\">🌐</span>\n<div><strong>Frontend</strong> -- What the user sees and interacts with. Built with HTML, CSS, and JavaScript. Python is <em>not</em> typically used here.</div>\n</div>\n\n<div class=\"desc-callout callout-highlight\">\n<span class=\"callout-icon\">⚙️</span>\n<div><strong>Backend</strong> -- The invisible engine. Handles data, logic, and decisions. Built with Python, Java, Node.js, and more. This is where Python shines.</div>\n</div>\n\n<div class=\"desc-callout\">\n<span class=\"callout-icon\">🗄️</span>\n<div><strong>Database</strong> -- Where data is stored. Think of it like a digital filing cabinet. Examples: MySQL, PostgreSQL, MongoDB.</div>\n</div>\n\n<h3>Who Uses Python in the Real World?</h3>\n\n<ul class=\"desc-list\">\n<li><strong>Instagram</strong> -- Built with Python for its backend simplicity and speed of development</li>\n<li><strong>Netflix</strong> -- Uses Python for its recommendation engine and server-side logic</li>\n<li><strong>NASA</strong> -- Uses Python for scientific computing and mission control systems</li>\n<li><strong>Spotify</strong> -- Uses Python for data analysis and backend services</li>\n</ul>\n\n<div class=\"desc-callout\">\n<span class=\"callout-icon\">🤖</span>\n<div><strong>Doraemon's tip:</strong> Every expert was once a beginner who asked \"dumb\" questions. The only dumb question is the one you didn't ask. Keep asking!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%); border: 3px solid #FFD54F; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(255, 213, 79, 0.15); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #f57f17; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🍞 <strong>Case Study: Nobita's Memory Bread & Syntax Errors</strong>
+    </h3>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Nobita is using <strong>Memory Bread</strong> to memorize his textbook. He presses the bread on the pages and eats it. But if the text in the book has missing letters or scrambled words, the bread fails and makes him speak gibberish! This is exactly like programming syntax and errors.
+    </p>
+
+    <!-- The Syntax Card -->
+    <div style="background: #ffffff; border: 2px solid #00AEEF; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">📋</span>
+        <div>
+            <strong style="color: #00AEEF; font-size: 15px;">What is Syntax?</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Syntax is the set of strict grammar rules for a programming language. Humans can understand a broken sentence (like "Me like dorayaki"), but a computer is a machine—if you make a single typo, it raises a <strong>SyntaxError</strong> and stops immediately!
+            </p>
+        </div>
+    </div>
+
+    <!-- The Bug Card -->
+    <div style="background: #ffffff; border: 2px solid #e91e63; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">🐛</span>
+        <div>
+            <strong style="color: #e91e63; font-size: 15px;">Errors vs. Bugs (Logic Errors)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                An <strong>error</strong> is when Python crashes and prints a red warning. A <strong>bug</strong> is trickier—your program runs perfectly without crashing, but it gives the wrong result (e.g. telling Nobita he has 0 dorayakis when he has 5). This is called a <strong>Logic Error</strong>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Errors Card Grid -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    ⚠️ <strong>The Four Types of Errors You'll Meet</strong>
+</h3>
+<div class="desc-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- SyntaxError -->
+    <div style="background: #ffebee; border: 2px solid #ef5350; border-radius: 16px; padding: 16px; text-align: left;">
+        <strong style="color: #c62828; font-size: 15px; display: flex; align-items: center; gap: 6px;">🔴 SyntaxError</strong>
+        <p style="font-size: 13px; color: #5d4037; margin: 8px 0 0 0; line-height: 1.5;">Broken grammar rules. Python catches this before running anything.</p>
+    </div>
+    <!-- NameError -->
+    <div style="background: #fff8e1; border: 2px solid #ffca28; border-radius: 16px; padding: 16px; text-align: left;">
+        <strong style="color: #f57f17; font-size: 15px; display: flex; align-items: center; gap: 6px;">🟡 NameError</strong>
+        <p style="font-size: 13px; color: #5d4037; margin: 8px 0 0 0; line-height: 1.5;">Python couldn't find a word/variable name in its memory.</p>
+    </div>
+    <!-- TypeError -->
+    <div style="background: #f3e5f5; border: 2px solid #ab47bc; border-radius: 16px; padding: 16px; text-align: left;">
+        <strong style="color: #6a1b9a; font-size: 15px; display: flex; align-items: center; gap: 6px;">🟣 TypeError</strong>
+        <p style="font-size: 13px; color: #5d4037; margin: 8px 0 0 0; line-height: 1.5;">Doing something mathematically impossible with a type (like adding text to numbers).</p>
+    </div>
+    <!-- LogicError -->
+    <div style="background: #e3f2fd; border: 2px solid #42a5f5; border-radius: 16px; padding: 16px; text-align: left;">
+        <strong style="color: #0d47a1; font-size: 15px; display: flex; align-items: center; gap: 6px;">🔵 LogicError</strong>
+        <p style="font-size: 13px; color: #5d4037; margin: 8px 0 0 0; line-height: 1.5;">No crash, but the wrong result. The hardest bug to find!</p>
+    </div>
+</div>
+
+<!-- Syntax Illustration -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    💻 <strong>Valid vs. Invalid Syntax</strong>
+</h3>
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span style="color: #4caf50;">print("Hello, Doraemon!")</span> <span style="color: #757575; font-size: 12px; font-family: 'Nunito', sans-serif;">✅ Correct syntax!</span>
+    <br><br>
+    <span style="color: #f44336;">print Hello</span> <span style="color: #757575; font-size: 12px; font-family: 'Nunito', sans-serif;">❌ Invalid! Missing parentheses & quotes.</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📝</span>
+        <strong>Syntax</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The grammar rules of code</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🐛</span>
+        <strong>Bug</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">A logical flaw in your code</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🤖</span>
+        <strong>Backend</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The hidden engine of apps</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -367,7 +654,79 @@ window.levels = [
         "description": {
             "heading": "Introduction to Python",
             "subheading": "Why one language took over the world of programming",
-            "body": "<p>Python is one of the most popular programming languages in the world today. But it did not start in a corporate lab -- it was created by a single person who wanted to make programming fun and accessible. That person was <strong>Guido van Rossum</strong>.</p><h3>The Birth of Python -- 1989</h3><p>During a relaxed holiday week at CERN (the European Organization for Nuclear Research) in Amsterdam, Guido van Rossum was looking for a hobby project. He had been working on a language called ABC at CWI (Centrum Wiskunde & Informatica), and he wanted to create something even better.</p><p>He named it <strong>Python</strong> -- not after the snake, but after <em>Monty Python's Flying Circus</em>, a British comedy TV show he loved. This set the tone for Python from the very beginning: it was supposed to be fun.</p><div class=\"desc-callout\"><span class=\"callout-icon\">🎬</span><div><strong>Why Python and not ABC?</strong><br>Guido wanted a short, unique, and slightly mysterious name. He loved Monty Python and felt that the name reflected the language's core philosophy: programming should be enjoyable, not frustrating.</div></div><h3>Guido van Rossum -- The Creator</h3><p>Python was created by <strong>Guido van Rossum</strong> in 1991 during a holiday at CERN in Amsterdam. For over 25 years, he was Python's <strong>Benevolent Dictator For Life (BDFL)</strong> -- the final decision-maker on the language's design. He worked at Google, Dropbox, and eventually Microsoft, always continuing to shepherd Python's growth.</p><p>He retired as BDFL in 2018, passing Python's governance to the <strong>Python Steering Council</strong>. But his influence remains in every line of Python code written today.</p><h3>Python's Core Philosophy</h3><p>Python was designed around a set of guiding principles written in a document called <strong>The Zen of Python</strong> by Tim Peters. The most famous line is:</p><blockquote class=\"desc-callout callout-highlight\">Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex. Readability counts.</blockquote><p>Python prioritises making code <strong>readable</strong> -- your future self and other developers will thank you. This is why Python is often the first language taught in universities and coding bootcamps worldwide.</p><h3>Why Learn Python in 2024 and Beyond?</h3><div class=\"desc-grid\"><div class=\"desc-card\"><span class=\"desc-card-icon\">🤖</span><h4>AI & Machine Learning</h4><p>Python is the language of AI. TensorFlow, PyTorch, OpenAI, and every major AI library is built with Python.</p></div><div class=\"desc-card\"><span class=\"desc-card-icon\">🌐</span><h4>Web Development</h4><p>Django and Flask are powerful Python frameworks used by Instagram, Pinterest, and Spotify.</p></div><div class=\"desc-card\"><span class=\"desc-card-icon\">📊</span><h4>Data Science</h4><p>Pandas, NumPy, and Matplotlib make Python the data scientist's best friend.</p></div><div class=\"desc-card\"><span class=\"desc-card-icon\">🔧</span><h4>Automation</h4><p>Python can automate repetitive tasks -- file management, web scraping, Excel reports -- in just a few lines.</p></div></div><h3>Python 2 vs Python 3</h3><p>You might hear about Python 2 and Python 3. They are two different versions of the same language. Python 2 is <strong>officially dead</strong> (retired in 2020). Always learn <strong>Python 3</strong> -- it is the only version being actively developed and supported.</p><pre class=\"code-example\"># Python 2 (old, deprecated)\nprint \"Hello\"         # No parentheses needed\n\n# Python 3 (current)\nprint(\"Hello\")        # Parentheses required</pre><p>In this course, we use <strong>Python 3</strong> exclusively.</p><h3>Who Uses Python Today?</h3><ul class=\"desc-list\"><li><strong>Google</strong> -- Uses Python extensively across many services</li><li><strong>Netflix</strong> -- Recommendation engine, content delivery, and security</li><li><strong>NASA</strong> -- Mission control, simulations, and data analysis</li><li><strong>Instagram</strong> -- Entire backend infrastructure built on Django (Python)</li><li><strong>Spotify</strong> -- Backend services and data pipelines</li><li><strong>Dropbox</strong> -- Desktop client written in Python</li><li><strong>Disney</strong> -- Animation and visual effects pipelines</li></ul><div class=\"desc-callout\"><span class=\"callout-icon\">🤖</span><div><strong>Doraemon's tip:</strong> The best time to learn Python was 10 years ago. The second best time is right now. You are exactly where you need to be!</div></div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🐍 <strong>Case Study: Guido's Flying Circus & Naming Python</strong>
+    </h3>
+    <p style="font-size: 15px; color: #37474f; line-height: 1.6; margin-bottom: 16px;">
+        In 1989, a developer named <strong>Guido van Rossum</strong> wanted to create a language that was simple, clean, and most importantly—<strong>fun to use</strong>. He named it after his favorite comedy show, <em>Monty Python's Flying Circus</em>, not the snake!
+    </p>
+
+    <!-- The Zen Card -->
+    <div style="background: #ffffff; border: 2px solid #00AEEF; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">✨</span>
+        <div>
+            <strong style="color: #0288d1; font-size: 15px;">The Zen of Python:</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Python prioritizes making code <strong>beautiful and highly readable</strong>. A famous guideline says: <em>"Simple is better than complex. Readability counts."</em> This makes it the absolute best starting language for beginners.
+            </p>
+        </div>
+    </div>
+
+    <!-- Python 3 Card -->
+    <div style="background: #ffffff; border: 2px solid #e91e63; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">🚀</span>
+        <div>
+            <strong style="color: #e91e63; font-size: 15px;">Python 2 vs. Python 3:</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Python 2 is retired. Always use <strong>Python 3</strong>. The biggest visual change is that Python 3 strictly requires parentheses for outputs: <code>print("Hello")</code>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Python Domains Grid -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Why Python took over the tech world</strong>
+</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #00838f; font-size: 15px;">🤖 AI & Machine Learning</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0; line-height: 1.4;">Every major AI library (like OpenAI, TensorFlow) runs on Python.</p>
+    </div>
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #2e7d32; font-size: 15px;">📊 Data Science</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0; line-height: 1.4;">Used by scientists to analyze weather trends, finance charts, and space data.</p>
+    </div>
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #d84315; font-size: 15px;">🌐 Web Servers</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0; line-height: 1.4;">Instagram, Spotify, and YouTube use Python for their backend databases.</p>
+    </div>
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #37474f; font-size: 15px;">🔧 Easy Automation</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0; line-height: 1.4;">Write simple scripts to auto-rename files, scrap web details, or compile spreadsheets.</p>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🧑‍💻</span>
+        <strong>Guido</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The creator of Python</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🧘</span>
+        <strong>Zen of Python</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Guidelines for clean code</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🐍</span>
+        <strong>Python 3</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The current, active version</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -490,7 +849,78 @@ window.levels = [
         "description": {
             "heading": "Installing Python & Local Setup",
             "subheading": "Get Python running on your own computer",
-            "body": "<p>To start writing and running Python programs on your computer, you need to install the Python software package. This is a simple process, but there is one critical step you must not skip!</p>\n\n<h3>Step 1 -- Download the Python Installer</h3>\n<p>Open your web browser and visit the official website: <a href=\"https://www.python.org\" target=\"_blank\">python.org</a>.</p>\n<ul class=\"desc-list\">\n    <li>Hover over the <strong>Downloads</strong> menu.</li>\n    <li>Click the download button for your operating system (it will say something like <strong>Download Python 3.x.x</strong> where x is the latest version).</li>\n</ul>\n\n<h3>Step 2 -- Run the Installer</h3>\n<p>Once downloaded, locate and run the installer file. You will see a window with options. Before clicking anything else, look at the bottom of the window:</p>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>CRITICAL STEP:</strong> Check the box that says <strong>\"Add python.exe to PATH\"</strong> (or <strong>\"Add Python to PATH\"</strong>). If you forget this, your computer's terminal won't recognize Python, and you will get errors later!</div>\n</div>\n\n<p>After checking that box, click <strong>\"Install Now\"</strong>. The installation will take a few moments.</p>\n\n<h3>Step 3 -- Verify the Installation</h3>\n<p>Once installation finishes, you can verify it by opening your system's Command Prompt (Windows) or Terminal (Mac/Linux) and typing:</p>\n\n<pre class=\"code-example\">python --version</pre>\n\n<p>Press Enter. If you see something like <code>Python 3.x.x</code> displayed, congratulations! Python is successfully installed and ready to use on your machine. 🎉</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: Unboxing the Robo-Toolbox & PATH</strong>
+    </h3>
+    <p style="font-size: 15px; color: #2e7d32; line-height: 1.6; margin-bottom: 16px;">
+        Installing Python is like unboxing a new robo-toolbox on your computer. But there is one <strong>super critical setting</strong> you must check, or else your computer will not know the toolbox even exists!
+    </p>
+
+    <!-- The PATH Card -->
+    <div style="background: #ffffff; border: 2px solid #E53935; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">⚠️</span>
+        <div>
+            <strong style="color: #c62828; font-size: 15px;">Critical Step: "Add Python to PATH"</strong>
+            <p style="font-size: 14px; color: #37474f; margin: 4px 0 0 0; line-height: 1.5;">
+                When running the installer, look at the bottom of the window and check the box that says <strong>"Add Python to PATH"</strong>. Checking this registers Python with your system's path network. If you miss this, your terminal will say <em>"Python command not found"</em>!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Three Steps Cards -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🛠️ <strong>The 3-Step Setup Process</strong>
+</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- Step 1 -->
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px; text-align: center;">
+        <span style="font-size: 24px; display: block; margin-bottom: 6px;">📥</span>
+        <strong>1. Download</strong>
+        <p style="font-size: 12px; color: #546e7a; margin: 6px 0 0 0; line-height: 1.4;">Go to <a href="https://www.python.org" target="_blank" style="color: #0288d1; text-decoration: underline;">python.org</a> and grab the latest Python installer.</p>
+    </div>
+    <!-- Step 2 -->
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px; text-align: center;">
+        <span style="font-size: 24px; display: block; margin-bottom: 6px;">⚙️</span>
+        <strong>2. Install</strong>
+        <p style="font-size: 12px; color: #546e7a; margin: 6px 0 0 0; line-height: 1.4;">Run the installer, check <strong>"Add to PATH"</strong>, and click install.</p>
+    </div>
+    <!-- Step 3 -->
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px; text-align: center;">
+        <span style="font-size: 24px; display: block; margin-bottom: 6px;">✅</span>
+        <strong>3. Verify</strong>
+        <p style="font-size: 12px; color: #546e7a; margin: 6px 0 0 0; line-height: 1.4;">Open your terminal, type <code>python --version</code> and press Enter.</p>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #78909c; margin-bottom: 8px; font-size: 12px;"># Checking version in your command prompt / terminal</div>
+    <span>python --version</span>
+    <br><br>
+    <div style="color: #4caf50;">Python 3.12.0 <span style="font-family: 'Nunito', sans-serif; font-size: 12px; color: #757575;">← Successful verification output!</span></div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🌐</span>
+        <strong>python.org</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The official software site</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🗺️</span>
+        <strong>PATH</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The computer's path network</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">💻</span>
+        <strong>Terminal</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The command text interface</span>
+    </div>
+</div>`
         }
     },
     {
@@ -506,7 +936,100 @@ window.levels = [
         "description": {
             "heading": "Running Python",
             "subheading": "Interactive Shell vs Script Mode",
-            "body": "<p>Once Python is installed, you need a place to write and run your code. There are three primary environments where developers write and execute Python code: <strong>IDLE</strong>, the <strong>Terminal</strong>, and <strong>Code Editors</strong> like VS Code.</p>\n\n<h3>1. IDLE (Python's Built-in Playground)</h3>\n<p>IDLE stands for <em>Interactive Development and Learning Environment</em>. It comes bundled with the official Python installation. IDLE offers two modes:</p>\n<ul class=\"desc-list\">\n    <li><strong>Interactive Shell:</strong> When you open IDLE, you see the Shell window. Type any Python statement and press Enter -- it runs instantly! It is perfect for trying out single lines of code.</li>\n    <li><strong>Editor Window:</strong> Click <em>File &rarr; New File</em>. This opens a text editor where you can write a multi-line program, save it as a <code>.py</code> file, and run it all at once by pressing <strong>F5</strong>.</li>\n</ul>\n\n<h3>2. The Terminal (Command Line)</h3>\n<p>To run Python from your command prompt (Windows) or terminal (Mac/Linux), you navigate to the folder containing your script and execute it using the python command:</p>\n\n<pre class=\"code-example\">python script.py</pre>\n\n<p>This runs the script in <strong>Script Mode</strong>. The interpreter reads the entire file, executes all instructions, and then exits.</p>\n\n<h3>3. Code Editors (VS Code, PyCharm)</h3>\n<p>While IDLE is good for beginners, professional developers use specialized editors like <strong>Visual Studio Code (VS Code)</strong>. These tools provide advanced features like syntax highlighting, auto-completion, error checkers, and integrated terminals, making writing complex software much easier.</p>\n\n<div class=\"desc-grid\">\n    <div class=\"desc-card\"><span class=\"desc-card-icon\">💻</span><h4>Shell Mode</h4><p>Runs code line-by-line instantly. Code is not saved.</p></div>\n    <div class=\"desc-card\"><span class=\"desc-card-icon\">📄</span><h4>Script Mode</h4><p>Saved in a <code>.py</code> file. Reusable and editable.</p></div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🏭 <strong>Case Study: Doraemon's Gadget Testing Labs</strong>
+    </h3>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        To build a gadget, you need a workshop. In Python, you have three primary environments to run and test your programs:
+    </p>
+
+    <!-- Shell Mode -->
+    <div style="background: #ffffff; border: 2px solid #00AEEF; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">🐚</span>
+        <div>
+            <strong style="color: #00AEEF; font-size: 15px;">1. IDLE Interactive Shell (Shell Mode)</strong>
+            <p style="font-size: 14px; color: #37474f; margin: 4px 0 0 0; line-height: 1.5;">
+                Like throwing a gadget in the backyard to test it instantly. You type a single line of code and press Enter—it runs right away! Perfect for experimentation, but <strong>nothing is saved</strong>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Script Mode -->
+    <div style="background: #ffffff; border: 2px solid #2e7d32; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">📄</span>
+        <div>
+            <strong style="color: #2e7d32; font-size: 15px;">2. IDLE Editor Window (Script Mode)</strong>
+            <p style="font-size: 14px; color: #37474f; margin: 4px 0 0 0; line-height: 1.5;">
+                Writing a complete schematic blueprint. You write multiple lines of code, save them as a <code>.py</code> file, and run them all at once (by pressing **F5** or using your terminal).
+            </p>
+        </div>
+    </div>
+
+    <!-- Professional Workspace -->
+    <div style="background: #ffffff; border: 2px solid #37474f; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">💻</span>
+        <div>
+            <strong style="color: #37474f; font-size: 15px;">3. Advanced Workshop (VS Code)</strong>
+            <p style="font-size: 14px; color: #37474f; margin: 4px 0 0 0; line-height: 1.5;">
+                A high-tech lab equipped with automatic grammar scanners (linters), auto-complete helper tools, and integrated terminal screens to make writing large projects simple.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Comparison Grid -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Interactive Shell vs. Script Mode</strong>
+</h3>
+<div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- Shell -->
+    <div style="background: #e1f5fe; border: 2px solid #29b6f6; border-radius: 16px; padding: 18px;">
+        <strong style="color: #0288d1; font-size: 16px; display: flex; align-items: center; gap: 8px;">🐚 Shell Mode (Quick Play)</strong>
+        <ul style="font-size: 13px; color: #0288d1; line-height: 1.6; margin: 12px 0 0 16px; padding: 0; font-weight: 600;">
+            <li>Runs code line-by-line instantly.</li>
+            <li>No files are created.</li>
+            <li>Good for quick testing.</li>
+            <li>Work is lost when closed.</li>
+        </ul>
+    </div>
+    <!-- Script -->
+    <div style="background: #e8f5e9; border: 2px solid #66bb6a; border-radius: 16px; padding: 18px;">
+        <strong style="color: #2e7d32; font-size: 16px; display: flex; align-items: center; gap: 8px;">📄 Script Mode (Blueprint)</strong>
+        <ul style="font-size: 13px; color: #2e7d32; line-height: 1.6; margin: 12px 0 0 16px; padding: 0; font-weight: 600;">
+            <li>Saved as a reusable <code>.py</code> file.</li>
+            <li>Runs all instructions at once.</li>
+            <li>Used for building actual software.</li>
+            <li>Can be shared and edited later.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #78909c; margin-bottom: 8px; font-size: 12px;"># Running your script from the terminal</div>
+    <span>python script.py</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🐚</span>
+        <strong>Shell Mode</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Immediate, throwaway tests</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📄</span>
+        <strong>Script Mode</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Saved, reusable programs</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🛠️</span>
+        <strong>VS Code</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Professional coding lab</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -622,7 +1145,93 @@ window.levels = [
         "description": {
             "heading": "Writing Your First Program",
             "subheading": "Saying hello to the computer",
-            "body": "<p>Every programming journey begins with a classic program: printing a message to the screen. In Python, this is done using the <strong><code>print()</code></strong> function.</p>\n\n<h3>Anatomy of a print() Statement</h3>\n<p>To print text, you write the function name <code>print</code>, followed by parentheses, and put the text inside quotation marks:</p>\n\n<pre class=\"code-example\">print(\"Hello, World!\")</pre>\n\n<p>Let's break down the rules of this instruction:</p>\n<ul class=\"desc-list\">\n    <li><strong>print:</strong> This is the name of the function. It must be written in all <strong>lowercase</strong>. Python is case-sensitive, so writing <code>Print()</code> or <code>PRINT()</code> will result in an error.</li>\n    <li><strong>Parentheses ():</strong> These tell Python to run the function. Anything you want to print must go inside these brackets.</li>\n    <li><strong>Quotes \"\":</strong> Text inside quotes is known as a <strong>string</strong>. You can use double quotes (<code>\"</code>) or single quotes (<code>'</code>), as long as they match. For example, <code>print('Hello!')</code> is perfect, but <code>print(\"Hello')</code> is a syntax error.</li>\n</ul>\n\n<h3>Printing Numbers</h3>\n<p>Unlike text, numbers do not require quotation marks. You can print them directly or even print the result of math calculations:</p>\n\n<pre class=\"code-example\">print(42)        # Prints the number 42\nprint(10 + 5)    # Calculates and prints: 15\nprint(\"10 + 5\")  # Prints the literal text: 10 + 5</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Case Sensitivity:</strong> Python is very strict! Writing <code>Print(\"Hello\")</code> causes a <strong>NameError</strong> because Python does not recognize the word with a capital 'P'. Always use lowercase!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e3f2fd 0%, #e8eaf6 100%); border: 3px solid #3f51b5; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(63, 81, 181, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1a237e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📢 <strong>Case Study: Nobita & the Speaker Gadget</strong>
+    </h3>
+    <p style="font-size: 15px; color: #37474f; line-height: 1.6; margin-bottom: 16px;">
+        Nobita wants to make Doraemon's <strong>Loudspeaker Gadget</strong> announce a message to the town. To do this, he must use the <code>print()</code> instruction. But the loudspeaker is a computer—it has strict syntax rules!
+    </p>
+
+    <!-- Rules Grid -->
+    <div style="background: #ffffff; border: 2px solid #ef5350; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">⚠️</span>
+        <div>
+            <strong style="color: #c62828; font-size: 15px;">Case Sensitivity Mistake:</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Nobita types <code>Print("Hello!")</code> with a capital 'P'. The loudspeaker sounds an alarm: **NameError!** It only knows the lowercase word <code>print</code>. Python treats capital and lowercase letters as completely different things!
+            </p>
+        </div>
+    </div>
+
+    <!-- Parentheses Check -->
+    <div style="background: #ffffff; border: 2px solid #2e7d32; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">💡</span>
+        <div>
+            <strong style="color: #2e7d32; font-size: 15px;">The Speaker Rule:</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                You must wrap the message in parentheses <code>()</code>. Think of them as the hands holding the megaphone. Inside the hands, you place the text inside quote marks: <code>"Hello, Doraemon!"</code>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Quote Explanation -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Why do we need quotes? (Text vs. Numbers)</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    Quotes tell Python that the text is literal message characters (a <strong>string</strong>). If you write numbers, you don't need quotes because Python knows how to do math automatically:
+</p>
+
+<div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- Text -->
+    <div style="background: #fff3e0; border: 2px solid #ffb74d; border-radius: 16px; padding: 18px;">
+        <strong style="color: #e65100; font-size: 16px; display: flex; align-items: center; gap: 8px;">📝 Printing Text (Strings)</strong>
+        <pre style="margin-top: 8px; font-family: monospace; font-size: 12.5px; color: #5d4037;">print("10 + 5")</pre>
+        <span style="font-size: 12px; color: #8d6e63; display: block; margin-top: 8px;">
+            Outputs: <strong>10 + 5</strong> (literal text)
+        </span>
+    </div>
+    <!-- Numbers -->
+    <div style="background: #e8f5e9; border: 2px solid #81c784; border-radius: 16px; padding: 18px;">
+        <strong style="color: #2e7d32; font-size: 16px; display: flex; align-items: center; gap: 8px;">📊 Printing Calculations</strong>
+        <pre style="margin-top: 8px; font-family: monospace; font-size: 12.5px; color: #2e7d32;">print(10 + 5)</pre>
+        <span style="font-size: 12px; color: #2e7d32; display: block; margin-top: 8px;">
+            Outputs: <strong>15</strong> (calculates value)
+        </span>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #9e9e9e; margin-bottom: 8px; font-size: 12px;"># Anatomy of the print function</div>
+    <span style="color: #0288d1; font-weight: bold;">print</span>(<span style="color: #4caf50;">"Hello"</span>)
+    <br><br>
+    <div style="font-family: 'Nunito', sans-serif; font-size: 13px; color: #78909c; border-top: 1px solid #cfd8dc; padding-top: 8px;">
+        📢 <code>print</code> is the function, <code>()</code> runs it, and <code>"Hello"</code> is the string data.
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📢</span>
+        <strong>print()</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Output to screen</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📝</span>
+        <strong>String</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Text wrapped in quotes</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔤</span>
+        <strong>Case Sensitive</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">print is NOT Print</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -738,7 +1347,72 @@ window.levels = [
         "description": {
             "heading": "Comments in Python",
             "subheading": "Writing notes for humans inside your code",
-            "body": "<p>As programs grow larger, understanding what the code does becomes more difficult. To help humans read and maintain code, Python allows you to write <strong>comments</strong>.</p>\n\n<h3>What is a Comment?</h3>\n<p>A comment is a line or part of a line in your source code that is completely ignored by the Python interpreter. When Python runs your program, it skips right over comments. They are strictly for programmers to read.</p>\n\n<h3>How to Write a Comment</h3>\n<p>In Python, single-line comments start with the hash symbol (<strong><code>#</code></strong>). Everything to the right of the <code>#</code> on that line is treated as a comment:</p>\n\n<pre class=\"code-example\"># This is a full-line comment\nprint(\"Hello, World!\")  # This is an inline comment</pre>\n\n<h3>Why Do Comments Matter?</h3>\n<p>Comments are vital for two main reasons:</p>\n<ul class=\"desc-list\">\n    <li><strong>Documentation:</strong> Explaining *why* code was written in a certain way. This is incredibly helpful when you (or other team members) review the code months later.</li>\n    <li><strong>Debugging (Commenting Out Code):</strong> If you want to test your program without running a specific line, you can place a <code>#</code> in front of it. Python will skip it without you having to delete the line!</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>No Multi-line Comment Syntax:</strong> Unlike languages like Java or CSS that use <code>/* ... */</code>, Python does not have a special symbol for multi-line comments. You must write a <code>#</code> at the start of every single comment line!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); border: 3px solid #009688; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 150, 136, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #004d40; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🕵️‍♂️ <strong>Case Study: Doraemon's Invisible Crayon</strong>
+    </h3>
+    <p style="font-size: 15px; color: #00796b; line-height: 1.6; margin-bottom: 16px;">
+        To make notes that only humans can see, Doraemon uses an **Invisible Crayon** represented by the hash (<code>#</code>) symbol. 
+    </p>
+
+    <!-- Invisible Crayon Card -->
+    <div style="background: #ffffff; border: 2px solid #009688; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">#️</span>
+        <div>
+            <strong style="color: #004d40; font-size: 15px;">The Ignored Crayon (Comments)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                When Python's interpreter sees a line starting with <code>#</code>, it behaves as if it's wearing a **Stone Hat**—it ignores the line completely and skips to the next step. It's invisible to the computer, but perfectly readable for humans!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Why comments matter -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Why do comments matter?</strong>
+</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #00695c; font-size: 15px;">📝 Code Documentation</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0; line-height: 1.4;">Leave clues explaining why you wrote a certain logic so future-you understands it.</p>
+    </div>
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #b71c1c; font-size: 15px;">🛠️ Commenting Out Code</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0; line-height: 1.4;">Temporarily place <code>#</code> at the start of a line to skip it during testing instead of deleting it.</p>
+    </div>
+</div>
+
+<!-- Comment Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span style="color: #757575;"># This entire line is ignored. It is a comment.</span>
+    <br>
+    <span style="color: #0288d1;">print</span>(<span style="color: #4caf50;">"This line runs"</span>)  <span style="color: #757575;"># This is an inline comment!</span>
+</div>
+
+<!-- Warning -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #5d4037;">
+    <strong>⚠️ Warning:</strong> Python does not have a multi-line comment command like <code>/* */</code>. To write a paragraph comment, you must put a <code>#</code> at the start of every single line!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">#️</span>
+        <strong>Hash Symbol</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts a comment</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">👁️</span>
+        <strong>Invisible</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Ignored by Python</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🎓</span>
+        <strong>Debugging</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Toggle code on/off</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -854,7 +1528,83 @@ window.levels = [
         "description": {
             "heading": "Variables in Python",
             "subheading": "Storing values in your program's memory",
-            "body": "<p>To write useful programs, we need a way to store data so we can reuse and modify it later. In programming, we do this using <strong>variables</strong>.</p>\n\n<h3>What is a Variable?</h3>\n<p>A variable is a labeled storage box inside your computer's memory. You can store values (like text or numbers) in this box, change the contents whenever you want, and reference it by its label name.</p>\n\n<h3>Variable Assignment (=)</h3>\n<p>In Python, you create a variable and give it a value using the assignment operator (<strong><code>=</code></strong>):</p>\n\n<pre class=\"code-example\">pocket = \"Anywhere Door\"\nscore = 99</pre>\n\n<p>This tells Python:</p>\n<ul class=\"desc-list\">\n    <li>Create a memory box and label it <code>pocket</code>. Store the text <code>\"Anywhere Door\"</code> inside it.</li>\n    <li>Create another memory box and label it <code>score</code>. Store the number <code>99</code> inside it.</li>\n</ul>\n\n<h3>Using Variables</h3>\n<p>Once a variable is created, you can access its contents by writing its name (without quotation marks!):</p>\n\n<pre class=\"code-example\">message = \"Hello, Doraemon!\"\nprint(message)    # Prints: Hello, Doraemon!\nprint(\"message\")  # Prints the literal text: message</pre>\n\n<h3>Variable Reassignment</h3>\n<p>Variables are called \"variables\" because their values can vary. You can overwrite the old value in a variable by assigning it a new value at any time:</p>\n\n<pre class=\"code-example\">target = \"Apple\"\ntarget = \"Banana\"\nprint(target)  # Prints: Banana (the old value 'Apple' is replaced!)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>No Declaration Needed:</strong> In languages like Java or C++, you have to state the variable type (like int or String) before using it. Python is dynamically typed -- you create a variable the exact moment you assign a value to it!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8e24aa; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(142, 36, 170, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4a148c; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📦 <strong>Case Study: Doraemon's Labeled Containers</strong>
+    </h3>
+    <p style="font-size: 15px; color: #4a148c; line-height: 1.6; margin-bottom: 16px;">
+        To keep his 4D pocket organized, Doraemon keeps his gadgets inside **Labeled Storage Boxes** called **Variables**.
+    </p>
+
+    <!-- Assignment hand -->
+    <div style="background: #ffffff; border: 2px solid #8e24aa; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">📥</span>
+        <div>
+            <strong style="color: #4a148c; font-size: 15px;">Storing values with '='</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Writing <code>pocket_item = "Anywhere Door"</code> tells Python: *"Create a box, label it <code>pocket_item</code>, and drop <code>"Anywhere Door"</code> inside it."* The <code>=</code> is the hand putting the item in the box.
+            </p>
+        </div>
+    </div>
+
+    <!-- Reassignment box -->
+    <div style="background: #ffffff; border: 2px solid #e91e63; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">🔄</span>
+        <div>
+            <strong style="color: #e91e63; font-size: 15px;">Swapping Box Contents (Reassignment)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                If you later write <code>pocket_item = "Bamboo Copter"</code>, Python opens the box, throws away the Anywhere Door, and puts the Bamboo Copter inside. The box now only stores the new item!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Value vs Variable -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Using Variable Names vs. Text Quotes</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    Once a box is labeled, you can print its contents by using its name *without* quotes. Quotes tell Python to print the literal label characters, not what's inside:
+</p>
+
+<div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- Print Contents -->
+    <div style="background: #e8f5e9; border: 2px solid #81c784; border-radius: 16px; padding: 18px;">
+        <strong style="color: #2e7d32; font-size: 16px; display: flex; align-items: center; gap: 8px;">📦 Print Box Contents</strong>
+        <pre style="margin-top: 8px; font-family: monospace; font-size: 12.5px; color: #2e7d32;">print(pocket_item)</pre>
+        <span style="font-size: 12px; color: #2e7d32; display: block; margin-top: 8px;">
+            Outputs: <strong>Bamboo Copter</strong> (inside the box)
+        </span>
+    </div>
+    <!-- Print Literal label -->
+    <div style="background: #ffebee; border: 2px solid #ef5350; border-radius: 16px; padding: 18px;">
+        <strong style="color: #c62828; font-size: 16px; display: flex; align-items: center; gap: 8px;">🏷️ Print Literal Text Label</strong>
+        <pre style="margin-top: 8px; font-family: monospace; font-size: 12.5px; color: #c62828;">print("pocket_item")</pre>
+        <span style="font-size: 12px; color: #c62828; display: block; margin-top: 8px;">
+            Outputs: <strong>pocket_item</strong> (literally prints label text)
+        </span>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📦</span>
+        <strong>Variable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Labeled memory box</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🧬</span>
+        <strong>Assignment</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Storing with <code>=</code></span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚡</span>
+        <strong>Dynamic Typing</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Create boxes instantly</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -970,7 +1720,73 @@ window.levels = [
         "description": {
             "heading": "Rules for Naming Variables",
             "subheading": "How to avoid SyntaxErrors in Python naming",
-            "body": "<p>In Python, you can name your variables almost anything, but there are some strict rules you must follow. If you break these rules, Python will throw a <strong>SyntaxError</strong> and refuse to run your program.</p>\n\n<h3>The 5 Strict Naming Rules</h3>\n<div class=\"desc-grid\">\n    <div class=\"desc-card\"><span class=\"desc-card-icon\">1️⃣</span><h4>Start Right</h4><p>Variable names must start with a letter (a-z, A-Z) or an underscore (<code>_</code>). They <strong>cannot start with a number</strong>.</p></div>\n    <div class=\"desc-card\"><span class=\"desc-card-icon\">2️⃣</span><h4>Only Safe Characters</h4><p>Names can only contain letters, numbers, and underscores (<code>a-z, A-Z, 0-9, _</code>). No spaces, dashes, or special symbols (like $, !, @, %) are allowed.</p></div>\n    <div class=\"desc-card\"><span class=\"desc-card-icon\">3️⃣</span><h4>No Keywords</h4><p>You cannot use Python's reserved keywords (like <code>if</code>, <code>else</code>, <code>while</code>, <code>for</code>, <code>def</code>, <code>import</code>) as variable names.</p></div>\n    <div class=\"desc-card\"><span class=\"desc-card-icon\">4️⃣</span><h4>Case Sensitive</h4><p>Capitalization matters! <code>myVar</code> and <code>myvar</code> are treated as two completely different variables.</p></div>\n</div>\n\n<h3>Examples: Valid vs Invalid</h3>\n<ul class=\"desc-list\">\n    <li><strong>Valid:</strong> <code>gadget</code>, <code>_pocket</code>, <code>score_1</code>, <code>doraemon_pocket</code></li>\n    <li><strong>Invalid:</strong> <code>1score</code> (starts with a number), <code>user age</code> (contains a space), <code>total-cost</code> (contains a hyphen), <code>class</code> (reserved keyword)</li>\n</ul>\n\n<h3>Python Naming Conventions</h3>\n<p>While not a strict rule, Python programmers follow a style guide called PEP 8. It recommends using <strong>snake_case</strong> for multi-word variables (all lowercase letters, with words separated by underscores):</p>\n\n<blockquote class=\"desc-callout callout-highlight\">\n    <strong>Best Practice Example:</strong> <code>dorayaki_count = 5</code> (snake_case)\n</blockquote>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🏷️ <strong>Case Study: Doraemon's Labeling Machine</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon uses a <strong>Labeling Machine</strong> to generate labels for his gadget boxes. But this machine has 4 strict rules. If you print an invalid label, it raises a **SyntaxError**!
+    </p>
+
+    <!-- Naming rules grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+        <!-- Rule 1 -->
+        <div style="background: #ffffff; border: 1px solid #ffcc80; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+            <strong style="color: #e65100;">1️⃣ No starting with numbers</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">Labels can start with letters or underscores, but never numbers. <code>dora_1</code> is OK, but <code>1_dora</code> fails!</p>
+        </div>
+        <!-- Rule 2 -->
+        <div style="background: #ffffff; border: 1px solid #ffcc80; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+            <strong style="color: #e65100;">2️⃣ No empty spaces</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">No spaces or dashes allowed. Use underscores: <code>dorayaki_box</code> is correct, not <code>dorayaki box</code>.</p>
+        </div>
+        <!-- Rule 3 -->
+        <div style="background: #ffffff; border: 1px solid #ffcc80; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+            <strong style="color: #e65100;">3️⃣ No Python keywords</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">You can't name boxes <code>print</code>, <code>if</code>, or <code>def</code> since Python reserves these for its own system.</p>
+        </div>
+        <!-- Rule 4 -->
+        <div style="background: #ffffff; border: 1px solid #ffcc80; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+            <strong style="color: #e65100;">4️⃣ Case Sensitive</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">Capitalization matters! <code>doraPocket</code> and <code>dorapocket</code> are two completely separate boxes.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Naming Conventions -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🐍 <strong>Best Practices: Naming Conventions</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    Although Python allows CamelCase, the official style guide (PEP 8) recommends writing multi-word variables in all lowercase separated by underscores. This style is called <strong>snake_case</strong>:
+</p>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span style="color: #4caf50;">dorayaki_count = 5</span>  <span style="color: #757575; font-size: 12px; font-family: 'Nunito', sans-serif;">← Valid, beautiful snake_case! ✅</span>
+    <br><br>
+    <span style="color: #f44336;">dorayaki count = 5</span>  <span style="color: #757575; font-size: 12px; font-family: 'Nunito', sans-serif;">← Invalid space! SyntaxError ❌</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🐍</span>
+        <strong>snake_case</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Words joined by underscores</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔑</span>
+        <strong>Keywords</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Reserved system commands</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚫</span>
+        <strong>SyntaxError</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Raised on invalid labels</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1086,7 +1902,78 @@ window.levels = [
         "description": {
             "heading": "Basic Data Types",
             "subheading": "Integers, Floats, Strings, and Booleans",
-            "body": "<p>In programming, computers don't just store generic values; they classify data into specific categories called <strong>data types</strong>. Knowing the data type tells Python what kind of value it is and what operations can be performed on it.</p>\n\n<h3>The 4 Core Data Types in Python</h3>\n<ul class=\"desc-list\">\n    <li><strong>Integer (<code>int</code>):</strong> Whole numbers without decimal points. They can be positive, negative, or zero. Examples: <code>10</code>, <code>-5</code>, <code>0</code>.</li>\n    <li><strong>Floating-Point (<code>float</code>):</strong> Decimal numbers. Used for precise math. Examples: <code>3.14</code>, <code>-10.5</code>, <code>0.0</code>.</li>\n    <li><strong>String (<code>str</code>):</strong> Text values enclosed inside quotation marks. Anything inside quotes is a string, even numbers! Examples: <code>\"Doraemon\"</code>, <code>'Python'</code>, <code>\"123\"</code>.</li>\n    <li><strong>Boolean (<code>bool</code>):</strong> Logical values that can only be either <code>True</code> or <code>False</code>. First letters must be capitalized! Examples: <code>True</code>, <code>False</code>.</li>\n</ul>\n\n<h3>Checking Data Types with type()</h3>\n<p>Python has a built-in function called <code>type()</code> that tells you the exact type of any value or variable:</p>\n\n<pre class=\"code-example\">print(type(42))        # Outputs: &lt;class 'int'&gt;\nprint(type(9.9))       # Outputs: &lt;class 'float'&gt;\nprint(type(\"Hello\"))   # Outputs: &lt;class 'str'&gt;\nprint(type(True))      # Outputs: &lt;class 'bool'&gt;</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Strings vs Numbers:</strong> Be careful! <code>print(type(5))</code> is an <code>int</code>, but <code>print(type(\"5\"))</code> is a <code>str</code>. You cannot perform mathematical operations on text numbers without converting them first!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e0f7fa 0%, #e0f2f1 100%); border: 3px solid #00acc1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 172, 193, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #006064; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔍 <strong>Case Study: Doraemon's Sorting Sieve</strong>
+    </h3>
+    <p style="font-size: 15px; color: #004d40; line-height: 1.6; margin-bottom: 16px;">
+        To keep data organized, Python classifies everything you write into 4 core categories using a **Sorting Sieve** (Data Types):
+    </p>
+
+    <!-- 4 Types Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <!-- int -->
+        <div style="background: #ffffff; border: 1.5px solid #00acc1; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+            <strong style="color: #00acc1;">🔢 Integer (int)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Whole numbers without decimal points. Positive or negative. E.g. <code>10</code>, <code>-5</code>.</p>
+        </div>
+        <!-- float -->
+        <div style="background: #ffffff; border: 1.5px solid #00acc1; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+            <strong style="color: #00acc1;">📊 Floating-Point (float)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Numbers with decimal points. E.g. <code>3.14</code>, <code>-10.5</code>.</p>
+        </div>
+        <!-- str -->
+        <div style="background: #ffffff; border: 1.5px solid #00acc1; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+            <strong style="color: #00acc1;">📝 String (str)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Text values wrapped inside quote marks. E.g. <code>"Doraemon"</code>, <code>"123"</code>.</p>
+        </div>
+        <!-- bool -->
+        <div style="background: #ffffff; border: 1.5px solid #00acc1; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+            <strong style="color: #00acc1;">✅ Boolean (bool)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Logical values that are either <code>True</code> or <code>False</code> (capitalized!).</p>
+        </div>
+    </div>
+</div>
+
+<!-- Type check -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🔍 <strong>Checking Types using type()</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    If you're unsure of what category a box belongs to, you can use the <code>type()</code> diagnostic function:
+</p>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span style="color: #0288d1;">print</span>(<span style="color: #8e24aa;">type</span>(<span style="color: #4caf50;">"Doraemon"</span>))  <span style="color: #757575;"># Outputs: &lt;class 'str'&gt;</span>
+    <br>
+    <span style="color: #0288d1;">print</span>(<span style="color: #8e24aa;">type</span>(<span style="color: #ff9800;">42</span>))          <span style="color: #757575;"># Outputs: &lt;class 'int'&gt;</span>
+</div>
+
+<!-- Warning -->
+<div style="background: #ffebee; border-left: 5px solid #f44336; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #c62828;">
+    <strong>⚠️ Strings vs. Numbers:</strong> Writing <code>5</code> is an integer, but <code>"5"</code> is a string. You cannot add 1 to <code>"5"</code> without converting it first!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">int</span>
+        <strong>Integer</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Whole numbers</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">str</span>
+        <strong>String</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Text inside quotes</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">bool</span>
+        <strong>Boolean</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">True / False</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1202,7 +2089,83 @@ window.levels = [
         "description": {
             "heading": "Type Conversion & Casting",
             "subheading": "Converting data categories manually and automatically",
-            "body": "<p>In Python, you often need to convert values from one data type to another. For example, you cannot do math with a string like <code>\"5\"</code> -- you must convert it to a number first. This process is called <strong>Type Conversion</strong> or <strong>Type Casting</strong>.</p>\n\n<h3>1. Implicit Type Conversion (Automatic)</h3>\n<p>Sometimes, Python converts data types automatically. For example, if you add an integer to a float, Python will convert the integer to a float first so that it doesn't lose decimal precision:</p>\n\n<pre class=\"code-example\">result = 10 + 5.5\nprint(result)  # Outputs: 15.5\nprint(type(result))  # Outputs: &lt;class 'float'&gt;</pre>\n\n<h3>2. Explicit Type Casting (Manual)</h3>\n<p>To convert data types manually, you use built-in functions. Here are the most common ones:</p>\n<ul class=\"desc-list\">\n    <li><strong><code>int()</code>:</strong> Converts a value to an integer. If converting a float, it chops off the decimal part (truncation). Example: <code>int(7.9)</code> becomes <code>7</code>.</li>\n    <li><strong><code>float()</code>:</strong> Converts a value to a float. Example: <code>float(5)</code> becomes <code>5.0</code>.</li>\n    <li><strong><code>str()</code>:</strong> Converts a value to a text string. Example: <code>str(42)</code> becomes <code>\"42\"</code>.</li>\n    <li><strong><code>bool()</code>:</strong> Converts a value to a boolean. Zero (<code>0</code>), <code>None</code>, and empty containers (like <code>\"\"</code>) become <code>False</code>; all other values become <code>True</code>.</li>\n</ul>\n\n<h3>Common Type Casting Pitfalls</h3>\n<p>Trying to cast incompatible types will trigger a <strong>ValueError</strong>. For example, writing <code>int(\"hello\")</code> or <code>int(\"5.5\")</code> directly will crash your program. To convert the string <code>\"5.5\"</code> to an integer, you must first convert it to a float, and then to an integer: <code>int(float(\"5.5\"))</code>.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border: 3px solid #e91e63; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(233, 30, 99, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #880e4f; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🪄 <strong>Case Study: Doraemon's Morphing Ray</strong>
+    </h3>
+    <p style="font-size: 15px; color: #880e4f; line-height: 1.6; margin-bottom: 16px;">
+        To perform arithmetic on text numbers (like <code>"5"</code>), Nobita uses Doraemon's **Morphing Ray** (Type Casting) to change their classification:
+    </p>
+
+    <!-- Ray functions -->
+    <div style="background: #ffffff; border: 2px solid #e91e63; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">⚡</span>
+        <div>
+            <strong style="color: #880e4f; font-size: 15px;">Manual Casting (Explicit)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                You use built-in functions: <code>int("5")</code> becomes number <code>5</code>. <code>float(10)</code> becomes decimal <code>10.0</code>. <code>str(42)</code> becomes text <code>"42"</code>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Automatic conversion -->
+    <div style="background: #ffffff; border: 2px solid #4caf50; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">⚙️</span>
+        <div>
+            <strong style="color: #2e7d32; font-size: 15px;">Automatic Casting (Implicit)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Python converts data automatically if safe. For example, adding whole number <code>10</code> to decimal <code>5.5</code> makes the whole calculation yield float <code>15.5</code> automatically.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Comparison Grid -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Manual Conversion Pitfalls</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    Not everything can be morphed! Trying to morph text letters into numbers raises a **ValueError**:
+</p>
+
+<div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- Invalid -->
+    <div style="background: #ffebee; border: 2px solid #ef5350; border-radius: 16px; padding: 18px;">
+        <strong style="color: #c62828; font-size: 16px; display: flex; align-items: center; gap: 8px;">❌ Invalid Casting</strong>
+        <pre style="margin-top: 8px; font-family: monospace; font-size: 12.5px; color: #c62828;">int("hello")</pre>
+        <span style="font-size: 12px; color: #8d6e63; display: block; margin-top: 8px;">
+            Crashes with a <strong>ValueError</strong>!
+        </span>
+    </div>
+    <!-- Valid -->
+    <div style="background: #e8f5e9; border: 2px solid #81c784; border-radius: 16px; padding: 18px;">
+        <strong style="color: #2e7d32; font-size: 16px; display: flex; align-items: center; gap: 8px;">✅ Double Casting Solution</strong>
+        <pre style="margin-top: 8px; font-family: monospace; font-size: 12.5px; color: #2e7d32;">int(float("5.5"))</pre>
+        <span style="font-size: 12px; color: #2e7d32; display: block; margin-top: 8px;">
+            Converts to float <code>5.5</code>, then chops decimal to yield <code>5</code>.
+        </span>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">int()</span>
+        <strong>Truncation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Chops off float decimals</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">bool()</span>
+        <strong>Boolean Cast</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">0/Empty = False, else True</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚫</span>
+        <strong>ValueError</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Raised on bad conversion</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1318,7 +2281,63 @@ window.levels = [
         "description": {
             "heading": "Reading User Input",
             "subheading": "Making your programs interactive with input()",
-            "body": "<p>Up until now, our programs have only printed static outputs. To make a program truly interactive, we need to accept data from the user. In Python, this is done using the <strong><code>input()</code></strong> function.</p>\n\n<h3>Basic Usage</h3>\n<p>The <code>input()</code> function pauses the program and waits for the user to type something. You can provide a text message (called a <strong>prompt</strong>) to guide the user:</p>\n\n<pre class=\"code-example\">name = input(\"Enter your name: \")\nprint(\"Hello, \" + name)</pre>\n\n<h3>The Golden Rule of input()</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Always a String:</strong> The <code>input()</code> function <strong>always returns a string (str)</strong>, even if the user types a number! For example, if you type <code>25</code>, Python stores the text <code>\"25\"</code>.</div>\n</div>\n\n<h3>Reading Numbers (Type Casting Input)</h3>\n<p>Since <code>input()</code> always returns text, you cannot perform math operations on it directly. If you want to read an integer or a float, you must wrap the <code>input()</code> function inside <code>int()</code> or <code>float()</code>:</p>\n\n<pre class=\"code-example\"># Read as integer\nage = int(input(\"Enter your age: \"))\nprint(age + 1)  # Works perfectly!\n\n# Read as decimal\nheight = float(input(\"Enter your height (in meters): \"))\nprint(height)</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        👂 <strong>Case Study: Doraemon's Questioning Ear</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        To make programs interactive, Doraemon uses the **Questioning Ear** (the <code>input()</code> function). It pauses program execution, asks a question, and waits for Nobita to type an answer.
+    </p>
+
+    <!-- Golden Rule -->
+    <div style="background: #ffffff; border: 2px solid #ffb300; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">⚠️</span>
+        <div>
+            <strong style="color: #ff8f00; font-size: 15px;">The Golden Rule: input() is ALWAYS Text</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                The Questioning Ear always returns user answers as a **text string (str)**, even if you type a number! If you enter <code>25</code>, it returns the text <code>"25"</code>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Type Casting Input -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Reading Numbers (Casting User Answers)</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    To perform math calculations on user numbers, you must warp the <code>input()</code> statement inside a morphing ray function like <code>int()</code> or <code>float()</code>:
+</p>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #78909c; margin-bottom: 8px; font-size: 12px;"># Wrapping input to convert text to number</div>
+    <span style="color: #a1005b;">age</span> = <span style="color: #0288d1;">int</span>(<span style="color: #8e24aa;">input</span>(<span style="color: #4caf50;">"Enter your age: "</span>))
+    <br><br>
+    <div style="font-family: 'Nunito', sans-serif; font-size: 13px; color: #78909c; border-top: 1px solid #cfd8dc; padding-top: 8px;">
+        💡 <code>input()</code> pauses the execution, and <code>int()</code> immediately casts the returned text to a math integer.
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">👂</span>
+        <strong>input()</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Read console entry</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">💬</span>
+        <strong>Prompt</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The helper text query</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚠️</span>
+        <strong>String Output</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Requires type conversion</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1434,7 +2453,79 @@ window.levels = [
         "description": {
             "heading": "Output Formatting",
             "subheading": "Styling and presenting printed text",
-            "body": "<p>When printing messages, presenting your data cleanly is very important. Python offers three primary ways to format output statements.</p>\n\n<h3>1. String Concatenation (+)</h3>\n<p>You can join multiple strings together using the <code>+</code> operator. Note that you must handle spacing manually, and you can only concatenate strings (non-strings must be explicitly cast to <code>str</code>):</p>\n\n<pre class=\"code-example\">name = \"Nobita\"\nprint(\"Hello \" + name + \"!\")  # Outputs: Hello Nobita!</pre>\n\n<h3>2. Using Commas (,)</h3>\n<p>Inside the <code>print()</code> function, you can separate different values with commas. Python automatically converts other data types (like numbers) to text and inserts a single space between the items:</p>\n\n<pre class=\"code-example\">age = 10\nprint(\"Age:\", age)  # Outputs: Age: 10</pre>\n\n<h3>3. f-Strings (Formatted String Literals)</h3>\n<p>This is the modern and most popular way! Prefix your string with the letter <code>f</code> or <code>F</code>. You can then insert variables or expressions directly inside the text by wrapping them in curly braces <code>{}</code>:</p>\n\n<pre class=\"code-example\">name = \"Doraemon\"\nitems = 4\nprint(f\"{name} has {items} gadgets.\")  # Outputs: Doraemon has 4 gadgets.</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>f-String Power:</strong> You can even run calculations directly inside f-string curly braces! For example, <code>print(f\"Next year I will be {age + 1}\")</code> will calculate and display <code>11</code>.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 3px solid #ff9800; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(255, 152, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎀 <strong>Case Study: Doraemon's Message Ribbon</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon wants to print decorative banner messages. He has 3 ways to format his text output:
+    </p>
+
+    <!-- Three Methods -->
+    <div style="background: #ffffff; border: 2.5px solid #e53935; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #c62828;">1. String Concatenation (+)</strong>
+        <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Gluing text ribbons together. You must handle spacing yourself, and you can only glue string data types!</p>
+    </div>
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #2e7d32;">2. Comma Separation (,)</strong>
+        <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Separator commas inside <code>print()</code>. Python auto-converts types to text and adds a space automatically.</p>
+    </div>
+    <div style="background: #ffffff; border: 2.5px solid #00acc1; border-radius: 12px; font-size: 13.5px; padding: 12px;">
+        <strong style="color: #00acc1;">3. f-Strings (Magic Ribbon)</strong>
+        <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">The absolute best way! Prefix string with <code>f</code>, then place variables inside curly brackets: <code>f"I have {gadgets}"</code>.</p>
+    </div>
+</div>
+
+<!-- Comparison Block -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Concatenation vs. Commas vs. f-Strings</strong>
+</h3>
+<div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <!-- + -->
+    <div style="background: #ffebee; border: 1.5px solid #ef5350; border-radius: 12px; padding: 12px; font-size: 12px;">
+        <strong style="color: #c62828;">Concatenation (+)</strong>
+        <pre style="margin-top: 6px; font-size: 11px;">"Hi " + name</pre>
+        <span style="color: #777; display: block; margin-top: 6px;">Only joins strings. Needs manual spaces.</span>
+    </div>
+    <!-- , -->
+    <div style="background: #e8f5e9; border: 1.5px solid #81c784; border-radius: 12px; padding: 12px; font-size: 12px;">
+        <strong style="color: #2e7d32;">Comma (,)</strong>
+        <pre style="margin-top: 6px; font-size: 11px;">print("Age:", 10)</pre>
+        <span style="color: #777; display: block; margin-top: 6px;">Auto space and conversion. Simple output.</span>
+    </div>
+    <!-- f -->
+    <div style="background: #e0f7fa; border: 1.5px solid #4dd0e1; border-radius: 12px; padding: 12px; font-size: 12px;">
+        <strong style="color: #00838f;">f-String (f)</strong>
+        <pre style="margin-top: 6px; font-size: 11px;">f"I am {age}"</pre>
+        <span style="color: #777; display: block; margin-top: 6px;">Highly readable. Auto converts. Recommended!</span>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #78909c; margin-bottom: 8px; font-size: 12px;"># Calculations inline inside f-strings</div>
+    <span>print(<span style="color: #a1005b;">f</span>"Next year: <span style="color: #00acc1;">{age + 1}</span>")</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">➕</span>
+        <strong>Concatenation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Joining strings with +</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">f""</span>
+        <strong>f-String</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Modern variable embed</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">{}</span>
+        <strong>Curly Braces</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Expression placeholder</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1550,7 +2641,68 @@ window.levels = [
         "description": {
             "heading": "Keywords in Python",
             "subheading": "Python's reserved vocabulary",
-            "body": "<p>Just like human languages have specific words with fixed, unchangeable meanings, programming languages have <strong>reserved words</strong> called <strong>keywords</strong>.</p>\n\n<h3>What are Keywords?</h3>\n<p>Keywords are words that have a special predefined meaning and utility in Python. The Python interpreter uses them to understand the structure, loops, logic, and commands of your program.</p>\n\n<h3>The Golden Rule of Keywords</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Syntax Error:</strong> Because keywords are reserved by the language, <strong>you cannot use them as variable names, function names, or any other identifiers</strong>! Doing so will result in a <strong>SyntaxError</strong>.</div>\n</div>\n\n<h3>Common Python Keywords</h3>\n<ul class=\"desc-list\">\n    <li><strong>Logic & Booleans:</strong> <code>True</code>, <code>False</code>, <code>None</code>, <code>and</code>, <code>or</code>, <code>not</code></li>\n    <li><strong>Conditionals:</strong> <code>if</code>, <code>elif</code>, <code>else</code></li>\n    <li><strong>Loops:</strong> <code>for</code>, <code>while</code>, <code>break</code>, <code>continue</code>, <code>in</code></li>\n    <li><strong>Functions & Classes:</strong> <code>def</code>, <code>class</code>, <code>return</code>, <code>pass</code>, <code>lambda</code></li>\n    <li><strong>Structure:</strong> <code>import</code>, <code>from</code>, <code>as</code>, <code>try</code>, <code>except</code></li>\n</ul>\n\n<h3>How to View All Keywords</h3>\n<p>Python provides a built-in module called <code>keyword</code> that lists all reserved words in the system. You can print them by importing the module and reading <code>keyword.kwlist</code>:</p>\n\n<pre class=\"code-example\">import keyword\nprint(keyword.kwlist)</pre>\n\n<p>All Python keywords (except <code>True</code>, <code>False</code>, and <code>None</code>) are written in <strong>completely lowercase</strong> letters!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%); border: 3px solid #607d8b; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(96, 125, 139, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #37474f; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📖 <strong>Case Study: The Future Reserved Dictionary</strong>
+    </h3>
+    <p style="font-size: 15px; color: #37474f; line-height: 1.6; margin-bottom: 16px;">
+        Programming languages have a fixed list of **Reserved Words** (a Future Dictionary). The interpreter reserves these words for its own structure.
+    </p>
+
+    <!-- Golden Rule -->
+    <div style="background: #ffffff; border: 2px solid #ef5350; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">⚠️</span>
+        <div>
+            <strong style="color: #c62828; font-size: 15px;">The Keyword Lockout Rule</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Because keywords are reserved, **you can never use them as variable names**! Trying to label a box with a keyword like <code>if = 10</code> raises a **SyntaxError** because the machine gets confused between your box and system commands.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Keywords Categories Grid -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Common Reserved Keyword Categories</strong>
+</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif;">
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #00838f; font-size: 14.5px;">🚦 Logic & Loops</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0;"><code>True</code>, <code>False</code>, <code>and</code>, <code>or</code>, <code>for</code>, <code>while</code></p>
+    </div>
+    <div style="background: #f5f5f5; border: 1px solid #cfd8dc; border-radius: 16px; padding: 16px;">
+        <strong style="color: #2e7d32; font-size: 14.5px;">🧬 Program Structures</strong>
+        <p style="font-size: 13px; color: #546e7a; margin: 4px 0 0 0;"><code>def</code>, <code>class</code>, <code>return</code>, <code>import</code>, <code>from</code></p>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <div style="color: #78909c; margin-bottom: 8px; font-size: 12px;"># Checking Python keywords from code</div>
+    <span style="color: #8e24aa;">import</span> keyword
+    <br>
+    <span style="color: #0288d1;">print</span>(keyword.kwlist)
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📖</span>
+        <strong>Keywords</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Reserved vocabulary</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚫</span>
+        <strong>SyntaxError</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Raised if re-assigned</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔤</span>
+        <strong>Lowercase</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Almost all are lowercase</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1666,7 +2818,59 @@ window.levels = [
         "description": {
             "heading": "Arithmetic Operators",
             "subheading": "Doing math calculations in Python",
-            "body": "<p>Python can be used as a highly capable calculator! We perform math operations in code using symbols called <strong>Arithmetic Operators</strong>.</p>\n\n<h3>The 7 Arithmetic Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong>Addition (<code>+</code>):</strong> Adds two values. Example: <code>5 + 3</code> yields <code>8</code>.</li>\n    <li><strong>Subtraction (<code>-</code>):</strong> Subtracts the right value from the left value. Example: <code>10 - 4</code> yields <code>6</code>.</li>\n    <li><strong>Multiplication (<code>*</code>):</strong> Multiplies two values. Example: <code>3 * 4</code> yields <code>12</code>.</li>\n    <li><strong>Division (<code>/</code>):</strong> Divides the left value by the right. <strong>CRITICAL RULE: Division in Python always returns a float (decimal number)</strong>, even if the division is perfectly even! Example: <code>4 / 2</code> yields <code>2.0</code>.</li>\n    <li><strong>Floor Division (<code>//</code>):</strong> Divides and rounds down to the nearest whole integer, discarding any decimal remainders. Example: <code>7 // 2</code> yields <code>3</code>.</li>\n    <li><strong>Modulus (<code>%</code>):</strong> Divides two numbers and returns the remainder of the division. Example: <code>7 % 2</code> yields <code>1</code>.</li>\n    <li><strong>Exponentiation (<code>**</code>):</strong> Calculates power (the base raised to the power of the exponent). Example: <code>2 ** 3</code> is 2 cubed, yielding <code>8</code>.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Operator Precedence:</strong> Python follows standard mathematical order of operations (PEMDAS/BODMAS). Exponentiation is evaluated first, followed by multiplication/division, and finally addition/subtraction. You can use parentheses <code>()</code> to force calculations to occur first!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border: 3px solid #1e88e5; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(30, 136, 229, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #0d47a1; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🧮 <strong>Case Study: Doraemon's Calculator Gloves</strong>
+    </h3>
+    <p style="font-size: 15px; color: #0d47a1; line-height: 1.6; margin-bottom: 16px;">
+        Nobita puts on Doraemon's **Calculator Gloves** to calculate math formulas in code. Python supports 7 basic operations:
+    </p>
+
+    <!-- 7 Operators List -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13.5px; color: #37474f;">
+        <div style="background: #ffffff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 10px;">
+            <strong style="color: #1e88e5;">Division (/) vs. Floor (//)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;"><code>5 / 2</code> yields float <code>2.5</code>. Floor division <code>5 // 2</code> rounds down to <code>2</code>.</p>
+        </div>
+        <div style="background: #ffffff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 10px;">
+            <strong style="color: #1e88e5;">Modulus (%)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">Calculates the division remainder. <code>7 % 2</code> yields <code>1</code>.</p>
+        </div>
+        <div style="background: #ffffff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 10px;">
+            <strong style="color: #1e88e5;">Power (**)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">Base raised to an exponent. <code>2 ** 3</code> (2 cubed) yields <code>8</code>.</p>
+        </div>
+        <div style="background: #ffffff; border: 1.5px solid #bbdefb; border-radius: 10px; padding: 10px;">
+            <strong style="color: #1e88e5;">Standard (+, -, *)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">Addition, subtraction, and multiplication work as expected.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Warning -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #5d4037;">
+    <strong>⚠️ Operator Order (PEMDAS):</strong> Exponents are evaluated first, then multiplication/division, and lastly addition/subtraction. Wrap formulas in parentheses <code>()</code> to evaluate those parts first!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">//</span>
+        <strong>Floor Division</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Discards decimals</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">%</span>
+        <strong>Modulus</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Division remainder</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">**</span>
+        <strong>Exponentiation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Calculates powers</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1782,7 +2986,50 @@ window.levels = [
         "description": {
             "heading": "Assignment Operators",
             "subheading": "Storing and updating variable values",
-            "body": "<p>We already know the basic assignment operator (<code>=</code>), which stores a value inside a variable. Python also provides <strong>compound assignment operators</strong> (or shortcut operators) that allow you to modify a variable's value and reassign it in a single step!</p>\n\n<h3>Common Assignment Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong>Assignment (<code>=</code>):</strong> Stores the right-hand value inside the left-hand variable. Example: <code>x = 10</code>.</li>\n    <li><strong>Add and Assign (<code>+=</code>):</strong> Adds the right-hand value to the variable and stores the sum. E.g. <code>x += 5</code> is identical to <code>x = x + 5</code>.</li>\n    <li><strong>Subtract and Assign (<code>-=</code>):</strong> Subtracts the right-hand value from the variable and stores the difference. E.g. <code>x -= 2</code> is identical to <code>x = x - 2</code>.</li>\n    <li><strong>Multiply and Assign (<code>*=</code>):</strong> Multiplies the variable by the right-hand value and stores the product. E.g. <code>x *= 3</code> is identical to <code>x = x * 3</code>.</li>\n    <li><strong>Divide and Assign (<code>/=</code>):</strong> Divides the variable by the right-hand value and stores the quotient. <strong>Note: updates the variable's type to a float!</strong> E.g. <code>x /= 2</code> is identical to <code>x = x / 2</code>.</li>\n    <li><strong>Modulus and Assign (<code>%=</code>):</strong> Takes modulus and stores the remainder. E.g. <code>x %= 3</code> is identical to <code>x = x % 3</code>.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why use shortcuts?</strong> Writing compound assignments like <code>score += 10</code> makes your code cleaner, shorter, and easier for the computer to optimize during execution.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📦 <strong>Case Study: Labeled Drawer Shortcuts</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        Nobita wants to update his game score box. Rather than writing the long formula <code>score = score + 5</code>, Doraemon shows him a **Compound Shortcut**:
+    </p>
+
+    <!-- Shortcut example -->
+    <div style="background: #ffffff; border: 2px solid #2e7d32; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">⚡</span>
+        <div>
+            <strong style="color: #1b5e20; font-size: 15px;">Add and Assign (+=)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Writing <code>score += 5</code> reads the current score value, adds 5 to it, and updates the drawer in a single operation. It works for all math operators (<code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>).
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Mistake warning -->
+<div style="background: #ffebee; border-left: 5px solid #f44336; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #c62828;">
+    <strong>⚠️ Naming Syntax Trap:</strong> Do not write <code>x =+ 5</code>! That assigns positive 5 to the variable <code>x</code>. The math operator must always come first, followed by the equal sign (<code>+=</code>).
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">=</span>
+        <strong>Basic Assign</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Stores a raw value</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">+=</span>
+        <strong>Compound</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Calculates and stores</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚡</span>
+        <strong>Optimization</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Cleaner, faster execution</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -1898,7 +3145,59 @@ window.levels = [
         "description": {
             "heading": "Comparison Operators",
             "subheading": "Comparing values and making decisions",
-            "body": "<p>When writing programs, we often need to compare two values. For example: Is Nobita's exam score greater than 50? Is the user's password correct? Python uses <strong>Comparison Operators</strong> (or relational operators) to solve these questions.</p>\n\n<h3>The 6 Comparison Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong>Equal to (<code>==</code>):</strong> Checks if two values are equal. Note: Use double equals <code>==</code> for comparison, and single equal <code>=</code> for assignment! Example: <code>5 == 5</code> yields <code>True</code>.</li>\n    <li><strong>Not equal to (<code>!=</code>):</strong> Checks if two values are different. Example: <code>5 != 3</code> yields <code>True</code>.</li>\n    <li><strong>Greater than (<code>&gt;</code>):</strong> Checks if the left value is strictly larger than the right. Example: <code>10 &gt; 5</code> yields <code>True</code>.</li>\n    <li><strong>Less than (<code>&lt;</code>):</strong> Checks if the left value is strictly smaller than the right. Example: <code>3 &lt; 8</code> yields <code>True</code>.</li>\n    <li><strong>Greater than or equal to (<code>&gt;=</code>):</strong> Checks if the left value is larger or equal. Example: <code>10 &gt;= 10</code> yields <code>True</code>.</li>\n    <li><strong>Less than or equal to (<code>&lt;=</code>):</strong> Checks if the left value is smaller or equal. Example: <code>5 &lt;= 6</code> yields <code>True</code>.</li>\n</ul>\n\n<h3>String Comparisons</h3>\n<p>Python can also compare strings! String comparisons are case-sensitive. For example, <code>\"apple\" == \"Apple\"</code> evaluates to <code>False</code> because the capital letter 'A' is distinct from the lowercase 'a'.</p>\n\n<blockquote class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>TypeError Warning:</strong> You cannot compare incompatible data types (like <code>5 &gt; \"3\"</code>) using inequality operators. Doing so will raise a <strong>TypeError</strong>!</div>\n</blockquote>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 3px solid #ff9800; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(255, 152, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔍 <strong>Case Study: The Truth Magnifier</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        Nobita points Doraemon's **Truth Magnifier** at two items to compare them. The magnifier outputs a logical boolean result: <code>True</code> or <code>False</code>.
+    </p>
+
+    <!-- Compare Operators Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13.5px; color: #37474f;">
+        <div style="background: #ffffff; border: 1.5px solid #ffcc80; border-radius: 10px; padding: 10px;">
+            <strong style="color: #e65100;">Equal to (==)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.3;">Checks if left and right are equivalent. <code>5 == 5</code> outputs <code>True</code>.</p>
+        </div>
+        <div style="background: #ffffff; border: 1.5px solid #ffcc80; border-radius: 10px; padding: 10px;">
+            <strong style="color: #e65100;">Not Equal to (!=)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.3;">Checks if values differ. <code>5 != 3</code> outputs <code>True</code>.</p>
+        </div>
+        <div style="background: #ffffff; border: 1.5px solid #ffcc80; border-radius: 10px; padding: 10px;">
+            <strong style="color: #e65100;">Inequalities (&gt;, &lt;, &gt;=, &lt;=)</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.3;">Compares scale. <code>10 &gt;= 10</code> evaluates to <code>True</code>.</p>
+        </div>
+        <div style="background: #ffffff; border: 1.5px solid #ffcc80; border-radius: 10px; padding: 10px;">
+            <strong style="color: #e65100;">Text Comparison</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.3;">Case-sensitive. <code>"apple" == "Apple"</code> is <code>False</code>.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Warning -->
+<div style="background: #ffebee; border-left: 5px solid #f44336; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #c62828;">
+    <strong>⚠️ Assignment vs. Comparison:</strong> A single equal sign (<code>=</code>) stores a value inside a variable. A double equal sign (<code>==</code>) is the diagnostic operator that checks for equivalence. Mixing them up causes bugs!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">==</span>
+        <strong>Comparison</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Checks equivalence</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">!=</span>
+        <strong>Inequality</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">True if different</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚫</span>
+        <strong>TypeError</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Cannot compare text/num</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2014,7 +3313,53 @@ window.levels = [
         "description": {
             "heading": "Logical Operators",
             "subheading": "Combining and reversing true/false statements",
-            "body": "<p>Sometimes, decisions in your code depend on multiple conditions. For example: \"If a user has a key AND the door is locked, open the door.\" Python uses <strong>Logical Operators</strong> to combine or modify boolean conditions.</p>\n\n<h3>The 3 Logical Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>and</code>:</strong> Returns <code>True</code> <strong>only if BOTH conditions are True</strong>. If even one part is False, the result is <code>False</code>. Example: <code>True and False</code> yields <code>False</code>.</li>\n    <li><strong><code>or</code>:</strong> Returns <code>True</code> <strong>if AT LEAST ONE condition is True</strong>. It only returns <code>False</code> if both parts are False. Example: <code>True or False</code> yields <code>True</code>.</li>\n    <li><strong><code>not</code>:</strong> Inverts (reverses) a boolean value. Turns <code>True</code> into <code>False</code>, and <code>False</code> into <code>True</code>. Example: <code>not True</code> yields <code>False</code>.</li>\n</ul>\n\n<h3>Order of Evaluation (Precedence)</h3>\n<p>Unless overridden by parentheses, Python evaluates logical operations in this order: <code>not</code> first, then <code>and</code>, and finally <code>or</code>. Using parentheses <code>()</code> is highly recommended to make your code clear and ensure calculations happen in the correct order!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8e24aa; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(142, 36, 170, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4a148c; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🚪 <strong>Case Study: The Double-Lock Gate</strong>
+    </h3>
+    <p style="font-size: 15px; color: #4a148c; line-height: 1.6; margin-bottom: 16px;">
+        Nobita reaches a gate that requires complex key conditions to open. Python solves these using **Logical Operators**:
+    </p>
+
+    <!-- Three logical gates -->
+    <div style="background: #ffffff; border: 2.5px solid #8e24aa; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #4a148c;">1. and (Double Lock)</strong>
+        <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Evaluates to <code>True</code> only if **both** sides are True. If one side is False, the door stays locked!</p>
+    </div>
+    <div style="background: #ffffff; border: 2.5px solid #e91e63; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #e91e63;">2. or (Alternative Key)</strong>
+        <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Evaluates to <code>True</code> if **at least one** side is True. Only False if both are False.</p>
+    </div>
+    <div style="background: #ffffff; border: 2.5px solid #00acc1; border-radius: 12px; font-size: 13.5px; padding: 12px;">
+        <strong style="color: #00acc1;">3. not (Reversing Mirror)</strong>
+        <p style="margin: 4px 0 0 0; line-height: 1.4; color: #555;">Inverts the logical state. <code>not True</code> becomes <code>False</code>, and <code>not False</code> becomes <code>True</code>.</p>
+    </div>
+</div>
+
+<!-- Warning -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #5d4037;">
+    <strong>⚠️ Evaluation Order:</strong> Python processes <code>not</code> first, then <code>and</code>, and lastly <code>or</code>. You should use parentheses <code>()</code> to clearly group your criteria and avoid order errors!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">and</span>
+        <strong>Double Lock</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Both must be True</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">or</span>
+        <strong>Alternative Gate</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">One True is enough</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">not</span>
+        <strong>Reversing Mirror</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Inverts boolean value</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2130,7 +3475,60 @@ window.levels = [
         "description": {
             "heading": "Membership Operators",
             "subheading": "Checking for presence inside collections",
-            "body": "<p>When programming, we often need to check if an item exists inside a collection. For example: Is the letter <code>\"a\"</code> in the word <code>\"apple\"</code>? Is the name <code>\"nobita\"</code> in a list of users? Python makes this incredibly simple using <strong>Membership Operators</strong>.</p>\n\n<h3>The 2 Membership Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>in</code>:</strong> Evaluates to <code>True</code> if the specified value is found inside the sequence. Otherwise, it returns <code>False</code>.\n        <pre class=\"code-example\">text = \"Bamboo Copter\"\nprint(\"Bamboo\" in text)  # Outputs: True\nprint(\"door\" in text)    # Outputs: False</pre>\n    </li>\n    <li><strong><code>not in</code>:</strong> Evaluates to <code>True</code> if the specified value is <strong>not</strong> found inside the sequence. If it is found, it returns <code>False</code>.\n        <pre class=\"code-example\">text = \"Anywhere Door\"\nprint(\"copter\" not in text)  # Outputs: True</pre>\n    </li>\n</ul>\n\n<h3>Important Details</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Case Sensitivity:</strong> Membership tests are strictly case-sensitive. For example, <code>\"bamboo\" in \"Bamboo Copter\"</code> will evaluate to <code>False</code> because the letters have different casing!</div>\n</div>\n<p>Membership operators work on any Python sequence data type, including strings (which we've seen) and lists/tuples (which you will learn about in future levels).</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); border: 3px solid #009688; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 150, 136, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #004d40; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔍 <strong>Case Study: Doraemon's Pocket Scanner</strong>
+    </h3>
+    <p style="font-size: 15px; color: #004d40; line-height: 1.6; margin-bottom: 16px;">
+        To check if a specific gadget is inside his 4D Pocket, Doraemon uses the **Pocket Scanner** (Membership Operators):
+    </p>
+
+    <!-- Scan operators -->
+    <div style="background: #ffffff; border: 2px solid #009688; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">📥</span>
+        <div>
+            <strong style="color: #004d40; font-size: 15px;">The 'in' Scanner</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Checks if an item or text substring exists inside a container. <code>"Anywhere Door" in pocket</code> returns <code>True</code> if it is present.
+            </p>
+        </div>
+    </div>
+
+    <div style="background: #ffffff; border: 2px solid #009688; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">🚫</span>
+        <div>
+            <strong style="color: #004d40; font-size: 15px;">The 'not in' Scanner</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Checks if an item is completely absent. <code>"Bamboo Copter" not in pocket</code> returns <code>True</code> if the copter is not in the pocket.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Warning -->
+<div style="background: #ffebee; border-left: 5px solid #f44336; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #c62828;">
+    <strong>⚠️ Case Sensitivity:</strong> Scanner checks are strictly case-sensitive. For example, <code>"bamboo" in "Bamboo Copter"</code> will evaluate to <code>False</code> because the scanner looks for exact matching characters.
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">in</span>
+        <strong>Membership</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">True if found inside</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">not in</span>
+        <strong>Absence</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">True if not found</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔤</span>
+        <strong>Sequences</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Works on strings, lists</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2246,7 +3644,77 @@ window.levels = [
         "description": {
             "heading": "Identity Operators",
             "subheading": "Checking memory locations in Python",
-            "body": "<p>In Python, variables don't hold values directly; they point to objects stored in the computer's memory. Sometimes, we need to check if two variables point to the <strong>exact same memory address</strong> (object identity), rather than just checking if their values are equal.</p>\n\n<h3>The 2 Identity Operators</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>is</code>:</strong> Evaluates to <code>True</code> if both variables refer to the exact same object in memory.</li>\n    <li><strong><code>is not</code>:</strong> Evaluates to <code>True</code> if both variables refer to different objects in memory.</li>\n</ul>\n\n<h3>The Big Difference: is vs ==</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>==</code> (Equality):</strong> Checks if the **values** of the two objects are equal.</li>\n    <li><strong><code>is</code> (Identity):</strong> Checks if the variables point to the **same object address** in memory.</li>\n</ul>\n\n<pre class=\"code-example\">list_a = [1, 2, 3]\nlist_b = [1, 2, 3]\nlist_c = list_a\n\nprint(list_a == list_b) # Outputs: True (they have identical contents)\nprint(list_a is list_b)  # Outputs: False (stored in different memory slots)\nprint(list_a is list_c)  # Outputs: True (list_c points to list_a's address)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Python Optimization (Caching):</strong> For performance, Python reuses the same memory address for small integers (between -5 and 256) and small strings. Therefore, if <code>x = 5</code> and <code>y = 5</code>, <code>x is y</code> evaluates to <code>True</code>. However, for collections like lists or dictionaries, Python always creates new objects in memory!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        👯‍♂️ <strong>Case Study: Doraemon's Clone Machine</strong>
+    </h3>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon puts Nobita's schoolbag in the **Clone Machine** to create a clone bag. The bags have the exact same contents, but they are separate objects:
+    </p>
+
+    <!-- Equality vs Identity -->
+    <div style="background: #ffffff; border: 2px solid #8d6e63; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">==</span>
+        <div>
+            <strong style="color: #4e342e; font-size: 15px;">Value Equality (==)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Checks if contents are identical. <code>original_bag == cloned_bag</code> returns <code>True</code> because they contain identical books and pencils.
+            </p>
+        </div>
+    </div>
+
+    <div style="background: #ffffff; border: 2px solid #5d4037; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px;">
+        <span style="font-size: 32px; line-height: 1;">🧬</span>
+        <div>
+            <strong style="color: #4e342e; font-size: 15px;">Address Identity (is)</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                Checks memory address. <code>original_bag is cloned_bag</code> returns <code>False</code> because they are two physical bags located in different memory slots!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span style="color: #78909c;"># Creating lists (mutable objects) in memory</span>
+    <br>
+    <span>list_a = [<span style="color: #ff9800;">1</span>, <span style="color: #ff9800;">2</span>, <span style="color: #ff9800;">3</span>]</span>
+    <br>
+    <span>list_b = [<span style="color: #ff9800;">1</span>, <span style="color: #ff9800;">2</span>, <span style="color: #ff9800;">3</span>]</span>
+    <br>
+    <span>list_c = list_a</span>
+    <br><br>
+    <span style="color: #0288d1;">print</span>(list_a == list_b)  <span style="color: #757575;"># True (value match)</span>
+    <br>
+    <span style="color: #0288d1;">print</span>(list_a <span style="color: #e91e63;">is</span> list_b)   <span style="color: #757575;"># False (different memory addresses)</span>
+    <br>
+    <span style="color: #0288d1;">print</span>(list_a <span style="color: #e91e63;">is</span> list_c)   <span style="color: #757575;"># True (point to the same address)</span>
+</div>
+
+<!-- Caching tip -->
+<div style="background: #e0f7fa; border-left: 5px solid #00acc1; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #006064; line-height: 1.45;">
+    <strong>💡 Python Caching Optimization:</strong> For performance, Python shares a single memory address for small integers (between -5 and 256) and simple strings. If <code>x = 5</code> and <code>y = 5</code>, <code>x is y</code> evaluates to <code>True</code>!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">==</span>
+        <strong>Equality</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Same values</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">is</span>
+        <strong>Identity</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Same memory address</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">id()</span>
+        <strong>Memory address</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Unique identity integer</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2362,7 +3830,63 @@ window.levels = [
         "description": {
             "heading": "Operator Precedence",
             "subheading": "Rules governing the order of execution",
-            "body": "<p>When you write complex expressions with multiple operators, like <code>10 - 2 * 3</code> or <code>5 &gt; 3 and 2 &lt; 1</code>, Python needs a set of rules to determine which operations to run first. These rules are called <strong>Operator Precedence</strong> (similar to PEMDAS/BODMAS in school math).</p>\n\n<h3>The Order of Precedence (Highest to Lowest)</h3>\n<ol class=\"desc-list\">\n    <li><strong>Parentheses <code>()</code>:</strong> Anything inside brackets is evaluated first!</li>\n    <li><strong>Exponentiation <code>**</code>:</strong> Raising a number to a power.</li>\n    <li><strong>Multiplication, Division, Floor Division, Modulus <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></strong></li>\n    <li><strong>Addition, Subtraction <code>+</code>, <code>-</code></strong></li>\n    <li><strong>Comparison, Membership, Identity:</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>in</code>, <code>is</code></li>\n    <li><strong>Logical NOT:</strong> <code>not</code></li>\n    <li><strong>Logical AND:</strong> <code>and</code></li>\n    <li><strong>Logical OR:</strong> <code>or</code></li>\n</ol>\n\n<h3>Associativity (Left-to-Right)</h3>\n<p>If two operators have the same precedence (like addition <code>+</code> and subtraction <code>-</code>), Python evaluates them from **left to right**.</p>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Best Practice:</strong> Always use parentheses <code>()</code> in complex calculations! It ensures the code executes in the exact order you want, and makes your code much easier for others to read. E.g., <code>(5 + 3) * 2</code> forces addition to happen first, yielding <code>16</code> instead of <code>11</code>.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔔 <strong>Case Study: Doraemon's Priority Bell</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        When evaluating math and logical statements, Python rings the **Priority Bell** to decide which operator is executed first:
+    </p>
+
+    <!-- Priority order hierarchy list -->
+    <div style="background: #ffffff; border: 1px solid #c8e6c9; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Precedence Checklist (Highest to Lowest):</strong>
+        <ol style="margin: 8px 0 0 16px; padding: 0;">
+            <li>🥇 <strong>Parentheses <code>()</code></strong> — Overrides everything else!</li>
+            <li>🥈 <strong>Exponents <code>**</code></strong> — Power calculations.</li>
+            <li>🥉 <strong>Arithmetic Math <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>+</code>, <code>-</code></strong></li>
+            <li>🏅 <strong>Comparisons, Identity & Membership <code>==</code>, <code>!=</code>, <code>in</code>, <code>is</code></strong></li>
+            <li>🎖️ <strong>Logical Operators <code>not</code> &rarr; <code>and</code> &rarr; <code>or</code></strong></li>
+        </ol>
+    </div>
+</div>
+
+<!-- Left to Right associativity -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Left-to-Right Associativity</strong>
+</h3>
+<p style="font-size: 15px; color: #455a64; line-height: 1.6; font-family: 'Quicksand', sans-serif;">
+    If operators share the same precedence priority level (like addition <code>+</code> and subtraction <code>-</code>), Python processes them sequentially from left to right.
+</p>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span style="color: #78909c;"># Parentheses override arithmetic defaults</span>
+    <br>
+    <span>print(<span style="color: #e91e63;">(5 + 3) * 2</span>)</span>  <span style="color: #757575;"># 8 * 2 yields 16</span>
+    <br>
+    <span>print(<span style="color: #e91e63;">5 + 3 * 2</span>)</span>    <span style="color: #757575;"># 5 + 6 yields 11</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">()</span>
+        <strong>Parentheses</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Highest priority</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔔</span>
+        <strong>Precedence</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Execution order</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">➡️</span>
+        <strong>Associativity</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Left-to-right evaluation</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2478,7 +4002,64 @@ window.levels = [
         "description": {
             "heading": "Operator Challenge Room",
             "subheading": "Mastering combined operator challenges",
-            "body": "<p>Welcome to a dedicated training room! Now that you have learned about arithmetic, assignment, comparison, logical, membership, and identity operators, it is time to practice combining them into complex logic structures.</p>\n\n<h3>The Evaluation Checklist</h3>\n<p>To solve complex combined expressions without making mistakes, always run your evaluation in this order:</p>\n<ol class=\"desc-list\">\n    <li><strong>Parentheses <code>()</code>:</strong> Always resolve brackets first.</li>\n    <li><strong>Arithmetic Math:</strong> Exponents (<code>**</code>) first, then multiplication/division/modulus/floor-division (<code>*</code>, <code>/</code>, <code>%</code>, <code>//</code>), then addition/subtraction (<code>+</code>, <code>-</code>).</li>\n    <li><strong>Comparisons:</strong> Greater/less-than and equality checks (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>).</li>\n    <li><strong>Identity & Membership:</strong> <code>is</code>, <code>is not</code>, <code>in</code>, <code>not in</code>.</li>\n    <li><strong>Logical Operators:</strong> Logical <code>not</code> first, then <code>and</code>, and finally <code>or</code>.</li>\n</ol>\n\n<h3>Walkthrough Example</h3>\n<pre class=\"code-example\">expression = 5 + 2 == 7 or 10 // 3 &gt; 3\n\n# Step 1: Evaluate math\n# 5 + 2 is 7. 10 // 3 is 3.\n# expression becomes: 7 == 7 or 3 &gt; 3\n\n# Step 2: Evaluate comparisons\n# 7 == 7 is True. 3 &gt; 3 is False.\n# expression becomes: True or False\n\n# Step 3: Evaluate logical\n# True or False evaluates to True!</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8e24aa; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(142, 36, 170, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4a148c; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔐 <strong>Case Study: The Challenge Room Vault</strong>
+    </h3>
+    <p style="font-size: 15px; color: #4a148c; line-height: 1.6; margin-bottom: 16px;">
+        To open the logic vault, Nobita must resolve combined math and comparison checks step-by-step using the priority checklist:
+    </p>
+
+    <!-- Checklist grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 10px; font-size: 13px; color: #37474f;">
+        <div style="background: #ffffff; border: 1.5px solid #d1c4e9; border-radius: 12px; padding: 12px;">
+            <strong style="color: #8e24aa;">Step 1: Resolve Math first</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">Exponents, multiplication/division, and then addition/subtraction.</p>
+        </div>
+        <div style="background: #ffffff; border: 1.5px solid #d1c4e9; border-radius: 12px; padding: 12px;">
+            <strong style="color: #8e24aa;">Step 2: Comparisons</strong>
+            <p style="margin: 4px 0 0 0; line-height: 1.4;">Equality <code>==</code> and scale checks (<code>&gt;</code>, <code>&lt;</code>, etc.).</p>
+        </div>
+    </div>
+</div>
+
+<!-- Step by step evaluation -->
+<h3 style="font-family: 'Nunito', sans-serif; color: #1a2a3a; margin-top: 32px; display: flex; align-items: center; gap: 8px;">
+    🎯 <strong>Step-by-Step Expression Resolution</strong>
+</h3>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>expression = <span style="color: #ff5722;">5 + 2</span> == 7 or <span style="color: #ff5722;">10 // 3</span> &gt; 3</span>
+    <br><br>
+    <div style="font-family: 'Nunito', sans-serif; font-size: 13px; color: #607d8b; border-top: 1px solid #cfd8dc; padding-top: 8px;">
+        1️⃣ <strong>Math:</strong> 5+2 becomes 7. 10//3 becomes 3. <code>7 == 7 or 3 &gt; 3</code>
+        <br>
+        2️⃣ <strong>Comparisons:</strong> 7==7 is True. 3&gt;3 is False. <code>True or False</code>
+        <br>
+        3️⃣ <strong>Logical:</strong> True or False evaluates to <code>True</code>!
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚙️</span>
+        <strong>Arithmetic</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs first</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📊</span>
+        <strong>Comparisons</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs second</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚦</span>
+        <strong>Logical</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs last</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2594,7 +4175,53 @@ window.levels = [
         "description": {
             "heading": "Real-Life Logic Building",
             "subheading": "Translating real-world problems into code",
-            "body": "<p>Programming is about solving real-world problems. In this lesson, we will practice translating descriptive business requirements and daily logical decisions into Python expressions.</p>\n\n<h3>Example Scenario 1: Movie Ticket Discounts</h3>\n<p><strong>Requirement:</strong> \"A movie theater offers discounted tickets if the visitor is a child (under 12) OR a senior citizen (65 or older).\"</p>\n<blockquote class=\"desc-callout callout-highlight\">\n    <strong>Python translation:</strong> <code>is_discounted = age &lt; 12 or age &gt;= 65</code>\n</blockquote>\n\n<h3>Example Scenario 2: Web Login Authentication</h3>\n<p><strong>Requirement:</strong> \"A user can log in if their username is correct AND their password is correct, provided their account is NOT suspended.\"</p>\n<blockquote class=\"desc-callout callout-highlight\">\n    <strong>Python translation:</strong> <code>can_login = is_username_correct and is_password_correct and not is_suspended</code>\n</blockquote>\n\n<h3>Example Scenario 3: Roller Coaster Ride Eligibility</h3>\n<p><strong>Requirement:</strong> \"To ride the roller coaster, a person must be at least 120cm tall AND weigh less than 150kg.\"</p>\n<blockquote class=\"desc-callout callout-highlight\">\n    <strong>Python translation:</strong> <code>can_ride = height_cm &gt;= 120 and weight_kg &lt; 150</code>\n</blockquote>\n\n<p>Translating rules carefully is critical to avoid software bugs and security issues in real-world applications!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: The Logic Converter Gadget</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon uses the **Logic Converter** to translate descriptive real-life requirements into clean Python logical expressions:
+    </p>
+
+    <!-- Scenarios -->
+    <div style="background: #ffffff; border: 2px solid #ffcc80; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #e65100;">🎫 Movie Ticket Discounts</strong>
+        <p style="margin: 4px 0; color: #555;">Visitor is a child (under 12) OR a senior citizen (65 or older).</p>
+        <code style="color: #e65100; font-weight: bold;">is_discounted = age &lt; 12 or age &gt;= 65</code>
+    </div>
+
+    <div style="background: #ffffff; border: 2px solid #ffcc80; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #e65100;">🔑 Web Authentication</strong>
+        <p style="margin: 4px 0; color: #555;">Username correct AND password correct, AND account NOT suspended.</p>
+        <code style="color: #e65100; font-weight: bold;">can_login = user_ok and pass_ok and not suspended</code>
+    </div>
+
+    <div style="background: #ffffff; border: 2px solid #ffcc80; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+        <strong style="color: #e65100;">🎢 Roller Coaster ride</strong>
+        <p style="margin: 4px 0; color: #555;">Height is at least 120cm tall AND weight is less than 150kg.</p>
+        <code style="color: #e65100; font-weight: bold;">can_ride = height &gt;= 120 and weight &lt; 150</code>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🎫</span>
+        <strong>Rules</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Translating criteria</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔑</span>
+        <strong>Operators</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Connecting logical checks</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🐞</span>
+        <strong>Bugs</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Avoid syntax logical traps</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2710,7 +4337,45 @@ window.levels = [
         "description": {
             "heading": "Beginner Coding Challenge",
             "subheading": "Put your knowledge to the test!",
-            "body": "<p>Congratulations on reaching <strong>Level 25</strong>, which marks the completion of <strong>STAGE 3: Operators & Logic</strong>!</p>\n\n<p>Now, you will face your first major coding challenge. Instead of writing simple one-line checks, you will combine all the concepts you have learned so far:</p>\n<ul class=\"desc-list\">\n    <li>Storing and manipulating values inside <strong>variables</strong>.</li>\n    <li>Using <strong>arithmetic operators</strong> like floor division (<code>//</code>) and modulus (<code>%</code>).</li>\n    <li>Constructing clean, formatted outputs using <strong>f-strings</strong>.</li>\n</ul>\n\n<p>Solving coding challenges requires a systematic approach. Make sure you read the requirements carefully, define the correct variables, run the necessary calculations, and double-check your output formatting. Good luck!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%); border: 3px solid #fbc02d; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(251, 192, 45, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #f57f17; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎓 <strong>Case Study: Nobita's Stage 3 Graduation</strong>
+    </h3>
+    <p style="font-size: 15px; color: #f57f17; line-height: 1.6; margin-bottom: 16px;">
+        Congratulations on reaching **Level 25**, which marks the completion of Stage 3! Doraemon presents Nobita with a graduation coding challenge requiring multiple concepts together:
+    </p>
+
+    <!-- Strategy check items -->
+    <div style="background: #ffffff; border: 2px solid #fbc02d; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">📝</span>
+        <div>
+            <strong style="color: #f57f17; font-size: 15px;">The Algorithmic Mission</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                You must read requirements, design logical calculations using arithmetic operators (like floor division <code>//</code> and modulus <code>%</code>), assign items to variables, and build clean outputs using f-strings!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🎓</span>
+        <strong>Graduation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Stage 3 complete</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🛠️</span>
+        <strong>Challenge</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Algorithmic mission</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚡</span>
+        <strong>f-Strings</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Clean user outputs</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2825,7 +4490,55 @@ window.levels = [
         "description": {
             "heading": "Why Decisions in Programming",
             "subheading": "How programs make choices and adapt",
-            "body": "<p>Up until now, all the Python programs we have written have run line-by-line, sequentially, from top to bottom. Every single line of code executed, no matter what inputs or values were active. This is called a linear execution flow.</p>\n\n<p>But real life isn't a straight line. We make choices based on criteria: <em>\"If it is raining, take an umbrella. Otherwise, leave it at home.\"</em></p>\n\n<h3>The Concept of Conditional Branching</h3>\n<p>Computer programs need this same intelligence. We call this <strong>Conditional Branching</strong> or **Decision Making**. Without decision-making capability, software would be completely static and inflexible:</p>\n<ul class=\"desc-list\">\n    <li>A **login page** would let everyone in because it couldn't check <em>if</em> the password is correct.</li>\n    <li>An **ATM** would dispense cash even if you have zero balance because it couldn't check <em>if</em> you have sufficient funds.</li>\n    <li>A **video game** wouldn't show a \"Game Over\" screen because it couldn't check <em>if</em> player lives have hit zero.</li>\n</ul>\n\n<h3>How Decisions Work in Python</h3>\n<p>In Python, decision-making is controlled by checking expressions that resolve to a boolean value (<code>True</code> or <code>False</code>). Based on that true/false state, the program branches and executes a specific block of code while skipping other blocks completely.</p>\n\n<blockquote class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>What's Next?</strong> In the following levels, we will learn the exact syntax to implement these decisions using keywords like <code>if</code>, <code>else</code>, and <code>elif</code>!</div>\n</blockquote>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border: 3px solid #1e88e5; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(30, 136, 229, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #0d47a1; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🚪 <strong>Case Study: Doraemon's Anywhere Door</strong>
+    </h3>
+    <p style="font-size: 15px; color: #0d47a1; line-height: 1.6; margin-bottom: 16px;">
+        Nobita wants to go to the playground. If he selects the playground, the **Anywhere Door** teleports him to the playground. If he selects the beach, it opens to the beach!
+    </p>
+
+    <!-- Branching vs Linear -->
+    <div style="background: #ffffff; border: 1.5px solid #90caf9; border-radius: 14px; padding: 16px; margin-bottom: 20px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Linear Execution Flow (Old Way):</strong>
+        <p style="margin: 4px 0 0 0; color: #555;">Code runs line-by-line straight down. Every single action executes, no matter what variables are active.</p>
+    </div>
+
+    <div style="background: #ffffff; border: 2.5px solid #1e88e5; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>⚡ Conditional Branching (New Way):</strong>
+        <p style="margin: 4px 0 0 0; color: #555;">Code splits into separate paths based on criteria. If the condition is <code>True</code>, one path runs; if <code>False</code>, that path is completely skipped!</p>
+    </div>
+</div>
+
+<!-- Why we need it callout -->
+<div style="background: #eceff1; border-radius: 12px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #37474f; line-height: 1.5;">
+    <strong>Why software needs decisions:</strong>
+    <ul style="margin: 8px 0 0 16px; padding: 0;">
+        <li>🏧 <strong>ATMs:</strong> Check <em>if</em> account funds are sufficient before giving cash.</li>
+        <li>🔐 <strong>Logins:</strong> Grant entry <em>if</em> the password matches.</li>
+        <li>👾 <strong>Games:</strong> Display "Game Over" <em>if</em> player lives reach zero.</li>
+    </ul>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🛤️</span>
+        <strong>Linear Flow</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Straight sequential lines</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🌿</span>
+        <strong>Branching</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Splitting tracks</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚦</span>
+        <strong>Conditions</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">True or False evaluations</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -2936,7 +4649,58 @@ window.levels = [
         "description": {
             "heading": "The if Statement",
             "subheading": "Running code only when a condition is True",
-            "body": "<p>The simplest way to make a decision in Python is by using the <strong><code>if</code> statement</strong>. It tells the computer to run a block of code ONLY if a certain condition is True.</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">if condition:\n    # code to run if condition is True</pre>\n\n<h3>Two Crucial Python Syntax Rules</h3>\n<ol class=\"desc-list\">\n    <li><strong>The Colon (<code>:</code>):</strong> You must place a colon at the end of the <code>if</code> line. This indicates that a new block of code is about to start.</li>\n    <li><strong>Indentation:</strong> In Python, we do not use curly braces <code>{}</code> to group blocks of code. Instead, we indent (typically 4 spaces or 1 tab) the code block. All statements with the same level of indentation are part of that conditional block!</li>\n</ol>\n\n<pre class=\"code-example\">is_raining = True\nif is_raining:\n    print(\"Grab your umbrella!\")\n    print(\"Put on a raincoat!\")\nprint(\"Have a nice day!\") # This always runs because it is not indented!</pre>\n\n<p>If <code>is_raining</code> is <code>False</code>, Python skips the indented lines completely and prints only \"Have a nice day!\".</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border: 3px solid #00acc1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 172, 193, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #006064; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🌧️ <strong>Case Study: Doraemon's Rain Cloud</strong>
+    </h3>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon has a mini **Rain-Maker Cloud**. If the cloud is active, Nobita must run the code block to open his umbrella!
+    </p>
+
+    <!-- Syntax guidelines checklist -->
+    <div style="background: #ffffff; border: 2.5px solid #00acc1; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>The 2 Strict Syntax Rules:</strong>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li>🔑 <strong>The Colon (<code>:</code>)</strong> — Must end the <code>if</code> check to mark the block entry.</li>
+            <li>📐 <strong>Indentation (4 spaces)</strong> — Establishes which instructions belong inside the condition. No curly braces <code>{}</code> needed!</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>is_raining = <span style="color: #00acc1;">True</span></span>
+    <br><br>
+    <span><span style="color: #e91e63;">if</span> is_raining<span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print(<span style="color: #ff9800;">"Open the umbrella! ☔"</span>)</span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print(<span style="color: #ff9800;">"Put on boots! 🥾"</span>)</span>
+    <br>
+    <span style="color: #78909c;"># Unindented lines always run sequentially</span>
+    <br>
+    <span>print(<span style="color: #ff9800;">"Take a walk."</span>)</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">if</span>
+        <strong>Condition check</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs only if True</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">:</span>
+        <strong>The Colon</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts block entry</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📐</span>
+        <strong>Indentation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">4 spaces alignment</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3052,7 +4816,56 @@ window.levels = [
         "description": {
             "heading": "The if-else Statement",
             "subheading": "Providing a fallback choice",
-            "body": "<p>Sometimes you want to run one block of code if a condition is True, and a <strong>different block</strong> of code if it is False. This is handled using the <strong><code>if-else</code> statement</strong>.</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">if condition:\n    # Runs if condition is True\nelse:\n    # Runs if condition is False</pre>\n\n<h3>Important Syntax Rules</h3>\n<ol class=\"desc-list\">\n    <li><strong>No Condition for Else:</strong> The <code>else</code> keyword represents a catch-all fallback. It never takes a condition.</li>\n    <li><strong>The Colon:</strong> Just like <code>if</code>, the <code>else</code> keyword must end with a colon (<code>:</code>).</li>\n    <li><strong>Alignment:</strong> The <code>else</code> keyword must be at the exact same indentation level (aligned vertically) as the <code>if</code> keyword.</li>\n    <li><strong>Indented Blocks:</strong> The code inside both the <code>if</code> and <code>else</code> blocks must be indented.</li>\n</ol>\n\n<pre class=\"code-example\">score = 45\nif score &gt;= 50:\n    print(\"You passed!\")\nelse:\n    print(\"You failed. Try again!\")</pre>\n<p>Since <code>score</code> is <code>45</code>, <code>score &gt;= 50</code> is False. Python skips the first print block, goes straight to the <code>else</code> block, and prints \"You failed. Try again!\".</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🍬 <strong>Case Study: Doraemon's Choice Candy</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        Nobita eats a **Choice Candy**: If his score is 50 or higher, he eats Sweet Melon candy. Otherwise (else), he eats Bitter Onion candy!
+    </p>
+
+    <!-- Syntax guidelines checklist -->
+    <div style="background: #ffffff; border: 2.5px solid #f57c00; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Important Else Guidelines:</strong>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li>🚫 <strong>No Condition for Else</strong> — \`else\` is a fallback; it never takes a comparative check.</li>
+            <li>📐 <strong>Vertical Alignment</strong> — The \`else\` keyword must align vertically at the exact same indentation level as the starting \`if\`.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>score = <span style="color: #f57c00;">45</span></span>
+    <br><br>
+    <span><span style="color: #e91e63;">if</span> score &gt;= <span style="color: #f57c00;">50</span><span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print(<span style="color: #ff9800;">"Sweet Melon Candy! 🍈"</span>)</span>
+    <br>
+    <span><span style="color: #e91e63;">else</span><span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #e91e63;">print(<span style="color: #ff9800;">"Bitter Onion Candy! 🧅"</span>)</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">if</span>
+        <strong>Option A</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Executes if True</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">else</span>
+        <strong>Option B</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Fallback if False</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚫</span>
+        <strong>No conditions</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">No expressions for else</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3168,7 +4981,57 @@ window.levels = [
         "description": {
             "heading": "The elif Keyword",
             "subheading": "Checking multiple distinct conditions",
-            "body": "<p>What if your decision has more than two possible outcomes? E.g., if a score is 90 or more, print Grade A; if it's 80 or more, print Grade B; otherwise, print Grade C. In Python, we write \"else if\" as <strong><code>elif</code></strong>.</p>\n\n<h3>Syntax Structure</h3>\n<pre class=\"code-example\">if condition_1:\n    # Runs if condition_1 is True\nelif condition_2:\n    # Runs if condition_1 is False AND condition_2 is True\nelse:\n    # Runs if all preceding conditions are False</pre>\n\n<h3>Crucial Rules of elif</h3>\n<ol class=\"desc-list\">\n    <li><strong>Sequential Evaluation:</strong> Python checks conditions from top to bottom. The moment it finds a condition that evaluates to True, it runs that block and **skips the remaining checks entirely** (even if other conditions would also be True!).</li>\n    <li><strong>Chain Length:</strong> You can add as many <code>elif</code> statements as you need between the initial <code>if</code> and the final optional <code>else</code> block.</li>\n</ol>\n\n<pre class=\"code-example\">score = 85\nif score &gt;= 90:\n    print(\"Grade A\")\nelif score &gt;= 80:\n    print(\"Grade B\")\nelse:\n    print(\"Grade C\")\n# Output: Grade B (85 &gt;= 80 is True, so Grade C is skipped)</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); border: 3px solid #d81b60; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(216, 27, 96, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #880e4f; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📊 <strong>Case Study: The Grade-o-Meter</strong>
+    </h3>
+    <p style="font-size: 15px; color: #880e4f; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon drops homework sheets into the **Grade-o-Meter**: if a score is 90 or more, it outputs a Grade A badge; if 80 or more, Grade B; otherwise (else), Grade C!
+    </p>
+
+    <!-- Syntax guidelines checklist -->
+    <div style="background: #ffffff; border: 2.5px solid #d81b60; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Sequential Chain Rule:</strong>
+        <p style="margin: 4px 0 0 0; color: #555;">Python checks conditions from top to bottom. The moment it finds a <code>True</code> check, it runs its block and **skips the remaining checks entirely** (no double-dipping!).</p>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>score = <span style="color: #d81b60;">85</span></span>
+    <br><br>
+    <span><span style="color: #e91e63;">if</span> score &gt;= <span style="color: #d81b60;">90</span><span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #78909c;">print("Grade A 🥇")</span>
+    <br>
+    <span><span style="color: #e91e63;">elif</span> score &gt;= <span style="color: #d81b60;">80</span><span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print("Grade B 🥈")</span>  <span style="color: #757575;"># 85 &gt;= 80 is True, runs and stops!</span>
+    <br>
+    <span><span style="color: #e91e63;">else</span><span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #78909c;">print("Grade C 🥉")</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">elif</span>
+        <strong>Else if</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Checks sequential criteria</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚦</span>
+        <strong>Sequence</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Evaluates top-to-bottom</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⛓️</span>
+        <strong>Chain length</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Unlimited checks</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3284,7 +5147,63 @@ window.levels = [
         "description": {
             "heading": "Nested Conditions",
             "subheading": "Decisions within decisions",
-            "body": "<p>Sometimes, a decision depends on another decision. For example: Is it the weekend? If yes, is it sunny? If yes, go to the beach. In programming, placing a conditional statement <strong>inside another conditional statement</strong> is called <strong>Nesting</strong>.</p>\n\n<h3>Syntax and Indentation Levels</h3>\n<p>Nesting requires careful indentation. Each nested statement must be indented by an additional level (e.g. 4 more spaces) relative to the outer statement. Correct alignment is essential for Python to understand your code structure!</p>\n\n<pre class=\"code-example\">is_weekend = True\nis_sunny = False\n\nif is_weekend:\n    print(\"It's the weekend!\")\n    if is_sunny:\n        print(\"Let's go to the beach!\")\n    else:\n        print(\"Let's watch a movie!\") # Runs because is_sunny is False\nelse:\n    print(\"Go to school!\")</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Readability Tip:</strong> Try to avoid nesting code too deeply (e.g. more than 3 levels). Deeply nested code is hard to read and debug. You can often simplify nested logic by using logical operators like <code>and</code> or <code>or</code>!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📦 <strong>Case Study: Double-Security Chest</strong>
+    </h3>
+    <p style="font-size: 15px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon has a **Double-Security Chest**: First, it checks if it is the weekend. Second (nested inside), it checks if it is sunny. Only when both conditions are met can they unlock the beach gear!
+    </p>
+
+    <!-- Indentation details -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Indentation and Alignment:</strong>
+        <p style="margin: 4px 0 0 0; color: #555;">Each inner <code>if</code> block must be shifted right by an additional level of indentation (usually 4 spaces). This alignment tells Python which <code>else</code> belongs to which <code>if</code> check.</p>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>is_weekend = <span style="color: #673ab7;">True</span></span>
+    <br>
+    <span>is_sunny = <span style="color: #673ab7;">False</span></span>
+    <br><br>
+    <span><span style="color: #e91e63;">if</span> is_weekend<span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print(<span style="color: #ff9800;">"It's the weekend! 🎉"</span>)</span>
+    <br>
+    <span style="padding-left: 20px; color: #e91e63;">if is_sunny<span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 40px; color: #78909c;">print("Go to the beach! 🏖️")</span>
+    <br>
+    <span style="padding-left: 20px; color: #e91e63;">else:</span>
+    <br>
+    <span style="padding-left: 40px; color: #4caf50;">print("Watch a movie! 🎬")</span>  <span style="color: #757575;"># Runs (sunny is False)</span>
+    <br>
+    <span><span style="color: #e91e63;">else:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #78909c;">print("Go to school. 🏫")</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📦</span>
+        <strong>Nesting</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Decisions inside decisions</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📐</span>
+        <strong>Indentation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Step-shifted code blocks</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚠️</span>
+        <strong>Readability</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Avoid going &gt;3 levels deep</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3400,7 +5319,53 @@ window.levels = [
         "description": {
             "heading": "Multiple Conditions",
             "subheading": "Combining choices with logical operators",
-            "body": "<p>In Level 30, we saw that nesting conditions too deeply can make code complex and hard to read. A much cleaner way to handle multiple checks in a single decision is by combining conditions using <strong>logical operators</strong> (<code>and</code>, <code>or</code>, <code>not</code>).</p>\n\n<h3>Nesting vs Combining</h3>\n<p>Instead of nesting if statements like this:</p>\n<pre class=\"code-example\">if is_weekend:\n    if is_sunny:\n        print(\"Go to the beach!\")</pre>\n\n<p>We can combine them on a single line using <code>and</code>:</p>\n<pre class=\"code-example\">if is_weekend and is_sunny:\n    print(\"Go to the beach!\")</pre>\n\n<h3>Reviewing Logical Operators in Decisions</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>and</code>:</strong> The code block runs ONLY if <strong>both</strong> conditions evaluate to True.</li>\n    <li><strong><code>or</code>:</strong> The code block runs if <strong>at least one</strong> condition evaluates to True.</li>\n    <li><strong><code>not</code>:</strong> Inverts the boolean result of a check. E.g. <code>if not is_locked:</code> runs if is_locked is False.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Syntax Reminder:</strong> Even with combined conditions, the colon (<code>:</code>) goes at the very end of the <code>if</code> line, and the lines belonging to the execution block must be indented by 4 spaces. Always use parentheses <code>()</code> to make complex combinations readable!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🚪 <strong>Case Study: Combined Logic Gate</strong>
+    </h3>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Instead of using two nested security doors to check conditions, Doraemon installs a single **Combined Logic Gate** that evaluates everything in one line:
+    </p>
+
+    <!-- Nesting vs Combined comparison -->
+    <div style="background: #ffffff; border: 1.5px solid #d7ccc8; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #795548;">Nesting (Hard to read):</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px; color: #37474f;">if is_weekend:
+    if is_sunny:
+        print("Go to the beach! 🏖️")</pre>
+    </div>
+
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+        <strong style="color: #795548;">Combined (Clean and readable):</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px; color: #37474f;">if is_weekend and is_sunny:
+    print("Go to the beach! 🏖️")</pre>
+    </div>
+</div>
+
+<!-- Short circuit tips -->
+<div style="background: #e0f7fa; border-left: 5px solid #00acc1; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #006064; line-height: 1.45;">
+    <strong>⚡ Short-Circuit Evaluation:</strong> Python is smart! In an <code>and</code> check, if the first check is <code>False</code>, it stops immediately without evaluating the rest. In an <code>or</code> check, if the first check is <code>True</code>, it stops checking immediately!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">and</span>
+        <strong>Both True</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Requires all to pass</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">or</span>
+        <strong>Either True</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Requires one to pass</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">not</span>
+        <strong>Negation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Inverts the outcome</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3516,7 +5481,45 @@ window.levels = [
         "description": {
             "heading": "Short-Hand if",
             "subheading": "Writing single-line conditional statements",
-            "body": "<p>If you only have a single statement to execute inside your <code>if</code> block, you can write it all on a single line! This is known as <strong>Short-Hand <code>if</code></strong>.</p>\n\n<h3>Standard vs Short-Hand Syntax</h3>\n<p>Standard multi-line <code>if</code> statement:</p>\n<pre class=\"code-example\">x = 10\nif x &gt; 5:\n    print(\"x is positive\")</pre>\n\n<p>Short-hand single-line <code>if</code> statement:</p>\n<pre class=\"code-example\">x = 10\nif x &gt; 5: print(\"x is positive\")</pre>\n\n<p>Both snippets do the exact same thing. The short-hand version is useful for making simple checks concise and saving space in your files.</p>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Readability Note:</strong> You should only use short-hand single-line checks for very short and simple statements. Chaining too many commands on one line makes code hard to read and goes against Python's clean code style guidelines!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚡ <strong>Case Study: The Quick-Pass Pass</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        For quick, single-action checks, Nobita uses the **Quick-Pass Pass** to write conditional statements on a single line!
+    </p>
+
+    <!-- Syntax comparisons -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+        <strong style="color: #1b5e20;">Short-Hand Format:</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f;">if x &gt; 5: print("x is positive")</pre>
+    </div>
+</div>
+
+<!-- Warning box -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #5d4037; line-height: 1.45;">
+    <strong>⚠️ Readability Guidelines:</strong> Only use single-line short-hand code for short, simple commands. Writing multiple commands separated by semicolons on a single line is bad practice and hard to read.
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚡</span>
+        <strong>Short-Hand</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">One-line check</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📐</span>
+        <strong>Indentation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">No block indents</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚠️</span>
+        <strong>Style</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Keep it simple</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3632,7 +5635,54 @@ window.levels = [
         "description": {
             "heading": "Ternary Operator",
             "subheading": "Conditional expressions on a single line",
-            "body": "<p>We have seen short-hand <code>if</code> for running single statements. What if we want to <strong>assign a value to a variable</strong> based on a condition? E.g., if score is 50 or more, result is \"Pass\", else result is \"Fail\".</p>\n\n<p>Instead of writing 4 lines of block code, we can use Python's <strong>Ternary Operator</strong> (also called a conditional expression) to do this in a single line!</p>\n\n<h3>Syntax Structure</h3>\n<pre class=\"code-example\">variable = value_if_true if condition else value_if_false</pre>\n\n<pre class=\"code-example\">score = 80\nresult = \"Pass\" if score &gt;= 50 else \"Fail\"\nprint(result) # Outputs: Pass</pre>\n\n<h3>Analyzing the Expression</h3>\n<ol class=\"desc-list\">\n    <li>First, specify the value you want if the condition is True (<code>\"Pass\"</code>).</li>\n    <li>Second, write the keyword <code>if</code> and the condition to test (<code>score &gt;= 50</code>).</li>\n    <li>Third, write the keyword <code>else</code> and the value you want if the condition is False (<code>\"Fail\"</code>).</li>\n</ol>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>No Colons:</strong> Notice that colons (<code>:</code>) are NOT used anywhere in a ternary operator expression. You can even pass ternary expressions directly inside functions, like <code>print(\"Access granted\" if is_admin else \"Access denied\")</code>!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚖️ <strong>Case Study: Morphing Ternary Ray</strong>
+    </h3>
+    <p style="font-size: 15px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        To assign values in a single step, Doraemon uses the **Morphing Ternary Ray**. Instead of writing 4 lines, it outputs the correct assignment immediately!
+    </p>
+
+    <!-- Ternary structural syntax box -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #311b92;">Ternary Syntax Format:</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 13px;">variable = value_if_true if condition else value_if_false</pre>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>score = <span style="color: #673ab7;">80</span></span>
+    <br>
+    <span>result = <span style="color: #00acc1;">"Pass"</span> <span style="color: #e91e63;">if</span> score &gt;= <span style="color: #673ab7;">50</span> <span style="color: #e91e63;">else</span> <span style="color: #00acc1;">"Fail"</span></span>
+    <br>
+    <span>print(result)  <span style="color: #757575;"># Outputs: Pass</span></span>
+</div>
+
+<!-- Note on colons -->
+<div style="background: #e8eaf6; border-left: 5px solid #3f51b5; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #1a237e; line-height: 1.45;">
+    <strong>💡 No Colons Rule:</strong> Notice that colons (<code>:</code>) are NOT used anywhere in a ternary operator expression!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚖️</span>
+        <strong>Ternary</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Three distinct parts</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📥</span>
+        <strong>Assign</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Single-step variables</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚫</span>
+        <strong>No colons</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Colon-free syntax</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3748,7 +5798,44 @@ window.levels = [
         "description": {
             "heading": "Decision-Based Coding",
             "subheading": "Solving conditional algorithms",
-            "body": "<p>Now that you have mastered <code>if</code>, <code>else</code>, <code>elif</code>, nested conditions, and ternary operators, you are ready to tackle decision-based algorithms. In software, conditional logic represents the business rules that govern application behaviors.</p>\n\n<h3>How to Approach Decision-Based Problems</h3>\n<ol class=\"desc-list\">\n    <li><strong>Identify Input Criteria:</strong> What variables are given? What are their types?</li>\n    <li><strong>List Distinct States:</strong> What are the mutually exclusive outcomes? (e.g. positive, negative, zero).</li>\n    <li><strong>Order Your Conditions:</strong> Place specific, strict checks at the top of your <code>if-elif</code> chain, and broader fallbacks at the bottom.</li>\n    <li><strong>Verify Boundary Conditions:</strong> Check boundary values (like checking exactly 0 or 100) carefully to determine if you need strict (<code>&gt;</code>) or inclusive (<code>&gt;=</code>) comparisons.</li>\n</ol>\n\n<h3>Example Problem: Leap Year Check</h3>\n<p>A year is leap if it is divisible by 4. However, centurial years (ending in 00) must also be divisible by 400. Solving this requires combining modulus operations (<code>year % 4 == 0</code>) and nested comparisons to handle rules cleanly!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📅 <strong>Case Study: Leap-Year Scanner</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        To scan calendar years for Leap Years, Nobita maps sequential criteria using a structured decision flowchart:
+    </p>
+
+    <!-- Flowchart criteria list -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Strategic Coding Checklist:</strong>
+        <ol style="margin: 8px 0 0 16px; padding: 0;">
+            <li>📝 <strong>Identify Criteria</strong> — Highlight variables and data types.</li>
+            <li>📊 <strong>List Outcomes</strong> — Outline mutually exclusive states (e.g. positive vs zero).</li>
+            <li>🚦 <strong>Order Conditions</strong> — specific checks at the top; broad checks at the bottom.</li>
+        </ol>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📅</span>
+        <strong>Scanner</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Leap-year checking</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📊</span>
+        <strong>Outcomes</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Decision pathways</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🐞</span>
+        <strong>Boundaries</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Avoid comparison traps</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3864,7 +5951,45 @@ window.levels = [
         "description": {
             "heading": "Logic Challenge",
             "subheading": "The final Stage 4 logic challenge!",
-            "body": "<p>Welcome to <strong>Level 35</strong>, the final logic challenge of <strong>STAGE 4: Decision Making</strong>!</p>\n\n<p>In this room, you will face a complex logical problem testing your ability to construct multi-level decisions in Python. You must combine all the tools you have mastered so far:</p>\n<ul class=\"desc-list\">\n    <li>Checking multiple conditions and logical states.</li>\n    <li>Nesting decisions accurately with correct vertical indentations.</li>\n    <li>Applying colons (<code>:</code>) to initiate block scopes.</li>\n</ul>\n\n<p>Review the Q&As and quizzes below to verify your structural understanding, then jump into the coding console to resolve the final Stage 4 logic challenge!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%); border: 3px solid #fbc02d; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(251, 192, 45, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #f57f17; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎓 <strong>Case Study: Nobita's Decision Vault</strong>
+    </h3>
+    <p style="font-size: 15px; color: #f57f17; line-height: 1.6; margin-bottom: 16px;">
+        Congratulations on reaching **Level 35**, which marks the completion of Stage 4! Doraemon opens the **Decision Vault** to verify your mastery of conditional flows:
+    </p>
+
+    <!-- Strategy list -->
+    <div style="background: #ffffff; border: 2px solid #fbc02d; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">🔐</span>
+        <div>
+            <strong style="color: #f57f17; font-size: 15px;">The Final Logic Mission</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                You must combine logical conditions, nest comparative blocks with correct indentations, terminate blocks with colons, and deploy single-line shortcuts to crack the vault code!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🎓</span>
+        <strong>Graduation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Stage 4 complete</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔐</span>
+        <strong>Vault</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Decision Logic Mission</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📐</span>
+        <strong>Syntax</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Perfect block alignment</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -3980,7 +6105,53 @@ window.levels = [
         "description": {
             "heading": "Why Loops Exist",
             "subheading": "The power of iteration",
-            "body": "<p>Imagine Doraemon asks Nobita to write <em>\"I will not forget my homework!\"</em> <strong>100 times</strong> as a punishment. Writing <code>print(\"I will not forget my homework!\")</code> 100 times manually is slow, boring, and makes code extremely long!</p>\n\n<p>What if Doraemon wants it 1,000 times? Or what if we need to print a message an unknown number of times (e.g. based on user input)? This is why we use **Loops**.</p>\n\n<h3>Key Benefits of Loops</h3>\n<ul class=\"desc-list\">\n    <li><strong>Avoid Duplication:</strong> Loops help you keep your code **DRY** (Don't Repeat Yourself).</li>\n    <li><strong>Dynamic Repetition:</strong> Loops can run as many times as a variable or user input dictates.</li>\n    <li><strong>Efficiency:</strong> Write the code once, and let the computer run it thousands of times!</li>\n</ul>\n\n<h3>Loops in Python</h3>\n<p>Python provides two main types of loops:</p>\n<ol class=\"desc-list\">\n    <li><strong><code>for</code> loops:</strong> Best for iterating over sequences (like strings or lists) or repeating code a specific number of times.</li>\n    <li><strong><code>while</code> loops:</strong> Best for repeating code as long as a certain condition remains True.</li>\n</ol>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>What is an Iteration?</strong> In programming, a single cycle or execution of a loop is called an <strong>iteration</strong>.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ✍️ <strong>Case Study: Homework Writer Gadget</strong>
+    </h3>
+    <p style="font-size: 15px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        Nobita is punished and has to write <em>"I will not forget my homework!"</em> **100 times**. Instead of writing it manually, Doraemon gives him the **Homework Writer** loop gadget!
+    </p>
+
+    <!-- Comparison -->
+    <div style="background: #ffffff; border: 1.5px solid #b3e5fc; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px;">
+        <strong style="color: #0288d1;">Linear Duplication (100 lines):</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px; color: #78909c;">print("I will not forget my homework!")
+print("I will not forget my homework!")
+# ... (Repeated 98 more times!)</pre>
+    </div>
+
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+        <strong style="color: #0288d1;">Iteration Loop (Only 2 lines):</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px; color: #37474f;">for i in range(100):
+    print("I will not forget my homework! 📝")</pre>
+    </div>
+</div>
+
+<!-- DRY rule -->
+<div style="background: #e0f2f1; border-left: 5px solid #009688; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #004d40; line-height: 1.45;">
+    <strong>💡 DRY (Don't Repeat Yourself) Principle:</strong> Writing repeating code manually increases errors and makes edits difficult. Loops keep code DRY, clean, and easily scalable!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔄</span>
+        <strong>Iteration</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Single execution cycle</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🛡️</span>
+        <strong>DRY</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Zero code duplication</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚙️</span>
+        <strong>Efficiency</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Scale up loops instantly</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4096,7 +6267,60 @@ window.levels = [
         "description": {
             "heading": "The for Loop",
             "subheading": "Iterating over sequences",
-            "body": "<p>A <strong><code>for</code> loop</strong> is used to iterate over a sequence (such as a string, list, or range of numbers). Python's <code>for</code> loop works like: <em>\"For each item inside this sequence, execute this code block.\"</em></p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">for item in sequence:\n    # code to run for each item</pre>\n\n<h3>Syntax Rules</h3>\n<ol class=\"desc-list\">\n    <li><strong>The Colon:</strong> The <code>for</code> loop header must always end with a colon (<code>:</code>).</li>\n    <li><strong>Indentation:</strong> The code inside the loop must be indented (typically 4 spaces).</li>\n</ol>\n\n<h3>Looping through a String</h3>\n<pre class=\"code-example\">word = \"Cat\"\nfor letter in word:\n    print(letter)</pre>\n<p>Output:</p>\n<pre class=\"code-example\">C\na\nt</pre>\n\n<p>Here, the loop variable <code>letter</code> automatically takes the value of each character in the string <code>\"Cat\"</code> one by one and prints it.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: Doraemon's Conveyor Belt</strong>
+    </h3>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        A <code>for</code> loop acts like a **Conveyor Belt**: Put a sequence of items (like the letters of <code>"Cat"</code>) on the belt. The belt shifts them step-by-step, allowing the loop variable to process each item one at a time.
+    </p>
+
+    <!-- Conveyor diagram representation -->
+    <div style="background: #ffffff; border: 2px solid #8d6e63; border-radius: 12px; padding: 12px; display: flex; align-items: center; justify-content: space-around; font-size: 14px; font-weight: bold; color: #4e342e;">
+        <span>🗳️ Input: "Cat"</span>
+        <span>&rarr;</span>
+        <span style="background: #efebe9; border: 1px solid #795548; padding: 4px 10px; border-radius: 6px;">[ C ]</span>
+        <span style="background: #efebe9; border: 1px solid #795548; padding: 4px 10px; border-radius: 6px;">[ a ]</span>
+        <span style="background: #efebe9; border: 1px solid #795548; padding: 4px 10px; border-radius: 6px;">[ t ]</span>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>word = <span style="color: #795548;">"Cat"</span></span>
+    <br><br>
+    <span><span style="color: #e91e63;">for</span> letter <span style="color: #e91e63;">in</span> word<span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print(letter)</span>
+    <br><br>
+    <span style="color: #78909c;"># Outputs:</span>
+    <br>
+    <span style="color: #757575;"># C</span>
+    <br>
+    <span style="color: #757575;"># a</span>
+    <br>
+    <span style="color: #757575;"># t</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">for</span>
+        <strong>Conveyor</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Iterates sequences</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">letter</span>
+        <strong>Loop Variable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Holds current item</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🛑</span>
+        <strong>Auto Stop</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Ends at sequence end</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4212,7 +6436,56 @@ window.levels = [
         "description": {
             "heading": "The while Loop",
             "subheading": "Looping based on conditions",
-            "body": "<p>A <strong><code>while</code> loop</strong> repeats a block of code <strong>as long as a condition is True</strong>. It is best used when you do not know in advance how many times the loop needs to run.</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">while condition:\n    # code to run</pre>\n\n<h3>Example using a Counter</h3>\n<pre class=\"code-example\">count = 1\nwhile count &lt;= 3:\n    print(count)\n    count = count + 1 # Crucial! Increment the counter to stop the loop</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">1\n2\n3</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Infinite Loops:</strong> If you forget to update the variable checked in the condition (e.g. <code>count = count + 1</code>), the condition will stay True forever, causing an <strong>infinite loop</strong>! This can freeze your program or crash your environment.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔋 <strong>Case Study: Doraemon's Battery Charger</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        A <code>while</code> loop acts like Doraemon's **Battery Charger**: Keep charging **while** the battery is less than 100%. Increment the charge status on each cycle!
+    </p>
+
+    <!-- Syntax counter details -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>The Counter Requirement:</strong>
+        <p style="margin: 4px 0 0 0; color: #555;">Unlike <code>for</code> loops, <code>while</code> loops require you to manually update the variable checked in the condition (e.g. <code>charge = charge + 1</code>) inside the loop, or it runs forever!</p>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span>count = <span style="color: #2e7d32;">1</span></span>
+    <br><br>
+    <span><span style="color: #e91e63;">while</span> count &lt;= <span style="color: #2e7d32;">3</span><span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print(count)</span>
+    <br>
+    <span style="padding-left: 20px; color: #e91e63;">count = count + 1</span>  <span style="color: #757575;"># CRUCIAL step to avoid locking</span>
+</div>
+
+<!-- Infinite loop warning -->
+<div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #c62828; line-height: 1.45;">
+    <strong>⚠️ Infinite Loop Danger:</strong> If you forget to update the control variable, the loop runs forever, freezing the program and exhausting computing memory!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">while</span>
+        <strong>Condition Loop</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs while True</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">count</span>
+        <strong>Loop Counter</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Manual increment variable</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚠️</span>
+        <strong>Infinite Loop</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Frozen program risk</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4328,7 +6601,53 @@ window.levels = [
         "description": {
             "heading": "The range() Function",
             "subheading": "Generating number sequences",
-            "body": "<p>What if you want to run a <code>for</code> loop exactly 5 times? Or count from 10 to 50? In Python, we use the built-in <strong><code>range()</code></strong> function to generate sequences of numbers.</p>\n\n<h3>Usage Forms of range()</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>range(stop)</code>:</strong> Generates numbers from <code>0</code> up to (but NOT including) <code>stop</code>.\n        <br>E.g. <code>range(3)</code> generates <code>0, 1, 2</code>.</li>\n    <li><strong><code>range(start, stop)</code>:</strong> Generates numbers from <code>start</code> up to (but NOT including) <code>stop</code>.\n        <br>E.g. <code>range(2, 6)</code> generates <code>2, 3, 4, 5</code>.</li>\n    <li><strong><code>range(start, stop, step)</code>:</strong> Generates numbers with a specific increment (<code>step</code>).\n        <br>E.g. <code>range(1, 10, 2)</code> generates <code>1, 3, 5, 7, 9</code>.\n        <br>E.g. <code>range(5, 0, -1)</code> generates <code>5, 4, 3, 2, 1</code> (counts backwards!).</li>\n</ul>\n\n<pre class=\"code-example\">for i in range(3):\n    print(i)</pre>\n<p>Output:</p>\n<pre class=\"code-example\">0\n1\n2</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📏 <strong>Case Study: Doraemon's Stepper Ruler</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        To count numbers or repeat actions exactly, Doraemon uses the **Stepper Ruler** (the <code>range()</code> function) to generate lists of numbers automatically:
+    </p>
+
+    <!-- Usage forms list -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>The 3 Stepper Rules:</strong>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li>📏 <strong>range(stop)</strong> &rarr; Counts from <code>0</code> up to (but excluding) <code>stop</code>. E.g. <code>range(3)</code> &rarr; <code>0, 1, 2</code>.</li>
+            <li>📐 <strong>range(start, stop)</strong> &rarr; Counts from <code>start</code> up to (but excluding) <code>stop</code>. E.g. <code>range(2, 5)</code> &rarr; <code>2, 3, 4</code>.</li>
+            <li>🏃‍♂️ <strong>range(start, stop, step)</strong> &rarr; Counts with an increment step. E.g. <code>range(1, 6, 2)</code> &rarr; <code>1, 3, 5</code>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span><span style="color: #e91e63;">for</span> i <span style="color: #e91e63;">in</span> <span style="color: #00acc1;">range</span>(<span style="color: #f57c00;">3</span>)<span style="color: #00acc1;">:</span></span>
+    <br>
+    <span style="padding-left: 20px; color: #4caf50;">print(i)</span>
+    <br><br>
+    <span style="color: #78909c;"># Outputs: 0, 1, 2</span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">start</span>
+        <strong>Start index</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Inclusive start</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">stop</span>
+        <strong>Stop limit</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Exclusive boundary</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">step</span>
+        <strong>Increment step</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Step counts</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4444,7 +6763,54 @@ window.levels = [
         "description": {
             "heading": "Nested Loops",
             "subheading": "Loops inside loops",
-            "body": "<p>Just like nesting conditional checks, we can also place a loop statement inside the execution body of another loop statement! This is called a <strong>Nested Loop</strong>.</p>\n\n<h3>How Nested Loops Work</h3>\n<ol class=\"desc-list\">\n    <li>The outer loop initiates its first iteration.</li>\n    <li>This triggers the inner loop, which runs **completely from start to finish**.</li>\n    <li>Once the inner loop completes, the outer loop moves to its next step.</li>\n    <li>The inner loop resets and executes its full cycle again. This repeats until the outer loop finishes.</li>\n</ol>\n\n<h3>Basic Syntax Example</h3>\n<pre class=\"code-example\">for i in range(2): # Outer loop\n    for j in range(3): # Inner loop\n        print(i, j)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">0 0\n0 1\n0 2\n1 0\n1 1\n1 2</pre>\n\n<p>Notice that the total number of print iterations is the product of the loops: 2 (outer) &times; 3 (inner) = 6 iterations!</p>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Variable Naming Bug:</strong> Never use the same variable name (e.g. <code>i</code>) for both the outer and inner loop control variables! Doing so overwrites the outer counter, causing serious logic bugs or infinite loops. Always use distinct names, such as <code>i</code> and <code>j</code>.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🪐 <strong>Case Study: Orbiting Planets</strong>
+    </h3>
+    <p style="font-size: 15px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        A nested loop is like a solar system model: The **Outer Loop** (Earth) orbits the sun once. For each single orbit, the **Inner Loop** (Moon) spins completely around Earth **12 times**!
+    </p>
+
+    <!-- Multiplier details -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 14px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Total Iterations Rule:</strong>
+        <p style="margin: 4px 0 0 0; color: #555;">Multiply the iteration count of both loops. If the outer loop runs 2 times and the inner loop runs 3 times, the inner body runs a total of <code>2 &times; 3 = 6</code> times!</p>
+    </div>
+</div>
+
+<!-- Syntax Block Illustration -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 14px; color: #37474f; margin-bottom: 28px;">
+    <span><span style="color: #e91e63;">for</span> i <span style="color: #e91e63;">in</span> <span style="color: #00acc1;">range</span>(<span style="color: #673ab7;">2</span>)<span style="color: #00acc1;">:</span>  <span style="color: #78909c;"># Outer loop</span></span>
+    <br>
+    <span style="padding-left: 20px;"><span style="color: #e91e63;">for</span> j <span style="color: #e91e63;">in</span> <span style="color: #00acc1;">range</span>(<span style="color: #673ab7;">3</span>)<span style="color: #00acc1;">:</span>  <span style="color: #78909c;"># Inner loop</span></span>
+    <br>
+    <span style="padding-left: 40px; color: #4caf50;">print(i, j)</span>
+</div>
+
+<!-- Naming collisions -->
+<div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #c62828; line-height: 1.45;">
+    <strong>⚠️ Variable Name Collision:</strong> Never reuse the same variable name (e.g. <code>i</code>) for both loops! It overrides counters, causing severe loop glitches or infinite calculations. Use distinct variables like <code>i</code> and <code>j</code>.
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🪐</span>
+        <strong>Outer loop</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts iteration cycle</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🌙</span>
+        <strong>Inner loop</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs fully per cycle</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">✖️</span>
+        <strong>Multiplier</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Product of loops</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4560,7 +6926,49 @@ window.levels = [
         "description": {
             "heading": "The break Statement",
             "subheading": "Exiting a loop prematurely",
-            "body": "<p>Sometimes you want to stop a loop immediately, before it completes all its iterations. In Python, the <strong><code>break</code></strong> statement is used to exit a loop prematurely.</p>\n\n<p>When Python encounters <code>break</code> inside a loop, it <strong>jumps out of the loop block</strong> immediately. Execution then proceeds to the first line of code written after the loop.</p>\n\n<h3>Example</h3>\n<pre class=\"code-example\">for num in range(1, 10):\n    if num == 5:\n        break # Exit the loop immediately when num is 5\n    print(num)\nprint(\"Loop finished!\")</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">1\n2\n3\n4\nLoop finished!</pre>\n\n<p>Notice that <code>5</code> is not printed. The loop stopped the moment <code>num</code> became <code>5</code>. The <code>break</code> statement works inside both <code>for</code> and <code>while</code> loops. It is especially useful for stopping search operations once an item is found!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border: 3px solid #e53935; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(229, 57, 53, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #b71c1c; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🚨 <strong>Case Study: Emergency Stop Button</strong>
+    </h3>
+    <p style="font-size: 15px; color: #b71c1c; line-height: 1.6; margin-bottom: 16px;">
+        Nobita is running a loop to search through items. Suddenly, he finds what he's looking for. Doraemon tells him to hit the **Emergency Stop Button** (the <code>break</code> statement) to exit the loop instantly!
+    </p>
+
+    <!-- Break output trace -->
+    <div style="background: #ffffff; border: 2.5px solid #e53935; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+        <strong style="color: #b71c1c;">Break Trace (Counting 1 to 9):</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px; color: #37474f;">for num in range(1, 10):
+    if num == 5:
+        break  # Loop exits immediately here!
+    print(num)
+# Outputs: 1, 2, 3, 4 (stops before 5)</pre>
+    </div>
+</div>
+
+<!-- Innermost loop warning -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #5d4037; line-height: 1.45;">
+    <strong>⚡ Nesting Limitation:</strong> Keep in mind that <code>break</code> only exits the <strong>innermost loop</strong> containing it. If you have nested loops, outer loops will continue running normally!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚨</span>
+        <strong>break</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Emergency Exit</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚪</span>
+        <strong>Jump out</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Jumps past loop block</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🎯</span>
+        <strong>Search Stop</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Stop once item found</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4676,7 +7084,49 @@ window.levels = [
         "description": {
             "heading": "The continue Statement",
             "subheading": "Skipping the current iteration",
-            "body": "<p>What if you don't want to stop the whole loop, but just want to <strong>skip the rest of the current iteration</strong> and jump straight to the next one? In Python, we use the <strong><code>continue</code></strong> statement to do exactly this.</p>\n\n<p>When Python encounters <code>continue</code> inside a loop:</p>\n<ol class=\"desc-list\">\n    <li>It immediately skips the remaining lines of code inside the loop for the current cycle.</li>\n    <li>It jumps straight back to the header of the loop to begin the **next iteration** check.</li>\n</ol>\n\n<h3>Example</h3>\n<pre class=\"code-example\">for num in range(1, 6):\n    if num == 3:\n        continue # Skip printing 3 and go to next number\n    print(num)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">1\n2\n4\n5</pre>\n\n<p>Notice that `3` is skipped, but the loop continues printing `4` and `5`. Unlike <code>break</code> which stops the whole loop, <code>continue</code> only skips the current iteration.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 3px solid #ff9800; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(255, 152, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎟️ <strong>Case Study: Nobita's Skip Stamp</strong>
+    </h3>
+    <p style="font-size: 15px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        Nobita is going through homework questions. Question 3 is too hard! He uses Doraemon's **Skip Stamp** (the <code>continue</code> statement) to skip question 3 and jump straight to question 4!
+    </p>
+
+    <!-- Continue output trace -->
+    <div style="background: #ffffff; border: 2.5px solid #ff9800; border-radius: 12px; padding: 12px; font-size: 13.5px;">
+        <strong style="color: #e65100;">Continue Trace (Counting 1 to 5):</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px; color: #37474f;">for num in range(1, 6):
+    if num == 3:
+        continue  # Skip printing 3, jump to next round
+    print(num)
+# Outputs: 1, 2, 4, 5 (3 is skipped!)</pre>
+    </div>
+</div>
+
+<!-- Continue vs Break comparison box -->
+<div style="background: #e0f7fa; border-left: 5px solid #00acc1; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #006064; line-height: 1.45;">
+    <strong>⚡ Continue vs Break:</strong> <code>break</code> terminates the entire loop immediately. <code>continue</code> only skips the remainder of the current iteration, starting the next loop cycle.
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🎟️</span>
+        <strong>continue</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Skip Stamp</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔄</span>
+        <strong>Next cycle</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Jumps to loop header</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚠️</span>
+        <strong>While bug</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Don't skip increments</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4792,7 +7242,46 @@ window.levels = [
         "description": {
             "heading": "The pass Statement",
             "subheading": "The placeholder statement",
-            "body": "<p>In Python, blocks of code (like loops, conditional statements, functions, and classes) cannot be empty. If you define a loop or condition without any code inside, Python will raise an <code>IndentationError</code> or <code>SyntaxError</code>.</p>\n\n<p>What if you want to write a loop structure now, but implement its code logic later? This is where the <strong><code>pass</code></strong> statement comes in. It is a <strong>null statement</strong> (does absolutely nothing) used as a syntactical placeholder.</p>\n\n<h3>Example</h3>\n<pre class=\"code-example\">for num in range(5):\n    if num == 3:\n        pass # TODO: Add special handling for 3 later!\n    print(num)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">0\n1\n2\n3\n4</pre>\n\n<p>Notice that `3` is printed normally. The <code>pass</code> statement executes silently and performs no action. However, it successfully prevented Python from raising a syntax error! You can use <code>pass</code> in empty loops, empty functions, or empty conditional blocks.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%); border: 3px solid #607d8b; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(96, 125, 139, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #263238; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📦 <strong>Case Study: Space-Filling Block</strong>
+    </h3>
+    <p style="font-size: 15px; color: #37474f; line-height: 1.6; margin-bottom: 16px;">
+        Nobita wants to draft structure frameworks today but implement code logic tomorrow. Since Python errors on empty blocks, Doraemon provides the **Space-Filling Block** (the <code>pass</code> statement) to reserve space without doing anything!
+    </p>
+
+    <!-- Syntax layout -->
+    <div style="background: #ffffff; border: 2.5px solid #607d8b; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #263238;">Pass Syntax Example:</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px;">if is_empty:
+    pass  # Placeholder to prevent indentation syntax errors!</pre>
+    </div>
+</div>
+
+<!-- Difference between pass and continue -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #5d4037; line-height: 1.45;">
+    <strong>💡 Pass vs Continue:</strong> <code>continue</code> tells Python to skip to the next loop round. <code>pass</code> simply does nothing at all, letting execution proceed to subsequent lines inside the same loop round.
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">📦</span>
+        <strong>pass</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Placeholder statement</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🚫</span>
+        <strong>Null Action</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Executes silently</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🛡️</span>
+        <strong>No error</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Blocks code errors</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -4908,7 +7397,52 @@ window.levels = [
         "description": {
             "heading": "Pattern Printing",
             "subheading": "Building grids and shapes",
-            "body": "<p>In Level 40, we learned how nested loops execute. One of the most famous applications of nested loops is <strong>Pattern Printing</strong>! It is a classic programming exercise to practice loop control by printing grids, triangles, or pyramids of symbols (usually asterisks <code>*</code>).</p>\n\n<h3>Printing a 3x3 Grid</h3>\n<pre class=\"code-example\">for i in range(3):\n    for j in range(3):\n        print(\"*\", end=\" \") # end=\" \" keeps prints on the same line\n    print() # Prints a newline to move to the next row</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">* * *\n* * *\n* * *</pre>\n\n<h3>The print() end Parameter</h3>\n<p>By default, Python's <code>print()</code> function ends with a newline character (<code>\\n</code>), which starts a new line. Passing <code>end=\" \"</code> tells Python to end the print with a space instead, keeping subsequent prints on the same row.</p>\n\n<h3>Printing a Triangle with String Multiplication</h3>\n<p>Python allows you to multiply a string by an integer to repeat it. E.g. <code>\"*\" * 3</code> returns <code>\"***\"</code>. We can print a triangle easily using this feature:</p>\n<pre class=\"code-example\">for i in range(1, 4):\n    print(\"*\" * i)</pre>\n\n<p>Output:</p>\n<pre class=\"code-example\">*\n**\n***</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border: 3px solid #00acc1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 172, 193, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #006064; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⭐ <strong>Case Study: Star-Pattern Printer</strong>
+    </h3>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        To construct star grids and custom geometric designs, Doraemon shows Nobita how to use nested loops and string multiplication parameters:
+    </p>
+
+    <!-- Star Grid Output trace -->
+    <div style="background: #ffffff; border: 2.5px solid #00acc1; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #006064;">3x3 Star Grid constructor:</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px;">for i in range(3):
+    for j in range(3):
+        print("*", end=" ")  # end=" " prevents row breaking
+    print()  # row breaker newline
+# Outputs:
+# * * *
+# * * *
+# * * *</pre>
+    </div>
+</div>
+
+<!-- String multiplication block -->
+<div style="background: #e8f5e9; border-left: 5px solid #4caf50; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #1b5e20; line-height: 1.45;">
+    <strong>📐 String Multiplication Shortcut:</strong> Python allows repeating strings easily by multiplying them by integers! E.g. <code>print("*" * 3)</code> outputs <code>***</code> immediately, avoiding nested row loops!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">end=" "</span>
+        <strong>Line Keeper</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Prevents row breaks</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">* n</span>
+        <strong>String Math</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Repeats symbols</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">print()</span>
+        <strong>Row Breaker</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Inserts newline</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5024,7 +7558,45 @@ window.levels = [
         "description": {
             "heading": "Loop Coding Challenge",
             "subheading": "The final Stage 5 loop challenge!",
-            "body": "<p>Welcome to <strong>Level 45</strong>, the final challenge of <strong>STAGE 5: Loops</strong>! In this room, you will face an algorithmic problem requiring you to compute mathematical aggregates and control loop executions.</p>\n\n<p>You have mastered:</p>\n<ul class=\"desc-list\">\n    <li><code>for</code> and <code>while</code> loops.</li>\n    <li>Controlling iterations with <code>range()</code>.</li>\n    <li>Breaking loops early with <code>break</code> and skipping with <code>continue</code>.</li>\n    <li>Nesting loops and pattern layouts.</li>\n</ul>\n\n<p>Verify your readiness using the review questions and diagnostic tests below, then complete the final loop challenge inside the coding editor!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%); border: 3px solid #fbc02d; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(251, 192, 45, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #f57f17; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎓 <strong>Case Study: Nobita's Loop Vault</strong>
+    </h3>
+    <p style="font-size: 15px; color: #f57f17; line-height: 1.6; margin-bottom: 16px;">
+        Congratulations on reaching **Level 45**, marking the completion of Stage 5! Doraemon unlocks the **Loop Vault** to verify your structural coding skills:
+    </p>
+
+    <!-- Strategy checklist -->
+    <div style="background: #ffffff; border: 2px solid #fbc02d; border-radius: 14px; padding: 16px; display: flex; align-items: start; gap: 14px; margin-bottom: 20px;">
+        <span style="font-size: 32px; line-height: 1;">🔐</span>
+        <div>
+            <strong style="color: #f57f17; font-size: 15px;">The Final Loop Mission</strong>
+            <p style="font-size: 14px; color: #455a64; margin: 4px 0 0 0; line-height: 1.5;">
+                You must combine sequence iteration, condition boundaries, nested patterns, and loop interrupt blocks (break/continue) to unlock the final vault code!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🎓</span>
+        <strong>Graduation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Stage 5 complete</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔐</span>
+        <strong>Vault</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Loop Logic Mission</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚡</span>
+        <strong>Interrupt</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Precise loop control</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5140,7 +7712,56 @@ window.levels = [
         "description": {
             "heading": "Introduction to Strings",
             "subheading": "Working with text data",
-            "body": "<p>Text data in Python is represented as a <strong>String</strong> (a sequence of characters). You will work with strings in almost every program you write!</p>\n\n<h3>Creating Strings</h3>\n<ul class=\"desc-list\">\n    <li><strong>Single or Double Quotes:</strong> You can define strings using single quotes (<code>'hello'</code>) or double quotes (<code>\"hello\"</code>). Both work identically. Double quotes are useful when your string contains a single quote contract, like <code>\"Nobita's gadget\"</code>!</li>\n    <li><strong>Triple Quotes:</strong> For multi-line text blocks, enclose your string inside triple quotes (<code>'''hello'''</code> or <code>\"\"\"hello\"\"\"</code>).</li>\n</ul>\n\n<h3>Basic String Operations</h3>\n<ol class=\"desc-list\">\n    <li><strong>Concatenation (addition):</strong> Combine strings together using the <code>+</code> operator. E.g. <code>\"Dora\" + \"emon\"</code> &rarr; <code>\"Doraemon\"</code>.</li>\n    <li><strong>Repetition (multiplication):</strong> Repeat strings multiple times using the <code>*</code> operator. E.g. <code>\"A\" * 3</code> &rarr; <code>\"AAA\"</code>.</li>\n</ol>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>TypeError Warning:</strong> You cannot concatenate a string and a number directly using the <code>+</code> operator (e.g. <code>\"Score: \" + 10</code>). You must first convert the number to a string using the <code>str()</code> function, or use f-strings!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🍞 <strong>Case Study: Doraemon's Copying Toast</strong>
+    </h3>
+    <p style="font-size: 15px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        To clone and merge text notes instantly, Doraemon introduces the **Copying Toast**. Nobita learns how strings are created and combined:
+    </p>
+
+    <!-- Syntax comparisons -->
+    <div style="background: #ffffff; border: 1.5px solid #b3e5fc; border-radius: 12px; padding: 12px; margin-bottom: 12px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #0288d1;">Creating Strings:</strong>
+        <ul style="margin: 4px 0 0 16px; padding: 0;">
+            <li><code>'hello'</code> or <code>"hello"</code> — Both work identically.</li>
+            <li><code>"Nobita's toast"</code> — Double quotes are useful when the text contains single quotes!</li>
+            <li><code>"""multi-line"""</code> — Triple quotes allow text to span across lines.</li>
+        </ul>
+    </div>
+
+    <!-- Concatenation vs Repetition -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #0288d1;">Basic Operations:</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px; color: #37474f;">"Dora" + "emon"   # "Doraemon" (Concatenation)
+"A" * 3           # "AAA"      (Repetition)</pre>
+    </div>
+</div>
+
+<!-- TypeError alert -->
+<div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #c62828; line-height: 1.45;">
+    <strong>⚠️ TypeError Danger:</strong> You cannot add strings and numbers directly (e.g. <code>"Score: " + 10</code>). You must first convert the number to a string using <code>str()</code> or use f-strings.
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">+</span>
+        <strong>Concatenate</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Combine strings</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">*</span>
+        <strong>Repeat</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Multiply strings</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">str()</span>
+        <strong>Type Cast</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Convert to string</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5256,7 +7877,76 @@ window.levels = [
         "description": {
             "heading": "String Indexing",
             "subheading": "Accessing characters by position",
-            "body": "<p>Every character in a string has a specific position number called an <strong>Index</strong>. We can access any character in a string using its index.</p>\n\n<h3>Positive Indexing (Left to Right)</h3>\n<p>In Python, indexing starts at <strong><code>0</code></strong> for the first character!</p>\n<p>For string <code>word = \"Python\"</code>:</p>\n<ul class=\"desc-list\">\n    <li><code>word[0]</code> &rarr; <code>'P'</code> (First character)</li>\n    <li><code>word[1]</code> &rarr; <code>'y'</code></li>\n    <li><code>word[5]</code> &rarr; <code>'n'</code> (Last character)</li>\n</ul>\n\n<h3>Negative Indexing (Right to Left)</h3>\n<p>Negative indices start at <strong><code>-1</code></strong> for the last character, allowing you to easily read backwards!</p>\n<ul class=\"desc-list\">\n    <li><code>word[-1]</code> &rarr; <code>'n'</code> (Last character)</li>\n    <li><code>word[-2]</code> &rarr; <code>'o'</code></li>\n    <li><code>word[-6]</code> &rarr; <code>'P'</code></li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>IndexError:</strong> Trying to access an index that is out of bounds (e.g. <code>word[10]</code> for a 6-letter string) will crash your program with an <code>IndexError: string index out of range</code>. Also remember that strings are <strong>immutable</strong>; you cannot change characters directly using <code>word[0] = 'X'</code>!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🗂️ <strong>Case Study: Doraemon's String Shelves</strong>
+    </h3>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Think of a string as a set of labeled **String Shelves**. Every shelf (character slot) has two tag values: a positive number from the left, and a negative number from the right:
+    </p>
+
+    <!-- Shelves tags diagram -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 12px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #795548; display: block; margin-bottom: 8px;">For string: <code>"Python"</code></strong>
+        <div style="display: flex; gap: 6px; text-align: center;">
+            <div style="background: #efebe9; border: 1px solid #795548; border-radius: 6px; flex: 1; padding: 4px;">
+                <div style="font-size: 11px; color: #757575;">[0]</div>
+                <strong>P</strong>
+                <div style="font-size: 11px; color: #e53935;">[-6]</div>
+            </div>
+            <div style="background: #efebe9; border: 1px solid #795548; border-radius: 6px; flex: 1; padding: 4px;">
+                <div style="font-size: 11px; color: #757575;">[1]</div>
+                <strong>y</strong>
+                <div style="font-size: 11px; color: #e53935;">[-5]</div>
+            </div>
+            <div style="background: #efebe9; border: 1px solid #795548; border-radius: 6px; flex: 1; padding: 4px;">
+                <div style="font-size: 11px; color: #757575;">[2]</div>
+                <strong>t</strong>
+                <div style="font-size: 11px; color: #e53935;">[-4]</div>
+            </div>
+            <div style="background: #efebe9; border: 1px solid #795548; border-radius: 6px; flex: 1; padding: 4px;">
+                <div style="font-size: 11px; color: #757575;">[3]</div>
+                <strong>h</strong>
+                <div style="font-size: 11px; color: #e53935;">[-3]</div>
+            </div>
+            <div style="background: #efebe9; border: 1px solid #795548; border-radius: 6px; flex: 1; padding: 4px;">
+                <div style="font-size: 11px; color: #757575;">[4]</div>
+                <strong>o</strong>
+                <div style="font-size: 11px; color: #e53935;">[-2]</div>
+            </div>
+            <div style="background: #efebe9; border: 1px solid #795548; border-radius: 6px; flex: 1; padding: 4px;">
+                <div style="font-size: 11px; color: #757575;">[5]</div>
+                <strong>n</strong>
+                <div style="font-size: 11px; color: #e53935;">[-1]</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- IndexError & Immutability warning -->
+<div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #c62828; line-height: 1.45;">
+    <strong>⚠️ IndexError & Immutability Rules:</strong> Accessing indexes out of bounds (e.g. <code>word[10]</code>) raises an <code>IndexError</code>. Also remember strings are <strong>immutable</strong>; trying to change characters directly via <code>word[0] = "X"</code> will throw an error!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">[0]</span>
+        <strong>Positive tag</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts at 0 from left</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">[-1]</span>
+        <strong>Negative tag</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts at -1 from right</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔒</span>
+        <strong>Immutable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Cannot change text directly</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5372,7 +8062,56 @@ window.levels = [
         "description": {
             "heading": "String Slicing",
             "subheading": "Extracting substrings",
-            "body": "<p>What if you want to extract a <strong>part of a string</strong> (a substring), not just a single character? E.g., getting <code>\"Dora\"</code> from <code>\"Doraemon\"</code>. In Python, we do this using <strong>Slicing</strong>.</p>\n\n<h3>Slicing Syntax</h3>\n<pre class=\"code-example\">string[start:stop:step]</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>start</code>:</strong> The index where the slice begins (included).</li>\n    <li><strong><code>stop</code>:</strong> The index where the slice ends (<strong>excluded</strong>).</li>\n    <li><strong><code>step</code>:</strong> The increment size (optional, defaults to <code>1</code>).</li>\n</ul>\n\n<h3>Examples with word = \"Doraemon\"</h3>\n<ul class=\"desc-list\">\n    <li><code>word[0:4]</code> &rarr; <code>\"Dora\"</code> (indices 0, 1, 2, 3)</li>\n    <li><code>word[4:8]</code> &rarr; <code>\"emon\"</code> (indices 4, 5, 6, 7)</li>\n</ul>\n\n<h3>Omitting Parameters</h3>\n<ul class=\"desc-list\">\n    <li><code>word[:4]</code> &rarr; <code>\"Dora\"</code> (starts at index 0 if start is omitted)</li>\n    <li><code>word[4:]</code> &rarr; <code>\"emon\"</code> (goes to the end of the string if stop is omitted)</li>\n    <li><code>word[::-1]</code> &rarr; <code>\"nomearoD\"</code> (reverses the string! A step of <code>-1</code> counts backwards)</li>\n</ul>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔪 <strong>Case Study: Doraemon's Slicing Knife</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        To slice parts of a text (like slicing <code>"Dora"</code> from <code>"Doraemon"</code>), Doraemon uses the **Slicing Knife** gadget:
+    </p>
+
+    <!-- Slicing syntax box -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #1b5e20;">Slicing Syntax Format:</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 13px;">string[start : stop : step]</pre>
+    </div>
+</div>
+
+<!-- Slicing index examples list -->
+<div style="background: #f5f5f5; border: 2px dashed #b0bec5; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <span>word = <span style="color: #2e7d32;">"Doraemon"</span></span>
+    <br><br>
+    <span>word[<span style="color: #673ab7;">0:4</span>]   <span style="color: #757575;"># "Dora" (indices 0, 1, 2, 3)</span></span>
+    <br>
+    <span>word[<span style="color: #673ab7;">4:8</span>]   <span style="color: #757575;"># "emon" (indices 4, 5, 6, 7)</span></span>
+    <br>
+    <span>word[<span style="color: #673ab7;">::-1</span>]  <span style="color: #757575;"># "nomearoD" (reverses the string!)</span></span>
+</div>
+
+<!-- Warning on stop index inclusion -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #5d4037; line-height: 1.45;">
+    <strong>⚠️ Stop Index Rule:</strong> The <code>stop</code> index is **excluded** from the sliced result. A slice of <code>[0:4]</code> returns positions 0, 1, 2, and 3, stopping before position 4!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">start</span>
+        <strong>Included</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">First index slice</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">stop</span>
+        <strong>Excluded</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Halting boundary</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">step</span>
+        <strong>Increment step</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Reverse with -1</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5488,7 +8227,47 @@ window.levels = [
         "description": {
             "heading": "Casing Methods",
             "subheading": "upper(), lower(), isupper(), and islower()",
-            "body": "<p>Python strings have built-in functions called <strong>Methods</strong> that allow us to perform common text manipulations easily.</p>\n\n<h3>Case Conversion Methods</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>upper()</code>:</strong> Returns a new string with all letters converted to UPPERCASE. E.g. <code>\"Dora\".upper()</code> &rarr; <code>\"DORA\"</code>.</li>\n    <li><strong><code>lower()</code>:</strong> Returns a new string with all letters converted to lowercase. E.g. <code>\"Dora\".lower()</code> &rarr; <code>\"dora\"</code>.</li>\n</ul>\n\n<h3>Case Check Methods (Boolean)</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>isupper()</code>:</strong> Returns <code>True</code> if all alphabetic characters in the string are uppercase. E.g. <code>\"DORA\".isupper()</code> &rarr; <code>True</code>.</li>\n    <li><strong><code>islower()</code>:</strong> Returns <code>True</code> if all alphabetic characters in the string are lowercase. E.g. <code>\"dora\".islower()</code> &rarr; <code>True</code>.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Method Syntax:</strong> Methods are invoked using dot notation: <code>string.method()</code>. Always include parentheses <code>()</code>. Remember that strings are immutable, so methods never change the original variable; they return a brand new string!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📢 <strong>Case Study: Casing Megaphone</strong>
+    </h3>
+    <p style="font-size: 15px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        To alter or analyze text volumes, Nobita shouts through the **Casing Megaphone**. Speak lowercase words, and it returns a new uppercase string!
+    </p>
+
+    <!-- Method syntax layout -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 12px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #311b92;">Invoking Methods:</strong>
+        <pre style="margin: 4px 0; font-family: 'Fira Code', monospace; font-size: 12px;">"dora".upper()   # "DORA" (uppercase)
+"DORA".lower()   # "dora" (lowercase)
+"DORA".isupper() # True   (checks case)</pre>
+    </div>
+</div>
+
+<!-- Immutability reminder -->
+<div style="background: #e8eaf6; border-left: 5px solid #3f51b5; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #1a237e; line-height: 1.45;">
+    <strong>💡 Immutability check:</strong> Because strings are immutable, methods like <code>upper()</code> and <code>lower()</code> never modify the original variable. They always return a brand new string!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.method()</span>
+        <strong>Dot notation</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Call with dot + ()</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">upper / lower</span>
+        <strong>Case changer</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Converts text case</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">isupper / islower</span>
+        <strong>Case checkers</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Returns True or False</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5604,7 +8383,71 @@ window.levels = [
         "description": {
             "heading": "The replace() Method",
             "subheading": "Replacing characters or words",
-            "body": "<p>What if you want to swap one word for another inside a text? Python provides the built-in <strong><code>replace()</code></strong> method to do this easily.</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">string.replace(old, new, count)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>old</code>:</strong> The substring you want to search for.</li>\n    <li><strong><code>new</code>:</strong> The new substring you want to insert.</li>\n    <li><strong><code>count</code>:</strong> (Optional) The maximum number of replacements to perform starting from the left. If omitted, all occurrences are replaced.</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"I like apples\".replace(\"apples\", \"bananas\")</code> &rarr; <code>\"I like bananas\"</code></li>\n    <li><code>\"banana\".replace(\"a\", \"o\")</code> &rarr; <code>\"bonono\"</code> (replaces all occurrences!)</li>\n    <li><code>\"banana\".replace(\"a\", \"o\", 2)</code> &rarr; <code>\"bonona\"</code> (replaces only the first 2 occurrences)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Immutability check:</strong> Just like casing methods, <code>replace()</code> returns a brand new string and does not modify the original variable. It is also case-sensitive, meaning replacing <code>\"apple\"</code> will not match <code>\"Apple\"</code>!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔄 <strong>Case Study: Nobita's Typo & Doraemon's Word Transmuter</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wrote a heartfelt 10-page letter to Shizuka, but he accidentally spelled her name as <code>"Shizuko"</code> throughout the entire document! Editing every single mistake manually would take hours and he'd probably miss a few.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon saves the day with the <strong>Word Transmuter</strong> gadget (the <code>replace()</code> method). It scans the text, targets every occurrence of the spelling error, and swaps it with the correct name in a split second!
+    </p>
+
+    <!-- Transmuter syntax layout -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #e65100; display: block; margin-bottom: 8px;">Transmuter Syntax Format:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #d84315;">string.replace(old, new, count)</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0; line-height: 1.5;">
+            <li><code>old</code>: The text pattern you want to find (e.g. <code>"Shizuko"</code>).</li>
+            <li><code>new</code>: The corrected text pattern to put in (e.g. <code>"Shizuka"</code>).</li>
+            <li><code>count</code> (Optional): Limits how many matches to replace starting from the left.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Python Executes the Change:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li>Python scans the text character-by-character from left to right.</li>
+        <li>Every time it matches <code>"Shizuko"</code>, it discards it and inserts <code>"Shizuka"</code>.</li>
+        <li><strong>Immutability check:</strong> Because strings are immutable, <code>replace()</code> prints a **brand new sheet** rather than altering the original page. You must save the new sheet: <br><code>letter = letter.replace("Shizuko", "Shizuka")</code>.</li>
+    </ol>
+</div>
+
+<!-- Replacements example traces -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Code Examples:</strong>
+    <span>"banana".replace("a", "o")     <span style="color: #757575;"># "bonono" (all 'a' changed to 'o')</span></span>
+    <br>
+    <span>"banana".replace("a", "o", 2)  <span style="color: #757575;"># "bonona" (only the first 2 'a's changed)</span></span>
+</div>
+
+<!-- Case sensitivity warnings -->
+<div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #c62828; line-height: 1.45;">
+    <strong>⚠️ Case Sensitivity Alert:</strong> Replacement is strictly case-sensitive! Searching for <code>"shizuko"</code> (lowercase 's') will not find or correct <code>"Shizuko"</code> (uppercase 'S').
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">old</span>
+        <strong>Search Target</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">The bad pattern</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">new</span>
+        <strong>Replacement</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Word to insert</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">count</span>
+        <strong>Limit count</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Occurrences limit</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5720,7 +8563,73 @@ window.levels = [
         "description": {
             "heading": "The find() Method",
             "subheading": "Searching for substrings",
-            "body": "<p>What if you want to know <strong>where</strong> a specific word or character appears inside a string? Python provides the <strong><code>find()</code></strong> method to search for substrings and return their index position.</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">string.find(substring, start, end)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>substring</code>:</strong> The text you want to search for.</li>\n    <li><strong><code>start</code>:</strong> (Optional) The index to start searching from (defaults to 0).</li>\n    <li><strong><code>end</code>:</strong> (Optional) The index to stop searching at (defaults to end of string).</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"Doraemon\".find(\"ora\")</code> &rarr; <code>1</code> (found at index 1)</li>\n    <li><code>\"Doraemon\".find(\"z\")</code> &rarr; <code>-1</code> (not found, returns -1)</li>\n    <li><code>\"banana\".find(\"a\", 2)</code> &rarr; <code>3</code> (searches from index 2 onwards)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Important Note:</strong> <code>find()</code> returns <strong>-1</strong> if the substring is not found. This is different from using the <code>in</code> operator which returns <code>True</code> or <code>False</code>. The search is also case-sensitive!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📡 <strong>Case Study: Nobita's Hidden Map & Doraemon's Substring Radar</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita is looking at a long, mysterious scroll of text representing a map code. He wants to know if the key pattern <code>"gold"</code> is hidden anywhere in the text, and exactly which character position it begins at.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon activates the <strong>Substring Radar</strong> (the <code>find()</code> method). It scans the string text from left to right, hunting down the precise starting index of the target word!
+    </p>
+
+    <!-- Radar syntax formatting -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #795548; display: block; margin-bottom: 8px;">Radar Search Syntax Format:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #5d4037;">string.find(substring, start, end)</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0; line-height: 1.5;">
+            <li><code>substring</code>: The target text pattern you are searching for.</li>
+            <li><code>start</code> (Optional): The index where the radar starts scanning (defaults to 0).</li>
+            <li><code>end</code> (Optional): The index where the radar stops scanning (defaults to string end).</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How the Substring Radar Works:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li>It scans character by character starting from index 0 (or your chosen <code>start</code> index).</li>
+        <li>If it finds a match, it returns the **index of the very first character** of the matching substring. For example, <code>"Doraemon".find("ora")</code> finds a match starting at index 1 ('o'), so it returns <code>1</code>.</li>
+        <li>If the radar scans the entire string and finds absolutely nothing, it returns **<code>-1</code>** instead of throwing an error.</li>
+    </ol>
+</div>
+
+<!-- Radar search examples list -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Examples:</strong>
+    <span>"Doraemon".find("ora")   <span style="color: #757575;"># 1 (first character 'o' is at index 1)</span></span>
+    <br>
+    <span>"Doraemon".find("z")     <span style="color: #757575;"># -1 (not found)</span></span>
+    <br>
+    <span>"banana".find("a", 2)    <span style="color: #757575;"># 3 (ignores indices before 2, finds 'a' at index 3)</span></span>
+</div>
+
+<!-- Safe scanner warning -->
+<div style="background: #fff8e1; border-left: 5px solid #ffb300; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #5d4037; line-height: 1.45;">
+    <strong>⚠️ Safe Scanning (find vs index):</strong> If the item is not found, <code>find()</code> returns <code>-1</code>. This is safer than the <code>index()</code> method, which raises a <code>ValueError</code> and crashes your program if the word isn't there!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">find()</span>
+        <strong>Search Radar</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Returns index slot</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">-1</span>
+        <strong>Not Found</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Safe missing code</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚠️</span>
+        <strong>Case-Sensitive</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Casing must match</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5836,7 +8745,67 @@ window.levels = [
         "description": {
             "heading": "The split() Method",
             "subheading": "Breaking strings into lists",
-            "body": "<p>What if you have a sentence and want to extract each word separately? Python's <strong><code>split()</code></strong> method breaks a string into a <strong>list</strong> of smaller strings based on a separator (delimiter).</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">string.split(separator, maxsplit)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>separator</code>:</strong> The character(s) to split on (defaults to <strong>whitespace</strong> if omitted).</li>\n    <li><strong><code>maxsplit</code>:</strong> (Optional) Maximum number of splits to perform.</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"Doraemon loves dorayaki\".split()</code> &rarr; <code>[\"Doraemon\", \"loves\", \"dorayaki\"]</code> (splits on whitespace)</li>\n    <li><code>\"apple,banana,cherry\".split(\",\")</code> &rarr; <code>[\"apple\", \"banana\", \"cherry\"]</code> (splits on comma)</li>\n    <li><code>\"one-two-three\".split(\"-\")</code> &rarr; <code>[\"one\", \"two\", \"three\"]</code> (splits on hyphen)</li>\n    <li><code>\"a,b,c\".split(\",\", 1)</code> &rarr; <code>[\"a\", \"b,c\"]</code> (splits only once)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Use Case:</strong> <code>split()</code> is incredibly useful for parsing data, reading CSV files, processing user input, and breaking down sentences into individual words for analysis!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🥢 <strong>Case Study: Nobita's Instruction List & Doraemon's Chopstick Splitter</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has a long string containing a sequence of commands separated by hyphens: <code>"Go-to-park-buy-toast-study-math"</code>. He wants to chop this single text block into a list of separate tasks so he can handle them one by one.
+    </p>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon hands him the **Chopstick Splitter** (the <code>split()</code> method). It breaks a string into a **List** of smaller substrings by snapping it at every separator point (delimiter)!
+    </p>
+
+    <!-- Splitter format syntax box -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #1b5e20; display: block; margin-bottom: 8px;">Splitter Syntax format:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #1b5e20;">string.split(separator, maxsplit)</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0; line-height: 1.5;">
+            <li><code>separator</code>: The character(s) to split on (defaults to <strong>whitespace</strong> if omitted).</li>
+            <li><code>maxsplit</code> (Optional): Limits the maximum number of splits to perform from the left.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How split() cuts strings:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li>Python searches the string for the specified separator.</li>
+        <li>Every time it finds the separator, it slices the string at that point, discards the separator, and stores the chunks into a Python List <code>[]</code>.</li>
+        <li><strong>No arguments call:</strong> Calling <code>split()</code> with no arguments splits on any whitespace (spaces, tabs, newlines), which is perfect for isolating words in a standard sentence!</li>
+    </ol>
+</div>
+
+<!-- Split output traces list -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Examples:</strong>
+    <span>"Doraemon loves pie".split()   <span style="color: #757575;"># ['Doraemon', 'loves', 'pie']</span></span>
+    <br>
+    <span>"a,b,c".split(",")               <span style="color: #757575;"># ['a', 'b', 'c'] (split comma)</span></span>
+    <br>
+    <span>"a-b-c".split("-", 1)            <span style="color: #757575;"># ['a', 'b-c'] (stops after 1 split)</span></span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">split()</span>
+        <strong>String Divider</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Produces list []</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">separator</span>
+        <strong>Split Tag</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Defaults to space</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">maxsplit</span>
+        <strong>Cut Limit</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Restricts splits count</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -5952,7 +8921,67 @@ window.levels = [
         "description": {
             "heading": "The join() Method",
             "subheading": "Combining lists into strings",
-            "body": "<p>The <strong><code>join()</code></strong> method is the opposite of <code>split()</code> — it combines a list of strings into a single string, placing a separator between each element.</p>\n\n<h3>Method Syntax</h3>\n<pre class=\"code-example\">separator.join(list_of_strings)</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>separator</code>:</strong> The string to place between each element (e.g., space, comma, hyphen).</li>\n    <li><strong><code>list_of_strings</code>:</strong> The list (or any iterable) of strings to join.</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\" \".join([\"Doraemon\", \"loves\", \"dorayaki\"])</code> &rarr; <code>\"Doraemon loves dorayaki\"</code> (joins with space)</li>\n    <li><code>\",\".join([\"apple\", \"banana\", \"cherry\"])</code> &rarr; <code>\"apple,banana,cherry\"</code> (joins with comma)</li>\n    <li><code>\"-\".join([\"2024\", \"01\", \"15\"])</code> &rarr; <code>\"2024-01-15\"</code> (joins with hyphen)</li>\n    <li><code>\"\".join([\"h\", \"e\", \"l\", \"l\", \"o\"])</code> &rarr; <code>\"hello\"</code> (joins with empty string)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Important Note:</strong> <code>join()</code> is called on the <strong>separator string</strong>, not the list! Also, all elements in the list must be strings — you cannot join a list containing numbers directly without converting them first.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🧪 <strong>Case Study: Nobita's Word Tags & Doraemon's Super Glue Separator</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has a drawer full of scattered cardboard word tags: <code>["Bamboo", "Copter", "Propeller"]</code>. He wants to glue these separate segments together into a single phrase separated by spaces: <code>"Bamboo Copter Propeller"</code>.
+    </p>
+    <p style="font-size: 15px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon applies **Super Glue** (the <code>join()</code> method). It takes an array (list) of strings and concatenates them into one single string, using a spacer character to link them!
+    </p>
+
+    <!-- Join syntax format box -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #311b92; display: block; margin-bottom: 8px;">Glue Syntax Format (Note the order!):</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #512da8;">separator.join(list_of_strings)</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0; line-height: 1.5;">
+            <li><code>separator</code>: The character string to place between elements (e.g. <code>" "</code> or <code>","</code>).</li>
+            <li><code>list_of_strings</code>: The list containing the string segments to be joined together.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How the Super Glue Works:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Inverted Syntax Alert:</strong> You call <code>join()</code> on the **separator string**, not on the list itself! For example: <code>" ".join(my_list)</code>.</li>
+        <li>Python iterates through the list, placing the separator string between each adjacent pair of elements.</li>
+        <li><strong>Strict Type Rule:</strong> All elements in the list must be strings. If your list contains numbers (like <code>[10, 20]</code>), Python will throw a <code>TypeError</code> and crash! You must convert them to strings first.</li>
+    </ol>
+</div>
+
+<!-- Output traces examples list -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Examples:</strong>
+    <span>" ".join(["Dora", "loves", "dorayaki"])  <span style="color: #757575;"># "Dora loves dorayaki"</span></span>
+    <br>
+    <span>",".join(["apple", "banana"])            <span style="color: #757575;"># "apple,banana"</span></span>
+    <br>
+    <span>"".join(["h", "e", "l", "l", "o"])        <span style="color: #757575;"># "hello" (empty string separator)</span></span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">join()</span>
+        <strong>Super Glue</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Combines lists</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">separator</span>
+        <strong>Glue Base</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Called on separator</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">str type</span>
+        <strong>Text Only</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">No numbers allowed</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6068,7 +9097,65 @@ window.levels = [
         "description": {
             "heading": "Escape Characters",
             "subheading": "Special characters in strings",
-            "body": "<p>Sometimes you need to include special characters in your strings that can't be typed directly — like a <strong>newline</strong>, <strong>tab</strong>, or even a <strong>quote</strong> inside a quoted string. Python uses the <strong>backslash (\\)</strong> to create these <strong>escape characters</strong>.</p>\n\n<h3>Common Escape Characters</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>\\n</code></strong> — Newline (moves to the next line)</li>\n    <li><strong><code>\\t</code></strong> — Tab (horizontal spacing)</li>\n    <li><strong><code>\\'</code></strong> — Single quote (inside single-quoted strings)</li>\n    <li><strong><code>\\\"</code></strong> — Double quote (inside double-quoted strings)</li>\n    <li><strong><code>\\\\</code></strong> — Backslash (to display a literal backslash)</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>\"Hello\\nWorld\"</code> &rarr; Displays as two lines</li>\n    <li><code>\"Name:\\tDoraemon\"</code> &rarr; Displays with tab spacing</li>\n    <li><code>'Nobita\\'s gadget'</code> &rarr; Displays as <code>Nobita's gadget</code></li>\n    <li><code>\"Path: C:\\\\Users\\\\Doraemon\"</code> &rarr; Displays as <code>Path: C:\\Users\\Doraemon</code></li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Pro Tip:</strong> For Windows file paths, you can either use double backslashes <code>\\\\</code> or use <strong>raw strings</strong> with the <code>r</code> prefix: <code>r\"C:\\Users\\Doraemon\"</code> — raw strings treat backslashes literally!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🚪 <strong>Case Study: Nobita's Dialogue Writing & Doraemon's Passage Pass</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to write a dialogue that contains quotation marks inside a quoted string and hits "Enter" to go to a new line:
+        <br><code>Dear Shizuka,</code>
+        <br><code>Nobita said, "I'm ready!"</code>
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Python gets confused when quotes are nested inside quotes (e.g. <code>"He said "Hello""</code>), thinking the string ends early. Doraemon hands him the **Passage Pass** (backslash <code>\\</code>) to bypass Python's normal parser!
+    </p>
+
+    <!-- Escape sequences list -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 16px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong>Common Escape Tags:</strong>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li>🔑 <code>\\n</code> &rarr; Starts a **newline** (hits the 'Enter' key inside a string).</li>
+            <li>📏 <code>\\t</code> &rarr; Inserts a horizontal **tab** space.</li>
+            <li>💬 <code>\\'</code> or <code>\\"</code> &rarr; Prints literal quotation marks without ending the string.</li>
+            <li>📂 <code>\\\\</code> &rarr; Displays a literal backslash.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Python Interprets Escape Codes:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li>When Python encounters a backslash <code>\\</code> inside a string, it stops reading it as normal text.</li>
+        <li>It looks at the character *immediately following* the backslash, translates them together into a single special character, and prints it.</li>
+        <li>For example, <code>"Hello\\nWorld"</code> becomes two lines when printed.</li>
+    </ol>
+</div>
+
+<!-- Raw string prefix tips -->
+<div style="background: #e8f5e9; border-left: 5px solid #4caf50; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #1b5e20; line-height: 1.45;">
+    <strong>💡 Raw Strings Shortcut (r""):</strong> When writing Windows file paths containing lots of backslashes (e.g. <code>"C:\\Users\\nobita"</code>), escaping every backslash as <code>\\\\</code> is annoying. Prefix your string with <code>r</code> (e.g. <code>r"C:\\Users\\nobita"</code>) to disable escape processing entirely!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">\\</span>
+        <strong>Escape character</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Backslash prefix</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">\\n</span>
+        <strong>Newline</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts new line</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">r"..."</span>
+        <strong>Raw string</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Disables escapes</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6184,7 +9271,71 @@ window.levels = [
         "description": {
             "heading": "f-Strings (Formatted String Literals)",
             "subheading": "Modern string formatting",
-            "body": "<p><strong>f-Strings</strong> (introduced in Python 3.6) are the most modern and readable way to format strings in Python. They allow you to <strong>embed variables and expressions directly inside strings</strong> using curly braces <code>{}</code>.</p>\n\n<h3>f-String Syntax</h3>\n<pre class=\"code-example\">f\"Text with {variable} embedded\"</pre>\n<ul class=\"desc-list\">\n    <li>Prefix the string with the letter <code>f</code></li>\n    <li>Place variables or expressions inside <code>{}</code> curly braces</li>\n    <li>Python automatically converts them to strings!</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>name = \"Doraemon\"; f\"Hello {name}!\"</code> &rarr; <code>\"Hello Doraemon!\"</code></li>\n    <li><code>age = 10; f\"Age: {age}\"</code> &rarr; <code>\"Age: 10\"</code> (no str() needed!)</li>\n    <li><code>f\"2 + 3 = {2 + 3}\"</code> &rarr; <code>\"2 + 3 = 5\"</code> (expressions work!)</li>\n    <li><code>f\"{name.upper()} is awesome!\"</code> &rarr; <code>\"DORAEMON is awesome!\"</code> (methods work!)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why f-Strings?</strong> They're faster than <code>.format()</code> and <code>%</code> formatting, more readable, and automatically handle type conversion. They're the recommended way to format strings in modern Python!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎯 <strong>Case Study: Nobita's Game Score & Doraemon's Morphing Template Ray</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita is calculating his game score. He wants to print: <code>"Player Nobita has 50 points (Grade: A)"</code>. Using the old string concatenation method with <code>+</code> signs is messy and causes type errors.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon shoots the string with the **Morphing Template Ray** (f-strings). This allows Nobita to write clean text templates and inject variables or calculations directly inside it!
+    </p>
+
+    <!-- f-string syntax format box -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">f-String Syntax Format:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #4e342e;">f"Text with {variable} inside"</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0; line-height: 1.5;">
+            <li>Prefix the string with the letter <code>f</code> or <code>F</code>.</li>
+            <li>Place variable names, calculations, or method calls inside curly braces <code>{}</code>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How the Morphing Ray processes variables:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li>Python checks if the string has an <code>f</code> prefix.</li>
+        <li>For each curly brace pair <code>{}</code>, Python evaluates the expression inside.</li>
+        <li><strong>Auto-Casting:</strong> Python automatically converts the resulting value into a string. No manual <code>str()</code> cast is needed! E.g. \`f"Score: {score}"\` where score is an integer.</li>
+    </ol>
+</div>
+
+<!-- Output traces examples list -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Examples:</strong>
+    <span>name = "Doraemon"</span>
+    <br>
+    <span>age = 10</span>
+    <br><br>
+    <span>f"Hello {name}"       <span style="color: #757575;"># "Hello Doraemon"</span></span>
+    <br>
+    <span>f"Age: {age}"          <span style="color: #757575;"># "Age: 10" (no str() cast!)</span></span>
+    <br>
+    <span>f"3 + 2 = {3 + 2}"     <span style="color: #757575;"># "3 + 2 = 5" (math expression)</span></span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">f"..."</span>
+        <strong>f-Prefix</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Activates formatting</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">{var}</span>
+        <strong>Curly Braces</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Variable injection</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">str()</span>
+        <strong>Auto Cast</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Auto conversion</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6300,7 +9451,73 @@ window.levels = [
         "description": {
             "heading": "Introduction to Lists",
             "subheading": "Ordered, mutable collections",
-            "body": "<p>A <strong>List</strong> is Python's most versatile collection type. It's an <strong>ordered</strong> sequence of items that can be of <strong>any type</strong> — numbers, strings, or even other lists! Lists are <strong>mutable</strong>, meaning you can change them after creation.</p>\n\n<h3>Creating Lists</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>square brackets <code>[]</code></strong> to create lists</li>\n    <li>Separate items with <strong>commas</strong></li>\n    <li>Lists can contain mixed data types</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets = [\"Anywhere Door\", \"Time Machine\", \"Bamboo Copter\"]</code></li>\n    <li><code>numbers = [1, 2, 3, 4, 5]</code></li>\n    <li><code>mixed = [\"Doraemon\", 10, True, 3.14]</code></li>\n    <li><code>empty = []</code> (empty list)</li>\n</ul>\n\n<h3>Accessing List Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets[0]</code> &rarr; First element (index 0)</li>\n    <li><code>gadgets[-1]</code> &rarr; Last element</li>\n    <li><code>gadgets[1:3]</code> &rarr; Slice (elements at index 1 and 2)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>IndexError:</strong> Trying to access an index that doesn't exist (e.g. <code>gadgets[10]</code> for a 3-item list) will crash your program!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎒 <strong>Case Study: Nobita's Messy Desk & Doraemon's 4D Pocket Compartments</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has comics, school test sheets, and gadgets scattered all over his bedroom floor. Whenever he needs his Bamboo Copter, he has to dig through piles of trash.
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon shows him the **4D Pocket Compartments** (mutable lists). Inside this pocket, items are held in distinct, ordered slots. Nobita can locate gadgets by their position, swap old items for new ones, or count his inventory instantly!
+    </p>
+
+    <!-- Creating lists format -->
+    <div style="background: #ffffff; border: 1.5px solid #b3e5fc; border-radius: 12px; padding: 16px; margin-bottom: 12px; font-size: 13.5px; color: #37474f; line-height: 1.5;">
+        <strong style="color: #0288d1; display: block; margin-bottom: 6px;">How lists are defined:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #0288d1;">gadgets = ["Anywhere Door", "Time Machine", "Bamboo Copter"]</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li>Enclosed in square brackets <code>[]</code> and separated by commas.</li>
+            <li>Can contain mixed types: <code>mixed = ["Doraemon", 10, True, 3.14]</code>.</li>
+            <li>Can even start empty: <code>empty = []</code>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Master the List Rules:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Zero-Based Indexing:</strong> The first slot is <code>[0]</code>, the second is <code>[1]</code>, etc.</li>
+        <li><strong>Negative Indexing:</strong> To fetch from the end of the list, use negative offsets: <code>[-1]</code> is the last element, <code>[-2]</code> is second-to-last.</li>
+        <li><strong>Lists are Mutable:</strong> Unlike strings, you can change individual list elements directly: <br><code>gadgets[2] = "Copying Toast"</code>.</li>
+    </ol>
+</div>
+
+<!-- Accessing items -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Code Demos:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">gadgets = ["Door", "Time Machine", "竹コプター"]
+print(gadgets[0])    # "Door" (first element)
+print(gadgets[-1])   # "竹コプター" (last element)
+gadgets[1] = "Ray"   # Swaps "Time Machine" with "Ray"
+print(gadgets)       # ["Door", "Ray", "竹コプター"]</pre>
+</div>
+
+<!-- IndexError caution -->
+<div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #c62828; line-height: 1.45;">
+    <strong>⚠️ IndexError Risk:</strong> Trying to access an index slot that doesn't exist (e.g. <code>gadgets[10]</code> when the list only has 3 items) will immediately crash your script with an <code>IndexError</code>!
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">[]</span>
+        <strong>Square brackets</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Define list sequences</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">✏️</span>
+        <strong>Mutable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Modifiable slots</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">0</span>
+        <strong>0-Indexed</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts at position 0</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6416,7 +9633,69 @@ window.levels = [
         "description": {
             "heading": "List Methods",
             "subheading": "Adding, removing, and sorting",
-            "body": "<p>Python lists come with powerful <strong>built-in methods</strong> to manipulate their contents. These methods make it easy to add, remove, and organize elements.</p>\n\n<h3>Common List Methods</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>append(item)</code></strong> — Adds an item to the <strong>end</strong> of the list</li>\n    <li><strong><code>insert(index, item)</code></strong> — Inserts an item at a specific position</li>\n    <li><strong><code>remove(item)</code></strong> — Removes the <strong>first occurrence</strong> of an item</li>\n    <li><strong><code>pop(index)</code></strong> — Removes and returns item at index (default: last)</li>\n    <li><strong><code>sort()</code></strong> — Sorts the list in <strong>ascending order</strong> (modifies in-place)</li>\n    <li><strong><code>reverse()</code></strong> — Reverses the list in-place</li>\n    <li><strong><code>count(item)</code></strong> — Returns how many times an item appears</li>\n    <li><strong><code>index(item)</code></strong> — Returns the index of the first occurrence</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>gadgets.append(\"Memory Bread\")</code> &rarr; Adds to end</li>\n    <li><code>gadgets.insert(0, \"Anywhere Door\")</code> &rarr; Inserts at beginning</li>\n    <li><code>gadgets.remove(\"Time Machine\")</code> &rarr; Removes first match</li>\n    <li><code>gadgets.pop()</code> &rarr; Removes and returns last item</li>\n    <li><code>numbers.sort()</code> &rarr; Sorts numbers ascending</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>In-place vs Return:</strong> Methods like <code>append()</code>, <code>sort()</code>, and <code>reverse()</code> modify the list <strong>in-place</strong> and return <code>None</code>. Don't assign them back to the list!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: Nobita's Gadget Sorting & Doraemon's Pocket Organizer</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to manage a growing pile of gadgets. He needs to insert a new gadget at the very end, squeeze a priority gadget into index slot 0, remove duplicate or broken gadgets, and sort them alphabetically.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon activates the **Pocket Organizer** tool (list methods). Python lists have built-in actions (methods) that let you easily add, insert, remove, or sort elements in place.
+    </p>
+
+    <!-- Methods syntax list -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">
+        <strong>Core List Methods:</strong>
+        <ul style="margin: 8px 0 0 16px; padding: 0; font-family: 'Nunito', sans-serif; line-height: 1.55;">
+            <li>➕ <code>append(item)</code>: Appends an item to the **end** of the list.</li>
+            <li>📍 <code>insert(index, item)</code>: Squeezes an item at a specific index, pushing other items right.</li>
+            <li>❌ <code>remove(item)</code>: Removes the **first occurrence** of a specific value.</li>
+            <li>📤 <code>pop(index)</code>: Removes and returns the item at a specific index (defaults to the last item).</li>
+            <li>🔀 <code>sort()</code>: Rearranges elements in ascending/alphabetical order directly.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How List Methods Work in Python:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>In-place Mutation:</strong> These methods modify the original list directly in your computer's memory.</li>
+        <li><strong>The None Return Trap:</strong> Methods like <code>append()</code>, <code>sort()</code>, and <code>reverse()</code> do **not** return the updated list—they return <code>None</code>! Never write <code>my_list = my_list.append("item")</code> or your list will become <code>None</code>.</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">List Methods in action:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">gadgets = ["Door", "Time Machine"]
+gadgets.append("Copter")   # ['Door', 'Time Machine', 'Copter']
+gadgets.insert(0, "Toast")  # ['Toast', 'Door', 'Time Machine', 'Copter']
+gadgets.remove("Door")      # ['Toast', 'Time Machine', 'Copter']
+last_item = gadgets.pop()   # last_item = 'Copter', gadgets = ['Toast', 'Time Machine']
+gadgets.sort()              # ['Toast', 'Time Machine'] (sorted)</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">append()</span>
+        <strong>Add to end</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Inserts at back</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">insert()</span>
+        <strong>Add at index</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Specific index slot</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">pop()</span>
+        <strong>Remove & Fetch</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Extracts index item</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6532,7 +9811,67 @@ window.levels = [
         "description": {
             "heading": "List Comprehension",
             "subheading": "Elegant list creation",
-            "body": "<p><strong>List comprehension</strong> is a beautiful Python feature that lets you create lists using a single, concise line of code. It combines a <code>for</code> loop (and optionally an <code>if</code> condition) into one expression!</p>\n\n<h3>Basic Syntax</h3>\n<pre class=\"code-example\">[expression for item in iterable]</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>expression</code></strong> — What each element will be</li>\n    <li><strong><code>item</code></strong> — Variable representing each element</li>\n    <li><strong><code>iterable</code></strong> — The sequence to loop over</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>[x*2 for x in range(5)]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (double each number)</li>\n    <li><code>[x.upper() for x in [\"dora\", \"emon\"]]</code> &rarr; <code>[\"DORA\", \"EMON\"]</code> (uppercase each)</li>\n    <li><code>[x for x in range(10) if x % 2 == 0]</code> &rarr; <code>[0, 2, 4, 6, 8]</code> (only evens)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Why use it?</strong> List comprehensions are more readable, faster, and considered more \"Pythonic\" than traditional for loops with append().</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚡ <strong>Case Study: Nobita's Double-Score Ray & Doraemon's Auto-Multiplier Ray</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has a list of numbers representing test scores: <code>[1, 2, 3, 4, 5]</code>. He wants to double each score to create a new list: <code>[2, 4, 6, 8, 10]</code>. Writing a standard loop requires setting up an empty list, writing a <code>for</code> loop, doubling, and appending—taking 5 lines of code!
+    </p>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon shoots them with the **Auto-Multiplier Ray** (list comprehension). This powerful syntax compresses the entire loop, calculation, and creation steps into one elegant line!
+    </p>
+
+    <!-- Comprehension syntax structure -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.5;">
+        <strong style="color: #1b5e20; display: block; margin-bottom: 6px;">How List Comprehension is structured:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #2e7d32;">[expression for item in iterable if condition]</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li><code>expression</code>: What to do with the item (e.g. <code>item * 2</code>). This determines the elements in the new list.</li>
+            <li><code>for item in iterable</code>: The loop that visits each item in the original collection.</li>
+            <li><code>if condition</code> (Optional): Filters which elements are allowed to be processed.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How the Auto-Multiplier Ray Works:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li>Python reads the square brackets <code>[]</code> and knows a new list is being created.</li>
+        <li>It iterates through the source collection one item at a time.</li>
+        <li>If there is an <code>if</code> filter, Python checks the condition. If it is <code>False</code>, Python skips that item.</li>
+        <li>It evaluates the expression (calculation) on the item and pushes the result directly into the new list.</li>
+    </ol>
+</div>
+
+<!-- Output traces list -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 14px; padding: 18px; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Examples:</strong>
+    <span>[x*2 for x in range(5)]   <span style="color: #757575;"># [0, 2, 4, 6, 8] (doubles numbers 0-4)</span></span>
+    <br>
+    <span>[x for x in range(10) if x % 2 == 0] <span style="color: #757575;"># [0, 2, 4, 6, 8] (filters even numbers)</span></span>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">expression</span>
+        <strong>Output Value</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Calculates list item</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">for loop</span>
+        <strong>Iterator</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Loops over source</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">if filter</span>
+        <strong>Condition</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Filters out items</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6648,7 +9987,67 @@ window.levels = [
         "description": {
             "heading": "Tuples",
             "subheading": "Immutable ordered sequences",
-            "body": "<p>A <strong>Tuple</strong> is similar to a list, but with one key difference: it's <strong>immutable</strong> — once created, it <strong>cannot be changed</strong>. Tuples are perfect for data that should remain constant throughout your program.</p>\n\n<h3>Creating Tuples</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>parentheses <code>()</code></strong> to create tuples</li>\n    <li>Separate items with <strong>commas</strong></li>\n    <li>Single-item tuples need a trailing comma: <code>(item,)</code></li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>coordinates = (10, 20)</code> (x, y position)</li>\n    <li><code>colors = (\"red\", \"green\", \"blue\")</code> (RGB values)</li>\n    <li><code>single = (\"Doraemon\",)</code> (single item with comma)</li>\n    <li><code>empty = ()</code> (empty tuple)</li>\n</ul>\n\n<h3>Tuple vs List</h3>\n<ul class=\"desc-list\">\n    <li><strong>Tuples:</strong> Immutable, faster, use parentheses <code>()</code></li>\n    <li><strong>Lists:</strong> Mutable, slower, use square brackets <code>[]</code></li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Immutable:</strong> You cannot add, remove, or modify tuple elements after creation. Trying to do so raises a <code>TypeError</code>!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔒 <strong>Case Study: Time Machine Navigation & Doraemon's Sealed Vault</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita is using the Time Machine. It relies on fixed space-time coordinate parameters: <code>(35.6895, 139.6917)</code>. If Nobita bumps into the controls and edits one coordinate number, they will be lost in space-time forever!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon locks these fixed settings inside a **Sealed Vault** (a **Tuple**). Unlike mutable lists, tuples are completely immutable. Once created, their items can never be changed, added, or deleted!
+    </p>
+
+    <!-- Tuple declaration structures -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.5;">
+        <strong style="color: #311b92; display: block; margin-bottom: 6px;">Declaring Tuples:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #673ab7;">home_coords = (35.6895, 139.6917)</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li>Uses round parentheses <code>()</code> instead of square brackets.</li>
+            <li><strong>Single-Item Comma Rule:</strong> To declare a tuple with only 1 item, you *must* add a trailing comma: <code>("Doraemon",)</code>. Without the comma, Python thinks it's just regular parentheses around a string!</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Tuples Protect Data:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li>You can access tuple elements by index just like lists: <code>coords[0]</code> works perfectly.</li>
+        <li><strong>No Assignment allowed:</strong> If you try to swap an element: <code>coords[0] = 50.5</code>, Python intercepts it and raises a <code>TypeError</code> immediately, preventing data corruption.</li>
+        <li><strong>Memory benefit:</strong> Because they are sealed, tuples are processed faster in computer memory than lists.</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Tuple validation:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">coords = (35.6, 139.7)
+print(coords[0])     # 35.6
+# coords[0] = 40.0   # Error! TypeError: 'tuple' object does not support item assignment
+single = (10,)       # Correct 1-item tuple
+not_tuple = (10)     # Just an integer inside parentheses!</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">()</span>
+        <strong>Parentheses</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Defines tuples</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🔒</span>
+        <strong>Immutable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Cannot edit values</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">(item,)</span>
+        <strong>Comma Rule</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Trailing comma for 1 item</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6764,7 +10163,73 @@ window.levels = [
         "description": {
             "heading": "Sets",
             "subheading": "Unordered unique collections",
-            "body": "<p>A <strong>Set</strong> is an unordered collection of <strong>unique</strong> items. Unlike lists, sets cannot contain duplicate values, and they don't maintain any specific order. Sets are perfect for removing duplicates and performing mathematical set operations.</p>\n\n<h3>Creating Sets</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>curly braces <code>{}</code></strong> to create sets</li>\n    <li>Or use the <code>set()</code> constructor</li>\n    <li>Duplicates are automatically removed</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>{1, 2, 3, 2, 1}</code> &rarr; <code>{1, 2, 3}</code> (duplicates removed)</li>\n    <li><code>set([\"a\", \"b\", \"a\"])</code> &rarr; <code>{\"a\", \"b\"}</code> (from list)</li>\n    <li><code>empty_set = set()</code> (empty set — <code>{}</code> creates empty dict!)</li>\n</ul>\n\n<h3>Set Operations</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>add()</code></strong> — Add an element</li>\n    <li><strong><code>remove()</code></strong> — Remove an element</li>\n    <li><strong><code>union()</code></strong> or <code>|</code> — Combine sets</li>\n    <li><strong><code>intersection()</code></strong> or <code>&</code> — Common elements</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>No Indexing:</strong> Sets are unordered, so you cannot access elements by index (no <code>set[0]</code>). Use loops or convert to list if you need indexing!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🧹 <strong>Case Study: Nobita's Duplicate Stamps & Doraemon's Duplicate Cleaner</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has collected stamps, but many of them are duplicate copies: <code>["Tokyo", "Osaka", "Tokyo", "Kyoto", "Osaka"]</code>. He wants to quickly clean up his collection and keep only the unique cities.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon drops them into the **Duplicate Cleaner** (Sets). A **Set** in Python is an unordered collection that automatically filters out all duplicates, leaving only unique elements!
+    </p>
+
+    <!-- Set operations structures -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 12px; padding: 16px; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #37474f; line-height: 1.55;">
+        <strong style="color: #e65100; display: block; margin-bottom: 8px;">Set Declarations and Math Operators:</strong>
+        <span>unique = {1, 2, 3, 2, 1}     <span style="color: #757575;"># Result: {1, 2, 3} (duplicates are gone!)</span></span>
+        <br>
+        <span>empty_set = set()           <span style="color: #757575;"># NOTE: Using {} creates a dictionary, not a set!</span></span>
+        <br>
+        <span>a | b                       <span style="color: #757575;"># Union: Combines all unique items from both sets.</span></span>
+        <br>
+        <span>a & b                       <span style="color: #757575;"># Intersection: Keeps only items that exist in BOTH sets.</span></span>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Sets Process Elements:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>No Order:</strong> Sets do not track element positions. When you print a set, the items appear in random order.</li>
+        <li><strong>No Indexing:</strong> Because they are unordered, trying to fetch an item via <code>my_set[0]</code> will raise a <code>TypeError</code>!</li>
+        <li><strong>Unique Values Only:</strong> If you add <code>"Tokyo"</code> to a set that already contains it, Python ignores it completely.</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Set operations in action:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">stamps = set(["Tokyo", "Osaka", "Tokyo"])
+print(stamps)        # {'Tokyo', 'Osaka'}
+stamps.add("Kyoto")
+print(stamps)        # {'Tokyo', 'Kyoto', 'Osaka'}
+
+group_a = {"apple", "banana"}
+group_b = {"banana", "cherry"}
+print(group_a | group_b)   # {'apple', 'banana', 'cherry'} (Union)
+print(group_a & group_b)   # {'banana'} (Intersection)</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">{}</span>
+        <strong>Curly Braces</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Defines unique sets</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">set()</span>
+        <strong>Constructor</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Build empty sets</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">| vs &</span>
+        <strong>Set Operators</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Union and Intersect</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6880,7 +10345,73 @@ window.levels = [
         "description": {
             "heading": "Dictionaries",
             "subheading": "Key-value pair data structures",
-            "body": "<p>A <strong>Dictionary</strong> is a collection of key-value pairs. Dictionaries are unordered (ordered by insertion from Python 3.7+), mutable, and indexed by keys (which must be unique and of immutable types).</p>\n\n<h3>Creating Dictionaries</h3>\n<ul class=\"desc-list\">\n    <li>Use <strong>curly braces <code>{}</code></strong> with <code>key: value</code> pairs</li>\n    <li>Or use the <code>dict()</code> constructor</li>\n</ul>\n\n<h3>Examples</h3>\n<ul class=\"desc-list\">\n    <li><code>doraemon = {\"name\": \"Doraemon\", \"color\": \"blue\", \"age\": 10}</code></li>\n    <li><code>empty_dict = {}</code></li>\n</ul>\n\n<h3>Accessing and Modifying Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>doraemon[\"color\"]</code> &rarr; <code>\"blue\"</code> (Accessing value)</li>\n    <li><code>doraemon.get(\"pocket\", \"no pocket\")</code> &rarr; <code>\"no pocket\"</code> (Safe access using get())</li>\n    <li><code>doraemon[\"height\"] = 129.3</code> &rarr; Adds a new key-value pair</li>\n    <li><code>doraemon[\"color\"] = \"yellow\"</code> &rarr; Updates existing key</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>KeyError:</strong> Trying to access a key that does not exist in a dictionary using square brackets (e.g. <code>doraemon[\"pocket\"]</code>) will raise a <code>KeyError</code>. Use the <code>get()</code> method to avoid this!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📖 <strong>Case Study: Nobita's Contact Book & Doraemon's Memory Catalog</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to write down the phone numbers of his friends (Shizuka, Gian, and Suneo). If he stores names in one list and numbers in another, finding a number requires aligning index offsets, which is tedious and breaks if the lists change.
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon gives him the **Memory Catalog** (the **Dictionary**). Dictionaries link unique words (keys) directly to their definitions or numbers (values), making lookups instantaneous!
+    </p>
+
+    <!-- Creating dictionaries format -->
+    <div style="background: #ffffff; border: 1.5px solid #b3e5fc; border-radius: 12px; padding: 16px; margin-bottom: 12px; font-size: 13.5px; color: #37474f; line-height: 1.5;">
+        <strong style="color: #0288d1; display: block; margin-bottom: 6px;">How dictionaries are defined:</strong>
+        <code style="font-family: 'Fira Code', monospace; font-size: 13.5px; color: #0288d1;">contacts = {"Shizuka": "555-0101", "Gian": "555-0202"}</code>
+        <ul style="margin: 8px 0 0 16px; padding: 0;">
+            <li>Enclosed in curly braces <code>{}</code> containing <code>key: value</code> pairs separated by commas.</li>
+            <li>Keys must be **unique** and of **immutable** data types (like strings, numbers, or tuples).</li>
+            <li>Values can be of any data type and can repeat!</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Python Maps Keys to Values:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Direct Access:</strong> Use square brackets with the key: <code>contacts["Shizuka"]</code>. If the key exists, it returns the value.</li>
+        <li><strong>Adding/Updating:</strong> Assigning a value to a key (e.g. <code>contacts["Suneo"] = "555-0303"</code>) will either update the value (if the key exists) or append the key-value pair (if it doesn't).</li>
+        <li><strong>Safe Lookup:</strong> Using <code>dict.get(key, default)</code> fetches the value safely. If the key isn't found, it returns the default value instead of throwing an error!</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Dictionary Operations:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">doraemon = {"name": "Doraemon", "color": "blue"}
+print(doraemon["name"])     # "Doraemon"
+doraemon["color"] = "yellow" # Modifies existing value
+doraemon["age"] = 10         # Adds new key-value pair
+print(doraemon.get("pocket", "Not found"))  # "Not found" (Safe!)</pre>
+</div>
+
+<!-- KeyError warning -->
+<div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: 'Nunito', sans-serif; font-size: 13.5px; color: #c62828; line-height: 1.45;">
+    <strong>⚠️ KeyError Crash:</strong> Trying to look up a key that doesn't exist using square brackets (e.g. <code>doraemon["pocket"]</code>) will trigger a <code>KeyError</code> and crash your program! Use <code>doraemon.get("pocket")</code> for safe scanning.
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">{k: v}</span>
+        <strong>Key-Value Pair</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Association link</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">get()</span>
+        <strong>Safe Get</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Avoids KeyError</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">key</span>
+        <strong>Unique Word</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Must be immutable</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -6996,7 +10527,74 @@ window.levels = [
         "description": {
             "heading": "Nested Dictionaries",
             "subheading": "Structuring complex hierarchical data",
-            "body": "<p>A <strong>Nested Dictionary</strong> is a dictionary that contains other dictionaries as values. This is extremely useful for structuring complex hierarchical data, like user profiles, nested objects, or database records.</p>\n\n<h3>Creating a Nested Dictionary</h3>\n<ul class=\"desc-list\">\n    <li>Place a dictionary inside another dictionary as a value associated with a key.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">users = {\n    \"user1\": {\n        \"name\": \"Doraemon\",\n        \"color\": \"blue\"\n    },\n    \"user2\": {\n        \"name\": \"Nobita\",\n        \"color\": \"yellow\"\n    }\n}</pre>\n\n<h3>Accessing Nested Elements</h3>\n<ul class=\"desc-list\">\n    <li>Chain the square brackets <code>[]</code> to access nested values.</li>\n    <li><code>users[\"user1\"][\"name\"]</code> &rarr; <code>\"Doraemon\"</code></li>\n    <li><code>users[\"user2\"][\"color\"]</code> &rarr; <code>\"yellow\"</code></li>\n</ul>\n\n<h3>Modifying Nested Elements</h3>\n<ul class=\"desc-list\">\n    <li><code>users[\"user2\"][\"color\"] = \"red\"</code> &rarr; Changes Nobita's color to red</li>\n    <li><code>users[\"user1\"][\"pocket\"] = True</code> &rarr; Adds 'pocket' to Doraemon's dictionary</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Chaining get():</strong> To safely access nested elements, you can chain <code>.get()</code>. But be careful: if a outer key is missing, <code>.get()</code> returns <code>None</code>, and calling <code>.get()</code> on <code>None</code> will crash your program. Use: <code>users.get(\"user1\", {}).get(\"name\")</code>.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔒 <strong>Case Study: Time Machine Navigation & Doraemon's Sealed Vault</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to record details for each friend: their name, age, and favorite gadget. If he uses a single dictionary, it gets cluttered. He needs separate folders (nested structures) inside his main catalog to keep each friend's record isolated and organized.
+    </p>
+    <p style="font-size: 15px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon structures this inside **Sub-pocket Folders** (the **Nested Dictionary**). A nested dictionary is a dictionary where the *values* are themselves dictionaries!
+    </p>
+
+    <!-- Creating nested dictionaries format -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #311b92; display: block; margin-bottom: 8px;">Nested Dictionary Structure:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.45;">friends = {
+    "shizuka": {
+        "age": 10,
+        "gadget": "Anywhere Door"
+    },
+    "gian": {
+        "age": 11,
+        "gadget": "Megaphone"
+    }
+}</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How to Access and Modify Nested Keys:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Chained Keys:</strong> Use square brackets sequentially to drill down levels: <code>friends["shizuka"]["gadget"]</code> matches <code>"Anywhere Door"</code>.</li>
+        <li><strong>Updating Nested Values:</strong> Assign directly by chaining the brackets: <code>friends["gian"]["age"] = 12</code>.</li>
+        <li><strong>Safe Chained Lookup:</strong> If an outer key is missing, calling <code>.get()</code> might return <code>None</code>, and calling <code>.get()</code> on <code>None</code> will crash! Use an empty dictionary fallback: <code>friends.get("nobita", {}).get("gadget")</code>.</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Nested Dictionary Operations:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">users = {
+    "dora": {"color": "blue", "age": 10}
+}
+print(users["dora"]["color"])       # "blue"
+users["dora"]["pocket"] = True      # Adds new nested key-value
+users["dora"]["age"] = 11           # Updates nested value
+print(users.get("nobi", {}).get("color", "Not found"))  # "Not found"</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">[][]</span>
+        <strong>Chained Brackets</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Sequential keys lookup</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">get(k, {})</span>
+        <strong>Empty Fallback</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Avoids NoneType error</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Hierarchy</span>
+        <strong>Multi-Level</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Structures deep records</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7112,7 +10710,71 @@ window.levels = [
         "description": {
             "heading": "len(), max(), and min() Functions",
             "subheading": "Core aggregate functions on collections",
-            "body": "<p>Python provides several extremely useful built-in functions that work across all collections (lists, tuples, sets, dictionaries, and even strings) to get their size, maximum value, and minimum value.</p>\n\n<h3>1. The <code>len()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the number of items (length) in a collection.</li>\n    <li><code>len([1, 2, 3])</code> &rarr; <code>3</code></li>\n    <li><code>len(\"Doraemon\")</code> &rarr; <code>8</code></li>\n</ul>\n\n<h3>2. The <code>max()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the largest item in a collection.</li>\n    <li><code>max([5, 12, 3])</code> &rarr; <code>12</code></li>\n    <li><code>max(\"abc\")</code> &rarr; <code>\"c\"</code> (alphabetically largest)</li>\n</ul>\n\n<h3>3. The <code>min()</code> Function</h3>\n<ul class=\"desc-list\">\n    <li>Returns the smallest item in a collection.</li>\n    <li><code>min([5, 12, 3])</code> &rarr; <code>3</code></li>\n    <li><code>min(\"abc\")</code> &rarr; <code>\"a\"</code> (alphabetically smallest)</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Comparing Mixed Types:</strong> Calling <code>max()</code> or <code>min()</code> on a collection with mixed, incomparable types (e.g. <code>[10, \"apple\"]</code>) will raise a <code>TypeError</code>!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📏 <strong>Case Study: Nobita's Gadget Inventory & Doraemon's Stepper Ruler</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has a list of gadgets: <code>["Door", "Time Machine", "Bamboo Copter"]</code>. He wants to know how many gadgets are in his bag, which gadget name is alphabetically the longest, and which is the shortest.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon brings out three diagnostic tools: **\`len()\`** (gets the item count), **\`max()\`** (gets the maximum/highest value), and **\`min()\`** (gets the minimum/lowest value).
+    </p>
+
+    <!-- Core functions list -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">
+        <strong>Aggregate functions in Python:</strong>
+        <ul style="margin: 8px 0 0 16px; padding: 0; font-family: 'Nunito', sans-serif; line-height: 1.55;">
+            <li>📏 <code>len(collection)</code>: Counts the total number of items in a list, tuple, set, dict, or characters in a string.</li>
+            <li>📈 <code>max(collection)</code>: Finds the largest number, or the alphabetically last string.</li>
+            <li>📉 <code>min(collection)</code>: Finds the smallest number, or the alphabetically first string.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Python Evaluates collection aggregates:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Character Comparison:</strong> When comparing strings, Python compares them character by character based on their ASCII/Unicode values (e.g. <code>"a"</code> is smaller than <code>"z"</code>).</li>
+        <li><strong>Incomparable Type Warning:</strong> If you mix numbers and strings inside a collection (e.g. <code>[10, "Anywhere Door"]</code>), trying to find <code>max()</code> or <code>min()</code> will crash with a <code>TypeError</code>.</li>
+        <li><strong>No Integer lengths:</strong> The <code>len()</code> function requires a sequence or container. Calling <code>len(100)</code> will raise a <code>TypeError</code> because numbers don't have a length!</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Code Demonstrations:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">scores = [50, 100, 20]
+print(len(scores))   # 3 (3 elements)
+print(max(scores))   # 100 (highest score)
+print(min(scores))   # 20 (lowest score)
+
+text = "Dora"
+print(len(text))     # 4 (4 characters)
+print(max(text))     # 'r' (alphabetically highest)
+print(min(text))     # 'D' (uppercase comes before lowercase in Unicode!)</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">len()</span>
+        <strong>Length</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Counts elements</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">max()</span>
+        <strong>Maximum</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Highest/Alphabetical last</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">min()</span>
+        <strong>Minimum</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Lowest/Alphabetical first</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7228,7 +10890,71 @@ window.levels = [
         "description": {
             "heading": "Sorting Collections",
             "subheading": "In-place sort() vs. returns-new sorted()",
-            "body": "<p>Python offers two primary ways to sort collections. Understanding the difference between them is crucial for writing bug-free and efficient code.</p>\n\n<h3>1. The <code>sort()</code> Method (In-place)</h3>\n<ul class=\"desc-list\">\n    <li>Only available for <strong>lists</strong>.</li>\n    <li>Modifies the original list **in-place** (permanently changing its order).</li>\n    <li>Returns <code>None</code>.</li>\n    <li><code>numbers = [3, 1, 4]; numbers.sort(); print(numbers)</code> &rarr; <code>[1, 3, 4]</code></li>\n</ul>\n\n<h3>2. The <code>sorted()</code> Function (Returns new list)</h3>\n<ul class=\"desc-list\">\n    <li>Available for **any iterable** (lists, tuples, strings, dictionaries, sets).</li>\n    <li>Leaves the original collection **unchanged**.</li>\n    <li>Returns a **new sorted list**.</li>\n    <li><code>numbers = [3, 1, 4]; sorted_nums = sorted(numbers); print(sorted_nums)</code> &rarr; <code>[1, 3, 4]</code></li>\n</ul>\n\n<h3>Reverse Sorting</h3>\n<p>Both support sorting in descending order using the <code>reverse=True</code> parameter:</p>\n<ul class=\"desc-list\">\n    <li><code>numbers.sort(reverse=True)</code></li>\n    <li><code>new_list = sorted(numbers, reverse=True)</code></li>\n</ul>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔀 <strong>Case Study: Nobita's Unsorted Comics & Doraemon's Alignment Ribbon</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has piles of comics from volumes 3, 1, and 5. He wants to arrange them in order. He has two options: physically rearrange his current stack permanently, or make a separate sorted copy of the stack, leaving his original room layout unchanged.
+    </p>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon explains the two ways to order items using the **Alignment Ribbon** (Sorting). In Python, you can sort a collection in-place using **\`sort()\`** or create a new sorted duplicate using **\`sorted()\`**.
+    </p>
+
+    <!-- Differences syntax box -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.5;">
+        <strong style="color: #1b5e20; display: block; margin-bottom: 6px;">\`list.sort()\` vs \`sorted()\`:</strong>
+        <ul style="margin: 0; padding-left: 20px;">
+            <li>🔄 <strong>\`list.sort()\`:</strong> A list-only method. It mutates (rearranges) the original list directly in memory and returns <code>None</code>.</li>
+            <li>✨ <strong>\`sorted(collection)\`:</strong> A built-in function that accepts *any* collection (lists, tuples, strings, sets, dicts). It leaves the original collection untouched and returns a **brand new list** with the sorted items.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How the Alignment Ribbon sorts:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>In-Place Warning:</strong> Never write <code>my_list = my_list.sort()</code>. Since <code>sort()</code> returns <code>None</code>, you will wipe out your list!</li>
+        <li><strong>Descending Order:</strong> Both functions accept a <code>reverse=True</code> parameter to sort from highest to lowest: <code>sorted(nums, reverse=True)</code>.</li>
+        <li><strong>Immutable Collections:</strong> Tuples and strings are immutable, so they do *not* have a <code>.sort()</code> method. You must use <code>sorted()</code> on them!</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Code Demos:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;"># Method 1: list.sort() (In-place)
+nums = [3, 1, 4]
+nums.sort()
+print(nums)          # [1, 3, 4]
+
+# Method 2: sorted() (Returns copy)
+letters = ("c", "a", "b")
+new_letters = sorted(letters)
+print(letters)       # ('c', 'a', 'b') (Original tuple unchanged)
+print(new_letters)   # ['a', 'b', 'c'] (Returns a sorted LIST!)</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.sort()</span>
+        <strong>In-Place</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">List only, returns None</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">sorted()</span>
+        <strong>Returns Copy</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Works on any iterable</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">reverse=True</span>
+        <strong>Descending</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Sorts high-to-low</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7344,7 +11070,58 @@ window.levels = [
         "description": {
             "heading": "Collection Coding Challenge",
             "subheading": "Mastering lists, tuples, sets, and dictionaries",
-            "body": "<p>Congratulations! You've reached the end of the Collections module. It's time to put your knowledge to the test by solving a practical programming challenge that combines various collection types.</p>\n\n<h3>Review of Collections</h3>\n<ul class=\"desc-list\">\n    <li><strong>Lists:</strong> Ordered, mutable, allows duplicates. Great for lists of items you want to change.</li>\n    <li><strong>Tuples:</strong> Ordered, immutable, allows duplicates. Great for fixed data (e.g. coordinates, key-value keys).</li>\n    <li><strong>Sets:</strong> Unordered, mutable, unique elements. Great for removing duplicates and testing membership.</li>\n    <li><strong>Dictionaries:</strong> Key-value mapping, keys must be unique. Great for lookup tables and structured objects.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Challenge Prompt:</strong> We want to identify the unique items present in a list, sort them alphabetically, and map them to their length in a dictionary!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎓 <strong>Case Study: Nobita's Graduation Challenge & Doraemon's Collection Vault</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> To complete the Collections Stage, Nobita must unlock the **Collection Vault**. The vault presents a mixed array of items: some are duplicate toys, some are constants, and others are key-value codes.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon sets up the final graduation rules. You will combine lists, tuples, sets, and dictionaries to process, filter, and structure the data to unlock the lock!
+    </p>
+
+    <!-- Review grid of collections -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #e65100; display: block; margin-bottom: 8px;">Collection Types Review:</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>🎒 <strong>Lists (<code>[]</code>):</strong> Ordered, mutable sequences. Excellent for stacks of items you update or append to.</li>
+            <li>🔒 <strong>Tuples (<code>()</code>):</strong> Ordered, immutable sequences. Perfect for fixed coordinate grids or config files.</li>
+            <li>🧹 <strong>Sets (<code>{}</code>):</strong> Unordered, unique collections. Best for instant duplicate removals and membership checking.</li>
+            <li>📖 <strong>Dictionaries (<code>{k: v}</code>):</strong> Mutable key-value associations. Built for fast lookup tables.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Strategy to solve the challenge:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Step 1:</strong> Clean duplicates from the input list by casting it into a set: <code>unique_set = set(input_list)</code>.</li>
+        <li><strong>Step 2:</strong> Sort the unique items alphabetically using the <code>sorted()</code> function, which outputs a sorted list: <code>sorted_list = sorted(unique_set)</code>.</li>
+        <li><strong>Step 3:</strong> Build a dictionary mapping each sorted item to its character length using a dictionary comprehension or loop: <code>{item: len(item) for item in sorted_list}</code>.</li>
+    </ol>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">set()</span>
+        <strong>Clean duplicates</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Leaves unique values</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">sorted()</span>
+        <strong>Alphabetic sort</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Creates sorted list</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">{k: v}</span>
+        <strong>Map Length</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Key-value dict</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7460,7 +11237,56 @@ window.levels = [
         "description": {
             "heading": "Why Functions?",
             "subheading": "Reusing and modularizing your Python code",
-            "body": "<p>Imagine you need to print a banner message 10 times in different parts of your code. Copy-pasting the print statement works, but what if you need to change the message? You'd have to edit all 10 places! This is where <strong>functions</strong> come in.</p>\n\n<h3>Core Principles</h3>\n<ul class=\"desc-list\">\n    <li><strong>DRY (Don't Repeat Yourself):</strong> Avoid copy-pasting code. Write once, use everywhere!</li>\n    <li><strong>Modularity:</strong> Break complex code into smaller, organized, and manageable chunks.</li>\n    <li><strong>Readability:</strong> Named functions make it easy to understand what the code does (e.g. <code>calculate_score()</code>).</li>\n    <li><strong>Maintainability:</strong> Bug fixes or updates only need to be done in one place.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>What is a Function?</strong> A function is a named block of code designed to perform a specific task. Defining a function is like writing a recipe; it doesn't do anything until you actually follow (call) it!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        💡 <strong>Case Study: Nobita's Repetitive Homework & Doraemon's DRY Spell</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has to copy a banner message 10 times in different pages of his notebook. He spends an hour copying and pasting the text. Later, he realizes he made a spelling mistake in the message! Now he has to search, erase, and rewrite all 10 spots manually.
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon teaches him the **DRY Spell (Don't Repeat Yourself)**. In programming, instead of writing the same blocks of code repeatedly, we wrap them into a single, named block called a **Function** that we can use anywhere with just one word!
+    </p>
+
+    <!-- Modularity explanation -->
+    <div style="background: #ffffff; border: 1.5px solid #b3e5fc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #0288d1; display: block; margin-bottom: 6px;">Why wrap code in Functions?</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>🔄 <strong>DRY Principle:</strong> Avoid copy-pasting lines. Write it once, reuse it infinite times.</li>
+            <li>🛠️ <strong>Easy Updates:</strong> If you need to change the behavior, edit it in the function—every call updates automatically!</li>
+            <li>📖 <strong>Readability:</strong> Giving code blocks names like <code>clean_room()</code> makes your program easy to read.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Functions Behave in Python:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Declaration vs Execution:</strong> Defining a function is like writing down a recipe. It sits in memory but does **nothing** on its own.</li>
+        <li><strong>Calling the function:</strong> To actually run the code, you must call (trigger) the function name with parentheses <code>()</code>.</li>
+    </ol>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">DRY</span>
+        <strong>Don't Repeat</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Reduces redundancy</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">🧩</span>
+        <strong>Modularity</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Organizes block chunks</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">⚙️</span>
+        <strong>Maintenance</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Fixes apply globally</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7576,7 +11402,75 @@ window.levels = [
         "description": {
             "heading": "Creating Functions",
             "subheading": "Defining functions with def",
-            "body": "<p>In Python, we create functions using the <strong><code>def</code></strong> keyword. Let's look at the basic structure of a function definition and how to call it.</p>\n\n<h3>Syntax of a Function</h3>\n<pre class=\"code-example\">def function_name():\n    # code block inside function\n    print(\"Hello from function!\")</pre>\n<ul class=\"desc-list\">\n    <li><strong><code>def</code>:</strong> Keyword telling Python we are defining a function.</li>\n    <li><strong><code>function_name</code>:</strong> The name of the function (use snake_case, similar to variables).</li>\n    <li><strong>Parentheses <code>()</code>:</strong> Where inputs go (can be empty).</li>\n    <li><strong>Colon <code>:</code>:</strong> Ends the function header.</li>\n    <li><strong>Indented Block:</strong> The code statements that will run when the function is called.</li>\n</ul>\n\n<h3>Calling a Function</h3>\n<p>To run (call) a function, write its name followed by parentheses:</p>\n<pre class=\"code-example\">function_name()</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🛠️ <strong>Case Study: Nobita's Blueprint Printer & Doraemon's def Spell</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants a robotic stamp that prints a drawing of a cat whenever he presses a button. To build it, he first needs to design a schematic blueprint (defining the function) and register it, then press the action button (calling the function) to run it!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon uses the **def Spell** to create the blueprint. In Python, we define functions using the **\`def\`** keyword.
+    </p>
+
+    <!-- Syntax structure box -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong style="color: #311b92; display: block; margin-bottom: 8px;">Function Definition Syntax:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #673ab7;">def make_stamp():
+    print(" stamp printed 💮")</pre>
+        <ul style="margin: 8px 0 0 16px; padding: 0; font-family: 'Nunito', sans-serif;">
+            <li><code>def</code>: The keyword stating we are defining a function.</li>
+            <li><code>make_stamp</code>: The function name (uses snake_case, like variables).</li>
+            <li><code>()</code>: Parentheses where inputs go (can be empty).</li>
+            <li><code>:</code>: Colon ending the definition header.</li>
+            <li><strong>Indentation:</strong> The code inside the function must be indented by 4 spaces.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How to trigger the function:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Calling:</strong> To run the function's block, type the name followed by parentheses: <code>make_stamp()</code>.</li>
+        <li><strong>Referencing:</strong> Writing <code>make_stamp</code> without parentheses refers to the function itself as an object; it won't actually execute the code!</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Defining and calling functions:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;"># 1. Define the function (nothing prints yet!)
+def greet_doraemon():
+    print("Hello, Doraemon!")
+    print("Can you help me?")
+
+# 2. Call the function (executes the prints)
+greet_doraemon()
+# Output:
+# Hello, Doraemon!
+# Can you help me?</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">def</span>
+        <strong>Define Keyword</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Starts function header</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">()</span>
+        <strong>Parentheses Call</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs/invokes code</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Indentation</span>
+        <strong>4 Spaces</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Scopes function body</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7692,7 +11586,66 @@ window.levels = [
         "description": {
             "heading": "Function Parameters",
             "subheading": "Passing inputs into your functions",
-            "body": "<p>Functions become much more powerful when we can feed them information. <strong>Parameters</strong> allow functions to accept input values and use them inside their logic.</p>\n\n<h3>Parameters vs. Arguments</h3>\n<ul class=\"desc-list\">\n    <li><strong>Parameter:</strong> The variable listed inside the parentheses in the function <strong>definition</strong> (e.g. <code>name</code>).</li>\n    <li><strong>Argument:</strong> The actual value sent to the function when it is <strong>called</strong> (e.g. <code>\"Nobita\"</code>).</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def greet(name):\n    print(\"Hello, \" + name)\n\ngreet(\"Nobita\")  # Output: Hello, Nobita\ngreet(\"Shizuka\") # Output: Hello, Shizuka</pre>\n\n<h3>Multiple Parameters</h3>\n<p>You can define functions with multiple parameters by separating them with commas:</p>\n<pre class=\"code-example\">def add_nums(a, b):\n    print(a + b)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>TypeError:</strong> If a function expects a certain number of parameters, you must pass the exact same number of arguments when calling it, otherwise Python will throw an error!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔌 <strong>Case Study: The Universal Socket & Doraemon's Dynamic Parameters</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has a greeting machine. If it only prints "Hello!", it's boring. He wants it to greet whichever friend stands in front of it (Shizuka, Gian, Suneo) by their name.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon connects a **Universal Socket** (a **Parameter**) to the machine. Parameters are empty slots inside the function definition that accept incoming values (arguments) when the function is called!
+    </p>
+
+    <!-- Parameters vs Arguments structure -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">Parameters vs Arguments:</strong>
+        <ul style="margin: 0; padding-left: 20px; font-family: 'Nunito', sans-serif;">
+            <li>🔌 <strong>Parameter:</strong> The variable placeholder inside the parentheses of the function definition: <code>def greet(name):</code></li>
+            <li>🔋 <strong>Argument:</strong> The actual value you pass into the function during a call: <code>greet("Shizuka")</code></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How arguments are matched:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Position Matching:</strong> Python matches arguments to parameters in the order they are passed, separated by commas.</li>
+        <li><strong>TypeError Exception:</strong> If a function expects two inputs: <code>def sum(a, b):</code>, calling it with only one: <code>sum(5)</code>, will raise a <code>TypeError</code> and crash.</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Multiple parameters in action:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">def introduce(name, age):
+    print("Name: " + name)
+    print("Age: " + str(age))
+
+introduce("Gian", 11)   # Correct!
+# introduce("Gian")      # TypeError: missing 1 required positional argument</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Parameter</span>
+        <strong>Placeholder</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Variable in header</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Argument</span>
+        <strong>Actual Value</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Passed value at call</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">,</span>
+        <strong>Comma separator</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Groups multiple items</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7808,7 +11761,66 @@ window.levels = [
         "description": {
             "heading": "The Return Statement",
             "subheading": "Returning values back from function calls",
-            "body": "<p>So far, our functions have only printed values to the screen. But often, we want a function to perform a calculation and **send the result back** to the main program. We do this using the <strong><code>return</code></strong> statement.</p>\n\n<h3>Return Syntax</h3>\n<pre class=\"code-example\">def square(x):\n    return x * x\n\nresult = square(4)\nprint(result)  # Output: 16</pre>\n\n<h3>Print vs. Return</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>print()</code>:</strong> Displays text on the screen for the user. It **does not** give any data to the program (returns <code>None</code>).</li>\n    <li><strong><code>return</code>:</strong> Sends data back to the program. This data can be stored in a variable, used in math, or printed later.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Exit Code:</strong> The <code>return</code> statement immediately exits the function. Any code written inside the function *after* a return statement will never be run (known as dead code)!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔄 <strong>Case Study: Nobita's Candy Factory & Doraemon's Output Chute</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita starts a candy making machine. If the machine only displays a photo of the candy on a screen, Nobita remains hungry. He wants the machine to physically drop the finished candy out of the chute (returning it) so he can save it in his pocket or eat it.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon explains the **Output Chute** (the **\`return\`** statement). In Python, a function can compute a value and send it back to the program, allowing you to store it in a variable or use it elsewhere.
+    </p>
+
+    <!-- Differences list -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #e65100; display: block; margin-bottom: 8px;">Print vs. Return:</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>📺 <code>print()</code>: Shows text on the screen. The program *cannot* use this text; the function returns <code>None</code>.</li>
+            <li>📥 <code>return</code>: Sends data back to the program. The program can store it, do math with it, or print it.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 How Return behaves:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Immediate Exit:</strong> Once a function hits a <code>return</code> statement, it stops immediately. Any code written after it is ignored (dead code!).</li>
+        <li><strong>Implicit None:</strong> If a function ends without a <code>return</code> statement, it returns <code>None</code> automatically.</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Return in action:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">def get_half(number):
+    return number / 2
+    print("This will never print!") # Dead code
+
+result = get_half(10)
+print(result) # 5.0 (used the returned value!)</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">return</span>
+        <strong>Exit & Handover</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Passes value to caller</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">None</span>
+        <strong>Default Return</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Fallback if no return</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Dead Code</span>
+        <strong>Unreachable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Code after return</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -7924,7 +11936,70 @@ window.levels = [
         "description": {
             "heading": "Default Arguments",
             "subheading": "Specifying fallback parameter values",
-            "body": "<p>Sometimes, we want a parameter to have a fallback value if the caller doesn't provide one. These are called <strong>default arguments</strong>.</p>\n\n<h3>Syntax</h3>\n<pre class=\"code-example\">def greet(name=\"Friend\"):\n    print(\"Hello, \" + name)\n\ngreet()         # Output: Hello, Friend (uses default)\ngreet(\"Nobita\") # Output: Hello, Nobita (overrides default)</pre>\n\n<h3>Order of Arguments</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Golden Rule:</strong> In a function signature, non-default arguments <strong>must</strong> come before default arguments. Otherwise, Python will raise a <code>SyntaxError</code>!</div>\n</div>\n<pre class=\"code-example\"># Correct:\ndef greet(greeting, name=\"Friend\"): ...\n\n# Incorrect (SyntaxError):\ndef greet(name=\"Friend\", greeting): ...</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: Nobita's Smart Oven & Doraemon's Default Settings</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has a cooking machine. He wants it to bake toast for 5 minutes by default if he doesn't enter a time. But if he wants to bake cookies, he wants to override it by typing 15 minutes instead.
+    </p>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon sets up **Default Settings** (the **Default Arguments**). In Python, default arguments allow you to assign a fallback value to a parameter in the function definition, which is used if no argument is passed!
+    </p>
+
+    <!-- Default value syntax box -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong style="color: #1b5e20; display: block; margin-bottom: 8px;">Default Parameter Syntax:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13.5px; color: #2e7d32;">def bake(food, duration=5):
+    print("Baking " + food + " for " + str(duration) + " mins")</pre>
+        <ul style="margin: 8px 0 0 16px; padding: 0; font-family: 'Nunito', sans-serif;">
+            <li>If called as <code>bake("Toast")</code>: it uses the default duration of <code>5</code>.</li>
+            <li>If called as <code>bake("Cookies", 15)</code>: the default is overridden with <code>15</code>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Golden Rule of Default Arguments:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Parameters with default values <strong>must always follow</strong> parameters without default values! Otherwise, Python raises a <code>SyntaxError</code> because it cannot match positional inputs unambiguously.
+    </p>
+    <div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 6px; padding: 12px; font-size: 13px; color: #c62828;">
+        ❌ <code>def greet(name="Friend", message):</code> &rarr; <strong>SyntaxError!</strong><br>
+        ✅ <code>def greet(message, name="Friend"):</code> &rarr; <strong>Valid!</strong>
+    </div>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Default values demo:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">def get_price(item, discount=0):
+    return item * (1 - discount)
+
+print(get_price(100))      # 100 (uses discount=0 default)
+print(get_price(100, 0.2))  # 80.0 (overrides default)</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">= fallback</span>
+        <strong>Default Value</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Assigned if omitted</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Override</span>
+        <strong>Pass Value</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Bypasses default</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Order</span>
+        <strong>Defaults Last</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Avoids SyntaxError</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8040,7 +12115,71 @@ window.levels = [
         "description": {
             "heading": "Keyword Arguments",
             "subheading": "Passing inputs explicitly by name",
-            "body": "<p>In Python, you can pass arguments to a function using their parameter names: <code>parameter_name = value</code>. These are called <strong>keyword arguments</strong>.</p>\n\n<h3>Benefits of Keyword Arguments</h3>\n<ul class=\"desc-list\">\n    <li><strong>Order doesn't matter:</strong> You can pass arguments in any order, and Python will match them by name rather than position!</li>\n    <li><strong>Readability:</strong> It is instantly clear what each value represents.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_info(name, age):\n    print(f\"{name} is {age} years old.\")\n\n# These two calls do the exact same thing:\nprint_info(\"Nobita\", 10)\nprint_info(age=10, name=\"Nobita\")</pre>\n\n<h3>Mixing Positional and Keyword Arguments</h3>\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>Strict Order Rule:</strong> You can mix positional and keyword arguments, but positional arguments <strong>must always</strong> come first. Positional argument following keyword argument raises a <code>SyntaxError</code>!</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🏷️ <strong>Case Study: Nobita's Smart Courier & Doraemon's Explicit Address Labels</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to mail packages. If he writes address information blindly in order: <code>"Tokyo", "Nobita", "2-Chome"</code>, the mailman might get confused. Nobita wants to explicitly label each item (e.g. <code>city="Tokyo"</code>, <code>recipient="Nobita"</code>) so order doesn't matter and the package arrives safely!
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon sets up the **Explicit Labeler** (the **Keyword Arguments**). In Python, you can pass arguments preceded by their parameter names: <code>parameter_name = value</code>.
+    </p>
+
+    <!-- Keyword arguments benefits -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.5;">
+        <strong style="color: #01579b; display: block; margin-bottom: 6px;">Benefits of Keyword Arguments:</strong>
+        <ul style="margin: 0; padding-left: 20px;">
+            <li>🔀 <strong>Order Independence:</strong> Since Python matches by name, you can swap the order of inputs freely: <code>send_mail(city="Tokyo", name="Nobita")</code>.</li>
+            <li>📖 <strong>Self-Documenting Code:</strong> It is instantly clear what each input value represents.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Golden Order Rule:</strong>
+    <p style="margin: 0 0 12px 0;">
+        You can mix positional and keyword arguments, but **positional arguments must always come first**. Passing a positional argument after a keyword argument raises a <code>SyntaxError</code>!
+    </p>
+    <div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 6px; padding: 12px; font-size: 13px; color: #c62828;">
+        ❌ <code>mail("Nobita", city="Tokyo", "2-Chome")</code> &rarr; <strong>SyntaxError!</strong><br>
+        ✅ <code>mail("Nobita", "2-Chome", city="Tokyo")</code> &rarr; <strong>Valid!</strong>
+    </div>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Keyword arguments demo:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">def greet(greeting, name):
+    print(greeting + ", " + name)
+
+# Standard Positional Call:
+greet("Hello", "Nobita")
+
+# Keyword Call (Order Swapped!):
+greet(name="Nobita", greeting="Hello")</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">key=val</span>
+        <strong>Named Argument</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Matched explicitly by name</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Orderless</span>
+        <strong>Flexible Calls</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Swapping parameters is safe</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">SyntaxError</span>
+        <strong>Strict Ordering</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Positional must come first</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8156,7 +12295,70 @@ window.levels = [
         "description": {
             "heading": "Arbitrary Positional Arguments: *args",
             "subheading": "Accepting a variable number of positional arguments",
-            "body": "<p>What if you want to write a function that can accept any number of inputs? For example, a function that sums up numbers, whether you pass 2, 5, or 100 values. In Python, you can achieve this using <strong><code>*args</code></strong>.</p>\n\n<h3>The Asterisk <code>*</code> Prefix</h3>\n<ul class=\"desc-list\">\n    <li>The <code>*</code> before a parameter name tells Python to collect all remaining positional arguments into a single <strong>tuple</strong>.</li>\n    <li>By convention, we name this parameter <strong><code>args</code></strong> (short for arguments), but any name like <code>*numbers</code> is valid.</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_all(*args):\n    print(args)  # args is a tuple\n\nprint_all(1, 2, 3)  # Output: (1, 2, 3)</pre>\n\n<h3>Iterating Over *args</h3>\n<p>Since <code>args</code> is a standard tuple, you can loop through its elements, use index indexing, or pass it to built-in functions like <code>sum()</code> or <code>len()</code>!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📦 <strong>Case Study: Nobita's Unlimited Toy Box & Doraemon's Unpacking Asterisk</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to write a function that prints a list of toys. Sometimes he has 2 toys, sometimes 5, and sometimes 10! If he defines a fixed parameter list like <code>def toys(a, b, c):</code>, the function will crash if he passes only 2, or too many!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon hands him the **Unpacking Asterisk** (the **\`*args\`** prefix). By putting an asterisk <code>*</code> before a parameter name, Python collects any number of extra arguments into a single **tuple**!
+    </p>
+
+    <!-- Asterisk behavior explanation -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">What does *args actually do?</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>📦 <strong>Tuple Wrapping:</strong> Python takes all the values you pass and stores them as a standard tuple inside the variable: <code>args = (val1, val2, ...)</code>.</li>
+            <li>🔄 <strong>Iteration:</strong> Since it's a tuple, you can loop over it using <code>for item in args:</code> or check its count using <code>len(args)</code>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Parameter Naming Convention:</strong>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li><strong>Any name works:</strong> The name <code>args</code> is just a convention. You can write <code>*toys</code> or <code>*numbers</code>—the important part is the single asterisk prefix <code>*</code>!</li>
+        <li><strong>Order Rule:</strong> If you mix regular parameters with <code>*args</code>, regular ones must come first: <code>def greet(message, *names):</code>.</li>
+    </ol>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Arbitrary arguments in action:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">def print_toys(*args):
+    print(args)  # Outputting the tuple
+    for toy in args:
+        print("Nobita has: " + toy)
+
+print_toys("Door", "Copter")  
+# Output:
+# ('Door', 'Copter')
+# Nobita has: Door
+# Nobita has: Copter</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">* Prefix</span>
+        <strong>Collector Asterisk</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Bundles positional arguments</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Tuple ()</span>
+        <strong>Internal Format</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Immutable sequence container</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">*names</span>
+        <strong>Flexible Names</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Can rename args variable</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8272,7 +12474,72 @@ window.levels = [
         "description": {
             "heading": "Arbitrary Keyword Arguments: **kwargs",
             "subheading": "Accepting a variable number of keyword arguments",
-            "body": "<p>While <code>*args</code> collects positional arguments, Python gives us a way to accept any number of named (keyword) arguments. This is done using <strong><code>**kwargs</code></strong> (double asterisks).</p>\n\n<h3>The Double Asterisk <code>**</code> Prefix</h3>\n<ul class=\"desc-list\">\n    <li>The <code>**</code> collects all arbitrary keyword arguments into a <strong>dictionary</strong>.</li>\n    <li>By convention, we name this parameter <strong><code>kwargs</code></strong> (short for keyword arguments).</li>\n</ul>\n\n<h3>Example</h3>\n<pre class=\"code-example\">def print_profile(**kwargs):\n    print(kwargs)  # kwargs is a dictionary\n\nprint_profile(name=\"Doraemon\", age=10)\n# Output: {'name': 'Doraemon', 'age': 10}</pre>\n\n<h3>Looping through **kwargs</h3>\n<p>Since <code>kwargs</code> is a dictionary, you can use methods like <code>.keys()</code>, <code>.values()</code>, and <code>.items()</code> to loop over key-value pairs inside the function body!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🤖 <strong>Case Study: Nobita's Custom Robo-Butler & Doraemon's Double-Asterisk Configurator</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita buys a custom robot helper. He wants to configure it using various settings (e.g. <code>color="red"</code>, <code>speed="fast"</code>, <code>flying=True</code>). Since different robots require different configuration parameters, he needs a function that accepts any number of named settings without hardcoding them.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon uses the **Double-Asterisk Configurator** (the **\`**kwargs\`** prefix). By putting a double asterisk <code>**</code> before a parameter name, Python collects all named (keyword) arguments passed to the function into a standard **dictionary**!
+    </p>
+
+    <!-- Double Asterisk behavior explanation -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #311b92; display: block; margin-bottom: 8px;">What does **kwargs do?</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>📖 <strong>Dictionary Wrapping:</strong> All named arguments are collected into a standard key-value dictionary inside the function: <code>kwargs = {'color': 'red', 'speed': 'fast'}</code>.</li>
+            <li>🔍 <strong>Dictionary Lookup:</strong> You can loop through the key-value pairings using <code>kwargs.items()</code> or retrieve specific keys safely using <code>kwargs.get()</code>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Parameter Order Rules:</strong>
+    <p style="margin: 0 0 12px 0;">
+        If you mix positional parameters, <code>*args</code>, and <code>**kwargs</code> in a single function definition, they **must** be ordered exactly like this:
+    </p>
+    <div style="background: #f1f8e9; border-left: 5px solid #8bc34a; border-radius: 6px; padding: 12px; font-family: 'Fira Code', monospace; font-size: 13px; color: #33691e;">
+        def func(regular_param, *args, **kwargs):
+    </div>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Arbitrary keyword arguments in action:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">def config_robot(**kwargs):
+    print(kwargs)  # kwargs is a dictionary
+    for setting, val in kwargs.items():
+        print(setting + ": " + str(val))
+
+config_robot(color="blue", clean=True)
+# Output:
+# {'color': 'blue', 'clean': True}
+# color: blue
+# clean: True</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">** Prefix</span>
+        <strong>Keyword Collector</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Bundles named arguments</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">{k: v}</span>
+        <strong>Internal Format</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Python dictionary</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.items()</span>
+        <strong>Loop Unpacking</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Traverses key-value pairs</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8388,7 +12655,61 @@ window.levels = [
         "description": {
             "heading": "Variable Scope",
             "subheading": "Understanding local vs global scopes",
-            "body": "<p>Where you define a variable determines where you can access it in your code. This concept is called <strong>variable scope</strong>.</p>\n\n<h3>1. Local Scope</h3>\n<ul class=\"desc-list\">\n    <li>Variables created <strong>inside</strong> a function belong to the local scope of that function.</li>\n    <li>They can only be used inside that function and cease to exist once the function ends.</li>\n</ul>\n\n<h3>2. Global Scope</h3>\n<ul class=\"desc-list\">\n    <li>Variables created in the <strong>main body</strong> of a Python script (outside any functions) belong to the global scope.</li>\n    <li>They are accessible from anywhere in your code, including inside functions.</li>\n</ul>\n\n<h3>The <code>global</code> Keyword</h3>\n<p>By default, you can **read** global variables inside a function, but you cannot **modify** them. If you try to change a global variable inside a function, Python will create a new local variable with the same name.</p>\n<p>To modify a global variable inside a function, declare it with the <strong><code>global</code></strong> keyword:</p>\n<pre class=\"code-example\">count = 0\n\ndef increment():\n    global count\n    count += 1</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        👁️ <strong>Case Study: Nobita's Private Journal & Doraemon's Broadcast Beacon</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita writes secrets in a private journal inside his bedroom. Nobita's mother cannot read it from the living room (local scope). Meanwhile, Doraemon broadcasts news on a giant television beacon set up in the front yard. Everyone in the house can view the TV beacon from any room (global scope).
+    </p>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon explains **Variable Scope**. Where you create a variable determines where it is visible and accessible.
+    </p>
+
+    <!-- Scope differences -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; line-height: 1.55;">
+        <strong style="color: #1b5e20; display: block; margin-bottom: 6px;">Local vs. Global Scope:</strong>
+        <ul style="margin: 0; padding-left: 20px;">
+            <li>🏠 <strong>Local Scope:</strong> Variables created *inside* a function. They only exist while the function is executing and cannot be accessed outside.</li>
+            <li>🌍 <strong>Global Scope:</strong> Variables created in the main body (outside functions). They can be read from anywhere in the file.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Modifying Global Variables:</strong>
+    <p style="margin: 0 0 12px 0;">
+        By default, functions can **read** global variables but **cannot write/modify** them. If you try to update a global variable inside a function, Python creates a new local variable instead (shadowing). To modify it, you must declare it with the <strong>\`global\`</strong> keyword.
+    </p>
+    <div style="background: #f1f8e9; border-left: 5px solid #8bc34a; border-radius: 6px; padding: 12px; font-size: 13.5px;">
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; color: #33691e;">coins = 10
+
+def find_coin():
+    global coins
+    coins += 1 # Directly mutates the global variable</pre>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Local</span>
+        <strong>Inside function</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Temporary lifetime</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Global</span>
+        <strong>Main script body</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Visible everywhere</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">global</span>
+        <strong>Mutation keyword</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Bypasses local shadowing</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8504,7 +12825,72 @@ window.levels = [
         "description": {
             "heading": "Recursion",
             "subheading": "Functions that call themselves",
-            "body": "<p><strong>Recursion</strong> is a powerful programming technique where a function **calls itself** to solve a problem. It works by breaking down a complex problem into smaller, simpler sub-problems of the same type.</p>\n\n<h3>The Two Essential Parts of Recursion</h3>\n<ul class=\"desc-list\">\n    <li><strong>Base Case:</strong> The stopping condition. It returns a value directly without making another recursive call. Without it, the function would call itself forever!</li>\n    <li><strong>Recursive Case:</strong> The part where the function calls itself with a simpler or smaller input, moving closer to the base case.</li>\n</ul>\n\n<h3>Example: Factorial</h3>\n<p>The factorial of a number <code>n</code> (denoted <code>n!</code>) is <code>n * (n-1) * (n-2) * ... * 1</code>.</p>\n<pre class=\"code-example\">def factorial(n):\n    if n <= 1:  # Base Case\n        return 1\n    else:       # Recursive Case\n        return n * factorial(n - 1)</pre>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">⚠️</span>\n    <div><strong>RecursionError:</strong> If you forget a base case or your inputs don't approach it, Python will exceed its call stack size limit and crash with a <code>RecursionError: maximum recursion depth exceeded</code>.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🪆 <strong>Case Study: Nobita's Magic Nesting Doll & Doraemon's Recursion Mirror</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita receives a magic nesting doll (Matryoshka doll). To find a tiny golden key hidden inside, he opens the doll, only to find another nesting doll of the same type inside. He must repeat this process of opening dolls until he reaches the smallest doll (which cannot be opened) containing the key!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Doraemon explains this is **Recursion**—a technique where a function calls itself to solve smaller instances of the same problem.
+    </p>
+
+    <!-- Recursion pillars -->
+    <div style="background: #ffffff; border: 2.5px solid #ffcc80; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #e65100; display: block; margin-bottom: 8px;">The Two Pillars of Recursion:</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>🛑 <strong>Base Case:</strong> The stopping rule (e.g. "if the doll is the smallest one, return the key"). Without this, the function would call itself forever!</li>
+            <li>🔄 <strong>Recursive Case:</strong> The progress rule (e.g. "open this doll and call the function again on the next smaller doll inside").</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">⚠️ RecursionError Risk:</strong>
+    <p style="margin: 0 0 12px 0;">
+        If your code has no base case or fails to move closer to it, Python will continue adding calls to its stack indefinitely. Eventually, it will crash with a <code>RecursionError: maximum recursion depth exceeded</code>.
+    </p>
+</div>
+
+<!-- Code Demos -->
+<div style="background: #f5f5f5; border: 1.5px solid #cfd8dc; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f; margin-bottom: 28px;">
+    <strong style="color: #37474f; display: block; margin-bottom: 8px;">Recursive countdown demo:</strong>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">def countdown(n):
+    if n <= 0:            # Base Case
+        print("Blast off! 🚀")
+    else:                 # Recursive Case
+        print(n)
+        countdown(n - 1)  # Function calls itself!
+
+countdown(3)
+# Output:
+# 3
+# 2
+# 1
+# Blast off! 🚀</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Base Case</span>
+        <strong>Stop Rule</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Prevents infinite loop</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Recursive</span>
+        <strong>Progress Call</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Shrinks problem input</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Stack Limit</span>
+        <strong>Memory Buffer</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Recursion depth ceiling</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8620,7 +13006,65 @@ window.levels = [
         "description": {
             "heading": "Errors vs Exceptions",
             "subheading": "The difference between grammar mistakes and execution crashes",
-            "body": "<p>When writing Python code, things will occasionally go wrong. Python categorizes issues into two main categories: <strong>Syntax Errors</strong> and <strong>Exceptions</strong>. Understanding the difference is key to debugging like a pro!</p>\n\n<h3>1. Syntax Errors (Grammar Mistakes)</h3>\n<p>A <strong>SyntaxError</strong> occurs when Python's interpreter tries to parse your code but finds that you have broken the grammar rules of the language. This happens <strong>before</strong> the code is even run. If there is a single syntax error in your file, Python refuses to execute any of it.</p>\n<p>Think of it like trying to write a letter to Doraemon in a language that doesn't exist -- he won't be able to read it at all!</p>\n<pre class=\"code-example\"># SyntaxError: missing colon\nif True\n    print(\"Hello\")</pre>\n\n<h3>2. Exceptions (Runtime Crashes)</h3>\n<p>An <strong>Exception</strong> is an error that occurs <strong>while the program is running</strong>. The syntax of the code is completely correct, but when Python tries to execute a specific operation, it encounters a problem it cannot resolve.</p>\n<p>Think of it like Doraemon's <strong>Anywhere Door</strong>: the door's syntax (its design) is perfect, but if you request to go to a location that has been destroyed, the gadget will fail mid-operation!</p>\n<pre class=\"code-example\"># Exception: ZeroDivisionError (syntactically correct, but math-wise impossible)\nprint(10 / 0)</pre>\n\n<h3>Common Types of Exceptions</h3>\n<ul class=\"desc-list\">\n    <li><strong>ZeroDivisionError:</strong> Raised when dividing a number by zero.</li>\n    <li><strong>NameError:</strong> Raised when trying to use a variable or function that hasn't been defined.</li>\n    <li><strong>TypeError:</strong> Raised when an operation is applied to an object of inappropriate type (e.g. adding text and a number).</li>\n    <li><strong>IndexError:</strong> Raised when trying to access an item in a list using an index that is out of range.</li>\n</ul>\n\n<div class=\"desc-callout callout-highlight\">\n    <span class=\"callout-icon\">💡</span>\n    <div><strong>Pro Tip:</strong> When Python encounters an exception that is not handled, it stops executing immediately and prints a traceback, showing the type of error and the exact line where it crashed.</div>\n</div>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border: 3px solid #e53935; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(229, 57, 53, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #c62828; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚠️ <strong>Case Study: Nobita's Spelling Blunders vs. Anywhere Door Failures</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #c62828; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita tries to write a letter to Doraemon but misspells words so badly that Doraemon cannot even read or process the paper (Syntax Error). Later, Nobita constructs a grammatically correct request for the **Anywhere Door** gadget, but asks to go to a location that does not exist on Earth. The gadget turns on, attempts the task, and fails mid-operation (Exception).
+    </p>
+    <p style="font-size: 15px; color: #37474f; line-height: 1.6; margin-bottom: 16px;">
+        In Python, mistakes are divided into two categories: **Syntax Errors** (grammar mistakes before running) and **Exceptions** (crashes during execution).
+    </p>
+
+    <!-- Differences Table Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: #ffffff; border-radius: 12px; padding: 16px; border: 1.5px solid #ffcdd2; font-size: 13.5px; color: #37474f;">
+        <div>
+            <strong style="color: #c62828; display: block; margin-bottom: 4px;">❌ Syntax Error</strong>
+            <strong>Grammar Mistakes:</strong> Code cannot be parsed by Python's interpreter.<br>
+            <strong>Time:</strong> Caught *before* execution starts.<br>
+            <strong>Example:</strong> Missing colons, mismatched brackets.
+        </div>
+        <div>
+            <strong style="color: #0288d1; display: block; margin-bottom: 4px;">⚡ Exception</strong>
+            <strong>Runtime Faults:</strong> Code grammar is correct, but execution fails.<br>
+            <strong>Time:</strong> Occurs *during* program run.<br>
+            <strong>Example:</strong> ZeroDivisionError, NameError, IndexError.
+        </div>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Tracebacks & Crashes:</strong>
+    <p style="margin: 0 0 12px 0;">
+        When an exception occurs and is not handled, Python stops the program immediately and outputs a **Traceback** detailing:
+    </p>
+    <ul style="margin: 0; padding-left: 20px;">
+        <li>The exact file name and line number where the code crashed.</li>
+        <li>The specific type of exception (e.g. <code>TypeError</code>) and an explanation message.</li>
+    </ul>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">SyntaxError</span>
+        <strong>Grammar Check</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Fails at compile-time</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Exception</span>
+        <strong>Runtime Crash</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Fails during execution</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Traceback</span>
+        <strong>Error Path</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Detailed crash report</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8736,7 +13180,59 @@ window.levels = [
         "description": {
             "heading": "try-except block",
             "subheading": "The Safety Net for your Python code",
-            "body": "<p>In real-world applications, code can fail due to unpredictable situations (like bad user input or lost internet connections). Instead of letting your program crash, you can catch and handle exceptions using the <strong><code>try-except</code></strong> statement.</p>\n\n<h3>The Metaphor: The Safety Net</h3>\n<p>Think of it like Doraemon's <strong>Safety Net</strong> gadget: when Nobita tries to perform a risky stunt, the safety net is placed below. If he falls, he doesn't get hurt; the net catches him gracefully and he continues his day!</p>\n\n<h3>Syntax of try-except</h3>\n<p>We write the risky code inside the <code>try</code> block. If an error occurs, Python immediately stops running the <code>try</code> block and runs the code inside the <code>except</code> block:</p>\n<pre class=\"code-example\">try:\n    # Risky code goes here\n    result = 10 / 0\nexcept:\n    # This code runs only if a crash occurs above\n    print(\"Oops, something went wrong!\")</pre>\n\n<h3>Handling Specific Exceptions</h3>\n<p>It's best practice to handle specific exceptions rather than catching everything. This prevents hiding other bugs:</p>\n<pre class=\"code-example\">try:\n    num = int(input(\"Enter a number: \"))\n    print(10 / num)\nexcept ZeroDivisionError:\n    print(\"You cannot divide by zero!\")\nexcept ValueError:\n    print(\"Please enter a valid whole number!\")</pre>\n\n<h3>Getting the Error Message</h3>\n<p>You can capture the error object and print its message using the <code>as</code> keyword:</p>\n<pre class=\"code-example\">try:\n    print(undefined_variable)\nexcept NameError as e:\n    print(f\"Caught an error: {e}\")  # Prints: Caught an error: name 'undefined_variable' is not defined</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🕸️ <strong>Case Study: Nobita's Skateboard Stunt & Doraemon's Safety Net</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita tries to perform a risky skateboard jump. If he crashes, he will break his leg and end up in the hospital (program terminating). To prevent this, Doraemon deploys a **Safety Net** (the **\`try-except\`** block) underneath. If Nobita falls, the net catches him gracefully, he gets up, and continues playing without a crash!
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        In Python, you can wrap risky code (like divisions, user input parsing, file actions) in a \`try\` block. If a crash occurs, Python halts execution in the \`try\` block and jumps directly to the matching \`except\` block.
+    </p>
+
+    <!-- Syntax of try-except -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; display: block; margin-bottom: 8px;">Graceful Exception Handling:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #0288d1;">try:
+    num = 10 / 0 # Risky calculation
+except ZeroDivisionError:
+    print("Cannot divide by zero!") # Safe fall back</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Specificity is Best Practice:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Instead of using a generic <code>except:</code> (which catches everything, including user cancellation keyboard interrupts), you should specify the exact exception classes you expect:
+    </p>
+    <ul style="margin: 0; padding-left: 20px;">
+        <li><code>except ValueError:</code> for bad numbers.</li>
+        <li><code>except ZeroDivisionError:</code> for math errors.</li>
+        <li>Capture details using the <code>as</code> alias: <code>except TypeError as e:</code>.</li>
+    </ul>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">try</span>
+        <strong>Risky Block</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Monitored code statements</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">except</span>
+        <strong>Safety Net</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Handles triggered crash</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">as err</span>
+        <strong>Error Variable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Stores error details</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8852,7 +13348,57 @@ window.levels = [
         "description": {
             "heading": "finally block",
             "subheading": "Guaranteed cleanup code, no matter what",
-            "body": "<p>When a program runs, it often uses external resources (like files, databases, or network connections). If an error occurs, we must ensure these resources are closed or cleaned up. In Python, this is achieved using the <strong><code>finally</code></strong> block.</p>\n\n<h3>The Metaphor: Returning Doraemon's Gadgets</h3>\n<p>Think of it like borrowing a gadget from Doraemon. If Nobita uses it successfully (try block) or if the gadget malfunctions and gets ruined (except block), there is one rule that never changes: Nobita <strong>must always return the gadget</strong> at the end of the day (finally block)!</p>\n\n<h3>Syntax of finally</h3>\n<p>The <code>finally</code> block is placed at the end of a try-except structure. Code inside the <code>finally</code> block is **guaranteed to run**, whether an exception occurred or not, and whether it was successfully handled or not!</p>\n<pre class=\"code-example\">try:\n    print(\"Opening the chest.\")\n    # Imagine some code here that might fail\nexcept:\n    print(\"Handling error.\")\nfinally:\n    print(\"This ALWAYS runs!\")  # Cleanup code</pre>\n\n<h3>Guaranteed Execution</h3>\n<p>Even if you have a <code>return</code>, <code>break</code>, or <code>continue</code> statement inside the <code>try</code> or <code>except</code> blocks, Python will still execute the <code>finally</code> block before leaving the structure. This makes it the ultimate place for safety cleanup routines!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%); border: 3px solid #673ab7; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(103, 58, 183, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #311b92; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🧹 <strong>Case Study: Borrowing Gadgets & The Mandatory Return Pledge</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #311b92; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita borrows a gadget from Doraemon. If Nobita plays with it successfully (try block) or if the gadget breaks and triggers an argument (except block), there is one golden rule: Nobita **must always return the gadget** back to Doraemon's 4D pocket before dinner (finally block)!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        The **\`finally\`** block defines cleanup operations that **must execute under all circumstances** (whether a crash occurred, was handled, or even if the function returned early!).
+    </p>
+
+    <!-- Syntax of finally -->
+    <div style="background: #ffffff; border: 2.5px solid #673ab7; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #311b92; display: block; margin-bottom: 8px;">Guaranteed Execution Structure:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #673ab7;">try:
+    print("Borrowing tool")
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Handled gadget crash")
+finally:
+    print("Returning tool to Doraemon") # Always executes!</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Control Flow & return Statements:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Even if you have a <code>return</code>, <code>break</code>, or <code>continue</code> statement inside your <code>try</code> or <code>except</code> block, Python will temporarily pause that exit command, run the <code>finally</code> block first, and only then complete the exit!
+    </p>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">finally</span>
+        <strong>Guaranteed Run</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Executes no matter what</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Cleanup</span>
+        <strong>Resource Release</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Closes files/connections</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Paused Exit</span>
+        <strong>Overrides return</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Runs before exits complete</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -8968,7 +13514,59 @@ window.levels = [
         "description": {
             "heading": "raise keyword",
             "subheading": "Blowing the emergency whistle in Python",
-            "body": "<p>So far, we have only handled exceptions raised by Python itself. But what if your own program needs to report that something illegal or invalid has occurred? In Python, you can manually trigger an exception using the <strong><code>raise</code></strong> keyword.</p>\n\n<h3>The Metaphor: The Emergency Whistle</h3>\n<p>Think of it like Doraemon's <strong>Emergency Whistle</strong> gadget. If Nobita sees Gian violating the rules of the playground (like stealing toys), Nobita blows the whistle to manually signal an alert. The whistle doesn't wait for things to go wrong on their own -- it triggers the warning immediately!</p>\n\n<h3>Syntax of raise</h3>\n<p>To raise an exception, write the keyword <code>raise</code>, followed by the name of the exception type, and optional error details in parentheses:</p>\n<pre class=\"code-example\">raise ValueError(\"Invalid value entered!\")</pre>\n\n<h3>Why Raise Exceptions?</h3>\n<p>We raise exceptions to enforce rules in our code (input validation). For example, if a function expects a positive deposit amount, a negative value is logical nonsense. Rather than continuing with corrupt data, we blow the whistle:</p>\n<pre class=\"code-example\">def set_age(age):\n    if age &lt; 0:\n        raise ValueError(\"Age cannot be negative!\")\n    print(f\"Age is set to: {age}\")</pre>\n\n<h3>Re-raising Exceptions</h3>\n<p>Sometimes you catch an exception to log it or perform minor cleanup, but still want to crash or let the calling function know. You can do this by using <code>raise</code> on its own inside the <code>except</code> block:</p>\n<pre class=\"code-example\">try:\n    num = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Logged: Division by zero attempted.\")\n    raise  # Re-raises the ZeroDivisionError</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 3px solid #f57c00; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(245, 124, 0, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #e65100; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📢 <strong>Case Study: Enforcing Playground Rules & Doraemon's Emergency Whistle</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #e65100; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Gian is bullying others and stealing toys in the playground. The playground supervisor cannot monitor everything. Doraemon gives Nobita an **Emergency Whistle** (the **\`raise\`** keyword). If Gian breaks a rule, Nobita blows the whistle manually to trigger a warning immediately, interrupting the bad behavior before anything gets worse!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        In Python, you use the <code>raise</code> keyword to trigger exceptions manually when a condition in your program is logical nonsense (like negative ages or empty passwords).
+    </p>
+
+    <!-- Syntax of raise -->
+    <div style="background: #ffffff; border: 2.5px solid #f57c00; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #e65100; display: block; margin-bottom: 8px;">Triggering Exceptions Manually:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #f57c00;">def verify_age(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative!")
+    print("Age verified: " + str(age))</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Re-raising Exceptions:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Sometimes you want to catch an exception inside a function, log the crash, but still let the parent caller program know that a crash occurred. You can achieve this by calling <code>raise</code> on its own inside the <code>except</code> block:
+    </p>
+    <div style="background: #ffebee; border-left: 5px solid #ef5350; border-radius: 6px; padding: 12px;">
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #c62828;">except ZeroDivisionError:
+    print("Logged: attempted division by zero.")
+    raise # Passes the crash up to the caller</pre>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">raise</span>
+        <strong>Manual Trigger</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Forces exception flow</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">ValueError</span>
+        <strong>Invalid Value</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Correct type, wrong values</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Re-raise</span>
+        <strong>Bubble Up</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Propagates errors upward</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9084,7 +13682,77 @@ window.levels = [
         "description": {
             "heading": "File handling (open)",
             "subheading": "Working with files on your computer's drive",
-            "body": "<p>Programs need a way to store data permanently. While variables are stored in temporary RAM (which clears when the computer turns off), files are saved on the permanent hard drive. Python makes working with files simple through its built-in <strong><code>open()</code></strong> function.</p>\n\n<h3>The Metaphor: The Diary of Secrets</h3>\n<p>Think of file handling like writing in a **Diary of Secrets** gadget: to interact with the diary, you must first unlock it with a key (<code>open()</code>). Once open, you can either read your previous notes or write down new secrets. Finally, you must lock it back up (<code>close()</code>) so no one else can read it!</p>\n\n<h3>Opening a File</h3>\n<p>To open a file, we use the <code>open()</code> function, passing the filename and the **access mode**:</p>\n<pre class=\"code-example\">my_file = open(\"diary.txt\", \"r\")</pre>\n\n<h3>File Modes</h3>\n<p>The second argument specifies the mode. The three most common modes are:</p>\n<ul class=\"desc-list\">\n    <li><strong><code>'r'</code> (Read):</strong> Default mode. Opens the file for reading. Raises a <code>FileNotFoundError</code> if the file does not exist.</li>\n    <li><strong><code>'w'</code> (Write):</strong> Opens the file for writing. If the file exists, it **deletes/overwrites** everything! If it doesn't exist, it creates a new file.</li>\n    <li><strong><code>'a'</code> (Append):</strong> Opens the file for writing but **adds** new text to the end of the existing content. Creates the file if it doesn't exist.</li>\n</ul>\n\n<h3>Closing the File</h3>\n<p>When you open a file, the operating system locks it for your program. If you forget to close it, it can cause memory leaks and file corruption. Always call <code>close()</code> when you are finished:</p>\n<pre class=\"code-example\">my_file = open(\"diary.txt\", \"w\")\n# Perform write/read actions here...\nmy_file.close()  # Locks the file and saves changes</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📝 <strong>Case Study: Nobita's Diary of Secrets & The Locking Key</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to write secrets in a diary. Unlike a blackboard (temporary variables inside computer RAM that clear when power goes off), a diary is saved permanently on a shelf (the computer hard drive). To interact with it, Nobita must unlock it (<code>open()</code>), read or write messages, and then lock it back up (<code>close()</code>) so it doesn't get corrupted or stolen!
+    </p>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        Python makes working with files on disk simple through the built-in **\`open()\`** function.
+    </p>
+
+    <!-- File opening syntax -->
+    <div style="background: #ffffff; border: 2.5px solid #2e7d32; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #1b5e20; display: block; margin-bottom: 8px;">File Access Pattern:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #2e7d32;"># Open, do operations, then close!
+my_file = open("diary.txt", "r")
+# Read data...
+my_file.close() # Free resources!</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Access Modes Grid:</strong>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px;">
+        <thead>
+            <tr style="background: #f1f8e9; border-bottom: 2px solid #c8e6c9;">
+                <th style="padding: 8px; text-align: left; color: #1b5e20;">Mode</th>
+                <th style="padding: 8px; text-align: left; color: #1b5e20;">Description</th>
+                <th style="padding: 8px; text-align: left; color: #1b5e20;">If File Exists?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 8px; font-family: monospace;">"r" (Read)</td>
+                <td style="padding: 8px;">Default mode. Reads text content.</td>
+                <td style="padding: 8px;">Opens cleanly (else <code>FileNotFoundError</code>)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 8px; font-family: monospace;">"w" (Write)</td>
+                <td style="padding: 8px;">Writes text content.</td>
+                <td style="padding: 8px; color: #c62828; font-weight: bold;">Truncates / overwrites file!</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; font-family: monospace;">"a" (Append)</td>
+                <td style="padding: 8px;">Adds text at the file end.</td>
+                <td style="padding: 8px;">Preserves existing content</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">open()</span>
+        <strong>File Stream</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Links to drive storage</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">"w" Mode</span>
+        <strong>Overwrite Risk</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Erases previous records</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.close()</span>
+        <strong>Save & Unlock</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Prevents resource leaks</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9200,7 +13868,61 @@ window.levels = [
         "description": {
             "heading": "Read/Write files",
             "subheading": "Writing and reading file streams",
-            "body": "<p>Opening a file is just the first step. To actually use it, we must learn how to <strong>write</strong> data into it and <strong>read</strong> data back from it. Python provides simple methods on file objects to do just that!</p>\n\n<h3>1. Writing to Files (.write)</h3>\n<p>When a file is opened in write (<code>'w'</code>) or append (<code>'a'</code>) mode, you can write text into it using the <strong><code>write()</code></strong> method. Crucially, <code>write()</code> does <strong>not</strong> automatically add a newline character at the end. You must add <code>\\n</code> manually if you want a line break!</p>\n<pre class=\"code-example\"># Writing to Nobita's notebook\nf = open(\"notebook.txt\", \"w\")\nf.write(\"Buy dorayakis\\n\")\nf.write(\"Clean room\\n\")\nf.close()</pre>\n\n<h3>2. Reading from Files</h3>\n<p>When a file is opened in read (<code>'r'</code>) mode, you have three primary ways to extract the text:</p>\n<ul class=\"desc-list\">\n    <li><strong><code>.read()</code>:</strong> Reads the entire file content into a single string. Be careful with huge files, as this loads everything into RAM!</li>\n    <li><strong><code>.readline()</code>:</strong> Reads a single line from the file. Each subsequent call reads the next line, returning an empty string when the end is reached.</li>\n    <li><strong><code>.readlines()</code>:</strong> Reads all lines and returns them as a list of strings, with each line as an item.</li>\n</ul>\n<pre class=\"code-example\">f = open(\"notebook.txt\", \"r\")\nprint(f.read())  # Prints both lines\nf.close()</pre>\n\n<h3>The File Cursor & .seek()</h3>\n<p>Think of reading a file like playing a cassette tape. When you read the file, the \"playback head\" (cursor) moves forward. If you read the entire file using <code>read()</code>, the cursor is now at the very end. If you call `read()` again, you will get nothing! You can reset the cursor back to the start (position 0) using <strong><code>seek(0)</code></strong>.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📖 <strong>Case Study: Nobita's Task Notebook & The Cassette Cursor</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to write his homework tasks in a notebook. He needs to write lines, close the book, and later read the lines back. Doraemon compares reading a file to a **Cassette Tape Player**: as you read characters, the playback head (the file pointer cursor) advances. If you read everything, the cursor is at the end. To read it again, you must rewind the tape using <strong><code>seek(0)</code></strong>!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Python file objects support writing text strings with <code>.write()</code> (note that newlines <code>\\n</code> are *not* automatically added!) and reading data using one of three helper methods.
+    </p>
+
+    <!-- Reading methods block -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">Three Ways to Read content:</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>📄 <strong><code>.read()</code>:</strong> Reads the entire file into a single massive string. Loads everything into RAM at once.</li>
+            <li>📏 <strong><code>.readline()</code>:</strong> Reads a single line. The cursor stops at the end of the line, waiting for the next call.</li>
+            <li>📋 <strong><code>.readlines()</code>:</strong> Reads all lines and packs them into a Python <strong>list of strings</strong>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Memory-Efficient Loop Traversal:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Instead of calling <code>read()</code> or <code>readlines()</code> which can crash your system on huge files, you can loop directly over the file handle. Python reads line-by-line lazily:
+    </p>
+    <div style="background: #efebe9; border-left: 5px solid #795548; border-radius: 6px; padding: 12px; font-family: 'Fira Code', monospace; font-size: 13px; color: #4e342e;">
+        f = open("log.txt", "r")<br>
+        for line in f:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print(line.strip()) # strip() removes extra newlines<br>
+        f.close()
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.write()</span>
+        <strong>Raw Strings</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Writes string exactly, needs \\n</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.seek(0)</span>
+        <strong>Rewind cursor</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Resets playback pointer to byte 0</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.readlines()</span>
+        <strong>Lines list</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Returns list of string lines</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9316,7 +14038,63 @@ window.levels = [
         "description": {
             "heading": "CSV files",
             "subheading": "Handling tabular spreadsheet datasets in Python",
-            "body": "<p>A very common file format used in data science and engineering is the <strong>CSV</strong> (Comma-Separated Values) file. It represents tabular spreadsheet data, where each row is a line, and columns are separated by commas.</p>\n\n<h3>The csv Module</h3>\n<p>While you could read CSV files as normal text files and split them by commas (<code>line.split(\",\")</code>), this breaks down if columns contain quotes, commas inside text, or spaces. Instead, Python has a built-in <strong><code>csv</code></strong> module to handle this automatically!</p>\n\n<h3>Writing to a CSV (.writerow)</h3>\n<p>To write tabular data, we import the module, open the file, create a CSV writer object, and use <strong><code>writerow()</code></strong> to write lists of data:</p>\n<pre class=\"code-example\">import csv\nf = open(\"scores.csv\", \"w\", newline=\"\")\nwriter = csv.writer(f)\n# Write header row\nwriter.writerow([\"Name\", \"Score\"])\n# Write data rows\nwriter.writerow([\"Nobita\", \"30\"])\nwriter.writerow([\"Shizuka\", \"95\"])\nf.close()</pre>\n<p>Note: The <code>newline=\"\"</code> parameter is recommended when opening CSV files on Windows to prevent blank lines between rows.</p>\n\n<h3>Reading from a CSV</h3>\n<p>Reading is just as simple: we create a reader object and iterate over it. Each row returned is a list of strings:</p>\n<pre class=\"code-example\">import csv\nf = open(\"scores.csv\", \"r\")\nreader = csv.reader(f)\nfor row in reader:\n    print(row)  # prints list: ['Name', 'Score'], then ['Nobita', '30'], etc.\nf.close()</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📊 <strong>Case Study: School Test Scores & Tabular Spreadsheets</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to record the class test scores (e.g. Nobita scored 30, Shizuka scored 95) in a grid layout. Doraemon suggests saving it as a **CSV** (Comma-Separated Values) file. Each row represents a person, and columns (Name, Score) are separated by commas.
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Rather than using manual string splitting (which fails if a column contains quotes or actual commas like <code>"Doraemon, blue cat"</code>), Python provides a dedicated built-in **\`csv\`** module to read and write rows cleanly.
+    </p>
+
+    <!-- csv usage code block -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; display: block; margin-bottom: 8px;">Reading and Writing CSV Rows:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #0288d1;">import csv
+
+# Writing to a CSV file
+f = open("scores.csv", "w", newline="")
+writer = csv.writer(f)
+writer.writerow(["Name", "Score"])
+writer.writerow(["Nobita", "30"])
+f.close()</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Detailed Row Extraction:</strong>
+    <p style="margin: 0 0 12px 0;">
+        When reading a file with \`csv.reader()\`, iterating over the reader yields each row as a **list of strings**, matching the columns in order:
+    </p>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">f = open("scores.csv", "r")
+reader = csv.reader(f)
+for row in reader:
+    print(row) # Output: ['Name', 'Score'] then ['Nobita', '30']
+f.close()</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">csv.writer</span>
+        <strong>CSV Serializer</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Packs lists into comma-separated lines</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">newline=""</span>
+        <strong>Row spacing fix</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Prevents blank rows on Windows</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">csv.reader</span>
+        <strong>CSV Parser</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Yields lists of row strings</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9432,7 +14210,61 @@ window.levels = [
         "description": {
             "heading": "JSON files",
             "subheading": "Reading and writing structured data in JSON format",
-            "body": "<p><strong>JSON</strong> (JavaScript Object Notation) is a lightweight, human-readable data format used heavily on the internet to send structured data. It maps perfectly to Python's built-in data types: JSON objects look like Python dictionaries, and JSON arrays look like Python lists!</p>\n\n<h3>The json Module</h3>\n<p>Python has a built-in <strong><code>json</code></strong> module that allows you to easily serialize (convert Python objects to JSON) and deserialize (parse JSON back into Python objects).</p>\n\n<h3>Writing JSON to Files (.dump)</h3>\n<p>To save a dictionary or list into a JSON file, we open the file in write mode and use the <strong><code>json.dump()</code></strong> function:</p>\n<pre class=\"code-example\">import json\ndata = {\n    \"name\": \"Doraemon\",\n    \"color\": \"blue\",\n    \"pocket\": [\"Anywhere Door\", \"Bamboo Copter\"]\n}\nf = open(\"doraemon.json\", \"w\")\njson.dump(data, f)\nf.close()</pre>\n\n<h3>Reading JSON from Files (.load)</h3>\n<p>To read a JSON file and convert it back into a Python dictionary or list, we open the file in read mode and use the <strong><code>json.load()</code></strong> function:</p>\n<pre class=\"code-example\">import json\nf = open(\"doraemon.json\", \"r\")\nloaded_data = json.load(f)\nf.close()\nprint(loaded_data[\"name\"])  # Prints: Doraemon\nprint(type(loaded_data))    # Prints: &lt;class 'dict'&gt;</pre>\n\n<h3>dump/load vs dumps/loads</h3>\n<p>The methods with an **'s'** stand for **string**: they serialize/deserialize to/from strings in memory, rather than file streams:\n<ul class=\"desc-list\">\n    <li><code>json.dump(obj, file)</code>: Writes data to a file.</li>\n    <li><code>json.dumps(obj)</code>: Returns a JSON-formatted string.</li>\n    <li><code>json.load(file)</code>: Reads data from a file.</li>\n    <li><code>json.loads(string)</code>: Parses JSON from a string.</li>\n</ul></p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); border: 3px solid #fbc02d; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(251, 192, 45, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #f57f17; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🤖 <strong>Case Study: Doraemon's Gadget Inventory Database</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Doraemon needs to store complex structured information about his gadgets (names, colors, lists of tools in the 4D pocket). A plain list of comma values (CSV) isn't nested enough. Doraemon recommends **JSON** (JavaScript Object Notation), which maps perfectly to Python **dictionaries** and **lists**.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Python's built-in **\`json\`** module handles serialization (converting Python dictionaries/lists to JSON files) and deserialization (loading JSON strings back into Python datatypes) automatically.
+    </p>
+
+    <!-- JSON conversions -->
+    <div style="background: #ffffff; border: 2.5px solid #fbc02d; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #f57f17; display: block; margin-bottom: 8px;">Serializing to File vs String:</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>💾 <strong><code>json.dump(data, file)</code>:</strong> Serializes data directly into an open file stream.</li>
+            <li>📝 <strong><code>json.dumps(data)</code>:</strong> Returns a JSON string directly to memory (the **'s'** stands for string!).</li>
+            <li>📂 <strong><code>json.load(file)</code>:</strong> Parses a JSON file stream back into dictionaries/lists.</li>
+            <li>✍️ <strong><code>json.loads(string)</code>:</strong> Parses a raw JSON string into Python objects.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Pretty Printing JSON:</strong>
+    <p style="margin: 0 0 12px 0;">
+        By default, <code>json.dump</code> writes everything on a single compressed line. To make it readable for humans, pass the <code>indent</code> parameter:
+    </p>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">import json
+data = {"name": "Doraemon", "pocket": ["Door", "Copter"]}
+f = open("dora.json", "w")
+json.dump(data, f, indent=4) # Indents keys by 4 spaces!
+f.close()</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">json.dump()</span>
+        <strong>Save to disk</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Serializes straight to file</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">json.loads()</span>
+        <strong>String parser</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Converts string to dict/list</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">indent=N</span>
+        <strong>Pretty-print</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Adds spacing for readability</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9548,7 +14380,66 @@ window.levels = [
         "description": {
             "heading": "Context Manager (with)",
             "subheading": "Ensuring files are closed safely and automatically",
-            "body": "<p>When working with files, forgetting to call <code>close()</code> is a very common beginner mistake. It locks resources and can corrupt data. To make file handling safer and cleaner, Python provides context managers through the <strong><code>with</code></strong> statement.</p>\n\n<h3>The Metaphor: The Self-Locking Safe</h3>\n<p>Imagine Nobita enters a high-security **Self-Locking Safe** (the context). He unlocks it, steps inside, reads or writes notes, and the moment he steps outside, the door automatically swings shut, locks, and shuts down all access. Nobita doesn't have to remember to turn the key or lock the bolts -- the safe manages its own closing process!</p>\n\n<h3>Syntax of with statement</h3>\n<p>Instead of manually opening and closing, we wrap the file actions inside a <code>with</code> block. The file is assigned to a variable using the <code>as</code> keyword:</p>\n<pre class=\"code-example\">with open(\"diary.txt\", \"r\") as f:\n    content = f.read()\n    print(content)\n\n# Outside the block, the file is ALREADY closed! f.close() is called automatically.</pre>\n\n<h3>Why with is Better</h3>\n<ul class=\"desc-list\">\n    <li><strong>Guaranteed Cleanup:</strong> Python guarantees the file is closed as soon as the execution leaves the <code>with</code> block.</li>\n    <li><strong>Error Safety:</strong> Even if your code inside the <code>with</code> block throws a traceback exception and crashes, Python closes the file safely before letting the program crash.</li>\n    <li><strong>Clean Code:</strong> You write less boilerplate code, and the indentation clearly shows where the file resource is active.</li>\n</ul>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔒 <strong>Case Study: Nobita's Safe & The Auto-Locking Hinges</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita keeps borrowing keys and leaves drawers open, making the house messy. To fix this, Doraemon installs **Auto-Locking Hinges** on Nobita's safe (the **\`with\`** context manager). The moment Nobita finishes inspecting the safe and steps away (exiting the block), the door swings shut and locks automatically, even if he trips and falls (errors) inside!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Forgetting to call <code>close()</code> keeps files locked in the operating system and causes resource leaks. The <code>with</code> statement handles resource allocation and cleanup automatically.
+    </p>
+
+    <!-- Syntax block comparing traditional vs context manager -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: #ffffff; border-radius: 12px; padding: 16px; border: 1.5px solid #d7ccc8; font-size: 13px; color: #37474f;">
+        <div>
+            <strong style="color: #c62828; display: block; margin-bottom: 4px;">❌ Older Manual Way</strong>
+            <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 11.5px; color: #c62828; line-height: 1.45;">f = open("log.txt", "w")
+try:
+    f.write("data")
+finally:
+    f.close() # Boilerplate!</pre>
+        </div>
+        <div>
+            <strong style="color: #2e7d32; display: block; margin-bottom: 4px;">✅ Modern Context Manager</strong>
+            <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 11.5px; color: #2e7d32; line-height: 1.45;">with open("log.txt", "w") as f:
+    f.write("data")
+# Automatically closed!
+# Even if a crash happens!</pre>
+        </div>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Opening Multiple Files Simultaneously:</strong>
+    <p style="margin: 0 0 12px 0;">
+        You can manage multiple resources in a single line by separating them with commas. This is extremely useful for reading from one source file and writing to a backup destination:
+    </p>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">with open("source.txt") as src, open("dest.txt", "w") as dst:
+    dst.write(src.read())</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">with block</span>
+        <strong>Context boundary</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Scope of open file stream</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">as alias</span>
+        <strong>File Reference</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Binds stream to variable</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Auto-close</span>
+        <strong>Error-Safe Exit</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Closes even on exceptions</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9664,7 +14555,55 @@ window.levels = [
         "description": {
             "heading": "File project challenge",
             "subheading": "Putting it all together: Building a secure text logging dashboard",
-            "body": "<p>In this final level of the section, you will combine everything you have learned about file handling, exceptions, and safety mechanisms to build a robust logging program.</p>\n\n<h3>The Scenario: The Gadget Access Logger</h3>\n<p>Doraemon wants to create a secure security system to track which gadgets Nobita borrows. Every time a gadget is accessed, we must write a new record to a file named <code>log.txt</code>. Because file writing can fail (e.g. disk write failures, permission errors), we must wrap our context manager in a <code>try-except</code> block to keep the application stable.</p>\n\n<h3>Designing the Logger</h3>\n<p>To implement this successfully, we use:</p>\n<ul class=\"desc-list\">\n    <li><strong>Append Mode (<code>'a'</code>):</strong> To ensure new log entries are added to the end of the file, preserving all previous logs.</li>\n    <li><strong>Context Manager (<code>with</code>):</strong> To guarantee the log file handles are closed automatically.</li>\n    <li><strong>Try-Except:</strong> To catch any <code>IOError</code> (input/output faults) and display a fallback message instead of crashing the system.</li>\n</ul>\n<pre class=\"code-example\">try:\n    with open(\"log.txt\", \"a\") as log:\n        log.write(\"System initialized\\n\")\nexcept IOError:\n    print(\"Logging failed!\")</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🛡️ <strong>Case Study: The Gadget Access Logger System</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Doraemon wants to construct an audit trail logger to record whenever Nobita borrows a gadget. Writing to disk can fail due to running out of space, access permission errors, or files locked by other programs (e.g. Gian attempting to steal logs). To build a bulletproof logger, we combine **Append Mode (\`'a'\`)**, a **Context Manager (\`with\`)**, and a **\`try-except\` block** to intercept \`IOError\` without crashing the whole application!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        In this final section project challenge, you will implement this secure logging pattern to keep Doraemon's house safe.
+    </p>
+
+    <!-- Coding structure example -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">The Safe Logging Architecture:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #795548;">try:
+    with open("log.txt", "a") as f:
+        f.write("Nobita borrowed Anywhere Door\n")
+except IOError:
+    print("Failed to write access log to disk!")</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Why Append Mode ('a') over Write Mode ('w')?</strong>
+    <p style="margin: 0 0 12px 0;">
+        If we open the log file using write mode (<code>'w'</code>), Python immediately truncates the file size to 0 bytes, erasing all previous borrowing logs! Append mode (<code>'a'</code>) guarantees that new data is appended safely at the end of the file, preserving history.
+    </p>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Append ('a')</span>
+        <strong>Preserve logs</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Writes to end of file</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">with open</span>
+        <strong>Leak proof</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Auto-closes file handles</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">IOError</span>
+        <strong>Hardware safety</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Catches filesystem faults</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9780,7 +14719,88 @@ window.levels = [
         "description": {
             "heading": "Modules",
             "subheading": "Splitting your code into clean, reusable files",
-            "body": "<p>As your programs grow larger, keeping all your code in a single file becomes messy and difficult to manage. Python solves this by allowing you to split your code into separate files called <strong>Modules</strong>.</p>\n\n<h3>What is a Module?</h3>\n<p>Any file containing Python code ending in <code>.py</code> can be imported as a module in another script. Modules allow you to write functions once and reuse them across different programs!</p>\n<p>Think of it like Doraemon's **Gadget Drawer**: instead of piling all gadgets onto the floor (one giant file), he categorizes them into separate drawers (modules) -- one for flying gadgets, one for time gadgets, etc.</p>\n\n<h3>Importing Modules</h3>\n<p>Python provides three main ways to import modules:</p>\n<ol class=\"desc-list\">\n    <li><strong><code>import module_name</code>:</strong> Imports the entire module. You access its functions using the dot notation:\n        <pre class=\"code-example\">import math\nprint(math.sqrt(25))  # Prints: 5.0</pre>\n    </li>\n    <li><strong><code>from module_name import name</code>:</strong> Imports a specific function or variable directly. You don't need dot notation:\n        <pre class=\"code-example\">from math import sqrt\nprint(sqrt(25))       # Prints: 5.0</pre>\n    </li>\n    <li><strong><code>import module_name as alias</code>:</strong> Imports a module under a shorter name (alias) to save typing:\n        <pre class=\"code-example\">import datetime as dt\nprint(dt.date.today())</pre>\n    </li>\n</ol>\n\n<h3>Creating Your Own Module</h3>\n<p>Creating custom modules is incredibly easy. Simply write standard functions in a file named <code>my_module.py</code>. In your main script, write <code>import my_module</code>, and you can now use those functions!</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); border: 3px solid #009688; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(0, 150, 136, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #004d40; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🗄️ <strong>Case Study: Doraemon's Categorized Gadget Drawers</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #004d40; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita has accumulated dozens of gadgets. He piles them all onto the floor in one massive heap. Now, finding a specific gadget takes hours. Doraemon organizes the mess into **Categorized Drawers** (the **Modules**). One drawer contains flying gadgets, another has time gadgets, and a third has weapons. Now, Nobita can quickly open just the drawer he needs!
+    </p>
+    <p style="font-size: 15px; color: #004d40; line-height: 1.6; margin-bottom: 16px;">
+        In Python, any file ending in <code>.py</code> acts as a **Module**. Instead of coding one giant file, you distribute code across clean files and load them using the <code>import</code> system.
+    </p>
+
+    <!-- Import styles comparison grid -->
+    <div style="background: #ffffff; border: 2.5px solid #009688; border-radius: 12px; padding: 16px; font-size: 13px; color: #37474f;">
+        <strong style="color: #004d40; display: block; margin-bottom: 8px;">Three Styles of Importing Drawers:</strong>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="border-bottom: 2px solid #b2dfdb; color: #004d40;">
+                    <th style="padding: 6px; text-align: left;">Syntax Style</th>
+                    <th style="padding: 6px; text-align: left;">Example Code</th>
+                    <th style="padding: 6px; text-align: left;">Access Hook</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #f5f5f5;">
+                    <td style="padding: 6px; font-weight: bold;">1. Whole Import</td>
+                    <td style="padding: 6px; font-family: monospace;">import math</td>
+                    <td style="padding: 6px; font-family: monospace;">math.sqrt(16)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f5f5f5;">
+                    <td style="padding: 6px; font-weight: bold;">2. Direct Import</td>
+                    <td style="padding: 6px; font-family: monospace;">from math import sqrt</td>
+                    <td style="padding: 6px; font-family: monospace;">sqrt(16)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px; font-weight: bold;">3. Aliasing</td>
+                    <td style="padding: 6px; font-family: monospace;">import datetime as dt</td>
+                    <td style="padding: 6px; font-family: monospace;">dt.date.today()</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">🛠️ Custom Module Creation:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Creating your own module is simple: create a file named <code>gadgets.py</code> with a function:
+    </p>
+    <div style="background: #e0f2f1; border-left: 5px solid #009688; border-radius: 6px; padding: 12px; font-family: 'Fira Code', monospace; font-size: 13px; color: #004d40;">
+        # gadgets.py<br>
+        def fly():<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("Spinning Bamboo Copter!")
+    </div>
+    <p style="margin: 12px 0 12px 0;">
+        Then, inside your main app file (in the same directory), simply call:
+    </p>
+    <div style="background: #e0f2f1; border-left: 5px solid #009688; border-radius: 6px; padding: 12px; font-family: 'Fira Code', monospace; font-size: 13px; color: #004d40;">
+        import gadgets<br>
+        gadgets.fly() # Output: Spinning Bamboo Copter!
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.py file</span>
+        <strong>A Module</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Basic unit of code reuse</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">from...import</span>
+        <strong>Name Extraction</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Imports without prefix namespace</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">as alias</span>
+        <strong>Nickname hook</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Renames modules locally</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -9896,7 +14916,81 @@ window.levels = [
         "description": {
             "heading": "Packages",
             "subheading": "Grouping related modules into directories",
-            "body": "<p>While modules help organize files, a large project might have dozens of modules. To prevent clutter, Python allows you to group related modules into directories called <strong>Packages</strong>.</p>\n\n<h3>What is a Package?</h3>\n<p>A package is simply a directory containing multiple module files and a special file named <strong><code>__init__.py</code></strong>. The <code>__init__.py</code> file can be empty, but its presence tells Python that the directory should be treated as a package, allowing you to import modules from it using the dot (<code>.</code>) syntax.</p>\n<p>Think of it like Doraemon's **Toolbox**: the toolbox (package) contains separate drawers (directories/sub-packages), each containing specific tools (modules).</p>\n\n<h3>Importing from a Package</h3>\n<p>Suppose you have a directory structure like this:\n<pre>my_project/\n└── mathutils/            &larr; Package\n    ├── __init__.py       &larr; Marks folder as package\n    ├── algebra.py        &larr; Module\n    └── geometry.py       &larr; Module</pre></p>\n<p>You can import modules from this package using different methods:\n<pre class=\"code-example\"># Method 1\nimport mathutils.algebra\nmathutils.algebra.solve()\n\n# Method 2\nfrom mathutils import geometry\ngeometry.calculate_area()\n\n# Method 3\nfrom mathutils.geometry import calculate_area\ncalculate_area()</pre></p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📦 <strong>Case Study: The 4D Pocket Compartment System</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> As Doraemon's collection of gadget modules (drawers) expands, keeping them all in one single folder gets messy. To prevent naming clashes and organize files, Doraemon puts related modules inside folder directories called **Packages**. To mark a folder as an importable package, he adds a special, often empty, file named **\`__init__.py\`** inside it!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Packages let you group multiple modules together and load them using the dot (<code>.</code>) syntax.
+    </p>
+
+    <!-- Package layout file tree structure -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">🗂️ Package Structure Layout:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #5d4037; line-height: 1.45;">my_project/
+└── gadgets/              &lt;-- Package folder
+    ├── __init__.py       &lt;-- Tells Python it's a package!
+    ├── time_gadgets.py   &lt;-- Module 1
+    └── space_gadgets.py  &lt;-- Module 2</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Importing from Packages:</strong>
+    <p style="margin: 0 0 12px 0;">
+        You can load modules from the package folder using three distinct dot notation patterns depending on the namespace visibility you want:
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
+        <thead>
+            <tr style="background: #efebe9; border-bottom: 2px solid #d7ccc8; color: #4e342e;">
+                <th style="padding: 8px;">Approach</th>
+                <th style="padding: 8px;">Syntax Example</th>
+                <th style="padding: 8px;">Code Usage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 8px; font-weight: bold;">1. Full Import</td>
+                <td style="padding: 8px; font-family: monospace; color: #795548;">import gadgets.time_gadgets</td>
+                <td style="padding: 8px; font-family: monospace;">gadgets.time_gadgets.rewind()</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 8px; font-weight: bold;">2. Module Import</td>
+                <td style="padding: 8px; font-family: monospace; color: #795548;">from gadgets import time_gadgets</td>
+                <td style="padding: 8px; font-family: monospace;">time_gadgets.rewind()</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; font-weight: bold;">3. Function Import</td>
+                <td style="padding: 8px; font-family: monospace; color: #795548;">from gadgets.time_gadgets import rewind</td>
+                <td style="padding: 8px; font-family: monospace;">rewind()</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Folder</span>
+        <strong>Package Host</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Contains multiple modules</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">__init__.py</span>
+        <strong>Package Marker</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Required for package status</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Dot Syntax</span>
+        <strong>Path Resolver</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Drills down to modules</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10012,7 +15106,67 @@ window.levels = [
         "description": {
             "heading": "Virtual Environments (venv)",
             "subheading": "Isolating your project dependencies",
-            "body": "<p>When you build different Python projects, they will require different third-party libraries (e.g. Django, Flask, Pandas). Installing all libraries globally on your computer can cause conflicts: Project A might need Version 1 of a library, while Project B needs Version 2. To solve this, we use <strong>Virtual Environments</strong>.</p>\n\n<h3>The Metaphor: Isolated Test Chambers</h3>\n<p>Think of a virtual environment like Doraemon's **Isolated Test Chamber** gadget: when Nobita wants to experiment with chemical potions (third-party libraries), he does it inside an isolated chamber. Any potions mixed there won't spill out, conflict, or ruin the rest of the house (your global operating system)!</p>\n\n<h3>Working with Virtual Environments</h3>\n<p>Virtual environments are managed in three simple steps:</p>\n<ol class=\"desc-list\">\n    <li><strong>Create:</strong> Create an isolated environment folder using the built-in <code>venv</code> module:\n        <pre class=\"code-example\">python -m venv myenv</pre>\n    </li>\n    <li><strong>Activate:</strong> Turn on the environment. Once activated, any library you install stays inside this folder.\n        <ul>\n            <li><strong>Windows:</strong> <code>myenv\\Scripts\\activate</code></li>\n            <li><strong>Mac/Linux:</strong> <code>source myenv/bin/activate</code></li>\n        </ul>\n    </li>\n    <li><strong>Install Packages (pip):</strong> Use the package installer <code>pip</code> to install libraries:\n        <pre class=\"code-example\">pip install requests</pre>\n    </li>\n    <li><strong>Deactivate:</strong> Exit the virtual environment when finished:\n        <pre class=\"code-example\">deactivate</pre>\n    </li>\n</ol>\n\n<h3>Sharing Dependencies: requirements.txt</h3>\n<p>You can save a list of your installed libraries to share with others using:\n<pre class=\"code-example\">pip freeze > requirements.txt</pre>\nOthers can recreate your exact environment by running:\n<pre class=\"code-example\">pip install -r requirements.txt</pre></p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🧪 <strong>Case Study: Doraemon's Isolated Sub-Dimension Test Chamber</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to experiment with volatile future chemical potions (third-party libraries like Django, Flask, or Pandas). Mixing them directly in the living room (global Python space) is extremely dangerous: Project A might need version 1.0 of a potion, while Project B needs version 2.0. To avoid destroying the house, Doraemon sets up an **Isolated Sub-Dimension Test Chamber** (a **Virtual Environment**). Anything Nobita mixes inside stays locked in the chamber and never impacts the rest of the house!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Python allows you to create these isolated sandboxes using the built-in **\`venv\`** module to ensure project dependencies remain completely isolated.
+    </p>
+
+    <!-- CLI Commands Flow Grid -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">🚀 Sandbox Lifecycle Commands:</strong>
+        <ol style="margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li>⚙️ <strong>Create Chamber:</strong> <code>python -m venv myenv</code> (Creates a directory named <code>myenv</code>)</li>
+            <li>🔌 <strong>Activate (Windows):</strong> <code>myenv\\Scripts\\activate</code> (Prompt changes to show <code>(myenv)</code>)</li>
+            <li>🔌 <strong>Activate (Mac/Linux):</strong> <code>source myenv/bin/activate</code></li>
+            <li>📦 <strong>Install Package:</strong> <code>pip install requests</code> (Installs only inside this sandbox!)</li>
+            <li>🔌 <strong>Deactivate:</strong> <code>deactivate</code> (Exits the sandbox back to global space)</li>
+        </ol>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Sharing Sandbox Configs (requirements.txt):</strong>
+    <p style="margin: 0 0 12px 0;">
+        Instead of sending folders with thousands of package files to friends, you export a small recipe text list (<code>requirements.txt</code>) and reconstruct it:
+    </p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div style="background: #efebe9; border-left: 4px solid #795548; padding: 10px; border-radius: 4px;">
+            <span style="font-weight: bold; display: block; margin-bottom: 4px;">📤 Export Recipe</span>
+            <code>pip freeze > requirements.txt</code>
+        </div>
+        <div style="background: #efebe9; border-left: 4px solid #795548; padding: 10px; border-radius: 4px;">
+            <span style="font-weight: bold; display: block; margin-bottom: 4px;">📥 Recreate Sandbox</span>
+            <code>pip install -r requirements.txt</code>
+        </div>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">venv</span>
+        <strong>Virtual Env</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Creates directory sandbox</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">pip install</span>
+        <strong>Package Fetcher</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Downloads external libraries</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">freeze</span>
+        <strong>Lock recipe</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Dumps dependency version tags</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10128,7 +15282,66 @@ window.levels = [
         "description": {
             "heading": "Standard libraries",
             "subheading": "Python's built-in batteries-included tools",
-            "body": "<p>Python is known as a \"batteries-included\" language. This means it comes pre-packaged with a vast collection of modules called the <strong>Standard Library</strong>. You don't need to install them via pip; they are already on your machine, waiting to be imported!</p>\n\n<h3>The Metaphor: Standard Gadgets</h3>\n<p>Think of the standard library like Doraemon's **Standard Gadgets**: these are the default tools built directly into his chassis (like his translation button or flashlight). He doesn't need to buy or download them from future department stores; they are always ready to go!</p>\n\n<h3>Core Modules in the Standard Library</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>math</code>:</strong> Provides advanced mathematical operations and constants:\n        <pre class=\"code-example\">import math\nprint(math.pi)        # 3.141592653589793\nprint(math.floor(4.9))  # Rounds down -> 4</pre>\n    </li>\n    <li><strong><code>random</code>:</strong> Generates random numbers or selects random choices:\n        <pre class=\"code-example\">import random\nprint(random.randint(1, 10))  # Random int from 1 to 10\nprint(random.choice([\"A\", \"B\"])) # Random item</pre>\n    </li>\n    <li><strong><code>datetime</code>:</strong> Handles dates, times, and formatting:\n        <pre class=\"code-example\">import datetime\nprint(datetime.date.today())  # Returns current date</pre>\n    </li>\n</ul>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #2e7d32; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: Doraemon's Chassis Built-in Functions</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita thinks Doraemon needs to download every single gadget from the future department store. Doraemon explains that some tools are **Standard Gadgets** pre-installed directly inside his mechanical chassis (like his internal clock or built-in translation button). He doesn't need to install or buy them; they are always ready to go! In Python, this is called the **Standard Library** (also referred to as "batteries-included").
+    </p>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 16px;">
+        These pre-installed helper modules are immediately available for use via simple <code>import</code> statements.
+    </p>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Core Standard Utility Modules:</strong>
+    
+    <!-- math module -->
+    <div style="background: #f1f8e9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+        <strong style="color: #2e7d32; display: block; font-size: 14px; margin-bottom: 6px;">📐 1. math module (Calculations)</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #1b5e20; line-height: 1.45;">import math
+print(math.pi)        # 3.141592653589793
+print(math.floor(4.9)) # Rounds down to 4
+print(math.ceil(4.1))  # Rounds up to 5</pre>
+    </div>
+
+    <!-- random module -->
+    <div style="background: #f1f8e9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+        <strong style="color: #2e7d32; display: block; font-size: 14px; margin-bottom: 6px;">🎲 2. random module (Chance & Selection)</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #1b5e20; line-height: 1.45;">import random
+print(random.randint(1, 10))  # Random int from 1 to 10
+print(random.choice(["Door", "Copter"])) # Selects random element</pre>
+    </div>
+
+    <!-- datetime module -->
+    <div style="background: #f1f8e9; border: 1px solid #c8e6c9; border-radius: 8px; padding: 12px;">
+        <strong style="color: #2e7d32; display: block; font-size: 14px; margin-bottom: 6px;">📅 3. datetime module (Time Tracking)</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #1b5e20; line-height: 1.45;">import datetime
+print(datetime.date.today()) # Current date: YYYY-MM-DD</pre>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">math</span>
+        <strong>Scientific Tools</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Roots, ceilings, constants</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">random</span>
+        <strong>Stochastic Generator</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Shuffles lists, rolls dice</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">datetime</span>
+        <strong>Clock Stream</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Intervals, dates, formatting</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10244,7 +15457,85 @@ window.levels = [
         "description": {
             "heading": "Regular Expressions (re)",
             "subheading": "The search patterns tool for text",
-            "body": "<p>When working with text, sometimes we need to search for patterns rather than exact words. For example, finding all email addresses, phone numbers, or numbers in a long text. In Python, we do this using <strong>Regular Expressions</strong> (often called **Regex**) through the built-in <strong><code>re</code></strong> module.</p>\n\n<h3>The Metaphor: The X-Ray Detector</h3>\n<p>Think of regular expressions like Doraemon's **X-Ray Detector** gadget: instead of reading every word on a paper (manual string searches), you program the detector to highlight specific shapes (patterns). It filters out all the normal text and shines a light on exact patterns (like digits or codes)!</p>\n\n<h3>Core regex Methods</h3>\n<ul class=\"desc-list\">\n    <li><strong><code>re.search(pattern, text)</code>:</strong> Searches the string for the first match, returning a match object if found.</li>\n    <li><strong><code>re.findall(pattern, text)</code>:</strong> Finds all matches in the text, returning them as a list of strings.</li>\n    <li><strong><code>re.sub(pattern, replacement, text)</code>:</strong> Replaces occurrences of the pattern with new text.</li>\n</ul>\n\n<h3>Common regex Patterns</h3>\n<p>Patterns are written as **raw strings** (prefixed with <code>r</code>) to prevent Python from escaping backslashes:\n<ul class=\"desc-list\">\n    <li><code>\\d</code>: Matches any digit (0-9). <code>\\d+</code> matches one or more digits.</li>\n    <li><code>\\w</code>: Matches any alphanumeric character (letters, numbers, underscores).</li>\n    <li><code>\\s</code>: Matches any whitespace character (spaces, tabs, newlines).</li>\n</ul>\n<pre class=\"code-example\">import re\ntext = \"Doraemon has 4 pockets and 12 dorayakis.\"\nnumbers = re.findall(r\"\\d+\", text)\nprint(numbers)  # Prints: ['4', '12']</pre></p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🔍 <strong>Case Study: Doraemon's X-Ray Inspector Glasses</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita drops his micro-gadget serial numbers sheet inside a mountain of homework papers. Instead of reading every line manually, Doraemon uses the **X-Ray Inspector Glasses** (the **\`re\` module**). By configuring the glasses to match only digit sequences (e.g. <code>\\d+</code>), they filter out all Japanese characters and immediately highlight only the serial numbers!
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        Python's built-in **\`re\`** module enables pattern-based text searches. You write patterns as **raw strings** (prefixed with <code>r</code>) to prevent backslash interpretation errors.
+    </p>
+
+    <!-- Regex methods comparison grid -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">Three Essential Regex Methods:</strong>
+        <ul style="margin: 0; padding-left: 20px; line-height: 1.55;">
+            <li>🎯 <strong><code>re.search(pattern, text)</code>:</strong> Scans string for the first match, returning a Match object or None.</li>
+            <li>📋 <strong><code>re.findall(pattern, text)</code>:</strong> Returns a list of all matched substrings.</li>
+            <li>🔄 <strong><code>re.sub(pattern, replacement, text)</code>:</strong> Finds all occurrences of the pattern and replaces them.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Core Pattern Syntax Cheat Sheet:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Special backslash characters represent character classes, and quantifiers define how many times they repeat:
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
+        <thead>
+            <tr style="background: #eceff1; border-bottom: 2px solid #b0bec5;">
+                <th style="padding: 8px;">Symbol</th>
+                <th style="padding: 8px;">Matches</th>
+                <th style="padding: 8px;">Example Regex</th>
+                <th style="padding: 8px;">Matches text</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 8px; font-family: monospace; font-weight: bold;">\\d</td>
+                <td style="padding: 8px;">Any digit (0-9)</td>
+                <td style="padding: 8px; font-family: monospace; color: #e91e63;">r"\\d+"</td>
+                <td style="padding: 8px;">"12", "5"</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 8px; font-family: monospace; font-weight: bold;">\\w</td>
+                <td style="padding: 8px;">Alphanumeric & _</td>
+                <td style="padding: 8px; font-family: monospace; color: #e91e63;">r"\\w+"</td>
+                <td style="padding: 8px;">"Nobita_12"</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; font-family: monospace; font-weight: bold;">\\s</td>
+                <td style="padding: 8px;">Spaces, tabs, newlines</td>
+                <td style="padding: 8px; font-family: monospace; color: #e91e63;">r"\\s+"</td>
+                <td style="padding: 8px;">"&nbsp;&nbsp;&nbsp;&nbsp;"</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">r"raw"</span>
+        <strong>Literal Backslash</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Disables string escapes</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">\\d+</span>
+        <strong>Digits group</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Matches one or more numbers</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">re.sub</span>
+        <strong>Search & Replace</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Replaces pattern matches</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10360,7 +15651,60 @@ window.levels = [
         "description": {
             "heading": "Classes and Objects",
             "subheading": "Object-Oriented Programming (OOP) foundation",
-            "body": "<p>So far, we have written programs using variables and functions. <strong>Object-Oriented Programming (OOP)</strong> is a powerful way to organize programs by grouping variables (data) and functions (actions) together into entities called **Objects**.</p>\n\n<h3>The Metaphor: The 3D Printer Blueprint</h3>\n<p>Think of a **Class** like a digital <strong>3D Printer Blueprint</strong> file. The blueprint defines what a gadget looks like and what it does, but you cannot hold it or use it on its own. An **Object** is the actual physical, plastic gadget that comes out of the printer (the **Instance**). You can print dozens of gadgets from a single blueprint -- each gadget behaves the same, but has its own physical presence!</p>\n\n<h3>Defining a Class</h3>\n<p>We use the <code>class</code> keyword. Inside the class, variables are called **Attributes** and functions are called **Methods**:</p>\n<pre class=\"code-example\">class RobotCat:\n    # Attribute\n    color = \"blue\"\n\n    # Method\n    def meow(self):\n        print(\"Meow! I am Doraemon!\")</pre>\n\n<h3>Instantiating an Object</h3>\n<p>To print an object from our blueprint, we call the class name like a function:\n<pre class=\"code-example\">dora = RobotCat()  # Instantiate object\nprint(dora.color)  # Access attribute -> blue\ndora.meow()        # Call method -> Meow! I am Doraemon!</pre></p>\n\n<h3>What is self?</h3>\n<p>When you define a class method, the first parameter must always be **<code>self</code>**. It represents the specific object calling the method, allowing Python to access and update that object's variables.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🖨️ <strong>Case Study: Doraemon's 3D Printer Blueprint</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita wants to manufacture multiple customized helper robots. Doraemon pulls out a **3D Gadget Printer**. To print the robot, we need a digital plan file—the **Class Blueprint**. The blueprint itself cannot do chores; it only specifies properties (attributes) and actions (methods). By hitting the print button, we construct physical robot instances—the **Object Instances** (e.g. <code>dora</code> and <code>dorami</code>), which have their own state and can perform methods!
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        **Object-Oriented Programming (OOP)** is a design methodology that models software components as real-world objects containing data and actions.
+    </p>
+
+    <!-- Class definition code block -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; display: block; margin-bottom: 8px;">Defining the Blueprint & Printing Objects:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #0288d1;">class RobotCat:
+    color = "blue"  # Attribute (data)
+
+    def meow(self): # Method (action)
+        print("Meow! I am Doraemon!")
+
+# Printing instances from the blueprint
+dora = RobotCat()
+print(dora.color) # Access attribute -> blue
+dora.meow()       # Run method -> Meow! I am Doraemon!</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">🔑 What is the self Parameter?</strong>
+    <p style="margin: 0 0 12px 0;">
+        When defining a method inside a class, the first parameter must always be **\`self\`**. When you invoke <code>dora.meow()</code>, Python automatically translates this call to <code>RobotCat.meow(dora)</code> behind the scenes. The \`self\` parameter acts as a reference back to the specific object instance calling the function.
+    </p>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">class</span>
+        <strong>Blueprint Template</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Defines properties and methods</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Object</span>
+        <strong>Instance Product</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">A printed physical gadget</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">self</span>
+        <strong>Instance Anchor</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Points to active calling instance</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10476,7 +15820,67 @@ window.levels = [
         "description": {
             "heading": "Constructor __init__",
             "subheading": "Initializing object attributes dynamically",
-            "body": "<p>In the previous level, we set the attribute <code>color = \"blue\"</code> directly in the class body. This means every object printed has the exact same color. To create objects with custom data upon creation, we use a constructor method called <strong><code>__init__</code></strong>.</p>\n\n<h3>The Metaphor: The Customization Panel</h3>\n<p>Think of the constructor like a <strong>Customization Panel</strong> on a factory conveyor belt. When you print a robot cat, you set its name, color, and pocket size on the control panel before pushing the start button. The constructor configures these settings on the product immediately during creation!</p>\n\n<h3>The __init__ Method</h3>\n<p>The <code>__init__</code> method (short for initialize) is a special \"dunder\" (double underscore) method that Python calls **automatically** the instant you instantiate an object:</p>\n<pre class=\"code-example\">class Gadget:\n    # The Constructor\n    def __init__(self, name, rank):\n        self.name = name  # Save argument to object\n        self.rank = rank\n\n# Create objects with custom data\ndoor = Gadget(\"Anywhere Door\", \"A\")\ncopter = Gadget(\"Bamboo Copter\", \"B\")\n\nprint(door.name)    # Anywhere Door\nprint(copter.name)  # Bamboo Copter</pre>\n<p>Inside the constructor, <code>self.name = name</code> binds the passed argument value to the new object instance's <code>name</code> attribute.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: The Customization Control Panel</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Setting hardcoded attributes like <code>color = "blue"</code> directly in the class blueprint means every printed robot cat is a clone. To personalize them, Doraemon designs a **Customization Control Panel** on the printer conveyor belt. When printing a new robot cat, you feed specific variables (name, color, battery life) into the conveyor belt initialization method—the **\`__init__\` constructor**. The constructor binds these values to the object immediately upon creation!
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        The special double-underscore (dunder) method **\`__init__\`** runs **automatically** whenever a class is instantiated.
+    </p>
+
+    <!-- Constructor tracing flow block -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; display: block; margin-bottom: 8px;">Tracing Constructor Arguments:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #0288d1;">class Gadget:
+    # 1. Constructor defines parameters
+    def __init__(self, name, rank):
+        self.name = name  # 2. Binds value to this instance
+        self.rank = rank
+
+# 3. Invoking calls __init__ automatically
+door = Gadget("Anywhere Door", "A")
+
+print(door.name)  # Returns: Anywhere Door</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Default Parameters in Constructors:</strong>
+    <p style="margin: 0 0 12px 0;">
+        You can assign fallback default values to parameters in the constructor definition. If the caller does not specify a value, Python automatically applies the default:
+    </p>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">class RobotCat:
+    def __init__(self, name="Doraemon", color="blue"):
+        self.name = name
+        self.color = color
+
+r1 = RobotCat()                # Uses defaults -> Doraemon, blue
+r2 = RobotCat("Dorami", "yellow") # Custom parameters</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">__init__</span>
+        <strong>Constructor hook</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Fires instantly on instantiation</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">self.attr = X</span>
+        <strong>Property Binding</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Attaches variable to instance</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">dunder</span>
+        <strong>Double Underscore</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Special built-in protocol method</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10592,7 +15996,67 @@ window.levels = [
         "description": {
             "heading": "Inheritance",
             "subheading": "Reusing and extending existing class structures",
-            "body": "<p>In software development, writing duplicate code is bad practice. If different classes share the same attributes or behaviors, we can make one class inherit them from another. This concept is called <strong>Inheritance</strong>.</p>\n\n<h3>Parent vs Child Classes</h3>\n<ul class=\"desc-list\">\n    <li><strong>Parent Class (Base Class):</strong> The class containing the shared structure.</li>\n    <li><strong>Child Class (Derived Class):</strong> The new class that inherits all attributes and methods from the parent.</li>\n</ul>\n<p>Think of it like a **Family Legacy**: Nobita inherits his family house (attributes) and rules (methods) from his father. However, Nobita can customize his room (extend the class) or override standard house rules (method overriding).</p>\n\n<h3>Syntax of Inheritance</h3>\n<p>To make a child class inherit, write the parent class name in parentheses after the child class name:</p>\n<pre class=\"code-example\">class Gadget:  # Parent Class\n    def __init__(self, name):\n        self.name = name\n\n    def activate(self):\n        print(f\"{self.name} is powered on!\")\n\nclass FlyingGadget(Gadget):  # Child Class inherits from Gadget\n    def fly(self):\n        print(f\"{self.name} floats into the sky!\")\n\ncopter = FlyingGadget(\"Bamboo Copter\")\ncopter.activate()  # Inherited method -> Bamboo Copter is powered on!\ncopter.fly()       # Child method -> Bamboo Copter floats into the sky!</pre>\n\n<h3>Method Overriding & super()</h3>\n<p>If a child class redefines a parent method, the child's version replaces the parent's (this is called **Overriding**). To call the parent's version of a method from inside the child class, use the **<code>super()</code>** function.</p>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🧬 <strong>Case Study: The Gadget Legacy Class Hierarchy</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Writing the same electrical battery charging logic for every single one of Doraemon's gadgets is extremely redundant. To follow DRY (Don't Repeat Yourself), Doraemon creates a general base parent class—**\`Gadget\`**—which handles properties like name and methods like <code>activate()</code>. He then creates specialized child classes like **\`FlyingGadget\`** that inherit everything from the parent, while adding unique traits like <code>fly()</code>!
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Inheritance allows a **child class** to reuse attributes and methods defined in a **parent class** automatically.
+    </p>
+
+    <!-- Syntax block comparing parent and child classes -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; display: block; margin-bottom: 8px;">Subclass Inheritance Implementation:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #0288d1; line-height: 1.45;">class Gadget:  # Parent Base Class
+    def __init__(self, name):
+        self.name = name
+    def activate(self):
+        print(f"{self.name} activated!")
+
+class FlyingGadget(Gadget): # Child Class inherits Gadget
+    def fly(self):
+        print(f"{self.name} floats up!")
+
+copter = FlyingGadget("Bamboo Copter")
+copter.activate()  # Inherited method!
+copter.fly()       # Specialized method!</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Method Overriding & super()</strong>
+    <p style="margin: 0 0 12px 0;">
+        If a child class redefines a parent method, the child's version replaces the parent's version (called **Method Overriding**). If you want to run the parent's original version of the method inside the child class, use the **\`super()\`** proxy:
+    </p>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #37474f; line-height: 1.55;">class BatteryGadget(Gadget):
+    def __init__(self, name, voltage):
+        super().__init__(name) # Run parent constructor
+        self.voltage = voltage</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Parent</span>
+        <strong>Base Template</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Shares core code structures</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Child</span>
+        <strong>Derived Extension</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Adds or overrides behaviors</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">super()</span>
+        <strong>Parent Proxy</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Calls original parent methods</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10681,11 +16145,6 @@ window.levels = [
                     "type": "tf",
                     "question": "A Python class can only inherit from one single parent class.",
                     "answer": "false"
-                },
-                {
-                    "type": "short",
-                    "question": "Explain the benefit of method overriding in a game development context.",
-                    "sampleAnswer": "It allows specialized entities to respond uniquely to standard commands. For example, a base Enemy class might have a move() method, but a FlyingEnemy class can override move() to compute flight paths."
                 }
             ]
         },
@@ -10708,7 +16167,88 @@ window.levels = [
         "description": {
             "heading": "Encapsulation",
             "subheading": "Hiding internal data and restricting direct access",
-            "body": "<p>When designing objects, we want to prevent external code from modifying our internal data directly in ways that break the object. The concept of bundling data and restricting direct access to it is called <strong>Encapsulation</strong>.</p>\n\n<h3>The Metaphor: The Locked Control Panel</h3>\n<p>Think of it like the **Locked Control Panel** on Doraemon's back. While some controls are public (like talking or opening his pocket), the wiring configurations and memory systems are hidden under a locked cover (private attributes). Nobita cannot touch the wiring directly because he might break Doraemon; instead, he must use public interfaces (getter/setter buttons) that ensure settings remain safe!</p>\n\n<h3>Access Modifiers in Python</h3>\n<p>Unlike some languages, Python uses variable naming prefixes to signal access levels:\n<ul class=\"desc-list\">\n    <li><strong>Public (Default):</strong> Access from anywhere (e.g. <code>self.name</code>).</li>\n    <li><strong>Protected (one underscore):</strong> A warning indicating internal use only (e.g. <code>self._status</code>). Access is still allowed.</li>\n    <li><strong>Private (two underscores):</strong> Hidden from external access (e.g. <code>self.__pocket_code</code>). Causes an error if accessed directly.</li>\n</ul></p>\n\n<h3>Getters and Setters</h3>\n<p>To safely access or modify private attributes, we define public methods called **Getters** and **Setters**:</p>\n<pre class=\"code-example\">class Robot:\n    def __init__(self):\n        self.__battery = 100  # Private attribute\n\n    # Getter\n    def get_battery(self):\n        return self.__battery\n\n    # Setter\n    def set_battery(self, charge):\n        if 0 <= charge <= 100:  # Data validation!\n            self.__battery = charge\n\ndora = Robot()\ndora.set_battery(80)\nprint(dora.get_battery())  # Prints: 80</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🛡️ <strong>Case Study: Doraemon's Locked Back Panel</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #4e342e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Doraemon exposes public features (he speaks, walks, uses his pocket). However, his core battery power grids (<code>__battery_level</code>) and memory registers (<code>__system_logs</code>) are locked behind double-underscore private panels on his back. Nobita cannot touch the wiring directly because he might cause a short-circuit; instead, Nobita must use public buttons—**Getters** and **Setters**—which validate input values before updating settings.
+    </p>
+    <p style="font-size: 15px; color: #5d4037; line-height: 1.6; margin-bottom: 16px;">
+        **Encapsulation** binds data and functions together into a single class unit, preventing external code from tampering with critical internal states directly.
+    </p>
+
+    <!-- Naming prefix visibility grid -->
+    <div style="background: #ffffff; border: 2.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13px; color: #37474f;">
+        <strong style="color: #4e342e; display: block; margin-bottom: 8px;">Python Access Level Naming Rules:</strong>
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+                <tr style="border-bottom: 2px solid #d7ccc8; color: #4e342e;">
+                    <th style="padding: 6px;">Access Modifier</th>
+                    <th style="padding: 6px;">Variable Syntax</th>
+                    <th style="padding: 6px;">Access Level Rule</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #f5f5f5;">
+                    <td style="padding: 6px; font-weight: bold;">Public</td>
+                    <td style="padding: 6px; font-family: monospace; color: #795548;">self.name</td>
+                    <td style="padding: 6px;">Accessible from anywhere.</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f5f5f5;">
+                    <td style="padding: 6px; font-weight: bold;">Protected</td>
+                    <td style="padding: 6px; font-family: monospace; color: #795548;">self._voltage</td>
+                    <td style="padding: 6px;">Internal use warning (accessible, but discouraged).</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px; font-weight: bold;">Private</td>
+                    <td style="padding: 6px; font-family: monospace; color: #795548;">self.__pin_code</td>
+                    <td style="padding: 6px;">Hidden from outside access via Name Mangling.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Implementing Getters and Setters:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Instead of modifying a private attribute directly (which will raise an <code>AttributeError</code>), we write helper methods to query and validate:
+    </p>
+    <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 13px; color: #795548; line-height: 1.55;">class RobotCat:
+    def __init__(self):
+        self.__battery = 100  # Private attribute
+
+    def get_battery(self): # Getter
+        return self.__battery
+
+    def set_battery(self, charge): # Setter with validation!
+        if 0 <= charge <= 100:
+            self.__battery = charge
+        else:
+            print("Invalid charge range!")</pre>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">__private</span>
+        <strong>Strictly Hidden</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Double underscore prefix</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Getter/Setter</span>
+        <strong>Safe Gateway</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Method validation endpoints</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Mangling</span>
+        <strong>Renaming Proxy</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Python maps name to prevent leaks</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10824,7 +16364,71 @@ window.levels = [
         "description": {
             "heading": "Polymorphism & Abstraction",
             "subheading": "Universal controls and clean templates",
-            "body": "<p>In this level, we cover two advanced OOP concepts that make your code extremely flexible: <strong>Polymorphism</strong> and <strong>Abstraction</strong>.</p>\n\n<h3>1. Polymorphism (Many Shapes)</h3>\n<p>Polymorphism allows different classes to share the same method name but have different behaviors. Think of it like a **Universal Controller**: you click the red button (method call). If it is plugged into a TV, the TV turns on. If it is plugged into a helicopter, the blades spin. One button, different responses depending on the object!</p>\n<pre class=\"code-example\">class Door:\n    def use(self):\n        print(\"Open Anywhere Door\")\n\nclass Copter:\n    def use(self):\n        print(\"Fly Bamboo Copter\")\n\n# Polymorphic execution\nfor gadget in [Door(), Copter()]:\n    gadget.use()  # Same method call, different actions!</pre>\n\n<h3>2. Abstraction (Hiding Complexity)</h3>\n<p>Abstraction is hiding complex implementation details and showing only the essential features. It also lets you create **Templates** that child classes must follow.</p>\n<p>Python enforces abstraction using the built-in <strong><code>abc</code></strong> module. We inherit from <strong><code>ABC</code></strong> (Abstract Base Class) and mark methods using the <strong><code>@abstractmethod</code></strong> decorator. Abstract classes cannot be instantiated directly; they exist only to be inherited from!</p>\n<pre class=\"code-example\">from abc import ABC, abstractmethod\n\nclass AbstractGadget(ABC):  # Template class\n    @abstractmethod\n    def operate(self):\n        pass\n\nclass Door(AbstractGadget):\n    def operate(self):\n        print(\"Door is active\")\n\n# obj = AbstractGadget()  # TypeError! Cannot instantiate abstract class\ndoor = Door()             # Valid!</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        🎮 <strong>Case Study: Doraemon's Universal Activation Button & The Abstract Blueprint Guild</strong>
+    </h3>
+    <p style="font-size: 15px; color: #01579b; line-height: 1.6; margin-bottom: 12px;">
+        To make software robust and interfaces predictable, advanced OOP leverages two structural pillars:
+    </p>
+
+    <!-- Polymorphism sub-section -->
+    <div style="background: #ffffff; border: 1.5px solid #0288d1; border-radius: 12px; padding: 16px; margin-bottom: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; font-size: 14.5px; display: block; margin-bottom: 6px;">🧩 1. Polymorphism (Many Shapes)</strong>
+        <p style="margin: 0 0 10px 0;">
+            <strong>The Metaphor:</strong> Doraemon designs a **Universal Activation Button** (a single method signature <code>use()</code>). If plugged into an Anywhere Door object, the door opens. If plugged into a Bamboo Copter, the rotors rotate. The same button triggers different actions depending on the object's class:
+        </p>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #0288d1; line-height: 1.45;">class Door:
+    def use(self): print("Open Anywhere Door")
+class Copter:
+    def use(self): print("Fly Bamboo Copter")
+
+# Interchangeable execution
+for gadget in [Door(), Copter()]:
+    gadget.use()  # One interface call, different actions!</pre>
+    </div>
+
+    <!-- Abstraction sub-section -->
+    <div style="background: #ffffff; border: 1.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; font-size: 14.5px; display: block; margin-bottom: 6px;">📐 2. Abstraction (Hiding Complexity & Enforcing Rules)</strong>
+        <p style="margin: 0 0 10px 0;">
+            <strong>The Metaphor:</strong> The Future Gadget Standards Committee defines a strict template (an **Abstract Base Class**) that specifies a mandatory <code>operate()</code> interface. Factories are forbidden from creating raw, blank widgets directly; instead, any specific new product class (like a time machine) *must* implement <code>operate()</code> or the factory compiler throws an error:
+        </p>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #0288d1; line-height: 1.45;">from abc import ABC, abstractmethod
+
+class AbstractGadget(ABC):  # Template class
+    @abstractmethod
+    def operate(self):
+        pass
+
+class Door(AbstractGadget):
+    def operate(self):
+        print("Door opens to destination")
+
+# obj = AbstractGadget()  # TypeError! Cannot instantiate abstract template
+d = Door()                # Valid!</pre>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Polymorphic Loop</span>
+        <strong>Interchangeable</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Executes identical method names</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">ABC</span>
+        <strong>Abstract Template</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Base template class definition</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">@abstractmethod</span>
+        <strong>Enforced signature</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Child class override required</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -10940,7 +16544,83 @@ window.levels = [
         "description": {
             "heading": "Lambda + map() + filter()",
             "subheading": "Compact functional programming tools",
-            "body": "<p>In Python, we can write cleaner, shorter code for processing collections by using functional programming tools: **Lambda** functions, **map()**, and **filter()**.</p>\n\n<h3>1. Lambda Functions (Anonymous Functions)</h3>\n<p>A **Lambda** function is a small, anonymous (unnamed) function defined in a single line using the <code>lambda</code> keyword. It can take any number of arguments but can only contain **one single expression**:</p>\n<pre class=\"code-example\"># Regular function\ndef double(x):\n    return x * 2\n\n# Equivalent Lambda function\ndouble_lambda = lambda x: x * 2\nprint(double_lambda(5))  # Prints: 10</pre>\n<p>Think of a lambda function like a temporary **Disposable Mini-Gadget**: you build it on the spot to do a quick job, and throw it away once you are done!</p>\n\n<h3>2. The map() Function (The Conveyor Belt)</h3>\n<p>The <strong><code>map(func, iterable)</code></strong> function takes a function and applies it to **every item** in a list (or other iterable). It acts like a **Factory Conveyor Belt**, modifying each item as it passes by:</p>\n<pre class=\"code-example\">nums = [1, 2, 3]\ndoubled = list(map(lambda x: x * 2, nums))\nprint(doubled)  # Prints: [2, 4, 6]</pre>\n\n<h3>3. The filter() Function (The Sorting Gate)</h3>\n<p>The <strong><code>filter(func, iterable)</code></strong> function filters items from a collection, keeping only the elements that satisfy a condition (where the function returns <code>True</code>). It acts like a **Sorting Gate**, letting only non-broken gadgets through:</p>\n<pre class=\"code-example\">nums = [1, 2, 3, 4, 5, 6]\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(evens)  # Prints: [2, 4, 6]</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border: 3px solid #3f51b5; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(63, 81, 181, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1a237e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚡ <strong>Case Study: Doraemon's Disposable Mini-Gadgets & The Conveyor Belt Filter Gate</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #1a237e; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> Nobita needs to process a massive crate of incoming future copper plates. Instead of retrieving complex, heavy machinery (writing standard <code>def</code> functions with names, return blocks, and scope registers), Doraemon makes **Disposable Mini-Gadgets** on the spot (unnamed **lambda** functions) to perform single-operation changes, feeds them into a factory **conveyor belt (map)** to modify every plate, and pushes them through a **sorting gate (filter)** to reject broken ones!
+    </p>
+    <p style="font-size: 15px; color: #283593; line-height: 1.6; margin-bottom: 16px;">
+        In Python, anonymous lambda expressions and higher-order collection utilities compile clean, functional pipelines.
+    </p>
+
+    <!-- Code definition side-by-side comparison block -->
+    <div style="background: #ffffff; border: 2.5px solid #3f51b5; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #1a237e; display: block; margin-bottom: 8px;">Functional Programming Syntax:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #3f51b5; line-height: 1.45;"># 1. Lambda Anonymous Function (Single line expression)
+double = lambda x: x * 2
+
+# 2. Map (Applies expression to every item on a conveyor belt)
+nums = [1, 2, 3]
+doubled = list(map(lambda x: x * 2, nums)) # [2, 4, 6]
+
+# 3. Filter (Filters items based on condition)
+evens = list(filter(lambda x: x % 2 == 0, doubled)) # [2, 4, 6]</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Comparing Map vs Filter:</strong>
+    <p style="margin: 0 0 12px 0;">
+        Both methods take a function and an iterable as arguments, but execute completely different outcomes:
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
+        <thead>
+            <tr style="background: #eceff1; border-bottom: 2px solid #b0bec5;">
+                <th style="padding: 8px;">Utility</th>
+                <th style="padding: 8px;">Function Purpose</th>
+                <th style="padding: 8px;">Output Size</th>
+                <th style="padding: 8px;">Element Values</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 8px; font-weight: bold; color: #3f51b5;">map()</td>
+                <td style="padding: 8px;">Applies transformations</td>
+                <td style="padding: 8px;">Same as input</td>
+                <td style="padding: 8px; color: #4caf50;">Modified (values mutated)</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; font-weight: bold; color: #3f51b5;">filter()</td>
+                <td style="padding: 8px;">Checks True/False condition</td>
+                <td style="padding: 8px;">Equal or smaller</td>
+                <td style="padding: 8px; color: #f44336;">Unchanged (subset of originals)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">lambda</span>
+        <strong>Anonymous Mini-Fn</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Disposable single line logic</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">map()</span>
+        <strong>Conveyor Belt</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Mutates every item in list</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">filter()</span>
+        <strong>Quality Gate</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Discards elements failing check</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -11056,7 +16736,69 @@ window.levels = [
         "description": {
             "heading": "Decorators & Generators",
             "subheading": "Advanced function modifications and streaming iterators",
-            "body": "<p>In this level, we cover two powerful tools for advanced function control: <strong>Decorators</strong> and <strong>Generators</strong>.</p>\n\n<h3>1. Decorators (The Upgrader)</h3>\n<p>A **Decorator** is a function that takes another function as input, extends or changes its behavior, and returns a new wrapper function. We apply decorators using the **<code>@</code>** symbol.</p>\n<p>Think of a decorator like a **Gadget Upgrader** (e.g. the Big Light): you wrap your core tool (the function) with it, and it suddenly gains extra abilities (like printing run timers or logging access) without you rewriting the tool's inner circuits!</p>\n<pre class=\"code-example\">def logger_decorator(func):\n    def wrapper():\n        print(\"--- Gadget starting ---\")\n        func()\n        print(\"--- Gadget shutdown ---\")\n    return wrapper\n\n@logger_decorator\ndef use_door():\n    print(\"Entering Anywhere Door\")\n\nuse_door() # Prints both start/stop lines along with the door message!</pre>\n\n<h3>2. Generators & yield (The Infinite Snack Dispenser)</h3>\n<p>Normal functions calculate a list of results and return them all at once. If the list has a million items, it eats up massive RAM memory. A **Generator** function generates values **one at a time, on demand**, using the **<code>yield</code>** keyword.</p>\n<p>Think of it like a **Dorayaki Dispenser**: instead of preparing a million snacks in advance and stuffing them in your pocket (clogging RAM), the dispenser yields one fresh snack only when you click the button (using `next()`), saving space!</p>\n<pre class=\"code-example\">def count_generator():\n    yield 1\n    yield 2\n    yield 3\n\ngen = count_generator()\nprint(next(gen))  # Prints: 1\nprint(next(gen))  # Prints: 2 (resumes right where it left off!)</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 3px solid #4caf50; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(76, 175, 80, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚙️ <strong>Case Study: The Big Light Upgrader & The Infinite Dorayaki Dispenser</strong>
+    </h3>
+    <p style="font-size: 15px; color: #1b5e20; line-height: 1.6; margin-bottom: 12px;">
+        To master advanced program flow control, Python provides decorators and generators:
+    </p>
+
+    <!-- Decorators sub-section -->
+    <div style="background: #ffffff; border: 1.5px solid #4caf50; border-radius: 12px; padding: 16px; margin-bottom: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #1b5e20; font-size: 14.5px; display: block; margin-bottom: 6px;">🚀 1. Decorators (The Gadget Upgrader)</strong>
+        <p style="margin: 0 0 10px 0;">
+            <strong>The Metaphor:</strong> Think of a decorator like Doraemon's **Big Light** upgrader gadget. You wrap your core tool (a simple function) with the light. Suddenly, it grows and gains extra properties (like logging start times, checking credentials, or catching errors) without changing its underlying wiring code! We apply decorators using the **\`@\`** symbol:
+        </p>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #4caf50; line-height: 1.45;">def logger(func):
+    def wrapper():
+        print("--- Initiating Connection ---")
+        func()
+        print("--- Connection Closed ---")
+    return wrapper
+
+@logger
+def activate_portal():
+    print("Anywhere Door portal open!")
+
+activate_portal() # Prints header, runs function, prints footer!</pre>
+    </div>
+
+    <!-- Generators sub-section -->
+    <div style="background: #ffffff; border: 1.5px solid #4caf50; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #1b5e20; font-size: 14.5px; display: block; margin-bottom: 6px;">📋 2. Generators & yield (The Infinite Snack Dispenser)</strong>
+        <p style="margin: 0 0 10px 0;">
+            <strong>The Metaphor:</strong> Returning a massive list of objects from a function consumes high amounts of RAM (memory). Instead of preparing a million dorayakis in advance and stuffing them in your pocket (clogging RAM), Doraemon creates a **Dorayaki Dispenser** (a **generator**). The dispenser uses the **\`yield\`** keyword to suspend function state, baking and giving you one fresh snack at a time on demand using \`next()\`:
+        </p>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #4caf50; line-height: 1.45;">def dorayaki_dispenser():
+    yield "Sweet Red Bean Dorayaki"
+    yield "Honey Matcha Dorayaki"
+
+dispenser = dorayaki_dispenser()
+print(next(dispenser)) # Yields 1st snack
+print(next(dispenser)) # Resumes & yields 2nd snack</pre>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">@decorator</span>
+        <strong>Function Wrapper</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Augments logic dynamically</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">yield</span>
+        <strong>State Pause</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Returns value & pauses state</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">next()</span>
+        <strong>Compute Next</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Triggers next yield iteration</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -11172,7 +16914,84 @@ window.levels = [
         "description": {
             "heading": "APIs & Web requests",
             "subheading": "Connecting Python to the internet",
-            "body": "<p>Almost all modern software interacts with web servers to get updates, fetch weather, or save data. We do this by sending requests to <strong>APIs</strong> (Application Programming Interfaces) using Python's industry-standard <strong><code>requests</code></strong> library.</p>\n\n<h3>The Metaphor: The Pocket Communicator</h3>\n<p>Think of sending an API request like Doraemon using his **Pocket Communicator** gadget: he dials a code (sends an HTTP GET request to a URL) to contact a future department store database. The store packages up a response envelope (JSON payload) and beams it back. Doraemon unpacks the envelope and reads the items inside!</p>\n\n<h3>Fetching API Data (.get)</h3>\n<p>To retrieve data from a URL, we use <code>requests.get()</code>. The server replies with a response object containing a **Status Code** (e.g. 200 means success, 404 means not found):</p>\n<pre class=\"code-example\">import requests\n\nresponse = requests.get(\"https://api.github.com/users/octocat\")\nprint(response.status_code) # Prints: 200</pre>\n\n<h3>Parsing JSON response (.json)</h3>\n<p>API data is sent back as JSON text. To convert this text payload into a Python dictionary, we call the **<code>.json()</code>** method:</p>\n<pre class=\"code-example\">data = response.json() # Convert to dict\nprint(data[\"name\"])    # Access key -> The Octocat\nprint(type(data))      # Prints: &lt;class 'dict'&gt;</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288d1; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(2, 136, 209, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #01579b; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        📡 <strong>Case Study: The Pocket Communicator & The JSON Envelope</strong>
+    </h3>
+    <p style="font-size: 15.5px; color: #01579b; line-height: 1.6; margin-bottom: 16px;">
+        <strong>The Scenario:</strong> To query the central inventory database in the 22nd Century, Doraemon dials a specific channel on his **Pocket Communicator** (sends an HTTP <code>GET</code> request to a URL). The database server processes the request and beams back a **JSON Response Envelope**. Doraemon opens the envelope and decodes the parameters into a Python dictionary, allowing him to check if bamboo copters are in stock!
+    </p>
+    <p style="font-size: 15px; color: #006064; line-height: 1.6; margin-bottom: 16px;">
+        Python connects to the internet using the third-party **\`requests\`** library to fetch data payloads from REST APIs.
+    </p>
+
+    <!-- Code tracing request flow -->
+    <div style="background: #ffffff; border: 2.5px solid #0288d1; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #01579b; display: block; margin-bottom: 8px;">GET Request & JSON Parsing:</strong>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #0288d1; line-height: 1.45;">import requests
+
+# 1. Fetch remote data (GET Request)
+res = requests.get("https://api.github.com/users/octocat")
+
+# 2. Check HTTP Status Code (200 = Success, 404 = Not Found)
+print(res.status_code) # 200
+
+# 3. Parse JSON string format into a Python dict
+data = res.json()
+print(data["name"]) # Returns: The Octocat</pre>
+    </div>
+</div>
+
+<!-- Step by Step Execution -->
+<div style="background: #ffffff; border: 2px dashed #b0bec5; border-radius: 14px; padding: 20px; font-family: 'Nunito', sans-serif; font-size: 14.5px; color: #37474f; margin-bottom: 28px; line-height: 1.6;">
+    <strong style="color: #455a64; font-size: 16px; display: block; margin-bottom: 12px;">📊 Common HTTP Status Codes:</strong>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
+        <thead>
+            <tr style="background: #eceff1; border-bottom: 2px solid #b0bec5;">
+                <th style="padding: 6px;">Status Code</th>
+                <th style="padding: 6px;">Meaning</th>
+                <th style="padding: 6px;">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 6px; font-weight: bold; color: #4caf50;">200 OK</td>
+                <td style="padding: 6px; font-weight: bold;">Success</td>
+                <td style="padding: 6px;">The resource was retrieved successfully.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e0e0e0;">
+                <td style="padding: 6px; font-weight: bold; color: #ff9800;">404 Not Found</td>
+                <td style="padding: 6px; font-weight: bold;">Client Error</td>
+                <td style="padding: 6px;">The requested URL path does not exist.</td>
+            </tr>
+            <tr>
+                <td style="padding: 6px; font-weight: bold; color: #f44336;">500 Server Error</td>
+                <td style="padding: 6px; font-weight: bold;">Server Error</td>
+                <td style="padding: 6px;">The database or server application crashed.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">requests.get()</span>
+        <strong>GET Request</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Fetches resource from URL</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">status_code</span>
+        <strong>Status Code</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Numeric response marker</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">.json()</span>
+        <strong>JSON Parser</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Converts string payloads to dict</span>
+    </div>
+</div>`
         },
         "qna": [
             {
@@ -11288,7 +17107,67 @@ window.levels = [
         "description": {
             "heading": "Concurrency in Python",
             "subheading": "Multithreading vs Asynchronous programming",
-            "body": "<p>By default, Python runs code line-by-line in a single sequence. If one line takes 10 seconds (like loading a webpage), the entire program halts. To run tasks in parallel or prevent blocking, we use <strong>Concurrency</strong>: **Multithreading** or **Async programming**.</p>\n\n<h3>1. Multithreading (The Clones)</h3>\n<p>Multithreading spins up background lines of execution (threads) to run tasks at the same time. Think of it like using Doraemon's **Clone Liquid** to create multiple Nobitas. Each clone tackles a separate chore concurrently! It is ideal for I/O-bound tasks (waiting on disks or networks):</p>\n<pre class=\"code-example\">import threading\n\ndef check_mail():\n    print(\"Checking mail...\")\n\nt = threading.Thread(target=check_mail)\nt.start()  # Runs check_mail in the background!</pre>\n\n<h3>2. Async programming (The Multitasking Chef)</h3>\n<p>Async programming runs on a **single thread** using an **Event Loop**. Instead of waiting idle for a task (like preheating the oven), the program switches to do something else (like cutting vegetables) and returns once the oven is hot. We write async code using <strong><code>asyncio</code></strong>, **<code>async def</code>** (coroutines), and **<code>await</code>**:</p>\n<pre class=\"code-example\">import asyncio\n\nasync def main():\n    print(\"Boiling water...\")\n    await asyncio.sleep(2)  # Non-blocking wait!\n    print(\"Tea is ready!\")\n\n# Run the event loop\nasyncio.run(main())</pre>"
+            "body": `<!-- Main Card -->
+<div class="case-study-hero" style="background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%); border: 3px solid #795548; border-radius: 20px; padding: 24px; margin-bottom: 28px; box-shadow: 0 8px 24px rgba(121, 85, 72, 0.1); font-family: 'Nunito', sans-serif;">
+    <h3 style="color: #4e342e; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px;">
+        ⚡ <strong>Case Study: Nobita's Clone Liquid vs The Multitasking Chef</strong>
+    </h3>
+    <p style="font-size: 15px; color: #4e342e; line-height: 1.6; margin-bottom: 12px;">
+        When tasks wait on slow input/output operations (I/O-bound tasks like fetching APIs or disk writes), halting the entire program is extremely inefficient. Python offers two models for concurrency:
+    </p>
+
+    <!-- Multithreading sub-section -->
+    <div style="background: #ffffff; border: 1.5px solid #795548; border-radius: 12px; padding: 16px; margin-bottom: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; font-size: 14.5px; display: block; margin-bottom: 6px;">👥 1. Multithreading (The Clone Liquid)</strong>
+        <p style="margin: 0 0 10px 0;">
+            <strong>The Metaphor:</strong> Think of multithreading like using Doraemon's **Clone Liquid** to create multiple clones of Nobita. Each clone runs independently in the background, executing a separate task at the same time. Since they share the same physical house (memory space), they must cooperate to avoid colliding:
+        </p>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #795548; line-height: 1.45;">import threading
+
+def sweep_floor():
+    print("Clone is sweeping...")
+
+# Start a background thread execution
+t = threading.Thread(target=sweep_floor)
+t.start()</pre>
+    </div>
+
+    <!-- Async programming sub-section -->
+    <div style="background: #ffffff; border: 1.5px solid #795548; border-radius: 12px; padding: 16px; font-size: 13.5px; color: #37474f;">
+        <strong style="color: #4e342e; font-size: 14.5px; display: block; margin-bottom: 6px;">🍳 2. Async programming (The Multitasking Chef)</strong>
+        <p style="margin: 0 0 10px 0;">
+            <strong>The Metaphor:</strong> Creating clones consumes resources. Instead, async programming uses a single thread with an **Event Loop** (like a single chef cooking a meal). The chef starts boiling water, pauses (yields control) to chop vegetables, and returns to the pot when the alarm goes off. There is no idle waiting! We write this using **\`async def\`** and **\`await\`**:
+        </p>
+        <pre style="margin: 0; font-family: 'Fira Code', monospace; font-size: 12.5px; color: #795548; line-height: 1.45;">import asyncio
+
+async def bake_dorayaki():
+    print("Starting baking oven...")
+    await asyncio.sleep(2) # Non-blocking pause!
+    print("Oven alarm: Dorayaki is baked!")
+
+# Run event loop execution manager
+asyncio.run(bake_dorayaki())</pre>
+    </div>
+</div>
+
+<!-- Key Term Summary Cards -->
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 13px; text-align: center;">
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">Thread()</span>
+        <strong>Fork Process</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Spins up parallel execution thread</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">async def</span>
+        <strong>Coroutine</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Function that supports non-blocking pauses</span>
+    </div>
+    <div style="background: #eceff1; border-radius: 12px; padding: 12px; border: 1px solid #cfd8dc;">
+        <span style="font-size: 20px; display: block; margin-bottom: 4px;">await</span>
+        <strong>Yield Loop</strong>
+        <span style="font-size: 11px; color: #78909c; font-weight: 500; display: block; margin-top: 4px;">Suspends execution for other coroutines</span>
+    </div>
+</div>`
         },
         "qna": [
             {

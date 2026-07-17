@@ -7,8 +7,7 @@ const TOTAL_LEVELS = 100;
 
 function getCardState(levelId, progress) {
     if (progress.completed.includes(levelId)) return 'completed';
-    if (levelId <= progress.currentLevel) return 'unlocked';
-    return 'locked';
+    return 'unlocked';
 }
 
 function buildGrid() {
